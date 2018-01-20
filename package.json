@@ -1,0 +1,25 @@
+{
+  "name": "react-native-changelog",
+  "version": "1.0.0",
+  "description": "Changelog for the react-native project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "node node_modules/markdownlint-cli/markdownlint.js *.md",
+    "precommit": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turnrye/react-native-changelog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/turnrye/react-native-changelog/issues"
+  },
+  "homepage": "https://github.com/turnrye/react-native-changelog#readme",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "markdownlint-cli": "^0.6.0"
+  }
+}
