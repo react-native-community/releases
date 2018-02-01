@@ -4,7 +4,7 @@
 
 ## [0.53.0] - schedule TBD
 
-Welcome to the January 2018 release of React Native. The CLI tools now support `--port` for both platforms, . There was a lot of under-the-cover work done.
+Welcome to the January 2018 release of React Native. The CLI now supports `--port` for both platforms, a few components were made to support consistent props across both platforms, and various fixes were made. There was a lot of under-the-cover work done with more test improvements and dependency updates. 118 commits were made by 43 contributors 🎉.
 
 ### Added
 
