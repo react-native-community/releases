@@ -1,8 +1,36 @@
 # Changelog
 
-## Unreleased
+## Unreleased [53 vs trunk](https://github.com/facebook/react-native/compare/v0.53.0...master)
 
-## [0.53.0] - schedule TBD
+### Added
+
+- Added `flow-github` dependency ([f40e398](https://github.com/facebook/react-native/commit/f40e398) by [@TheSavior](https://github.com/TheSavior))
+- **KeyboardAvoidingView** now has the prop `enabled` to let you manually control which KAV should take effect when there are multiple ([85bd98e](https://github.com/facebook/react-native/commit/85bd98e))
+
+#### iOS Specific Additions
+
+- **PushNotificationIOS**'s notifications now include the [threadID](https://developer.apple.com/documentation/usernotificationsui/unnotificationcontentextension/1648525-didreceivenotification) ([a8f429d](https://github.com/facebook/react-native/commit/a8f429d) by [@Ashoat](https://github.com/Ashoat))
+
+### Changed
+
+- ⬆️ Jest to v22.2.1 ([0205207](https://github.com/facebook/react-native/commit/0205207) and [46f4d3e](https://github.com/facebook/react-native/commit/46f4d3e) by [@mjesun](https://github.com/mjesun))
+- Refactored Yoga implementation ([b41d41f](https://github.com/facebook/react-native/commit/b41d41f) by [@priteshrnandgaonkar](https://github.com/priteshrnandgaonkar))
+
+#### Android specific changes
+
+- **PlatformConstants** now contains the [release](https://developer.android.com/reference/android/os/Build.VERSION.html#RELEASE), [serial](https://developer.android.com/reference/android/os/Build.html#SERIAL), [fingerprint](https://developer.android.com/reference/android/os/Build.html#FINGERPRINT), and [model](https://developer.android.com/reference/android/os/Build.html#MODEL) ([1c3f6ac](https://github.com/facebook/react-native/commit/1c3f6ac) by [@emilsjolander](https://github.com/emilsjolander))
+
+### Removed
+
+### Fixed
+
+#### Android specific fixes
+
+- `PixelRatio.getFontScale()` now reports the appropriate value if changed while the app is open ([22735f6](https://github.com/facebook/react-native/commit/22735f6) by [@steveccable](https://github.com/steveccable))
+- Fix BadTokenException when redbox was dismissed and re-displayed ([c249e52](https://github.com/facebook/react-native/commit/c249e52) by [@mdvacca](https://github.com/mdvacca))
+- Fix bug in **Image**'s handling of `borderRadius` ([7e9242b](https://github.com/facebook/react-native/commit/7e9242b) by [@yungsters](https://github.com/yungsters))
+
+## [0.53.0]
 
 Welcome to the January 2018 release of React Native. The CLI now supports `--port` for both platforms, a few components were made to support consistent props across both platforms, and various fixes were made. There was a lot of under-the-cover work done with more test improvements and dependency updates. 118 commits were made by 43 contributors 🎉.
 
