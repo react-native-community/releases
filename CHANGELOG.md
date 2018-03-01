@@ -6,10 +6,8 @@ Welcome to the February 2018 release of React Native! This release includes work
 
 ### Uncategorized
 
-- Update React.podspec for RCTText ([7e7d00a](https://github.com/facebook/react-native/commit/7e7d00a) by [@hovox](https://github.com/hovox))
 - Handle invalidation error in RCTObjcExecutor ([493f3e8](https://github.com/facebook/react-native/commit/493f3e8) by [@fromcelticpark](https://github.com/fromcelticpark))
 - RN: Revive `react-native-xcode.sh` ([b8c86b8](https://github.com/facebook/react-native/commit/b8c86b8) by [@yungsters](https://github.com/yungsters))
-- Proper attributed strings comparsion in RCTBaseTextInputView ([46fd864](https://github.com/facebook/react-native/commit/46fd864) by [@shergin](https://github.com/shergin))
 - Test and document Image resizeMode=center on iOS ([be7037f](https://github.com/facebook/react-native/commit/be7037f) by [@motiz88](https://github.com/motiz88))
 - use scrollview for lightbox on ios ([e485cde](https://github.com/facebook/react-native/commit/e485cde) by [@sahrens](https://github.com/sahrens))
 - Delete RCTBatchedBridge ([816d417](https://github.com/facebook/react-native/commit/816d417) by [@mhorowitz](https://github.com/mhorowitz))
@@ -134,7 +132,7 @@ Welcome to the February 2018 release of React Native! This release includes work
 
 #### iOS Specific Changes
 
-- **Text** and **TextInput** have been re-implemented from the ground up for performance, flexibility, and reduced technical debt ([2716f53](https://github.com/facebook/react-native/commit/2716f53), [ef4214a](https://github.com/facebook/react-native/commit/ef4214a), [0009909](https://github.com/facebook/react-native/commit/0009909), [74963eb](https://github.com/facebook/react-native/commit/74963eb), [6c4ef28](https://github.com/facebook/react-native/commit/6c4ef28), [ebc9884](https://github.com/facebook/react-native/commit/ebc9884), [d7fa81f](https://github.com/facebook/react-native/commit/d7fa81f), [7d1ec7a](https://github.com/facebook/react-native/commit/7d1ec7a), [5264832](https://github.com/facebook/react-native/commit/5264832), [9532062](https://github.com/facebook/react-native/commit/9532062), [6bb8617](https://github.com/facebook/react-native/commit/6bb8617), and [5dbb3c5](https://github.com/facebook/react-native/commit/5dbb3c5) by [@shergin](https://github.com/shergin))
+- **Text** and **TextInput** have been re-implemented from the ground up for performance, flexibility, and reduced technical debt ([2716f53](https://github.com/facebook/react-native/commit/2716f53), [ef4214a](https://github.com/facebook/react-native/commit/ef4214a), [0009909](https://github.com/facebook/react-native/commit/0009909), [74963eb](https://github.com/facebook/react-native/commit/74963eb), [6c4ef28](https://github.com/facebook/react-native/commit/6c4ef28), [ebc9884](https://github.com/facebook/react-native/commit/ebc9884), [d7fa81f](https://github.com/facebook/react-native/commit/d7fa81f), [7d1ec7a](https://github.com/facebook/react-native/commit/7d1ec7a), [5264832](https://github.com/facebook/react-native/commit/5264832), [9532062](https://github.com/facebook/react-native/commit/9532062), [6bb8617](https://github.com/facebook/react-native/commit/6bb8617), [5dbb3c5](https://github.com/facebook/react-native/commit/5dbb3c5), [7e7d00a](https://github.com/facebook/react-native/commit/7e7d00a), and [46fd864](https://github.com/facebook/react-native/commit/46fd864) by [@shergin](https://github.com/shergin) and [@hovox](https://github.com/hovox))
 
 ### Fixed - TODO CONFIRM
 
