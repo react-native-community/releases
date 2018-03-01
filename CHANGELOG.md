@@ -70,9 +70,7 @@ Welcome to the February 2018 release of React Native! This release includes work
 - Implement bundle sync status ([88980f2](https://github.com/facebook/react-native/commit/88980f2) by
 - React sync for revisions a7b9f98...4eed18d ([1382975](https://github.com/facebook/react-native/commit/1382975) by [@bvaughn](https://github.com/bvaughn))
 - Keep the ignored files during the upgrade process ([7492860](https://github.com/facebook/react-native/commit/7492860) by [@ncuillery](https://github.com/ncuillery))
-- Improved documentation for <TextInput caretHidden=...> ([6c4ef28](https://github.com/facebook/react-native/commit/6c4ef28) by [@shergin](https://github.com/shergin))
 - Uses findMetroConfig and fetchMetroConfig in the internal RN cli ([752427b](https://github.com/facebook/react-native/commit/752427b) by [@arcanis](https://github.com/arcanis))
-- Improved documentation for <TextInput clearButtonMode=...> ([ebc9884](https://github.com/facebook/react-native/commit/ebc9884) by [@shergin](https://github.com/shergin))
 - Do not expose `BundleDownloader` from `DevServerHelper` ([108f966](https://github.com/facebook/react-native/commit/108f966) by [@davidaurelio](https://github.com/davidaurelio))
 - Removing our own implementation of round-to-pixel algorithm ([ceb1d1c](https://github.com/facebook/react-native/commit/ceb1d1c) by [@shergin](https://github.com/shergin))
 - Consolidate bundle URL creation ([644123a](https://github.com/facebook/react-native/commit/644123a) by [@davidaurelio](https://github.com/davidaurelio))
@@ -139,7 +137,7 @@ Welcome to the February 2018 release of React Native! This release includes work
 
 #### iOS Specific Changes
 
-- **Text** and **TextInput** have been re-implemented from the ground up for performance, flexibility, and reduced technical debt ([2716f53](https://github.com/facebook/react-native/commit/2716f53), [ef4214a](https://github.com/facebook/react-native/commit/ef4214a), [0009909](https://github.com/facebook/react-native/commit/0009909), [74963eb](https://github.com/facebook/react-native/commit/74963eb), and [5dbb3c5](https://github.com/facebook/react-native/commit/5dbb3c5) by [@shergin](https://github.com/shergin))
+- **Text** and **TextInput** have been re-implemented from the ground up for performance, flexibility, and reduced technical debt ([2716f53](https://github.com/facebook/react-native/commit/2716f53), [ef4214a](https://github.com/facebook/react-native/commit/ef4214a), [0009909](https://github.com/facebook/react-native/commit/0009909), [74963eb](https://github.com/facebook/react-native/commit/74963eb), [6c4ef28](https://github.com/facebook/react-native/commit/6c4ef28), [ebc9884](https://github.com/facebook/react-native/commit/ebc9884), [d7fa81f](https://github.com/facebook/react-native/commit/d7fa81f), [7d1ec7a](https://github.com/facebook/react-native/commit/7d1ec7a), and [5dbb3c5](https://github.com/facebook/react-native/commit/5dbb3c5) by [@shergin](https://github.com/shergin))
 
 ### Fixed - TODO CONFIRM
 
@@ -172,8 +170,6 @@ Welcome to the February 2018 release of React Native! This release includes work
 - fixed issue with runIOS not being able to launch tvOS app ([afd988f](https://github.com/facebook/react-native/commit/afd988f) by
 - Fixing clowntown in RCTSurfaceRootShadowView ([5fba82d](https://github.com/facebook/react-native/commit/5fba82d) by [@shergin](https://github.com/shergin))
 - Fixed typo in RCTSurfaceRootShadowView ([d74ff6f](https://github.com/facebook/react-native/commit/d74ff6f) by [@shergin](https://github.com/shergin))
-- Fixed double `onChange` event triggering from <TextInput> on iOS ([d7fa81f](https://github.com/facebook/react-native/commit/d7fa81f) by [@shergin](https://github.com/shergin))
-- Fixed a bug when <Text> does not redraw native view on relayout ([7d1ec7a](https://github.com/facebook/react-native/commit/7d1ec7a) by [@shergin](https://github.com/shergin))
 
 #### Android specific fixes
 
@@ -187,7 +183,7 @@ Welcome to the February 2018 release of React Native! This release includes work
 - Uses a single code path to link and unlink all platforms for local-cli ([2c5fbd7](https://github.com/facebook/react-native/commit/2c5fbd7) by [@rozele](https://github.com/rozele))
 - Introduce new Fabric API in RNAndroid ([2d35bde](https://github.com/facebook/react-native/commit/2d35bde) by [@mdvacca](https://github.com/mdvacca))
 - Fixing Prepack model for latest global.nativeExtensions changes. ([01a58d1](https://github.com/facebook/react-native/commit/01a58d1) by [@NTillmann](https://github.com/NTillmann))
-- General code cleanup: unused code and configurations ([e233646](https://github.com/facebook/react-native/commit/e233646) and e701034](https://github.com/facebook/react-native/commit/e701034) by [@bvaughn](https://github.com/bvaughn) and others)
+- General code cleanup: unused code and configurations ([e233646](https://github.com/facebook/react-native/commit/e233646) and [e701034](https://github.com/facebook/react-native/commit/e701034) by [@bvaughn](https://github.com/bvaughn) and others)
 - Changes from Prettier ([b815eb5](https://github.com/facebook/react-native/commit/b815eb5), [e758cb7](https://github.com/facebook/react-native/commit/e758cb7), [bf9cabb](https://github.com/facebook/react-native/commit/bf9cabb), and [a5af841](https://github.com/facebook/react-native/commit/a5af841) by [@shergin](https://github.com/shergin))
 - More progress towards split bundle support ([1a1a956](https://github.com/facebook/react-native/commit/1a1a956) by [@fromcelticpark](https://github.com/fromcelticpark))
 - Various improvements to RCTSurface and RCTShadowView ([7d9e902](https://github.com/facebook/react-native/commit/7d9e902), [06ebaf2](https://github.com/facebook/react-native/commit/06ebaf2), [6882132](https://github.com/facebook/react-native/commit/6882132), and [193a2bd](https://github.com/facebook/react-native/commit/193a2bd) by [@shergin](https://github.com/shergin))
