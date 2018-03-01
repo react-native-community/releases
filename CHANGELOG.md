@@ -23,9 +23,6 @@ Welcome to the February 2018 release of React Native! This release includes work
 - re #17486 - set locationManager if auth skipped ([5c17db8](https://github.com/facebook/react-native/commit/5c17db8) by [@ngandhy](https://github.com/ngandhy))
 - Typos in comments and log messages ([d2c5697](https://github.com/facebook/react-native/commit/d2c5697) by [@ss18](https://github.com/ss18))
 - RN: Create SyntheticEvent and ScrollEvent Types ([83ed9d1](https://github.com/facebook/react-native/commit/83ed9d1) by [@yungsters](https://github.com/yungsters))
-- Slight modernizing of Text.js to make it compatible with coming changes ([9532062](https://github.com/facebook/react-native/commit/9532062) by [@shergin](https://github.com/shergin))
-- Generalization of `isInAParentText` context ([5264832](https://github.com/facebook/react-native/commit/5264832) by [@shergin](https://github.com/shergin))
-- Exposing `setDirtiedFunc` as plain C function YGNodeSetDirtiedFunc ([6bb8617](https://github.com/facebook/react-native/commit/6bb8617) by [@shergin](https://github.com/shergin))
 - Revert D6704701: Refactor ReactViewGroup to reuse ReactViewBackgroundManager ([1f5bb37](https://github.com/facebook/react-native/commit/1f5bb37) by [@mdvacca](https://github.com/mdvacca))
 - Upgrade connect dependency ([709ede7](https://github.com/facebook/react-native/commit/709ede7) by [@rafeca](https://github.com/rafeca))
 - Move native accesses of array into one access instead of per-element ([5649aed](https://github.com/facebook/react-native/commit/5649aed) by
@@ -137,7 +134,7 @@ Welcome to the February 2018 release of React Native! This release includes work
 
 #### iOS Specific Changes
 
-- **Text** and **TextInput** have been re-implemented from the ground up for performance, flexibility, and reduced technical debt ([2716f53](https://github.com/facebook/react-native/commit/2716f53), [ef4214a](https://github.com/facebook/react-native/commit/ef4214a), [0009909](https://github.com/facebook/react-native/commit/0009909), [74963eb](https://github.com/facebook/react-native/commit/74963eb), [6c4ef28](https://github.com/facebook/react-native/commit/6c4ef28), [ebc9884](https://github.com/facebook/react-native/commit/ebc9884), [d7fa81f](https://github.com/facebook/react-native/commit/d7fa81f), [7d1ec7a](https://github.com/facebook/react-native/commit/7d1ec7a), and [5dbb3c5](https://github.com/facebook/react-native/commit/5dbb3c5) by [@shergin](https://github.com/shergin))
+- **Text** and **TextInput** have been re-implemented from the ground up for performance, flexibility, and reduced technical debt ([2716f53](https://github.com/facebook/react-native/commit/2716f53), [ef4214a](https://github.com/facebook/react-native/commit/ef4214a), [0009909](https://github.com/facebook/react-native/commit/0009909), [74963eb](https://github.com/facebook/react-native/commit/74963eb), [6c4ef28](https://github.com/facebook/react-native/commit/6c4ef28), [ebc9884](https://github.com/facebook/react-native/commit/ebc9884), [d7fa81f](https://github.com/facebook/react-native/commit/d7fa81f), [7d1ec7a](https://github.com/facebook/react-native/commit/7d1ec7a), [5264832](https://github.com/facebook/react-native/commit/5264832), [9532062](https://github.com/facebook/react-native/commit/9532062), [6bb8617](https://github.com/facebook/react-native/commit/6bb8617), and [5dbb3c5](https://github.com/facebook/react-native/commit/5dbb3c5) by [@shergin](https://github.com/shergin))
 
 ### Fixed - TODO CONFIRM
 
