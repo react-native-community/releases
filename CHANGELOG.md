@@ -6,16 +6,6 @@ Welcome to the February 2018 release of React Native! This release includes work
 
 ### Uncategorized
 
-- Cleanup ReactHorizontalScrollView ([71ec85f](https://github.com/facebook/react-native/commit/71ec85f) by [@mdvacca](https://github.com/mdvacca))
-- Capture StackOverflowExceptions triggered when drawing a ReactViewGroup or ReactRootView ([1aac962](https://github.com/facebook/react-native/commit/1aac962) by [@mdvacca](https://github.com/mdvacca))
-- Adding JS hierarchy information when a StackOverflowException is thrown in Dev mode ([4d3519c](https://github.com/facebook/react-native/commit/4d3519c) by [@mdvacca](https://github.com/mdvacca))
-- Make the React Native HMR client extend from the generic metro HMR client ([9a19867](https://github.com/facebook/react-native/commit/9a19867) by [@rafeca](https://github.com/rafeca))
-- Added ScrollView support for React VR platform ([6fa039d](https://github.com/facebook/react-native/commit/6fa039d) by [@MartinSherburn](https://github.com/MartinSherburn))
-- Check for nullptr when accessing isInspectable method ([70d23e8](https://github.com/facebook/react-native/commit/70d23e8) by [@fromcelticpark](https://github.com/fromcelticpark))
-- Popups calling error callback instead of crashing if view with passed tagId not found ([0c18ec5](https://github.com/facebook/react-native/commit/0c18ec5) by [@dryganets](https://github.com/dryganets))
-- Backed out changeset 409acf8d3356 ([cd263a2](https://github.com/facebook/react-native/commit/cd263a2) by [@TheSavior](https://github.com/TheSavior))
-- `babel-preset-react-native`: only require plugins once ([df6c48c](https://github.com/facebook/react-native/commit/df6c48c) by [@davidaurelio](https://github.com/davidaurelio))
-- Continue wrapping functions as we prepare for skylark ([869866c](https://github.com/facebook/react-native/commit/869866c) by [@mzlee](https://github.com/mzlee))
 - Give IInspector a virtual destructor for correct InspectorImpl destruction ([2a3c37f](https://github.com/facebook/react-native/commit/2a3c37f) by [@toulouse](https://github.com/toulouse))
 - Prevents JS Debugger issues with CORS ([29f8354](https://github.com/facebook/react-native/commit/29f8354) by [@njbmartin](https://github.com/njbmartin))
 - Make sure refreshControl shows up on initial render if specified ([ed5872e](https://github.com/facebook/react-native/commit/ed5872e) by [@vonovak](https://github.com/vonovak))
@@ -41,23 +31,19 @@ Welcome to the February 2018 release of React Native! This release includes work
 - Consolidate bundle URL creation ([644123a](https://github.com/facebook/react-native/commit/644123a) by [@davidaurelio](https://github.com/davidaurelio))
 - Clean up `DevServerHelper` ([6e44356](https://github.com/facebook/react-native/commit/6e44356) by [@davidaurelio](https://github.com/davidaurelio))
 - Extract delta client ([1019bda](https://github.com/facebook/react-native/commit/1019bda) by [@davidaurelio](https://github.com/davidaurelio))
-- Convert intent_binary_defs to Skylark ([d3db764](https://github.com/facebook/react-native/commit/d3db764) by
 - Inline format strings in `DevServerHelper` ([06d8f96](https://github.com/facebook/react-native/commit/06d8f96) by [@davidaurelio](https://github.com/davidaurelio))
 - Native Modules -> Native Extensions ([0c49c1f](https://github.com/facebook/react-native/commit/0c49c1f) by
 - textinput: Maintain cursor position when secureTextEntry toggles. ([09b43e4](https://github.com/facebook/react-native/commit/09b43e4) by [@jainkuniya](https://github.com/jainkuniya))
 - FIGCardHeader updates ([d37cdd9](https://github.com/facebook/react-native/commit/d37cdd9) by [@sahrens](https://github.com/sahrens))
 - Migrate SourceCode from Native Module to a Native Extension. ([47fe523](https://github.com/facebook/react-native/commit/47fe523) by
-- Skylarkify RN defs. ([79a63d0](https://github.com/facebook/react-native/commit/79a63d0) by [@ttsugriy](https://github.com/ttsugriy))
 - Enable platforms to configure CLI commands ([a40bfa7](https://github.com/facebook/react-native/commit/a40bfa7) by [@rozele](https://github.com/rozele))
 - always create debugger websocket connection ([fa334ce](https://github.com/facebook/react-native/commit/fa334ce) by [@bnham](https://github.com/bnham))
 - Ran rename-unsafe-lifecycles codemod on xplat/js ([6f007e8](https://github.com/facebook/react-native/commit/6f007e8) by [@bvaughn](https://github.com/bvaughn))
-- Convert fb_xplat_cxx to Skylark ([a8c95d2](https://github.com/facebook/react-native/commit/a8c95d2) by
 
 ### Added - TODO CONFIRM
 
 - **Blob**s now can be: made from Strings, loaded by File using a FileReader API, uploaded and downloaded via `XMLHttpRequest#fetch`, and fetched on files to a local blob consistently ([be56a3e](https://github.com/facebook/react-native/commit/be56a3e) by [@satya164](https://github.com/satya164))
 - Dynamic node_module dependencies are now supported ([b5e19ad](https://github.com/facebook/react-native/commit/b5e19ad) by [@jeanlauliac](https://github.com/jeanlauliac))
-- **TouchableWithoutFeedback** will now use the child's nativeID if specified ([3c2bb3e](https://github.com/facebook/react-native/commit/3c2bb3e) by [@TheSavior](https://github.com/TheSavior))
 
 - Enabling round-to-pixel Yoga feature for RN (iOS) ([114c258](https://github.com/facebook/react-native/commit/114c258) by [@shergin](https://github.com/shergin))
 - Add Context to Redbox report api ([e3c27f5](https://github.com/facebook/react-native/commit/e3c27f5) by [@ayc1](https://github.com/ayc1))
@@ -73,6 +59,10 @@ Welcome to the February 2018 release of React Native! This release includes work
 - Add back ability to customise OkHttp client ([22efd95](https://github.com/facebook/react-native/commit/22efd95) by [@cdlewis](https://github.com/cdlewis))
 - RN: Add NativeImageSource Flow Type ([d99ba70](https://github.com/facebook/react-native/commit/d99ba70) by [@yungsters](https://github.com/yungsters))
 - Add CountingOutputStream ([a5e135a](https://github.com/facebook/react-native/commit/a5e135a) by [@hramos](https://github.com/hramos))
+
+#### VR Specific Additions
+
+- Added **ScrollView** support ([6fa039d](https://github.com/facebook/react-native/commit/6fa039d) by [@MartinSherburn](https://github.com/MartinSherburn))
 
 #### Android Specific Additions
 
@@ -98,7 +88,7 @@ Welcome to the February 2018 release of React Native! This release includes work
 - Remove unused method ([f88c9d6](https://github.com/facebook/react-native/commit/f88c9d6) by [@davidaurelio](https://github.com/davidaurelio))
 - Remove fbobjc's RN copy ([af0c863](https://github.com/facebook/react-native/commit/af0c863) by
 
-#### iOS Specific Removals
+#### iOS specific removals
 
 - Delete RCTBatchedBridge ([816d417](https://github.com/facebook/react-native/commit/816d417) by [@mhorowitz](https://github.com/mhorowitz))
 
@@ -149,14 +139,18 @@ Welcome to the February 2018 release of React Native! This release includes work
 
 - Don't crash when using decimal `Animated.modulo` values with `useNativeDriver: true` ([6c38972](https://github.com/facebook/react-native/commit/6c38972) by [@motiz88](https://github.com/motiz88))
 - Don't crash when receiving unknown websocket IDs ([1a790f8](https://github.com/facebook/react-native/commit/1a790f8) by [@sunweiyang](https://github.com/sunweiyang))
+- Dont crash when `NativeModules.UIManager.showPopupMenu` method calls error callback ([0c18ec5](https://github.com/facebook/react-native/commit/0c18ec5) by [@dryganets](https://github.com/dryganets))
 
-### Under-the-hood Work
+### Under-the-hood work
 
 - A **massive** amount of Yoga optimizations, cleanups, refactors, and test fixes ([62d0100](https://github.com/facebook/react-native/commit/62d0100), [1475fc4](https://github.com/facebook/react-native/commit/1475fc4), [9daa174](https://github.com/facebook/react-native/commit/9daa174), [d4517dd](https://github.com/facebook/react-native/commit/d4517dd), [ca91f0e](https://github.com/facebook/react-native/commit/ca91f0e), [34b7ec8](https://github.com/facebook/react-native/commit/34b7ec8), [fda861a](https://github.com/facebook/react-native/commit/fda861a), [9f7cedb](https://github.com/facebook/react-native/commit/9f7cedb), [ac1c8c2](https://github.com/facebook/react-native/commit/ac1c8c2), [fcf2c7c](https://github.com/facebook/react-native/commit/fcf2c7c), [2b27f1a](https://github.com/facebook/react-native/commit/2b27f1a), [210ae5b](https://github.com/facebook/react-native/commit/210ae5b), [8208858](https://github.com/facebook/react-native/commit/8208858), [7f94bff](https://github.com/facebook/react-native/commit/7f94bff), [bd7bf94](https://github.com/facebook/react-native/commit/bd7bf94), [2fe65b0](https://github.com/facebook/react-native/commit/2fe65b0), [9658d9f](https://github.com/facebook/react-native/commit/9658d9f), [ee5c91c](https://github.com/facebook/react-native/commit/ee5c91c), [64d530b](https://github.com/facebook/react-native/commit/64d530b), [400a29e](https://github.com/facebook/react-native/commit/400a29e), [f75e21f](https://github.com/facebook/react-native/commit/f75e21f), [528bbac](https://github.com/facebook/react-native/commit/528bbac), [be8e7c6](https://github.com/facebook/react-native/commit/be8e7c6), [d0f7d4d](https://github.com/facebook/react-native/commit/d0f7d4d), [4b4959a](https://github.com/facebook/react-native/commit/4b4959a), [fdef378](https://github.com/facebook/react-native/commit/fdef378), [831a1bb](https://github.com/facebook/react-native/commit/831a1bb), ([2a22d99](https://github.com/facebook/react-native/commit/2a22d99), and [ff2658c](https://github.com/facebook/react-native/commit/ff2658c) by [@priteshrnandgaonkar](https://github.com/priteshrnandgaonkar), [@passy](https://github.com/passy), and others)
 - Some autogenerated mystery string files were added ([c7846c4](https://github.com/facebook/react-native/commit/c7846c4), [bb6fcea](https://github.com/facebook/react-native/commit/bb6fcea), [8bd00a2](https://github.com/facebook/react-native/commit/8bd00a2), [faa9519](https://github.com/facebook/react-native/commit/faa9519), [f49f793](https://github.com/facebook/react-native/commit/f49f793))
 - Uses a single code path to link and unlink all platforms for local-cli ([2c5fbd7](https://github.com/facebook/react-native/commit/2c5fbd7) by [@rozele](https://github.com/rozele))
 - Allow to attach the HMR server to an external http server ([8c6b816](https://github.com/facebook/react-native/commit/8c6b816) by [@rafeca](https://github.com/rafeca))
 - Split folly/Memory out from headers-only targets in Buck ([b8e79a7](https://github.com/facebook/react-native/commit/b8e79a7) by [@mzlee](https://github.com/mzlee))
+- Code cleanup of **ReactHorizontalScrollView** in Android ([71ec85f](https://github.com/facebook/react-native/commit/71ec85f) by [@mdvacca](https://github.com/mdvacca))
+- Make the React Native HMR client extend from the generic metro HMR client ([9a19867](https://github.com/facebook/react-native/commit/9a19867) by [@rafeca](https://github.com/rafeca))
+- Check for nullptr when accessing isInspectable method ([70d23e8](https://github.com/facebook/react-native/commit/70d23e8) by [@fromcelticpark](https://github.com/fromcelticpark))
 - Introduce new Fabric API in RNAndroid ([2d35bde](https://github.com/facebook/react-native/commit/2d35bde) by [@mdvacca](https://github.com/mdvacca))
 - Fixing Prepack model for latest global.nativeExtensions changes. ([01a58d1](https://github.com/facebook/react-native/commit/01a58d1) by [@NTillmann](https://github.com/NTillmann))
 - General code cleanup: unused code and configurations ([e233646](https://github.com/facebook/react-native/commit/e233646) and [e701034](https://github.com/facebook/react-native/commit/e701034) by [@bvaughn](https://github.com/bvaughn) and others)
@@ -170,7 +164,10 @@ Welcome to the February 2018 release of React Native! This release includes work
 - Progress towards experimental ReactFabric and FabricUIManager ([b1e5c01](https://github.com/facebook/react-native/commit/b1e5c01), [fa0ac92](https://github.com/facebook/react-native/commit/fa0ac92), [94dac23](https://github.com/facebook/react-native/commit/94dac23) by [@fkgozali](https://github.com/fkgozali))
 - (almost) kill fbjsc ([702b7e8](https://github.com/facebook/react-native/commit/702b7e8) by [@michalgr](https://github.com/michalgr))
 - Refactored bridge ReadableNativeMap and ReadableNativeArray to add centralized accesses ([7891805](https://github.com/facebook/react-native/commit/7891805) and [5649aed](https://github.com/facebook/react-native/commit/5649aed))
+- Capture StackOverflowExceptions triggered when drawing a ReactViewGroup or ReactRootView and log more debugging information for it ([1aac962](https://github.com/facebook/react-native/commit/1aac962) and [4d3519c](https://github.com/facebook/react-native/commit/4d3519c) by [@mdvacca](https://github.com/mdvacca))
+- `babel-preset-react-native`: only require plugins once ([df6c48c](https://github.com/facebook/react-native/commit/df6c48c) by [@davidaurelio](https://github.com/davidaurelio))
 - Report module id as string and as double, in case of invalid values are passed to nativeRequire ([8f358a2](https://github.com/facebook/react-native/commit/8f358a2) by [@fromcelticpark](https://github.com/fromcelticpark))
+- More work moving build configurations to Skylark ([d3db764](https://github.com/facebook/react-native/commit/d3db764), [869866c](https://github.com/facebook/react-native/commit/869866c), [a8c95d2](https://github.com/facebook/react-native/commit/a8c95d2), and [79a63d0](https://github.com/facebook/react-native/commit/79a63d0) by [@mzlee](https://github.com/mzlee), [@ttsugriy](https://github.com/ttsugriy), and others)
 - Changed to use boost-for-react-native cocoapod, which speeds up `pod install` a ton; this was in 0.53 originally but had to be re-added ([d40db3a](https://github.com/facebook/react-native/commit/d40db3a) by [@CFKevinRef](https://github.com/CFKevinRef))
 - Upgrade create-react-class to v15.6.3 ([74f3866](https://github.com/facebook/react-native/commit/74f3866) by [@bvaughn](https://github.com/bvaughn))
 - Upgrade react-devtools to v3.1.0 ([8235a49](https://github.com/facebook/react-native/commit/8235a49) by [@bvaughn](https://github.com/bvaughn))
