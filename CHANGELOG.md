@@ -1,5 +1,103 @@
 # Changelog
 
+## [0.55 - Unreleased]
+
+Welcome to the March 2018 release of React Native!
+
+Here are a few highlights from the release:
+
+- React native is now licensed as MIT
+
+![fixed loading for iOS](https://user-images.githubusercontent.com/1743953/36065317-848e4f7e-0e5e-11e8-8aab-70cb5db32f31.gif)
+
+### Added: new features
+
+- There's a new UTFSequence module in the library for common Unicode sequences ([54870e0](https://github.com/facebook/react-native/commit/54870e0) and [4761d5a](https://github.com/facebook/react-native/commit/4761d5a)  by [@sahrens](https://github.com/sahrens))
+
+#### Android specific additions
+
+- Bundle download progress is now shown [d06e143](https://github.com/facebook/react-native/commit/d06e143) by [@janicduplessis](https://github.com/janicduplessis))
+- Adding simple View rendering support using **FabricUIManager** ([c0c388c](https://github.com/facebook/react-native/commit/c0c388c) by [@mdvacca](https://github.com/mdvacca))
+- Adding configuration of Fabric inside ReactRootView ([b5b0ee8](https://github.com/facebook/react-native/commit/b5b0ee8) by [@mdvacca](https://github.com/mdvacca))
+
+#### iOS specific additions
+
+- `base-line` metric exposure for **Text** and **TextInput** ([51b3529](https://github.com/facebook/react-native/commit/51b3529), [0dbe183](https://github.com/facebook/react-native/commit/0dbe183), and [7630a61](https://github.com/facebook/react-native/commit/7630a61) by [@shergin](https://github.com/shergin))
+- **DatePickerIOS** now has `initialDate` prop ([446ce49](https://github.com/facebook/react-native/commit/446ce49))
+- Expose version via `RCTVersion.h`'s `RCTGetReactNativeVersion()` ([30469ed](https://github.com/facebook/react-native/commit/30469ed) by [@LeoNatan](https://github.com/LeoNatan))
+- Allow running multiple simulators simultaneously with `react-native run-ios --simulator ...` ([2ad3407](https://github.com/facebook/react-native/commit/2ad3407) by [@koenpunt](https://github.com/koenpunt))
+
+### Changes: existing functionality that is now different
+
+- React Native has now adopted the MIT license ([1490ab1](https://github.com/facebook/react-native/commit/1490ab1) and [26684cf](https://github.com/facebook/react-native/commit/26684cf) by [@sophiebits](https://github.com/sophiebits))
+- The HelloWorld template now exclude `*.jsbundle` files from Git ([2123108](https://github.com/facebook/react-native/commit/2123108) by [@aneophyte](https://github.com/aneophyte))
+- `react-native-git-upgrade` now shows files merged with conflicts in red ([e53a8f7](https://github.com/facebook/react-native/commit/e53a8f7) by [@alvinthen](https://github.com/alvinthen))
+
+#### Android specific changes
+
+- Renamed **FabricUIManagerModule** to **FabricUIManager**, and refactored `cloneNodeWithNewChildrenAndProps` ([0d148ad](https://github.com/facebook/react-native/commit/0d148ad) and [ddcd609](https://github.com/facebook/react-native/commit/ddcd609) by [@mdvacca](https://github.com/mdvacca))
+
+### Fixed: bugs that have been resolved
+
+- In **TouchableOpacity**, trigger animation on `opacity` upon change in `disabled` prop ([9366ce4](https://github.com/facebook/react-native/commit/9366ce4) by [@maxkomarychev](https://github.com/maxkomarychev))
+- Fixed an issue encountered when using `react-native-vector-icons` ([a759a44](https://github.com/facebook/react-native/commit/a759a44) and [54dc11a](https://github.com/facebook/react-native/commit/54dc11a) by [@jeanlauliac](https://github.com/jeanlauliac) and [@t4deu](https://github.com/t4deu)))
+
+#### iOS specific fixes
+
+- DevLoadingView now supports the iPhone X screen shape ([47b36d3](https://github.com/facebook/react-native/commit/47b36d3) by [@mrtnrst](https://github.com/mrtnrst))
+
+#### Android specific fixes
+
+- Fix: incorrect line-height calculation ([74e54cb](https://github.com/facebook/react-native/commit/74e54cb) by [@strindhaug](https://github.com/strindhaug))
+- Fix crashes with TextInput introduced in 0.53 ([b60a727](https://github.com/facebook/react-native/commit/b60a727) by [@joshyhargreaves](https://github.com/joshyhargreaves))
+- Update ReactAndroid build script to support gradle 2.3.0 ([d8bb990](https://github.com/facebook/react-native/commit/d8bb990))
+
+### Removed: features that have been removed; these are breaking!
+
+#### Android specific removals
+
+- `ReactInstanceManager#registerAdditionalPackages` has been removed; Create UIManager interface and extract common classes in uimanager/common ([6b45fb2](https://github.com/facebook/react-native/commit/6b45fb2) by [@mdvacca](https://github.com/mdvacca))
+
+#### iOS specific removals
+
+- Remove callFunctionSync experimental APIs ([19a4a7d](https://github.com/facebook/react-native/commit/19a4a7d) by [@danzimm](https://github.com/danzimm))
+
+### Internal Work: things that were improved on behind-the-scenes
+
+- Flow types improvements ([b6c7e55](https://github.com/facebook/react-native/commit/b6c7e55), [b98bf1e](https://github.com/facebook/react-native/commit/b98bf1e), [80c1839](https://github.com/facebook/react-native/commit/80c1839), [70a3ece](https://github.com/facebook/react-native/commit/70a3ece), and [f734357](https://github.com/facebook/react-native/commit/f734357) by [@TheSavior](https://github.com/TheSavior), [@yungsters](https://github.com/yungsters), and [@alex288ms](https://github.com/alex288ms))
+- Refactor BridgeListener into JSIModulesProvider ([4466b6f](https://github.com/facebook/react-native/commit/4466b6f) by [@mdvacca](https://github.com/mdvacca))
+- Update VirtualizedList to not throw with double constructor ([19b9851](https://github.com/facebook/react-native/commit/19b9851) by [@sophiebits](https://github.com/sophiebits))
+- Use react.gradle from repo root instead of copy in RNTester ([9f239d7](https://github.com/facebook/react-native/commit/9f239d7) by [@janicduplessis](https://github.com/janicduplessis))
+- Move `fb_xplat_cxx.bzl` to xplat/build_defs ([f389ad8](https://github.com/facebook/react-native/commit/f389ad8) by 
+- Remove log in JSDevSupportModule ([8769057](https://github.com/facebook/react-native/commit/8769057) by [@mdvacca](https://github.com/mdvacca))
+- Use better variable scoping in JavaScript Libraries and Components ([3152e93](https://github.com/facebook/react-native/commit/3152e93) by [@TheSavior](https://github.com/TheSavior))
+- Give global variables internal linkage ([ffcd067](https://github.com/facebook/react-native/commit/ffcd067) by [@smeenai](https://github.com/smeenai))
+- Make the chrome debugger handle dynamic delta ids ([7be3d1c](https://github.com/facebook/react-native/commit/7be3d1c) by [@rafeca](https://github.com/rafeca))
+- Added an Assertion that addRoot is called before completeRoot ([6404529](https://github.com/facebook/react-native/commit/6404529) by [@ayc1](https://github.com/ayc1))
+- Avoid var specific hoisting rules ([7216079](https://github.com/facebook/react-native/commit/7216079) by [@TheSavior](https://github.com/TheSavior))
+- Use `#include` instead of `#import` in cpp header ([0bc80e9](https://github.com/facebook/react-native/commit/0bc80e9) by [@smeenai](https://github.com/smeenai))
+- In Yoga, change NaN with large number to enable use of `-ffast-math` clang flag ([d174ab8](https://github.com/facebook/react-native/commit/d174ab8) by [@priteshrnandgaonkar](https://github.com/priteshrnandgaonkar))
+- Remove optional parameter from server and enforce empty list everywhere ([8a7f68e](https://github.com/facebook/react-native/commit/8a7f68e) by [@mjesun](https://github.com/mjesun))
+- Fix ESLint warnings using 'yarn lint --fix' ([edb6ca7](https://github.com/facebook/react-native/commit/edb6ca7) by [@draperunner](https://github.com/draperunner))
+- @allow-large-files Upgrade xplat/js to Flow v0.66 ([da3424c](https://github.com/facebook/react-native/commit/da3424c) by [@calebmer](https://github.com/calebmer))
+
+#### Dependencies
+
+- Upgrade Metro to v0.28.0 ([8d74af4](https://github.com/facebook/react-native/commit/8d74af4), [b1d8af4](https://github.com/facebook/react-native/commit/b1d8af4), and [bd30336](https://github.com/facebook/react-native/commit/bd30336) by [@BYK](https://github.com/BYK) and [@rafeca](https://github.com/rafeca)))
+- Upgrade buck to v2018.02.16.01 ([617362b](https://github.com/facebook/react-native/commit/617362b) by [@hramos](https://github.com/hramos))
+- Upgrade Jest to v22.4.2 ([991b7ab](https://github.com/facebook/react-native/commit/991b7ab), [a29906a](https://github.com/facebook/react-native/commit/a29906a), and [47e57ef](https://github.com/facebook/react-native/commit/47e57ef) by [@mjesun](https://github.com/mjesun) and [@BYK](https://github.com/BYK))
+- React sync for revisions 467b103...ab4280b ([bedaaa1](https://github.com/facebook/react-native/commit/bedaaa1) and [1605786](https://github.com/facebook/react-native/commit/1605786) by [@bvaughn](https://github.com/bvaughn) and [@hramos](https://github.com/hramos))
+
+#### Dev Systems
+
+- Simplify issue template ([dd187a2](https://github.com/facebook/react-native/commit/dd187a2) by [@hramos](https://github.com/hramos))
+- Do not mention people, suggest labels ([4c82ce4](https://github.com/facebook/react-native/commit/4c82ce4) by [@hramos](https://github.com/hramos))
+- Timeout Android instrumentation steps ([1346bf8](https://github.com/facebook/react-native/commit/1346bf8) by [@hramos](https://github.com/hramos))
+- Increase n days before issue considered stale ([247f32f](https://github.com/facebook/react-native/commit/247f32f) by [@hramos](https://github.com/hramos))
+- Update danger token ([c87d03a](https://github.com/facebook/react-native/commit/c87d03a) by [@hramos](https://github.com/hramos))
+- Broken publish step on CI ([f7729a5](https://github.com/facebook/react-native/commit/f7729a5) by [@grabbou](https://github.com/grabbou))
+- Fold .eslintrc's into the root eslintrc ([59401f8](https://github.com/facebook/react-native/commit/59401f8) by [@zertosh](https://github.com/zertosh))
+
 ## [0.54]
 
 Welcome to the February 2018 release of React Native! This release includes work done by the React Native team and the community in January, and there are some big changes here after the holidays. Thanks for 270 commits from 87 contributors, you all are great! Here are a few highlights from the release:
