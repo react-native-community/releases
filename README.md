@@ -10,7 +10,7 @@ Stay up-to-date with the release activities of [React Native](https://github.com
 
 Progress towards release is tracked in issues. Look for these issues labelled _release status_. Soon a standardized format for the update will be published; please be patient while this settles.
 
-Note that these issues are read-only; questions about the release should be directed to the [React Native](https://github.com/facebook/react-native/) repository or other communications channels.
+Note that these issues are locked to keep conversation focused strictly on the status. Questions about the release should be directed to the [React Native](https://github.com/facebook/react-native/) repository or other communications channels.
 
 ## Changelog
 
@@ -28,3 +28,8 @@ Once you have the commit hash, navigate to https://github.com/facebook/react-nat
 
 If the commit is only present in `master` (i.e. has no tags), then the commit has yet to be picked up by a release. You can expect it to be included in the next release candidate that is cut at the beginning of the next month.
 
+## Backporting/cherry-picking of changes to existing builds
+
+From time to time, [backporting](https://en.wikipedia.org/wiki/Backporting) a change to an existing release (including candidates) may be needed. Examples include security issues or critical regressions. If you believe a pull request on `react-native`  is a candidate for backporting, please mention it in the version associated _backport request_ issue. 
+
+Please note that if the change hasn't landed on `react-native`'s master, it can't be cherry picked to a release tag yet.
