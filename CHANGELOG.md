@@ -8,11 +8,10 @@ Here are a few highlights from the release:
 
 - React native is now licensed as MIT
 
-![fixed loading for iOS](https://user-images.githubusercontent.com/1743953/36065317-848e4f7e-0e5e-11e8-8aab-70cb5db32f31.gif)
-
 ### Added: new features
 
-- There's a new UTFSequence module in the library for common Unicode sequences ([54870e0](https://github.com/facebook/react-native/commit/54870e0) and [4761d5a](https://github.com/facebook/react-native/commit/4761d5a)  by [@sahrens](https://github.com/sahrens))
+- There's a new UTFSequence module in the library for common Unicode sequences ([54870e0](https://github.com/facebook/react-native/commit/54870e0) and [4761d5a](https://github.com/facebook/react-native/commit/4761d5a) by [@sahrens](https://github.com/sahrens))
+- Added `contextMenuHidden` property for **TextInput** ([2dd2529](https://github.com/facebook/react-native/commit/2dd2529) by [@amhinson](https://github.com/amhinson))
 
 #### Android specific additions
 
@@ -22,6 +21,7 @@ Here are a few highlights from the release:
 
 #### iOS specific additions
 
+- Introducing **InputAccessoryView**, "a component which enables customization of the keyboard input accessory view" ([38197c8](https://github.com/facebook/react-native/commit/38197c8), [84ef7bc](https://github.com/facebook/react-native/commit/84ef7bc), and [6d9fe45](https://github.com/facebook/react-native/commit/6d9fe45) by [@PeteTheHeat](https://github.com/PeteTheHeat))
 - `base-line` metric exposure for **Text** and **TextInput** ([51b3529](https://github.com/facebook/react-native/commit/51b3529), [0dbe183](https://github.com/facebook/react-native/commit/0dbe183), and [7630a61](https://github.com/facebook/react-native/commit/7630a61) by [@shergin](https://github.com/shergin))
 - **DatePickerIOS** now has `initialDate` prop ([446ce49](https://github.com/facebook/react-native/commit/446ce49))
 - Expose version via `RCTVersion.h`'s `RCTGetReactNativeVersion()` ([30469ed](https://github.com/facebook/react-native/commit/30469ed) by [@LeoNatan](https://github.com/LeoNatan))
@@ -32,15 +32,21 @@ Here are a few highlights from the release:
 - React Native has now adopted the MIT license ([1490ab1](https://github.com/facebook/react-native/commit/1490ab1) and [26684cf](https://github.com/facebook/react-native/commit/26684cf) by [@sophiebits](https://github.com/sophiebits))
 - The HelloWorld template now exclude `*.jsbundle` files from Git ([2123108](https://github.com/facebook/react-native/commit/2123108) by [@aneophyte](https://github.com/aneophyte))
 - `react-native-git-upgrade` now shows files merged with conflicts in red ([e53a8f7](https://github.com/facebook/react-native/commit/e53a8f7) by [@alvinthen](https://github.com/alvinthen))
+- `ResolvedAssetSource` type to have all read-only members ([4d0ee37](https://github.com/facebook/react-native/commit/4d0ee37) by [@sahrens](https://github.com/sahrens))
 
 #### Android specific changes
 
 - Renamed **FabricUIManagerModule** to **FabricUIManager**, and refactored `cloneNodeWithNewChildrenAndProps` ([0d148ad](https://github.com/facebook/react-native/commit/0d148ad) and [ddcd609](https://github.com/facebook/react-native/commit/ddcd609) by [@mdvacca](https://github.com/mdvacca))
 
+#### iOS specific changes
+
+- Move **YGStyle** to seperate file and add constructors ([b9991d3](https://github.com/facebook/react-native/commit/b9991d3) and [c75ce81](https://github.com/facebook/react-native/commit/c75ce81) by [@priteshrnandgaonkar](https://github.com/priteshrnandgaonkar))
+
 ### Fixed: bugs that have been resolved
 
 - In **TouchableOpacity**, trigger animation on `opacity` upon change in `disabled` prop ([9366ce4](https://github.com/facebook/react-native/commit/9366ce4) by [@maxkomarychev](https://github.com/maxkomarychev))
 - Fixed an issue encountered when using `react-native-vector-icons` ([a759a44](https://github.com/facebook/react-native/commit/a759a44) and [54dc11a](https://github.com/facebook/react-native/commit/54dc11a) by [@jeanlauliac](https://github.com/jeanlauliac) and [@t4deu](https://github.com/t4deu)))
+- Add missing mock for Jest for `removeEventListener` method ([59c7b2c](https://github.com/facebook/react-native/commit/59c7b2c) by [@MoOx](https://github.com/MoOx))
 
 #### iOS specific fixes
 
@@ -51,6 +57,7 @@ Here are a few highlights from the release:
 - Fix: incorrect line-height calculation ([74e54cb](https://github.com/facebook/react-native/commit/74e54cb) by [@strindhaug](https://github.com/strindhaug))
 - Fix crashes with TextInput introduced in 0.53 ([b60a727](https://github.com/facebook/react-native/commit/b60a727) by [@joshyhargreaves](https://github.com/joshyhargreaves))
 - Update ReactAndroid build script to support gradle 2.3.0 ([d8bb990](https://github.com/facebook/react-native/commit/d8bb990))
+- Allow "unexpected url" exception to be caught on Android when using fetch ([da84eba](https://github.com/facebook/react-native/commit/da84eba) by [@jcurtis](https://github.com/jcurtis))
 
 ### Removed: features that have been removed; these are breaking!
 
@@ -77,9 +84,15 @@ Here are a few highlights from the release:
 - Avoid var specific hoisting rules ([7216079](https://github.com/facebook/react-native/commit/7216079) by [@TheSavior](https://github.com/TheSavior))
 - Use `#include` instead of `#import` in cpp header ([0bc80e9](https://github.com/facebook/react-native/commit/0bc80e9) by [@smeenai](https://github.com/smeenai))
 - In Yoga, change NaN with large number to enable use of `-ffast-math` clang flag ([d174ab8](https://github.com/facebook/react-native/commit/d174ab8) by [@priteshrnandgaonkar](https://github.com/priteshrnandgaonkar))
+- Make two separate yoga targets for QE ([af9d647](https://github.com/facebook/react-native/commit/af9d647) by [@priteshrnandgaonkar](https://github.com/priteshrnandgaonkar))
 - Remove optional parameter from server and enforce empty list everywhere ([8a7f68e](https://github.com/facebook/react-native/commit/8a7f68e) by [@mjesun](https://github.com/mjesun))
 - Fix ESLint warnings using 'yarn lint --fix' ([edb6ca7](https://github.com/facebook/react-native/commit/edb6ca7) by [@draperunner](https://github.com/draperunner))
 - @allow-large-files Upgrade xplat/js to Flow v0.66 ([da3424c](https://github.com/facebook/react-native/commit/da3424c) by [@calebmer](https://github.com/calebmer))
+- Use complete type with unique_ptr ([0d03fdd](https://github.com/facebook/react-native/commit/0d03fdd) by [@smeenai](https://github.com/smeenai))
+- Mark ObjC methods that are called from React Native as dynamic. ([ebbd437](https://github.com/facebook/react-native/commit/ebbd437) by [@mren2](https://github.com/mren2))
+- Explicitly handle null props in bindings ([84ad5d3](https://github.com/facebook/react-native/commit/84ad5d3) by [@sebmarkbage](https://github.com/sebmarkbage))
+- Clean up unused modules ([07334cb](https://github.com/facebook/react-native/commit/07334cb) by [@sebmarkbage](https://github.com/sebmarkbage))
+- Add possibility to add custom plugin prefix ([2dc559d](https://github.com/facebook/react-native/commit/2dc559d))
 
 #### Dependencies
 
