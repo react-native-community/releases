@@ -16,8 +16,6 @@ Here are a few highlights from the release:
 #### Android specific additions
 
 - Bundle download progress is now shown [d06e143](https://github.com/facebook/react-native/commit/d06e143) by [@janicduplessis](https://github.com/janicduplessis))
-- Adding simple View rendering support using **FabricUIManager** ([c0c388c](https://github.com/facebook/react-native/commit/c0c388c) by [@mdvacca](https://github.com/mdvacca))
-- Adding configuration of Fabric inside ReactRootView ([b5b0ee8](https://github.com/facebook/react-native/commit/b5b0ee8) by [@mdvacca](https://github.com/mdvacca))
 
 #### iOS specific additions
 
@@ -33,6 +31,7 @@ Here are a few highlights from the release:
 - The HelloWorld template now exclude `*.jsbundle` files from Git ([2123108](https://github.com/facebook/react-native/commit/2123108) by [@aneophyte](https://github.com/aneophyte))
 - `react-native-git-upgrade` now shows files merged with conflicts in red ([e53a8f7](https://github.com/facebook/react-native/commit/e53a8f7) by [@alvinthen](https://github.com/alvinthen))
 - `ResolvedAssetSource` type to have all read-only members ([4d0ee37](https://github.com/facebook/react-native/commit/4d0ee37) by [@sahrens](https://github.com/sahrens))
+- Flow types improvements ([b6c7e55](https://github.com/facebook/react-native/commit/b6c7e55), [b98bf1e](https://github.com/facebook/react-native/commit/b98bf1e), [80c1839](https://github.com/facebook/react-native/commit/80c1839), [70a3ece](https://github.com/facebook/react-native/commit/70a3ece), and [f734357](https://github.com/facebook/react-native/commit/f734357) by [@TheSavior](https://github.com/TheSavior), [@yungsters](https://github.com/yungsters), and [@alex288ms](https://github.com/alex288ms))
 
 #### Android specific changes
 
@@ -68,48 +67,6 @@ Here are a few highlights from the release:
 #### iOS specific removals
 
 - Remove callFunctionSync experimental APIs ([19a4a7d](https://github.com/facebook/react-native/commit/19a4a7d) by [@danzimm](https://github.com/danzimm))
-
-### Internal Work: things that were improved on behind-the-scenes
-
-- Flow types improvements ([b6c7e55](https://github.com/facebook/react-native/commit/b6c7e55), [b98bf1e](https://github.com/facebook/react-native/commit/b98bf1e), [80c1839](https://github.com/facebook/react-native/commit/80c1839), [70a3ece](https://github.com/facebook/react-native/commit/70a3ece), and [f734357](https://github.com/facebook/react-native/commit/f734357) by [@TheSavior](https://github.com/TheSavior), [@yungsters](https://github.com/yungsters), and [@alex288ms](https://github.com/alex288ms))
-- Refactor BridgeListener into JSIModulesProvider ([4466b6f](https://github.com/facebook/react-native/commit/4466b6f) by [@mdvacca](https://github.com/mdvacca))
-- Update VirtualizedList to not throw with double constructor ([19b9851](https://github.com/facebook/react-native/commit/19b9851) by [@sophiebits](https://github.com/sophiebits))
-- Use react.gradle from repo root instead of copy in RNTester ([9f239d7](https://github.com/facebook/react-native/commit/9f239d7) by [@janicduplessis](https://github.com/janicduplessis))
-- Move `fb_xplat_cxx.bzl` to xplat/build_defs ([f389ad8](https://github.com/facebook/react-native/commit/f389ad8) by 
-- Remove log in JSDevSupportModule ([8769057](https://github.com/facebook/react-native/commit/8769057) by [@mdvacca](https://github.com/mdvacca))
-- Use better variable scoping in JavaScript Libraries and Components ([3152e93](https://github.com/facebook/react-native/commit/3152e93) by [@TheSavior](https://github.com/TheSavior))
-- Give global variables internal linkage ([ffcd067](https://github.com/facebook/react-native/commit/ffcd067) by [@smeenai](https://github.com/smeenai))
-- Make the chrome debugger handle dynamic delta ids ([7be3d1c](https://github.com/facebook/react-native/commit/7be3d1c) by [@rafeca](https://github.com/rafeca))
-- Added an Assertion that addRoot is called before completeRoot ([6404529](https://github.com/facebook/react-native/commit/6404529) by [@ayc1](https://github.com/ayc1))
-- Avoid var specific hoisting rules ([7216079](https://github.com/facebook/react-native/commit/7216079) by [@TheSavior](https://github.com/TheSavior))
-- Use `#include` instead of `#import` in cpp header ([0bc80e9](https://github.com/facebook/react-native/commit/0bc80e9) by [@smeenai](https://github.com/smeenai))
-- In Yoga, change NaN with large number to enable use of `-ffast-math` clang flag ([d174ab8](https://github.com/facebook/react-native/commit/d174ab8) by [@priteshrnandgaonkar](https://github.com/priteshrnandgaonkar))
-- Make two separate yoga targets for QE ([af9d647](https://github.com/facebook/react-native/commit/af9d647) by [@priteshrnandgaonkar](https://github.com/priteshrnandgaonkar))
-- Remove optional parameter from server and enforce empty list everywhere ([8a7f68e](https://github.com/facebook/react-native/commit/8a7f68e) by [@mjesun](https://github.com/mjesun))
-- Fix ESLint warnings using 'yarn lint --fix' ([edb6ca7](https://github.com/facebook/react-native/commit/edb6ca7) by [@draperunner](https://github.com/draperunner))
-- @allow-large-files Upgrade xplat/js to Flow v0.66 ([da3424c](https://github.com/facebook/react-native/commit/da3424c) by [@calebmer](https://github.com/calebmer))
-- Use complete type with unique_ptr ([0d03fdd](https://github.com/facebook/react-native/commit/0d03fdd) by [@smeenai](https://github.com/smeenai))
-- Mark ObjC methods that are called from React Native as dynamic. ([ebbd437](https://github.com/facebook/react-native/commit/ebbd437) by [@mren2](https://github.com/mren2))
-- Explicitly handle null props in bindings ([84ad5d3](https://github.com/facebook/react-native/commit/84ad5d3) by [@sebmarkbage](https://github.com/sebmarkbage))
-- Clean up unused modules ([07334cb](https://github.com/facebook/react-native/commit/07334cb) by [@sebmarkbage](https://github.com/sebmarkbage))
-- Add possibility to add custom plugin prefix ([2dc559d](https://github.com/facebook/react-native/commit/2dc559d))
-
-#### Dependencies
-
-- Upgrade Metro to v0.28.0 ([8d74af4](https://github.com/facebook/react-native/commit/8d74af4), [b1d8af4](https://github.com/facebook/react-native/commit/b1d8af4), and [bd30336](https://github.com/facebook/react-native/commit/bd30336) by [@BYK](https://github.com/BYK) and [@rafeca](https://github.com/rafeca)))
-- Upgrade buck to v2018.02.16.01 ([617362b](https://github.com/facebook/react-native/commit/617362b) by [@hramos](https://github.com/hramos))
-- Upgrade Jest to v22.4.2 ([991b7ab](https://github.com/facebook/react-native/commit/991b7ab), [a29906a](https://github.com/facebook/react-native/commit/a29906a), and [47e57ef](https://github.com/facebook/react-native/commit/47e57ef) by [@mjesun](https://github.com/mjesun) and [@BYK](https://github.com/BYK))
-- React sync for revisions 467b103...ab4280b ([bedaaa1](https://github.com/facebook/react-native/commit/bedaaa1) and [1605786](https://github.com/facebook/react-native/commit/1605786) by [@bvaughn](https://github.com/bvaughn) and [@hramos](https://github.com/hramos))
-
-#### Dev Systems
-
-- Simplify issue template ([dd187a2](https://github.com/facebook/react-native/commit/dd187a2) by [@hramos](https://github.com/hramos))
-- Do not mention people, suggest labels ([4c82ce4](https://github.com/facebook/react-native/commit/4c82ce4) by [@hramos](https://github.com/hramos))
-- Timeout Android instrumentation steps ([1346bf8](https://github.com/facebook/react-native/commit/1346bf8) by [@hramos](https://github.com/hramos))
-- Increase n days before issue considered stale ([247f32f](https://github.com/facebook/react-native/commit/247f32f) by [@hramos](https://github.com/hramos))
-- Update danger token ([c87d03a](https://github.com/facebook/react-native/commit/c87d03a) by [@hramos](https://github.com/hramos))
-- Broken publish step on CI ([f7729a5](https://github.com/facebook/react-native/commit/f7729a5) by [@grabbou](https://github.com/grabbou))
-- Fold .eslintrc's into the root eslintrc ([59401f8](https://github.com/facebook/react-native/commit/59401f8) by [@zertosh](https://github.com/zertosh))
 
 ## [0.54]
 
