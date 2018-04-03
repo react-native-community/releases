@@ -2,20 +2,23 @@
 
 ## [0.55 - Unreleased]
 
-Welcome to the March 2018 release of React Native!
+Welcome to the March 2018 release of React Native ! Over 80 contributors made 245 commits since February. Thanks for another exciting release.
 
-Here are a few highlights from the release:
+Here are a few highlights:
 
-- React native is now licensed as MIT
-- Android TV devices are now supported
-- Animated tracking with native driver
+- React Native is now using the MIT license
+- Android TV device support
+
+[![RNAndroidTVDemo](http://img.youtube.com/vi/EzIQErHhY20/0.jpg)](http://www.youtube.com/watch?v=EzIQErHhY20)
+
+- Animated tracking with native driver - check out the [silky smooth framerate](https://t.co/dE1KST1i3g)
 - Lots of Flow improvements
 - Bugfixes
 
 ### Added: new features
 
 - Added support for animated tracking to native driver. Now you can use `useNativeDriver` flag with animations that track other `Animated.Values` ([b48f7e5](https://github.com/facebook/react-native/commit/b48f7e5) by [@kmagiera](https://github.com/kmagiera))
-- There's a new UTFSequence module in the library for common Unicode sequences ([54870e0](https://github.com/facebook/react-native/commit/54870e0) and [4761d5a](https://github.com/facebook/react-native/commit/4761d5a) by [@sahrens](https://github.com/sahrens))
+- There's a new UTFSequence module in the library for common Unicode sequences (Emoji!) ([54870e0](https://github.com/facebook/react-native/commit/54870e0) and [4761d5a](https://github.com/facebook/react-native/commit/4761d5a) by [@sahrens](https://github.com/sahrens))
 - Added `contextMenuHidden` property for **TextInput** ([2dd2529](https://github.com/facebook/react-native/commit/2dd2529) by [@amhinson](https://github.com/amhinson))
 - Add `testOnly_pressed` to **TouchableHighlight** for snapshot tests ([3756d41](https://github.com/facebook/react-native/commit/3756d41) by [@sahrens](https://github.com/sahrens)) 
 
