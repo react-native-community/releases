@@ -98,6 +98,7 @@ Here are a few highlights from the release:
 ### Removed: features that have been removed; these are breaking!
 
 - Removed varios types ([b58e377](https://github.com/facebook/react-native/commit/b58e377), [ee26d9b](https://github.com/facebook/react-native/commit/ee26d9b), [d89517d](https://github.com/facebook/react-native/commit/d89517d), [852084a](https://github.com/facebook/react-native/commit/852084a) by [@TheSavior](https://github.com/TheSavior))
+- Deleted `Systrace.swizzleJSON()` ([3e141cb](https://github.com/facebook/react-native/commit/3e141cb) by [@yungsters](https://github.com/yungsters))
 
 #### Android specific removals
 
@@ -148,7 +149,6 @@ The changelog is arranged by the customary added, removed, changed, and fixed pl
 ### Removed
 
 - Remove internal `utf8` utility - use the **utf8** package now instead ([431670f](https://github.com/facebook/react-native/commit/431670f) by [@mathiasbynens](https://github.com/mathiasbynens))
-- Deleted `Systrace.swizzleJSON()` ([3e141cb](https://github.com/facebook/react-native/commit/3e141cb) by [@yungsters](https://github.com/yungsters))
 
 #### iOS specific removals
 
