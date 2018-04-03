@@ -10,6 +10,7 @@ Here are a few highlights from the release:
 
 ### Added: new features
 
+- Added support for animated tracking to native driver. Now you can use `useNativeDriver` flag with animations that track other `Animated.Values` ([b48f7e5](https://github.com/facebook/react-native/commit/b48f7e5) by [@kmagiera](https://github.com/kmagiera))
 - There's a new UTFSequence module in the library for common Unicode sequences ([54870e0](https://github.com/facebook/react-native/commit/54870e0) and [4761d5a](https://github.com/facebook/react-native/commit/4761d5a) by [@sahrens](https://github.com/sahrens))
 - Added `contextMenuHidden` property for **TextInput** ([2dd2529](https://github.com/facebook/react-native/commit/2dd2529) by [@amhinson](https://github.com/amhinson))
 - Add `testOnly_pressed` to **TouchableHighlight** for snapshot tests ([3756d41](https://github.com/facebook/react-native/commit/3756d41) by [@sahrens](https://github.com/sahrens)) 
@@ -27,7 +28,7 @@ Here are a few highlights from the release:
 - Expose version via `RCTVersion.h`'s `RCTGetReactNativeVersion()` ([30469ed](https://github.com/facebook/react-native/commit/30469ed) by [@LeoNatan](https://github.com/LeoNatan))
 - Allow running multiple simulators simultaneously with `react-native run-ios --simulator ...` ([2ad3407](https://github.com/facebook/react-native/commit/2ad3407) by [@koenpunt](https://github.com/koenpunt))
 - Introduced **RCTSurfaceHostingProxyRootView** for migration to **RCTSurfaceHostingView** ([34b8876](https://github.com/facebook/react-native/commit/34b8876) by [@fkgozali](https://github.com/fkgozali))
-- RCTSurface: Optional sync ShadowView/View registing and support for synchronous waiting for mounting stage ([b90c1cf](https://github.com/facebook/react-native/commit/b90c1cf) and [b7fbeb2](https://github.com/facebook/react-native/commit/b7fbeb2) by [@shergin](https://github.com/shergin))
+- New UIManager API allowing intercept/delay mounting process ([402ae2f](https://github.com/facebook/react-native/commit/402ae2f) and [b90c1cf](https://github.com/facebook/react-native/commit/b90c1cf) by [@shergin](https://github.com/shergin))
 
 ### Changes: existing functionality that is now different
 
@@ -35,16 +36,14 @@ Here are a few highlights from the release:
 - The HelloWorld template now exclude `*.jsbundle` files from Git ([2123108](https://github.com/facebook/react-native/commit/2123108) by [@aneophyte](https://github.com/aneophyte))
 - `react-native-git-upgrade` now shows files merged with conflicts in red ([e53a8f7](https://github.com/facebook/react-native/commit/e53a8f7) by [@alvinthen](https://github.com/alvinthen))
 - `ResolvedAssetSource` type to have all read-only members ([4d0ee37](https://github.com/facebook/react-native/commit/4d0ee37) by [@sahrens](https://github.com/sahrens))
-- Flow types improvements ([b6c7e55](https://github.com/facebook/react-native/commit/b6c7e55), [b98bf1e](https://github.com/facebook/react-native/commit/b98bf1e), [80c1839](https://github.com/facebook/react-native/commit/80c1839), [70a3ece](https://github.com/facebook/react-native/commit/70a3ece), and [f734357](https://github.com/facebook/react-native/commit/f734357) by [@TheSavior](https://github.com/TheSavior), [@yungsters](https://github.com/yungsters), and [@alex288ms](https://github.com/alex288ms))
+- Flow types improvements ([b6c7e55](https://github.com/facebook/react-native/commit/b6c7e55), [b98bf1e](https://github.com/facebook/react-native/commit/b98bf1e), [80c1839](https://github.com/facebook/react-native/commit/80c1839), [70a3ece](https://github.com/facebook/react-native/commit/70a3ece), [f734357](https://github.com/facebook/react-native/commit/f734357), and [a817c64](https://github.com/facebook/react-native/commit/a817c64) by [@TheSavior](https://github.com/TheSavior), [@yungsters](https://github.com/yungsters), and [@alex288ms](https://github.com/alex288ms))
 - Better enable cross-platform support of WebSocket.js ([b9be289](https://github.com/facebook/react-native/commit/b9be289) by [@rozele](https://github.com/rozele))
-
-#### Android specific changes
-
-- Renamed **FabricUIManagerModule** to **FabricUIManager**, and refactored `cloneNodeWithNewChildrenAndProps` ([0d148ad](https://github.com/facebook/react-native/commit/0d148ad) and [ddcd609](https://github.com/facebook/react-native/commit/ddcd609) by [@mdvacca](https://github.com/mdvacca))
+- Better error handling in the CLI around making directories ([d2817f4](https://github.com/facebook/react-native/commit/d2817f4) by [@BridgeAR](https://github.com/BridgeAR))
+- Verify that the component passed to createAnimatedComponent is not functional ([10b642a](https://github.com/facebook/react-native/commit/10b642a) by [@janicduplessis](https://github.com/janicduplessis))
 
 #### iOS specific changes
 
-- Move **YGStyle** to seperate file and add constructors ([b9991d3](https://github.com/facebook/react-native/commit/b9991d3) and [c75ce81](https://github.com/facebook/react-native/commit/c75ce81) by [@priteshrnandgaonkar](https://github.com/priteshrnandgaonkar))
+- tvOS onPress magnificnation animation now works via the `tvParallaxProperties` prop object taking `pressMagnification`, `pressDuration`, and `pressDelay` ([6c353fd](https://github.com/facebook/react-native/commit/6c353fd) by [@JulienKode](https://github.com/JulienKode))
 
 ### Fixed: bugs that have been resolved
 
@@ -64,6 +63,8 @@ Here are a few highlights from the release:
 - Permit `react-native run-ios --device [id]` by passing port when running on device ([f8fee0a](https://github.com/facebook/react-native/commit/f8fee0a) by [@jozan](https://github.com/jozan))
 - Fixed issue with `run-ios` where `Entry, ":CFBundleIdentifier", Does Not Exist` was being received ([5447ca6](https://github.com/facebook/react-native/commit/5447ca6) by [@blackneck](https://github.com/blackneck))
 - Fixed problem in Text measurent on iOS ([a534672](https://github.com/facebook/react-native/commit/a534672) by [@shergin](https://github.com/shergin))
+- Fix crash when reloading in tvOS ([3a3d884](https://github.com/facebook/react-native/commit/3a3d884) by [@dlowder-salesforce](https://github.com/dlowder-salesforce))
+- Fixed a bug with positioning of nested views inside <Text> ([7d20de4](https://github.com/facebook/react-native/commit/7d20de4) by [@shergin](https://github.com/shergin))
 
 #### Android specific fixes
 
