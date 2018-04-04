@@ -2,7 +2,7 @@
 
 ## [0.55 - Unreleased]
 
-Welcome to the March 2018 release of React Native ! Over 80 contributors made 245 commits since February. Thanks for another exciting release.
+Welcome to the March 2018 release of React Native ! Over 81 contributors made 247 commits since February. Thanks for another exciting release.
 
 Here are a few highlights:
 
@@ -97,6 +97,7 @@ Here are a few highlights:
 - Fix ReadableNativeMap.toHashMap() for nested maps and arrays ([8a6ab14](https://github.com/facebook/react-native/commit/8a6ab14) by [@esamelson](https://github.com/esamelson))
 - Fix Android Sanity Buck version check ([e057322](https://github.com/facebook/react-native/commit/e057322) by [@hramos](https://github.com/hramos))
 - Fixes the connection to Firestore by following whatwg.org's XMLHttpRequest send() method ([d52569c](https://github.com/facebook/react-native/commit/d52569c) by [@samsafay](https://github.com/samsafay))
+- `invertStickyHeaders` can now be set from **SectionList** or **FlatList** ([3d69b5c](https://github.com/facebook/react-native/commit/3d69b5c) by [@dannycochran](https://github.com/dannycochran))
 
 ### Removed: features that have been removed; these are breaking!
 
