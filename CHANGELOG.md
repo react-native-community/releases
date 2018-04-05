@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.55 - Unreleased]
+## [0.55]
 
 Welcome to the March 2018 release of React Native ! Over 81 contributors made 247 commits since February. Thanks for another exciting release.
 
