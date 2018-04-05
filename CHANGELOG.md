@@ -20,7 +20,7 @@ Here are a few highlights:
 - Added support for animated tracking to native driver. Now you can use `useNativeDriver` flag with animations that track other `Animated.Values` ([b48f7e5](https://github.com/facebook/react-native/commit/b48f7e5) by [@kmagiera](https://github.com/kmagiera))
 - There's a new UTFSequence module in the library for common Unicode sequences (Emoji!) ([54870e0](https://github.com/facebook/react-native/commit/54870e0) and [4761d5a](https://github.com/facebook/react-native/commit/4761d5a) by [@sahrens](https://github.com/sahrens))
 - Added `contextMenuHidden` property for **TextInput** ([2dd2529](https://github.com/facebook/react-native/commit/2dd2529) by [@amhinson](https://github.com/amhinson))
-- Add `testOnly_pressed` to **TouchableHighlight** for snapshot tests ([3756d41](https://github.com/facebook/react-native/commit/3756d41) by [@sahrens](https://github.com/sahrens)) 
+- Add `testOnly_pressed` to **TouchableHighlight** for snapshot tests ([3756d41](https://github.com/facebook/react-native/commit/3756d41) by [@sahrens](https://github.com/sahrens))
 
 #### Android specific additions
 
@@ -55,7 +55,7 @@ Here are a few highlights:
 
 #### iOS specific changes
 
-- tvOS onPress magnificnation animation now works via the `tvParallaxProperties` prop object taking `pressMagnification`, `pressDuration`, and `pressDelay` ([6c353fd](https://github.com/facebook/react-native/commit/6c353fd) by [@JulienKode](https://github.com/JulienKode))
+- tvOS `onPress` magnification animation now works via the `tvParallaxProperties` prop object taking `pressMagnification`, `pressDuration`, and `pressDelay` ([6c353fd](https://github.com/facebook/react-native/commit/6c353fd) by [@JulienKode](https://github.com/JulienKode))
 
 ### Fixed: bugs that have been resolved
 
@@ -75,19 +75,19 @@ Here are a few highlights:
 - In **AlertIOS**, fix duplicate var name declaration ([6893a26](https://github.com/facebook/react-native/commit/6893a26))
 - Permit `react-native run-ios --device [id]` by passing port when running on device ([f8fee0a](https://github.com/facebook/react-native/commit/f8fee0a) by [@jozan](https://github.com/jozan))
 - Fixed issue with `run-ios` where `Entry, ":CFBundleIdentifier", Does Not Exist` was being received ([5447ca6](https://github.com/facebook/react-native/commit/5447ca6) by [@blackneck](https://github.com/blackneck))
-- Fixed problem in Text measurent on iOS ([a534672](https://github.com/facebook/react-native/commit/a534672) by [@shergin](https://github.com/shergin))
+- Fixed problem in Text measurement on iOS ([a534672](https://github.com/facebook/react-native/commit/a534672) by [@shergin](https://github.com/shergin))
 - Fix crash when reloading in tvOS ([3a3d884](https://github.com/facebook/react-native/commit/3a3d884) by [@dlowder-salesforce](https://github.com/dlowder-salesforce))
-- Fixed a bug with positioning of nested views inside <Text> ([7d20de4](https://github.com/facebook/react-native/commit/7d20de4) by [@shergin](https://github.com/shergin))
+- Fixed a bug with positioning of nested views inside **Text** ([7d20de4](https://github.com/facebook/react-native/commit/7d20de4) by [@shergin](https://github.com/shergin))
 - Fix blob response parsing for empty body ([093a78d](https://github.com/facebook/react-native/commit/093a78d) by [@janicduplessis](https://github.com/janicduplessis))
 - Fix tvOS react-native init release build ([3002c4e](https://github.com/facebook/react-native/commit/3002c4e) by [@dlowder-salesforce](https://github.com/dlowder-salesforce)
-- Fix redbox from bridge reload due is not re-registering its root view ([2e51fa5](https://github.com/facebook/react-native/commit/2e51fa5) by [@fkgozali](https://github.com/fkgozali))
+- Fix RedBox from bridge reload due is not re-registering its root view ([2e51fa5](https://github.com/facebook/react-native/commit/2e51fa5) by [@fkgozali](https://github.com/fkgozali))
 
 #### Android specific fixes
 
 - Fix: incorrect line-height calculation ([74e54cb](https://github.com/facebook/react-native/commit/74e54cb) by [@strindhaug](https://github.com/strindhaug))
 - Fix crashes with TextInput introduced in 0.53 ([b60a727](https://github.com/facebook/react-native/commit/b60a727) by [@joshyhargreaves](https://github.com/joshyhargreaves))
 - Update ReactAndroid build script to support gradle 2.3.0 ([d8bb990](https://github.com/facebook/react-native/commit/d8bb990))
-- Allow "unexpected url" exception to be caught on Android when using fetch ([da84eba](https://github.com/facebook/react-native/commit/da84eba) by [@jcurtis](https://github.com/jcurtis))
+- Allow "unexpected URL" exception to be caught on Android when using fetch ([da84eba](https://github.com/facebook/react-native/commit/da84eba) by [@jcurtis](https://github.com/jcurtis))
 - Fix `onLayout` prop for **TextInput** ([8a073c1](https://github.com/facebook/react-native/commit/8a073c1) by [@rozele](https://github.com/rozele))
 - Fix ViewPager when using native navigation ([a1295e1](https://github.com/facebook/react-native/commit/a1295e1) by [@ruiaraujo](https://github.com/ruiaraujo))
 - Fix localization crash in **DevSettingsActivity** ([427e464](https://github.com/facebook/react-native/commit/427e464) by [@ayc1](https://github.com/ayc1))
@@ -99,7 +99,7 @@ Here are a few highlights:
 - Fixes the connection to Firestore by following whatwg.org's XMLHttpRequest send() method ([d52569c](https://github.com/facebook/react-native/commit/d52569c) by [@samsafay](https://github.com/samsafay))
 - `invertStickyHeaders` can now be set from **SectionList** or **FlatList** ([3d69b5c](https://github.com/facebook/react-native/commit/3d69b5c) by [@dannycochran](https://github.com/dannycochran))
 
-### Removed: features that have been removed; these are breaking!
+### Removed: features that have been removed; these are breaking
 
 - Removed various types ([b58e377](https://github.com/facebook/react-native/commit/b58e377), [ee26d9b](https://github.com/facebook/react-native/commit/ee26d9b), [d89517d](https://github.com/facebook/react-native/commit/d89517d), [852084a](https://github.com/facebook/react-native/commit/852084a) by [@TheSavior](https://github.com/TheSavior))
 - Deleted `Systrace.swizzleJSON()` ([3e141cb](https://github.com/facebook/react-native/commit/3e141cb) by [@yungsters](https://github.com/yungsters))
