@@ -4,7 +4,7 @@
   "description": "Changelog for the react-native project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "spellcheck": "node node_modules/markdown-spellcheck/bin/mdspell -n --en-us -a -r CHANGELOG.md",
     "lint": "node node_modules/markdownlint-cli/markdownlint.js *.md",
     "precommit": "npm run lint"
   },
@@ -20,6 +20,8 @@
   "homepage": "https://github.com/turnrye/react-native-changelog#readme",
   "devDependencies": {
     "husky": "^0.14.3",
-    "markdownlint-cli": "^0.6.0"
-  }
+    "markdownlint-cli": "^0.6.0",
+    "markdown-spellcheck": "^1.3.1"
+  },
+  "dependencies": {}
 }
