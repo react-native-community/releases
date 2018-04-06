@@ -1,7 +1,7 @@
 {
-  "name": "react-native-changelog",
+  "name": "react-native-releases",
   "version": "1.0.0",
-  "description": "Changelog for the react-native project",
+  "description": "Changelog for the React Native project",
   "main": "index.js",
   "scripts": {
     "spellcheck": "node node_modules/markdown-spellcheck/bin/mdspell -n --en-us -a -r CHANGELOG.md",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/turnrye/react-native-changelog.git"
+    "url": "git+https://github.com/react-native-community/react-native-releases.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/turnrye/react-native-changelog/issues"
+    "url": "https://github.com/react-native-community/react-native-releases/issues"
   },
-  "homepage": "https://github.com/turnrye/react-native-changelog#readme",
+  "homepage": "https://github.com/react-native-community/react-native-releases#readme",
   "devDependencies": {
     "husky": "^0.14.3",
     "markdownlint-cli": "^0.6.0",
