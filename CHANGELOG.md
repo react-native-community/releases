@@ -206,7 +206,6 @@ The changelog is arranged by the customary added, removed, changed, and fixed pl
 
 #### iOS specific fixes
 
-- Make sure `refreshControl` shows up on initial render if specified ([ed5872e](https://github.com/facebook/react-native/commit/ed5872e) by [@vonovak](https://github.com/vonovak))
 - Fix Crash when **CameraRoll** is getting assets from iCloud and no filename is provided ([2ae2436](https://github.com/facebook/react-native/commit/2ae2436) by [@pentarex](https://github.com/pentarex))
 - Fix Xcode Archive task failing if project path contains whitespace ([8aa568e](https://github.com/facebook/react-native/commit/8aa568e) by [@jevakallio](https://github.com/jevakallio))
 - `react-native link` has been fixed to correctly link iOS and tvOS targets ([a63fd37](https://github.com/facebook/react-native/commit/a63fd37) by [@dlowder-salesforce](https://github.com/dlowder-salesforce))
