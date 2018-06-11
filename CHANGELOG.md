@@ -7,6 +7,7 @@ Welcome to the July 2018 release of React Native! Over 53 contributors made [768
 Here are a few highlights:
 
 - New projects will use Babel 7. When upgrading to 0.56, make sure to bump your `react-native-babel-preset` to v5 or newer.
+- Node 8 is now the minimum required version.
 - Lots of Flow type improvements in this release.
 - Fix crash when archiving a project using Xcode and fix project settings warnings.
 - Lots of bug fixes.
@@ -34,6 +35,7 @@ We're working on a rewrite of some core architecture pieces (Fabric). This is a 
 ### Changes: existing functionality that is now different
 
 - New projects created using `react-native init` will use Babel 7 - https://github.com/facebook/react-native/commit/e315ec9891eb0bcb51afb0e797dbd49aa8f9ac71
+- Node 8 is now the minimum required version - https://github.com/facebook/react-native/commit/c1e6f278237e84c8ed26d3d2eb45035f250e2d40
 - Add $FlowFixMe to invalid prop accesses where Flow wasn't complaining before - https://github.com/facebook/react-native/commit/f19ee28e7d896aaacf26c6f850230019bdef0d3d
 - Update `react-devtools-core` and `plist` to include security fixes reported by `npm audit` - https://github.com/facebook/react-native/commit/3a1d949906acb0c3b44d125d54d0c99305bbbb56
 
