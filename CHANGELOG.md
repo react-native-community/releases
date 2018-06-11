@@ -24,7 +24,6 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 ### Added: new features
 
 - Update `babelHelpers` with Babel 7 support - https://github.com/facebook/react-native/commit/fbd1beaf666be9c09a380784f8c0cd34ba083a6b
-- Add `Stringish` Flow type - https://github.com/facebook/react-native/commit/053c7b2a84d97b0270d5c81d89fe39f18e91687f
 - `FlatList` is now Strict Mode compliant - https://github.com/facebook/react-native/commit/a90d0e3614c467c33cf85bcbe65be71903d5aecc
 - Add extra logging information for ReactShadowNode (1/2) - https://github.com/facebook/react-native/commit/b1d646a7cd6757391aa58045990cf3516b77ad50
 - Add extra logging information for ReactShadowNode (2/2) - https://github.com/facebook/react-native/commit/3bcfdc4b9f00c79f36854405eea58f502f683a95
