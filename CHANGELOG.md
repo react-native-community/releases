@@ -2,17 +2,24 @@
 
 ## [0.56]
 
-Welcome to the July 2018 release of React Native! Over 53 contributors made [768 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March. Thanks for another exciting release.
+Welcome to the July 2018 release of React Native!
+Over 53 contributors made [768 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March - and we are extremely grateful to every single one of you.
 
-Here are a few highlights:
+As you'll see in a second, this new version has some important **breaking changes** that required a lot of extra efforts to bring to a stable 0.56. This was the main reason behind skipping June from the monthly release cycle, but looking forward we are planning on going back to do a rollout every month.
 
-- New projects will use Babel 7. When upgrading to 0.56, make sure to bump your `react-native-babel-preset` to v5 or newer.
-- Node 8 is now the minimum required version.
-- We're migrating away from PropTypes and runtime checks and instead relying on Flow. You'll notice many improvements related to Flow in this release.
+
+### Highlights
+
+- New projects will use **Babel 7**. 
+When upgrading to 0.56, make sure to bump your `react-native-babel-preset` to v5 or newer: if you have a library please make sure that you update the preset there too: babel 7 is not retro-compatible. 
+- **Node 8** is now the minimum required version.
+- We're migrating away from PropTypes and runtime checks and instead relying on **Flow**. You'll notice many improvements related to Flow in this release.
 - Fix crash when archiving a project using Xcode and fix project settings warnings.
 - Lots of bug fixes.
 
-We're working on a rewrite of some core architecture pieces (Fabric). This is a work in progress and we do not expect it to be ready for use in open source quite yet.
+Heads-up: the Facebook internal team is currently working on a rewrite of some core architecture pieces (Fabric). This is a **work in progress** and we do not expect it to be ready for use in open source quite yet, but we felt the need to let you know what those commits mentioning Fabric are about.
+
+----
 
 ### Added: new features
 
@@ -32,6 +39,8 @@ We're working on a rewrite of some core architecture pieces (Fabric). This is a 
 - Fabric: Add right-to-left (RTL) support - https://github.com/facebook/react-native/commit/4e1453eb01ee4d20d6070ec292ae97f589b5087f
 - Yoga: Add back deprecated `getParent` methods for non-breaking API change - https://github.com/facebook/react-native/commit/c3c5c3cbce24a31f73ae6339e377ee76ca6401ad
 
+---
+
 ### Changes: existing functionality that is now different
 
 - New projects created using `react-native init` will use Babel 7 - https://github.com/facebook/react-native/commit/e315ec9891eb0bcb51afb0e797dbd49aa8f9ac71
@@ -41,6 +50,8 @@ We're working on a rewrite of some core architecture pieces (Fabric). This is a 
 - Bump Metro to v0.38 - https://github.com/facebook/react-native/commit/d081f83a0487ffbc7d19f8edc7532611b359dfc6
 - Add $FlowFixMe to invalid prop accesses where Flow wasn't complaining before - https://github.com/facebook/react-native/commit/f19ee28e7d896aaacf26c6f850230019bdef0d3d
 - Update `react-devtools-core` and `plist` to include security fixes reported by `npm audit` - https://github.com/facebook/react-native/commit/3a1d949906acb0c3b44d125d54d0c99305bbbb56
+
+---
 
 ### Fixed: bugs that have been resolved
 
