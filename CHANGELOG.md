@@ -182,7 +182,8 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - `RNTesterPods`: Fix `conversions.h` to use namespaced includes - https://github.com/facebook/react-native/commit/128c9343c464f3e7898d6e245f135f8bdf6caa6a
 - Fix or mark enum conversions surfaced by `-Wenum-conversion` - https://github.com/facebook/react-native/commit/b8f30db0ae21d5f96547702abbf50aefa93b1094
 - Fix CocoaPods integration without DevSupport subspec - https://github.com/facebook/react-native/commit/c09d509c2b8a5a02701829e1f0ace8081ce64277
-- Update Yoga to handle being in a Xcode ramework project - https://github.com/facebook/react-native/commit/cf036dbc7af16a8453c115372694dc51e8086fcf
+- Update Yoga to handle being in a Xcode framework project - https://github.com/facebook/react-native/commit/cf036dbc7af16a8453c115372694dc51e8086fcf
+- Fix Blob memory leak - https://github.com/facebook/react-native/commit/122b3791ede095345f44666691aa9ce5aa7f725a
 
 #### Android specific fixes
 
@@ -197,6 +198,7 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - Fix view indices with LayoutAnimation - https://github.com/facebook/react-native/commit/d8fcdb9bd7a308ed70caeac1b53da0a05abe452f
 - Fix originalNode memory leak - https://github.com/facebook/react-native/commit/8102e35271ab68e0525a9c60d86a855bbeef9c1a
 - Fix `ScrollView` with a `TextInput` - https://github.com/facebook/react-native/commit/2f1421dec7cd3a35779caceac108e872033c7d72
+- Disable onKeyPRess logic when handler not defined - https://github.com/facebook/react-native/commit/41975f75d96ef4b606b4618461bf24d5db063b77
 
 ---
 
