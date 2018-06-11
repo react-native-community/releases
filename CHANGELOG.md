@@ -36,6 +36,9 @@ We're working on a rewrite of some core architecture pieces (Fabric). This is a 
 
 - New projects created using `react-native init` will use Babel 7 - https://github.com/facebook/react-native/commit/e315ec9891eb0bcb51afb0e797dbd49aa8f9ac71
 - Node 8 is now the minimum required version - https://github.com/facebook/react-native/commit/c1e6f278237e84c8ed26d3d2eb45035f250e2d40
+- Bump Flow to v0.74 - https://github.com/facebook/react-native/commit/3bed272a620ac806a6142327013265ea8138641a
+- Bump Prettier to v1.13.4 - https://github.com/facebook/react-native/commit/29fb2a8e90fa3811f9485d4b89d9dbcfffea93a6
+- Bump Metro to v0.38 - https://github.com/facebook/react-native/commit/d081f83a0487ffbc7d19f8edc7532611b359dfc6
 - Add $FlowFixMe to invalid prop accesses where Flow wasn't complaining before - https://github.com/facebook/react-native/commit/f19ee28e7d896aaacf26c6f850230019bdef0d3d
 - Update `react-devtools-core` and `plist` to include security fixes reported by `npm audit` - https://github.com/facebook/react-native/commit/3a1d949906acb0c3b44d125d54d0c99305bbbb56
 
