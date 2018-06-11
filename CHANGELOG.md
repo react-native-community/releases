@@ -2,7 +2,7 @@
 
 ## [0.56]
 
-Welcome to the July 2018 release of React Native ! Over 53 contributors made [768 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March. Thanks for another exciting release.
+Welcome to the July 2018 release of React Native! Over 53 contributors made [768 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March. Thanks for another exciting release.
 
 Here are a few highlights:
 
