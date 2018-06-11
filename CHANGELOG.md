@@ -8,7 +8,7 @@ Here are a few highlights:
 
 - New projects will use Babel 7. When upgrading to 0.56, make sure to bump your `react-native-babel-preset` to v5 or newer.
 - Node 8 is now the minimum required version.
-- Lots of Flow type improvements in this release.
+- We're migrating away from PropTypes and runtime checks and instead relying on Flow. You'll notice many improvements related to Flow in this release.
 - Fix crash when archiving a project using Xcode and fix project settings warnings.
 - Lots of bug fixes.
 
