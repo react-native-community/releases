@@ -187,6 +187,7 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 
 #### Android specific fixes
 
+- Correct draw path dimensions while doing even border, fixes blurred borders - https://github.com/facebook/react-native/commit/c5ca26a0e5c0660196300ee34d6007c63879611f
 - Don't pass additional arguments to `requireNativeComponent` in `.android.js` files - https://github.com/facebook/react-native/commit/a51e8b19cc4dc36dee42ac95278b883c06b2e40f
 - Prevent `RefreshControl` from getting stuck when a parent is scrolled horizontally - https://github.com/facebook/react-native/commit/33ffa79a51d4db9ba69148861f2da304646175cd
 - Prevent crash due to unsupported ellipsize mode - https://github.com/facebook/react-native/commit/85e33aaf908996e99220bff4a2bdbbdf7c0d12b0
