@@ -10,12 +10,14 @@ As you'll see in a second, this new version has some important **breaking change
 ### Highlights
 
 - React Native now uses **Babel 7**.
-  When upgrading to 0.56, make sure to bump your `react-native-babel-preset` to v5 or newer.
+  When upgrading to 0.56, make sure to bump your `react-native-babel-preset` `package.json` dependency to `^5.0.1` or newer.
   If you have a library, please make sure that you update the preset there too as Babel 7 is not backwards compatible.
+  Once 0.56 reaches stable, we will move the `react-native-babel-preset@latest` tag to `5.0.1`.
 - **Node 8** is now the minimum required version. Trailing commas are now allowed.
 - **iOS 9** is now the minimum required version.
   Any device that can run iOS 8, can upgrade to iOS 9. Developers who support iOS 8 in their apps may continue doing so as this is a Xcode-level setting (`IPHONEOS_DEPLOYMENT_TARGET`).
-- `WebView` will only load http(s) URLs by default, geolocation disabled by default.
+- **Xcode 9** is now the minimum required version. We recommend using Xcode 9.4 as that is what we use to run our tests.
+- `WebView` will only load http(s) URLs by default, and geolocation is disabled by default.
 - Added Flow types for several components.
   We're migrating away from PropTypes and runtime checks and instead relying on **Flow**. You'll notice many improvements related to Flow in this release.
 - Fix project settings warnings on newer Xcode versions, remove unneccessary console logging.
@@ -35,23 +37,6 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - Add prop type `accessibilityTraits` to `Text` - https://github.com/facebook/react-native/commit/654435d1ed9e584e65fff601e1fa50591e042664
 - Add devDependencies support for templates - https://github.com/facebook/react-native/commit/c4ab03a18e75e6ed55444b5d86f3ceee435b9a78
 - Add support for springDamping in `SpringInterpolator` - https://github.com/facebook/react-native/commit/1dde989919d2c272ca7fcaa5c4b2d9ee02c490a0
-- Create Flow props for `Image` - https://github.com/facebook/react-native/commit/8bac869f5d1f2ef42e707d0ec817afc6ac98b3b2
-- Flow type for `SegmentedControlIOS` - https://github.com/facebook/react-native/commit/113f009698dbd8f1b4c1048d77ff1eb373021083
-- Flow type for `ProgressViewIOS` - https://github.com/facebook/react-native/commit/c87701ba05a8524756e87c089eb92c8f3c81823e
-- Flow type for `PickerIOS` - https://github.com/facebook/react-native/commit/1c66cdc7e8ce8190dfbef76629601497446b2b0a
-- Flow type for `Switch` - https://github.com/facebook/react-native/commit/06052a2330fc9c1dd0d56c6bbe5a17703f80c6b9
-- Flow type for `Slider` - https://github.com/facebook/react-native/commit/cbe045a95f1ca53d99ae521742a93299a53d6136
-- Flow type for `RefreshControl` - https://github.com/facebook/react-native/commit/891dfc3da4b5825097aedf73ff04e8982c00aeff
-- Flow type for `ListView` - https://github.com/facebook/react-native/commit/4b1ecb62045fbb78764d1f51030f2253be705c5c
-- Flow type for `TextInput` - https://github.com/facebook/react-native/commit/c8bcda8150278fde07331ca6958976b2b3395688
-- Flow type for `TouchableBounce` - https://github.com/facebook/react-native/commit/8454a36b0bc54cb1e267bc264657cc693607da71
-- Flow type for `TouchableOpacity` - https://github.com/facebook/react-native/commit/44743c07ad672e39668f92a801578906ec92996a
-- Flow type for `TouchableHighlight` - https://github.com/facebook/react-native/commit/f0c18dc820537892dcc33d5aebbf4f52cf299b95
-- Flow type for `TouchableWithoutFeedback` - https://github.com/facebook/react-native/commit/0b79d1faa21eb3c29aeeba08ee0fb2ed62e6cc54
-- Flow type for `ScrollView` - https://github.com/facebook/react-native/commit/b1276622791d5dbe4199bb075f473908c3e62b31
-- Flow type for `DatePickerIOS` - https://github.com/facebook/react-native/commit/97e572ea6d7b1fd829ca20f5d5c8ff970d88e68b
-- Flow type for `KeyboardAvoidingView` - https://github.com/facebook/react-native/commit/188b118b6075be1614c553596b85d430767f2dbc
-- Flow type for `ActivityIndicator` - https://github.com/facebook/react-native/commit/0b71d1ddb03c036ed118574c105b0af505da19fc
 
 #### Android specific additions
 
@@ -84,7 +69,31 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - Upgrade Buck to v2018.03.26.01 - https://github.com/facebook/react-native/commit/1324e7b5580db815471172cf6dd140124bd2f11a
 - Disallow requiring from invariant/warning - https://github.com/facebook/react-native/commit/521fb6d041167ec8a8d0e98ac606db1f27f0c5c8
 - Remove native prop type validation - https://github.com/facebook/react-native/commit/8dc3ba0444c94d9bbb66295b5af885bff9b9cd34
-- Add $FlowFixMe to invalid prop accesses where Flow wasn't complaining before - https://github.com/facebook/react-native/commit/f19ee28e7d896aaacf26c6f850230019bdef0d3d
+- Add `$FlowFixMe` to invalid prop accesses where Flow wasn't complaining before - https://github.com/facebook/react-native/commit/f19ee28e7d896aaacf26c6f850230019bdef0d3d
+- Create Flow props for `Image` - https://github.com/facebook/react-native/commit/8bac869f5d1f2ef42e707d0ec817afc6ac98b3b2
+- Flow type for `SegmentedControlIOS` - https://github.com/facebook/react-native/commit/113f009698dbd8f1b4c1048d77ff1eb373021083
+- Flow type for `ProgressViewIOS` - https://github.com/facebook/react-native/commit/c87701ba05a8524756e87c089eb92c8f3c81823e
+- Flow type for `PickerIOS` - https://github.com/facebook/react-native/commit/1c66cdc7e8ce8190dfbef76629601497446b2b0a
+- Flow type for `Switch` - https://github.com/facebook/react-native/commit/06052a2330fc9c1dd0d56c6bbe5a17703f80c6b9
+- Flow type for `Slider` - https://github.com/facebook/react-native/commit/cbe045a95f1ca53d99ae521742a93299a53d6136
+- Flow type for `RefreshControl` - https://github.com/facebook/react-native/commit/891dfc3da4b5825097aedf73ff04e8982c00aeff
+- Flow type for `ListView` - https://github.com/facebook/react-native/commit/4b1ecb62045fbb78764d1f51030f2253be705c5c
+- Flow type for `TextInput` - https://github.com/facebook/react-native/commit/c8bcda8150278fde07331ca6958976b2b3395688
+- Flow type for `TouchableBounce` - https://github.com/facebook/react-native/commit/8454a36b0bc54cb1e267bc264657cc693607da71
+- Flow type for `TouchableOpacity` - https://github.com/facebook/react-native/commit/44743c07ad672e39668f92a801578906ec92996a
+- Flow type for `TouchableHighlight` - https://github.com/facebook/react-native/commit/f0c18dc820537892dcc33d5aebbf4f52cf299b95
+- Flow type for `TouchableWithoutFeedback` - https://github.com/facebook/react-native/commit/0b79d1faa21eb3c29aeeba08ee0fb2ed62e6cc54
+- Flow type for `ScrollView` - https://github.com/facebook/react-native/commit/b1276622791d5dbe4199bb075f473908c3e62b31
+- Flow type for `DatePickerIOS` - https://github.com/facebook/react-native/commit/97e572ea6d7b1fd829ca20f5d5c8ff970d88e68b
+- Flow type for `KeyboardAvoidingView` - https://github.com/facebook/react-native/commit/188b118b6075be1614c553596b85d430767f2dbc
+- Flow type for `ActivityIndicator` - https://github.com/facebook/react-native/commit/0b71d1ddb03c036ed118574c105b0af505da19fc
+- Remove `$FlowFixMe` in `TouchableBounce` - https://github.com/facebook/react-native/commit/ffda0178509ed92396f15db37a41d3d668ade4e6
+- Remove `$FlowFixMe` in `ScrollView` - https://github.com/facebook/react-native/commit/af6e2eb02d3651f869b5436e68e61ef3ab3405a0
+- Remove `$FlowFixMe` in `ListView` - https://github.com/facebook/react-native/commit/af6e2eb02d3651f869b5436e68e61ef3ab3405a0
+- Remove `$FlowFixMe` in `Text` - https://github.com/facebook/react-native/commit/6042592cf46787f089e76b661376705380607207
+- Remove `$FlowFixMe` in `RTLExample` - https://github.com/facebook/react-native/commit/206ef54aa415e3e2bb0d48111104dfc372b97e0f
+- Remove `$FlowFixMe` in `AppContainer` - https://github.com/facebook/react-native/commit/a956551af73cf785ee4345e92e71fd5b17c5644e
+- Remove `$FlowFixMe` in `Slider` - https://github.com/facebook/react-native/commit/1615f9d16149c7082ce0e1485aa04a6f2108f7ba
 - Update `react-devtools-core` and `plist` to include security fixes reported by `npm audit` - https://github.com/facebook/react-native/commit/3a1d949906acb0c3b44d125d54d0c99305bbbb56
 - Update `Switch` to ES6 Class - https://github.com/facebook/react-native/commit/970caa4552d4ba87c1a954391535ff42b00832e7
 - Update `Slider` to ES6 Class - https://github.com/facebook/react-native/commit/5259450c143f71c65e157d6b7d3f0e1655eb7aa1
@@ -107,18 +116,19 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - Suggest `git apply --reject` for failed upgrades - https://github.com/facebook/react-native/commit/4fbd244b9a6b62e0efe1b4b5a7ec3de468f020f6
 - Moved `TouchHistoryMath` from React to React Native - https://github.com/facebook/react-native/commit/06085d38366373f3135074dc14e2c9871ca4fe29
 - Refactor `RCTInputAccessoryView` - https://github.com/facebook/react-native/commit/c136c54ff0211e2bf149fab600cd6e295f9d19dd
-- Don't wrap ListEmptyComponent in an extra view - https://github.com/facebook/react-native/commit/db061ea8c7b78d7e9df4a450c9e7a24d9b2382b4
+- Don't wrap `ListEmptyComponent` in an extra view - https://github.com/facebook/react-native/commit/db061ea8c7b78d7e9df4a450c9e7a24d9b2382b4
 - Move `Text` PropTypes to its own file - https://github.com/facebook/react-native/commit/cd8128b2eccf6898cdf798a1e1be1f7a5762a0d4
 - Mock `ReactNative.NativeComponent` native methods in Jest - https://github.com/facebook/react-native/commit/3e9a371ace5f25b2eb7a0d30177251f8a0c10ed9
 - Tightening types for `View` and `VirtualizedList` - https://github.com/facebook/react-native/commit/5035af80ecddb44e2a8444780f25f336b760bf32
 - Make values optional in `ViewPropTypes` - https://github.com/facebook/react-native/commit/f1316cab6c351852ef1da9939d4c8f0244fb8a6f
 - propTypes are optional for native components - https://github.com/facebook/react-native/commit/dbdf43b428da19a9eba012753904bcf33339ea9a
-- Rename Style to DangerouslyImpreciseStyle - https://github.com/facebook/react-native/commit/4895c645ea17ff939811f3d5ec6218cd4e31c5fb
+- Rename `Style` to `DangerouslyImpreciseStyle` - https://github.com/facebook/react-native/commit/4895c645ea17ff939811f3d5ec6218cd4e31c5fb
 
 ### iOS specific changes
 
 - iOS 9 is now the minimum required version - https://github.com/facebook/react-native/commit/f50df4f5eca4b4324ff18a49dcf8be3694482b51
 - Update podspecs to target iOS 9 - https://github.com/facebook/react-native/commit/092103e7525e58e04346e0a1a16a67ca4f31c2e9
+- Xcode 9.4 is now used to run tests - https://github.com/facebook/react-native/commit/c55bcd6ea729cdf57fc14a5478b7c2e3f6b2a94d
 - Prevent console logging on iOS 11.3+ within WebSocket - https://github.com/facebook/react-native/commit/8125be942bd5fd8fe851bad04ae6b9bcb0af4727
 - Expose `RCTFont` size overrides - https://github.com/facebook/react-native/commit/6611fefef7559c4cd3d1824235d263bff210d5e2
 
@@ -141,7 +151,7 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - Prevent showing a hidden status bar when opening modals - https://github.com/facebook/react-native/commit/076b1cea3563cae30e11d63cc100ceaed9082692
 - Fix crash when reloading while Perf Monitor is enabled - https://github.com/facebook/react-native/commit/4fcd9970bd2dfb24890bc87e9c82e16dab71ec09
 - Fixed concurrency issue in remote debugger - https://github.com/facebook/react-native/commit/e5aa5b7c508c5e0e51f7abfcee350e27bef24ba2
-- Fix Modal + FlatList scrolling - https://github.com/facebook/react-native/commit/8799047dd0bc8dd93f05fa97d4b9a59f7dfeb324
+- Fix `Modal` + `FlatList` scrolling - https://github.com/facebook/react-native/commit/8799047dd0bc8dd93f05fa97d4b9a59f7dfeb324
 - Fix bug in `RCTNetworking` where not all tasks/handlers were being cleared during invalidation - https://github.com/facebook/react-native/commit/b8051720344f3716e964eaf7cfdd2a91dc703602
 - Fix keyboard handling with `keyboardShouldPersistTaps: never` - https://github.com/facebook/react-native/commit/ffe6c110f7ce33460fe0399ccbda16a6adbe90ca
 - Fix Responder Logic in `Text` - https://github.com/facebook/react-native/commit/e2ce22b823661a7dcf6b70a825921a2910383bd1
@@ -156,13 +166,6 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - Fix type for `ReactNative.NativeComponent` (1/2) - https://github.com/facebook/react-native/commit/de11ba2a5ee90929dbc67d914de59bdd2ebc29ca
 - Fix type for `ReactNative.NativeComponent` (2/2) - https://github.com/facebook/react-native/commit/752863629d63bca6d96a101bfeccc4e7ad3e953e
 - Move Image PropTypes to new file - https://github.com/facebook/react-native/commit/67656991b32075e8b4a99c6409b0a131206c6941
-- Remove $FlowFixMe in `TouchableBounce` - https://github.com/facebook/react-native/commit/ffda0178509ed92396f15db37a41d3d668ade4e6
-- Remove $FlowFixMe in `ScrollView` - https://github.com/facebook/react-native/commit/af6e2eb02d3651f869b5436e68e61ef3ab3405a0
-- Remove $FlowFixMe in `ListView` - https://github.com/facebook/react-native/commit/af6e2eb02d3651f869b5436e68e61ef3ab3405a0
-- Remove $FlowFixMe in `Text` - https://github.com/facebook/react-native/commit/6042592cf46787f089e76b661376705380607207
-- Remove $FlowFixMe in `RTLExample` - https://github.com/facebook/react-native/commit/206ef54aa415e3e2bb0d48111104dfc372b97e0f
-- Remove $FlowFixMe in `AppContainer` - https://github.com/facebook/react-native/commit/a956551af73cf785ee4345e92e71fd5b17c5644e
-- Remove $FlowFixMe in `Slider` - https://github.com/facebook/react-native/commit/1615f9d16149c7082ce0e1485aa04a6f2108f7ba
 - Tests: Fix JUnit report location when running Jest - https://github.com/facebook/react-native/commit/85fc98d437c08cdec883a73161e120478737ba72
 - Tests: Fix ReactImagePropertyTest SoLoader failures (#19607) - https://github.com/facebook/react-native/commit/a52d84d7e1cdb287f2877c4d85f2e9866c248d43
 - Tests: Fix jest snapshot testing on Windows - https://github.com/facebook/react-native/commit/216bce31632480ce70cc03b1b2a57ec12440afd7
