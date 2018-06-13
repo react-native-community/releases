@@ -133,7 +133,7 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - Update Fresco to v1.9.0, okhttp3 to v3.10.0 - https://github.com/facebook/react-native/commit/6b07602915157f54c39adbf0f9746ac056ad2d13
 - Add tint color to inline icons - https://github.com/facebook/react-native/commit/e8e2a6e4102c1ba0ee3d068769e47fa61c160524
 - Fix antialiasing rounded background - https://github.com/facebook/react-native/commit/7500b3ec839ada6d8e1f7a88d30743dfb0ad7e70
-- Local-Cli link command will now replace '/' by '_' when linking projects - https://github.com/facebook/react-native/commit/dbd47592a18ed09ee6e94c79bed16d63be625af6
+- `react-native link` will now replace '/' by '_' when linking projects. If you previously linked scoped packages, they will get linked again. - https://github.com/facebook/react-native/commit/dbd47592a18ed09ee6e94c79bed16d63be625af6
 
 ---
 
