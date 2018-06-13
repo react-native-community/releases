@@ -17,6 +17,9 @@ As you'll see in a second, this new version has some important **breaking change
 - **iOS 9** is now the minimum required version.
   Any device that can run iOS 8, can upgrade to iOS 9. Developers who support iOS 8 in their apps may continue doing so as this is a Xcode-level setting (`IPHONEOS_DEPLOYMENT_TARGET`).
 - **Xcode 9** is now the minimum required version. We recommend using Xcode 9.4 as that is what we use to run our tests.
+- **Android** projects are now compiled using the _Android 26 SDK_. The target API level is left unchanged in this release.
+  Starting August 2018, new apps submitted to the Play Store will need to target API 26 as a minimum.
+  You can now opt your project in to use API 26 (or newer) as the target. Please let us know about any issues, as we'd like to finalize support for Android API 26 by the time `0.57.0` is released.
 - `WebView` will only load http(s) URLs by default, and geolocation is disabled by default.
 - Added Flow types for several components.
   We're migrating away from PropTypes and runtime checks and instead relying on **Flow**. You'll notice many improvements related to Flow in this release.
@@ -139,6 +142,7 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 
 ### Android specific changes
 
+- Projects are now compiled using Android SDK 26 - https://github.com/facebook/react-native/commit/065c5b6590de18281a8c592a04240751c655c03c
 - Touchables now play a sound on press - https://github.com/facebook/react-native/commit/722f88ca9058c5d902c416b826a7a7ab347326b8
 - Default `underlineColorAndroid` to transparent - https://github.com/facebook/react-native/commit/a3a98eb1c7fa0054a236d45421393874ce8ce558
 - Disable `WebView` geolocation by default - https://github.com/facebook/react-native/commit/23d61b35fb6fdbfb84f77b6d99ff155a0ff868e6
