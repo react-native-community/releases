@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.56]
+## [0.56.0]
 
 Welcome to the July 2018 release of React Native!
 Over 53 contributors made [768 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March - and we are extremely grateful to every single one of you.
@@ -21,6 +21,8 @@ As you'll see in a second, this new version has some important **breaking change
 - Added Flow types for several components.
   We're migrating away from PropTypes and runtime checks and instead relying on **Flow**. You'll notice many improvements related to Flow in this release.
 - Fix project settings warnings on newer Xcode versions, remove unneccessary console logging.
+- Modernized `YellowBox`.
+  Sort warnings by recency, group warnings by format string, present stack traces, show status of loading source maps, support inspecting each occurrence of a warning, and bug fixes.
 - Prettier files!
 - Lots of bug fixes.
 
@@ -63,10 +65,13 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - Node 8 is now the minimum required version - https://github.com/facebook/react-native/commit/c1e6f278237e84c8ed26d3d2eb45035f250e2d40
 - Sync React renderer to revision c0fe8d6 - https://github.com/facebook/react-native/commit/f59e5a8d28491c64e4d0c08fec3a2b0b3fabb38b
 - Upgrade Flow to v0.74 - https://github.com/facebook/react-native/commit/3bed272a620ac806a6142327013265ea8138641a
+- Upgrade Flow definitions - https://github.com/facebook/react-native/commit/f8b4850425f115c8a23dead7ec0716b61663aed6
 - Upgrade Prettier to v1.13.4 - https://github.com/facebook/react-native/commit/29fb2a8e90fa3811f9485d4b89d9dbcfffea93a6
 - Upgrade Jest to v23.1.0 - https://github.com/facebook/react-native/commit/536c9372692712b12317e657fc3e4263ecc70164
 - Upgrade Metro to v0.38 - https://github.com/facebook/react-native/commit/d081f83a0487ffbc7d19f8edc7532611b359dfc6
 - Upgrade Buck to v2018.03.26.01 - https://github.com/facebook/react-native/commit/1324e7b5580db815471172cf6dd140124bd2f11a
+- Upgrade soloader to 0.5.0 - https://github.com/facebook/react-native/commit/e3c5524bc65026a4c3d062cb05cee85b6d835286
+- Modernized `YellowBox` - https://github.com/facebook/react-native/commit/d0219a0301e59e8b0ef75dbd786318d4b4619f4c
 - Disallow requiring from invariant/warning - https://github.com/facebook/react-native/commit/521fb6d041167ec8a8d0e98ac606db1f27f0c5c8
 - Remove native prop type validation - https://github.com/facebook/react-native/commit/8dc3ba0444c94d9bbb66295b5af885bff9b9cd34
 - Add `$FlowFixMe` to invalid prop accesses where Flow wasn't complaining before - https://github.com/facebook/react-native/commit/f19ee28e7d896aaacf26c6f850230019bdef0d3d
