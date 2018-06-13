@@ -23,7 +23,7 @@ As you'll see in a second, this new version has some important **breaking change
 - `WebView` will only load http(s) URLs by default, and geolocation is disabled by default.
 - Added Flow types for several components.
   We're migrating away from PropTypes and runtime checks and instead relying on **Flow**. You'll notice many improvements related to Flow in this release.
-- Fix project settings warnings on newer Xcode versions, remove unneccessary console logging.
+- Fix project settings warnings on newer Xcode versions, remove unnecessary console logging.
 - Modernized `YellowBox`.
   Sort warnings by recency, group warnings by format string, present stack traces, show status of loading source maps, support inspecting each occurrence of a warning, and bug fixes.
 - Prettier files!
