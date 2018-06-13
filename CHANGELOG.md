@@ -10,9 +10,9 @@ As you'll see in a second, this new version has some important **breaking change
 ### Highlights
 
 - React Native now uses **Babel 7**.
-  When upgrading to 0.56, make sure to bump your `react-native-babel-preset` `package.json` dependency to `^5.0.1` or newer.
+  When upgrading to 0.56, make sure to bump your `babel-preset-react-native` `package.json` dependency to `^5.0.1` or newer.
   If you have a library, please make sure that you update the preset there too as Babel 7 is not backwards compatible.
-  Once 0.56 reaches stable, we will move the `react-native-babel-preset@latest` tag to `5.0.1`.
+  Once 0.56 reaches stable, we will move the `babel-preset-react-native@latest` tag to `5.0.1`.
 - **Node 8** is now the minimum required version. Trailing commas are now allowed.
 - **iOS 9** is now the minimum required version.
   Any device that can run iOS 8, can upgrade to iOS 9. Developers who support iOS 8 in their apps may continue doing so as this is a Xcode-level setting (`IPHONEOS_DEPLOYMENT_TARGET`).
