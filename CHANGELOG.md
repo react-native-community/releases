@@ -102,6 +102,7 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - Remove `$FlowFixMe` in `RTLExample` - https://github.com/facebook/react-native/commit/206ef54aa415e3e2bb0d48111104dfc372b97e0f
 - Remove `$FlowFixMe` in `AppContainer` - https://github.com/facebook/react-native/commit/a956551af73cf785ee4345e92e71fd5b17c5644e
 - Remove `$FlowFixMe` in `Slider` - https://github.com/facebook/react-native/commit/1615f9d16149c7082ce0e1485aa04a6f2108f7ba
+- `StyleSheet`: Support animated values for border dimensions - https://github.com/facebook/react-native/commit/3e3b10f4044ada7b523d363afb614720468c217f
 - Update `react-devtools-core` and `plist` to include security fixes reported by `npm audit` - https://github.com/facebook/react-native/commit/3a1d949906acb0c3b44d125d54d0c99305bbbb56
 - Update `Switch` to ES6 Class - https://github.com/facebook/react-native/commit/970caa4552d4ba87c1a954391535ff42b00832e7
 - Update `Slider` to ES6 Class - https://github.com/facebook/react-native/commit/5259450c143f71c65e157d6b7d3f0e1655eb7aa1
