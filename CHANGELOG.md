@@ -144,6 +144,7 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 ### Android specific changes
 
 - Projects are now compiled using Android SDK 26 - https://github.com/facebook/react-native/commit/065c5b6590de18281a8c592a04240751c655c03c
+- Use Google Maven repo in new Android projects - https://github.com/facebook/react-native/commit/6d56a234e3cf5984335ff2713236260fac977f5f
 - Touchables now play a sound on press - https://github.com/facebook/react-native/commit/722f88ca9058c5d902c416b826a7a7ab347326b8
 - Default `underlineColorAndroid` to transparent - https://github.com/facebook/react-native/commit/a3a98eb1c7fa0054a236d45421393874ce8ce558
 - Disable `WebView` geolocation by default - https://github.com/facebook/react-native/commit/23d61b35fb6fdbfb84f77b6d99ff155a0ff868e6
