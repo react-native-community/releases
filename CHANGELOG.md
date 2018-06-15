@@ -5,7 +5,7 @@
 Welcome to the June 2018 release of React Native!
 Over 53 contributors made [780 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March - and we are extremely grateful to every single one of you.
 
-As you'll see in a second, this new version has some important **breaking changes** that required a lot of extra efforts to bring to a stable 0.56. This was the main reason behind skipping June from the monthly release cycle, but looking forward we are planning on going back to do a rollout every month.
+As you'll see in a second, this new version has some important **breaking changes** that required a lot of extra efforts to bring to a stable 0.56. This was the main reason behind skipping April and May from the monthly release cycle, but looking forward we are planning on going back to do a rollout every month.
 
 ### Highlights
 
