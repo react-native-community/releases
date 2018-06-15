@@ -72,8 +72,6 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - Upgrade Prettier to v1.13.4 - https://github.com/facebook/react-native/commit/29fb2a8e90fa3811f9485d4b89d9dbcfffea93a6
 - Upgrade Jest to v23.1.0 - https://github.com/facebook/react-native/commit/536c9372692712b12317e657fc3e4263ecc70164
 - Upgrade Metro to v0.38 - https://github.com/facebook/react-native/commit/d081f83a0487ffbc7d19f8edc7532611b359dfc6
-- Upgrade Buck to v2018.03.26.01 - https://github.com/facebook/react-native/commit/1324e7b5580db815471172cf6dd140124bd2f11a
-- Upgrade soloader to 0.5.0 - https://github.com/facebook/react-native/commit/e3c5524bc65026a4c3d062cb05cee85b6d835286
 - Modernized `YellowBox` - https://github.com/facebook/react-native/commit/d0219a0301e59e8b0ef75dbd786318d4b4619f4c
 - Disallow requiring from invariant/warning - https://github.com/facebook/react-native/commit/521fb6d041167ec8a8d0e98ac606db1f27f0c5c8
 - Remove native prop type validation - https://github.com/facebook/react-native/commit/8dc3ba0444c94d9bbb66295b5af885bff9b9cd34
@@ -145,6 +143,10 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 
 - Projects are now compiled using Android SDK 26 - https://github.com/facebook/react-native/commit/065c5b6590de18281a8c592a04240751c655c03c
 - Use Google Maven repo in new Android projects - https://github.com/facebook/react-native/commit/6d56a234e3cf5984335ff2713236260fac977f5f
+- Upgrade Buck to v2018.03.26.01 - https://github.com/facebook/react-native/commit/1324e7b5580db815471172cf6dd140124bd2f11a
+- Upgrade soloader to 0.5.0 - https://github.com/facebook/react-native/commit/e3c5524bc65026a4c3d062cb05cee85b6d835286
+- Upgrade gradle-plugin to 2.3.3, gradle to 3.5.1, gradle-download-task to 3.4.3 - https://github.com/facebook/react-native/commit/699e5eebe807d1ced660d2d2f39b5679d26925da
+
 - Touchables now play a sound on press - https://github.com/facebook/react-native/commit/722f88ca9058c5d902c416b826a7a7ab347326b8
 - Default `underlineColorAndroid` to transparent - https://github.com/facebook/react-native/commit/a3a98eb1c7fa0054a236d45421393874ce8ce558
 - Disable `WebView` geolocation by default - https://github.com/facebook/react-native/commit/23d61b35fb6fdbfb84f77b6d99ff155a0ff868e6
