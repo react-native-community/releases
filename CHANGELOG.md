@@ -20,6 +20,7 @@ As you'll see in a second, this new version has some important **breaking change
 - **Android** projects are now compiled using the _Android 26 SDK_. The target API level is left unchanged in this release.
   Starting August 2018, new apps submitted to the Play Store will need to target API 26 as a minimum.
   You can now opt your project in to use API 26 (or newer) as the target. Please let us know about any issues, as we'd like to finalize support for Android API 26 by the time `0.57.0` is released.
+  Minimum supported version is **API 14 or Android 4.0**.
 - `WebView` will only load http(s) URLs by default, and geolocation is disabled by default.
 - Added Flow types for several components.
   We're migrating away from PropTypes and runtime checks and instead relying on **Flow**. You'll notice many improvements related to Flow in this release.
