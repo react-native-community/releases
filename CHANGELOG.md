@@ -67,6 +67,7 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - Restrict `WebView` to only http(s) URLs: https://github.com/facebook/react-native/commit/634e7e11e3ad39e0b13bf20cc7722c0cfd3c3e28 https://github.com/facebook/react-native/commit/23f8f7aecb1f21f4f5e44fb9e4a7456ea97935c9
 - Node 8 is now the minimum required version - https://github.com/facebook/react-native/commit/c1e6f278237e84c8ed26d3d2eb45035f250e2d40
 - Sync React renderer to revision c0fe8d6 - https://github.com/facebook/react-native/commit/f59e5a8d28491c64e4d0c08fec3a2b0b3fabb38b
+- Update new project template's Flow config to fix `Cannot resolve module X` isse due to removal of `@providesModule` - https://github.com/facebook/react-native/commit/843a433e87b0ccaa64ab70d07e22bffbabad8045
 - Upgrade Flow to v0.74 - https://github.com/facebook/react-native/commit/3bed272a620ac806a6142327013265ea8138641a
 - Upgrade Flow definitions - https://github.com/facebook/react-native/commit/f8b4850425f115c8a23dead7ec0716b61663aed6
 - Upgrade Prettier to v1.13.4 - https://github.com/facebook/react-native/commit/29fb2a8e90fa3811f9485d4b89d9dbcfffea93a6
