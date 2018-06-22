@@ -66,7 +66,7 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - New projects created using `react-native init` will use Babel 7 - https://github.com/facebook/react-native/commit/e315ec9891eb0bcb51afb0e797dbd49aa8f9ac71
 - Restrict `WebView` to only http(s) URLs: https://github.com/facebook/react-native/commit/634e7e11e3ad39e0b13bf20cc7722c0cfd3c3e28 https://github.com/facebook/react-native/commit/23f8f7aecb1f21f4f5e44fb9e4a7456ea97935c9
 - Node 8 is now the minimum required version - https://github.com/facebook/react-native/commit/c1e6f278237e84c8ed26d3d2eb45035f250e2d40
-- Sync React renderer to revision c0fe8d6 - https://github.com/facebook/react-native/commit/f59e5a8d28491c64e4d0c08fec3a2b0b3fabb38b
+- Upgrade React to v16.4.1, sync React Renderer to revision ae14317 - https://github.com/facebook/react-native/commit/72d22e8828feece1500487b9c28bb1df21b090f5
 - Update new project template's Flow config to fix `Cannot resolve module X` isse due to removal of `@providesModule` - https://github.com/facebook/react-native/commit/843a433e87b0ccaa64ab70d07e22bffbabad8045
 - Upgrade Flow to v0.74 - https://github.com/facebook/react-native/commit/3bed272a620ac806a6142327013265ea8138641a
 - Upgrade Flow definitions - https://github.com/facebook/react-native/commit/f8b4850425f115c8a23dead7ec0716b61663aed6
@@ -183,6 +183,7 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - Tests: Fix JUnit report location when running Jest - https://github.com/facebook/react-native/commit/85fc98d437c08cdec883a73161e120478737ba72
 - Tests: Fix ReactImagePropertyTest SoLoader failures (#19607) - https://github.com/facebook/react-native/commit/a52d84d7e1cdb287f2877c4d85f2e9866c248d43
 - Tests: Fix jest snapshot testing on Windows - https://github.com/facebook/react-native/commit/216bce31632480ce70cc03b1b2a57ec12440afd7
+- Fixes "Cannot resolve module" errors in new `react-native init` projects - https://github.com/facebook/react-native/commit/27a497dd5ae51b6a7fdf3df7504f9082bdfae61e
 
 #### iOS specific fixes
 
