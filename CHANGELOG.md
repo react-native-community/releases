@@ -3,7 +3,7 @@
 ## [0.56.0]
 
 Welcome to the June 2018 release of React Native!
-Over 53 contributors made [791 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March - and we are extremely grateful to every single one of you.
+Over 53 contributors made [797 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March - and we are extremely grateful to every single one of you.
 
 As you'll see in a second, this new version has some important **breaking changes** that required a lot of extra efforts to bring to a stable 0.56. This was the main reason behind skipping June from the monthly release cycle, but looking forward we are planning on going back to do a rollout every month.
 
@@ -188,6 +188,7 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 #### iOS specific fixes
 
 - Fix bug where a Backspace event was emitted when entering characters after clearing a text in `TextInput` by an empty string - https://github.com/facebook/react-native/commit/1ffb2b63be4c4af331fece0b4286e5c92b1e575d 
+- Expose `InputAccessoryView` so it can be imported - https://github.com/facebook/react-native/commit/80fc415cf179ffe26d020bc8d6e4451352da94fd
 - Fix `InputAccessoryView` safe area comformance - https://github.com/facebook/react-native/commit/490f22ae72ba43fa9364ce0f6c238744c07ac830
 - Fix use of C++ syntax in header file - https://github.com/facebook/react-native/commit/bfcfe7961db0970e2575eafe2f3c9c668bd8940d
 - Fix install step when running `run-ios` - https://github.com/facebook/react-native/commit/0934c1778f0e3c0b691e1a3ca2df1d486eb905dd
