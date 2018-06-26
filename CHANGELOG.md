@@ -1173,3 +1173,9 @@ release of React Native.
   [@fromcelticpark](https://github.com/fromcelticpark))
 - Fix `minimumViewTime` in _ViewabilityHelper_
   ([d19d137](https://github.com/facebook/react-native/commit/d19d137))
+
+[0.56.0]: https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable
+[0.55]: https://github.com/facebook/react-native/compare/0.54-stable...0.55-stable
+[0.54]: https://github.com/facebook/react-native/compare/0.53-stable...0.54-stable
+[0.53]: https://github.com/facebook/react-native/compare/0.52-stable...0.53-stable
+[0.52.0]: https://github.com/facebook/react-native/compare/0.51-stable...0.52-stable
