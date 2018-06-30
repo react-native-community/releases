@@ -46,6 +46,7 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 #### Android specific additions
 
 - Add support for build.gradle with CRLF for use with `react-native link` - https://github.com/facebook/react-native/commit/843cfc3b202433aad9a236b1b623da7c45e1ac15
+- add decimal pad to android - https://github.com/facebook/react-native/commit/5b7a817723e626453eedc800e71a4babd256218f
 - Add a way to dismiss PopupMenu elements - https://github.com/facebook/react-native/commit/353c070be9e9a5528d2098db4df3f0dc02d758a9
 - Implement `Image.defaultSource` - https://github.com/facebook/react-native/commit/b0fa3228a77d89d6736da6fcae5dd32f74f3052c
 - Support Image resizeMode=repeat - https://github.com/facebook/react-native/commit/0459e4ffaadb161598ce1a5b14c08d49a9257c9c
@@ -146,6 +147,7 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - Use Google Maven repo in new Android projects - https://github.com/facebook/react-native/commit/6d56a234e3cf5984335ff2713236260fac977f5f
 - Upgrade Buck to v2018.03.26.01 - https://github.com/facebook/react-native/commit/1324e7b5580db815471172cf6dd140124bd2f11a
 - Upgrade gradle-plugin to 2.3.3, gradle to 3.5.1, gradle-download-task to 3.4.3 - https://github.com/facebook/react-native/commit/699e5eebe807d1ced660d2d2f39b5679d26925da
+- Bump NDK APP_PLATFORM to android-16 - https://github.com/facebook/react-native/commit/5ae97990418db613cd67b1fb9070ece976d17dc7
 
 - Touchables now play a sound on press - https://github.com/facebook/react-native/commit/722f88ca9058c5d902c416b826a7a7ab347326b8
 - Default `underlineColorAndroid` to transparent - https://github.com/facebook/react-native/commit/a3a98eb1c7fa0054a236d45421393874ce8ce558
@@ -204,6 +206,7 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - Fix CocoaPods integration without DevSupport subspec - https://github.com/facebook/react-native/commit/c09d509c2b8a5a02701829e1f0ace8081ce64277
 - Update Yoga to handle being in a Xcode framework project - https://github.com/facebook/react-native/commit/cf036dbc7af16a8453c115372694dc51e8086fcf
 - Fix Blob memory leak - https://github.com/facebook/react-native/commit/122b3791ede095345f44666691aa9ce5aa7f725a
+- Avoid double reload event when reloading JS - https://github.com/facebook/react-native/commit/b348aa14d483cc6b33ba92637647c4987c9478c1
 
 #### Android specific fixes
 
@@ -220,6 +223,7 @@ Heads-up: the Facebook internal team is currently working on a rewrite of some c
 - Fix originalNode memory leak - https://github.com/facebook/react-native/commit/8102e35271ab68e0525a9c60d86a855bbeef9c1a
 - Fix `ScrollView` with a `TextInput` - https://github.com/facebook/react-native/commit/2f1421dec7cd3a35779caceac108e872033c7d72
 - Disable onKeyPRess logic when handler not defined - https://github.com/facebook/react-native/commit/41975f75d96ef4b606b4618461bf24d5db063b77
+- fix permission requests on pre-M android - https://github.com/facebook/react-native/commit/6d27bd182fa87cab0c68ca281c869b987cbd2ca6
 
 ---
 
