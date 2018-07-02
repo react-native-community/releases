@@ -3,7 +3,7 @@
 ## [0.56.0]
 
 Welcome to the June 2018 release of React Native!
-Over 53 contributors made [797 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March - and we are extremely grateful to every single one of you.
+Over 60 contributors made [803 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March - and we are extremely grateful to every single one of you.
 
 As you'll see in a second, this new version has some important **breaking changes** that required a lot of extra efforts to bring to a stable 0.56. This was the main reason behind skipping April and May from the monthly release cycle, but looking forward we are planning on going back to do a rollout every month.
 
@@ -11,8 +11,8 @@ As you'll see in a second, this new version has some important **breaking change
 
 - React Native now uses **Babel 7**.
   When upgrading to 0.56, make sure to bump your `babel-preset-react-native` `package.json` dependency to `^5.0.1` or newer.
-  If you have a library, please make sure that you update the preset there too as Babel 7 is not backwards compatible.
-  Once 0.56 reaches stable, we will move the `babel-preset-react-native@latest` tag to `5.0.1`.
+  If you have a react-native library on npm, please make sure that you update the preset there too as Babel 7 is **not** backwards compatible.
+  If you have issues upgrading to babel 7, please double check the [related documentation](https://new.babeljs.io/docs/en/next/v7-migration.html#versioning-dependencies-blog-2017-12-27-nearing-the-70-releasehtml-peer-dependencies-integrations), in particular the sections related to Package Renames and Scoped Packages. You may also need, to keep using babel6 libraries, to use [this bridge lib](https://github.com/babel/babel-bridge) or enforce the babel7 dependency via tools like [yarn resolutions](https://yarnpkg.com/lang/en/docs/selective-version-resolutions/).
 - **Node 8** is now the minimum required version. Trailing commas are now allowed.
 - **iOS 9** is now the minimum required version.
   Any device that can run iOS 8, can upgrade to iOS 9. Developers who support iOS 8 in their apps may continue doing so as this is a Xcode-level setting (`IPHONEOS_DEPLOYMENT_TARGET`).
