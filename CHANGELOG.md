@@ -1,36 +1,61 @@
 # Changelog
 
-## [0.56.0]
+## [0.56]
 
 Welcome to the June 2018 release of React Native!
 Over 60 contributors made [803 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March - and we are extremely grateful to every single one of you.
 
 As you'll see in a second, this new version has some important **breaking changes** that required a lot of extra efforts to bring to a stable 0.56. This was the main reason behind skipping April and May from the monthly release cycle, but looking forward we are planning on going back to do a rollout every month.
 
-### Highlights
+## Highlights
 
-- React Native now uses **Babel 7**.
-  When upgrading to 0.56, make sure to bump your `babel-preset-react-native` `package.json` dependency to `^5.0.1` or newer.
-  React Native library authors will need to update their libraries to make use of the updated Babel preset as Babel 7 is **not** backwards compatible.
-  If you have issues upgrading to Babel 7, please double check the [related documentation](https://new.babeljs.io/docs/en/next/v7-migration.html#versioning-dependencies-blog-2017-12-27-nearing-the-70-releasehtml-peer-dependencies-integrations), in particular the sections related to _Package Renames_ and _Scoped Packages_. 
-  The [`babel-bridge`](https://github.com/babel/babel-bridge) library may be used if you need to use libraries that have not yet upgraded to Babel 7. You may also the Babel 7 dependency via tools like [yarn resolutions](https://yarnpkg.com/lang/en/docs/selective-version-resolutions/).
-- **Node 8** is now the minimum required version. Trailing commas are now allowed.
-- **iOS 9** is now the minimum required version.
-  Any device that can run iOS 8, can upgrade to iOS 9. Developers who support iOS 8 in their apps may continue doing so as this is a Xcode-level setting (`IPHONEOS_DEPLOYMENT_TARGET`).
-- **Xcode 9** is now the minimum required version. We recommend using Xcode 9.4 as that is what we use to run our tests.
-- **Android** projects are now compiled using the _Android 26 SDK_. The target API level is left unchanged in this release.
-  Starting August 2018, new apps submitted to the Play Store will need to target API 26 as a minimum.
-  You can now opt your project in to use API 26 (or newer) as the target. Please let us know about any issues, as we'd like to finalize support for Android API 26 by the time `0.57.0` is released.
-- `WebView` will only load http(s) URLs by default, and geolocation is disabled by default.
-- Added Flow types for several components.
-  We're migrating away from PropTypes and runtime checks and instead relying on **Flow**. You'll notice many improvements related to Flow in this release.
+### React Native now uses **Babel 7**
+
+When upgrading to 0.56, make sure to bump your `babel-preset-react-native` `package.json` dependency to `^5.0.1` or newer.
+
+React Native library authors will need to update their libraries to make use of the updated Babel preset as Babel 7 is **not** backwards compatible.
+
+If you have issues upgrading to Babel 7, please double check the [related documentation](https://new.babeljs.io/docs/en/next/v7-migration.html#versioning-dependencies-blog-2017-12-27-nearing-the-70-releasehtml-peer-dependencies-integrations), in particular the sections related to _Package Renames_ and _Scoped Packages_. 
+
+The [`babel-bridge`](https://github.com/babel/babel-bridge) library may be used if you need to use libraries that have not yet upgraded to Babel 7. You may also the Babel 7 dependency via tools like [yarn resolutions](https://yarnpkg.com/lang/en/docs/selective-version-resolutions/).
+
+### **Node 8** is now the minimum required version. 
+
+Trailing commas are now allowed.
+
+### **iOS 9** is now the minimum required version.
+
+Any device that can run iOS 8, can upgrade to iOS 9. Developers who support iOS 8 in their apps may continue doing so as this is a Xcode-level setting (`IPHONEOS_DEPLOYMENT_TARGET`).
+
+### **Xcode 9** is now the minimum required version.
+
+We recommend using Xcode 9.4 as that is what we use to run our tests.
+
+### **Android** projects are now compiled using the _Android 26 SDK_. 
+
+The target API level is left unchanged in this release.
+
+Starting August 2018, new apps submitted to the Play Store will need to target API 26 as a minimum. You can now opt your project in to use API 26 (or newer) as the target. Please let us know about any issues, as we'd like to finalize support for Android API 26 by the time `0.57.0` is released.
+
+### `WebView` will only load http(s) URLs by default
+
+Geolocation is disabled by default.
+
+### Flow improvements, migrating away from PropTypes.
+
+Added Flow types for several components.
+
+We're migrating away from PropTypes and runtime checks and instead relying on **Flow**. You'll notice many improvements related to Flow in this release.
+
 - Fix project settings warnings on newer Xcode versions, remove unnecessary console logging.
 - Modernized `YellowBox`.
   Sort warnings by recency, group warnings by format string, present stack traces, show status of loading source maps, support inspecting each occurrence of a warning, and bug fixes.
 - Prettier files!
 - Lots of bug fixes.
 
-Heads-up: the Facebook internal team is currently working on a rewrite of some core architecture pieces. This is a **work in progress** and we do not expect it to be ready for use in open source quite yet, but we felt the need to let you know what those commits mentioning Fabric are about.
+### State of React Native
+
+Heads-up: the Facebook internal team is [currently working on a rewrite of some core architecture pieces](https://facebook.github.io/react-native/blog/2018/06/14/state-of-react-native-2018). This is a **work in progress** and we do not expect it to be ready for use in open source quite yet, but we felt the need to let you know what those commits mentioning Fabric are about.
 
 ---
 
