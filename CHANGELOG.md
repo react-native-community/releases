@@ -11,8 +11,9 @@ As you'll see in a second, this new version has some important **breaking change
 
 - React Native now uses **Babel 7**.
   When upgrading to 0.56, make sure to bump your `babel-preset-react-native` `package.json` dependency to `^5.0.1` or newer.
-  If you have a react-native library on npm, please make sure that you update the preset there too as Babel 7 is **not** backwards compatible.
-  If you have issues upgrading to babel 7, please double check the [related documentation](https://new.babeljs.io/docs/en/next/v7-migration.html#versioning-dependencies-blog-2017-12-27-nearing-the-70-releasehtml-peer-dependencies-integrations), in particular the sections related to Package Renames and Scoped Packages. You may also need, to keep using babel6 libraries, to use [this bridge lib](https://github.com/babel/babel-bridge) or enforce the babel7 dependency via tools like [yarn resolutions](https://yarnpkg.com/lang/en/docs/selective-version-resolutions/).
+  React Native library authors will need to update their libraries to make use of the updated Babel preset as Babel 7 is **not** backwards compatible.
+  If you have issues upgrading to Babel 7, please double check the [related documentation](https://new.babeljs.io/docs/en/next/v7-migration.html#versioning-dependencies-blog-2017-12-27-nearing-the-70-releasehtml-peer-dependencies-integrations), in particular the sections related to _Package Renames_ and _Scoped Packages_. 
+  The [`babel-bridge`](https://github.com/babel/babel-bridge) library may be used if you need to use libraries that have not yet upgraded to Babel 7. You may also the Babel 7 dependency via tools like [yarn resolutions](https://yarnpkg.com/lang/en/docs/selective-version-resolutions/).
 - **Node 8** is now the minimum required version. Trailing commas are now allowed.
 - **iOS 9** is now the minimum required version.
   Any device that can run iOS 8, can upgrade to iOS 9. Developers who support iOS 8 in their apps may continue doing so as this is a Xcode-level setting (`IPHONEOS_DEPLOYMENT_TARGET`).
