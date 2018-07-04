@@ -266,6 +266,7 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 
 - Deprecate `focusTextInput` and `blurTextInput` - https://github.com/facebook/react-native/commit/ce3b7b8204dad0fd62a76a0ce66472eca4b25bc8
 
+- Deprecate `ReactFragmentActivity`. Will be removed in 0.57 - https://github.com/facebook/react-native/commit/77a02c0d83dbfcd9a5397cf63e1ab2e6c94cfdde
 #### Android specific removals
 
 - Remove native extensions - https://github.com/facebook/react-native/commit/7c5845a5a26592598c9380df078766a680a23f06
