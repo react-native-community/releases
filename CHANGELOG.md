@@ -3,7 +3,7 @@
 ## [0.56]
 
 Welcome to the June 2018 release of React Native!
-Over 60 contributors made [815 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March - and we are extremely grateful to every single one of you.
+Over 60 contributors made [816 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March - and we are extremely grateful to every single one of you.
 
 As you'll see in a second, this new version has some important **breaking changes** that required a lot of extra efforts to bring to a stable 0.56. This was the main reason behind skipping April and May from the monthly release cycle, but looking forward we are planning on going back to do a rollout every month.
 
@@ -95,7 +95,7 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 - Node 8 is now the minimum required version - https://github.com/facebook/react-native/commit/c1e6f278237e84c8ed26d3d2eb45035f250e2d40
 - Upgrade React to v16.4.1, sync React Renderer to revision ae14317 - https://github.com/facebook/react-native/commit/72d22e8828feece1500487b9c28bb1df21b090f5
 - Update new project template's Flow config to fix `Cannot resolve module X` isse due to removal of `@providesModule` - https://github.com/facebook/react-native/commit/843a433e87b0ccaa64ab70d07e22bffbabad8045
-- Upgrade Flow to v0.75 - https://github.com/facebook/react-native/commit/3bed272a620ac806a6142327013265ea8138641a, https://github.com/facebook/react-native/commit/8aaf73b4b0bef0d224004b9f1b1c877d46493e71
+- Upgrade Flow to v0.75 - https://github.com/facebook/react-native/commit/3bed272a620ac806a6142327013265ea8138641a, https://github.com/facebook/react-native/commit/8aaf73b4b0bef0d224004b9f1b1c877d46493e71, https://github.com/facebook/react-native/commit/6264b6932a08e1cefd83c4536ff7839d91938730
 - Upgrade Flow definitions - https://github.com/facebook/react-native/commit/f8b4850425f115c8a23dead7ec0716b61663aed6
 - Upgrade Prettier to v1.13.6 - https://github.com/facebook/react-native/commit/29fb2a8e90fa3811f9485d4b89d9dbcfffea93a6, https://github.com/facebook/react-native/commit/8aaf73b4b0bef0d224004b9f1b1c877d46493e71
 - Upgrade Jest to v23.2.0 - https://github.com/facebook/react-native/commit/536c9372692712b12317e657fc3e4263ecc70164#diff-b9cfc7f2cdf78a7f4b91a753d10865a2, https://github.com/facebook/react-native/commit/8aaf73b4b0bef0d224004b9f1b1c877d46493e71
