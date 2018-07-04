@@ -3,7 +3,7 @@
 ## [0.56]
 
 Welcome to the June 2018 release of React Native!
-Over 60 contributors made [803 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March - and we are extremely grateful to every single one of you.
+Over 60 contributors made [815 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March - and we are extremely grateful to every single one of you.
 
 As you'll see in a second, this new version has some important **breaking changes** that required a lot of extra efforts to bring to a stable 0.56. This was the main reason behind skipping April and May from the monthly release cycle, but looking forward we are planning on going back to do a rollout every month.
 
@@ -95,10 +95,10 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 - Node 8 is now the minimum required version - https://github.com/facebook/react-native/commit/c1e6f278237e84c8ed26d3d2eb45035f250e2d40
 - Upgrade React to v16.4.1, sync React Renderer to revision ae14317 - https://github.com/facebook/react-native/commit/72d22e8828feece1500487b9c28bb1df21b090f5
 - Update new project template's Flow config to fix `Cannot resolve module X` isse due to removal of `@providesModule` - https://github.com/facebook/react-native/commit/843a433e87b0ccaa64ab70d07e22bffbabad8045
-- Upgrade Flow to v0.74 - https://github.com/facebook/react-native/commit/3bed272a620ac806a6142327013265ea8138641a
+- Upgrade Flow to v0.75 - https://github.com/facebook/react-native/commit/3bed272a620ac806a6142327013265ea8138641a, https://github.com/facebook/react-native/commit/8aaf73b4b0bef0d224004b9f1b1c877d46493e71
 - Upgrade Flow definitions - https://github.com/facebook/react-native/commit/f8b4850425f115c8a23dead7ec0716b61663aed6
-- Upgrade Prettier to v1.13.4 - https://github.com/facebook/react-native/commit/29fb2a8e90fa3811f9485d4b89d9dbcfffea93a6
-- Upgrade Jest to v23.1.0 - https://github.com/facebook/react-native/commit/536c9372692712b12317e657fc3e4263ecc70164
+- Upgrade Prettier to v1.13.6 - https://github.com/facebook/react-native/commit/29fb2a8e90fa3811f9485d4b89d9dbcfffea93a6, https://github.com/facebook/react-native/commit/8aaf73b4b0bef0d224004b9f1b1c877d46493e71
+- Upgrade Jest to v23.2.0 - https://github.com/facebook/react-native/commit/536c9372692712b12317e657fc3e4263ecc70164#diff-b9cfc7f2cdf78a7f4b91a753d10865a2, https://github.com/facebook/react-native/commit/8aaf73b4b0bef0d224004b9f1b1c877d46493e71
 - Upgrade Metro to v0.38 - https://github.com/facebook/react-native/commit/d081f83a0487ffbc7d19f8edc7532611b359dfc6
 - Modernized `YellowBox` - https://github.com/facebook/react-native/commit/d0219a0301e59e8b0ef75dbd786318d4b4619f4c
 - Disallow requiring from invariant/warning - https://github.com/facebook/react-native/commit/521fb6d041167ec8a8d0e98ac606db1f27f0c5c8
@@ -174,7 +174,8 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 - Upgrade Buck to v2018.03.26.01 - https://github.com/facebook/react-native/commit/1324e7b5580db815471172cf6dd140124bd2f11a
 - Upgrade gradle-plugin to 2.3.3, gradle to 3.5.1, gradle-download-task to 3.4.3 - https://github.com/facebook/react-native/commit/699e5eebe807d1ced660d2d2f39b5679d26925da
 - Bump NDK APP_PLATFORM to android-16 - https://github.com/facebook/react-native/commit/5ae97990418db613cd67b1fb9070ece976d17dc7
-
+- Bump glog to 0.3.5 (added libc++ support) - https://github.com/facebook/react-native/commit/8bd43449f0bdf5a5be1e29328810ae68e20c42af
+- `ReactFragmentActivity` deprecated as it's not necessary when targeting API level 14 and above - https://github.com/facebook/react-native/commit/8ea8dd6d48bc3db0b8255f320537e662e8fa2a09
 - Touchables now play a sound on press - https://github.com/facebook/react-native/commit/722f88ca9058c5d902c416b826a7a7ab347326b8
 - Default `underlineColorAndroid` to transparent - https://github.com/facebook/react-native/commit/a3a98eb1c7fa0054a236d45421393874ce8ce558
 - Disable `WebView` geolocation by default - https://github.com/facebook/react-native/commit/23d61b35fb6fdbfb84f77b6d99ff155a0ff868e6
@@ -185,11 +186,13 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 - Add tint color to inline icons - https://github.com/facebook/react-native/commit/e8e2a6e4102c1ba0ee3d068769e47fa61c160524
 - Fix antialiasing rounded background - https://github.com/facebook/react-native/commit/7500b3ec839ada6d8e1f7a88d30743dfb0ad7e70
 - `react-native link` will now replace '/' by '_' when linking projects. If you previously linked scoped packages, they will get linked again. - https://github.com/facebook/react-native/commit/dbd47592a18ed09ee6e94c79bed16d63be625af6
+- New project template now uses project-wide properties - https://github.com/facebook/react-native/commit/5ae80f91fb54f8b6947dc60b2d98ee73ccd04da0
 
 ---
 
 ### Fixed: bugs that have been resolved
 
+- `VirtualizedList` now accounts for `ListHeaderComponent` length when calculating offset - https://github.com/facebook/react-native/commit/537731f8a52d5adbeaadb44bd9edcbd98e8455e0
 - Prevent showing a hidden status bar when opening modals - https://github.com/facebook/react-native/commit/076b1cea3563cae30e11d63cc100ceaed9082692
 - Fix crash when reloading while Perf Monitor is enabled - https://github.com/facebook/react-native/commit/4fcd9970bd2dfb24890bc87e9c82e16dab71ec09
 - Fixed concurrency issue in remote debugger - https://github.com/facebook/react-native/commit/e5aa5b7c508c5e0e51f7abfcee350e27bef24ba2
@@ -212,9 +215,13 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 - Tests: Fix ReactImagePropertyTest SoLoader failures (#19607) - https://github.com/facebook/react-native/commit/a52d84d7e1cdb287f2877c4d85f2e9866c248d43
 - Tests: Fix jest snapshot testing on Windows - https://github.com/facebook/react-native/commit/216bce31632480ce70cc03b1b2a57ec12440afd7
 - Fixes "Cannot resolve module" errors in new `react-native init` projects - https://github.com/facebook/react-native/commit/27a497dd5ae51b6a7fdf3df7504f9082bdfae61e
+- Haste hotfix for `react-native-windows` - https://github.com/facebook/react-native/commit/600747ffd17022e2077f74f345ee6ee26f6dd49b
 
 #### iOS specific fixes
 
+- Fix undefined_arch error in Xcode 10 beta - 3861dbef5b34734283563e28b454b68d3265d21a
+- Make `react-native run-ios` command play nicely with multiple Xcode versions - https://github.com/facebook/react-native/commit/302699a4721d8e721bc222909f92b754eb14140d
+- Correct fishhook import - https://github.com/facebook/react-native/commit/ca515e99a39dcadbbfb653205e2929dec7e7096b
 - Fix bug where a Backspace event was emitted when entering characters after clearing a text in `TextInput` by an empty string - https://github.com/facebook/react-native/commit/1ffb2b63be4c4af331fece0b4286e5c92b1e575d 
 - Expose `InputAccessoryView` so it can be imported - https://github.com/facebook/react-native/commit/80fc415cf179ffe26d020bc8d6e4451352da94fd
 - Fix `InputAccessoryView` safe area comformance - https://github.com/facebook/react-native/commit/490f22ae72ba43fa9364ce0f6c238744c07ac830
@@ -233,9 +240,11 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 - Update Yoga to handle being in a Xcode framework project - https://github.com/facebook/react-native/commit/cf036dbc7af16a8453c115372694dc51e8086fcf
 - Fix Blob memory leak - https://github.com/facebook/react-native/commit/122b3791ede095345f44666691aa9ce5aa7f725a
 - Avoid double reload event when reloading JS - https://github.com/facebook/react-native/commit/b348aa14d483cc6b33ba92637647c4987c9478c1
+- Suppres spurious warning about RCTCxxModule - https://github.com/facebook/react-native/commit/af76473c2e344c13ecac054b5a5568a0b94128e5
 
 #### Android specific fixes
 
+- Fix extreme `TextInput` slowness on Android - https://github.com/facebook/react-native/commit/1b4187fc414352cd3724e2d4df2009f5a045fe3f
 - Correct draw path dimensions while doing even border, fixes blurred borders - https://github.com/facebook/react-native/commit/c5ca26a0e5c0660196300ee34d6007c63879611f
 - Don't pass additional arguments to `requireNativeComponent` in `.android.js` files - https://github.com/facebook/react-native/commit/a51e8b19cc4dc36dee42ac95278b883c06b2e40f
 - Prevent `RefreshControl` from getting stuck when a parent is scrolled horizontally - https://github.com/facebook/react-native/commit/33ffa79a51d4db9ba69148861f2da304646175cd
