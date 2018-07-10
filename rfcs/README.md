@@ -33,16 +33,16 @@ Some changes do not require an RFC:
 
 In short, to get a major feature added to React Native, one usually first gets the RFC merged into the RFC repo as a markdown file. At that point the RFC is "active" and may be implemented with the goal of eventual inclusion into React Native.
 
-* Fork the RFC repo http://github.com/react-native-community/react-native-releases
-* Copy `rfcs/0000-template.md` to `rfcs/0000-my-feature.md` (where 'my-feature' is descriptive. don't assign an RFC number yet).
-* Fill in the RFC. Put care into the details: **RFCs that do not present convincing motivation, demonstrate understanding of the impact of the design, or are disingenuous about the drawbacks or alternatives tend to be poorly-received**.
-* Submit a pull request with the label "rfc". As a pull request the RFC will receive design feedback from the larger community, and the author should be prepared to revise it in response.
-* Build consensus and integrate feedback. RFCs that have broad support are much more likely to make progress than those that don't receive any comments.
-* Eventually, the team will decide whether the RFC is a candidate for inclusion in React Native.
-* RFCs that are candidates for inclusion in React Native will enter a "final comment period" lasting 7 days. The beginning of this period will be signaled with a comment and tag on the RFC's pull request.
-* An RFC can be modified based upon feedback from the team and community. Significant modifications may trigger a new final comment period.
-* An RFC may be rejected by the team after public discussion has settled and comments have been made summarizing the rationale for rejection. A member of the team should then close the RFC's associated pull request.
-* An RFC may be accepted at the close of its final comment period. A team member will merge the RFC's associated pull request, at which point the RFC will become 'active'.
+- Fork the RFC repo [react-native-community/react-native-releases](http://github.com/react-native-community/react-native-releases)
+- Copy `rfcs/0000-template.md` to `rfcs/0000-my-feature.md` (where 'my-feature' is the title in kebab case; don't assign an RFC number yet).
+- Fill in the RFC. Put care into the details: **RFCs that do not present convincing motivation, demonstrate understanding of the impact of the design, or are disingenuous about the drawbacks or alternatives tend to be poorly-received**.
+- Submit a pull request with the label "rfc". As a pull request the RFC will receive design feedback from the larger community, and the author should be prepared to revise it in response.
+- Build consensus and integrate feedback. RFCs that have broad support are much more likely to make progress than those that don't receive any comments.
+- Eventually, the team will decide whether the RFC is a candidate for inclusion in React Native.
+- RFCs that are candidates for inclusion in React Native will enter a "final comment period" lasting 7 days. The beginning of this period will be signaled with a comment and tag on the RFC's pull request.
+- An RFC can be modified based upon feedback from the team and community. Significant modifications may trigger a new final comment period.
+- An RFC may be rejected by the team after public discussion has settled and comments have been made summarizing the rationale for rejection. A member of the team should then close the RFC's associated pull request.
+- An RFC may be accepted at the close of its final comment period. A team member will merge the RFC's associated pull request, at which point the RFC will become 'active'.
 
 ## The RFC life-cycle
 

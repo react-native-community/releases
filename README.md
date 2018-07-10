@@ -7,7 +7,7 @@ Stay up-to-date with the release activities of [React Native](https://github.com
 
 ## Request for Comments
 
-For details on the RFC process, please visit the [Request for Comment](/rfcs/README.md) README.
+For details on the RFC process, please visit the [Request for Comment](/rfcs/README.md) README. Today, we don't expect for every substantial change to go through this process; however, we hope that this brings more awareness to the community.
 
 ## Release Status Issues
 
