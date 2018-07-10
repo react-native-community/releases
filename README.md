@@ -3,7 +3,11 @@
 [![GitHub Issues](https://img.shields.io/github/issues/react-native-community/react-native-releases.svg)](https://github.com/react-native-community/react-native-releases/issues)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 
-Stay up-to-date with the release activities of [React Native](https://github.com/facebook/react-native/) by [watching](https://github.com/react-native-community/react-native-releases/subscription) for [status reports](https://github.com/react-native-community/react-native-releases/issues?q=is%3Aopen+is%3Aissue+label%3A%22release+status%22). Follow along as the release notes are prepared and review the overall [changelog](https://github.com/react-native-community/react-native-releases/blob/master/CHANGELOG.md).
+Stay up-to-date with the release activities of [React Native](https://github.com/facebook/react-native/) by [watching](https://github.com/react-native-community/react-native-releases/subscription) for [status reports](https://github.com/react-native-community/react-native-releases/issues?q=is%3Aopen+is%3Aissue+label%3A%22release+status%22). Follow along as the release notes are prepared and review the overall [changelog](https://github.com/react-native-community/react-native-releases/blob/master/CHANGELOG.md). Submit a [Request for Comment](/rfcs/README.md) for a substantial change or contribute to an [Active RFC](https://github.com/react-native-community/react-native-releases/pulls?q=is%3Aopen+is%3Apr+label%3Arfc).
+
+## Request for Comments
+
+For details on the RFC process, please visit the [Request for Comment](/rfcs/README.md) README.
 
 ## Release Status Issues
 
