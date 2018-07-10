@@ -62,7 +62,7 @@ If you are interested in working on the implementation for an 'active' RFC, but 
 
 Each week the team will attempt to review some set of open RFC pull requests.
 
-We try to make sure that any RFC that we accept is accepted at the Friday team meeting, and reported in [core team notes]. Every accepted feature should have a core team champion, who will represent the feature and its progress.
+We try to accept RFCs at the monthly team meeting, and actions are recorded in the meeting minutes. Every accepted feature should have a core team champion, who will represent the feature and its progress.
 
 **React Native's RFC process owes its inspiration to the [Rust RFC process], the [Ember RFC process], the [Yarn RFC process], and the [React RFC process]**
 
