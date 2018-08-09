@@ -6,36 +6,23 @@ This is a work-in-progress; much of these changes have not yet been classified b
 
 ### Highlights
 
+- TODO writeup about [@ziqichen6](https://github.com/ziqichen6)'s accessibility work (potentially linking to another resource for a deep dive)
+
 ### Added: new features
 
-- Add `YogaNodeProperties` implementation based on `ByteBuffer` ([0c97e75](https://github.com/facebook/react-native/commit/0c97e75) by [@davidaurelio](https://github.com/davidaurelio))
-- Add `YogaNodeProperties` implementation with `ByteBuffer` based setters ([23657cc](https://github.com/facebook/react-native/commit/23657cc) by [@davidaurelio](https://github.com/davidaurelio))
+- Major improvements to accessibility features ([9f01e4c](https://github.com/facebook/react-native/commit/9f01e4c), [b5b704d](https://github.com/facebook/react-native/commit/b5b704d), [c36e8b3](https://github.com/facebook/react-native/commit/c36e8b3), [40f6998](https://github.com/facebook/react-native/commit/40f6998), [c1d0ccd](https://github.com/facebook/react-native/commit/c1d0ccd), [679bff2](https://github.com/facebook/react-native/commit/679bff2), [10b603f](https://github.com/facebook/react-native/commit/10b603f), [d9eeae9](https://github.com/facebook/react-native/commit/d9eeae9), [3cfa7ae](https://github.com/facebook/react-native/commit/3cfa7ae), [5acb721](https://github.com/facebook/react-native/commit/5acb721), [5741f77](https://github.com/facebook/react-native/commit/5741f77), [d0b86ec](https://github.com/facebook/react-native/commit/d0b86ec), [e739143](https://github.com/facebook/react-native/commit/e739143), [c27b495](https://github.com/facebook/react-native/commit/c27b495), [5aa040d](https://github.com/facebook/react-native/commit/5aa040d), [03036f7](https://github.com/facebook/react-native/commit/03036f7), [3bedc78](https://github.com/facebook/react-native/commit/3bedc78), [ca01290](https://github.com/facebook/react-native/commit/ca01290), [121e2e5](https://github.com/facebook/react-native/commit/121e2e5), [1bc5226](https://github.com/facebook/react-native/commit/1bc5226), [48b3d13](https://github.com/facebook/react-native/commit/48b3d13), [ef3d8b2](https://github.com/facebook/react-native/commit/ef3d8b2), [5f8b44f](https://github.com/facebook/react-native/commit/5f8b44f), [50e4001](https://github.com/facebook/react-native/commit/50e4001), and [f39d092](https://github.com/facebook/react-native/commit/f39d092) by [@ziqichen6](https://github.com/ziqichen6))
+- Add `YogaNodeProperties` implementation based on `ByteBuffer` ([0c97e75](https://github.com/facebook/react-native/commit/0c97e75) and [23657cc](https://github.com/facebook/react-native/commit/23657cc) by [@davidaurelio](https://github.com/davidaurelio))
 - Adding flow strict to as many xplat files as possible ([86f8e9e](https://github.com/facebook/react-native/commit/86f8e9e))
-- added a null check on accessibilityStates ([40f6998](https://github.com/facebook/react-native/commit/40f6998) by [@ziqichen6](https://github.com/ziqichen6))
 - Add extra flowtype stubs for metro (#20429) ([9176fc0](https://github.com/facebook/react-native/commit/9176fc0) by [@CompuIves](https://github.com/CompuIves))
 - Added more info to Module Registry systraces ([c7fdd27](https://github.com/facebook/react-native/commit/c7fdd27) by [@axe-fb](https://github.com/axe-fb))
 - Add accessibilityHint for iOS (#18093) ([253b29d](https://github.com/facebook/react-native/commit/253b29d) by [@draperunner](https://github.com/draperunner))
-- Added logic to only override role description that is said on TalkBack if it's in english. ([9f01e4c](https://github.com/facebook/react-native/commit/9f01e4c) by [@ziqichen6](https://github.com/ziqichen6))
-- added accessibilityStates and accessibilityRole to ReactNativeViewAttributes ([b5b704d](https://github.com/facebook/react-native/commit/b5b704d) by [@ziqichen6](https://github.com/ziqichen6))
-- added accessibilityIgnoresInvertColors to module.exports in ViewPropTypes ([c36e8b3](https://github.com/facebook/react-native/commit/c36e8b3) by [@ziqichen6](https://github.com/ziqichen6))
-- add windows ci (#20281) ([1b2a552](https://github.com/facebook/react-native/commit/1b2a552) by [@gengjiawen](https://github.com/gengjiawen))
-- Add FlatList and SectionList to Animated exports ([daa7c78](https://github.com/facebook/react-native/commit/daa7c78) by [@yunyu](https://github.com/yunyu))
-- added android functionality for currentViewStates ([c1d0ccd](https://github.com/facebook/react-native/commit/c1d0ccd) by [@ziqichen6](https://github.com/ziqichen6))
-- added native iOS functionality for prop currentViewStates ([679bff2](https://github.com/facebook/react-native/commit/679bff2) by [@ziqichen6](https://github.com/ziqichen6))
 - Add @DoNotStrip to RemoteConnection methods ([ecd8802](https://github.com/facebook/react-native/commit/ecd8802) by [@Hypuk](https://github.com/Hypuk))
 - Added ImageEditor comment to clarify image access policy. ([10ebcbc](https://github.com/facebook/react-native/commit/10ebcbc) by [@PeteTheHeat](https://github.com/PeteTheHeat))
-- added image button as option for accessibility role ([10b603f](https://github.com/facebook/react-native/commit/10b603f) by [@ziqichen6](https://github.com/ziqichen6))
-- added image button role on iOS ([d9eeae9](https://github.com/facebook/react-native/commit/d9eeae9) by [@ziqichen6](https://github.com/ziqichen6))
-- Added in Prop for CurrentViewState ([3cfa7ae](https://github.com/facebook/react-native/commit/3cfa7ae) by [@ziqichen6](https://github.com/ziqichen6))
-- added header and summary options for roles ([5acb721](https://github.com/facebook/react-native/commit/5acb721) by [@ziqichen6](https://github.com/ziqichen6))
-- added image button role on android ([5741f77](https://github.com/facebook/react-native/commit/5741f77) by [@ziqichen6](https://github.com/ziqichen6))
-- added in the three roles: search, adjustable, link that require localization ([d0b86ec](https://github.com/facebook/react-native/commit/d0b86ec) by [@ziqichen6](https://github.com/ziqichen6))
-- added in the three roles: search, adjustable, link that require localization ([e739143](https://github.com/facebook/react-native/commit/e739143) by [@ziqichen6](https://github.com/ziqichen6))
+- add windows ci (#20281) ([1b2a552](https://github.com/facebook/react-native/commit/1b2a552) by [@gengjiawen](https://github.com/gengjiawen))
+- Add FlatList and SectionList to Animated exports ([daa7c78](https://github.com/facebook/react-native/commit/daa7c78) by [@yunyu](https://github.com/yunyu))
 - Adding new styling props to FlatList/VirtualizedList for ListHeaderComponent and ListFooterComponent ([a2675ce](https://github.com/facebook/react-native/commit/a2675ce))
 - Add missing tests for Animated.forkEvent (#20111) ([f0d3590](https://github.com/facebook/react-native/commit/f0d3590) by [@slorber](https://github.com/slorber))
 - Add `YogaNodeProperties` interface ([b5f027d](https://github.com/facebook/react-native/commit/b5f027d) by [@davidaurelio](https://github.com/davidaurelio))
-- added accessibilityRole Prop, added functionality support for role on android ([c27b495](https://github.com/facebook/react-native/commit/c27b495) by [@ziqichen6](https://github.com/ziqichen6))
-- added property accessibility IgnoresInvertColors to proptypes ([5aa040d](https://github.com/facebook/react-native/commit/5aa040d) by [@ziqichen6](https://github.com/ziqichen6))
 - Add Overflow Visible Kill Switch (Android) ([bbdc12e](https://github.com/facebook/react-native/commit/bbdc12e) by [@yungsters](https://github.com/yungsters))
 - Add Support for `overflow` on Android ([b81c8b5](https://github.com/facebook/react-native/commit/b81c8b5) by [@yungsters](https://github.com/yungsters))
 - Add back ImageEditingExample example (#19972) ([6dcadca](https://github.com/facebook/react-native/commit/6dcadca) by [@gengjiawen](https://github.com/gengjiawen))
@@ -106,7 +93,6 @@ This is a work-in-progress; much of these changes have not yet been classified b
 - Move ScrollView prop comments from propTypes to flow types ([2424ef5](https://github.com/facebook/react-native/commit/2424ef5) by [@sahrens](https://github.com/sahrens))
 - downloadBundleFromURL with an optional starting Request.Builder ([ac09261](https://github.com/facebook/react-native/commit/ac09261) by [@yancouto](https://github.com/yancouto))
 - Enable RCTDevLoadingView with another flag ([fc94f95](https://github.com/facebook/react-native/commit/fc94f95) by [@yancouto](https://github.com/yancouto))
-- Unreverting Marketplace change for Inverted Color Ignorance ([ef3d8b2](https://github.com/facebook/react-native/commit/ef3d8b2) by [@ziqichen6](https://github.com/ziqichen6))
 - Lint / reformat `YGJNI.cpp` ([7abbd70](https://github.com/facebook/react-native/commit/7abbd70) by [@davidaurelio](https://github.com/davidaurelio))
 - guards instead of nested if ([1535ecf](https://github.com/facebook/react-native/commit/1535ecf) by [@davidaurelio](https://github.com/davidaurelio))
 - Inline simple YGNode getters/setters ([40cdda3](https://github.com/facebook/react-native/commit/40cdda3) by [@swolchok](https://github.com/swolchok))
@@ -137,7 +123,6 @@ This is a work-in-progress; much of these changes have not yet been classified b
 - Run lint on `Yoga.cpp`/`Yoga.h` ([ce4c2de](https://github.com/facebook/react-native/commit/ce4c2de) by [@davidaurelio](https://github.com/davidaurelio))
 - Yoga.h: inline function declaring macros ([95b7fd9](https://github.com/facebook/react-native/commit/95b7fd9) by [@davidaurelio](https://github.com/davidaurelio))
 - Replace `YG_NODE_STYLE_PROPERTY_IMPL` macro with template ([709e3bc](https://github.com/facebook/react-native/commit/709e3bc) by [@davidaurelio](https://github.com/davidaurelio))
-- Changed prop name "currentViewStates" to "accessibilityStates" ([03036f7](https://github.com/facebook/react-native/commit/03036f7), [3bedc78](https://github.com/facebook/react-native/commit/3bedc78), [ca01290](https://github.com/facebook/react-native/commit/ca01290) by [@ziqichen6](https://github.com/ziqichen6))
 - Move ART Canvas Workaround ([7091f15](https://github.com/facebook/react-native/commit/7091f15) by [@yungsters](https://github.com/yungsters))
 - @allow-large-files flow 0.77 fbsource release ([1f54574](https://github.com/facebook/react-native/commit/1f54574) by [@avikchaudhuri](https://github.com/avikchaudhuri))
 - Implementation of `operator==` for YGValue ([6bf9024](https://github.com/facebook/react-native/commit/6bf9024) by [@shergin](https://github.com/shergin))
@@ -148,8 +133,6 @@ This is a work-in-progress; much of these changes have not yet been classified b
 - Use new configuration in react-native public cli ([a32620d](https://github.com/facebook/react-native/commit/a32620d) by [@CompuIves](https://github.com/CompuIves))
 - Use new config internally in Metro ([aaf797a](https://github.com/facebook/react-native/commit/aaf797a) by [@CompuIves](https://github.com/CompuIves))
 - Whitelist react-native-dom in haste/cli config defaults (#20393) ([c4bcca6](https://github.com/facebook/react-native/commit/c4bcca6) by [@vincentriemer](https://github.com/vincentriemer))
-- accessibilityTraits + accessibilityComponentType >> accessibilityRole + accessibilityStates ([50e4001](https://github.com/facebook/react-native/commit/50e4001), [121e2e5](https://github.com/facebook/react-native/commit/121e2e5), [1bc5226](https://github.com/facebook/react-native/commit/1bc5226) by [@ziqichen6](https://github.com/ziqichen6))
-- Made strings in the uimanager resource folder non translatable ([48b3d13](https://github.com/facebook/react-native/commit/48b3d13) by [@ziqichen6](https://github.com/ziqichen6))
 - Create a reusable IG Switch component with UIDocs and snapshot test ([7867691](https://github.com/facebook/react-native/commit/7867691))
 - Make Catalyst support lazy and non-lazy native modules ([059fb2f](https://github.com/facebook/react-native/commit/059fb2f) by [@axe-fb](https://github.com/axe-fb))
 - Make ReactModuleInfoProvider use string keys ([d891ee1](https://github.com/facebook/react-native/commit/d891ee1) by [@axe-fb](https://github.com/axe-fb))
@@ -221,7 +204,6 @@ This is a work-in-progress; much of these changes have not yet been classified b
 #### iOS specific fixes
 
 - Correct fishhook import in RCTReconnectingWebSocket ([75a0273](https://github.com/facebook/react-native/commit/75a0273))
-- Added check for iOS 11 on ignore inverted colors ([5f8b44f](https://github.com/facebook/react-native/commit/5f8b44f) by [@ziqichen6](https://github.com/ziqichen6))
 
 #### Tool fixes
 
@@ -235,7 +217,6 @@ This is a work-in-progress; much of these changes have not yet been classified b
 - Remove pull request check on npm deploys (#19856) ([6da5779](https://github.com/facebook/react-native/commit/6da5779) by [@hramos](https://github.com/hramos))
 - Removed dependency on ReactInstancePackage ([b938cd5](https://github.com/facebook/react-native/commit/b938cd5) by [@axe-fb](https://github.com/axe-fb))
 - Remove some unnecessary `const float &` uses ([6ab52ff](https://github.com/facebook/react-native/commit/6ab52ff) by [@swolchok](https://github.com/swolchok))
-- removed tabbar for iOS 9 compatibility issues ([f39d092](https://github.com/facebook/react-native/commit/f39d092) by [@ziqichen6](https://github.com/ziqichen6))
 - Remove unused YGNode::*nextChild ([4858454](https://github.com/facebook/react-native/commit/4858454) by [@swolchok](https://github.com/swolchok))
 - Reverse order of Remove Mount Item operations ([6292e27](https://github.com/facebook/react-native/commit/6292e27) by [@mdvacca](https://github.com/mdvacca))
 - Remove setJSEntryPoint from ReactRootView ([de09fd5](https://github.com/facebook/react-native/commit/de09fd5) by [@ayc1](https://github.com/ayc1))
