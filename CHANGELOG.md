@@ -51,31 +51,6 @@ This is a work-in-progress; much of these changes have not yet been classified b
 - Upgrade jest to 23.4.1 ([51cf9eb](https://github.com/facebook/react-native/commit/51cf9eb) by [@rafeca](https://github.com/rafeca))
 - React sync for revisions ae14317...ca0941f ([70913a4](https://github.com/facebook/react-native/commit/70913a4) by [@hramos](https://github.com/hramos))
 - React sync for revisions ca0941f...bc1ea9c ([b7bb25f](https://github.com/facebook/react-native/commit/b7bb25f) by [@acdlite](https://github.com/acdlite))
-- Exclude ios dependencies from Android build in fabric C++ ([4616432](https://github.com/facebook/react-native/commit/4616432) by [@mdvacca](https://github.com/mdvacca))
-- Fabric: Optimized ShadowNode::replaceChild() with `suggestedIndex` argument ([ec5b1fd](https://github.com/facebook/react-native/commit/ec5b1fd) by [@shergin](https://github.com/shergin))
-- Fabric: Support for optional `key` parameter to register/retrieve in ContextContainer ([58da981](https://github.com/facebook/react-native/commit/58da981) by [@shergin](https://github.com/shergin))
-- Fabric: Using `unordered_map` instead of `map` for RawProps ([88b8616](https://github.com/facebook/react-native/commit/88b8616) by [@shergin](https://github.com/shergin))
-- Fabric: Events related classes were moved to separate buck target ([07a4a95](https://github.com/facebook/react-native/commit/07a4a95) by [@shergin](https://github.com/shergin))
-- Fabric: ContextContainer is now able to store any copyable values ([9395485](https://github.com/facebook/react-native/commit/9395485) by [@shergin](https://github.com/shergin))
-- Fabric: `SharedColor` for Android ([2d1fabb](https://github.com/facebook/react-native/commit/2d1fabb) by [@shergin](https://github.com/shergin))
-- Fabric: Propper support for `accessibilityLabel` in RCTParagraphComponentView ([732c3a4](https://github.com/facebook/react-native/commit/732c3a4) by [@shergin](https://github.com/shergin))
-- Fabric: Generalizing cloning of YogaLayoutable approach ([fcd72bf](https://github.com/facebook/react-native/commit/fcd72bf) by [@shergin](https://github.com/shergin))
-- Fabric: Removed last two plactical usages of `ShadowNode::sourceNode_` ([e78bf72](https://github.com/facebook/react-native/commit/e78bf72) by [@shergin](https://github.com/shergin))
-- Fabric: ShadowNode::getSourceNode() was finally removed ([7a7f960](https://github.com/facebook/react-native/commit/7a7f960) by [@shergin](https://github.com/shergin))
-- Fabric: Enhancements in ContextContainer ([0532e01](https://github.com/facebook/react-native/commit/0532e01) by [@shergin](https://github.com/shergin))
-- Fabric: Computed attributed string caching inside `<Paragraph>` ([2c28310](https://github.com/facebook/react-native/commit/2c28310) by [@shergin](https://github.com/shergin))
-- Fabric: `text` module was moved to `components` subdirectory ([ecbe9ac](https://github.com/facebook/react-native/commit/ecbe9ac) by [@shergin](https://github.com/shergin))
-- Fabric: `scrollview` module was moved to `components` subdirectory ([b42e674](https://github.com/facebook/react-native/commit/b42e674) by [@shergin](https://github.com/shergin))
-- Fabric: `view` module was moved to `components` subdirectory ([57b0e68](https://github.com/facebook/react-native/commit/57b0e68) by [@shergin](https://github.com/shergin))
-- Fabric: `activityindicator` module was moved to `components` subdirectory ([95bd4a0](https://github.com/facebook/react-native/commit/95bd4a0) by [@shergin](https://github.com/shergin))
-- Fabric: `<Root>` component was decoupled from `<View>` ([e9e20e6](https://github.com/facebook/react-native/commit/e9e20e6) by [@shergin](https://github.com/shergin))
-- Fabric: Improved prettyprinting of TreeMutationInstruction ([e0e9c15](https://github.com/facebook/react-native/commit/e0e9c15) by [@shergin](https://github.com/shergin))
-- Fabric: The diffing algorithm does not use source nodes anymore ([e8ec1cb](https://github.com/facebook/react-native/commit/e8ec1cb) by [@shergin](https://github.com/shergin))
-- Fabric: Making `fabric/graphics` compilable on Android ([5786db3](https://github.com/facebook/react-native/commit/5786db3) by [@shergin](https://github.com/shergin))
-- Fabric: Making `fabric/textlayoutmanager` compilable on Android ([ee535fa](https://github.com/facebook/react-native/commit/ee535fa) by [@shergin](https://github.com/shergin))
-- Fabric: Trivial implementation of prelumiary view allocation on iOS ([2166d2b](https://github.com/facebook/react-native/commit/2166d2b) by [@shergin](https://github.com/shergin))
-- Fabric: Getting rid of `std::to_string()` ([712c2ed](https://github.com/facebook/react-native/commit/712c2ed) by [@shergin](https://github.com/shergin))
-- Fabric: Subtle changes that make GCC compiler happy ([62f9ced](https://github.com/facebook/react-native/commit/62f9ced) by [@shergin](https://github.com/shergin))
 - Translation auto-updates ([44734a2](https://github.com/facebook/react-native/commit/44734a2), [c8c2fec](https://github.com/facebook/react-native/commit/c8c2fec), [924f49b](https://github.com/facebook/react-native/commit/924f49b), [afa58a2](https://github.com/facebook/react-native/commit/afa58a2), [16b169e](https://github.com/facebook/react-native/commit/16b169e), [c3d31cd](https://github.com/facebook/react-native/commit/c3d31cd), [50b5be9](https://github.com/facebook/react-native/commit/50b5be9), [581d87c](https://github.com/facebook/react-native/commit/581d87c), [2472c8e](https://github.com/facebook/react-native/commit/2472c8e), [da5c202](https://github.com/facebook/react-native/commit/da5c202), [00b4c7d](https://github.com/facebook/react-native/commit/00b4c7d), [4fe5acc](https://github.com/facebook/react-native/commit/4fe5acc), [52a55fd](https://github.com/facebook/react-native/commit/52a55fd), [876d82c](https://github.com/facebook/react-native/commit/876d82c), [df10d0c](https://github.com/facebook/react-native/commit/df10d0c), [f68f1ad](https://github.com/facebook/react-native/commit/f68f1ad), [2dc53b0](https://github.com/facebook/react-native/commit/2dc53b0), [a414a3b](https://github.com/facebook/react-native/commit/a414a3b), [fd30cf8](https://github.com/facebook/react-native/commit/fd30cf8), [12e15e4](https://github.com/facebook/react-native/commit/12e15e4))
 - Avoid cleaning up Owner of YGNode during clonning ([2f3f1b0](https://github.com/facebook/react-native/commit/2f3f1b0) by [@mdvacca](https://github.com/mdvacca))
 - RNTester: Cleanup ViewExample.js ([b283dcd](https://github.com/facebook/react-native/commit/b283dcd) by [@yungsters](https://github.com/yungsters))
@@ -149,10 +124,6 @@ This is a work-in-progress; much of these changes have not yet been classified b
 #### Android specific changes
 
 - `targetSdkVersion` is 26 ([bfb68c0](https://github.com/facebook/react-native/commit/bfb68c0) by [@dulmandakh](https://github.com/dulmandakh))
-
-#### Internal changes that have little developer impact
-
-- Update Discussion template (#20469) ([a6e27c3](https://github.com/facebook/react-native/commit/a6e27c3) by [@kelset](https://github.com/kelset))
 
 ### Fixed: bugs that have been resolved
 
