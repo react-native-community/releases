@@ -163,17 +163,12 @@ This is a work-in-progress; much of these changes have not yet been classified b
 
 ### Removed: features that have been removed; these are breaking
 
-- BREAKING: metro: rename 'unbundle' to 'ram bundle' ([ebf5aea](https://github.com/facebook/react-native/commit/ebf5aea) by [@jeanlauliac](https://github.com/jeanlauliac))
-- remove FbRelayNativeAdapter ([7205232](https://github.com/facebook/react-native/commit/7205232) by [@kassens](https://github.com/kassens))
-- Remove clang compiler warnings for Android: -Wno-unused-parameter ([6b53430](https://github.com/facebook/react-native/commit/6b53430))
-- Remove pull request check on npm deploys (#19856) ([6da5779](https://github.com/facebook/react-native/commit/6da5779) by [@hramos](https://github.com/hramos))
-- Removed dependency on ReactInstancePackage ([b938cd5](https://github.com/facebook/react-native/commit/b938cd5) by [@axe-fb](https://github.com/axe-fb))
-- Remove some unnecessary `const float &` uses ([6ab52ff](https://github.com/facebook/react-native/commit/6ab52ff) by [@swolchok](https://github.com/swolchok))
-- Remove unused YGNode::*nextChild ([4858454](https://github.com/facebook/react-native/commit/4858454) by [@swolchok](https://github.com/swolchok))
-- Reverse order of Remove Mount Item operations ([6292e27](https://github.com/facebook/react-native/commit/6292e27) by [@mdvacca](https://github.com/mdvacca))
-- Remove setJSEntryPoint from ReactRootView ([de09fd5](https://github.com/facebook/react-native/commit/de09fd5) by [@ayc1](https://github.com/ayc1))
-- Remove ScrollView.propTypes ([5b6ff01](https://github.com/facebook/react-native/commit/5b6ff01) by [@sahrens](https://github.com/sahrens))
-- Remove instanceHandle, pass event target instead + add dispatchToEmptyTarget ([5d9326b](https://github.com/facebook/react-native/commit/5d9326b) by [@sebmarkbage](https://github.com/sebmarkbage))
+- In the CLI, `unbundle` is now `ram-bundle` ([ebf5aea](https://github.com/facebook/react-native/commit/ebf5aea) by [@jeanlauliac](https://github.com/jeanlauliac))
+- Removed `ScrollView.propTypes`; use flow or typescript for verifying correct prop usage instead ([5b6ff01](https://github.com/facebook/react-native/commit/5b6ff01) by [@sahrens](https://github.com/sahrens))
+
+#### Android specific removals
+
+- `ReactInstancePackage` is now deprecated; use `@link ReactPackage` or `@link LazyReactPackage` ([b938cd5](https://github.com/facebook/react-native/commit/b938cd5) by [@axe-fb](https://github.com/axe-fb))
 
 ## [0.56]
 
