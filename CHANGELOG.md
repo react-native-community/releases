@@ -6,7 +6,7 @@ This is a work-in-progress; much of these changes have not yet been classified b
 
 ### Highlights
 
-- TODO writeup about [@ziqichen6](https://github.com/ziqichen6)'s accessibility work (potentially linking to another resource for a deep dive)
+- Accessibility APIs now support accessibility hints, inverted colors, and easier usage of defining the element's role and states; read more at [@ziqichen6's excellent blog post](https://facebook.github.io/react-native/blog/2018/08/13/react-native-accessibility-updates)
 
 ### Added: new features
 
