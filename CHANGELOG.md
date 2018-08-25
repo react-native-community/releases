@@ -2,11 +2,12 @@
 
 ## [0.57]
 
-This is a work-in-progress; much of these changes have not yet been classified but instead placed in categories that make sense from only a surface level analysis. This list includes all of the changes as of this commit time.
+TODO: finish highlights, pick up changes from the past 2 weeks
 
 ### Highlights
 
 - Accessibility APIs now support accessibility hints, inverted colors, and easier usage of defining the element's role and states; read more at [@ziqichen6's excellent blog post](https://facebook.github.io/react-native/blog/2018/08/13/react-native-accessibility-updates)
+- Android is now using SDK 27, support library 27.x, and gradle plugin 3.1; building with Android plugin 3.2 doesn't work due to the gradle scripts, so please stay on Android Studio 3.1 for now
 
 ### Added: new features
 
