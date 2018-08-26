@@ -2,12 +2,16 @@
 
 ## [0.57]
 
-TODO: finish highlights, pick up changes from the past 2 weeks
+Welcome to the 0.57 release of React Native! This release addresses a number of issues and has some exciting improvements. We've intentionally left this release in an extended release candidate state in order to improve quality. 
+
+You may notice that this release's changelog is thinner than previous versions; that's not from lack of hard work -- this release includes 566 commits by 78 different contributors! Instead, we've taken feedback and prepared a changelog that contains only user impacting changes. Please share your feedback and let us know how we can make this even more useful.
 
 ### Highlights
 
 - Accessibility APIs now support accessibility hints, inverted colors, and easier usage of defining the element's role and states; read more at [@ziqichen6's excellent blog post](https://facebook.github.io/react-native/blog/2018/08/13/react-native-accessibility-updates)
-- Android is now using SDK 27, support library 27.x, and gradle plugin 3.1; building with Android plugin 3.2 doesn't work due to the gradle scripts, so please stay on Android Studio 3.1 for now
+- Android is now using SDK 27, gradle 3.1, and support library 27.x; building with Android plugin 3.2 doesn't work due to the gradle scripts, so please stay on Android Studio 3.1 for now
+- We've changed the dependency tree around, specifically around babel presets -- if you have a custom `.babelrc` in place make sure you update it after upgrading
+- On iOS, `WKWebView` can now be used with the `WebView` component; look for the new prop
 
 ### Added: new features
 
@@ -26,30 +30,36 @@ TODO: finish highlights, pick up changes from the past 2 weeks
 
 #### iOS specific additions
 
+- `WebView` can now use `WKWebView` internally if you pass `useWebKit={true}` ([e90d9ca](https://github.com/facebook/react-native/commit/e90d9ca), [9b3a6ec](https://github.com/facebook/react-native/commit/9b3a6ec), [f7f9d01](https://github.com/facebook/react-native/commit/f7f9d01), [94560ca](https://github.com/facebook/react-native/commit/94560ca), [06cce04](https://github.com/facebook/react-native/commit/06cce04), [1c3af59](https://github.com/facebook/react-native/commit/1c3af59), [5662598](https://github.com/facebook/react-native/commit/5662598), [1984f4b](https://github.com/facebook/react-native/commit/1984f4b), [1b73e76](https://github.com/facebook/react-native/commit/1b73e76), [d0b5a38](https://github.com/facebook/react-native/commit/d0b5a38), [0fa5bd8](https://github.com/facebook/react-native/commit/0fa5bd8), [527792a](https://github.com/facebook/react-native/commit/527792a), [ee971a7](https://github.com/facebook/react-native/commit/ee971a7), [d29c253](https://github.com/facebook/react-native/commit/d29c253), [0009d09](https://github.com/facebook/react-native/commit/0009d09), [078799f](https://github.com/facebook/react-native/commit/078799f), [f46dbc2](https://github.com/facebook/react-native/commit/f46dbc2), [262d286](https://github.com/facebook/react-native/commit/262d286), [959aacf](https://github.com/facebook/react-native/commit/959aacf), and [e0df3a1](https://github.com/facebook/react-native/commit/e0df3a1)
+by [@rsnara](https://github.com/rsnara))
 - Add `accessibilityHint` for iOS ([253b29d](https://github.com/facebook/react-native/commit/253b29d) by [@draperunner](https://github.com/draperunner))
+
 
 ### Changes: existing functionality that is now different
 
 - Bump minimum Node version to 8.3 (#20236) ([e64e13f](https://github.com/facebook/react-native/commit/e64e13f) by [@hramos](https://github.com/hramos))
-- Updated React ([70913a4](https://github.com/facebook/react-native/commit/70913a4) and [b7bb25f](https://github.com/facebook/react-native/commit/b7bb25f)by [@acdlite](https://github.com/acdlite)) and [@hramos](https://github.com/hramos))
+- Updated React ([70913a4](https://github.com/facebook/react-native/commit/70913a4) and [b7bb25f](https://github.com/facebook/react-native/commit/b7bb25f) by [@acdlite](https://github.com/acdlite)) and [@hramos](https://github.com/hramos))
 - Upgrade Flow to v0.76.0 ([eac34e3](https://github.com/facebook/react-native/commit/eac34e3) by [@gabelevi](https://github.com/gabelevi))
 - Upgrade jest to 23.4.1 ([51cf9eb](https://github.com/facebook/react-native/commit/51cf9eb) by [@rafeca](https://github.com/rafeca))
 - Upgrade babel-eslint to v9.0.0-beta.2 with better support for Flow ([abf1188](https://github.com/facebook/react-native/commit/abf1188) by [@rubennorte](https://github.com/rubennorte))
 - Upgrade ESLint to 5.1.0 ([0f2f0ca](https://github.com/facebook/react-native/commit/0f2f0ca) by [@rubennorte](https://github.com/rubennorte))
 - Upgrade Babel to v7.0.0-beta.54 ([b9d1c83](https://github.com/facebook/react-native/commit/b9d1c83) and [724c749](https://github.com/facebook/react-native/commit/724c749) by [@rubennorte](https://github.com/rubennorte))
-- Metro is now at v0.43.1 ([169d683](https://github.com/facebook/react-native/commit/169d683), [bda84a3](https://github.com/facebook/react-native/commit/bda84a3) by [@CompuIves](https://github.com/CompuIves) and [@rafeca](https://github.com/rafeca))
+- Metro is now at v0.43.6 ([169d683](https://github.com/facebook/react-native/commit/169d683), [bda84a3](https://github.com/facebook/react-native/commit/bda84a3), and [5288656](https://github.com/facebook/react-native/commit/5288656) by [@CompuIves](https://github.com/CompuIves) and [@rafeca](https://github.com/rafeca))
 - Hide pre-bundled notification when not on dev mode ([edf7100](https://github.com/facebook/react-native/commit/edf7100) by [@yancouto](https://github.com/yancouto))
 - Refined `StyleSheet.compose` Flow Type ([50a481d](https://github.com/facebook/react-native/commit/50a481d) by [@yungsters](https://github.com/yungsters))
 - Catch JS bundle load failure and prevent calls to JS after that ([201ba8c](https://github.com/facebook/react-native/commit/201ba8c) by [@fkgozali](https://github.com/fkgozali))
 - Use new Metro configuration in react-native cli ([a32620d](https://github.com/facebook/react-native/commit/a32620d) and [aaf797a](https://github.com/facebook/react-native/commit/aaf797a) by [@CompuIves](https://github.com/CompuIves))
 - Whitelist `react-native-dom` in haste/cli config defaults ([c4bcca6](https://github.com/facebook/react-native/commit/c4bcca6) by [@vincentriemer](https://github.com/vincentriemer))
+- In the CLI, don't override `metro.config.js` settings ([3afe711](https://github.com/facebook/react-native/commit/3afe711) by [@rozele](https://github.com/rozele))
 
 #### Android specific changes
 
 - `Image` source without a uri now returns null ([28c7ccf](https://github.com/facebook/react-native/commit/28c7ccf) by [@himabindugadupudi](https://github.com/himabindugadupudi))
 - `targetSdkVersion` is 26 ([bfb68c0](https://github.com/facebook/react-native/commit/bfb68c0) by [@dulmandakh](https://github.com/dulmandakh))
-- Upgrade NDK to r17b (#20357) ([6117a6c](https://github.com/facebook/react-native/commit/6117a6c) by [@dulmandakh](https://github.com/dulmandakh))
-- Upgrade NDK toolchain to 4.9 (#19945) ([ccdd450](https://github.com/facebook/react-native/commit/ccdd450) by [@dulmandakh](https://github.com/dulmandakh))
+- Upgrade NDK to r17b ([6117a6c](https://github.com/facebook/react-native/commit/6117a6c) by [@dulmandakh](https://github.com/dulmandakh))
+- Upgrade NDK toolchain to 4.9 ([ccdd450](https://github.com/facebook/react-native/commit/ccdd450) by [@dulmandakh](https://github.com/dulmandakh))
+- Upgrade Android Support Library to version 27.1.1 and set compileSdkVersion to 27; buildToolsVersion comes along for the ride, too ([d9868f7](https://github.com/facebook/react-native/commit/d9868f7) and [5992f8d](https://github.com/facebook/react-native/commit/5992f8d) by [@dulmandakh](https://github.com/dulmandakh))
+- Upgrade gradle to 3.1.4 ([6eac2d4](https://github.com/facebook/react-native-commit/6eac2d4) by [@gengjiawen](https://github.com/gengjiawen))
 - Upgrade to soloader 0.5.1 ([b6f2aad](https://github.com/facebook/react-native/commit/b6f2aad) by [@gengjiawen](https://github.com/gengjiawen))
 - Upgrade mockito to 2.19.1 ([3ea803a](https://github.com/facebook/react-native/commit/3ea803a) by [@dulmandakh](https://github.com/dulmandakh))
 - Upgrade glog to 0.3.5 ([b5fca80](https://github.com/facebook/react-native/commit/b5fca80) by [@dulmandakh](https://github.com/dulmandakh))
@@ -67,6 +77,7 @@ TODO: finish highlights, pick up changes from the past 2 weeks
 - Fix some classes of incorrect Flow errors for `Animated` ([db2159d](https://github.com/facebook/react-native/commit/db2159d) by [@yunyu](https://github.com/yunyu))
 - Fixed a typo in DockerTests.md ([c1831d5](https://github.com/facebook/react-native/commit/c1831d5) by [@kant](https://github.com/kant))
 - Fix invalid use of destructuring in jest preprocessor ([9d5bd50](https://github.com/facebook/react-native/commit/9d5bd50) by [@umairda](https://github.com/umairda))
+- Fixed a CLI crash when using old versions of node ([9a4c21f](https://github.com/facebook/react-native/commit/9a4c21f) by [@keksipurkki](https://github.com/keksipurkki))
 
 #### Android specific fixes
 
@@ -78,6 +89,8 @@ TODO: finish highlights, pick up changes from the past 2 weeks
 - Fixing crash on SDK 15 on ReactTextInputLocalData ([1bb2bea](https://github.com/facebook/react-native/commit/1bb2bea))
 - Fix Drawing Rect for ReactScrollView ([6a16bec](https://github.com/facebook/react-native/commit/6a16bec) by [@yungsters](https://github.com/yungsters))
 - Fixed NoSuchKeyException Thrown From ReadableNativeMap bysafely unwrapping ReadableMap by defaulting to 0 if key not present ([1a6666a](https://github.com/facebook/react-native/commit/1a6666a) by [@Bhavik-P](https://github.com/Bhavik-P))
+- Fixed runAndroid to enable the use of a package on port <> 8081 for Windows ([3cd0737](https://github.com/facebook/react-native/commit/3cd0737) by [@ihenshaw](https://github.com/ihenshaw))
+- Don't crash on upload retry when trying to fetch on a varying quality network ([7a246e4](https://github.com/facebook/react-native/commit/7a246e4) by [@dryganets](https://github.com/dryganets))
 
 #### iOS specific fixes
 
@@ -89,10 +102,6 @@ TODO: finish highlights, pick up changes from the past 2 weeks
 - Fix crash in RCTImagePicker on iOS ([934c50f](https://github.com/facebook/react-native/commit/934c50f) by [@mmmulani](https://github.com/mmmulani))
 - Fix `undefined_arch` error received when building in Xcode 10 beta ([e131fff](https://github.com/facebook/react-native/commit/e131fff) by [@futuun](https://github.com/futuun))
 - Add support for connecting to the Packager when running the iOS app on device when using custom Debug configuration ([079bf3f](https://github.com/facebook/react-native/commit/079bf3f))
-
-#### Tool fixes
-
-- Fixed runAndroid to enable the use of a package on port <> 8081 for Windows ([3cd0737](https://github.com/facebook/react-native/commit/3cd0737) by [@ihenshaw](https://github.com/ihenshaw))
 
 ### Removed: features that have been removed; these are breaking
 
