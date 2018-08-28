@@ -11,6 +11,7 @@ You may notice that this release's changelog is thinner than previous versions; 
 - Accessibility APIs now support accessibility hints, inverted colors, and easier usage of defining the element's role and states; read more at [@ziqichen6's excellent blog post](https://facebook.github.io/react-native/blog/2018/08/13/react-native-accessibility-updates)
 - Android is now using SDK 27, gradle 3.1, and support library 27.x; building with Android plugin 3.2 doesn't work due to the gradle scripts, so please stay on Android Studio 3.1 for now
 - We've changed the dependency tree around, specifically around babel presets -- if you have a custom `.babelrc` in place make sure you update it after upgrading
+- There is now built-in TypeScript support in the Metro bundler
 - On iOS, `WKWebView` can now be used with the `WebView` component; look for the new prop
 
 ### Added: new features
