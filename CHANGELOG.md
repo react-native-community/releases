@@ -4,15 +4,24 @@
 
 Welcome to the 0.57 release of React Native! This release addresses a number of issues and has some exciting improvements. We've intentionally left this release in an extended release candidate state in order to improve quality. 
 
-You may notice that this release's changelog is thinner than previous versions; that's not from lack of hard work -- this release includes 566 commits by 78 different contributors! Instead, we've taken feedback and prepared a changelog that contains only user impacting changes. Please share your feedback and let us know how we can make this even more useful.
+You may notice that this release's changelog is thinner than previous versions; that's not from lack of hard work -- this release includes [566 commits by 78 different contributors](https://github.com/facebook/react-native/compare/0.56-stable...0.57-stable)! Instead, we've taken feedback and prepared a changelog that contains only user impacting changes. Please share your feedback and let us know how we can make this even more useful, and as always [let us know](https://github.com/react-native-community/react-native-releases/issues/34) if you have any feedback on this process.
 
 ### Highlights
 
 - Accessibility APIs now support accessibility hints, inverted colors, and easier usage of defining the element's role and states; read more at [@ziqichen6's excellent blog post](https://facebook.github.io/react-native/blog/2018/08/13/react-native-accessibility-updates)
 - Android is now using SDK 27, gradle 3.1, and support library 27.x; building with Android plugin 3.2 doesn't work due to the gradle scripts, so please stay on Android Studio 3.1 for now
-- We've changed the dependency tree around, specifically around babel presets -- if you have a custom `.babelrc` in place make sure you update it after upgrading
-- There is now built-in TypeScript support in the Metro bundler
-- On iOS, `WKWebView` can now be used with the `WebView` component; look for the new prop
+- We've changed the dependency tree around, specifically around babel presets -- if you have a custom `.babelrc` in place make sure you update it after upgrading; that process looks like:
+  - Upgrade the version of React Native in the package.json
+  - Change the babel-preset dependency from `"babel-preset-react-native": "^5",` to `"metro-react-native-babel-preset": "0.43.5",`, then change the `.babelrc` configuration to:
+  
+    ```
+      {
+        "presets": ["module:metro-react-native-babel-preset"]
+      }
+    ```
+  - Ensure that you have all the babel dependencies fixed to version `beta.56`
+- There is now built-in TypeScript support in the Metro bundler through Babel 7 and some other work! Learn more about that [here](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/), and check out the [Babel 7 migration guide](https://babeljs.io/docs/en/next/v7-migration) for help with more complicated issues
+- On iOS, `WKWebView` can now be used with the `WebView` component; read more at [@rsnara's awesome blog post](https://facebook.github.io/react-native/blog/2018/08/27/wkwebview)
 
 ### Added: new features
 
