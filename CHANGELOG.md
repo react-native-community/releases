@@ -10,18 +10,22 @@ You may notice that this release's changelog is thinner than previous versions; 
 
 - Accessibility APIs now support accessibility hints, inverted colors, and easier usage of defining the element's role and states; read more at [@ziqichen6's excellent blog post](https://facebook.github.io/react-native/blog/2018/08/13/react-native-accessibility-updates)
 - Android is now using SDK 27, gradle 3.1, and support library 27.x; building with Android plugin 3.2 doesn't work due to the gradle scripts, so please stay on Android Studio 3.1 for now
-- We've changed the dependency tree around, specifically around babel presets -- if you have a custom `.babelrc` in place make sure you update it after upgrading; that process looks like:
-  - Upgrade the version of React Native in the package.json
-  - Change the babel-preset dependency from `"babel-preset-react-native": "^5",` to `"metro-react-native-babel-preset": "0.43.5",`, then change the `.babelrc` configuration to:
-  
-    ```
-      {
-        "presets": ["module:metro-react-native-babel-preset"]
-      }
-    ```
-  - Ensure that you have all the babel dependencies fixed to version `beta.56`
-- There is now built-in TypeScript support in the Metro bundler through Babel 7 and some other work! Learn more about that [here](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/), and check out the [Babel 7 migration guide](https://babeljs.io/docs/en/next/v7-migration) for help with more complicated issues
+- We've changed the dependency tree around, specifically around babel presets
+- Now we support Babel 7! Be sure to [here](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/) check out the [Babel 7 migration guide](https://babeljs.io/docs/en/next/v7-migration) for help migrating
 - On iOS, `WKWebView` can now be used with the `WebView` component; read more at [@rsnara's awesome blog post](https://facebook.github.io/react-native/blog/2018/08/27/wkwebview)
+
+### Updating to this version
+
+1. Follow the [Upgrade Guide](https://facebook.github.io/react-native/docs/upgrading.html)
+2. Upgrade the version of React Native in the `package.json`
+3. Change the babel-preset dependency from `"babel-preset-react-native": "^5",` to `"metro-react-native-babel-preset": "0.43.5",`, then change the `.babelrc` configuration to:
+
+  ```
+    {
+      "presets": ["module:metro-react-native-babel-preset"]
+    }
+  ```
+4. Ensure that you have all the babel dependencies fixed to version `beta.56`
 
 ### Added: new features
 
@@ -47,6 +51,7 @@ by [@rsnara](https://github.com/rsnara))
 
 ### Changes: existing functionality that is now different
 
+- *[BREAKING]* In the CLI, `unbundle` is now `ram-bundle` ([ebf5aea](https://github.com/facebook/react-native/commit/ebf5aea) by [@jeanlauliac](https://github.com/jeanlauliac))
 - Bump minimum Node version to 8.3 (#20236) ([e64e13f](https://github.com/facebook/react-native/commit/e64e13f) by [@hramos](https://github.com/hramos))
 - Updated React ([70913a4](https://github.com/facebook/react-native/commit/70913a4) and [b7bb25f](https://github.com/facebook/react-native/commit/b7bb25f) by [@acdlite](https://github.com/acdlite)) and [@hramos](https://github.com/hramos))
 - Upgrade Flow to v0.76.0 ([eac34e3](https://github.com/facebook/react-native/commit/eac34e3) by [@gabelevi](https://github.com/gabelevi))
@@ -115,8 +120,7 @@ by [@rsnara](https://github.com/rsnara))
 
 ### Removed: features that have been removed; these are breaking
 
-- In the CLI, `unbundle` is now `ram-bundle` ([ebf5aea](https://github.com/facebook/react-native/commit/ebf5aea) by [@jeanlauliac](https://github.com/jeanlauliac))
-- Removed `ScrollView.propTypes`; use flow or typescript for verifying correct prop usage instead ([5b6ff01](https://github.com/facebook/react-native/commit/5b6ff01) by [@sahrens](https://github.com/sahrens))
+- *[BREAKING]* Removed `ScrollView.propTypes`; use flow or typescript for verifying correct prop usage instead ([5b6ff01](https://github.com/facebook/react-native/commit/5b6ff01) by [@sahrens](https://github.com/sahrens))
 
 #### Android specific removals
 
