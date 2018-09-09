@@ -1,31 +1,66 @@
 # Changelog
 
+# Changelog
+
 ## [0.57]
 
-Welcome to the 0.57 release of React Native! This release addresses a number of issues and has some exciting improvements. We've intentionally left this release in an extended release candidate state in order to improve quality. 
+Welcome to the 0.57 release of React Native! This release addresses a number of issues and has some exciting improvements. We again skipped a monthly release, focused on quality by extending the release candidate phase, and let some upstream packages reach stable for inclusion.
 
-You may notice that this release's changelog is thinner than previous versions; that's not from lack of hard work -- this release includes [566 commits by 78 different contributors](https://github.com/facebook/react-native/compare/0.56-stable...0.57-stable)! Instead, we've taken feedback and prepared a changelog that contains only user impacting changes. Please share your feedback and let us know how we can make this even more useful, and as always [let us know](https://github.com/react-native-community/react-native-releases/issues/34) if you have any feedback on this process.
+This release includes [587 commits by 75 different contributors](https://github.com/facebook/react-native/compare/0.56-stable...0.57-stable)! In response to feedback, we've prepared a changelog that contains only user-impacting changes. Please share your input and let us know how we can make this even more useful, and as always [let us know](https://github.com/react-native-community/react-native-releases/issues/34) if you have any feedback on this process.
 
 ### Highlights
 
+#### New features
+
 - Accessibility APIs now support accessibility hints, inverted colors, and easier usage of defining the element's role and states; read more at [@ziqichen6's excellent blog post](https://facebook.github.io/react-native/blog/2018/08/13/react-native-accessibility-updates)
-- Android is now using SDK 27, gradle 3.1, and support library 27.x; building with Android plugin 3.2 doesn't work due to the gradle scripts, so please stay on Android Studio 3.1 for now
-- We've changed the dependency tree around, specifically around babel presets
-- Now we support Babel 7! Be sure to [here](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/) check out the [Babel 7 migration guide](https://babeljs.io/docs/en/next/v7-migration) for help migrating
-- On iOS, `WKWebView` can now be used with the `WebView` component; read more at [@rsnara's awesome blog post](https://facebook.github.io/react-native/blog/2018/08/27/wkwebview)
+- On iOS, `WKWebView` can now be used within the `WebView` component; read more at [@rsnara's awesome blog post](https://facebook.github.io/react-native/blog/2018/08/27/wkwebview)
+
+#### Tooling updates
+
+- Android tooling has been updated to match newer configuration requirements (SDK 27, gradle 3.1, and support library 27)
+- Now we support Babel 7! Be sure to read [here](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/) about using TypeScript and check out the [Babel 7 migration guide](https://babeljs.io/docs/en/next/v7-migration) for help migrating. Metro has also received a major upgrade; if you have a custom packager config, we recommend you read also the "updating to this version" section
+- Flow, React, and related packages have also been updated
+
+#### The Slimmening is happening
+
+As mentioned a few times in the past, the core team is focusing the repository on the base React Native features to make the whole ecosystem more maintainable. This change requires extracting some components into their own separate repos and removing old, unused code ([details here](https://github.com/react-native-community/discussions-and-proposals/issues/6)). 0.57 is **not** directly effected by any changes, but we want you to know that:
+
+- `WebView` will be moved to its own repo at [react-native-community/react-native-webview](https://github.com/react-native-community/react-native-webview). There is already a base implementation there. Help us out by giving that a try, and expect that `WebView` will be deprecated soon
+- `NavigatorIOS` will be **fully** removed from the main codebase starting 0.58.0 (via [this commit](https://github.com/facebook/react-native/commit/0df92afc1caf96100013935d50bdde359b688658)); it is now deprecated
 
 ### Updating to this version
 
-1. Follow the [Upgrade Guide](https://facebook.github.io/react-native/docs/upgrading.html)
-2. Upgrade the version of React Native in the `package.json`
-3. Change the babel-preset dependency from `"babel-preset-react-native": "^5",` to `"metro-react-native-babel-preset": "0.43.5",`, then change the `.babelrc` configuration to:
+1. Upgrade the version of React Native in the `package.json` from `0.56.0` to `0.57.0`, and the React version to `16.5`
+2. Change the babel-preset dependency from `"babel-preset-react-native": "^5",` to `"metro-react-native-babel-preset": "^0.45.0",`, then change the `.babelrc` configuration to:
 
-  ```
-    {
-      "presets": ["module:metro-react-native-babel-preset"]
-    }
-  ```
-4. Ensure that you have all the babel dependencies fixed to version `beta.56`
+```
+  {
+    "presets": ["module:metro-react-native-babel-preset"]
+  }
+```
+
+3. Ensure that you have all the babel dependencies to version `^7.0.0` (you may also need to add `babel-core": "7.0.0-bridge.0"` as a yarn resolution to ensure retro-compatibility)
+4. If you have a [custom packager configuration](https://facebook.github.io/metro/docs/en/configuration) via `rn-cli.config.js`, you may need to update it to reflect changes from the newer version of Metro, like:
+
+### rn-cli.config.js
+
+```diff
+-const blacklist = require('metro/src/blacklist')
++const blacklist = require('metro-config/src/defaults/blacklist')
+
+// ...
+
+module.exports = {
++  watchFolders: alternateRoots,
+-  getProjectRoots() {
+-    return [
+-      path.resolve(__dirname),
+-    ].concat(alternateRoots)
+-  },
+}
+```
+
+5. Run `yarn` to ensure that all the new dependencies have been installed
 
 ### Added: new features
 
