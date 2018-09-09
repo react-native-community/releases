@@ -40,7 +40,7 @@ As mentioned a few times in the past, the core team is focusing the repository o
 ```
 
 3. Ensure that you have all the babel dependencies to version `^7.0.0` (you may also need to add `babel-core": "7.0.0-bridge.0"` as a yarn resolution to ensure retro-compatibility)
-4. If you have a [custom packager configuration](https://facebook.github.io/metro/docs/en/configuration) via `rn-cli.config.js`, you may need to update it to reflect changes from the newer version of Metro, like:
+4. If you have a custom packager configuration via `rn-cli.config.js`, you probably need to update it to work with the updated Metro configuration structure (for full detail refer to Metro's [documentation](https://facebook.github.io/metro/docs/en/configuration)); here are some commonly encountered changes:
 
 ### rn-cli.config.js
 
@@ -52,11 +52,17 @@ As mentioned a few times in the past, the core team is focusing the repository o
 
 module.exports = {
 +  watchFolders: alternateRoots,
++  resolver: {
++    blacklistRE: blacklist
++  }
 -  getProjectRoots() {
 -    return [
 -      path.resolve(__dirname),
 -    ].concat(alternateRoots)
 -  },
+-  getBlacklistRE() {
+-    return blacklist;
+-  }
 }
 ```
 
