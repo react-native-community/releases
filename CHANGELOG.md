@@ -17,8 +17,8 @@ This release includes [587 commits by 75 different contributors](https://github.
 
 #### Tooling updates
 
-- Android tooling has been updated to match newer configuration requirements (SDK 27, gradle 3.1, and support library 27)
-- Now we support Babel 7! Be sure to read [here](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/) about using TypeScript and check out the [Babel 7 migration guide](https://babeljs.io/docs/en/next/v7-migration) for help migrating. Metro has also received a major upgrade; if you have a custom packager config, we recommend you read also the "updating to this version" section
+- Android tooling has been updated to match newer configuration requirements (SDK 27, gradle 4.4, and support library 27)
+- Now we support Babel 7! Be sure to read [here](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/) about using TypeScript and check out the [Babel 7 migration guide](https://babeljs.io/docs/en/next/v7-migration) for help migrating. Metro has also received a major upgrade (including better transformer support); if you have a custom packager config, we recommend you read also the "updating to this version" section
 - Flow, React, and related packages have also been updated
 
 #### The Slimmening is happening
@@ -76,6 +76,8 @@ module.exports = {
 - Add `FlatList` and `SectionList` to Animated exports ([daa7c78](https://github.com/facebook/react-native/commit/daa7c78) by [@yunyu](https://github.com/yunyu))
 - Adding new styling props to `FlatList`/`VirtualizedList` for `ListHeaderComponent` and `ListFooterComponent` ([a2675ce](https://github.com/facebook/react-native/commit/a2675ce))
 - Added more info to Module Registry systraces ([c7fdd27](https://github.com/facebook/react-native/commit/c7fdd27) by [@axe-fb](https://github.com/axe-fb))
+- Added support for out-of-tree platform plugins via a new `haste` field in `package.json`; read more in the [docs entry](https://facebook.github.io/react-native/docs/out-of-tree-platforms) ([6bcd51a](https://github.com/facebook/react-native/commit/6bcd51a) by [@empyrical](https://github.com/empyrical))
+- Added `snapToOffsets` to `ScrollView` and made a number of fixes to `snapToInterval` as well ([ef7e99c](https://github.com/facebook/react-native/commit/ef7e99c) by [@olegbl](https://github.com/olegbl))
 
 #### Android specific additions
 
@@ -99,8 +101,8 @@ by [@rsnara](https://github.com/rsnara))
 - Upgrade jest to 23.4.1 ([51cf9eb](https://github.com/facebook/react-native/commit/51cf9eb) by [@rafeca](https://github.com/rafeca))
 - Upgrade babel-eslint to v9.0.0-beta.2 with better support for Flow ([abf1188](https://github.com/facebook/react-native/commit/abf1188) by [@rubennorte](https://github.com/rubennorte))
 - Upgrade ESLint to 5.1.0 ([0f2f0ca](https://github.com/facebook/react-native/commit/0f2f0ca) by [@rubennorte](https://github.com/rubennorte))
-- Upgrade Babel to v7.0.0-beta.54 ([b9d1c83](https://github.com/facebook/react-native/commit/b9d1c83) and [724c749](https://github.com/facebook/react-native/commit/724c749) by [@rubennorte](https://github.com/rubennorte))
-- Metro is now at v0.43.6 ([169d683](https://github.com/facebook/react-native/commit/169d683), [bda84a3](https://github.com/facebook/react-native/commit/bda84a3), and [5288656](https://github.com/facebook/react-native/commit/5288656) by [@CompuIves](https://github.com/CompuIves) and [@rafeca](https://github.com/rafeca))
+- Upgrade Babel to v7.0.0 ([b9d1c83](https://github.com/facebook/react-native/commit/b9d1c83), [724c749](https://github.com/facebook/react-native/commit/724c749), and [9f83fcc](https://github.com/facebook/react-native/commit/9f83fcc) by [@rubennorte](https://github.com/rubennorte) and [@rafeca](https://github.com/rafeca))
+- Metro is now at v0.45.0 ([169d683](https://github.com/facebook/react-native/commit/169d683), [bda84a3](https://github.com/facebook/react-native/commit/bda84a3), [5288656](https://github.com/facebook/react-native/commit/5288656), [1bfa422](https://github.com/facebook/react-native/commit/1bfa422), [96939ad](https://github.com/facebook/react-native/commit/96939ad) by [@CompuIves](https://github.com/CompuIves) and [@rafeca](https://github.com/rafeca))
 - Hide pre-bundled notification when not on dev mode ([edf7100](https://github.com/facebook/react-native/commit/edf7100) by [@yancouto](https://github.com/yancouto))
 - Refined `StyleSheet.compose` Flow Type ([50a481d](https://github.com/facebook/react-native/commit/50a481d) by [@yungsters](https://github.com/yungsters))
 - Catch JS bundle load failure and prevent calls to JS after that ([201ba8c](https://github.com/facebook/react-native/commit/201ba8c) by [@fkgozali](https://github.com/fkgozali))
@@ -115,7 +117,7 @@ by [@rsnara](https://github.com/rsnara))
 - Upgrade NDK to r17b ([6117a6c](https://github.com/facebook/react-native/commit/6117a6c) by [@dulmandakh](https://github.com/dulmandakh))
 - Upgrade NDK toolchain to 4.9 ([ccdd450](https://github.com/facebook/react-native/commit/ccdd450) by [@dulmandakh](https://github.com/dulmandakh))
 - Upgrade Android Support Library to version 27.1.1 and set compileSdkVersion to 27; buildToolsVersion comes along for the ride, too ([d9868f7](https://github.com/facebook/react-native/commit/d9868f7) and [5992f8d](https://github.com/facebook/react-native/commit/5992f8d) by [@dulmandakh](https://github.com/dulmandakh))
-- Upgrade gradle to 3.1.4 ([6eac2d4](https://github.com/facebook/react-native-commit/6eac2d4) by [@gengjiawen](https://github.com/gengjiawen))
+- Upgrade gradle to 3.1.4 ([6eac2d4](https://github.com/facebook/react-native/commit/6eac2d4) by [@gengjiawen](https://github.com/gengjiawen))
 - Upgrade to soloader 0.5.1 ([b6f2aad](https://github.com/facebook/react-native/commit/b6f2aad) by [@gengjiawen](https://github.com/gengjiawen))
 - Upgrade mockito to 2.19.1 ([3ea803a](https://github.com/facebook/react-native/commit/3ea803a) by [@dulmandakh](https://github.com/dulmandakh))
 - Upgrade glog to 0.3.5 ([b5fca80](https://github.com/facebook/react-native/commit/b5fca80) by [@dulmandakh](https://github.com/dulmandakh))
