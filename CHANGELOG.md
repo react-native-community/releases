@@ -12,16 +12,20 @@ This release includes [599 commits by 73 different contributors](https://github.
 
 - Accessibility APIs now support accessibility hints, inverted colors, and easier usage of defining the element's role and states; read more at [@ziqichen6's excellent blog post](https://facebook.github.io/react-native/blog/2018/08/13/react-native-accessibility-updates)
 - On iOS, `WKWebView` can now be used within the `WebView` component; read more at [@rsnara's awesome blog post](https://facebook.github.io/react-native/blog/2018/08/27/wkwebview)
+- Better support for out-of-tree platforms. For details, please refer to [the discussion](https://github.com/react-native-community/discussions-and-proposals/issues/21) that the community used to get this up and running (there will be a new page in the docs dedicated to it too) - huge props to @empyrical for working on this!
 
 #### Tooling updates
 
-- Android tooling has been updated to match newer configuration requirements (SDK 27, gradle 4.4, and support library 27); building with Android plugin 3.2 doesn't work due to the gradle scripts, so please stay on Android Studio 3.1 for now
-- Now we support Babel 7! Be sure to read [here](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/) about using TypeScript and check out the [Babel 7 migration guide](https://babeljs.io/docs/en/next/v7-migration) for help migrating. Metro has also received a major upgrade (including better transformer support); if you have a custom packager config, we recommend you read also the "updating to this version" section
+- Android tooling has been updated to match newer configuration requirements (SDK 27, gradle 4.4, and support library 27); building with Android plugin 3.2 doesn't work due to the gradle scripts, so **please** stay on Android Studio 3.1 for now
+- Support Babel 7 stable landed! Be sure to read [here](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/) about using TypeScript and check out the [Babel 7 migration guide](https://babeljs.io/docs/en/next/v7-migration) for help migrating.
+- Metro has been upgraded (with Babel 7 and better transformer support), and in the next major release we plan on having two new features (ram bundles and inline requires) optional for you all to use - you can read how it will happen [here](https://github.com/react-native-community/discussions-and-proposals/blob/master/core-meetings/2018-09-metro-meeting.md); moreover, if you have a custom packager config, we recommend you read also the "updating to this version" section.
 - Flow, React, and related packages have also been updated; this includes [working support for the React Profiler](https://github.com/facebook/react-native/commit/cf5f3e97eb68c5bcf1d9f27261795d0221e27be4)
 
 #### The Slimmening is happening
 
-As mentioned a few times in the past, the core team is focusing the repository on the base React Native features to make the whole ecosystem more maintainable. This change requires extracting some components into their own separate repos and removing old, unused code ([details here](https://github.com/react-native-community/discussions-and-proposals/issues/6)). 0.57 is **not** directly effected by any changes, but we want you to know that:
+As mentioned a few times in the past, the core team is reviewing the repository to trim it to the base React Native features in order to make the whole ecosystem more maintainable (by using a *dividi-et-impera* approach, the community will move faster and enable pull requests to be reviewed and merged quicker). This change requires extracting some components into their own separate repos and removing old, unused code ([details here](https://github.com/react-native-community/discussions-and-proposals/issues/6)).
+
+0.57 is **not** directly effected by any changes, but we want you to know that:
 
 - `WebView` will be moved to its own repo at [react-native-community/react-native-webview](https://github.com/react-native-community/react-native-webview). There is already a base implementation there. Help us out by giving that a try, and expect that `WebView` will be deprecated soon
 - `NavigatorIOS` will be **fully** removed from the main codebase starting 0.58.0 (via [this commit](https://github.com/facebook/react-native/commit/0df92afc1caf96100013935d50bdde359b688658)); it is now deprecated
@@ -50,7 +54,10 @@ As mentioned a few times in the past, the core team is focusing the repository o
    +  watchFolders: alternateRoots,
    +  resolver: {
    +    blacklistRE: blacklist
-   +  }
+   +  },
+   +  transformer: {
+   +    babelTransformerPath: require.resolve('./scripts/transformer.js'),
+   +  },
    -  getProjectRoots() {
    -    return [
    -      path.resolve(__dirname),
@@ -58,7 +65,8 @@ As mentioned a few times in the past, the core team is focusing the repository o
    -  },
    -  getBlacklistRE() {
    -    return blacklist;
-   -  }
+   -  },
+   -  transformModulePath: require.resolve('./scripts/transformer.js'),
    }
    ```
 
