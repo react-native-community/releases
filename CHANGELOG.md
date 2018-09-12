@@ -1,7 +1,5 @@
 # Changelog
 
-# Changelog
-
 ## [0.57]
 
 Welcome to the 0.57 release of React Native! This release addresses a number of issues and has some exciting improvements. We again skipped a monthly release, focused on quality by extending the release candidate phase, and let some upstream packages reach stable for inclusion.
@@ -33,38 +31,36 @@ As mentioned a few times in the past, the core team is focusing the repository o
 1. Upgrade the version of React Native in the `package.json` from `0.56.0` to `0.57.0`, and the React version to `16.5`
 2. Change the babel-preset dependency from `"babel-preset-react-native": "^5",` to `"metro-react-native-babel-preset": "^0.45.0",`, then change the `.babelrc` configuration to:
 
-```
-  {
-    "presets": ["module:metro-react-native-babel-preset"]
-  }
-```
+   ```JSON
+     {
+       "presets": ["module:metro-react-native-babel-preset"]
+     }
+   ```
 
 3. Ensure that you have all the babel dependencies to version `^7.0.0` (you may also need to add `babel-core": "7.0.0-bridge.0"` as a yarn resolution to ensure retro-compatibility)
-4. If you have a custom packager configuration via `rn-cli.config.js`, you probably need to update it to work with the updated Metro configuration structure (for full detail refer to Metro's [documentation](https://facebook.github.io/metro/docs/en/configuration)); here are some commonly encountered changes:
+4. If you have a custom packager configuration via `rn-cli.config.js`, you probably need to update it to work with the updated Metro configuration structure (for full detail refer to Metro's [documentation](https://facebook.github.io/metro/docs/en/configuration)); here are some commonly encountered changes to `rn-cli.config.js`:
 
-### rn-cli.config.js
+   ```diff
+   -const blacklist = require('metro/src/blacklist')
+   +const blacklist = require('metro-config/src/defaults/blacklist')
 
-```diff
--const blacklist = require('metro/src/blacklist')
-+const blacklist = require('metro-config/src/defaults/blacklist')
+   // ...
 
-// ...
-
-module.exports = {
-+  watchFolders: alternateRoots,
-+  resolver: {
-+    blacklistRE: blacklist
-+  }
--  getProjectRoots() {
--    return [
--      path.resolve(__dirname),
--    ].concat(alternateRoots)
--  },
--  getBlacklistRE() {
--    return blacklist;
--  }
-}
-```
+   module.exports = {
+   +  watchFolders: alternateRoots,
+   +  resolver: {
+   +    blacklistRE: blacklist
+   +  }
+   -  getProjectRoots() {
+   -    return [
+   -      path.resolve(__dirname),
+   -    ].concat(alternateRoots)
+   -  },
+   -  getBlacklistRE() {
+   -    return blacklist;
+   -  }
+   }
+   ```
 
 5. Run `yarn` to ensure that all the new dependencies have been installed
 
@@ -87,10 +83,8 @@ module.exports = {
 
 #### iOS specific additions
 
-- `WebView` can now use `WKWebView` internally if you pass `useWebKit={true}` ([e90d9ca](https://github.com/facebook/react-native/commit/e90d9ca), [9b3a6ec](https://github.com/facebook/react-native/commit/9b3a6ec), [f7f9d01](https://github.com/facebook/react-native/commit/f7f9d01), [94560ca](https://github.com/facebook/react-native/commit/94560ca), [06cce04](https://github.com/facebook/react-native/commit/06cce04), [1c3af59](https://github.com/facebook/react-native/commit/1c3af59), [5662598](https://github.com/facebook/react-native/commit/5662598), [1984f4b](https://github.com/facebook/react-native/commit/1984f4b), [1b73e76](https://github.com/facebook/react-native/commit/1b73e76), [d0b5a38](https://github.com/facebook/react-native/commit/d0b5a38), [0fa5bd8](https://github.com/facebook/react-native/commit/0fa5bd8), [527792a](https://github.com/facebook/react-native/commit/527792a), [ee971a7](https://github.com/facebook/react-native/commit/ee971a7), [d29c253](https://github.com/facebook/react-native/commit/d29c253), [0009d09](https://github.com/facebook/react-native/commit/0009d09), [078799f](https://github.com/facebook/react-native/commit/078799f), [f46dbc2](https://github.com/facebook/react-native/commit/f46dbc2), [262d286](https://github.com/facebook/react-native/commit/262d286), [959aacf](https://github.com/facebook/react-native/commit/959aacf), and [e0df3a1](https://github.com/facebook/react-native/commit/e0df3a1)
-by [@rsnara](https://github.com/rsnara))
+- `WebView` can now use `WKWebView` internally if you pass `useWebKit={true}` ([e90d9ca](https://github.com/facebook/react-native/commit/e90d9ca), [9b3a6ec](https://github.com/facebook/react-native/commit/9b3a6ec), [f7f9d01](https://github.com/facebook/react-native/commit/f7f9d01), [94560ca](https://github.com/facebook/react-native/commit/94560ca), [06cce04](https://github.com/facebook/react-native/commit/06cce04), [1c3af59](https://github.com/facebook/react-native/commit/1c3af59), [5662598](https://github.com/facebook/react-native/commit/5662598), [1984f4b](https://github.com/facebook/react-native/commit/1984f4b), [1b73e76](https://github.com/facebook/react-native/commit/1b73e76), [d0b5a38](https://github.com/facebook/react-native/commit/d0b5a38), [0fa5bd8](https://github.com/facebook/react-native/commit/0fa5bd8), [527792a](https://github.com/facebook/react-native/commit/527792a), [ee971a7](https://github.com/facebook/react-native/commit/ee971a7), [d29c253](https://github.com/facebook/react-native/commit/d29c253), [0009d09](https://github.com/facebook/react-native/commit/0009d09), [078799f](https://github.com/facebook/react-native/commit/078799f), [f46dbc2](https://github.com/facebook/react-native/commit/f46dbc2), [262d286](https://github.com/facebook/react-native/commit/262d286), [959aacf](https://github.com/facebook/react-native/commit/959aacf), and [e0df3a1](https://github.com/facebook/react-native/commit/e0df3a1) by [@rsnara](https://github.com/rsnara))
 - Add `accessibilityHint` for iOS ([253b29d](https://github.com/facebook/react-native/commit/253b29d) by [@draperunner](https://github.com/draperunner))
-
 
 ### Changes: existing functionality that is now different
 
@@ -161,7 +155,7 @@ by [@rsnara](https://github.com/rsnara))
 - Fix crash in RCTImagePicker on iOS ([934c50f](https://github.com/facebook/react-native/commit/934c50f) by [@mmmulani](https://github.com/mmmulani))
 - Fix `undefined_arch` error received when building in Xcode 10 beta ([e131fff](https://github.com/facebook/react-native/commit/e131fff) by [@futuun](https://github.com/futuun))
 - Add support for connecting to the Packager when running the iOS app on device when using custom Debug configuration ([079bf3f](https://github.com/facebook/react-native/commit/079bf3f))
-- Fixed RCTAnimation import for integrating with cocoapods ((7525f38)[https://github.com/facebook/react-native/commit/7525f38] by (@LukeDurrant)[https://github.com/LukeDurrant])
+- Fixed RCTAnimation import for integrating with cocoapods ([7525f38](https://github.com/facebook/react-native/commit/7525f38) by [@LukeDurrant](https://github.com/LukeDurrant))
 
 ### Removed: features that have been removed; these are breaking
 
