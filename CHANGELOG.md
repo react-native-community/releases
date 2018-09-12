@@ -440,6 +440,7 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 ### Removed: features that have been removed; these are breaking
 
 - Deprecate `focusTextInput` and `blurTextInput` ([ce3b7b8](https://github.com/facebook/react-native/commit/ce3b7b8204dad0fd62a76a0ce66472eca4b25bc8))
+- *[BREAKING]* `ImageResizeMode` on `Image` is no longer exposed; check your usage of `resizeMode`; the same resize modes exist, but pass them as strings instead ([870775e](https://github.com/facebook/react-native/commit/870775e) by [@TheSavior](https://github.com/TheSavior))
 
 #### Android specific removals
 
