@@ -17,7 +17,7 @@ This release includes [587 commits by 75 different contributors](https://github.
 
 #### Tooling updates
 
-- Android tooling has been updated to match newer configuration requirements (SDK 27, gradle 4.4, and support library 27)
+- Android tooling has been updated to match newer configuration requirements (SDK 27, gradle 4.4, and support library 27); building with Android plugin 3.2 doesn't work due to the gradle scripts, so please stay on Android Studio 3.1 for now
 - Now we support Babel 7! Be sure to read [here](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/) about using TypeScript and check out the [Babel 7 migration guide](https://babeljs.io/docs/en/next/v7-migration) for help migrating. Metro has also received a major upgrade (including better transformer support); if you have a custom packager config, we recommend you read also the "updating to this version" section
 - Flow, React, and related packages have also been updated
 
