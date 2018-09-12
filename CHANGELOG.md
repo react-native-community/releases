@@ -6,7 +6,7 @@
 
 Welcome to the 0.57 release of React Native! This release addresses a number of issues and has some exciting improvements. We again skipped a monthly release, focused on quality by extending the release candidate phase, and let some upstream packages reach stable for inclusion.
 
-This release includes [587 commits by 75 different contributors](https://github.com/facebook/react-native/compare/0.56-stable...0.57-stable)! In response to feedback, we've prepared a changelog that contains only user-impacting changes. Please share your input and let us know how we can make this even more useful, and as always [let us know](https://github.com/react-native-community/react-native-releases/issues/34) if you have any feedback on this process.
+This release includes [599 commits by 73 different contributors](https://github.com/facebook/react-native/compare/0.56-stable...0.57-stable)! In response to feedback, we've prepared a changelog that contains only user-impacting changes. Please share your input and let us know how we can make this even more useful, and as always [let us know](https://github.com/react-native-community/react-native-releases/issues/34) if you have any feedback on this process.
 
 ### Highlights
 
@@ -19,7 +19,7 @@ This release includes [587 commits by 75 different contributors](https://github.
 
 - Android tooling has been updated to match newer configuration requirements (SDK 27, gradle 4.4, and support library 27); building with Android plugin 3.2 doesn't work due to the gradle scripts, so please stay on Android Studio 3.1 for now
 - Now we support Babel 7! Be sure to read [here](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/) about using TypeScript and check out the [Babel 7 migration guide](https://babeljs.io/docs/en/next/v7-migration) for help migrating. Metro has also received a major upgrade (including better transformer support); if you have a custom packager config, we recommend you read also the "updating to this version" section
-- Flow, React, and related packages have also been updated
+- Flow, React, and related packages have also been updated; this includes [working support for the React Profiler](https://github.com/facebook/react-native/commit/cf5f3e97eb68c5bcf1d9f27261795d0221e27be4)
 
 #### The Slimmening is happening
 
@@ -96,7 +96,7 @@ by [@rsnara](https://github.com/rsnara))
 
 - *[BREAKING]* In the CLI, `unbundle` is now `ram-bundle` ([ebf5aea](https://github.com/facebook/react-native/commit/ebf5aea) by [@jeanlauliac](https://github.com/jeanlauliac))
 - Bump minimum Node version to 8.3 (#20236) ([e64e13f](https://github.com/facebook/react-native/commit/e64e13f) by [@hramos](https://github.com/hramos))
-- Updated React ([70913a4](https://github.com/facebook/react-native/commit/70913a4) and [b7bb25f](https://github.com/facebook/react-native/commit/b7bb25f) by [@acdlite](https://github.com/acdlite)) and [@hramos](https://github.com/hramos))
+- Updated React ([70913a4](https://github.com/facebook/react-native/commit/70913a4), [b7bb25f](https://github.com/facebook/react-native/commit/b7bb25f), and [0b30129](https://github.com/facebook/react-native/commit/0b30129) by [@acdlite](https://github.com/acdlite), [@hramos](https://github.com/hramos), and [@yungsters](https://github.com/yungsters))
 - Upgrade Flow to v0.76.0 ([eac34e3](https://github.com/facebook/react-native/commit/eac34e3) by [@gabelevi](https://github.com/gabelevi))
 - Upgrade jest to 23.4.1 ([51cf9eb](https://github.com/facebook/react-native/commit/51cf9eb) by [@rafeca](https://github.com/rafeca))
 - Upgrade babel-eslint to v9.0.0-beta.2 with better support for Flow ([abf1188](https://github.com/facebook/react-native/commit/abf1188) by [@rubennorte](https://github.com/rubennorte))
@@ -152,6 +152,7 @@ by [@rsnara](https://github.com/rsnara))
 
 #### iOS specific fixes
 
+- Fix `TextInput.clear()` and `TextInput.setNativeProps({text: ''})` to work ([057d3ef](https://github.com/facebook/react-native/commit/057d3ef) by [@magicien](https://github.com/magicien))
 - Correct fishhook import in RCTReconnectingWebSocket ([75a0273](https://github.com/facebook/react-native/commit/75a0273))
 - Change in RCTImagePickerManager to handle crashes if height/width is nil ([82af7c9](https://github.com/facebook/react-native/commit/82af7c9) by [@abhi06276](https://github.com/abhi06276))
 - Fix controlled `<TextInput>` on iOS when inputting in Chinese/Japanese ([892212b](https://github.com/facebook/react-native/commit/892212b) by [@mmmulani](https://github.com/mmmulani))
@@ -160,6 +161,7 @@ by [@rsnara](https://github.com/rsnara))
 - Fix crash in RCTImagePicker on iOS ([934c50f](https://github.com/facebook/react-native/commit/934c50f) by [@mmmulani](https://github.com/mmmulani))
 - Fix `undefined_arch` error received when building in Xcode 10 beta ([e131fff](https://github.com/facebook/react-native/commit/e131fff) by [@futuun](https://github.com/futuun))
 - Add support for connecting to the Packager when running the iOS app on device when using custom Debug configuration ([079bf3f](https://github.com/facebook/react-native/commit/079bf3f))
+- Fixed RCTAnimation import for integrating with cocoapods ((7525f38)[https://github.com/facebook/react-native/commit/7525f38] by (@LukeDurrant)[https://github.com/LukeDurrant])
 
 ### Removed: features that have been removed; these are breaking
 
