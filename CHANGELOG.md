@@ -33,7 +33,7 @@ As mentioned a few times in the past, the core team is reviewing the repository 
 ### Updating to this version
 
 1. Upgrade the version of React Native in the `package.json` from `0.56.0` to `0.57.0`, and the React version to `16.5`
-2. Change the babel-preset dependency from `"babel-preset-react-native": "^5",` to `"metro-react-native-babel-preset": "^0.45.0",`, then change the `.babelrc` configuration to:
+2. Change the babel-preset dependency from `"babel-preset-react-native": "^5",` to `"metro-react-native-babel-preset": "^0.45.2",`, then change the `.babelrc` configuration to:
 
    ```JSON
      {
