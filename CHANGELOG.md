@@ -1,5 +1,72 @@
 # Changelog
 
+## [0.57.3]
+
+**NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.0-alpha.8af6728"`.
+
+### Added: new features
+
+- Expose enableBabelRuntime config param externally ([a3a69ca](https://github.com/facebook/react-native/commit/a3a69cae348b2bab0ec5ce68a56c6197cfa33ad6) by [@rafeca](https://github.com/rafeca))
+
+#### Android specific additions
+
+- Add test for InterpolatorType ([69a51da](https://github.com/facebook/react-native/commit/69a51da3a1fa0e4d9bfeb54da73f1cdb50dc11d4) by [@ejanzer](https://github.com/ejanzer))
+
+### Changes: existing functionality that is now different
+
+- React sync for revisions ade5e69...d836010 ([049e56e](https://github.com/facebook/react-native/commit/c9948d1d36eca633e62e4ea4ab530a865208d0e1) by [@yungsters](https://github.com/yungsters))
+- React: Bump Canary Version ([a0b7854](https://github.com/facebook/react-native/commit/a0b7854c94af20dea5de493fb3252fbd783de9a9) by [@yungsters](https://github.com/yungsters))
+- FBJS: Upgrade to ^1.0.0 ([2134102](https://github.com/facebook/react-native/commit/2134102027552d49de21460c7859c5a49e3160e8) by [@yungsters](https://github.com/yungsters))
+- Bump metro@0.48.1 ([2784a03](https://github.com/facebook/react-native/commit/2784a03fc52b0b6b241ff8d6ec1fa371ab494e7f) by [@rafeca](https://github.com/rafeca))
+- Update to Detox 9 ([47a1b04](https://github.com/facebook/react-native/commit/47a1b0461b92ca9146050f4770b6030b4de2ec32) by [@kelset](https://github.com/kelset))
+- Add Deprecation Warning to ListView ([25a3cff](https://github.com/facebook/react-native/commit/25a3cff5a71b8f04a613f5987b90a56a82b960e8) by [@TheSavior](https://github.com/TheSavior))
+- Deprecate legacyImplementation of FlatList ([131db26](https://github.com/facebook/react-native/commit/131db26cbd8c45dd08941e8a9677f7eb9165f080) by [@TheSavior](https://github.com/TheSavior))
+- Skip flaky Animated test ([c45007b](https://github.com/facebook/react-native/commit/c45007b771d469c503fe85e2ed13e0d871ea08c8) by [@TheSavior](https://github.com/TheSavior))
+- Move RN's DEFS.bzl to tools and rename to rn_defs.bzl ([5468aee](https://github.com/facebook/react-native/commit/5468aeef0397290720e91fce1508a57945116c63) by Jonathan Kim)
+
+#### Android specific changes
+
+- Simplify OSS enums ([0df8e7d](https://github.com/facebook/react-native/commit/0df8e7d65b62544d6b9c34fba069466c23437602) by [@ejanzer](https://github.com/ejanzer))
+- bump Android NDK to r17c ([b7d0594](https://github.com/facebook/react-native/commit/b7d0594dfc6ad3b48e21dfa2ffe20c431669483d) by [@dulmandakh](https://github.com/dulmandakh))
+- Resolve protocol http, https when not in lowercase ([09178f8](https://github.com/facebook/react-native/commit/09178f8bb905e3c305f84833bdfc8d4c12f66618) by [@hyunjongL](https://github.com/hyunjongL))
+- Normalize scheme for URL on Android ([b1aed4d](https://github.com/facebook/react-native/commit/b1aed4d376e39fafd3d43f0fb156b30211c9b007) by [@radeno](https://github.com/radeno))
+
+#### iOS specific changes
+
+- Bump up the buffer size and show a warning if the trace might be truncated ([a4ef256](https://github.com/facebook/react-native/commit/a4ef25616775be3375e5f82e79d214bb95a4df60) by [@alexeylang](https://github.com/alexeylang))
+
+### Fixed: bugs that have been resolved
+
+- Fix deprecation warning message in Switch ([e7ea1f8](https://github.com/facebook/react-native/commit/e7ea1f840cc66bcc25113f0a8bbda1737529fc9f) by [@radko93](https://github.com/radko93))
+- RN: Fix `ReactNativeViewAttributes` Type Bugs ([5ec4bab](https://github.com/facebook/react-native/commit/5ec4bab51ddbe0f90a82a115ed3cd0eaeef7344f) by [@yungsters](https://github.com/yungsters))
+- Fix rntester buck build ([31c398e](https://github.com/facebook/react-native/commit/31c398ec283d8a1154729780a76a56b40270092d) by [@mmmulani](https://github.com/mmmulani))
+
+#### Android specific fixes
+
+- Fix default accessibility delegate ([677f1de](https://github.com/facebook/react-native/commit/677f1de70bfffda9207534004852426a8a3ae4fa) by [@ayc1](https://github.com/ayc1))
+- Fix accessibility role/label ([049e56e](https://github.com/facebook/react-native/commit/049e56e272a1a481d4bdc401fc6ed3e85e56e28b) by [@ayc1](https://github.com/ayc1))
+- When converting arguments JS->Java, handle integers correctly ([413e7c8](https://github.com/facebook/react-native/commit/413e7c83048b7723cf0668785d55507171ed72f9) by [@mhorowitz](https://github.com/mhorowitz))
+- Fix CameraRoll.getPhotos() crash on Android if device has a problematic video asset ([2658048](https://github.com/facebook/react-native/commit/265804867cd6f0cd3b164c6ffe91bee08230dcaf) by [@naxel](https://github.com/naxel))
+- Android ScrollView fix for snapToInterval not snapping to end ([1fa7150](https://github.com/facebook/react-native/commit/1fa7150ce984fae57898de0564f176eb02389098) by [@olegbl](https://github.com/olegbl))
+- Fix for InterpolatorType crash ([300ba7a](https://github.com/facebook/react-native/commit/300ba7a87e254a2b044864736525530fa8d46576) by [@ejanzer](https://github.com/ejanzer))
+- Update bad method ([1592a8d](https://github.com/facebook/react-native/commit/1592a8d42411d1f91c8ceb738c0533c1cee73f71) by [@grabbou](https://github.com/grabbou))
+
+#### iOS specific fixes
+
+- Dealloc first time RCTNetInfo reachability callback ([9ae5bd0](https://github.com/facebook/react-native/commit/9ae5bd0c92d797e3c2fb31b7ea2d358a462b10e6) by [@mmmulani](https://github.com/mmmulani))
+- iOS: fix the baseline issue when displaying a mixture of different-language characters ([ce8dddb](https://github.com/facebook/react-native/commit/ce8dddb506c336eb40558f04c3b4ef73671d2b97) by [@BingBingL](https://github.com/BingBingL))
+- Fix artifacting on RN-drawn borders with asymmetric radii ([dba2235](https://github.com/facebook/react-native/commit/dba2235d95e46514206bcfaefc7e965193536fe8) by [@jamesreggio](https://github.com/jamesreggio))
+- check isAvailable key on simulator object ([9e6212a](https://github.com/facebook/react-native/commit/9e6212a8186c8f9585394b5f950861d146fec4ca) by [@antonychan](https://github.com/antonychan))
+- ios-simulator: change default iphone version ([1d1a41e](https://github.com/facebook/react-native/commit/1d1a41e303c0af5acc1e05b2f5c7928809e6bf62) by Vitor Capretz)
+
+### Removed: features that have been removed; these are breaking
+
+- Remove sinon dependency ([641f7e8](https://github.com/facebook/react-native/commit/641f7e8033c43dd5efae5a5ad1edad06d139f4b2) by [@rafeca](https://github.com/rafeca))
+
+#### iOS specific removals
+
+Thanks for everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/46) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
+
 ## [0.57.2]
 
 ### Added: new features
