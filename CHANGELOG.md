@@ -4,6 +4,8 @@
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.0-alpha.8af6728"`.
 
+Thanks to everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/46) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
+
 ### Added: new features
 
 - Expose enableBabelRuntime config param externally ([a3a69ca](https://github.com/facebook/react-native/commit/a3a69cae348b2bab0ec5ce68a56c6197cfa33ad6) by [@rafeca](https://github.com/rafeca))
@@ -63,11 +65,9 @@
 
 - Remove sinon dependency ([641f7e8](https://github.com/facebook/react-native/commit/641f7e8033c43dd5efae5a5ad1edad06d139f4b2) by [@rafeca](https://github.com/rafeca))
 
-#### iOS specific removals
-
-Thanks for everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/46) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
-
 ## [0.57.2]
+
+Thanks to everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/45) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
 
 ### Added: new features
 
@@ -111,11 +111,11 @@ Thanks for everyone that contributed to the [discussion](https://github.com/reac
 - Remove overflow hidden killswitch ([f1fabe5](https://github.com/facebook/react-native/commit/f1fabe5752e14bb977ce62cada74c5ee9a266ba2) by [@ayc1](https://github.com/ayc1))
 - Remove absolute path parameter from transformers ([e2b9b71](https://github.com/facebook/react-native/commit/e2b9b716522cb1500580817a0e5d43b634a411e7) by [@rafeca](https://github.com/rafeca))
 
-Thanks for everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/45) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
-
 ## [0.57.1]
 
 We are trying, for 0.57, to approach it as a version with a longer "support", while waiting for some features to land that will allow for [0.58 to be cut](https://github.com/react-native-community/react-native-releases/issues/41).
+
+Thanks to everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/34) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
 
 ### Added: new features
 
@@ -152,8 +152,6 @@ We are trying, for 0.57, to approach it as a version with a longer "support", wh
 #### iOS specific removals
 
 - Removing development team from Xcode project ([202bb14](https://github.com/facebook/react-native/commit/202bb144698b9fbdb9cfb3bc6f62fba5c9c80fce) by [@hramos](https://github.com/hramos))
-
-Thanks for everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/34) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
 
 ## [0.57]
 
