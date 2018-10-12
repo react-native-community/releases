@@ -1,5 +1,158 @@
 # Changelog
 
+## [0.57.3]
+
+**NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.0-alpha.8af6728"`.
+
+Thanks to everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/46) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
+
+### Added: new features
+
+- Expose enableBabelRuntime config param externally ([a3a69ca](https://github.com/facebook/react-native/commit/a3a69cae348b2bab0ec5ce68a56c6197cfa33ad6) by [@rafeca](https://github.com/rafeca))
+
+#### Android specific additions
+
+- Add test for InterpolatorType ([69a51da](https://github.com/facebook/react-native/commit/69a51da3a1fa0e4d9bfeb54da73f1cdb50dc11d4) by [@ejanzer](https://github.com/ejanzer))
+
+### Changes: existing functionality that is now different
+
+- React sync for revisions ade5e69...d836010 ([049e56e](https://github.com/facebook/react-native/commit/c9948d1d36eca633e62e4ea4ab530a865208d0e1) by [@yungsters](https://github.com/yungsters))
+- React: Bump Canary Version ([a0b7854](https://github.com/facebook/react-native/commit/a0b7854c94af20dea5de493fb3252fbd783de9a9) by [@yungsters](https://github.com/yungsters))
+- FBJS: Upgrade to ^1.0.0 ([2134102](https://github.com/facebook/react-native/commit/2134102027552d49de21460c7859c5a49e3160e8) by [@yungsters](https://github.com/yungsters))
+- Bump metro@0.48.1 ([2784a03](https://github.com/facebook/react-native/commit/2784a03fc52b0b6b241ff8d6ec1fa371ab494e7f) by [@rafeca](https://github.com/rafeca))
+- Update to Detox 9 ([47a1b04](https://github.com/facebook/react-native/commit/47a1b0461b92ca9146050f4770b6030b4de2ec32) by [@kelset](https://github.com/kelset))
+- Add Deprecation Warning to ListView ([25a3cff](https://github.com/facebook/react-native/commit/25a3cff5a71b8f04a613f5987b90a56a82b960e8) by [@TheSavior](https://github.com/TheSavior))
+- Deprecate legacyImplementation of FlatList ([131db26](https://github.com/facebook/react-native/commit/131db26cbd8c45dd08941e8a9677f7eb9165f080) by [@TheSavior](https://github.com/TheSavior))
+- Skip flaky Animated test ([c45007b](https://github.com/facebook/react-native/commit/c45007b771d469c503fe85e2ed13e0d871ea08c8) by [@TheSavior](https://github.com/TheSavior))
+- Move RN's DEFS.bzl to tools and rename to rn_defs.bzl ([5468aee](https://github.com/facebook/react-native/commit/5468aeef0397290720e91fce1508a57945116c63) by Jonathan Kim)
+
+#### Android specific changes
+
+- Simplify OSS enums ([0df8e7d](https://github.com/facebook/react-native/commit/0df8e7d65b62544d6b9c34fba069466c23437602) by [@ejanzer](https://github.com/ejanzer))
+- bump Android NDK to r17c ([b7d0594](https://github.com/facebook/react-native/commit/b7d0594dfc6ad3b48e21dfa2ffe20c431669483d) by [@dulmandakh](https://github.com/dulmandakh))
+- Resolve protocol http, https when not in lowercase ([09178f8](https://github.com/facebook/react-native/commit/09178f8bb905e3c305f84833bdfc8d4c12f66618) by [@hyunjongL](https://github.com/hyunjongL))
+- Normalize scheme for URL on Android ([b1aed4d](https://github.com/facebook/react-native/commit/b1aed4d376e39fafd3d43f0fb156b30211c9b007) by [@radeno](https://github.com/radeno))
+
+#### iOS specific changes
+
+- Bump up the buffer size and show a warning if the trace might be truncated ([a4ef256](https://github.com/facebook/react-native/commit/a4ef25616775be3375e5f82e79d214bb95a4df60) by [@alexeylang](https://github.com/alexeylang))
+
+### Fixed: bugs that have been resolved
+
+- Fix deprecation warning message in Switch ([e7ea1f8](https://github.com/facebook/react-native/commit/e7ea1f840cc66bcc25113f0a8bbda1737529fc9f) by [@radko93](https://github.com/radko93))
+- RN: Fix `ReactNativeViewAttributes` Type Bugs ([5ec4bab](https://github.com/facebook/react-native/commit/5ec4bab51ddbe0f90a82a115ed3cd0eaeef7344f) by [@yungsters](https://github.com/yungsters))
+- Fix rntester buck build ([31c398e](https://github.com/facebook/react-native/commit/31c398ec283d8a1154729780a76a56b40270092d) by [@mmmulani](https://github.com/mmmulani))
+
+#### Android specific fixes
+
+- Fix default accessibility delegate ([677f1de](https://github.com/facebook/react-native/commit/677f1de70bfffda9207534004852426a8a3ae4fa) by [@ayc1](https://github.com/ayc1))
+- Fix accessibility role/label ([049e56e](https://github.com/facebook/react-native/commit/049e56e272a1a481d4bdc401fc6ed3e85e56e28b) by [@ayc1](https://github.com/ayc1))
+- When converting arguments JS->Java, handle integers correctly ([413e7c8](https://github.com/facebook/react-native/commit/413e7c83048b7723cf0668785d55507171ed72f9) by [@mhorowitz](https://github.com/mhorowitz))
+- Fix CameraRoll.getPhotos() crash on Android if device has a problematic video asset ([2658048](https://github.com/facebook/react-native/commit/265804867cd6f0cd3b164c6ffe91bee08230dcaf) by [@naxel](https://github.com/naxel))
+- Android ScrollView fix for snapToInterval not snapping to end ([1fa7150](https://github.com/facebook/react-native/commit/1fa7150ce984fae57898de0564f176eb02389098) by [@olegbl](https://github.com/olegbl))
+- Fix for InterpolatorType crash ([300ba7a](https://github.com/facebook/react-native/commit/300ba7a87e254a2b044864736525530fa8d46576) by [@ejanzer](https://github.com/ejanzer))
+- Update bad method ([1592a8d](https://github.com/facebook/react-native/commit/1592a8d42411d1f91c8ceb738c0533c1cee73f71) by [@grabbou](https://github.com/grabbou))
+
+#### iOS specific fixes
+
+- Dealloc first time RCTNetInfo reachability callback ([9ae5bd0](https://github.com/facebook/react-native/commit/9ae5bd0c92d797e3c2fb31b7ea2d358a462b10e6) by [@mmmulani](https://github.com/mmmulani))
+- iOS: fix the baseline issue when displaying a mixture of different-language characters ([ce8dddb](https://github.com/facebook/react-native/commit/ce8dddb506c336eb40558f04c3b4ef73671d2b97) by [@BingBingL](https://github.com/BingBingL))
+- Fix artifacting on RN-drawn borders with asymmetric radii ([dba2235](https://github.com/facebook/react-native/commit/dba2235d95e46514206bcfaefc7e965193536fe8) by [@jamesreggio](https://github.com/jamesreggio))
+- check isAvailable key on simulator object ([9e6212a](https://github.com/facebook/react-native/commit/9e6212a8186c8f9585394b5f950861d146fec4ca) by [@antonychan](https://github.com/antonychan))
+- ios-simulator: change default iphone version ([1d1a41e](https://github.com/facebook/react-native/commit/1d1a41e303c0af5acc1e05b2f5c7928809e6bf62) by Vitor Capretz)
+
+### Removed: features that have been removed; these are breaking
+
+- Remove sinon dependency ([641f7e8](https://github.com/facebook/react-native/commit/641f7e8033c43dd5efae5a5ad1edad06d139f4b2) by [@rafeca](https://github.com/rafeca))
+
+## [0.57.2]
+
+Thanks to everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/45) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
+
+### Added: new features
+
+#### Android specific additions
+
+- Android subpixel text ([c17787e](https://github.com/facebook/react-native/commit/c17787e91a7642cdcccbb74ff28d7bfdb836707c) by [@kevinresol](https://github.com/kevinresol))
+
+### Changes: existing functionality that is now different
+
+- ReactScrollView should account for `overflow: scroll` ([e6677b0](https://github.com/facebook/react-native/commit/e6677b0ec84d262944899f73f2a8ddb987e258ac) by [@mcolotto](https://github.com/mcolotto))
+- bump metro 0.47.0 ([4faa0e6](https://github.com/facebook/react-native/commit/4faa0e6cdab38c7d7d7b01ad6833c552dce0b0ce) by [@rafeca](https://github.com/rafeca))
+- Use babel runtime instead of relying on global babelHelpers and regenerator ([60b05ca](https://github.com/facebook/react-native/commit/60b05cae9ededbff538a7fce6c59520399077264) by [@janicduplessis](https://github.com/janicduplessis))
+- React: Upgrade to react-devtools@^3.4.0 ([a1cf657](https://github.com/facebook/react-native/commit/a1cf65791c2eeea3249c47c6541945a6eb8e1955) by [@yungsters](https://github.com/yungsters))
+- Change new Date() to Date.now() to save on date allocations ([ddce06f](https://github.com/facebook/react-native/commit/ddce06ffd11e816716771991e1cac51796811870) by [@dulinriley](https://github.com/dulinriley))
+- Make config object read-only ([279c090](https://github.com/facebook/react-native/commit/279c0905f09068bb9c0e1932104992ee4f342dd8) by [@rafeca](https://github.com/rafeca))
+- Cleanup the transformer flow types ([920cf54](https://github.com/facebook/react-native/commit/920cf54c0cff4c7d7210ec0a87a4ff7c25099423) by [@rafeca](https://github.com/rafeca))
+- bump metro 0.47.1 ([aecf6df](https://github.com/facebook/react-native/commit/aecf6dfaecb55b267544528b54fa49a8b7a816d0) by [@rafeca](https://github.com/rafeca))
+
+#### Android specific changes
+
+- Android ScrollView support for `overflow: visible` ([5906c26](https://github.com/facebook/react-native/commit/5906c26466f347ff74fc637ecb33ceeb908269e0) by [@olegbl](https://github.com/olegbl))
+- Expose a getter for overflow setting in ReactViewGroup ([bc973d2](https://github.com/facebook/react-native/commit/bc973d20e01abaf89bd792c667909f2180df645e) by [@kmagiera](https://github.com/kmagiera))
+- Add workaround for Android Gradle Plugin 3.2 change to asset dir ([a4fed6e](https://github.com/facebook/react-native/commit/a4fed6e203efd481175e61b7d2aa1c2b037a4279) by [@edilaic](https://github.com/edilaic))
+
+### Fixed: bugs that have been resolved
+
+- Fix HEAD request failing with `Invalid response for blob` ([9e377c3](https://github.com/facebook/react-native/commit/9e377c394779a23af755189737bdca7b89f7412f) by [@anthonyhumphreys](https://github.com/anthonyhumphreys))
+- Check if child view != null before dropping ([8744e00](https://github.com/facebook/react-native/commit/8744e00ea99821f95f8de23d69c88ee858e90d83) by [@chrusart](https://github.com/chrusart))
+
+#### Android specific fixes
+
+- Fix event handlers for DPad arrows on Android TV ([9ac2877](https://github.com/facebook/react-native/commit/9ac2877478c8df7044065c2110e58fb5ddb5a393) by [@krzysztofciombor](https://github.com/krzysztofciombor))
+- Rounded corner rendering fixed on Android N ([b460f0d](https://github.com/facebook/react-native/commit/b460f0d20184114e75e4f7f159c812c0af346a3a) by [@dryganets](https://github.com/dryganets))
+- Android: fix cookies lost on Android 5.0 and above ([b01ac3b](https://github.com/facebook/react-native/commit/b01ac3bffea0180002439a15e3ecf435e34dd0fe) by chenwenyu)
+- allow zero offset when shadow radius is nonzero ([b7ba225](https://github.com/facebook/react-native/commit/b7ba2255df109b9cb8999d0e1584bc2b95a4e07c) by Timothy Kukulski)
+- Android ScrollView fix for pagingEnabled ([0869e54](https://github.com/facebook/react-native/commit/0869e546fe1448f6c56b4ae97e41e8a67278d7dd) by [@olegbl](https://github.com/olegbl))
+
+### Removed: features that have been removed; these are breaking
+
+- Remove global babelHelpers and regenerator ([5627616](https://github.com/facebook/react-native/commit/5627616e3f052bcb6a549120335fbdb2cacf8f03) by [@janicduplessis](https://github.com/janicduplessis))
+- Remove overflow hidden killswitch ([f1fabe5](https://github.com/facebook/react-native/commit/f1fabe5752e14bb977ce62cada74c5ee9a266ba2) by [@ayc1](https://github.com/ayc1))
+- Remove absolute path parameter from transformers ([e2b9b71](https://github.com/facebook/react-native/commit/e2b9b716522cb1500580817a0e5d43b634a411e7) by [@rafeca](https://github.com/rafeca))
+
+## [0.57.1]
+
+We are trying, for 0.57, to approach it as a version with a longer "support", while waiting for some features to land that will allow for [0.58 to be cut](https://github.com/react-native-community/react-native-releases/issues/41).
+
+Thanks to everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/34) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
+
+### Added: new features
+
+- Expose AllowFileAccess property in WebView ([8dc8071](https://github.com/facebook/react-native/commit/8dc8071795859aafc69ff5d1203a3ed2d483879c) by [@mdvacca](https://github.com/mdvacca))
+
+#### iOS specific additions
+
+- Expose scrollEnabled as iOS prop for TextInput ([cd091e8](https://github.com/facebook/react-native/commit/cd091e8534e168517bdf953a3f55265f6a3d44b4) by Chun Chen)
+
+### Changes: existing functionality that is now different
+
+- Give RNPM the ability to look for plugins in `@Scoped` modules ([e8345cc](https://github.com/facebook/react-native/commit/e8345cc621f2f9e68f1b33905a7406226e03ac42) by [empyrical](https://github.com/empyrical))
+- Upgrade babel-eslint to 9.0.0 ([87b5672](https://github.com/facebook/react-native/commit/87b5672819a4ee4ce8eff30f17ef4e85c44e86dd) by [@rafeca](https://github.com/rafeca))
+- bump metro 0.45.6 ([7bac056](https://github.com/facebook/react-native/commit/7bac0565e82981d4a6e2b500d376ba9fa8aba721) by [@rafeca](https://github.com/rafeca))
+
+#### iOS specific changes
+
+- Making RCTIsIPhoneX() return true for the R and Max models ([e884d7f](https://github.com/facebook/react-native/commit/e884d7f9fcf6a05542cd6ab90519225e4d5e29b5) by [@shergin](https://github.com/shergin))
+- Way to register RCT_MODULE in Plugin2.0 instead of +load ([5f85b25](https://github.com/facebook/react-native/commit/5f85b256ccd688b6ab030d7d8b1938ac6afaee38) by Jeff Thomas)
+- Update RCTLinkingManager.h to explicitly state the 'nullability' of parameters ([bf84166](https://github.com/facebook/react-native/commit/bf8416657164c798b93371c5e96fe1fa09f14092) by Warren Knox)
+
+### Fixed: bugs that have been resolved
+
+- Pass the maxWorkers config param correctly to Metro ([202715c](https://github.com/facebook/react-native/commit/202715c95d13c6a03e43087231d14f8ebebaa6e3) by [@rafeca](https://github.com/rafeca))
+- Fix ignored --projectRoot/watchFolders arguments (([fb109e9](https://github.com/facebook/react-native/commit/fb109e9120e4366e40d7468625fcd6b14a5fe1e9) by [@oblador](https://github.com/oblador))
+- Debug only code were leaking into release builds on iOS. (([0a5eefb](https://github.com/facebook/react-native/commit/0a5eefbf298f37a0660f094cf4be7f59d06784ad) by [@dryganets](https://github.com/dryganets))
+
+#### iOS specific fixes
+
+- Fix RCTNetInfo first time connection status ([4ea3ac7](https://github.com/facebook/react-native/commit/4ea3ac73031b3d0da209ef25e052e60b458652a3) by [@karanjthakkar](https://github.com/karanjthakkar))
+
+### Removed: features that have been removed; these are breaking
+
+#### iOS specific removals
+
+- Removing development team from Xcode project ([202bb14](https://github.com/facebook/react-native/commit/202bb144698b9fbdb9cfb3bc6f62fba5c9c80fce) by [@hramos](https://github.com/hramos))
+
 ## [0.57]
 
 Welcome to the 0.57 release of React Native! This release addresses a number of issues and has some exciting improvements. We again skipped a monthly release, focused on quality by extending the release candidate phase, and let some upstream packages reach stable for inclusion.
