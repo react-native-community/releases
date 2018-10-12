@@ -1,5 +1,47 @@
 # Changelog
 
+## [0.57.1]
+
+We are trying, for 0.57, to approach it as a version with a longer "support", while waiting for some features to land that will allow for [0.58 to be cut](https://github.com/react-native-community/react-native-releases/issues/41).
+
+### Added: new features
+
+- Expose AllowFileAccess property in WebView ([8dc8071](https://github.com/facebook/react-native/commit/8dc8071795859aafc69ff5d1203a3ed2d483879c) by [@mdvacca](https://github.com/mdvacca))
+
+#### iOS specific additions
+
+- Expose scrollEnabled as iOS prop for TextInput ([cd091e8](https://github.com/facebook/react-native/commit/cd091e8534e168517bdf953a3f55265f6a3d44b4) by Chun Chen)
+
+### Changes: existing functionality that is now different
+
+- Give RNPM the ability to look for plugins in `@Scoped` modules ([e8345cc](https://github.com/facebook/react-native/commit/e8345cc621f2f9e68f1b33905a7406226e03ac42) by [empyrical](https://github.com/empyrical))
+- Upgrade babel-eslint to 9.0.0 ([87b5672](https://github.com/facebook/react-native/commit/87b5672819a4ee4ce8eff30f17ef4e85c44e86dd) by [@rafeca](https://github.com/rafeca))
+- bump metro 0.45.6 ([7bac056](https://github.com/facebook/react-native/commit/7bac0565e82981d4a6e2b500d376ba9fa8aba721) by [@rafeca](https://github.com/rafeca))
+
+#### iOS specific changes
+
+- Making RCTIsIPhoneX() return true for the R and Max models ([e884d7f](https://github.com/facebook/react-native/commit/e884d7f9fcf6a05542cd6ab90519225e4d5e29b5) by [@shergin](https://github.com/shergin))
+- Way to register RCT_MODULE in Plugin2.0 instead of +load ([5f85b25](https://github.com/facebook/react-native/commit/5f85b256ccd688b6ab030d7d8b1938ac6afaee38) by Jeff Thomas)
+- Update RCTLinkingManager.h to explicitly state the 'nullability' of parameters ([bf84166](https://github.com/facebook/react-native/commit/bf8416657164c798b93371c5e96fe1fa09f14092) by Warren Knox)
+
+### Fixed: bugs that have been resolved
+
+- Pass the maxWorkers config param correctly to Metro ([202715c](https://github.com/facebook/react-native/commit/202715c95d13c6a03e43087231d14f8ebebaa6e3) by [@rafeca](https://github.com/rafeca))
+- Fix ignored --projectRoot/watchFolders arguments (([fb109e9](https://github.com/facebook/react-native/commit/fb109e9120e4366e40d7468625fcd6b14a5fe1e9) by [@oblador](https://github.com/oblador))
+- Debug only code were leaking into release builds on iOS. (([0a5eefb](https://github.com/facebook/react-native/commit/0a5eefbf298f37a0660f094cf4be7f59d06784ad) by [@dryganets](https://github.com/dryganets))
+
+#### iOS specific fixes
+
+- Fix RCTNetInfo first time connection status ([4ea3ac7](https://github.com/facebook/react-native/commit/4ea3ac73031b3d0da209ef25e052e60b458652a3) by [@karanjthakkar](https://github.com/karanjthakkar))
+
+### Removed: features that have been removed; these are breaking
+
+#### iOS specific removals
+
+- Removing development team from Xcode project ([202bb14](https://github.com/facebook/react-native/commit/202bb144698b9fbdb9cfb3bc6f62fba5c9c80fce) by [@hramos](https://github.com/hramos))
+
+Thanks for everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/34) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
+
 ## [0.57]
 
 Welcome to the 0.57 release of React Native! This release addresses a number of issues and has some exciting improvements. We again skipped a monthly release, focused on quality by extending the release candidate phase, and let some upstream packages reach stable for inclusion.
