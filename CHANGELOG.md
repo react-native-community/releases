@@ -1,5 +1,51 @@
 # Changelog
 
+## [0.57.2]
+
+### Added: new features
+
+#### Android specific additions
+
+- Android subpixel text ([c17787e](https://github.com/facebook/react-native/commit/c17787e91a7642cdcccbb74ff28d7bfdb836707c) by [@kevinresol](https://github.com/kevinresol))
+
+### Changes: existing functionality that is now different
+
+- ReactScrollView should account for `overflow: scroll` ([e6677b0](https://github.com/facebook/react-native/commit/e6677b0ec84d262944899f73f2a8ddb987e258ac) by [@mcolotto](https://github.com/mcolotto))
+- bump metro 0.47.0 ([4faa0e6](https://github.com/facebook/react-native/commit/4faa0e6cdab38c7d7d7b01ad6833c552dce0b0ce) by [@rafeca](https://github.com/rafeca))
+- Use babel runtime instead of relying on global babelHelpers and regenerator ([60b05ca](https://github.com/facebook/react-native/commit/60b05cae9ededbff538a7fce6c59520399077264) by [@janicduplessis](https://github.com/janicduplessis))
+- React: Upgrade to react-devtools@^3.4.0 ([a1cf657](https://github.com/facebook/react-native/commit/a1cf65791c2eeea3249c47c6541945a6eb8e1955) by [@yungsters](https://github.com/yungsters))
+- Change new Date() to Date.now() to save on date allocations ([ddce06f](https://github.com/facebook/react-native/commit/ddce06ffd11e816716771991e1cac51796811870) by [@dulinriley](https://github.com/dulinriley))
+- Make config object read-only ([279c090](https://github.com/facebook/react-native/commit/279c0905f09068bb9c0e1932104992ee4f342dd8) by [@rafeca](https://github.com/rafeca))
+- Cleanup the transformer flow types ([920cf54](https://github.com/facebook/react-native/commit/920cf54c0cff4c7d7210ec0a87a4ff7c25099423) by [@rafeca](https://github.com/rafeca))
+- bump metro 0.47.1 ([aecf6df](https://github.com/facebook/react-native/commit/aecf6dfaecb55b267544528b54fa49a8b7a816d0) by [@rafeca](https://github.com/rafeca))
+
+#### Android specific changes
+
+- Android ScrollView support for `overflow: visible` ([5906c26](https://github.com/facebook/react-native/commit/5906c26466f347ff74fc637ecb33ceeb908269e0) by [@olegbl](https://github.com/olegbl))
+- Expose a getter for overflow setting in ReactViewGroup ([bc973d2](https://github.com/facebook/react-native/commit/bc973d20e01abaf89bd792c667909f2180df645e) by [@kmagiera](https://github.com/kmagiera))
+- Add workaround for Android Gradle Plugin 3.2 change to asset dir ([a4fed6e](https://github.com/facebook/react-native/commit/a4fed6e203efd481175e61b7d2aa1c2b037a4279) by [@edilaic](https://github.com/edilaic))
+
+### Fixed: bugs that have been resolved
+
+- Fix HEAD request failing with `Invalid response for blob` ([9e377c3](https://github.com/facebook/react-native/commit/9e377c394779a23af755189737bdca7b89f7412f) by [@anthonyhumphreys](https://github.com/anthonyhumphreys))
+- Check if child view != null before dropping ([8744e00](https://github.com/facebook/react-native/commit/8744e00ea99821f95f8de23d69c88ee858e90d83) by [@chrusart](https://github.com/chrusart))
+
+#### Android specific fixes
+
+- Fix event handlers for DPad arrows on Android TV ([9ac2877](https://github.com/facebook/react-native/commit/9ac2877478c8df7044065c2110e58fb5ddb5a393) by [@krzysztofciombor](https://github.com/krzysztofciombor))
+- Rounded corner rendering fixed on Android N ([b460f0d](https://github.com/facebook/react-native/commit/b460f0d20184114e75e4f7f159c812c0af346a3a) by [@dryganets](https://github.com/dryganets))
+- Android: fix cookies lost on Android 5.0 and above ([b01ac3b](https://github.com/facebook/react-native/commit/b01ac3bffea0180002439a15e3ecf435e34dd0fe) by chenwenyu)
+- allow zero offset when shadow radius is nonzero ([b7ba225](https://github.com/facebook/react-native/commit/b7ba2255df109b9cb8999d0e1584bc2b95a4e07c) by Timothy Kukulski)
+- Android ScrollView fix for pagingEnabled ([0869e54](https://github.com/facebook/react-native/commit/0869e546fe1448f6c56b4ae97e41e8a67278d7dd) by [@olegbl](https://github.com/olegbl))
+
+### Removed: features that have been removed; these are breaking
+
+- Remove global babelHelpers and regenerator ([5627616](https://github.com/facebook/react-native/commit/5627616e3f052bcb6a549120335fbdb2cacf8f03) by [@janicduplessis](https://github.com/janicduplessis))
+- Remove overflow hidden killswitch ([f1fabe5](https://github.com/facebook/react-native/commit/f1fabe5752e14bb977ce62cada74c5ee9a266ba2) by [@ayc1](https://github.com/ayc1))
+- Remove absolute path parameter from transformers ([e2b9b71](https://github.com/facebook/react-native/commit/e2b9b716522cb1500580817a0e5d43b634a411e7) by [@rafeca](https://github.com/rafeca))
+
+Thanks for everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/45) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
+
 ## [0.57.1]
 
 We are trying, for 0.57, to approach it as a version with a longer "support", while waiting for some features to land that will allow for [0.58 to be cut](https://github.com/react-native-community/react-native-releases/issues/41).
