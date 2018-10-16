@@ -67,8 +67,7 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 
 ### Known issues
 
-There are a few issues that don't have a finalized solution. In particular, when using Xcode 10 and `react-native init`, your build may fail due to third-party build steps ([#20774](https://github.com/facebook/react-native/issues/20774)). There is an open pull request which we are testing and hope to land soon ([#21458](https://github.com/facebook/react-native/pull/21458)). In the meantime, you can find a workaround here: [https://github.com/facebook/react-native/issues/20774](https://github.com/facebook/react-native/issues/20774).
-
+There are a few issues that don't have a finalized solution. In particular, when using Xcode 10 and `react-native init`, your build may fail due to third-party build steps ([#20774](https://github.com/facebook/react-native/issues/20774)). There is an open pull request which we are testing and hope to land soon ([#21458](https://github.com/facebook/react-native/pull/21458)). In the meantime, you can find a workaround here: [https://github.com/facebook/react-native/issues/20774](https://github.com/facebook/react-native/issues/20774). Furthermore, unit testing with Jest is only partly functional. Specifically `jest.mock()` [is broken](https://github.com/facebook/react-native/issues/20876#issuecomment-422382171). For Jest tests excluding `jest.mock` [there is a known workaround](https://github.com/facebook/react-native/issues/19859#issuecomment-407748189).
 ## [0.57.2]
 
 Thanks to everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/45) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
