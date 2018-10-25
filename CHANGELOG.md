@@ -1,5 +1,70 @@
 # Changelog
 
+## [0.57.4]
+
+**NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.0-alpha.8af6728"` at least (next version will update to "first class support" for 16.6.0, and it will come soon - but you should be *fairly safe* using 16.6.0 anyway). Also, please check the _Known issues_ section below, especially if you are using Xcode 10.
+
+Thanks to everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/48) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
+
+### Added: new features
+
+#### Android specific additions
+
+- Android textTransform style support ([22cf5dc](https://github.com/facebook/react-native/commit/22cf5dc5660f19b16de3592ccae4c42cc16ace69) by Stephen Cook)
+
+### Changes: existing functionality that is now different
+
+- Do not use fbjs/emptyObject ([7541655](https://github.com/facebook/react-native/commit/75416553981a63e34635492c768c5a7763bf687b) by [@alunyov](https://github.com/alunyov))
+- Add deprecation notice to SwipeableListView ([99471f8](https://github.com/facebook/react-native/commit/99471f87b944b26bbdaa0fb0881db91c1118b741) by [@TheSavior](https://github.com/TheSavior))
+
+#### Android specific changes
+
+- Consolidate native dependencies versions ([ba608a2](https://github.com/facebook/react-native/commit/ba608a2db786a8e983a6e30b31662fac254286c0) by [@dulmandakh](https://github.com/dulmandakh))
+- bump okhttp3 to 3.11 ([10fc548](https://github.com/facebook/react-native/commit/10fc548809cc08db209ae6696b723341925137d1) by [@dulmandakh](https://github.com/dulmandakh))
+- Android: Send <Text> metrics in onTextLayout events ([737f937](https://github.com/facebook/react-native/commit/737f93705ca8b5d3fdd207f870cf27adcf1e885b) by [@mmmulani](https://github.com/mmmulani))
+- Use TextLegend example in Android as well ([335927d](https://github.com/facebook/react-native/commit/335927db44fe47e20db4503a1ab5fcf8d62144a8) by [@mmmulani](https://github.com/mmmulani))
+
+#### iOS specific changes
+
+- Bump xcode@1.0.0 ([b951499](https://github.com/facebook/react-native/commit/b9514995a26b4c3f6d555257740457dd4d6cfeae) by [@peat-psuwit](https://github.com/peat-psuwit))
+- Text: send metrics after rendering (iOS) ([64a5253](https://github.com/facebook/react-native/commit/64a52532fe88b482ae4b998133d340e6e1141a0f) by [@mmmulani](https://github.com/mmmulani))
+- Allow specifying iOS version for run-ios with simulator option ([0fab27c](https://github.com/facebook/react-native/commit/0fab27cbaca57b90119ab36104af4d0b3052ae30) by [@elyalvarado](https://github.com/elyalvarado))
+- Relax the requirement that lazy module cannot be initialized on the main thread ([dbc864c](https://github.com/facebook/react-native/commit/dbc864c9cd95f9df268d85a642742e84e2360db4) by [@spredolac](https://github.com/spredolac))
+
+### Fixed: bugs that have been resolved
+
+- Fix crashes on invalid regex ([298f14d](https://github.com/facebook/react-native/commit/298f14da1210460b3e25c6002e8d1aa5f7b4e0ef) by [@RSNara](https://github.com/RSNara))
+- Fix pull to refresh refresh component clipping on Android ([8a3a0ad](https://github.com/facebook/react-native/commit/8a3a0ad2d0f894a3d8c1e403a9336dab17c2dde8) by Andy Huang)
+- ListView requestAnimationFrame leak ([70b5eb3](https://github.com/facebook/react-native/commit/70b5eb3aa27822fa11571c3d8d3628ecf03268ab) by [@exced](https://github.com/exced))
+
+#### Android specific fixes
+
+- reverted [Update bad method](https://github.com/facebook/react-native/commit/1592a8d)
+- Fix accessibility role crash ([139559f](https://github.com/facebook/react-native/commit/139559fc0716a9ab7b78c9524df5eb295d882547) by Haseeb Saeed)
+- Fix accessibilityRole value lookup ([1f96ff6](https://github.com/facebook/react-native/commit/1f96ff62cf786f93c91e6625bf2b819077902251) by [@ayc1](https://github.com/ayc1))
+- Fix DynamicFromMap object pool synchronization ([b0d68c0](https://github.com/facebook/react-native/commit/b0d68c0bb971a44dfdf7722682933f1e96e1cd45) by [@haitaoli](https://github.com/haitaoli))
+- Back out "[react-native][pr] Rounded corner rendering fixed on Android N." ([bb407fa](https://github.com/facebook/react-native/commit/bb407fa1ec0bd0367373961fdc0e840150840068) by Jonathan Lee)
+- Fix onTextLayout metrics on Android when using alignText ([1c240ae](https://github.com/facebook/react-native/commit/1c240ae898e26534b8d9a09a334dec02e96faa05) by [@mmmulani](https://github.com/mmmulani))
+- Cleaning up imports in ViewGroupManager ([082a869](https://github.com/facebook/react-native/commit/082a869daef3cf602a088d0418c185279052b8c3) by [@mdvacca](https://github.com/mdvacca))
+
+#### iOS specific fixes
+
+- Fix issue when inserting text at 0 when maxLength is set ([36507e4](https://github.com/facebook/react-native/commit/36507e4a3c2fa58dcfdc9bd389b37536c66006d0) by [@ejanzer](https://github.com/ejanzer))
+
+### Removed: features that have been removed; these are breaking
+
+- Remove TimerMixin from ListView ([8ceb158](https://github.com/facebook/react-native/commit/8ceb1586ee596a1bdf44bbb8e4c6ab54cbaa7c8b) by [@exced](https://github.com/exced))
+
+### Known issues
+
+There are a few issues that don't have a finalized solution (as it happens for 0.x projects). In particular, when using Xcode 10 and `react-native init`, your build may fail due to third-party build steps ([#20774](https://github.com/facebook/react-native/issues/20774)). There is a [commit](https://github.com/facebook/react-native/commit/b44c5ae92eb08125d466cf151cb804dabfbbc690) we are planning to cherry pick in a future release that should help - in the meantime, you should be able to run these commands from the project folder to fix the issue (you should need to do it only once per project):
+```
+$ cd node_modules/react-native
+$ scripts/ios-install-third-party.sh
+$ cd third-party/glog-0.3.5/
+$ ../../scripts/ios-configure-glog.sh
+```
+
 ## [0.57.3]
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.0-alpha.8af6728"`. Also, please check the *Known issues* section below, especially if you are using Xcode 10.
