@@ -13,7 +13,7 @@ Note that these issues are locked to keep conversation focused strictly on the s
 
 ## Changelog
 
-The changelog in this repository is a community-provided effort to provide a helpful and informative summary of React Native's rapidly changing codebase. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/), and emojii use is roughly based on [gitmoji](https://gitmoji.carloscuesta.me/) recommendations.
+The changelog in this repository is a community-provided effort to provide a helpful and informative summary of React Native's rapidly changing codebase. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and emojii use is roughly based on [gitmoji](https://gitmoji.carloscuesta.me/) recommendations.
 
 In order to allow additional research, the commits that relate to a change are listed. The revisions listed typically are the merge commits, so as to match the code that a user may find in their own copy. Authors are attributed to encourage recognizing the contributors for supporting React Native.
 
@@ -31,4 +31,4 @@ If the commit is only present in `master` (i.e. has no tags), then the commit ha
 
 From time to time, [backporting](https://en.wikipedia.org/wiki/Backporting) a change to an existing release (including candidates) may be needed. Examples include security issues or critical regressions. If you believe a pull request on `react-native`  is a candidate for backporting, please mention it in the version associated _backport request_ issue.
 
-Please note that if the change hasn't landed on `react-native`'s master, it can't be cherry picked to a release tag yet.
+Please note that, if the change hasn't landed on `react-native`'s master, it can't be cherry picked to a release tag yet.
