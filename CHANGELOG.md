@@ -2,7 +2,7 @@
 
 ## [0.57.4]
 
-**NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.0-alpha.8af6728"` at least (next version will update to "first class support" for 16.6.0, and it will come soon - but you should be *fairly safe* using 16.6.0 anyway). Also, please check the _Known issues_ section below, especially if you are using Xcode 10.
+**NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.0-alpha.8af6728"` (next version, 0.57.5, will update to `16.6.0`, and it will come soon). Also, please check the _Known issues_ section below, especially if you are using Xcode 10.
 
 Thanks to everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/48) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
 
@@ -57,13 +57,17 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 
 ### Known issues
 
-There are a few issues that don't have a finalized solution (as it happens for 0.x projects). In particular, when using Xcode 10 and `react-native init`, your build may fail due to third-party build steps ([#20774](https://github.com/facebook/react-native/issues/20774)). There is a [commit](https://github.com/facebook/react-native/commit/b44c5ae92eb08125d466cf151cb804dabfbbc690) we are planning to cherry pick in a future release that should help - in the meantime, you should be able to run these commands from the project folder to fix the issue (you should need to do it only once per project):
+There are a few issues that don't have a finalized solution (as it happens for 0.x projects). In particular:
+
+* when using Xcode 10 and `react-native init`, your build may fail due to third-party build steps ([#20774](https://github.com/facebook/react-native/issues/20774)). There is a [commit](https://github.com/facebook/react-native/commit/b44c5ae92eb08125d466cf151cb804dabfbbc690) we are planning to cherry pick in a future release that should help - in the meantime, you should be able to run these commands from the project folder to fix the issue (you should need to do it only once per project):
 ```
 $ cd node_modules/react-native
 $ scripts/ios-install-third-party.sh
 $ cd third-party/glog-0.3.5/
 $ ../../scripts/ios-configure-glog.sh
 ```
+
+* React `16.6.0` works for the most part, aside from the Context API (check [this issue](https://github.com/facebook/react-native/issues/21975)) - and if you are eager to test the new React Hooks you will have to be patient, as they are not production ready and `16.7.alpha` is **not** yet [supported](https://github.com/facebook/react-native/issues/21967) by React Native.
 
 ## [0.57.3]
 
