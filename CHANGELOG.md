@@ -21,7 +21,7 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 
 - Consolidate native dependencies versions ([ba608a2](https://github.com/facebook/react-native/commit/ba608a2db786a8e983a6e30b31662fac254286c0) by [@dulmandakh](https://github.com/dulmandakh))
 - bump okhttp3 to 3.11 ([10fc548](https://github.com/facebook/react-native/commit/10fc548809cc08db209ae6696b723341925137d1) by [@dulmandakh](https://github.com/dulmandakh))
-- Android: Send <Text> metrics in onTextLayout events ([737f937](https://github.com/facebook/react-native/commit/737f93705ca8b5d3fdd207f870cf27adcf1e885b) by [@mmmulani](https://github.com/mmmulani))
+- Android: Send `<Text>` metrics in onTextLayout events ([737f937](https://github.com/facebook/react-native/commit/737f93705ca8b5d3fdd207f870cf27adcf1e885b) by [@mmmulani](https://github.com/mmmulani))
 - Use TextLegend example in Android as well ([335927d](https://github.com/facebook/react-native/commit/335927db44fe47e20db4503a1ab5fcf8d62144a8) by [@mmmulani](https://github.com/mmmulani))
 
 #### iOS specific changes
@@ -59,15 +59,16 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 
 There are a few issues that don't have a finalized solution (as it happens for 0.x projects). In particular:
 
-* when using Xcode 10 and `react-native init`, your build may fail due to third-party build steps ([#20774](https://github.com/facebook/react-native/issues/20774)). There is a [commit](https://github.com/facebook/react-native/commit/b44c5ae92eb08125d466cf151cb804dabfbbc690) we are planning to cherry pick in a future release that should help - in the meantime, you should be able to run these commands from the project folder to fix the issue (you should need to do it only once per project):
-```
-$ cd node_modules/react-native
-$ scripts/ios-install-third-party.sh
-$ cd third-party/glog-0.3.5/
-$ ../../scripts/ios-configure-glog.sh
-```
+- when using Xcode 10 and `react-native init`, your build may fail due to third-party build steps ([#20774](https://github.com/facebook/react-native/issues/20774)). There is a [commit](https://github.com/facebook/react-native/commit/b44c5ae92eb08125d466cf151cb804dabfbbc690) we are planning to cherry pick in a future release that should help - in the meantime, you should be able to run these commands from the project folder to fix the issue (you should need to do it only once per project):
 
-* React `16.6.0` works for the most part, aside from the Context API (check [this issue](https://github.com/facebook/react-native/issues/21975)) - and if you are eager to test the new React Hooks you will have to be patient, as they are not production ready and `16.7.alpha` is **not** yet [supported](https://github.com/facebook/react-native/issues/21967) by React Native.
+  ```bash
+  cd node_modules/react-native
+  scripts/ios-install-third-party.sh
+  cd third-party/glog-0.3.5/
+  ../../scripts/ios-configure-glog.sh
+  ```
+
+- React `16.6.0` works for the most part, aside from the Context API (check [this issue](https://github.com/facebook/react-native/issues/21975)) - and if you are eager to test the new React Hooks you will have to be patient, as they are not production ready and `16.7.alpha` is **not** yet [supported](https://github.com/facebook/react-native/issues/21967) by React Native.
 
 ## [0.57.3]
 
