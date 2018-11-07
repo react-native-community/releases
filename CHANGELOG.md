@@ -745,7 +745,7 @@ As mentioned a few times in the past, the core team is reviewing the repository 
 	1. In your project's `android/gradle/wrapper/gradle-wrapper.properties` file, change the `distributionUrl` to `https\://services.gradle.org/distributions/gradle-4.4-all.zip`
 	2. In `android/build.gradle` file add `google()` right above `jcenter()` in both `buildscript` and `allprojects` repositories. Then change Android build tools to version 3.1.3 `classpath 'com.android.tools.build:gradle:3.1.3'`
 	3. In `android/app/build.gradle` file update all your `compile` statements to be `implementation`, e.g. `implementation 'com.facebook.fresco:animated-gif:1.10.0'`
-	4. Do note that when running your app from within Android Studio, you may encounter `Missing Byte Code`errors. This is due to a known issue with version 3.1.x of the android tools plugin: [https://issuetracker.google.com/issues/72811718](https://issuetracker.google.com/issues/72811718). You'll need to disable Instant Run to get past this error.
+	4. Do note that when running your app from within Android Studio, you may encounter `Missing Byte Code` errors. This is due to [a known issue](https://issuetracker.google.com/issues/72811718) with version 3.1.x of the android tools plugin. You'll need to disable Instant Run to get past this error.
 5. If you have a custom packager configuration via `rn-cli.config.js`, you probably need to update it to work with the updated Metro configuration structure (for full detail refer to Metro's [documentation](https://facebook.github.io/metro/docs/en/configuration)); here are some commonly encountered changes to `rn-cli.config.js`:
 
    ```diff
