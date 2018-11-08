@@ -269,7 +269,7 @@ As mentioned a few times in the past, the core team is reviewing the repository 
    ```
 
 3. Ensure that you have all the babel dependencies to version `^7.0.0` (you may also need to add `"babel-core": "7.0.0-bridge.0"` as a yarn resolution to ensure retro-compatibility)
-4. Upgrading android gradle version to 4.4
+4. Upgrade the Android configuration:
 	1. In your project's `android/gradle/wrapper/gradle-wrapper.properties` file, change the `distributionUrl` to `https\://services.gradle.org/distributions/gradle-4.4-all.zip`
 	2. In `android/build.gradle` file add `google()` right above `jcenter()` in both `buildscript` and `allprojects` repositories. Then change Android build tools to version 3.1.3 `classpath 'com.android.tools.build:gradle:3.1.3'`
 	3. In `android/app/build.gradle` file update all your `compile` statements to be `implementation`, e.g. `implementation 'com.facebook.fresco:animated-gif:1.10.0'`
