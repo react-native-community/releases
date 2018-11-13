@@ -12,7 +12,6 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 
 There are a few issues that don't have a finalized solution (as it happens for 0.x projects). But earlier versions issues with Xcode 10 and hooks should be fixed with this new version.
 
-
 ## [0.57.4]
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.0-alpha.8af6728"` (next version, 0.57.5, will update to `16.6.0`, and it will come soon). Also, please check the _Known issues_ section below, especially if you are using Xcode 10.
