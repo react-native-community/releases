@@ -7,12 +7,12 @@ const argv = require('yargs')
     .options({
         'base': {
             alias: 'b',
-            describe: 'the base version to compare against (most often, this is the current stable)',
+            describe: 'the base version branch or commit to compare against (most often, this is the current stable)',
             demandOption: true
         },
         'compare': {
             alias: 'c',
-            describe: 'the new version (most often, this is the release candidate)',
+            describe: 'the new version branch or commit (most often, this is the release candidate)',
             demandOption: true
         }
     })
@@ -20,8 +20,8 @@ const argv = require('yargs')
   .help('help')
   .argv
 
-const base = argv.base + '-stable';
-const compare = argv.compare + '-stable';
+const base = argv.base;
+const compare = argv.compare;
 
 function fetchJSON(host, path) {
   return new Promise((resolve, reject) => {
