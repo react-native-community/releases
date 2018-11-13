@@ -642,7 +642,7 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 - Update Yoga to handle being in a Xcode framework project ([cf036db](https://github.com/facebook/react-native/commit/cf036dbc7af16a8453c115372694dc51e8086fcf))
 - Fix Blob memory leak ([122b379](https://github.com/facebook/react-native/commit/122b3791ede095345f44666691aa9ce5aa7f725a))
 - Avoid double reload event when reloading JS ([b348aa1](https://github.com/facebook/react-native/commit/b348aa14d483cc6b33ba92637647c4987c9478c1))
-- Suppres spurious warning about RCTCxxModule ([af76473](https://github.com/facebook/react-native/commit/af76473c2e344c13ecac054b5a5568a0b94128e5))
+- Suppress spurious warning about RCTCxxModule ([af76473](https://github.com/facebook/react-native/commit/af76473c2e344c13ecac054b5a5568a0b94128e5))
 
 #### Android specific fixes
 
