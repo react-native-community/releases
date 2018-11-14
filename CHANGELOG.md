@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.57.5]
+
+**NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
+
+Thanks to everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/54) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
+
+[ full commit list coming soon]
+
+### Known issues
+
+There are a few issues that don't have a finalized solution (as it happens for 0.x projects). But earlier versions issues with Xcode 10 and hooks should be fixed with this new version.
+
 ## [0.57.4]
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.0-alpha.8af6728"` (next version, 0.57.5, will update to `16.6.0`, and it will come soon). Also, please check the _Known issues_ section below, especially if you are using Xcode 10.
@@ -642,7 +654,7 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 - Update Yoga to handle being in a Xcode framework project ([cf036db](https://github.com/facebook/react-native/commit/cf036dbc7af16a8453c115372694dc51e8086fcf))
 - Fix Blob memory leak ([122b379](https://github.com/facebook/react-native/commit/122b3791ede095345f44666691aa9ce5aa7f725a))
 - Avoid double reload event when reloading JS ([b348aa1](https://github.com/facebook/react-native/commit/b348aa14d483cc6b33ba92637647c4987c9478c1))
-- Suppres spurious warning about RCTCxxModule ([af76473](https://github.com/facebook/react-native/commit/af76473c2e344c13ecac054b5a5568a0b94128e5))
+- Suppress spurious warning about RCTCxxModule ([af76473](https://github.com/facebook/react-native/commit/af76473c2e344c13ecac054b5a5568a0b94128e5))
 
 #### Android specific fixes
 
