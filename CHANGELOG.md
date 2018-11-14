@@ -34,10 +34,6 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 - Fix build errors when path to $NODE_BINARY contains spaces ([ce25c54](https://github.com/facebook/react-native/commit/ce25c54) by [@sundbry](https://github.com/sundbry))
 - Fix **InputAccessoryView**'s safe area when not attached to a **TextInput** ([4420e39](https://github.com/facebook/react-native/commit/4420e39) by [@janicduplessis](https://github.com/janicduplessis))
 
-### Known issues
-
-There are a few issues that don't have a finalized solution (as it happens for 0.x projects). But earlier versions issues with Xcode 10 and hooks should be fixed with this new version.
-
 ## [0.57.4]
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.0-alpha.8af6728"` (next version, 0.57.5, will update to `16.6.0`, and it will come soon). Also, please check the _Known issues_ section below, especially if you are using Xcode 10.
