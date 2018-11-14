@@ -4,7 +4,7 @@
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
 
-Thanks to everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/54) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
+This patch release fixes a number of crashes, resolves build issues (both for iOS and Android), and brings React to v16.6.1. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/54) for cherry-picking commits.
 
 ### Changed
 
