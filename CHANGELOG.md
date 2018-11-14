@@ -6,7 +6,114 @@
 
 Thanks to everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/54) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
 
-[ full commit list coming soon]
+
+### Added
+
+
+
+#### Android specific
+
+
+
+#### iOS specific
+
+
+
+### Changed
+
+
+
+#### Android specific
+
+
+
+#### iOS specific
+
+
+
+### Deprecated
+
+
+
+#### Android specific
+
+
+
+#### iOS specific
+
+
+
+### Removed
+
+- Remove previously scheduled NetInfo callbacks if they haven't fired ([03bc46d](https://github.com/facebook/react-native/commit/03bc46d) by [@mmmulani](https://github.com/mmmulani))
+- Remove unused parameters in ReactInstanceManager methods ([293fd40](https://github.com/facebook/react-native/commit/293fd40) by [@mdvacca](https://github.com/mdvacca))
+- Remove undefined value on init cli command (#22045) ([6d436a4](https://github.com/facebook/react-native/commit/6d436a4) by [@ignacioola](https://github.com/ignacioola))
+- Fix checkout_code: Remove Metro cache check (#21998) ([44a3e2f](https://github.com/facebook/react-native/commit/44a3e2f) by [@hramos](https://github.com/hramos))
+
+#### Android specific
+
+
+
+#### iOS specific
+
+
+
+### Fixed
+
+- Incorrect ref API usage fixed. (#20913) ([8206122](https://github.com/facebook/react-native/commit/8206122) by [@dryganets](https://github.com/dryganets))
+- Fix InputAccessoryView safe area when not attached to a TextInput (#21179) ([4420e39](https://github.com/facebook/react-native/commit/4420e39) by [@janicduplessis](https://github.com/janicduplessis))
+- Fix flow in InitializeCore ([12f2733](https://github.com/facebook/react-native/commit/12f2733) by [@ejanzer](https://github.com/ejanzer))
+- Fix polyfilling of regeneratorRuntime to avoid setting it to undefined in some situations ([53616e6](https://github.com/facebook/react-native/commit/53616e6) by [@rafeca](https://github.com/rafeca))
+- Fix View/Text displayName (#21950) ([311ba9a](https://github.com/facebook/react-native/commit/311ba9a) by [@rajivshah3](https://github.com/rajivshah3))
+- Fix relayout of inline views (#21968) ([1131463](https://github.com/facebook/react-native/commit/1131463) by [@rigdern](https://github.com/rigdern))
+- Fix ReactRootView mount/unmount race condition ([6524591](https://github.com/facebook/react-native/commit/6524591) by [@ayc1](https://github.com/ayc1))
+- Revert "Fix ReactRootView mount/unmount race condition" ([08b14f4](https://github.com/facebook/react-native/commit/08b14f4) by [@kelset](https://github.com/kelset))
+
+#### Android specific
+
+- fix android ci (#21913) ([5d28300](https://github.com/facebook/react-native/commit/5d28300) by [@dulmandakh](https://github.com/dulmandakh))
+- Fix incorrect merged asset path with flavor for Android Gradle Plugin 3.2. (#21782) ([09184a7](https://github.com/facebook/react-native/commit/09184a7) by [@yatatsu](https://github.com/yatatsu))
+- bump buck to 2018.10.29.01. fixes Android CI (#22049) ([3e8a016](https://github.com/facebook/react-native/commit/3e8a016) by [@dulmandakh](https://github.com/dulmandakh))
+
+#### iOS specific
+
+- Fix Xcode 10 errors relating to third-party (0.57-stable) ([277c19c](https://github.com/facebook/react-native/commit/277c19c) by [@mmccartney](https://github.com/mmccartney))
+
+### Security
+
+
+
+#### Android specific
+
+
+
+#### iOS specific
+
+
+
+### Unknown
+
+- Re-introduce UIImplementationProvider ([676985f](https://github.com/facebook/react-native/commit/676985f) by [@mdvacca](https://github.com/mdvacca))
+- RN crash when processing Exception with null message ([e8c9f3c](https://github.com/facebook/react-native/commit/e8c9f3c) by [@mdvacca](https://github.com/mdvacca))
+- RN: Reduce ForwardRef(View) Noise in Systrace ([7187f85](https://github.com/facebook/react-native/commit/7187f85) by [@yungsters](https://github.com/yungsters))
+- Wrap measureLayoutRelativeToContainingList in try-catch to mitigate crash ([483d4e2](https://github.com/facebook/react-native/commit/483d4e2))
+- gradle repo priority (#22041) ([ca5ab5b](https://github.com/facebook/react-native/commit/ca5ab5b) by [@dulmandakh](https://github.com/dulmandakh))
+- Increase cache and file size limits ([68dee8a](https://github.com/facebook/react-native/commit/68dee8a) by [@fatalsun](https://github.com/fatalsun))
+- React sync for revisions d836010...4773fdf ([19c8164](https://github.com/facebook/react-native/commit/19c8164) by [@yungsters](https://github.com/yungsters))
+- React sync for revisions 4773fdf...3ff2c7c ([76c99f2](https://github.com/facebook/react-native/commit/76c99f2) by [@yungsters](https://github.com/yungsters))
+- Enforce lockfile is kept up to date (#21739) ([53672ef](https://github.com/facebook/react-native/commit/53672ef) by [@hramos](https://github.com/hramos))
+- Bump fbjs-scripts to ^1.0.0 (#21880) ([550cf7d](https://github.com/facebook/react-native/commit/550cf7d) by [@jmheik](https://github.com/jmheik))
+- [LOCAL COMMIT] re-enable metro ([754594b](https://github.com/facebook/react-native/commit/754594b) by [@kelset](https://github.com/kelset))
+- [LOCAL COMMIT] mute some flow error coming from Metro (could be reversed) ([b089087](https://github.com/facebook/react-native/commit/b089087) by [@kelset](https://github.com/kelset))
+
+#### Android Unknown
+
+
+
+#### iOS Unkown
+
+- Quote "$NODE_BINARY" in react-native-xcode.sh (#21383) ([ce25c54](https://github.com/facebook/react-native/commit/ce25c54) by [@sundbry](https://github.com/sundbry))
+- Performance improvement for loading cached images on iOS (#20356) ([ce09d6e](https://github.com/facebook/react-native/commit/ce09d6e) by [@esamelson](https://github.com/esamelson))
 
 ### Known issues
 
