@@ -4,13 +4,35 @@
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
 
-Thanks to everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/54) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
+This patch release fixes a number of crashes, resolves build issues (both for iOS and Android), and brings React to v16.6.1. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/54) for cherry-picking commits.
 
-[ full commit list coming soon]
+### Changed
 
-### Known issues
+- React is now at v16.6.1 ([19c8164](https://github.com/facebook/react-native/commit/19c8164) and [76c99f2](https://github.com/facebook/react-native/commit/76c99f2) by [@yungsters](https://github.com/yungsters))
 
-There are a few issues that don't have a finalized solution (as it happens for 0.x projects). But earlier versions issues with Xcode 10 and hooks should be fixed with this new version.
+#### iOS specific
+
+- Performance improvement for loading cached images ([ce09d6e](https://github.com/facebook/react-native/commit/ce09d6e) and [68dee8a](https://github.com/facebook/react-native/commit/68dee8a) by [@esamelson](https://github.com/esamelson) and others)
+
+### Fixed
+
+- Fix crash in **VirtualizedList** during pagination ([483d4e2](https://github.com/facebook/react-native/commit/483d4e2))
+- Fix polyfilling of **regeneratorRuntime** to avoid setting it to undefined in some situations ([53616e6](https://github.com/facebook/react-native/commit/53616e6) by [@rafeca](https://github.com/rafeca))
+- Fix **View** and **Text**'s `displayName` ([311ba9a](https://github.com/facebook/react-native/commit/311ba9a) by [@rajivshah3](https://github.com/rajivshah3))
+- Fix crash that happens when a component throws an exception that contains a null message ([e8c9f3c](https://github.com/facebook/react-native/commit/e8c9f3c) by [@mdvacca](https://github.com/mdvacca))
+
+#### Android specific
+
+- Fix incorrect merged asset path with flavor for Android Gradle Plugin 3.2 ([09184a7](https://github.com/facebook/react-native/commit/09184a7) by [@yatatsu](https://github.com/yatatsu))
+- Fix crash in **ReadableNativeArray.getType** when size of ReadableNativeArray's length > 512  ([8206122](https://github.com/facebook/react-native/commit/8206122) by [@dryganets](https://github.com/dryganets))
+
+#### iOS specific
+
+- Fix crash in rapid use of **NetInfo.getCurrentConnectivity** ([03bc46d](https://github.com/facebook/react-native/commit/03bc46d) by [@mmmulani](https://github.com/mmmulani))
+- Fix Xcode 10 errors relating to third-party ([277c19c](https://github.com/facebook/react-native/commit/277c19c) by [@mmccartney](https://github.com/mmccartney))
+- Fix build errors when path to `$NODE_BINARY` contains spaces ([ce25c54](https://github.com/facebook/react-native/commit/ce25c54) by [@sundbry](https://github.com/sundbry))
+- Fix case where content of inline views didn't get relaid out ([1131463](https://github.com/facebook/react-native/commit/1131463) by [@rigdern](https://github.com/rigdern))
+- Fix **InputAccessoryView**'s safe area when not attached to a **TextInput** ([4420e39](https://github.com/facebook/react-native/commit/4420e39) by [@janicduplessis](https://github.com/janicduplessis))
 
 ## [0.57.4]
 
