@@ -1,5 +1,309 @@
 # Changelog
 
+## [0.58.0]
+
+### Added
+
+- Add end point for initializecore ([9687090](https://github.com/facebook/react-native/commit/9687090) by [@ejanzer](https://github.com/ejanzer))
+- Add no-dupe-class-members to RN ESLint fonfig ([88e736c](https://github.com/facebook/react-native/commit/88e736c) by [@TheSavior](https://github.com/TheSavior))
+- Add tracing for loading .so files during startup ([b3b6749](https://github.com/facebook/react-native/commit/b3b6749) by [@axe-fb](https://github.com/axe-fb))
+- Added lock around RN module initialization to fix crash ([6770b53](https://github.com/facebook/react-native/commit/6770b53) by [@PeteTheHeat](https://github.com/PeteTheHeat))
+- Added locking around RN bridge cxx module registry to avoid crash ([1c31919](https://github.com/facebook/react-native/commit/1c31919) by [@PeteTheHeat](https://github.com/PeteTheHeat))
+- Add Yoga JNI bindings to libcoldstart ([2a8f6c3](https://github.com/facebook/react-native/commit/2a8f6c3) by [@davidaurelio](https://github.com/davidaurelio))
+- TextInput add back propTypes ([e6a8dca](https://github.com/facebook/react-native/commit/e6a8dca) by [@TheSavior](https://github.com/TheSavior))
+- Add systrace support in Fabric C++ ([7b04f6a](https://github.com/facebook/react-native/commit/7b04f6a) by [@mdvacca](https://github.com/mdvacca))
+- Adds support for `publicPath` to enable serving assets from different locations. (#299) ([0b31496](https://github.com/facebook/react-native/commit/0b31496) by [@gdborton](https://github.com/gdborton))
+- Add copyright header into ContextUtils class ([fba7c1e](https://github.com/facebook/react-native/commit/fba7c1e) by [@mdvacca](https://github.com/mdvacca))
+- Add another guard to lazilyLoadView ([d7865eb](https://github.com/facebook/react-native/commit/d7865eb) by [@mmmulani](https://github.com/mmmulani))
+- Add a marker to indicate when JS thread priority is lowered ([d4aef08](https://github.com/facebook/react-native/commit/d4aef08) by [@axe-fb](https://github.com/axe-fb))
+- added functionality using which child node can tell parent node to use it as a reference baseline ([6eb5bd3](https://github.com/facebook/react-native/commit/6eb5bd3) by [@SidharthGuglani](https://github.com/SidharthGuglani))
+- Add bounce method to TouchableBounce ([383ea99](https://github.com/facebook/react-native/commit/383ea99))
+- Add test for WritableNativeMap ([17ced57](https://github.com/facebook/react-native/commit/17ced57) by [@ayc1](https://github.com/ayc1))
+- Add getUndefined() method to obtain the undefined value ([3337a1d](https://github.com/facebook/react-native/commit/3337a1d) by [@amir-shalem](https://github.com/amir-shalem))
+- Add missing Metro Config ([e0ea58e](https://github.com/facebook/react-native/commit/e0ea58e) by [@grabbou](https://github.com/grabbou))
+
+#### Android specific
+
+#### iOS specific
+
+- iOS: add moduleForNameForcedLoad: to lookup modules by name and force load them ([d7a0c44](https://github.com/facebook/react-native/commit/d7a0c44) by [@fkgozali](https://github.com/fkgozali))
+
+### Changed
+
+- Changed front-facing camera so that it shows consistent image during capture and preview ([4aeea4d](https://github.com/facebook/react-native/commit/4aeea4d))
+- then to thenValue changes to allow deletion of value-taking continuation form of then ([1f32b5d](https://github.com/facebook/react-native/commit/1f32b5d) by [@LeeHowes](https://github.com/LeeHowes))
+
+#### Android specific
+
+#### iOS specific
+
+### Deprecated
+
+#### Android specific
+
+#### iOS specific
+
+- Fabric: Removing deprecated leftovers from RCTScheduler and RCTSurfacePresenter ([e88db99](https://github.com/facebook/react-native/commit/e88db99) by [@shergin](https://github.com/shergin))
+
+### Removed
+
+- Fix checkout_code: Remove Metro cache check (#21998) ([bb93abf](https://github.com/facebook/react-native/commit/bb93abf) by [@hramos](https://github.com/hramos))
+- Remove view managers from @ReactModuleList ([c91a2b3](https://github.com/facebook/react-native/commit/c91a2b3) by [@axe-fb](https://github.com/axe-fb))
+- Remove var in Libraries/Component (#22020) ([a06c0da](https://github.com/facebook/react-native/commit/a06c0da) by [@nd-02110114](https://github.com/nd-02110114))
+- Remove var in RNTester (#22017) ([7a9d860](https://github.com/facebook/react-native/commit/7a9d860) by [@nd-02110114](https://github.com/nd-02110114))
+- Remove var in RNTester (#22019) ([a21b8b7](https://github.com/facebook/react-native/commit/a21b8b7) by [@nd-02110114](https://github.com/nd-02110114))
+- Remove var in RNTester (#22015) ([2648f47](https://github.com/facebook/react-native/commit/2648f47) by [@nd-02110114](https://github.com/nd-02110114))
+- Remove var in RNTester (#22018) ([6b29b90](https://github.com/facebook/react-native/commit/6b29b90) by [@nd-02110114](https://github.com/nd-02110114))
+- Remove var in RNTester (#22016) ([791fa2d](https://github.com/facebook/react-native/commit/791fa2d) by [@nd-02110114](https://github.com/nd-02110114))
+- Remove var in RNTester (#22014) ([5af5774](https://github.com/facebook/react-native/commit/5af5774) by [@nd-02110114](https://github.com/nd-02110114))
+- Remove var in RNTester (#22013) ([811a99c](https://github.com/facebook/react-native/commit/811a99c) by [@nd-02110114](https://github.com/nd-02110114))
+- Remove undefined value on init cli command (#22045) ([58732a8](https://github.com/facebook/react-native/commit/58732a8) by [@ignacioola](https://github.com/ignacioola))
+- Remove createReactClass from SwipeableRow (#21876) ([14e1628](https://github.com/facebook/react-native/commit/14e1628) by [@exced](https://github.com/exced))
+- Remove var in Libraries/emitter/* (#22087) ([cf70870](https://github.com/facebook/react-native/commit/cf70870) by [@Tnarita0000](https://github.com/Tnarita0000))
+- Remove flow-strict from polyfillPromise (#22048) ([01b7c48](https://github.com/facebook/react-native/commit/01b7c48) by [@empyrical](https://github.com/empyrical))
+- Remove unused variables (#22097) ([6ebee18](https://github.com/facebook/react-native/commit/6ebee18) by [@ignacioola](https://github.com/ignacioola))
+- Remove var in Libraries/vendor/core/merge.js (#22108) ([3f069f3](https://github.com/facebook/react-native/commit/3f069f3) by [@yushimatenjin](https://github.com/yushimatenjin))
+- Remove var in Libraries/Utilities/MatrixMath.js (#22111) ([368518e](https://github.com/facebook/react-native/commit/368518e) by [@ggtmtmgg](https://github.com/ggtmtmgg))
+- Remove var in Libraries/Utilities/buildStyleInterpolator.js (#22112) ([b01bf06](https://github.com/facebook/react-native/commit/b01bf06) by [@mottox2](https://github.com/mottox2))
+- Remove unused styles (#22083) ([ffd7195](https://github.com/facebook/react-native/commit/ffd7195) by [@vcalvello](https://github.com/vcalvello))
+- Fix `no-shadow` eslint warning & remove var (#22124) ([f8040ed](https://github.com/facebook/react-native/commit/f8040ed) by [@Tnarita0000](https://github.com/Tnarita0000))
+- Removed unnecessary code in Libraries/Text/Text.js (#22132) ([0d4f627](https://github.com/facebook/react-native/commit/0d4f627) by [@ifsnow](https://github.com/ifsnow))
+- Remove var in /Libralies/Experimental/IncrementalPresenter.js (#22144) ([cc90c20](https://github.com/facebook/react-native/commit/cc90c20) by [@soyanakagawa](https://github.com/soyanakagawa))
+- Remove var in Libraries/Utilities/deepFreezeAndThrowOnMutationInDev.js (#22126) ([0a39cda](https://github.com/facebook/react-native/commit/0a39cda) by [@nabettu](https://github.com/nabettu))
+- TextInput: Remove PropTypes, NativeMethodsMixin; Convert to ES6 class (#21885) ([70e9e26](https://github.com/facebook/react-native/commit/70e9e26) by [@empyrical](https://github.com/empyrical))
+- Remove unused loads from xplat. ([9b781bd](https://github.com/facebook/react-native/commit/9b781bd) by [@ttsugriy](https://github.com/ttsugriy))
+- Remove dynamic exception specification in RN MethodCall.h/cpp ([5b71408](https://github.com/facebook/react-native/commit/5b71408) by [@yiding](https://github.com/yiding))
+- NIT remove unnecessary cast in measure ([2dbe769](https://github.com/facebook/react-native/commit/2dbe769) by [@mdvacca](https://github.com/mdvacca))
+- Remove useless additionnal blur call (#22156) ([27cfba2](https://github.com/facebook/react-native/commit/27cfba2))
+- `YGNodeComputeFlexBasisForChildren`: remove output param ([8f283b9](https://github.com/facebook/react-native/commit/8f283b9) by [@davidaurelio](https://github.com/davidaurelio))
+
+#### Android specific
+
+- Remove AndroidManifest.xml from UIManager (#22044) ([7f79254](https://github.com/facebook/react-native/commit/7f79254) by [@radeno](https://github.com/radeno))
+- Remove createReactClass from ProgressBarAndroidExample (#21874) ([81e5d64](https://github.com/facebook/react-native/commit/81e5d64) by [@exced](https://github.com/exced))
+- remove var in ReactAndroid/src/androidTest (#22136) ([0beb1cc](https://github.com/facebook/react-native/commit/0beb1cc) by [@nd-02110114](https://github.com/nd-02110114))
+- remove var in ReactAndroid/src/androidTest. (#22137) ([6f781d9](https://github.com/facebook/react-native/commit/6f781d9) by [@nd-02110114](https://github.com/nd-02110114))
+- Remove var in ReactAndroid/src/androidTest (#22135) ([9d13233](https://github.com/facebook/react-native/commit/9d13233) by [@nd-02110114](https://github.com/nd-02110114))
+- remove createReactClass from ToolbarAndroid/ToolbarAndroid.android.js (#21893) ([147c38a](https://github.com/facebook/react-native/commit/147c38a) by [@nd-02110114](https://github.com/nd-02110114))
+
+#### iOS specific
+
+- remove createReactClass from SegmentedControlIOS.ios.js (#21888) ([0ea95e7](https://github.com/facebook/react-native/commit/0ea95e7) by [@nd-02110114](https://github.com/nd-02110114))
+
+### Fixed
+
+- Fix View/Text displayName (#21950) ([7a914fc](https://github.com/facebook/react-native/commit/7a914fc) by [@rajivshah3](https://github.com/rajivshah3))
+- Fix the lazily LaodedView to avoid weird naming issues ([cae2534](https://github.com/facebook/react-native/commit/cae2534) by [@spredolac](https://github.com/spredolac))
+- Fix relayout of inline views (#21968) ([798517a](https://github.com/facebook/react-native/commit/798517a) by [@rigdern](https://github.com/rigdern))
+- Fix ReactRootView mount/unmount race condition ([309f85a](https://github.com/facebook/react-native/commit/309f85a) by [@ayc1](https://github.com/ayc1))
+- Fix linting issues (#22062) ([ae8ec39](https://github.com/facebook/react-native/commit/ae8ec39) by [@ignacioola](https://github.com/ignacioola))
+- Fix IllegalStateException when dismissing DialogManager ([38e01a2](https://github.com/facebook/react-native/commit/38e01a2) by [@mdvacca](https://github.com/mdvacca))
+- Fix duplicate function declaration in WebSockets (#22098) ([b03b9d5](https://github.com/facebook/react-native/commit/b03b9d5) by [@ignacioola](https://github.com/ignacioola))
+- Fix rn-cli linting issues (#22099) ([7b10a02](https://github.com/facebook/react-native/commit/7b10a02) by [@ignacioola](https://github.com/ignacioola))
+- TouchEventEmitter: Fix assignment of Y coordinates (#22160) ([6b6a27c](https://github.com/facebook/react-native/commit/6b6a27c) by [@empyrical](https://github.com/empyrical))
+- Fix inline styles in IntegrationTests (#22165) ([1d62e94](https://github.com/facebook/react-native/commit/1d62e94) by [@ignacioola](https://github.com/ignacioola))
+- Fix inline styles warning in Libraries (#22161) ([41eb2da](https://github.com/facebook/react-native/commit/41eb2da) by [@ignacioola](https://github.com/ignacioola))
+- Fix build error caused by -Werror=class-memaccess (#823) ([31439f8](https://github.com/facebook/react-native/commit/31439f8) by [@hooddanielc](https://github.com/hooddanielc))
+- Fix IllegalArgumentException when dismissing ReactModalHostView ([e57ad4e](https://github.com/facebook/react-native/commit/e57ad4e) by [@mdvacca](https://github.com/mdvacca))
+- Fix internal types on top of TextInput refactor ([ad7d8f8](https://github.com/facebook/react-native/commit/ad7d8f8) by [@TheSavior](https://github.com/TheSavior))
+- Fix inline styles eslint warnings for examples (#22123) ([7b3c91e](https://github.com/facebook/react-native/commit/7b3c91e) by [@ignacioola](https://github.com/ignacioola))
+- Fix ReactInstanceManager deadlock ([df7e8c6](https://github.com/facebook/react-native/commit/df7e8c6) by [@ayc1](https://github.com/ayc1))
+- Fix ReactRootView attachRootView race condition ([be282b5](https://github.com/facebook/react-native/commit/be282b5) by [@ayc1](https://github.com/ayc1))
+- UITemplateProcessor: Fix case of include path (#22239) ([0436bfc](https://github.com/facebook/react-native/commit/0436bfc) by [@empyrical](https://github.com/empyrical))
+- Fix regression in StyleSheet.setStyleAttributePreprocessor (#22262) ([0408533](https://github.com/facebook/react-native/commit/0408533) by [@brentvatne](https://github.com/brentvatne))
+- Fix crash when releasing RN views ([83405ff](https://github.com/facebook/react-native/commit/83405ff) by [@ayc1](https://github.com/ayc1))
+- Fix crash when removing root nodes ([b649fa9](https://github.com/facebook/react-native/commit/b649fa9) by [@ayc1](https://github.com/ayc1))
+- Fix React Native AsyncMode and DevTools ([aacb06c](https://github.com/facebook/react-native/commit/aacb06c) by [@bvaughn](https://github.com/bvaughn))
+- reapply TextInput es6 conversion with fixes, attemps to fix ([9ea1295](https://github.com/facebook/react-native/commit/9ea1295) by [@sahrens](https://github.com/sahrens))
+- Back out "reapply TextInput es6 conversion with fixes, attemps to fix" ([6f34bc4](https://github.com/facebook/react-native/commit/6f34bc4) by [@sahrens](https://github.com/sahrens))
+- Fix scrolling with multiple fingers in RN Fabric scrollView ([d3a7325](https://github.com/facebook/react-native/commit/d3a7325) by [@mdvacca](https://github.com/mdvacca))
+- Fix padding for Text Views in Fabric ([7b2030b](https://github.com/facebook/react-native/commit/7b2030b) by [@mdvacca](https://github.com/mdvacca))
+- Replace global.alert use to fix eslint warnings (#22184) ([55994f5](https://github.com/facebook/react-native/commit/55994f5) by [@vcalvello](https://github.com/vcalvello))
+- Fix jsc regression.Fixes #22274 (#22293) ([f22473e](https://github.com/facebook/react-native/commit/f22473e) by [@gengjiawen](https://github.com/gengjiawen))
+- Fix allocating Buffer in early commit (#22379) ([02a3517](https://github.com/facebook/react-native/commit/02a3517) by [@radeno](https://github.com/radeno))
+- Fabric: Fixed `AttributedString::operator==` ([ecc7012](https://github.com/facebook/react-native/commit/ecc7012) by [@shergin](https://github.com/shergin))
+- Fix jsc regression.Fixes #22274 (#22293) ([d4d457b](https://github.com/facebook/react-native/commit/d4d457b) by [@gengjiawen](https://github.com/gengjiawen))
+
+#### Android specific
+
+- fix android ci (#21913) ([99632e1](https://github.com/facebook/react-native/commit/99632e1) by [@dulmandakh](https://github.com/dulmandakh))
+- Fix incorrect merged asset path with flavor for Android Gradle Plugin 3.2. (#21782) ([e90319e](https://github.com/facebook/react-native/commit/e90319e) by [@yatatsu](https://github.com/yatatsu))
+- bump buck to 2018.10.29.01. fixes Android CI (#22049) ([b40e23d](https://github.com/facebook/react-native/commit/b40e23d) by [@dulmandakh](https://github.com/dulmandakh))
+- Fix the comment for getSize in Image.android.js (#22092) ([a09aca5](https://github.com/facebook/react-native/commit/a09aca5) by [@wd39](https://github.com/wd39))
+- Fix inline styles in ReactAndroid (#22166) ([8b46c9a](https://github.com/facebook/react-native/commit/8b46c9a) by [@ignacioola](https://github.com/ignacioola))
+- Fix args passed when measuring Androidwitch ([54e8d6c](https://github.com/facebook/react-native/commit/54e8d6c) by [@axe-fb](https://github.com/axe-fb))
+- Fix Shimmer in Fabric Android ([28278e1](https://github.com/facebook/react-native/commit/28278e1) by [@mdvacca](https://github.com/mdvacca))
+- Fixed HTTP connection timeout on Android (#22164) ([a508134](https://github.com/facebook/react-native/commit/a508134))
+- Fix compatibility issue for android 16 device.Fixes #22294 (#22295) ([5939d07](https://github.com/facebook/react-native/commit/5939d07) by [@gengjiawen](https://github.com/gengjiawen))
+
+#### iOS specific
+
+- Fix LazilyLoadView lookup so that it can drop RCT prefixes. ([6534718](https://github.com/facebook/react-native/commit/6534718) by [@dshahidehpour](https://github.com/dshahidehpour))
+- Fabric: Fixed bug in RCTSurfaceTouchHandler::PointerHasher ([1de79e1](https://github.com/facebook/react-native/commit/1de79e1) by [@shergin](https://github.com/shergin))
+
+### Security
+
+#### Android specific
+
+#### iOS specific
+
+### Unknown
+
+- Replaced default constructors with member assignments ([d743989](https://github.com/facebook/react-native/commit/d743989) by [@SidharthGuglani](https://github.com/SidharthGuglani))
+- @allow-large-files flow 0.84 xplat deploy ([11552a7](https://github.com/facebook/react-native/commit/11552a7) by [@avikchaudhuri](https://github.com/avikchaudhuri))
+- Upgrade jest to v24.0.0-alpha.2 ([1b4fd64](https://github.com/facebook/react-native/commit/1b4fd64) by [@rafeca](https://github.com/rafeca))
+- Bump metro@0.48.2 ([f867db3](https://github.com/facebook/react-native/commit/f867db3) by [@rafeca](https://github.com/rafeca))
+- Refactor shutdown so that debug asserts can pass ([2a44054](https://github.com/facebook/react-native/commit/2a44054) by [@mhorowitz](https://github.com/mhorowitz))
+- Make SystemJSC on macosx actually use the system JSC framework ([5d38264](https://github.com/facebook/react-native/commit/5d38264) by [@mhorowitz](https://github.com/mhorowitz))
+- Modularize InitializeCore ([df2eaa9](https://github.com/facebook/react-native/commit/df2eaa9) by [@ejanzer](https://github.com/ejanzer))
+- Bump metro@0.48.3 ([8888295](https://github.com/facebook/react-native/commit/8888295) by [@rafeca](https://github.com/rafeca))
+- Update the Delta/HMR format ([1eedf05](https://github.com/facebook/react-native/commit/1eedf05) by [@alexkirsz](https://github.com/alexkirsz))
+- Fabric: New UIManager registration process (beginning) ([8f04699](https://github.com/facebook/react-native/commit/8f04699) by [@shergin](https://github.com/shergin))
+- Bump metro@0.49.0 ([31bb551](https://github.com/facebook/react-native/commit/31bb551) by [@alexkirsz](https://github.com/alexkirsz))
+- Bump fbjs-scripts to ^1.0.0 (#21880) ([cdbf719](https://github.com/facebook/react-native/commit/cdbf719) by [@jmheik](https://github.com/jmheik))
+- Fabric: Removing accidental unnecessary BUCK dep ([18423fe](https://github.com/facebook/react-native/commit/18423fe) by [@shergin](https://github.com/shergin))
+- Prepend passed sourceExts to default ones and pass them to metro (#21855) ([ce86080](https://github.com/facebook/react-native/commit/ce86080) by [@elyalvarado](https://github.com/elyalvarado))
+- Wrap measureLayoutRelativeToContainingList in try-catch to mitigate crash ([5803772](https://github.com/facebook/react-native/commit/5803772))
+- RN: Missing Copyright Headers ([a689711](https://github.com/facebook/react-native/commit/a689711) by [@yungsters](https://github.com/yungsters))
+- Use fb_native_wrapper for all targets ([c147073](https://github.com/facebook/react-native/commit/c147073) by [@scottrice](https://github.com/scottrice))
+- gradle repo priority (#22041) ([2a349f8](https://github.com/facebook/react-native/commit/2a349f8) by [@dulmandakh](https://github.com/dulmandakh))
+- jest: upgrade to 24.0.0-alpha.4 ([66aba09](https://github.com/facebook/react-native/commit/66aba09) by [@rubennorte](https://github.com/rubennorte))
+- Flow strictifying AdsManagerAudienceImages.js ([136dfc8](https://github.com/facebook/react-native/commit/136dfc8))
+- BUCKFORMAT: apply on all of fbsource ([2b603fd](https://github.com/facebook/react-native/commit/2b603fd) by [@luciang](https://github.com/luciang))
+- Improved Types ([17fd1bc](https://github.com/facebook/react-native/commit/17fd1bc) by [@nmn](https://github.com/nmn))
+- Modified declarations from vars to const (#22070) ([efc9506](https://github.com/facebook/react-native/commit/efc9506) by [@fernando-sendMail](https://github.com/fernando-sendMail))
+- Deploy Flow v0.85 to xplat/js ([adc8a33](https://github.com/facebook/react-native/commit/adc8a33) by [@samwgoldman](https://github.com/samwgoldman))
+- CheckBox: Convert NativeMethodsMixin to forwardedRef, convert to class (#21585) ([28de61e](https://github.com/facebook/react-native/commit/28de61e) by [@empyrical](https://github.com/empyrical))
+- more lint auto fixing ([10d41d4](https://github.com/facebook/react-native/commit/10d41d4) by [@sahrens](https://github.com/sahrens))
+- lint autofixes ([2486d12](https://github.com/facebook/react-native/commit/2486d12) by [@sahrens](https://github.com/sahrens))
+- React sync for revisions 4773fdf...bf9fadf ([8b275a8](https://github.com/facebook/react-native/commit/8b275a8) by [@yungsters](https://github.com/yungsters))
+- Trivial cleanup in ReactRootView ([83c7303](https://github.com/facebook/react-native/commit/83c7303) by [@mdvacca](https://github.com/mdvacca))
+- Improving Modal `visible` prop check to handle undefined and null (#22072) ([cc13a73](https://github.com/facebook/react-native/commit/cc13a73) by [@MateusAndrade](https://github.com/MateusAndrade))
+- Flow strict ScrollViewMock (#22103) ([499c195](https://github.com/facebook/react-native/commit/499c195) by [@exced](https://github.com/exced))
+- RN: Revert React 16.6 Sync ([6448f4e](https://github.com/facebook/react-native/commit/6448f4e) by [@yungsters](https://github.com/yungsters))
+- Replace var to const in Libraries/Utilities/deepFreezeAndThrowOnMutationInDev-test.js (#22110) ([e835c6d](https://github.com/facebook/react-native/commit/e835c6d) by [@watanabeyu](https://github.com/watanabeyu))
+- Make PR template consistent with Changelog (#22117) ([ce18036](https://github.com/facebook/react-native/commit/ce18036) by [@turnrye](https://github.com/turnrye))
+- Turn Flow strict mode on for KeyBoard (#22114) ([fbc5a4f](https://github.com/facebook/react-native/commit/fbc5a4f) by [@nd-02110114](https://github.com/nd-02110114))
+- Increase cache and file size limits ([3a98318](https://github.com/facebook/react-native/commit/3a98318) by [@fatalsun](https://github.com/fatalsun))
+- Disallow Optional::operator=(nullptr_t) unless T is a pointer ([79712c3](https://github.com/facebook/react-native/commit/79712c3) by [@chadaustin](https://github.com/chadaustin))
+- Flow type RefreshControl (#22119) ([84c5416](https://github.com/facebook/react-native/commit/84c5416) by [@exced](https://github.com/exced))
+- Flow strict StaticContainer (#22121) ([6476151](https://github.com/facebook/react-native/commit/6476151) by [@exced](https://github.com/exced))
+- Flow strict DrawerLayout (#22152) ([f9050e0](https://github.com/facebook/react-native/commit/f9050e0) by [@flowkraD](https://github.com/flowkraD))
+- Update and expand bytecode spec ([aab0160](https://github.com/facebook/react-native/commit/aab0160) by [@sahrens](https://github.com/sahrens))
+- Cleanup a bunch of the JS stuff ([ccc8a42](https://github.com/facebook/react-native/commit/ccc8a42) by [@sahrens](https://github.com/sahrens))
+- rename ReactBytecode -> UITemplate ([ac9e09d](https://github.com/facebook/react-native/commit/ac9e09d) by [@sahrens](https://github.com/sahrens))
+- Fabric: Using RuntimeExecutor in concrete EventBeats ([98685e8](https://github.com/facebook/react-native/commit/98685e8) by [@shergin](https://github.com/shergin))
+- Fabric: Explicit clearing std::vector after moving from it ([3110a67](https://github.com/facebook/react-native/commit/3110a67) by [@shergin](https://github.com/shergin))
+- Fabric: Making jsi::Runtime a part of EventBeat and EventPipe ([df4521e](https://github.com/facebook/react-native/commit/df4521e) by [@shergin](https://github.com/shergin))
+- Fabric: Some helper classes and functions were moved to uimanager/primitives ([ee50618](https://github.com/facebook/react-native/commit/ee50618) by [@shergin](https://github.com/shergin))
+- Fabric: Introduced ComponentDescriptorRegistry::at() method family ([6c5b8c6](https://github.com/facebook/react-native/commit/6c5b8c6) by [@shergin](https://github.com/shergin))
+- Fabric: A bunch of functions for converting JSI primitives to Fabric and vice-versa ([b9f9f32](https://github.com/facebook/react-native/commit/b9f9f32) by [@shergin](https://github.com/shergin))
+- Fabric: Introducing UIManagerBinding, a replacement for JSIFabricUIManager ([18d8c48](https://github.com/facebook/react-native/commit/18d8c48) by [@shergin](https://github.com/shergin))
+- Fabric: Making some picky compilers happy ([786df48](https://github.com/facebook/react-native/commit/786df48) by [@shergin](https://github.com/shergin))
+- Types for BackHandler ([7dd2b0b](https://github.com/facebook/react-native/commit/7dd2b0b) by [@nmn](https://github.com/nmn))
+- Flow strict Slider (#22127) ([c03fc40](https://github.com/facebook/react-native/commit/c03fc40) by [@exced](https://github.com/exced))
+- Flow strict TouchableOpacity (#22146) ([69213ee](https://github.com/facebook/react-native/commit/69213ee) by [@exced](https://github.com/exced))
+- Allow overriding Metro server host with a system prop ([e02a154](https://github.com/facebook/react-native/commit/e02a154) by [@stepanhruda](https://github.com/stepanhruda))
+- console polyfill: pass unsupported messages to original console ([bccc454](https://github.com/facebook/react-native/commit/bccc454) by [@Hypuk](https://github.com/Hypuk))
+- Fixing TextInput related jest tests ([7e818ae](https://github.com/facebook/react-native/commit/7e818ae) by [@TheSavior](https://github.com/TheSavior))
+- React sync for revisions 4773fdf...3ff2c7c ([0cb59b5](https://github.com/facebook/react-native/commit/0cb59b5) by [@yungsters](https://github.com/yungsters))
+- Enable unused-private-field warning (#13450) ([50e9b0f](https://github.com/facebook/react-native/commit/50e9b0f))
+- Update oss lockfile ([8d5d144](https://github.com/facebook/react-native/commit/8d5d144) by [@ejanzer](https://github.com/ejanzer))
+- Replace String with constants for Module names in Fb4aCoreInfraPackage ([fe49809](https://github.com/facebook/react-native/commit/fe49809) by [@axe-fb](https://github.com/axe-fb))
+- Give eagerly loaded modules precedent over lazily loaded one. ([81b74ec](https://github.com/facebook/react-native/commit/81b74ec) by [@dshahidehpour](https://github.com/dshahidehpour))
+- Stop mounting of Views when there is an exception in Native ([8329c10](https://github.com/facebook/react-native/commit/8329c10) by [@mdvacca](https://github.com/mdvacca))
+- Force navigation to use root tag ([fe7eb61](https://github.com/facebook/react-native/commit/fe7eb61) by [@mdvacca](https://github.com/mdvacca))
+- Expose rootTag / surfaceId as part of schedulerDidRequestPreliminaryViewAllocation method ([2b01da0](https://github.com/facebook/react-native/commit/2b01da0) by [@mdvacca](https://github.com/mdvacca))
+- Switch to synchronous strategy for unprotect ([bf2500e](https://github.com/facebook/react-native/commit/bf2500e) by [@mhorowitz](https://github.com/mhorowitz))
+- Back out TextInput es6 conversion ([f386f83](https://github.com/facebook/react-native/commit/f386f83) by [@TheSavior](https://github.com/TheSavior))
+- `Removing UIManager.measureViewsInRect()` ([d623679](https://github.com/facebook/react-native/commit/d623679) by [@shergin](https://github.com/shergin))
+- Turn off static linking for cxxreact:bridge ([918a7d5](https://github.com/facebook/react-native/commit/918a7d5) by [@christolliday](https://github.com/christolliday))
+- Use static constants instead of strings when referring to View Managers and Native Modules ([803e993](https://github.com/facebook/react-native/commit/803e993) by [@axe-fb](https://github.com/axe-fb))
+- Fabric: Making EventEmitter::setEnabled additive ([d2408dd](https://github.com/facebook/react-native/commit/d2408dd) by [@shergin](https://github.com/shergin))
+- Use nativeQPLTimestamp for InitializeCore marker point ([1850906](https://github.com/facebook/react-native/commit/1850906) by [@ejanzer](https://github.com/ejanzer))
+- Only include ServerHost constant in debug builds ([2bf0d54](https://github.com/facebook/react-native/commit/2bf0d54) by [@stepanhruda](https://github.com/stepanhruda))
+- Reset module registry flag when resetting React Instance ([188cbb0](https://github.com/facebook/react-native/commit/188cbb0) by [@PeteTheHeat](https://github.com/PeteTheHeat))
+- Fabric: Codemod: All `<fabric/...` includes were renamed to `<react/...` ([94d49e5](https://github.com/facebook/react-native/commit/94d49e5) by [@shergin](https://github.com/shergin))
+- Avoid pre-allocating views for non-layoutable shadow nodes ([33b9661](https://github.com/facebook/react-native/commit/33b9661) by [@mdvacca](https://github.com/mdvacca))
+- DeltaPatcher: better support for the new Delta format ([bea57d8](https://github.com/facebook/react-native/commit/bea57d8) by [@alexkirsz](https://github.com/alexkirsz))
+- Clearer HMR error messages ([c787866](https://github.com/facebook/react-native/commit/c787866) by [@alexkirsz](https://github.com/alexkirsz))
+- NetInfo: try to solve crash with releasing _firstTimeReachability ([eebc8e2](https://github.com/facebook/react-native/commit/eebc8e2) by [@mmmulani](https://github.com/mmmulani))
+- Bump metro@0.49.1 ([de60e86](https://github.com/facebook/react-native/commit/de60e86) by [@rafeca](https://github.com/rafeca))
+- Bump metro@0.49.1 ([a525941](https://github.com/facebook/react-native/commit/a525941) by [@rafeca](https://github.com/rafeca))
+- Update React Native OSS Yarn and Gradle caches ([11d4512](https://github.com/facebook/react-native/commit/11d4512) by [@hramos](https://github.com/hramos))
+- Allow CxxModules to implement methods with two callbacks (#21586) ([8826d8b](https://github.com/facebook/react-native/commit/8826d8b))
+- Guard Platform.isTesting under __DEV__ ([339d9d3](https://github.com/facebook/react-native/commit/339d9d3) by [@fkgozali](https://github.com/fkgozali))
+- Dispatch events asynchronously ([e02a24b](https://github.com/facebook/react-native/commit/e02a24b) by [@mdvacca](https://github.com/mdvacca))
+- nullptr -> folly::none in fbobjc/xplat ([56a416e](https://github.com/facebook/react-native/commit/56a416e) by [@chadaustin](https://github.com/chadaustin))
+- Upgrade jest to v24.0.0-alpha.6 ([06c13b3](https://github.com/facebook/react-native/commit/06c13b3) by [@rafeca](https://github.com/rafeca))
+- Flow v0.86.0 in xplat/js [3/n] ([43ad3a6](https://github.com/facebook/react-native/commit/43ad3a6) by [@panagosg7](https://github.com/panagosg7))
+- Revert D12994045: Flow v0.86.0 in xplat/js [3/n] ([984eef8](https://github.com/facebook/react-native/commit/984eef8))
+- Back to yearless format for MIT license ([619de16](https://github.com/facebook/react-native/commit/619de16) by [@davidaurelio](https://github.com/davidaurelio))
+- JS: Switch from `new Buffer` to `Buffer.from` ([d9c2cda](https://github.com/facebook/react-native/commit/d9c2cda) by [@yungsters](https://github.com/yungsters))
+- resizeMode applies to Image.defaultSource (#22216) ([673ef39](https://github.com/facebook/react-native/commit/673ef39) by [@dulmandakh](https://github.com/dulmandakh))
+- New TextInput-test that would have prevented S168585 ([a009406](https://github.com/facebook/react-native/commit/a009406) by [@sahrens](https://github.com/sahrens))
+- CxxReact: Silence 'unused lambda capture' warnings in open-source (#22240) ([0c05409](https://github.com/facebook/react-native/commit/0c05409) by [@empyrical](https://github.com/empyrical))
+- Flow v0.86.0 in xplat/js ([8fb228f](https://github.com/facebook/react-native/commit/8fb228f) by [@panagosg7](https://github.com/panagosg7))
+- create api to allow clients to present a client credential for authentication (#22316) ([8911353](https://github.com/facebook/react-native/commit/8911353) by [@mjhu](https://github.com/mjhu))
+- Cleanup old Fabric methods from ReactShadowNodeImpl ([74f6575](https://github.com/facebook/react-native/commit/74f6575) by [@mdvacca](https://github.com/mdvacca))
+- Change font size default from 12 to 14 ([dcf72ff](https://github.com/facebook/react-native/commit/dcf72ff) by [@mdvacca](https://github.com/mdvacca))
+- Implement layout constraint when measuring text ([8367fa9](https://github.com/facebook/react-native/commit/8367fa9) by [@mdvacca](https://github.com/mdvacca))
+- Surface: Using screen size as a default maximum size of Fabric Surface ([346c9d5](https://github.com/facebook/react-native/commit/346c9d5) by [@shergin](https://github.com/shergin))
+- Rename requiresMainThreadSetup -> requiresMainQueueSetup in code comment (#22328) ([1fa56a0](https://github.com/facebook/react-native/commit/1fa56a0) by [@karanjthakkar](https://github.com/karanjthakkar))
+- Flow strict TouchableBounce (#22197) ([45c5183](https://github.com/facebook/react-native/commit/45c5183) by [@exced](https://github.com/exced))
+- Flow strict TextProps (#22122) ([7927497](https://github.com/facebook/react-native/commit/7927497) by [@exced](https://github.com/exced))
+- Flow strict TextInput (#22250) ([35a65cd](https://github.com/facebook/react-native/commit/35a65cd) by [@exced](https://github.com/exced))
+- Improve Flow types ([da0b139](https://github.com/facebook/react-native/commit/da0b139) by [@RSNara](https://github.com/RSNara))
+- Flow strict TouchableHighlight (#22173) ([a97d104](https://github.com/facebook/react-native/commit/a97d104) by [@exced](https://github.com/exced))
+- Flow strict ScrollResponder (#22181) ([fb4825a](https://github.com/facebook/react-native/commit/fb4825a) by [@saitoxu](https://github.com/saitoxu))
+- Flow strict StatusBar (#22282) ([6fa997d](https://github.com/facebook/react-native/commit/6fa997d) by [@watanabeyu](https://github.com/watanabeyu))
+- Fabric: ShadowNode::backtrackAncestors(...) ([3ecf4ea](https://github.com/facebook/react-native/commit/3ecf4ea) by [@shergin](https://github.com/shergin))
+- Fabric: LayoutableShadowNode::getRelativeLayoutMetrics() ([9eec2c3](https://github.com/facebook/react-native/commit/9eec2c3) by [@shergin](https://github.com/shergin))
+- Fabric: Getting rid of leftovers in Scheduler ([71208f0](https://github.com/facebook/react-native/commit/71208f0) by [@shergin](https://github.com/shergin))
+- Fabric: Introducing ShadowTreeRegistry ([b4fa1fa](https://github.com/facebook/react-native/commit/b4fa1fa) by [@shergin](https://github.com/shergin))
+- Fabric: Sharing a pointer to ShadowTreeRegister with UIManager ([f8be867](https://github.com/facebook/react-native/commit/f8be867) by [@shergin](https://github.com/shergin))
+- Fabric: `UIManager::getRelativeLayoutMetrics` ([7e57755](https://github.com/facebook/react-native/commit/7e57755) by [@shergin](https://github.com/shergin))
+- Fabric: `ParagraphShadowNode::updateLocalDataIfNeeded()` ([9c96133](https://github.com/facebook/react-native/commit/9c96133) by [@shergin](https://github.com/shergin))
+- Pass primitives by value ([f8ff6bd](https://github.com/facebook/react-native/commit/f8ff6bd) by [@davidaurelio](https://github.com/davidaurelio))
+- Dealloc JNI implementation experiment ([64d162e](https://github.com/facebook/react-native/commit/64d162e) by [@davidaurelio](https://github.com/davidaurelio))
+- Pass enums by value ([c34ad17](https://github.com/facebook/react-native/commit/c34ad17) by [@davidaurelio](https://github.com/davidaurelio))
+- Merge branch 'master' into 0.58-stable ([696bd89](https://github.com/facebook/react-native/commit/696bd89) by [@grabbou](https://github.com/grabbou))
+- Revert "Merge branch 'master' into 0.58-stable" ([b864e7e](https://github.com/facebook/react-native/commit/b864e7e) by [@grabbou](https://github.com/grabbou))
+- Make Metro untyped instead of ignored to let Metro-config resolve type annotations ([26bdd5b](https://github.com/facebook/react-native/commit/26bdd5b) by [@grabbou](https://github.com/grabbou))
+
+#### Android Unknown
+
+- Upgrade folly to v2018.10.22.00 for Android (#21977) ([a316dc6](https://github.com/facebook/react-native/commit/a316dc6) by [@Kudo](https://github.com/Kudo))
+- RN: Copyright Header for `ReactInstanceManagerTest.java` ([4d16a0e](https://github.com/facebook/react-native/commit/4d16a0e) by [@yungsters](https://github.com/yungsters))
+- Flow strict in ViewPagerAndroid.android.js (#22134) ([636e146](https://github.com/facebook/react-native/commit/636e146) by [@nd-02110114](https://github.com/nd-02110114))
+- mostly working on Android + OTA ([7b5277b](https://github.com/facebook/react-native/commit/7b5277b) by [@sahrens](https://github.com/sahrens))
+- Temporary disable AndroidSwipeRefreshLayout ([cd5009f](https://github.com/facebook/react-native/commit/cd5009f) by [@mdvacca](https://github.com/mdvacca))
+- Refactor 'induce' of events in Fabric Android ([95b21b4](https://github.com/facebook/react-native/commit/95b21b4) by [@mdvacca](https://github.com/mdvacca))
+- Moved androidID constant to a method ([9f9390d](https://github.com/facebook/react-native/commit/9f9390d) by [@axe-fb](https://github.com/axe-fb))
+- Android: Close websocket properly when remote server initiates close (#22248) ([2e465bc](https://github.com/facebook/react-native/commit/2e465bc) by [@syaau](https://github.com/syaau))
+- Workaround a wrong fling direction for inverted ScrollViews on Android P (#21117) ([b971c5b](https://github.com/facebook/react-native/commit/b971c5b) by [@mandrigin](https://github.com/mandrigin))
+- DrawerLayoutAndroid: Convert to ES6 class (#21980) ([bea3bb6](https://github.com/facebook/react-native/commit/bea3bb6) by [@empyrical](https://github.com/empyrical))
+- Flow strict-local in TimePickerAndroid.android.js (#22188) ([c127000](https://github.com/facebook/react-native/commit/c127000) by [@Tnarita0000](https://github.com/Tnarita0000))
+- Flow TouchableNativeFeedback.android.js (#22176) ([3649a50](https://github.com/facebook/react-native/commit/3649a50) by [@mottox2](https://github.com/mottox2))
+- Apply same config for Android ([e71fb64](https://github.com/facebook/react-native/commit/e71fb64) by [@grabbou](https://github.com/grabbou))
+
+#### iOS Unkown
+
+- Quote "$NODE_BINARY" in react-native-xcode.sh (#21383) ([7d4e94e](https://github.com/facebook/react-native/commit/7d4e94e) by [@sundbry](https://github.com/sundbry))
+- Upgrade folly to v2018.10.22.00 for iOS (#21976) ([a70625a](https://github.com/facebook/react-native/commit/a70625a) by [@Kudo](https://github.com/Kudo))
+- iOS: supress yellow box about missing export for native modules ([5431607](https://github.com/facebook/react-native/commit/5431607) by [@fkgozali](https://github.com/fkgozali))
+- iOS: register lazy nativemodules on startup when Chrome is attached ([04ea976](https://github.com/facebook/react-native/commit/04ea976) by [@fkgozali](https://github.com/fkgozali))
+- Turn Flow strict mode on for DatePickerIOS (#22105) ([3c0211b](https://github.com/facebook/react-native/commit/3c0211b) by [@nd-02110114](https://github.com/nd-02110114))
+- Performance improvement for loading cached images on iOS (#20356) ([54f7eb3](https://github.com/facebook/react-native/commit/54f7eb3) by [@esamelson](https://github.com/esamelson))
+- iOS: Attempt to load lazy modules when asked from native ([1f394fa](https://github.com/facebook/react-native/commit/1f394fa) by [@fkgozali](https://github.com/fkgozali))
+- iOS: ignore double registration of lazy modules with chrome attached ([80f92ad](https://github.com/facebook/react-native/commit/80f92ad) by [@fkgozali](https://github.com/fkgozali))
+- iOS TM: Rename RCTJSINativeModule => RCTTurboModule ([39b8fa9](https://github.com/facebook/react-native/commit/39b8fa9) by [@fkgozali](https://github.com/fkgozali))
+- Defining explicit clang-format for Objective-C part of React Native ([271ace9](https://github.com/facebook/react-native/commit/271ace9) by [@shergin](https://github.com/shergin))
+- Fabric: Using non-mutating `at` instead of `[]` for `-[RCTSurfaceTouchHandler _activeTouches]` ([868406d](https://github.com/facebook/react-native/commit/868406d) by [@shergin](https://github.com/shergin))
+- Fabric: Proper implementation `-[RCTSurfaceTouchHandler reset]` ([560652c](https://github.com/facebook/react-native/commit/560652c) by [@shergin](https://github.com/shergin))
+- iOS: Support inline view truncation (#21456) ([70826db](https://github.com/facebook/react-native/commit/70826db) by [@rigdern](https://github.com/rigdern))
+- iOS TM: RCTEnableJSINativeModule => RCTEnableTurboModule ([aad83cc](https://github.com/facebook/react-native/commit/aad83cc) by [@fkgozali](https://github.com/fkgozali))
+
 ## [0.57.5]
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
@@ -302,7 +606,7 @@ As mentioned a few times in the past, the core team is reviewing the repository 
      }
    ```
 
-3. Ensure that you have all the babel dependencies to version `^7.0.0` (you may also need to add `"babel-core": "7.0.0-bridge.0"` as a yarn resolution to ensure retro-compatibility).  The Babel team has released a tool, [babel-upgrade](https://github.com/babel/babel-upgrade), that should help you in this migration.
+3. Ensure that you have all the babel dependencies to version `^7.0.0` (you may also need to add `"babel-core": "7.0.0-bridge.0"` as a yarn resolution to ensure retro-compatibility)
 4. If you have a custom packager configuration via `rn-cli.config.js`, you probably need to update it to work with the updated Metro configuration structure (for full detail refer to Metro's [documentation](https://facebook.github.io/metro/docs/en/configuration)); here are some commonly encountered changes to `rn-cli.config.js`:
 
    ```diff
