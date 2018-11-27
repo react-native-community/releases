@@ -5,7 +5,7 @@
 ### Added
 
 - Add end point for initializecore ([9687090](https://github.com/facebook/react-native/commit/9687090) by [@ejanzer](https://github.com/ejanzer))
-- Add no-dupe-class-members to RN ESLint fonfig ([88e736c](https://github.com/facebook/react-native/commit/88e736c) by [@TheSavior](https://github.com/TheSavior))
+- Add no-dupe-class-members to RN ESLint config ([88e736c](https://github.com/facebook/react-native/commit/88e736c) by [@TheSavior](https://github.com/TheSavior))
 - Add tracing for loading .so files during startup ([b3b6749](https://github.com/facebook/react-native/commit/b3b6749) by [@axe-fb](https://github.com/axe-fb))
 - Added lock around RN module initialization to fix crash ([6770b53](https://github.com/facebook/react-native/commit/6770b53) by [@PeteTheHeat](https://github.com/PeteTheHeat))
 - Added locking around RN bridge cxx module registry to avoid crash ([1c31919](https://github.com/facebook/react-native/commit/1c31919) by [@PeteTheHeat](https://github.com/PeteTheHeat))
