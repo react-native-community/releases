@@ -1,5 +1,56 @@
 # Changelog
 
+## [0.57.7]
+
+**NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
+
+This patch release fixes version 0.57.6 about loosing focus in `TextInput`. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/64) for cherry-picking commits.
+
+### Changed
+
+- Revert "Remove useless additionnal blur call" ([790c669](https://github.com/facebook/react-native/commit/790c669af00d8a9d00c6b6df74931c05a27071b6))
+
+## [0.57.6]
+
+**INFO NOTE**: If you use any `TextInput` update to 0.57.7 cause focus issue on Android devices.
+
+**NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
+
+This patch release fixes a number of crashes, resolves build issues (both for iOS and Android). Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/64) for cherry-picking commits.
+
+### Changed
+
+- Remove useless additionnal blur call ([356ac5d](https://github.com/facebook/react-native/commit/356ac5d004e2534adf42499fd3fd3570c9221055)), This is problematic issue, update to version 0.57.7 
+
+#### iOS specific
+
+- Adding the new `textContentType` options from iOS 12. `newPassword` helps the OS know to put a password field into the keychain, and `oneTimeCode` hints that the field will take input from an SMS one time code. ([d0c8cb1](https://github.com/facebook/react-native/commit/d0c8cb12f21604fd9730e275a52816d7fd00a826))
+
+### Fixed
+
+- Fix crash in nativeInjectHMRUpdate ([0b4fd62](https://github.com/facebook/react-native/commit/0b4fd621e3ab511510d6852af67183a3581d1aad))
+- Improving Modal `visible` prop check to handle undefined and null ([6c85356](https://github.com/facebook/react-native/commit/6c8535656f8f62640071b7ec5beef85fdde33fed))
+- Fix regression in StyleSheet.setStyleAttributePreprocessor ([5ba44f7](https://github.com/facebook/react-native/commit/5ba44f7f3f5abeb303edf3bfc37cdf9eca813f94))
+- Fix React Native AsyncMode and DevTools ([f41383f](https://github.com/facebook/react-native/commit/f41383fb6d6d0858e1b09dda79a74632d7932d07))
+- CxxReact: Silence 'unused lambda capture' warnings in open-source ([87c9d92](https://github.com/facebook/react-native/commit/87c9d92c127358a8aeaeaa9efd3f49fb112b0723))
+
+#### Android specific
+
+- Fixed wrong fling direction for inverted ScrollViews on Android P (9) ([90cb45f](https://github.com/facebook/react-native/commit/90cb45f1eb905a5565e31b901f22052acb90d007))
+- Fixed HTTP connection timeout on Android ([695784a](https://github.com/facebook/react-native/commit/695784a6ca5855fc2ede3e97bc5a230261347e44))
+- Image.resizeMode will apply to defaultSource, enhanced user experience. Previously, resizeMode didn't applied to defaultSource, therefore depending on screen resolution sometimes we see padding around defaultSource image while source loading. ([ec1bbfd](https://github.com/facebook/react-native/commit/ec1bbfdedc093991a75692da1d2ef261e4a4ba90)
+- Close websocket properly when remote server initiates close ([6e7576b](https://github.com/facebook/react-native/commit/6e7576b94ade9b721d2a2a8317fd20068400a7d2))
+- Fix crash when releasing RN views ([de3711e](https://github.com/facebook/react-native/commit/de3711e1fc550bdacab989e11c6c489350806070))
+- Fix IllegalArgumentException when dismissing ReactModalHostView ([e360b0b](https://github.com/facebook/react-native/commit/e360b0b946e2e2a2b80453ebd71a6d81afca3ef7))
+
+#### iOS specific
+
+- Revert Performance improvement for loading cached images on iOS due some issues ([7eeb305](https://github.com/facebook/react-native/commit/7eeb305933fca695c5a15d675bb10569c3385109)
+- SKIP_BUNDLING prevents generating packager host IP for debugging on iOS devices ([26b5a6e](https://github.com/facebook/react-native/commit/26b5a6e00253e9385c76443bfc7ee295ba0daa7d))
+- Fix inability to remove 'Disabled' state from AccessibilityStates ([79b3311](https://github.com/facebook/react-native/commit/79b33118ea34b94f46f6bdae95802e11fcd31c4e))
+- NetInfo: try to solve crash with releasing `_firstTimeReachability` ([35c1c27](https://github.com/facebook/react-native/commit/35c1c27bf6a46fd7c273e9ff74061577f8df4313))
+- Fix case where inline view is visible even though it should have been truncated ([ac5aaec](https://github.com/facebook/react-native/commit/ac5aaec03f1a0cb039c8af4af2fed459bfbf2923))
+
 ## [0.57.5]
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
