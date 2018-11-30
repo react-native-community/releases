@@ -18,9 +18,9 @@ In order to allow additional research, the commits that relate to a change are l
 
 ### Changelog helper script
 
-In order to generate the Changelog, we use a script that, given a base version and a target version, checks all the commits between the two versions and check for Release Notes in the commit message.
+In order to generate the Changelog, we use a script that, given a base version and a target version, checks all the commits between the two versions and parses release notes and authors in the commit message - and then prints it in the terminal for easy/copy paste.
 
-To use it first off `git clone` the repo, then `yarn` and finally you can use `./changelog-generator.js -b v0.57.5 -c v0.57.6`.
+To use it first off `git clone` the repo, then `yarn` and finally you can use it like in the following example: `./changelog-generator.js -b v0.57.5 -c v0.57.6`.
 
 ## "When will my fix make it into a release?"
 
