@@ -1,7 +1,6 @@
 # React Native Releases
 
-[![GitHub Issues](https://img.shields.io/github/issues/react-native-community/react-native-releases.svg)](https://github.com/react-native-community/react-native-releases/issues)
-![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
+[![GitHub Issues](https://img.shields.io/github/issues/react-native-community/react-native-releases.svg)](https://github.com/react-native-community/react-native-releases/issues) ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 
 Stay up-to-date with the release activities of [React Native](https://github.com/facebook/react-native/) by [watching](https://github.com/react-native-community/react-native-releases/subscription) for [status reports](https://github.com/react-native-community/react-native-releases/issues?q=is%3Aopen+is%3Aissue+label%3A%22release+status%22). Follow along as the release notes are prepared and review the overall [changelog](https://github.com/react-native-community/react-native-releases/blob/master/CHANGELOG.md).
 
@@ -17,6 +16,12 @@ The changelog in this repository is a community-provided effort to provide a hel
 
 In order to allow additional research, the commits that relate to a change are listed. The revisions listed typically are the merge commits, so as to match the code that a user may find in their own copy. Authors are attributed to encourage recognizing the contributors for supporting React Native.
 
+### Changelog helper script
+
+In order to generate the Changelog, we use a script that, given a base version and a target version, checks all the commits between the two versions and parses release notes and authors in the commit message - and then prints it in the terminal for easy/copy paste.
+
+To use it first off `git clone` the repo, then `yarn` and finally you can use it like in the following example: `./changelog-generator.js -b v0.57.5 -c v0.57.6`.
+
 ## "When will my fix make it into a release?"
 
 React Native follows a [monthly release cycle](http://facebook.github.io/react-native/versions.html). Once a pull request is merged to the [core `react-native` repo](https://github.com/facebook/react-native), it may take one to two months for the changes to make it to a stable React Native release.
@@ -29,6 +34,6 @@ If the commit is only present in `master` (i.e. has no tags), then the commit ha
 
 ## Backporting/cherry-picking of changes to existing builds
 
-From time to time, [backporting](https://en.wikipedia.org/wiki/Backporting) a change to an existing release (including candidates) may be needed. Examples include security issues or critical regressions. If you believe a pull request on `react-native`  is a candidate for backporting, please mention it in the version associated _backport request_ issue.
+From time to time, [backporting](https://en.wikipedia.org/wiki/Backporting) a change to an existing release (including candidates) may be needed. Examples include security issues or critical regressions. If you believe a pull request on `react-native` is a candidate for backporting, please mention it in the version associated _backport request_ issue.
 
 Please note that, if the change hasn't landed on `react-native`'s master, it can't be cherry picked to a release tag yet.
