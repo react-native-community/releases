@@ -1,5 +1,50 @@
 # Changelog
 
+## [0.57.7]
+
+**NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
+This patch release fixes version 0.57.6 about loosing focus in `TextInput` because of  [356ac5d](https://github.com/facebook/react-native/commit/356ac5d). Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/64) for cherry-picking commits.
+
+## [v0.57.6]
+
+**NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
+This patch release fixes a number of crashes, resolves build issues (both for iOS and Android). Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/64) for cherry-picking commits.
+
+### Added
+
+#### iOS specific
+
+- Add iOS 12 textContentType options (#21079) ([d0c8cb1](https://github.com/facebook/react-native/commit/d0c8cb1) by [@ultramiraculous](https://github.com/ultramiraculous))
+
+### Removed
+
+- Remove useless additionnal blur call (#22156) ([356ac5d](https://github.com/facebook/react-native/commit/356ac5d))
+
+### Fixed
+
+- Improving Modal `visible` prop check to handle undefined and null (#22072) ([6c85356](https://github.com/facebook/react-native/commit/6c85356) by [@MateusAndrade](https://github.com/MateusAndrade))
+- Fix crash in nativeInjectHMRUpdate (#22412) ([0b4fd62](https://github.com/facebook/react-native/commit/0b4fd62) by [@vovkasm](https://github.com/vovkasm))
+- Fix IllegalArgumentException when dismissing ReactModalHostView ([e360b0b](https://github.com/facebook/react-native/commit/e360b0b) by [@mdvacca](https://github.com/mdvacca))
+- Fix regression in StyleSheet.setStyleAttributePreprocessor (#22262) ([5ba44f7](https://github.com/facebook/react-native/commit/5ba44f7) by [@brentvatne](https://github.com/brentvatne))
+- Fix React Native AsyncMode and DevTools ([f41383f](https://github.com/facebook/react-native/commit/f41383f) by [@bvaughn](https://github.com/bvaughn))
+- CxxReact: Silence 'unused lambda capture' warnings in open-source (#22240) ([87c9d92](https://github.com/facebook/react-native/commit/87c9d92) by [@empyrical](https://github.com/empyrical))
+
+#### Android specific
+
+- Fixed HTTP connection timeout on Android (#22164) ([695784a](https://github.com/facebook/react-native/commit/695784a))
+- resizeMode applies to Image.defaultSource (#22216) ([ec1bbfd](https://github.com/facebook/react-native/commit/ec1bbfd) by [@dulmandakh](https://github.com/dulmandakh))
+- Android: Close websocket properly when remote server initiates close (#22248) ([6e7576b](https://github.com/facebook/react-native/commit/6e7576b) by [@syaau](https://github.com/syaau))
+- Workaround a wrong fling direction for inverted ScrollViews on Android P (#21117) ([90cb45f](https://github.com/facebook/react-native/commit/90cb45f) by [@mandrigin](https://github.com/mandrigin))
+- Fix crash when releasing RN views ([de3711e](https://github.com/facebook/react-native/commit/de3711e) by [@ayc1](https://github.com/ayc1))
+
+#### iOS specific
+
+- iOS: Support inline view truncation (#21456) ([ac5aaec](https://github.com/facebook/react-native/commit/ac5aaec) by [@rigdern](https://github.com/rigdern))
+- NetInfo: try to solve crash with releasing _firstTimeReachability ([35c1c27](https://github.com/facebook/react-native/commit/35c1c27) by [@mmmulani](https://github.com/mmmulani))
+- Generate ip.txt before SKIP_BUNDLING check (#20554) ([26b5a6e](https://github.com/facebook/react-native/commit/26b5a6e) by [@keatongreve](https://github.com/keatongreve))
+- Revert [Performance improvement for loading cached images on iOS ] ([7eeb305](https://github.com/facebook/react-native/commit/7eeb305) by [@kelset](https://github.com/kelset))
+- Fix inability to remove 'Disabled' state from AccessibilityStates ([79b3311](https://github.com/facebook/react-native/commit/79b3311))
+
 ## [0.57.5]
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
