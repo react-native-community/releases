@@ -4,7 +4,7 @@
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
 
-This patch release fixes version 0.57.6 about loosing focus in `TextInput` because of  [356ac5d](https://github.com/facebook/react-native/commit/356ac5d).
+This patch release fixes version 0.57.6 about losing focus in `TextInput` because of  [356ac5d](https://github.com/facebook/react-native/commit/356ac5d).
 
 Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/64) for cherry-picking commits.
 
