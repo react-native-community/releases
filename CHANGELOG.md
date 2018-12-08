@@ -12,7 +12,7 @@
 
 #### iOS specific
 
-- Add `moduleForName: lazilyLoadIfNecessary` to **RCTBridge.h** to lookup modules by name and force load them ([d7a0c44](https://github.com/facebook/react-native/commit/d7a0c44) by [@fkgozali](https://github.com/fkgozali))
+- Add `moduleForName: lazilyLoadIfNecessary` to **RCTBridge.h** to lookup modules by name and force load them, plus various improvements to LazyLoading ([d7a0c44](https://github.com/facebook/react-native/commit/d7a0c44), [6534718](https://github.com/facebook/react-native/commit/6534718), and [d7865eb](https://github.com/facebook/react-native/commit/d7865eb) by [@dshahidehpour](https://github.com/dshahidehpour), [@fkgozali](https://github.com/fkgozali), and [@mmmulani](https://github.com/mmmulani))
 
 ### Changed
 
@@ -46,20 +46,15 @@
 
 - Fix crash when removing root nodes ([b649fa9](https://github.com/facebook/react-native/commit/b649fa9) by [@ayc1](https://github.com/ayc1))
 - Fix various **ReactInstanceManager** deadlocks and race conditions ([df7e8c6](https://github.com/facebook/react-native/commit/df7e8c6), [309f85a](https://github.com/facebook/react-native/commit/309f85a), and [be282b5](https://github.com/facebook/react-native/commit/be282b5) by [@ayc1](https://github.com/ayc1))
-- Fix IllegalArgumentException when dismissing ReactModalHostView ([e57ad4e](https://github.com/facebook/react-native/commit/e57ad4e) by [@mdvacca](https://github.com/mdvacca))
+- Fix IllegalArgumentException when dismissing ReactModalHostView and DialogManager ([e57ad4e](https://github.com/facebook/react-native/commit/e57ad4e) and [38e01a2](https://github.com/facebook/react-native/commit/38e01a2)by [@mdvacca](https://github.com/mdvacca))
 - Fix incorrect merged asset path with flavor for Android Gradle Plugin 3.2 ([e90319e](https://github.com/facebook/react-native/commit/e90319e) by [@yatatsu](https://github.com/yatatsu))
-- Fix args passed when measuring Androidwitch ([54e8d6c](https://github.com/facebook/react-native/commit/54e8d6c) by [@axe-fb](https://github.com/axe-fb))
-- Fix HTTP connection timeout ([a508134](https://github.com/facebook/react-native/commit/a508134))
-- Fix compatibility issue for Android 16 device.Fixes #22294 ([5939d07](https://github.com/facebook/react-native/commit/5939d07) by [@gengjiawen](https://github.com/gengjiawen))
-- Fix IllegalStateException when dismissing DialogManager ([38e01a2](https://github.com/facebook/react-native/commit/38e01a2) by [@mdvacca](https://github.com/mdvacca))
-- Fix jsc regression ([f22473e](https://github.com/facebook/react-native/commit/f22473e) and [d4d457b](https://github.com/facebook/react-native/commit/d4d457b) by [@gengjiawen](https://github.com/gengjiawen))
+- Fix HTTP connection ontimeout callback ([a508134](https://github.com/facebook/react-native/commit/a508134))
+- Fix compatibility issue for Android 16 device ([5939d07](https://github.com/facebook/react-native/commit/5939d07), [f22473e](https://github.com/facebook/react-native/commit/f22473e), and [d4d457b](https://github.com/facebook/react-native/commit/d4d457b) by [@gengjiawen](https://github.com/gengjiawen))
 
 #### iOS specific
 
 - Fix case where content of inline views didn't get relaid out ([798517a](https://github.com/facebook/react-native/commit/798517a) by [@rigdern](https://github.com/rigdern))
 - Fix issue with **ImagePickerIOS**'s inconsistent image when using the front-facing camera ([4aeea4d](https://github.com/facebook/react-native/commit/4aeea4d))
-- Fix LazilyLoadView lookup so that it can drop RCT prefixes. ([6534718](https://github.com/facebook/react-native/commit/6534718) by [@dshahidehpour](https://github.com/dshahidehpour))
-- Add another guard to lazilyLoadView ([d7865eb](https://github.com/facebook/react-native/commit/d7865eb) by [@mmmulani](https://github.com/mmmulani))
 
 ### Security
 
