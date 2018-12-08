@@ -15,7 +15,7 @@
 
 #### iOS specific
 
-- Add `moduleForName: lazilyLoadIfNecessary` to **RCTBridge.h** to lookup modules by name and force load them, plus various improvements to LazyLoading ([d7a0c44](https://github.com/facebook/react-native/commit/d7a0c44), [6534718](https://github.com/facebook/react-native/commit/6534718), [d7865eb](https://github.com/facebook/react-native/commit/d7865eb), and [81b74ec](https://github.com/facebook/react-native/commit/81b74ec) by [@dshahidehpour](https://github.com/dshahidehpour), [@fkgozali](https://github.com/fkgozali), and [@mmmulani](https://github.com/mmmulani))
+- Add `moduleForName: lazilyLoadIfNecessary` to **RCTBridge.h** to lookup modules by name and force load them, plus various improvements to LazyLoading ([d7a0c44](https://github.com/facebook/react-native/commit/d7a0c44), [6534718](https://github.com/facebook/react-native/commit/6534718), [d7865eb](https://github.com/facebook/react-native/commit/d7865eb), [04ea976](https://github.com/facebook/react-native/commit/04ea976), [1f394fa](https://github.com/facebook/react-native/commit/1f394fa), [80f92ad](https://github.com/facebook/react-native/commit/80f92ad), and [81b74ec](https://github.com/facebook/react-native/commit/81b74ec) by [@dshahidehpour](https://github.com/dshahidehpour), [@fkgozali](https://github.com/fkgozali), and [@mmmulani](https://github.com/mmmulani))
 - Add ability for **WebView** to `setClientAuthenticationCredential` when `useWebKit={true}` for mutual TLS authentication ([8911353](https://github.com/facebook/react-native/commit/8911353) by [@mjhu](https://github.com/mjhu))
 
 ### Changed
@@ -32,23 +32,15 @@
 
 #### Android specific
 
-- Optimize `PlatformConstants.ServerHost` and `PlatformConstants.isTesting` for performance ([2bf0d54](https://github.com/facebook/react-native/commit/2bf0d54) and [339d9d3](https://github.com/facebook/react-native/commit/339d9d3) by [@stepanhruda](https://github.com/stepanhruda) and [@fkgozali](https://github.com/fkgozali)
+- Optimize `PlatformConstants.ServerHost`, `PlatformConstants.isTesting`, and `PlatformConstants.androidID` for performance ([2bf0d54](https://github.com/facebook/react-native/commit/2bf0d54), [339d9d3](https://github.com/facebook/react-native/commit/339d9d3), and [9f9390d](https://github.com/facebook/react-native/commit/9f9390d) by [@stepanhruda](https://github.com/stepanhruda), [@fkgozali](https://github.com/fkgozali), and [@axe-fb](https://github.com/axe-fb))
 
 #### iOS specific
 
-### Deprecated
-
-#### Android specific
-
-#### iOS specific
+- Supress yellow box about missing export for native modules ([5431607](https://github.com/facebook/react-native/commit/5431607) by [@fkgozali](https://github.com/fkgozali))
 
 ### Removed
 
 - Remove `UIManager.measureViewsInRect()` ([d623679](https://github.com/facebook/react-native/commit/d623679) by [@shergin](https://github.com/shergin))
-
-#### Android specific
-
-#### iOS specific
 
 ### Fixed
 
@@ -70,50 +62,24 @@ TODO: confirm this with alexkirsz; waiting on DM reply
 - Fix IllegalArgumentException when dismissing ReactModalHostView and DialogManager ([e57ad4e](https://github.com/facebook/react-native/commit/e57ad4e) and [38e01a2](https://github.com/facebook/react-native/commit/38e01a2)by [@mdvacca](https://github.com/mdvacca))
 - Fix incorrect merged asset path with flavor for Android Gradle Plugin 3.2 ([e90319e](https://github.com/facebook/react-native/commit/e90319e) by [@yatatsu](https://github.com/yatatsu))
 - Fix HTTP connection ontimeout callback ([a508134](https://github.com/facebook/react-native/commit/a508134))
+- Fix websocket properly closing when remote server initiates close ([2e465bc](https://github.com/facebook/react-native/commit/2e465bc) by [@syaau](https://github.com/syaau))
 - Fix compatibility issue for Android 16 device ([5939d07](https://github.com/facebook/react-native/commit/5939d07), [f22473e](https://github.com/facebook/react-native/commit/f22473e), and [d4d457b](https://github.com/facebook/react-native/commit/d4d457b) by [@gengjiawen](https://github.com/gengjiawen))
 - Fix issue where `Image.resizeMode` isn't respected while source is loading, resulting in unexpected padding ([673ef39](https://github.com/facebook/react-native/commit/673ef39) by [@dulmandakh](https://github.com/dulmandakh))
+- Fix Android 16's inverted **ScrollView** so that momentum is in the proper direction ([b971c5b](https://github.com/facebook/react-native/commit/b971c5b) by [@mandrigin](https://github.com/mandrigin))
 
 #### iOS specific
 
 - Fix case where content of inline views didn't get relaid out ([798517a](https://github.com/facebook/react-native/commit/798517a) by [@rigdern](https://github.com/rigdern))
 - Fix issue with **ImagePickerIOS**'s inconsistent image when using the front-facing camera ([4aeea4d](https://github.com/facebook/react-native/commit/4aeea4d))
-- Fix potential race condition and crash around shutdown of the JSC for iOS 11 and earlier ([bf2500e](https://github.com/facebook/react-native/commit/bf2500e) by [@mhorowitz](https://github.com/mhorowitz))
+- Fix race condition and crash around shutdown of the JSC for iOS 11 and earlier ([bf2500e](https://github.com/facebook/react-native/commit/bf2500e) by [@mhorowitz](https://github.com/mhorowitz))
 - Fix crash in **NetInfo**'s _firstTimeReachability ([eebc8e2](https://github.com/facebook/react-native/commit/eebc8e2) by [@mmmulani](https://github.com/mmmulani))
-
-### Security
-
-#### Android specific
-
-#### iOS specific
+- Fix case where inline view is visible even though it should have been truncated ([70826db](https://github.com/facebook/react-native/commit/70826db) by [@rigdern](https://github.com/rigdern))
 
 ### Unknown
 
 - InitializeCore is now modular, allowing for you to pick and choose what's desired ([df2eaa9](https://github.com/facebook/react-native/commit/df2eaa9) by [@ejanzer](https://github.com/ejanzer))
 
 TODO: what's the dev impact of this? Seems significant, but I can't find references of how this is used by devs in either brownfield or greenfield
-
-#### Android Unknown
-
-- mostly working on Android + OTA ([7b5277b](https://github.com/facebook/react-native/commit/7b5277b) by [@sahrens](https://github.com/sahrens))
-- Temporary disable AndroidSwipeRefreshLayout ([cd5009f](https://github.com/facebook/react-native/commit/cd5009f) by [@mdvacca](https://github.com/mdvacca))
-- Moved androidID constant to a method ([9f9390d](https://github.com/facebook/react-native/commit/9f9390d) by [@axe-fb](https://github.com/axe-fb))
-- Android: Close websocket properly when remote server initiates close (#22248) ([2e465bc](https://github.com/facebook/react-native/commit/2e465bc) by [@syaau](https://github.com/syaau))
-- Workaround a wrong fling direction for inverted ScrollViews on Android P (#21117) ([b971c5b](https://github.com/facebook/react-native/commit/b971c5b) by [@mandrigin](https://github.com/mandrigin))
-- DrawerLayoutAndroid: Convert to ES6 class (#21980) ([bea3bb6](https://github.com/facebook/react-native/commit/bea3bb6) by [@empyrical](https://github.com/empyrical))
-- Apply same config for Android ([e71fb64](https://github.com/facebook/react-native/commit/e71fb64) by [@grabbou](https://github.com/grabbou))
-
-#### iOS Unkown
-
-- Quote "$NODE_BINARY" in react-native-xcode.sh (#21383) ([7d4e94e](https://github.com/facebook/react-native/commit/7d4e94e) by [@sundbry](https://github.com/sundbry))
-- iOS: supress yellow box about missing export for native modules ([5431607](https://github.com/facebook/react-native/commit/5431607) by [@fkgozali](https://github.com/fkgozali))
-- iOS: register lazy nativemodules on startup when Chrome is attached ([04ea976](https://github.com/facebook/react-native/commit/04ea976) by [@fkgozali](https://github.com/fkgozali))
-- Performance improvement for loading cached images on iOS (#20356) ([54f7eb3](https://github.com/facebook/react-native/commit/54f7eb3) by [@esamelson](https://github.com/esamelson))
-- iOS: Attempt to load lazy modules when asked from native ([1f394fa](https://github.com/facebook/react-native/commit/1f394fa) by [@fkgozali](https://github.com/fkgozali))
-- iOS: ignore double registration of lazy modules with chrome attached ([80f92ad](https://github.com/facebook/react-native/commit/80f92ad) by [@fkgozali](https://github.com/fkgozali))
-- iOS TM: Rename RCTJSINativeModule => RCTTurboModule ([39b8fa9](https://github.com/facebook/react-native/commit/39b8fa9) by [@fkgozali](https://github.com/fkgozali))
-- Defining explicit clang-format for Objective-C part of React Native ([271ace9](https://github.com/facebook/react-native/commit/271ace9) by [@shergin](https://github.com/shergin))
-- iOS: Support inline view truncation (#21456) ([70826db](https://github.com/facebook/react-native/commit/70826db) by [@rigdern](https://github.com/rigdern))
-- iOS TM: RCTEnableJSINativeModule => RCTEnableTurboModule ([aad83cc](https://github.com/facebook/react-native/commit/aad83cc) by [@fkgozali](https://github.com/fkgozali))
 
 ## [0.57.7]
 
