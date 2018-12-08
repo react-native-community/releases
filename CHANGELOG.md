@@ -3,6 +3,7 @@
 ## [0.58.0]
 
 - A lot of community effort in [modernizing](https://github.com/facebook/react-native/issues/21581) and [stengthening flow types](https://github.com/facebook/react-native/issues/22100) for core components. Thank you [@TheSavior](https://github.com/TheSavior) for leading these efforts, and thank you to all of the community members who helped get this done.
+- There was great continued progress towards the new [Fabric re-architecture](https://github.com/react-native-community/discussions-and-proposals/issues/4) this month
 
 ### Added
 
@@ -10,16 +11,28 @@
 
 #### Android specific
 
+- Bundler server host can now be set using Android System Properties, making for easier debugging across multiple apps or app installs `adb shell setprop metro.host` ([e02a154](https://github.com/facebook/react-native/commit/e02a154) by [@stepanhruda](https://github.com/stepanhruda))
+
 #### iOS specific
 
-- Add `moduleForName: lazilyLoadIfNecessary` to **RCTBridge.h** to lookup modules by name and force load them, plus various improvements to LazyLoading ([d7a0c44](https://github.com/facebook/react-native/commit/d7a0c44), [6534718](https://github.com/facebook/react-native/commit/6534718), and [d7865eb](https://github.com/facebook/react-native/commit/d7865eb) by [@dshahidehpour](https://github.com/dshahidehpour), [@fkgozali](https://github.com/fkgozali), and [@mmmulani](https://github.com/mmmulani))
+- Add `moduleForName: lazilyLoadIfNecessary` to **RCTBridge.h** to lookup modules by name and force load them, plus various improvements to LazyLoading ([d7a0c44](https://github.com/facebook/react-native/commit/d7a0c44), [6534718](https://github.com/facebook/react-native/commit/6534718), [d7865eb](https://github.com/facebook/react-native/commit/d7865eb), and [81b74ec](https://github.com/facebook/react-native/commit/81b74ec) by [@dshahidehpour](https://github.com/dshahidehpour), [@fkgozali](https://github.com/fkgozali), and [@mmmulani](https://github.com/mmmulani))
+- Add ability for **WebView** to `setClientAuthenticationCredential` when `useWebKit={true}` for mutual TLS authentication ([8911353](https://github.com/facebook/react-native/commit/8911353) by [@mjhu](https://github.com/mjhu))
 
 ### Changed
 
 - Major improvements to Flow types for Core Components ([499c195](https://github.com/facebook/react-native/commit/499c195), [fbc5a4f](https://github.com/facebook/react-native/commit/fbc5a4f), [f9050e0](https://github.com/facebook/react-native/commit/f9050e0), [6476151](https://github.com/facebook/react-native/commit/6476151), [c03fc40](https://github.com/facebook/react-native/commit/c03fc40), [69213ee](https://github.com/facebook/react-native/commit/69213ee), [136dfc8](https://github.com/facebook/react-native/commit/136dfc8), [3c0211b](https://github.com/facebook/react-native/commit/3c0211b), [c127000](https://github.com/facebook/react-native/commit/c127000), [636e146](https://github.com/facebook/react-native/commit/636e146), [6fa997d](https://github.com/facebook/react-native/commit/6fa997d), [35a65cd](https://github.com/facebook/react-native/commit/35a65cd), [7927497](https://github.com/facebook/react-native/commit/7927497), [45c5183](https://github.com/facebook/react-native/commit/45c5183), [a97d104](https://github.com/facebook/react-native/commit/a97d104), [fb4825a](https://github.com/facebook/react-native/commit/fb4825a), [84c5416](https://github.com/facebook/react-native/commit/84c5416), [3649a50](https://github.com/facebook/react-native/commit/3649a50) by [@mottox2](https://github.com/mottox2), [@saitoxu](https://github.com/saitoxu), [@RSNara](https://github.com/RSNara), [@watanabeyu](https://github.com/watanabeyu), [@Tnarita0000](https://github.com/Tnarita0000), [@exced](https://github.com/exced), [@nd-02110114](https://github.com/nd-02110114), [@flowkraD](https://github.com/flowkraD))
 - Flow dependency is now at v0.86.0 ([8fb228f](https://github.com/facebook/react-native/commit/8fb228f) by [@panagosg7](https://github.com/panagosg7))
+- metro dependency is now at v0.49.1 ([f867db3](https://github.com/facebook/react-native/commit/f867db3), [8888295](https://github.com/facebook/react-native/commit/8888295), [31bb551](https://github.com/facebook/react-native/commit/31bb551), [de60e86](https://github.com/facebook/react-native/commit/de60e86), and [a525941](https://github.com/facebook/react-native/commit/a525941) by [@alexkirsz](https://github.com/alexkirsz) and [@rafeca](https://github.com/rafeca))
+- jest dependency is now at v24.0.0-alpha.6 ([1b4fd64](https://github.com/facebook/react-native/commit/1b4fd64), [66aba09](https://github.com/facebook/react-native/commit/66aba09), and [06c13b3](https://github.com/facebook/react-native/commit/06c13b3) by [@rafeca](https://github.com/rafeca) and  [@rubennorte](https://github.com/rubennorte))
+- fbjs-scripts dependency is now at v1.0.0 (#21880) ([cdbf719](https://github.com/facebook/react-native/commit/cdbf719) by [@jmheik](https://github.com/jmheik))
+- folly dependency is now at v2018.10.22.00 ([a316dc6](https://github.com/facebook/react-native/commit/a316dc6) and [a70625a](https://github.com/facebook/react-native/commit/a70625a) by [@Kudo](https://github.com/Kudo))
+- React sync for revisions 4773fdf...3ff2c7c ([0cb59b5](https://github.com/facebook/react-native/commit/0cb59b5) by [@yungsters](https://github.com/yungsters))
+- Clearer error messages when hot reloading ([c787866](https://github.com/facebook/react-native/commit/c787866) by [@alexkirsz](https://github.com/alexkirsz))
+- Allow CxxModules to implement functions which take two callbacks ([8826d8b](https://github.com/facebook/react-native/commit/8826d8b) by [@acoates-ms](https://github.com/acoates-ms))
 
 #### Android specific
+
+- Optimize `PlatformConstants.ServerHost` and `PlatformConstants.isTesting` for performance ([2bf0d54](https://github.com/facebook/react-native/commit/2bf0d54) and [339d9d3](https://github.com/facebook/react-native/commit/339d9d3) by [@stepanhruda](https://github.com/stepanhruda) and [@fkgozali](https://github.com/fkgozali)
 
 #### iOS specific
 
@@ -31,6 +44,8 @@
 
 ### Removed
 
+- Remove `UIManager.measureViewsInRect()` ([d623679](https://github.com/facebook/react-native/commit/d623679) by [@shergin](https://github.com/shergin))
+
 #### Android specific
 
 #### iOS specific
@@ -38,9 +53,15 @@
 ### Fixed
 
 - Fix potential UI thread stalling scenario from Yoga JNI bindings ([2a8f6c3](https://github.com/facebook/react-native/commit/2a8f6c3) by [@davidaurelio](https://github.com/davidaurelio))
-- Fix crash happening due to race condition around bridge cxx module registry ([6770b53](https://github.com/facebook/react-native/commit/6770b53) and [1c31919](https://github.com/facebook/react-native/commit/1c31919) by [@PeteTheHeat](https://github.com/PeteTheHeat))
+- Fix crash happening due to race condition around bridge cxx module registry ([6770b53](https://github.com/facebook/react-native/commit/6770b53), [1c31919](https://github.com/facebook/react-native/commit/1c31919), and [188cbb0](https://github.com/facebook/react-native/commit/188cbb0) by [@PeteTheHeat](https://github.com/PeteTheHeat))
 - Fix **View** and **Text**'s displayName; show the specific name rather than generic "Component" ([7a914fc](https://github.com/facebook/react-native/commit/7a914fc) by [@rajivshah3](https://github.com/rajivshah3))
 - Fix `react-native init --help` so that it doesn't return `undefined` ([58732a8](https://github.com/facebook/react-native/commit/58732a8) by [@ignacioola](https://github.com/ignacioola))
+- Fix `react-native --sourceExts` ([ce86080](https://github.com/facebook/react-native/commit/ce86080) by [@elyalvarado](https://github.com/elyalvarado))
+- Fix accidental showing of **Modal** when `visible` prop is undefined or null ([cc13a73](https://github.com/facebook/react-native/commit/cc13a73) by [@MateusAndrade](https://github.com/MateusAndrade))
+- Fix crash during **VirtualizedList** pagination ([5803772](https://github.com/facebook/react-native/commit/5803772))
+- Fix scenario where removing a module broke the bundle while reloading ([bea57d8](https://github.com/facebook/react-native/commit/bea57d8) by [@alexkirsz](https://github.com/alexkirsz))
+
+TODO: confirm this with alexkirsz; waiting on DM reply
 
 #### Android specific
 
@@ -50,11 +71,14 @@
 - Fix incorrect merged asset path with flavor for Android Gradle Plugin 3.2 ([e90319e](https://github.com/facebook/react-native/commit/e90319e) by [@yatatsu](https://github.com/yatatsu))
 - Fix HTTP connection ontimeout callback ([a508134](https://github.com/facebook/react-native/commit/a508134))
 - Fix compatibility issue for Android 16 device ([5939d07](https://github.com/facebook/react-native/commit/5939d07), [f22473e](https://github.com/facebook/react-native/commit/f22473e), and [d4d457b](https://github.com/facebook/react-native/commit/d4d457b) by [@gengjiawen](https://github.com/gengjiawen))
+- Fix issue where `Image.resizeMode` isn't respected while source is loading, resulting in unexpected padding ([673ef39](https://github.com/facebook/react-native/commit/673ef39) by [@dulmandakh](https://github.com/dulmandakh))
 
 #### iOS specific
 
 - Fix case where content of inline views didn't get relaid out ([798517a](https://github.com/facebook/react-native/commit/798517a) by [@rigdern](https://github.com/rigdern))
 - Fix issue with **ImagePickerIOS**'s inconsistent image when using the front-facing camera ([4aeea4d](https://github.com/facebook/react-native/commit/4aeea4d))
+- Fix potential race condition and crash around shutdown of the JSC for iOS 11 and earlier ([bf2500e](https://github.com/facebook/react-native/commit/bf2500e) by [@mhorowitz](https://github.com/mhorowitz))
+- Fix crash in **NetInfo**'s _firstTimeReachability ([eebc8e2](https://github.com/facebook/react-native/commit/eebc8e2) by [@mmmulani](https://github.com/mmmulani))
 
 ### Security
 
@@ -64,76 +88,12 @@
 
 ### Unknown
 
-- Replaced default constructors with member assignments ([d743989](https://github.com/facebook/react-native/commit/d743989) by [@SidharthGuglani](https://github.com/SidharthGuglani))
-- Upgrade jest to v24.0.0-alpha.2 ([1b4fd64](https://github.com/facebook/react-native/commit/1b4fd64) by [@rafeca](https://github.com/rafeca))
-- Bump metro@0.48.2 ([f867db3](https://github.com/facebook/react-native/commit/f867db3) by [@rafeca](https://github.com/rafeca))
-- Refactor shutdown so that debug asserts can pass ([2a44054](https://github.com/facebook/react-native/commit/2a44054) by [@mhorowitz](https://github.com/mhorowitz))
-- Make SystemJSC on macosx actually use the system JSC framework ([5d38264](https://github.com/facebook/react-native/commit/5d38264) by [@mhorowitz](https://github.com/mhorowitz))
-- Modularize InitializeCore ([df2eaa9](https://github.com/facebook/react-native/commit/df2eaa9) by [@ejanzer](https://github.com/ejanzer))
-- Bump metro@0.48.3 ([8888295](https://github.com/facebook/react-native/commit/8888295) by [@rafeca](https://github.com/rafeca))
-- Update the Delta/HMR format ([1eedf05](https://github.com/facebook/react-native/commit/1eedf05) by [@alexkirsz](https://github.com/alexkirsz))
-- Bump metro@0.49.0 ([31bb551](https://github.com/facebook/react-native/commit/31bb551) by [@alexkirsz](https://github.com/alexkirsz))
-- Bump fbjs-scripts to ^1.0.0 (#21880) ([cdbf719](https://github.com/facebook/react-native/commit/cdbf719) by [@jmheik](https://github.com/jmheik))
-- Prepend passed sourceExts to default ones and pass them to metro (#21855) ([ce86080](https://github.com/facebook/react-native/commit/ce86080) by [@elyalvarado](https://github.com/elyalvarado))
-- Wrap measureLayoutRelativeToContainingList in try-catch to mitigate crash ([5803772](https://github.com/facebook/react-native/commit/5803772))
-- Use fb_native_wrapper for all targets ([c147073](https://github.com/facebook/react-native/commit/c147073) by [@scottrice](https://github.com/scottrice))
-- gradle repo priority (#22041) ([2a349f8](https://github.com/facebook/react-native/commit/2a349f8) by [@dulmandakh](https://github.com/dulmandakh))
-- jest: upgrade to 24.0.0-alpha.4 ([66aba09](https://github.com/facebook/react-native/commit/66aba09) by [@rubennorte](https://github.com/rubennorte))
-- CheckBox: Convert NativeMethodsMixin to forwardedRef, convert to class (#21585) ([28de61e](https://github.com/facebook/react-native/commit/28de61e) by [@empyrical](https://github.com/empyrical))
-- Improving Modal `visible` prop check to handle undefined and null (#22072) ([cc13a73](https://github.com/facebook/react-native/commit/cc13a73) by [@MateusAndrade](https://github.com/MateusAndrade))
-- Replace var to const in Libraries/Utilities/deepFreezeAndThrowOnMutationInDev-test.js (#22110) ([e835c6d](https://github.com/facebook/react-native/commit/e835c6d) by [@watanabeyu](https://github.com/watanabeyu))
-- Increase cache and file size limits ([3a98318](https://github.com/facebook/react-native/commit/3a98318) by [@fatalsun](https://github.com/fatalsun))
-- Disallow Optional::operator=(nullptr_t) unless T is a pointer ([79712c3](https://github.com/facebook/react-native/commit/79712c3) by [@chadaustin](https://github.com/chadaustin))
-- Update and expand bytecode spec ([aab0160](https://github.com/facebook/react-native/commit/aab0160) by [@sahrens](https://github.com/sahrens))
-- Cleanup a bunch of the JS stuff ([ccc8a42](https://github.com/facebook/react-native/commit/ccc8a42) by [@sahrens](https://github.com/sahrens))
-- rename ReactBytecode -> UITemplate ([ac9e09d](https://github.com/facebook/react-native/commit/ac9e09d) by [@sahrens](https://github.com/sahrens))
-- Types for BackHandler ([7dd2b0b](https://github.com/facebook/react-native/commit/7dd2b0b) by [@nmn](https://github.com/nmn))
-- Allow overriding Metro server host with a system prop ([e02a154](https://github.com/facebook/react-native/commit/e02a154) by [@stepanhruda](https://github.com/stepanhruda))
-- console polyfill: pass unsupported messages to original console ([bccc454](https://github.com/facebook/react-native/commit/bccc454) by [@Hypuk](https://github.com/Hypuk))
-- React sync for revisions 4773fdf...3ff2c7c ([0cb59b5](https://github.com/facebook/react-native/commit/0cb59b5) by [@yungsters](https://github.com/yungsters))
-- Enable unused-private-field warning (#13450) ([50e9b0f](https://github.com/facebook/react-native/commit/50e9b0f))
-- Update oss lockfile ([8d5d144](https://github.com/facebook/react-native/commit/8d5d144) by [@ejanzer](https://github.com/ejanzer))
-- Replace String with constants for Module names in Fb4aCoreInfraPackage ([fe49809](https://github.com/facebook/react-native/commit/fe49809) by [@axe-fb](https://github.com/axe-fb))
-- Give eagerly loaded modules precedent over lazily loaded one. ([81b74ec](https://github.com/facebook/react-native/commit/81b74ec) by [@dshahidehpour](https://github.com/dshahidehpour))
-- Stop mounting of Views when there is an exception in Native ([8329c10](https://github.com/facebook/react-native/commit/8329c10) by [@mdvacca](https://github.com/mdvacca))
-- Force navigation to use root tag ([fe7eb61](https://github.com/facebook/react-native/commit/fe7eb61) by [@mdvacca](https://github.com/mdvacca))
-- Expose rootTag / surfaceId as part of schedulerDidRequestPreliminaryViewAllocation method ([2b01da0](https://github.com/facebook/react-native/commit/2b01da0) by [@mdvacca](https://github.com/mdvacca))
-- Switch to synchronous strategy for unprotect ([bf2500e](https://github.com/facebook/react-native/commit/bf2500e) by [@mhorowitz](https://github.com/mhorowitz))
-- Back out TextInput es6 conversion ([f386f83](https://github.com/facebook/react-native/commit/f386f83) by [@TheSavior](https://github.com/TheSavior))
-- `Removing UIManager.measureViewsInRect()` ([d623679](https://github.com/facebook/react-native/commit/d623679) by [@shergin](https://github.com/shergin))
-- Turn off static linking for cxxreact:bridge ([918a7d5](https://github.com/facebook/react-native/commit/918a7d5) by [@christolliday](https://github.com/christolliday))
-- Use static constants instead of strings when referring to View Managers and Native Modules ([803e993](https://github.com/facebook/react-native/commit/803e993) by [@axe-fb](https://github.com/axe-fb))
-- Use nativeQPLTimestamp for InitializeCore marker point ([1850906](https://github.com/facebook/react-native/commit/1850906) by [@ejanzer](https://github.com/ejanzer))
-- Only include ServerHost constant in debug builds ([2bf0d54](https://github.com/facebook/react-native/commit/2bf0d54) by [@stepanhruda](https://github.com/stepanhruda))
-- Reset module registry flag when resetting React Instance ([188cbb0](https://github.com/facebook/react-native/commit/188cbb0) by [@PeteTheHeat](https://github.com/PeteTheHeat))
-- Avoid pre-allocating views for non-layoutable shadow nodes ([33b9661](https://github.com/facebook/react-native/commit/33b9661) by [@mdvacca](https://github.com/mdvacca))
-- DeltaPatcher: better support for the new Delta format ([bea57d8](https://github.com/facebook/react-native/commit/bea57d8) by [@alexkirsz](https://github.com/alexkirsz))
-- Clearer HMR error messages ([c787866](https://github.com/facebook/react-native/commit/c787866) by [@alexkirsz](https://github.com/alexkirsz))
-- NetInfo: try to solve crash with releasing _firstTimeReachability ([eebc8e2](https://github.com/facebook/react-native/commit/eebc8e2) by [@mmmulani](https://github.com/mmmulani))
-- Bump metro@0.49.1 ([de60e86](https://github.com/facebook/react-native/commit/de60e86) by [@rafeca](https://github.com/rafeca))
-- Bump metro@0.49.1 ([a525941](https://github.com/facebook/react-native/commit/a525941) by [@rafeca](https://github.com/rafeca))
-- Update React Native OSS Yarn and Gradle caches ([11d4512](https://github.com/facebook/react-native/commit/11d4512) by [@hramos](https://github.com/hramos))
-- Allow CxxModules to implement methods with two callbacks (#21586) ([8826d8b](https://github.com/facebook/react-native/commit/8826d8b))
-- Guard Platform.isTesting under __DEV__ ([339d9d3](https://github.com/facebook/react-native/commit/339d9d3) by [@fkgozali](https://github.com/fkgozali))
-- Dispatch events asynchronously ([e02a24b](https://github.com/facebook/react-native/commit/e02a24b) by [@mdvacca](https://github.com/mdvacca))
-- nullptr -> folly::none in fbobjc/xplat ([56a416e](https://github.com/facebook/react-native/commit/56a416e) by [@chadaustin](https://github.com/chadaustin))
-- Upgrade jest to v24.0.0-alpha.6 ([06c13b3](https://github.com/facebook/react-native/commit/06c13b3) by [@rafeca](https://github.com/rafeca))
-- Back to yearless format for MIT license ([619de16](https://github.com/facebook/react-native/commit/619de16) by [@davidaurelio](https://github.com/davidaurelio))
-- JS: Switch from `new Buffer` to `Buffer.from` ([d9c2cda](https://github.com/facebook/react-native/commit/d9c2cda) by [@yungsters](https://github.com/yungsters))
-- resizeMode applies to Image.defaultSource (#22216) ([673ef39](https://github.com/facebook/react-native/commit/673ef39) by [@dulmandakh](https://github.com/dulmandakh))
-- New TextInput-test that would have prevented S168585 ([a009406](https://github.com/facebook/react-native/commit/a009406) by [@sahrens](https://github.com/sahrens))
-- CxxReact: Silence 'unused lambda capture' warnings in open-source (#22240) ([0c05409](https://github.com/facebook/react-native/commit/0c05409) by [@empyrical](https://github.com/empyrical))
-- create api to allow clients to present a client credential for authentication (#22316) ([8911353](https://github.com/facebook/react-native/commit/8911353) by [@mjhu](https://github.com/mjhu))
-- Change font size default from 12 to 14 ([dcf72ff](https://github.com/facebook/react-native/commit/dcf72ff) by [@mdvacca](https://github.com/mdvacca))
-- Implement layout constraint when measuring text ([8367fa9](https://github.com/facebook/react-native/commit/8367fa9) by [@mdvacca](https://github.com/mdvacca))
-- Rename requiresMainThreadSetup -> requiresMainQueueSetup in code comment (#22328) ([1fa56a0](https://github.com/facebook/react-native/commit/1fa56a0) by [@karanjthakkar](https://github.com/karanjthakkar))
-- Pass primitives by value ([f8ff6bd](https://github.com/facebook/react-native/commit/f8ff6bd) by [@davidaurelio](https://github.com/davidaurelio))
-- Dealloc JNI implementation experiment ([64d162e](https://github.com/facebook/react-native/commit/64d162e) by [@davidaurelio](https://github.com/davidaurelio))
-- Pass enums by value ([c34ad17](https://github.com/facebook/react-native/commit/c34ad17) by [@davidaurelio](https://github.com/davidaurelio))
+- InitializeCore is now modular, allowing for you to pick and choose what's desired ([df2eaa9](https://github.com/facebook/react-native/commit/df2eaa9) by [@ejanzer](https://github.com/ejanzer))
+
+TODO: what's the dev impact of this? Seems significant, but I can't find references of how this is used by devs in either brownfield or greenfield
 
 #### Android Unknown
 
-- Upgrade folly to v2018.10.22.00 for Android (#21977) ([a316dc6](https://github.com/facebook/react-native/commit/a316dc6) by [@Kudo](https://github.com/Kudo))
 - mostly working on Android + OTA ([7b5277b](https://github.com/facebook/react-native/commit/7b5277b) by [@sahrens](https://github.com/sahrens))
 - Temporary disable AndroidSwipeRefreshLayout ([cd5009f](https://github.com/facebook/react-native/commit/cd5009f) by [@mdvacca](https://github.com/mdvacca))
 - Moved androidID constant to a method ([9f9390d](https://github.com/facebook/react-native/commit/9f9390d) by [@axe-fb](https://github.com/axe-fb))
@@ -145,7 +105,6 @@
 #### iOS Unkown
 
 - Quote "$NODE_BINARY" in react-native-xcode.sh (#21383) ([7d4e94e](https://github.com/facebook/react-native/commit/7d4e94e) by [@sundbry](https://github.com/sundbry))
-- Upgrade folly to v2018.10.22.00 for iOS (#21976) ([a70625a](https://github.com/facebook/react-native/commit/a70625a) by [@Kudo](https://github.com/Kudo))
 - iOS: supress yellow box about missing export for native modules ([5431607](https://github.com/facebook/react-native/commit/5431607) by [@fkgozali](https://github.com/fkgozali))
 - iOS: register lazy nativemodules on startup when Chrome is attached ([04ea976](https://github.com/facebook/react-native/commit/04ea976) by [@fkgozali](https://github.com/fkgozali))
 - Performance improvement for loading cached images on iOS (#20356) ([54f7eb3](https://github.com/facebook/react-native/commit/54f7eb3) by [@esamelson](https://github.com/esamelson))
