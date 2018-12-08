@@ -67,7 +67,7 @@
 ### Fixed
 
 - Fix View/Text displayName (#21950) ([7a914fc](https://github.com/facebook/react-native/commit/7a914fc) by [@rajivshah3](https://github.com/rajivshah3))
-- Fix the lazily LaodedView to avoid weird naming issues ([cae2534](https://github.com/facebook/react-native/commit/cae2534) by [@spredolac](https://github.com/spredolac))
+- Fix the lazily LoadedView to avoid weird naming issues ([cae2534](https://github.com/facebook/react-native/commit/cae2534) by [@spredolac](https://github.com/spredolac))
 - Fix relayout of inline views (#21968) ([798517a](https://github.com/facebook/react-native/commit/798517a) by [@rigdern](https://github.com/rigdern))
 - Fix ReactRootView mount/unmount race condition ([309f85a](https://github.com/facebook/react-native/commit/309f85a) by [@ayc1](https://github.com/ayc1))
 - Fix IllegalStateException when dismissing DialogManager ([38e01a2](https://github.com/facebook/react-native/commit/38e01a2) by [@mdvacca](https://github.com/mdvacca))
@@ -88,9 +88,7 @@
 
 #### Android specific
 
-- fix android ci (#21913) ([99632e1](https://github.com/facebook/react-native/commit/99632e1) by [@dulmandakh](https://github.com/dulmandakh))
 - Fix incorrect merged asset path with flavor for Android Gradle Plugin 3.2. (#21782) ([e90319e](https://github.com/facebook/react-native/commit/e90319e) by [@yatatsu](https://github.com/yatatsu))
-- bump buck to 2018.10.29.01. fixes Android CI (#22049) ([b40e23d](https://github.com/facebook/react-native/commit/b40e23d) by [@dulmandakh](https://github.com/dulmandakh))
 - Fix args passed when measuring Androidwitch ([54e8d6c](https://github.com/facebook/react-native/commit/54e8d6c) by [@axe-fb](https://github.com/axe-fb))
 - Fixed HTTP connection timeout on Android (#22164) ([a508134](https://github.com/facebook/react-native/commit/a508134))
 - Fix compatibility issue for android 16 device.Fixes #22294 (#22295) ([5939d07](https://github.com/facebook/react-native/commit/5939d07) by [@gengjiawen](https://github.com/gengjiawen))
@@ -122,10 +120,7 @@
 - Use fb_native_wrapper for all targets ([c147073](https://github.com/facebook/react-native/commit/c147073) by [@scottrice](https://github.com/scottrice))
 - gradle repo priority (#22041) ([2a349f8](https://github.com/facebook/react-native/commit/2a349f8) by [@dulmandakh](https://github.com/dulmandakh))
 - jest: upgrade to 24.0.0-alpha.4 ([66aba09](https://github.com/facebook/react-native/commit/66aba09) by [@rubennorte](https://github.com/rubennorte))
-- BUCKFORMAT: apply on all of fbsource ([2b603fd](https://github.com/facebook/react-native/commit/2b603fd) by [@luciang](https://github.com/luciang))
 - CheckBox: Convert NativeMethodsMixin to forwardedRef, convert to class (#21585) ([28de61e](https://github.com/facebook/react-native/commit/28de61e) by [@empyrical](https://github.com/empyrical))
-- lint autofixes ([2486d12](https://github.com/facebook/react-native/commit/2486d12) by [@sahrens](https://github.com/sahrens))
-- Trivial cleanup in ReactRootView ([83c7303](https://github.com/facebook/react-native/commit/83c7303) by [@mdvacca](https://github.com/mdvacca))
 - Improving Modal `visible` prop check to handle undefined and null (#22072) ([cc13a73](https://github.com/facebook/react-native/commit/cc13a73) by [@MateusAndrade](https://github.com/MateusAndrade))
 - Replace var to const in Libraries/Utilities/deepFreezeAndThrowOnMutationInDev-test.js (#22110) ([e835c6d](https://github.com/facebook/react-native/commit/e835c6d) by [@watanabeyu](https://github.com/watanabeyu))
 - Increase cache and file size limits ([3a98318](https://github.com/facebook/react-native/commit/3a98318) by [@fatalsun](https://github.com/fatalsun))
@@ -316,7 +311,6 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 - Expose enableBabelRuntime config param externally ([a3a69ca](https://github.com/facebook/react-native/commit/a3a69cae348b2bab0ec5ce68a56c6197cfa33ad6) by [@rafeca](https://github.com/rafeca))
 
 #### Android specific additions
-
 
 ### Changes: existing functionality that is now different
 
