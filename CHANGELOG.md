@@ -2,6 +2,8 @@
 
 ## [0.58.0]
 
+- A lot of community effort in [modernizing](https://github.com/facebook/react-native/issues/21581) and [stengthening flow types](https://github.com/facebook/react-native/issues/22100) for core components. Thank you [@TheSavior](https://github.com/TheSavior) for leading these efforts, and thank you to all of the community members who helped get this done.
+
 ### Added
 
 - Add support for `publicPath` to enable serving static assets from different locations ([0b31496](https://github.com/facebook/react-native/commit/0b31496) by [@gdborton](https://github.com/gdborton))
@@ -29,31 +31,7 @@
 
 ### Removed
 
-- Remove view managers from @ReactModuleList ([c91a2b3](https://github.com/facebook/react-native/commit/c91a2b3) by [@axe-fb](https://github.com/axe-fb))
-- Remove undefined value on init cli command (#22045) ([58732a8](https://github.com/facebook/react-native/commit/58732a8) by [@ignacioola](https://github.com/ignacioola))
-- Remove createReactClass from SwipeableRow (#21876) ([14e1628](https://github.com/facebook/react-native/commit/14e1628) by [@exced](https://github.com/exced))
-- Remove var in Libraries/emitter/* (#22087) ([cf70870](https://github.com/facebook/react-native/commit/cf70870) by [@Tnarita0000](https://github.com/Tnarita0000))
-- Remove var in Libraries/vendor/core/merge.js (#22108) ([3f069f3](https://github.com/facebook/react-native/commit/3f069f3) by [@yushimatenjin](https://github.com/yushimatenjin))
-- Remove var in Libraries/Utilities/MatrixMath.js (#22111) ([368518e](https://github.com/facebook/react-native/commit/368518e) by [@ggtmtmgg](https://github.com/ggtmtmgg))
-- Remove var in Libraries/Utilities/buildStyleInterpolator.js (#22112) ([b01bf06](https://github.com/facebook/react-native/commit/b01bf06) by [@mottox2](https://github.com/mottox2))
-- Remove unused styles (#22083) ([ffd7195](https://github.com/facebook/react-native/commit/ffd7195) by [@vcalvello](https://github.com/vcalvello))
-- Fix `no-shadow` eslint warning & remove var (#22124) ([f8040ed](https://github.com/facebook/react-native/commit/f8040ed) by [@Tnarita0000](https://github.com/Tnarita0000))
-- Removed unnecessary code in Libraries/Text/Text.js (#22132) ([0d4f627](https://github.com/facebook/react-native/commit/0d4f627) by [@ifsnow](https://github.com/ifsnow))
-- Remove var in /Libralies/Experimental/IncrementalPresenter.js (#22144) ([cc90c20](https://github.com/facebook/react-native/commit/cc90c20) by [@soyanakagawa](https://github.com/soyanakagawa))
-- Remove var in Libraries/Utilities/deepFreezeAndThrowOnMutationInDev.js (#22126) ([0a39cda](https://github.com/facebook/react-native/commit/0a39cda) by [@nabettu](https://github.com/nabettu))
-- Remove unused loads from xplat. ([9b781bd](https://github.com/facebook/react-native/commit/9b781bd) by [@ttsugriy](https://github.com/ttsugriy))
-- Remove dynamic exception specification in RN MethodCall.h/cpp ([5b71408](https://github.com/facebook/react-native/commit/5b71408) by [@yiding](https://github.com/yiding))
-- NIT remove unnecessary cast in measure ([2dbe769](https://github.com/facebook/react-native/commit/2dbe769) by [@mdvacca](https://github.com/mdvacca))
-- Remove useless additionnal blur call (#22156) ([27cfba2](https://github.com/facebook/react-native/commit/27cfba2))
-- `YGNodeComputeFlexBasisForChildren`: remove output param ([8f283b9](https://github.com/facebook/react-native/commit/8f283b9) by [@davidaurelio](https://github.com/davidaurelio))
-
 #### Android specific
-
-- Remove AndroidManifest.xml from UIManager (#22044) ([7f79254](https://github.com/facebook/react-native/commit/7f79254) by [@radeno](https://github.com/radeno))
-- remove var in ReactAndroid/src/androidTest (#22136) ([0beb1cc](https://github.com/facebook/react-native/commit/0beb1cc) by [@nd-02110114](https://github.com/nd-02110114))
-- remove var in ReactAndroid/src/androidTest. (#22137) ([6f781d9](https://github.com/facebook/react-native/commit/6f781d9) by [@nd-02110114](https://github.com/nd-02110114))
-- Remove var in ReactAndroid/src/androidTest (#22135) ([9d13233](https://github.com/facebook/react-native/commit/9d13233) by [@nd-02110114](https://github.com/nd-02110114))
-- remove createReactClass from ToolbarAndroid/ToolbarAndroid.android.js (#21893) ([147c38a](https://github.com/facebook/react-native/commit/147c38a) by [@nd-02110114](https://github.com/nd-02110114))
 
 #### iOS specific
 
@@ -61,35 +39,24 @@
 
 - Fix potential UI thread stalling scenario from Yoga JNI bindings ([2a8f6c3](https://github.com/facebook/react-native/commit/2a8f6c3) by [@davidaurelio](https://github.com/davidaurelio))
 - Fix crash happening due to race condition around bridge cxx module registry ([6770b53](https://github.com/facebook/react-native/commit/6770b53) and [1c31919](https://github.com/facebook/react-native/commit/1c31919) by [@PeteTheHeat](https://github.com/PeteTheHeat))
-- Fix View/Text displayName (#21950) ([7a914fc](https://github.com/facebook/react-native/commit/7a914fc) by [@rajivshah3](https://github.com/rajivshah3))
-- Fix the lazily LoadedView to avoid weird naming issues ([cae2534](https://github.com/facebook/react-native/commit/cae2534) by [@spredolac](https://github.com/spredolac))
-- Fix relayout of inline views (#21968) ([798517a](https://github.com/facebook/react-native/commit/798517a) by [@rigdern](https://github.com/rigdern))
-- Fix ReactRootView mount/unmount race condition ([309f85a](https://github.com/facebook/react-native/commit/309f85a) by [@ayc1](https://github.com/ayc1))
-- Fix IllegalStateException when dismissing DialogManager ([38e01a2](https://github.com/facebook/react-native/commit/38e01a2) by [@mdvacca](https://github.com/mdvacca))
-- TouchEventEmitter: Fix assignment of Y coordinates (#22160) ([6b6a27c](https://github.com/facebook/react-native/commit/6b6a27c) by [@empyrical](https://github.com/empyrical))
-- Fix build error caused by -Werror=class-memaccess (#823) ([31439f8](https://github.com/facebook/react-native/commit/31439f8) by [@hooddanielc](https://github.com/hooddanielc))
-- Fix IllegalArgumentException when dismissing ReactModalHostView ([e57ad4e](https://github.com/facebook/react-native/commit/e57ad4e) by [@mdvacca](https://github.com/mdvacca))
-- Fix ReactInstanceManager deadlock ([df7e8c6](https://github.com/facebook/react-native/commit/df7e8c6) by [@ayc1](https://github.com/ayc1))
-- Fix ReactRootView attachRootView race condition ([be282b5](https://github.com/facebook/react-native/commit/be282b5) by [@ayc1](https://github.com/ayc1))
-- UITemplateProcessor: Fix case of include path (#22239) ([0436bfc](https://github.com/facebook/react-native/commit/0436bfc) by [@empyrical](https://github.com/empyrical))
-- Fix regression in StyleSheet.setStyleAttributePreprocessor (#22262) ([0408533](https://github.com/facebook/react-native/commit/0408533) by [@brentvatne](https://github.com/brentvatne))
-- Fix crash when releasing RN views ([83405ff](https://github.com/facebook/react-native/commit/83405ff) by [@ayc1](https://github.com/ayc1))
-- Fix crash when removing root nodes ([b649fa9](https://github.com/facebook/react-native/commit/b649fa9) by [@ayc1](https://github.com/ayc1))
-- Fix React Native AsyncMode and DevTools ([aacb06c](https://github.com/facebook/react-native/commit/aacb06c) by [@bvaughn](https://github.com/bvaughn))
-- Replace global.alert use to fix eslint warnings (#22184) ([55994f5](https://github.com/facebook/react-native/commit/55994f5) by [@vcalvello](https://github.com/vcalvello))
-- Fix jsc regression.Fixes #22274 (#22293) ([f22473e](https://github.com/facebook/react-native/commit/f22473e) by [@gengjiawen](https://github.com/gengjiawen))
-- Fix allocating Buffer in early commit (#22379) ([02a3517](https://github.com/facebook/react-native/commit/02a3517) by [@radeno](https://github.com/radeno))
-- Fix jsc regression.Fixes #22274 (#22293) ([d4d457b](https://github.com/facebook/react-native/commit/d4d457b) by [@gengjiawen](https://github.com/gengjiawen))
+- Fix **View** and **Text**'s displayName; show the specific name rather than generic "Component" ([7a914fc](https://github.com/facebook/react-native/commit/7a914fc) by [@rajivshah3](https://github.com/rajivshah3))
+- Fix `react-native init --help` so that it doesn't return `undefined` ([58732a8](https://github.com/facebook/react-native/commit/58732a8) by [@ignacioola](https://github.com/ignacioola))
 
 #### Android specific
 
-- Fix incorrect merged asset path with flavor for Android Gradle Plugin 3.2. (#21782) ([e90319e](https://github.com/facebook/react-native/commit/e90319e) by [@yatatsu](https://github.com/yatatsu))
+- Fix crash when removing root nodes ([b649fa9](https://github.com/facebook/react-native/commit/b649fa9) by [@ayc1](https://github.com/ayc1))
+- Fix various **ReactInstanceManager** deadlocks and race conditions ([df7e8c6](https://github.com/facebook/react-native/commit/df7e8c6), [309f85a](https://github.com/facebook/react-native/commit/309f85a), and [be282b5](https://github.com/facebook/react-native/commit/be282b5) by [@ayc1](https://github.com/ayc1))
+- Fix IllegalArgumentException when dismissing ReactModalHostView ([e57ad4e](https://github.com/facebook/react-native/commit/e57ad4e) by [@mdvacca](https://github.com/mdvacca))
+- Fix incorrect merged asset path with flavor for Android Gradle Plugin 3.2 ([e90319e](https://github.com/facebook/react-native/commit/e90319e) by [@yatatsu](https://github.com/yatatsu))
 - Fix args passed when measuring Androidwitch ([54e8d6c](https://github.com/facebook/react-native/commit/54e8d6c) by [@axe-fb](https://github.com/axe-fb))
-- Fixed HTTP connection timeout on Android (#22164) ([a508134](https://github.com/facebook/react-native/commit/a508134))
-- Fix compatibility issue for android 16 device.Fixes #22294 (#22295) ([5939d07](https://github.com/facebook/react-native/commit/5939d07) by [@gengjiawen](https://github.com/gengjiawen))
+- Fix HTTP connection timeout ([a508134](https://github.com/facebook/react-native/commit/a508134))
+- Fix compatibility issue for Android 16 device.Fixes #22294 ([5939d07](https://github.com/facebook/react-native/commit/5939d07) by [@gengjiawen](https://github.com/gengjiawen))
+- Fix IllegalStateException when dismissing DialogManager ([38e01a2](https://github.com/facebook/react-native/commit/38e01a2) by [@mdvacca](https://github.com/mdvacca))
+- Fix jsc regression ([f22473e](https://github.com/facebook/react-native/commit/f22473e) and [d4d457b](https://github.com/facebook/react-native/commit/d4d457b) by [@gengjiawen](https://github.com/gengjiawen))
 
 #### iOS specific
 
+- Fix case where content of inline views didn't get relaid out ([798517a](https://github.com/facebook/react-native/commit/798517a) by [@rigdern](https://github.com/rigdern))
 - Fix issue with **ImagePickerIOS**'s inconsistent image when using the front-facing camera ([4aeea4d](https://github.com/facebook/react-native/commit/4aeea4d))
 - Fix LazilyLoadView lookup so that it can drop RCT prefixes. ([6534718](https://github.com/facebook/react-native/commit/6534718) by [@dshahidehpour](https://github.com/dshahidehpour))
 - Add another guard to lazilyLoadView ([d7865eb](https://github.com/facebook/react-native/commit/d7865eb) by [@mmmulani](https://github.com/mmmulani))
