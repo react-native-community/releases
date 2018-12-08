@@ -4,22 +4,16 @@
 
 ### Added
 
-- Added lock around RN module initialization to fix crash ([6770b53](https://github.com/facebook/react-native/commit/6770b53) by [@PeteTheHeat](https://github.com/PeteTheHeat))
-- Added locking around RN bridge cxx module registry to avoid crash ([1c31919](https://github.com/facebook/react-native/commit/1c31919) by [@PeteTheHeat](https://github.com/PeteTheHeat))
-- Add Yoga JNI bindings to libcoldstart ([2a8f6c3](https://github.com/facebook/react-native/commit/2a8f6c3) by [@davidaurelio](https://github.com/davidaurelio))
-- Adds support for `publicPath` to enable serving assets from different locations. (#299) ([0b31496](https://github.com/facebook/react-native/commit/0b31496) by [@gdborton](https://github.com/gdborton))
-- Add another guard to lazilyLoadView ([d7865eb](https://github.com/facebook/react-native/commit/d7865eb) by [@mmmulani](https://github.com/mmmulani))
+- Add support for `publicPath` to enable serving static assets from different locations ([0b31496](https://github.com/facebook/react-native/commit/0b31496) by [@gdborton](https://github.com/gdborton))
 
 #### Android specific
 
 #### iOS specific
 
-- iOS: add moduleForNameForcedLoad: to lookup modules by name and force load them ([d7a0c44](https://github.com/facebook/react-native/commit/d7a0c44) by [@fkgozali](https://github.com/fkgozali))
+- Add `moduleForName: lazilyLoadIfNecessary` to **RCTBridge.h** to lookup modules by name and force load them ([d7a0c44](https://github.com/facebook/react-native/commit/d7a0c44) by [@fkgozali](https://github.com/fkgozali))
 
 ### Changed
 
-- Changed front-facing camera so that it shows consistent image during capture and preview ([4aeea4d](https://github.com/facebook/react-native/commit/4aeea4d))
-- then to thenValue changes to allow deletion of value-taking continuation form of then ([1f32b5d](https://github.com/facebook/react-native/commit/1f32b5d) by [@LeeHowes](https://github.com/LeeHowes))
 - Major improvements to Flow types for Core Components ([499c195](https://github.com/facebook/react-native/commit/499c195), [fbc5a4f](https://github.com/facebook/react-native/commit/fbc5a4f), [f9050e0](https://github.com/facebook/react-native/commit/f9050e0), [6476151](https://github.com/facebook/react-native/commit/6476151), [c03fc40](https://github.com/facebook/react-native/commit/c03fc40), [69213ee](https://github.com/facebook/react-native/commit/69213ee), [136dfc8](https://github.com/facebook/react-native/commit/136dfc8), [3c0211b](https://github.com/facebook/react-native/commit/3c0211b), [c127000](https://github.com/facebook/react-native/commit/c127000), [636e146](https://github.com/facebook/react-native/commit/636e146), [6fa997d](https://github.com/facebook/react-native/commit/6fa997d), [35a65cd](https://github.com/facebook/react-native/commit/35a65cd), [7927497](https://github.com/facebook/react-native/commit/7927497), [45c5183](https://github.com/facebook/react-native/commit/45c5183), [a97d104](https://github.com/facebook/react-native/commit/a97d104), [fb4825a](https://github.com/facebook/react-native/commit/fb4825a), [84c5416](https://github.com/facebook/react-native/commit/84c5416), [3649a50](https://github.com/facebook/react-native/commit/3649a50) by [@mottox2](https://github.com/mottox2), [@saitoxu](https://github.com/saitoxu), [@RSNara](https://github.com/RSNara), [@watanabeyu](https://github.com/watanabeyu), [@Tnarita0000](https://github.com/Tnarita0000), [@exced](https://github.com/exced), [@nd-02110114](https://github.com/nd-02110114), [@flowkraD](https://github.com/flowkraD))
 - Flow dependency is now at v0.86.0 ([8fb228f](https://github.com/facebook/react-native/commit/8fb228f) by [@panagosg7](https://github.com/panagosg7))
 
@@ -35,7 +29,6 @@
 
 ### Removed
 
-- Fix checkout_code: Remove Metro cache check (#21998) ([bb93abf](https://github.com/facebook/react-native/commit/bb93abf) by [@hramos](https://github.com/hramos))
 - Remove view managers from @ReactModuleList ([c91a2b3](https://github.com/facebook/react-native/commit/c91a2b3) by [@axe-fb](https://github.com/axe-fb))
 - Remove undefined value on init cli command (#22045) ([58732a8](https://github.com/facebook/react-native/commit/58732a8) by [@ignacioola](https://github.com/ignacioola))
 - Remove createReactClass from SwipeableRow (#21876) ([14e1628](https://github.com/facebook/react-native/commit/14e1628) by [@exced](https://github.com/exced))
@@ -66,6 +59,8 @@
 
 ### Fixed
 
+- Fix potential UI thread stalling scenario from Yoga JNI bindings ([2a8f6c3](https://github.com/facebook/react-native/commit/2a8f6c3) by [@davidaurelio](https://github.com/davidaurelio))
+- Fix crash happening due to race condition around bridge cxx module registry ([6770b53](https://github.com/facebook/react-native/commit/6770b53) and [1c31919](https://github.com/facebook/react-native/commit/1c31919) by [@PeteTheHeat](https://github.com/PeteTheHeat))
 - Fix View/Text displayName (#21950) ([7a914fc](https://github.com/facebook/react-native/commit/7a914fc) by [@rajivshah3](https://github.com/rajivshah3))
 - Fix the lazily LoadedView to avoid weird naming issues ([cae2534](https://github.com/facebook/react-native/commit/cae2534) by [@spredolac](https://github.com/spredolac))
 - Fix relayout of inline views (#21968) ([798517a](https://github.com/facebook/react-native/commit/798517a) by [@rigdern](https://github.com/rigdern))
@@ -95,7 +90,9 @@
 
 #### iOS specific
 
+- Fix issue with **ImagePickerIOS**'s inconsistent image when using the front-facing camera ([4aeea4d](https://github.com/facebook/react-native/commit/4aeea4d))
 - Fix LazilyLoadView lookup so that it can drop RCT prefixes. ([6534718](https://github.com/facebook/react-native/commit/6534718) by [@dshahidehpour](https://github.com/dshahidehpour))
+- Add another guard to lazilyLoadView ([d7865eb](https://github.com/facebook/react-native/commit/d7865eb) by [@mmmulani](https://github.com/mmmulani))
 
 ### Security
 
@@ -196,6 +193,7 @@
 - Defining explicit clang-format for Objective-C part of React Native ([271ace9](https://github.com/facebook/react-native/commit/271ace9) by [@shergin](https://github.com/shergin))
 - iOS: Support inline view truncation (#21456) ([70826db](https://github.com/facebook/react-native/commit/70826db) by [@rigdern](https://github.com/rigdern))
 - iOS TM: RCTEnableJSINativeModule => RCTEnableTurboModule ([aad83cc](https://github.com/facebook/react-native/commit/aad83cc) by [@fkgozali](https://github.com/fkgozali))
+
 ## [0.57.7]
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
