@@ -25,8 +25,8 @@
 - metro dependency is now at v0.49.1 ([f867db3](https://github.com/facebook/react-native/commit/f867db3), [8888295](https://github.com/facebook/react-native/commit/8888295), [31bb551](https://github.com/facebook/react-native/commit/31bb551), [de60e86](https://github.com/facebook/react-native/commit/de60e86), and [a525941](https://github.com/facebook/react-native/commit/a525941) by [@alexkirsz](https://github.com/alexkirsz) and [@rafeca](https://github.com/rafeca))
 - jest dependency is now at v24.0.0-alpha.6 ([1b4fd64](https://github.com/facebook/react-native/commit/1b4fd64), [66aba09](https://github.com/facebook/react-native/commit/66aba09), and [06c13b3](https://github.com/facebook/react-native/commit/06c13b3) by [@rafeca](https://github.com/rafeca) and  [@rubennorte](https://github.com/rubennorte))
 - fbjs-scripts dependency is now at v1.0.0 (#21880) ([cdbf719](https://github.com/facebook/react-native/commit/cdbf719) by [@jmheik](https://github.com/jmheik))
-- folly dependency is now at v2018.10.22.00 ([a316dc6](https://github.com/facebook/react-native/commit/a316dc6) and [a70625a](https://github.com/facebook/react-native/commit/a70625a) by [@Kudo](https://github.com/Kudo))
-- React sync for revisions 4773fdf...3ff2c7c ([0cb59b5](https://github.com/facebook/react-native/commit/0cb59b5) by [@yungsters](https://github.com/yungsters))
+- folly dependency is now at v2018.10.22.00 ([a316dc6](https://github.com/facebook/react-native/commit/a316dc6), [19a7ecc](https://github.com/facebook/react-native/commit/19a7ecc), and [a70625a](https://github.com/facebook/react-native/commit/a70625a) by [@Kudo](https://github.com/Kudo) and [@radko93](https://github.com/radko93))
+- React sync for revisions 4773fdf...6bf5e85 ([0cb59b5](https://github.com/facebook/react-native/commit/0cb59b5) and [e54d1e2](https://github.com/facebook/react-native/commit/e54d1e2) by [@yungsters](https://github.com/yungsters))
 - Clearer error messages when hot reloading ([c787866](https://github.com/facebook/react-native/commit/c787866) by [@alexkirsz](https://github.com/alexkirsz))
 - Allow CxxModules to implement functions which take two callbacks ([8826d8b](https://github.com/facebook/react-native/commit/8826d8b) by [@acoates-ms](https://github.com/acoates-ms))
 
@@ -72,6 +72,7 @@
 - Fix race condition and crash around shutdown of the JSC for iOS 11 and earlier ([bf2500e](https://github.com/facebook/react-native/commit/bf2500e) by [@mhorowitz](https://github.com/mhorowitz))
 - Fix crash in **NetInfo**'s _firstTimeReachability ([eebc8e2](https://github.com/facebook/react-native/commit/eebc8e2) by [@mmmulani](https://github.com/mmmulani))
 - Fix case where inline view is visible even though it should have been truncated ([70826db](https://github.com/facebook/react-native/commit/70826db) by [@rigdern](https://github.com/rigdern))
+- Fix crash with **ScrollView** related to content offsets ([f6566c7](https://github.com/facebook/react-native/commit/f6566c7) by [@shergin](https://github.com/shergin))
 
 ## [0.57.7]
 
@@ -141,7 +142,7 @@ This patch release fixes a number of crashes, resolves build issues (both for iO
 
 - Fix crash in **VirtualizedList** during pagination ([483d4e2](https://github.com/facebook/react-native/commit/483d4e2))
 - Fix polyfilling of **regeneratorRuntime** to avoid setting it to undefined in some situations ([53616e6](https://github.com/facebook/react-native/commit/53616e6) by [@rafeca](https://github.com/rafeca))
-- Fix **View** and **Text**'s `displayName` ([311ba9a](https://github.com/facebook/react-native/commit/311ba9a) by [@rajivshah3](https://github.com/rajivshah3))
+- Fix **View**, **Text**, and **ActivityIndicator**'s `displayName` ([311ba9a](https://github.com/facebook/react-native/commit/311ba9a) and [0b32a65](https://github.com/facebook/react-native/commit/0b32a65) by [@rajivshah3](https://github.com/rajivshah3) and others)
 - Fix crash that happens when a component throws an exception that contains a null message ([e8c9f3c](https://github.com/facebook/react-native/commit/e8c9f3c) by [@mdvacca](https://github.com/mdvacca))
 
 #### Android specific
