@@ -51,9 +51,7 @@
 - Fix `react-native --sourceExts` ([ce86080](https://github.com/facebook/react-native/commit/ce86080) by [@elyalvarado](https://github.com/elyalvarado))
 - Fix accidental showing of **Modal** when `visible` prop is undefined or null ([cc13a73](https://github.com/facebook/react-native/commit/cc13a73) by [@MateusAndrade](https://github.com/MateusAndrade))
 - Fix crash during **VirtualizedList** pagination ([5803772](https://github.com/facebook/react-native/commit/5803772))
-- Fix scenario where removing a module broke the bundle while reloading ([bea57d8](https://github.com/facebook/react-native/commit/bea57d8) by [@alexkirsz](https://github.com/alexkirsz))
-
-TODO: confirm this with alexkirsz; waiting on DM reply
+- Fix scenario where removing a module with remote debugging and Delta bundles may cause incorrect stack traces ([bea57d8](https://github.com/facebook/react-native/commit/bea57d8) by [@alexkirsz](https://github.com/alexkirsz))
 
 #### Android specific
 
@@ -74,12 +72,6 @@ TODO: confirm this with alexkirsz; waiting on DM reply
 - Fix race condition and crash around shutdown of the JSC for iOS 11 and earlier ([bf2500e](https://github.com/facebook/react-native/commit/bf2500e) by [@mhorowitz](https://github.com/mhorowitz))
 - Fix crash in **NetInfo**'s _firstTimeReachability ([eebc8e2](https://github.com/facebook/react-native/commit/eebc8e2) by [@mmmulani](https://github.com/mmmulani))
 - Fix case where inline view is visible even though it should have been truncated ([70826db](https://github.com/facebook/react-native/commit/70826db) by [@rigdern](https://github.com/rigdern))
-
-### Unknown
-
-- InitializeCore is now modular, allowing for you to pick and choose what's desired ([df2eaa9](https://github.com/facebook/react-native/commit/df2eaa9) by [@ejanzer](https://github.com/ejanzer))
-
-TODO: what's the dev impact of this? Seems significant, but I can't find references of how this is used by devs in either brownfield or greenfield
 
 ## [0.57.7]
 
