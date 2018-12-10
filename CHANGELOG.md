@@ -487,7 +487,7 @@ As mentioned a few times in the past, the core team is reviewing the repository 
 ## [0.56]
 
 Welcome to the June 2018 release of React Native!
-Over 60 contributors made [816 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March - and we are extremely grateful to every single one of you.
+Over 60 contributors made [821 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March - and we are extremely grateful to every single one of you.
 
 As you'll see in a second, this new version has some important **breaking changes** that required a lot of extra efforts to bring to a stable 0.56. This was the main reason behind skipping April and May from the monthly release cycle, but looking forward we are planning on going back to do a rollout every month.
 
@@ -524,6 +524,10 @@ Starting August 2018, new apps submitted to the Play Store will need to target A
 #### `WebView` will only load http(s) URLs by default
 
 Geolocation is disabled by default.
+
+#### Consistently Throw for <Text><View /></Text>
+
+Removes a pitfall that people may run into when releasing an app for Android if the bulk of the testing has been performed on iOS only. Nesting a <View> within a <Text> component (e.g. <Text><View /></Text>) is unsupported on Android, but using this pattern on iOS has not thrown errors in the past. With this release, nesting a <View> inside a <Text> will now throw an error on iOS in order to reduce the parity gap between the platforms.
 
 #### Flow improvements, migrating away from PropTypes
 
@@ -760,6 +764,7 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 
 #### iOS specific removals
 
+- Disallow nesting of <View> within <Text> (e.g. <Text><View /></Text>) ([6a1b416](https://github.com/facebook/react-native/commit/6a1b41643a5f5035c61a96263220d11d3462e8f2)
 - Removed deprecated `UIActionSheetDelegate` methods ([5863b56](https://github.com/facebook/react-native/commit/5863b564f84b9fe97b256f8cde0f7f2e1db9b641))
 
 ---
