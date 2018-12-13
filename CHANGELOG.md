@@ -1,5 +1,51 @@
 # Changelog
 
+## [0.57.8]
+
+**NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.3"`.
+
+Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/71) for cherry-picking commits - you can participate to the decision process for the next release [here](https://github.com/react-native-community/react-native-releases/issues/75).
+
+### Added
+
+- Fix: Add displayName to ActivityIndicator (#22417) ([1d8744f](https://github.com/facebook/react-native/commit/1d8744f))
+
+### Changed
+
+- Switch: Improve Accessibility ([83d1e85](https://github.com/facebook/react-native/commit/83d1e85) by [@yungsters](https://github.com/yungsters))
+- React sync for revisions 3ff2c7c...6bf5e85 ([8d1d47a](https://github.com/facebook/react-native/commit/8d1d47a) by [@yungsters](https://github.com/yungsters))
+
+#### iOS specific
+
+- Extend reason message for `RCTFatalException` (#22532) ([ba50151](https://github.com/facebook/react-native/commit/ba50151) by [@zackzachariah](https://github.com/zackzachariah))
+
+### Removed
+
+- Remove trailing slash from origin header if no port is specified (#22290) ([f7e3def](https://github.com/facebook/react-native/commit/f7e3def))
+
+### Fixed
+
+- Fix text alpha bug ([c43b741](https://github.com/facebook/react-native/commit/c43b741) by [@necolas](https://github.com/necolas))
+- fix possible NPE in StatusBarModule ([1b169fc](https://github.com/facebook/react-native/commit/1b169fc) by [@mdvacca](https://github.com/mdvacca))
+- Fixes animated gifs incorrectly looping/not stopping on last frame (#21999) ([95ef882](https://github.com/facebook/react-native/commit/95ef882) by [@staufman](https://github.com/staufman))
+- Fix ListEmptyComponent is rendered upside down when using inverted flag. (#21496) ([30c2fb8](https://github.com/facebook/react-native/commit/30c2fb8) by [@hyochans](https://github.com/hyochans))
+- Fix bug in comparison logic of object property (#22348) ([692fc2e](https://github.com/facebook/react-native/commit/692fc2e) by [@vreality64](https://github.com/vreality64))
+- Fix dispatch of OnLayout event for first render ([3576819](https://github.com/facebook/react-native/commit/3576819) by [@mdvacca](https://github.com/mdvacca))
+- KeyboardAvoidingView: Duration cannot be less then 10ms (#21858) ([472e978](https://github.com/facebook/react-native/commit/472e978))
+- default hitSlop values to 0 (#22281) ([274f5b8](https://github.com/facebook/react-native/commit/274f5b8) by [@Taylor123](https://github.com/Taylor123))
+
+#### iOS specific
+
+- Fixed for supporting mediaPlaybackRequiresUserAction under iOS 10. (#22208) ([79011d7](https://github.com/facebook/react-native/commit/79011d7) by [@ifsnow](https://github.com/ifsnow))
+- Use main.jsbundle in iOS template for production build (#22531) ([8ba5d4c](https://github.com/facebook/react-native/commit/8ba5d4c) by [@radeno](https://github.com/radeno))
+- Use relative path for SCRIPTDIR (#22598) ([0301a2e](https://github.com/facebook/react-native/commit/0301a2e) by [@sunnylqm](https://github.com/sunnylqm))
+- Fix UIScrollView crash ([b739c11](https://github.com/facebook/react-native/commit/b739c11) by [@shergin](https://github.com/shergin))
+- Avoid using `-[UITextView setAttributedString:]` while user is typing (#19809) ([26775d5](https://github.com/facebook/react-native/commit/26775d5))
+
+### Security
+
+- Bump ws package to 1.1.5 due to vulnerability issues (#21769) ([d350f37](https://github.com/facebook/react-native/commit/d350f37) by [@prog1dev](https://github.com/prog1dev))
+
 ## [0.57.7]
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
