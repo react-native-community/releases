@@ -63,7 +63,7 @@
 - Fix websocket properly closing when remote server initiates close ([2e465bc](https://github.com/facebook/react-native/commit/2e465bc) by [@syaau](https://github.com/syaau))
 - Fix compatibility issue for Android 16 device ([5939d07](https://github.com/facebook/react-native/commit/5939d07), [f22473e](https://github.com/facebook/react-native/commit/f22473e), and [d4d457b](https://github.com/facebook/react-native/commit/d4d457b) by [@gengjiawen](https://github.com/gengjiawen))
 - Fix issue where `Image.resizeMode` isn't respected while source is loading, resulting in unexpected padding ([673ef39](https://github.com/facebook/react-native/commit/673ef39) by [@dulmandakh](https://github.com/dulmandakh))
-- Fix Android 16's inverted **ScrollView** so that momentum is in the proper direction ([b971c5b](https://github.com/facebook/react-native/commit/b971c5b) by [@mandrigin](https://github.com/mandrigin))
+- Fix Android 28's inverted **ScrollView** so that momentum is in the proper direction ([b971c5b](https://github.com/facebook/react-native/commit/b971c5b) by [@mandrigin](https://github.com/mandrigin))
 
 #### iOS specific
 
