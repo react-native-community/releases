@@ -248,6 +248,7 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 
 #### Android specific fixes
 
+- reverted [Update bad method](https://github.com/facebook/react-native/commit/1592a8d)
 - Fix accessibility role crash ([139559f](https://github.com/facebook/react-native/commit/139559fc0716a9ab7b78c9524df5eb295d882547) by Haseeb Saeed)
 - Fix accessibilityRole value lookup ([1f96ff6](https://github.com/facebook/react-native/commit/1f96ff62cf786f93c91e6625bf2b819077902251) by [@ayc1](https://github.com/ayc1))
 - Fix DynamicFromMap object pool synchronization ([b0d68c0](https://github.com/facebook/react-native/commit/b0d68c0bb971a44dfdf7722682933f1e96e1cd45) by [@haitaoli](https://github.com/haitaoli))
@@ -289,6 +290,8 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 - Expose enableBabelRuntime config param externally ([a3a69ca](https://github.com/facebook/react-native/commit/a3a69cae348b2bab0ec5ce68a56c6197cfa33ad6) by [@rafeca](https://github.com/rafeca))
 
 #### Android specific additions
+
+- Add test for InterpolatorType ([69a51da](https://github.com/facebook/react-native/commit/69a51da3a1fa0e4d9bfeb54da73f1cdb50dc11d4) by [@ejanzer](https://github.com/ejanzer))
 
 ### Changes: existing functionality that is now different
 
@@ -473,7 +476,7 @@ As mentioned a few times in the past, the core team is reviewing the repository 
      }
    ```
 
-3. Ensure that you have all the babel dependencies to version `^7.0.0` (you may also need to add `"babel-core": "7.0.0-bridge.0"` as a yarn resolution to ensure retro-compatibility)
+3. Ensure that you have all the babel dependencies to version `^7.0.0` (you may also need to add `"babel-core": "7.0.0-bridge.0"` as a yarn resolution to ensure retro-compatibility).  The Babel team has released a tool, [babel-upgrade](https://github.com/babel/babel-upgrade), that should help you in this migration.
 4. If you have a custom packager configuration via `rn-cli.config.js`, you probably need to update it to work with the updated Metro configuration structure (for full detail refer to Metro's [documentation](https://facebook.github.io/metro/docs/en/configuration)); here are some commonly encountered changes to `rn-cli.config.js`:
 
    ```diff
