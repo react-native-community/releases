@@ -330,6 +330,7 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 - Fix CameraRoll.getPhotos() crash on Android if device has a problematic video asset ([2658048](https://github.com/facebook/react-native/commit/265804867cd6f0cd3b164c6ffe91bee08230dcaf) by [@naxel](https://github.com/naxel))
 - Android ScrollView fix for snapToInterval not snapping to end ([1fa7150](https://github.com/facebook/react-native/commit/1fa7150ce984fae57898de0564f176eb02389098) by [@olegbl](https://github.com/olegbl))
 - Fix for InterpolatorType crash ([300ba7a](https://github.com/facebook/react-native/commit/300ba7a87e254a2b044864736525530fa8d46576) by [@ejanzer](https://github.com/ejanzer))
+- Update bad method ([1592a8d](https://github.com/facebook/react-native/commit/1592a8d42411d1f91c8ceb738c0533c1cee73f71) by [@grabbou](https://github.com/grabbou))
 
 #### iOS specific fixes
 
