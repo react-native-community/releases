@@ -2,8 +2,15 @@
 
 ## [0.58.0]
 
-- A lot of community effort in [modernizing](https://github.com/facebook/react-native/issues/21581) and [stengthening flow types](https://github.com/facebook/react-native/issues/22100) for core components. Thank you [@TheSavior](https://github.com/TheSavior) for leading these efforts, and thank you to all of the community members who helped get this done.
-- There was great continued progress towards the new [Fabric re-architecture](https://github.com/react-native-community/discussions-and-proposals/issues/4) this month
+Welcome to the January 2019 release of React Native. There are a number of significant changes in this version, and we'd like to especially call your attention to:
+
+- [Modernizing](https://github.com/facebook/react-native/issues/21581) and [stengthening flow types](https://github.com/facebook/react-native/issues/22100) for core components
+- Break changes to `ScrollView`, `CameraRollView`, and `SwipeableRow` that make it no longer bound to the component instance in certain methods
+- Support for mutual TLS in WebKit
+- Asset serving from directories besides `/assets`
+- Numerous crash fixes and resolutions for unexpected behavior
+
+Thanks to those who gave feedback on our release candidates. If you're interested in helping evaluate our next release, check you our tracking issue [here](data:,TODO%3A%20change%20this%20once%20the%20actual%20issue%20has%20been%20created).
 
 ### Added
 
@@ -16,7 +23,7 @@
 #### iOS specific
 
 - Add `moduleForName: lazilyLoadIfNecessary` to **RCTBridge.h** to lookup modules by name and force load them, plus various improvements to LazyLoading ([d7a0c44](https://github.com/facebook/react-native/commit/d7a0c44), [6534718](https://github.com/facebook/react-native/commit/6534718), [d7865eb](https://github.com/facebook/react-native/commit/d7865eb), [04ea976](https://github.com/facebook/react-native/commit/04ea976), [1f394fa](https://github.com/facebook/react-native/commit/1f394fa), [80f92ad](https://github.com/facebook/react-native/commit/80f92ad), and [81b74ec](https://github.com/facebook/react-native/commit/81b74ec) by [@dshahidehpour](https://github.com/dshahidehpour), [@fkgozali](https://github.com/fkgozali), and [@mmmulani](https://github.com/mmmulani))
-- Add ability for **WebView** to `setClientAuthenticationCredential` when `useWebKit={true}` for mutual TLS authentication ([8911353](https://github.com/facebook/react-native/commit/8911353) by [@mjhu](https://github.com/mjhu))rf
+- Add ability for **WebView** to `setClientAuthenticationCredential` when `useWebKit={true}` for mutual TLS authentication ([8911353](https://github.com/facebook/react-native/commit/8911353) by [@mjhu](https://github.com/mjhu))
 
 ### Changed
 
