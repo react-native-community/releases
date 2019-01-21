@@ -144,7 +144,6 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 
 ### Changes: existing functionality that is now different
 
-- Do not use fbjs/emptyObject ([7541655](https://github.com/facebook/react-native/commit/75416553981a63e34635492c768c5a7763bf687b) by [@alunyov](https://github.com/alunyov))
 - Add deprecation notice to SwipeableListView ([99471f8](https://github.com/facebook/react-native/commit/99471f87b944b26bbdaa0fb0881db91c1118b741) by [@TheSavior](https://github.com/TheSavior))
 
 #### Android specific changes
@@ -180,10 +179,6 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 #### iOS specific fixes
 
 - Fix issue when inserting text at 0 when maxLength is set ([36507e4](https://github.com/facebook/react-native/commit/36507e4a3c2fa58dcfdc9bd389b37536c66006d0) by [@ejanzer](https://github.com/ejanzer))
-
-### Removed: features that have been removed; these are breaking
-
-- Remove TimerMixin from ListView ([8ceb158](https://github.com/facebook/react-native/commit/8ceb1586ee596a1bdf44bbb8e4c6ab54cbaa7c8b) by [@exced](https://github.com/exced))
 
 ### Known issues
 
@@ -223,12 +218,9 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 - Update to Detox 9 ([47a1b04](https://github.com/facebook/react-native/commit/47a1b0461b92ca9146050f4770b6030b4de2ec32) by [@kelset](https://github.com/kelset))
 - Add Deprecation Warning to ListView ([25a3cff](https://github.com/facebook/react-native/commit/25a3cff5a71b8f04a613f5987b90a56a82b960e8) by [@TheSavior](https://github.com/TheSavior))
 - Deprecate legacyImplementation of FlatList ([131db26](https://github.com/facebook/react-native/commit/131db26cbd8c45dd08941e8a9677f7eb9165f080) by [@TheSavior](https://github.com/TheSavior))
-- Skip flaky Animated test ([c45007b](https://github.com/facebook/react-native/commit/c45007b771d469c503fe85e2ed13e0d871ea08c8) by [@TheSavior](https://github.com/TheSavior))
-- Move RN's DEFS.bzl to tools and rename to rn_defs.bzl ([5468aee](https://github.com/facebook/react-native/commit/5468aeef0397290720e91fce1508a57945116c63) by Jonathan Kim)
 
 #### Android specific changes
 
-- Simplify OSS enums ([0df8e7d](https://github.com/facebook/react-native/commit/0df8e7d65b62544d6b9c34fba069466c23437602) by [@ejanzer](https://github.com/ejanzer))
 - bump Android NDK to r17c ([b7d0594](https://github.com/facebook/react-native/commit/b7d0594dfc6ad3b48e21dfa2ffe20c431669483d) by [@dulmandakh](https://github.com/dulmandakh))
 - Resolve protocol http, https when not in lowercase ([09178f8](https://github.com/facebook/react-native/commit/09178f8bb905e3c305f84833bdfc8d4c12f66618) by [@hyunjongL](https://github.com/hyunjongL))
 - Normalize scheme for URL on Android ([b1aed4d](https://github.com/facebook/react-native/commit/b1aed4d376e39fafd3d43f0fb156b30211c9b007) by [@radeno](https://github.com/radeno))
@@ -240,8 +232,6 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 ### Fixed: bugs that have been resolved
 
 - Fix deprecation warning message in Switch ([e7ea1f8](https://github.com/facebook/react-native/commit/e7ea1f840cc66bcc25113f0a8bbda1737529fc9f) by [@radko93](https://github.com/radko93))
-- RN: Fix `ReactNativeViewAttributes` Type Bugs ([5ec4bab](https://github.com/facebook/react-native/commit/5ec4bab51ddbe0f90a82a115ed3cd0eaeef7344f) by [@yungsters](https://github.com/yungsters))
-- Fix rntester buck build ([31c398e](https://github.com/facebook/react-native/commit/31c398ec283d8a1154729780a76a56b40270092d) by [@mmmulani](https://github.com/mmmulani))
 
 #### Android specific fixes
 
@@ -260,10 +250,6 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 - Fix artifacting on RN-drawn borders with asymmetric radii ([dba2235](https://github.com/facebook/react-native/commit/dba2235d95e46514206bcfaefc7e965193536fe8) by [@jamesreggio](https://github.com/jamesreggio))
 - check isAvailable key on simulator object ([9e6212a](https://github.com/facebook/react-native/commit/9e6212a8186c8f9585394b5f950861d146fec4ca) by [@antonychan](https://github.com/antonychan))
 - ios-simulator: change default iphone version ([1d1a41e](https://github.com/facebook/react-native/commit/1d1a41e303c0af5acc1e05b2f5c7928809e6bf62) by Vitor Capretz)
-
-### Removed: features that have been removed; these are breaking
-
-- Remove sinon dependency ([641f7e8](https://github.com/facebook/react-native/commit/641f7e8033c43dd5efae5a5ad1edad06d139f4b2) by [@rafeca](https://github.com/rafeca))
 
 ### Known issues
 
