@@ -19,6 +19,8 @@ Thanks to those who gave feedback on our release candidates. If you're intereste
 #### Android specific
 
 - Bundler server host can now be set using Android System Properties, making for easier debugging across multiple apps or app installs `adb shell setprop metro.host` ([e02a154](https://github.com/facebook/react-native/commit/e02a154) by [@stepanhruda](https://github.com/stepanhruda))
+- Native Modules can now reject a promise with an additional `WritableMap` arg for extra properties (`userInfo`). See the interface defined in [`Promise.java`](https://github.com/facebook/react-native/blob/60b3942389be508935589df41c2a7203922cc5a7/ReactAndroid/src/main/java/com/facebook/react/bridge/Promise.java) for available methods. This is accessible in JavaScript as `Error.userInfo`. This is to match iOS's existing `Error.userInfo` behaviour. See PR for examples. (#20940 by @Salakar)	
+- Native Modules now expose a `nativeStackAndroid` property to promises rejected with an Exception/Throwable - making native error stacks available inside Javascript: `Error.nativeStackAndroid`. This is to match iOS's existing `Error.nativeStackIOS` support. See PR for examples. (#20940 by @Salakar)	
 
 #### iOS specific
 
