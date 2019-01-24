@@ -1,5 +1,93 @@
 # Changelog
 
+## [0.58.0]
+
+Welcome to the January 2019 release of React Native. There are a number of significant changes in this version, and we'd like to especially call your attention to:
+
+- [Modernizing](https://github.com/facebook/react-native/issues/21581) and [stengthening flow types](https://github.com/facebook/react-native/issues/22100) for core components
+- Break changes to `ScrollView`, `CameraRollView`, and `SwipeableRow` that make it no longer bound to the component instance in certain methods
+- Support for mutual TLS in WebKit
+- Asset serving from directories besides `/assets`
+- Numerous crash fixes and resolutions for unexpected behavior
+
+Thanks to those who gave feedback on our release candidates. If you're interested in helping evaluate our next release, check you our tracking issue [here](data:,TODO%3A%20change%20this%20once%20the%20actual%20issue%20has%20been%20created).
+
+### Added
+
+- Add support for `publicPath` to enable serving static assets from different locations ([0b31496](https://github.com/facebook/react-native/commit/0b31496) by [@gdborton](https://github.com/gdborton))
+
+#### Android specific
+
+- Bundler server host can now be set using Android System Properties, making for easier debugging across multiple apps or app installs `adb shell setprop metro.host` ([e02a154](https://github.com/facebook/react-native/commit/e02a154) by [@stepanhruda](https://github.com/stepanhruda))
+- Native Modules can now reject a promise with an additional `WritableMap` arg for extra properties (`userInfo`). See the interface defined in [`Promise.java`](https://github.com/facebook/react-native/blob/60b3942389be508935589df41c2a7203922cc5a7/ReactAndroid/src/main/java/com/facebook/react/bridge/Promise.java) for available methods. This is accessible in JavaScript as `Error.userInfo`. This is to match iOS's existing `Error.userInfo` behaviour. See PR for examples. (#20940 by @Salakar)	
+- Native Modules now expose a `nativeStackAndroid` property to promises rejected with an Exception/Throwable - making native error stacks available inside Javascript: `Error.nativeStackAndroid`. This is to match iOS's existing `Error.nativeStackIOS` support. See PR for examples. (#20940 by @Salakar)	
+
+#### iOS specific
+
+- Add `moduleForName: lazilyLoadIfNecessary` to **RCTBridge.h** to lookup modules by name and force load them, plus various improvements to LazyLoading ([d7a0c44](https://github.com/facebook/react-native/commit/d7a0c44), [6534718](https://github.com/facebook/react-native/commit/6534718), [d7865eb](https://github.com/facebook/react-native/commit/d7865eb), [04ea976](https://github.com/facebook/react-native/commit/04ea976), [1f394fa](https://github.com/facebook/react-native/commit/1f394fa), [80f92ad](https://github.com/facebook/react-native/commit/80f92ad), and [81b74ec](https://github.com/facebook/react-native/commit/81b74ec) by [@dshahidehpour](https://github.com/dshahidehpour), [@fkgozali](https://github.com/fkgozali), and [@mmmulani](https://github.com/mmmulani))
+- Add ability for **WebView** to `setClientAuthenticationCredential` when `useWebKit={true}` for mutual TLS authentication ([8911353](https://github.com/facebook/react-native/commit/8911353) by [@mjhu](https://github.com/mjhu))
+
+### Changed
+
+- Major improvements to Flow types for Core Components ([499c195](https://github.com/facebook/react-native/commit/499c195), [fbc5a4f](https://github.com/facebook/react-native/commit/fbc5a4f), [f9050e0](https://github.com/facebook/react-native/commit/f9050e0), [6476151](https://github.com/facebook/react-native/commit/6476151), [c03fc40](https://github.com/facebook/react-native/commit/c03fc40), [69213ee](https://github.com/facebook/react-native/commit/69213ee), [136dfc8](https://github.com/facebook/react-native/commit/136dfc8), [3c0211b](https://github.com/facebook/react-native/commit/3c0211b), [c127000](https://github.com/facebook/react-native/commit/c127000), [636e146](https://github.com/facebook/react-native/commit/636e146), [6fa997d](https://github.com/facebook/react-native/commit/6fa997d), [35a65cd](https://github.com/facebook/react-native/commit/35a65cd), [7927497](https://github.com/facebook/react-native/commit/7927497), [45c5183](https://github.com/facebook/react-native/commit/45c5183), [a97d104](https://github.com/facebook/react-native/commit/a97d104), [fb4825a](https://github.com/facebook/react-native/commit/fb4825a), [84c5416](https://github.com/facebook/react-native/commit/84c5416), [3649a50](https://github.com/facebook/react-native/commit/3649a50) by [@mottox2](https://github.com/mottox2), [@saitoxu](https://github.com/saitoxu), [@RSNara](https://github.com/RSNara), [@watanabeyu](https://github.com/watanabeyu), [@Tnarita0000](https://github.com/Tnarita0000), [@exced](https://github.com/exced), [@nd-02110114](https://github.com/nd-02110114), [@flowkraD](https://github.com/flowkraD))
+- Many public components were converted to ES6 classes ([ScrollView](https://github.com/facebook/react-native/commit/221e2fe4095bc9ae15878725bdac4071d53e61f5) by [@thymikee](https://github.com/thymikee), [CameraRollView](https://github.com/facebook/react-native/pull/21619), [SwipeableRow](https://github.com/facebook/react-native/pull/21876/files) and [ProgressBarAndroid](https://github.com/facebook/react-native/pull/21874) by [@exceed](https://github.com/exceed), [ProgressViewIOS](https://github.com/facebook/react-native/pull/21588) by [@empyrical](https://github.com/empyrical), [SegmentedControlIOS](https://github.com/facebook/react-native/pull/21888/files), [ToolbarAndroid](https://github.com/facebook/react-native/pull/21893/files) by [@nd-02110114](https://github.com/nd-02110114)
+- Flow dependency is now at v0.86.0 ([8fb228f](https://github.com/facebook/react-native/commit/8fb228f) by [@panagosg7](https://github.com/panagosg7))
+- metro dependency is now at v0.49.1 ([f867db3](https://github.com/facebook/react-native/commit/f867db3), [8888295](https://github.com/facebook/react-native/commit/8888295), [31bb551](https://github.com/facebook/react-native/commit/31bb551), [de60e86](https://github.com/facebook/react-native/commit/de60e86), and [a525941](https://github.com/facebook/react-native/commit/a525941) by [@alexkirsz](https://github.com/alexkirsz) and [@rafeca](https://github.com/rafeca))
+- jest dependency is now at v24.0.0-alpha.6 ([1b4fd64](https://github.com/facebook/react-native/commit/1b4fd64), [66aba09](https://github.com/facebook/react-native/commit/66aba09), and [06c13b3](https://github.com/facebook/react-native/commit/06c13b3) by [@rafeca](https://github.com/rafeca) and  [@rubennorte](https://github.com/rubennorte))
+- fbjs-scripts dependency is now at v1.0.0 (#21880) ([cdbf719](https://github.com/facebook/react-native/commit/cdbf719) by [@jmheik](https://github.com/jmheik))
+- folly dependency is now at v2018.10.22.00 ([a316dc6](https://github.com/facebook/react-native/commit/a316dc6), [19a7ecc](https://github.com/facebook/react-native/commit/19a7ecc), and [a70625a](https://github.com/facebook/react-native/commit/a70625a) by [@Kudo](https://github.com/Kudo) and [@radko93](https://github.com/radko93))
+- React sync for revisions 4773fdf...6bf5e85 ([0cb59b5](https://github.com/facebook/react-native/commit/0cb59b5) and [e54d1e2](https://github.com/facebook/react-native/commit/e54d1e2) by [@yungsters](https://github.com/yungsters))
+- Clearer error messages when hot reloading ([c787866](https://github.com/facebook/react-native/commit/c787866) by [@alexkirsz](https://github.com/alexkirsz))
+- Allow CxxModules to implement functions which take two callbacks ([8826d8b](https://github.com/facebook/react-native/commit/8826d8b) by [@acoates-ms](https://github.com/acoates-ms))
+
+#### Breaking Changes
+
+- Public methods of components converted to ES6 classes are no longer bound to their component instance. For `ScrollView`, the affected methods are `setNativeProps`, `getScrollResponder`, `getScrollableNode`, `getInnerViewNode`, `scrollTo`, `scrollToEnd`, `scrollWithoutAnimationTo`, and `flashScrollIndicators`. For `CameraRollView`, the affected methods are: `rendererChanged`. For `SwipeableRow`, the affected methods are: `close`. Therefore, it is no longer safe to pass these method by reference as callbacks to functions. Auto-binding methods to component instances was a behaviour of `createReactClass` that we decided to not preserve when switching over to ES6 classes.
+
+#### Android specific
+
+- Optimize `PlatformConstants.ServerHost`, `PlatformConstants.isTesting`, and `PlatformConstants.androidID` for performance ([2bf0d54](https://github.com/facebook/react-native/commit/2bf0d54), [339d9d3](https://github.com/facebook/react-native/commit/339d9d3), and [9f9390d](https://github.com/facebook/react-native/commit/9f9390d) by [@stepanhruda](https://github.com/stepanhruda), [@fkgozali](https://github.com/fkgozali), and [@axe-fb](https://github.com/axe-fb))
+
+#### iOS specific
+
+- Suppress yellow box about missing export for native modules ([5431607](https://github.com/facebook/react-native/commit/5431607) by [@fkgozali](https://github.com/fkgozali))
+
+### Removed
+
+- Remove `UIManager.measureViewsInRect()` ([d623679](https://github.com/facebook/react-native/commit/d623679) by [@shergin](https://github.com/shergin))
+
+### Fixed
+
+- Fix potential UI thread stalling scenario from Yoga JNI bindings ([2a8f6c3](https://github.com/facebook/react-native/commit/2a8f6c3) by [@davidaurelio](https://github.com/davidaurelio))
+- Fix crash happening due to race condition around bridge cxx module registry ([6770b53](https://github.com/facebook/react-native/commit/6770b53), [1c31919](https://github.com/facebook/react-native/commit/1c31919), and [188cbb0](https://github.com/facebook/react-native/commit/188cbb0) by [@PeteTheHeat](https://github.com/PeteTheHeat))
+- Fix **View** and **Text**'s displayName; show the specific name rather than generic "Component" ([7a914fc](https://github.com/facebook/react-native/commit/7a914fc) by [@rajivshah3](https://github.com/rajivshah3))
+- Fix `react-native init --help` so that it doesn't return `undefined` ([58732a8](https://github.com/facebook/react-native/commit/58732a8) by [@ignacioola](https://github.com/ignacioola))
+- Fix `react-native --sourceExts` ([ce86080](https://github.com/facebook/react-native/commit/ce86080) by [@elyalvarado](https://github.com/elyalvarado))
+- Fix accidental showing of **Modal** when `visible` prop is undefined or null ([cc13a73](https://github.com/facebook/react-native/commit/cc13a73) by [@MateusAndrade](https://github.com/MateusAndrade))
+- Fix crash during **VirtualizedList** pagination ([5803772](https://github.com/facebook/react-native/commit/5803772))
+- Fix scenario where removing a module with remote debugging and Delta bundles may cause incorrect stack traces ([bea57d8](https://github.com/facebook/react-native/commit/bea57d8) by [@alexkirsz](https://github.com/alexkirsz))
+
+#### Android specific
+
+- Fix crash when removing root nodes ([b649fa9](https://github.com/facebook/react-native/commit/b649fa9) by [@ayc1](https://github.com/ayc1))
+- Fix various **ReactInstanceManager** deadlocks and race conditions ([df7e8c6](https://github.com/facebook/react-native/commit/df7e8c6), [309f85a](https://github.com/facebook/react-native/commit/309f85a), and [be282b5](https://github.com/facebook/react-native/commit/be282b5) by [@ayc1](https://github.com/ayc1))
+- Fix IllegalArgumentException when dismissing ReactModalHostView and DialogManager ([e57ad4e](https://github.com/facebook/react-native/commit/e57ad4e) and [38e01a2](https://github.com/facebook/react-native/commit/38e01a2)by [@mdvacca](https://github.com/mdvacca))
+- Fix incorrect merged asset path with flavor for Android Gradle Plugin 3.2 ([e90319e](https://github.com/facebook/react-native/commit/e90319e) by [@yatatsu](https://github.com/yatatsu))
+- Fix HTTP connection ontimeout callback ([a508134](https://github.com/facebook/react-native/commit/a508134))
+- Fix websocket properly closing when remote server initiates close ([2e465bc](https://github.com/facebook/react-native/commit/2e465bc) by [@syaau](https://github.com/syaau))
+- Fix compatibility issue for Android 16 device ([5939d07](https://github.com/facebook/react-native/commit/5939d07), [f22473e](https://github.com/facebook/react-native/commit/f22473e), and [d4d457b](https://github.com/facebook/react-native/commit/d4d457b) by [@gengjiawen](https://github.com/gengjiawen))
+- Fix issue where `Image.resizeMode` isn't respected while source is loading, resulting in unexpected padding ([673ef39](https://github.com/facebook/react-native/commit/673ef39) by [@dulmandakh](https://github.com/dulmandakh))
+- Fix Android 28's inverted **ScrollView** so that momentum is in the proper direction ([b971c5b](https://github.com/facebook/react-native/commit/b971c5b) by [@mandrigin](https://github.com/mandrigin))
+
+#### iOS specific
+
+- Fix case where content of inline views didn't get relaid out ([798517a](https://github.com/facebook/react-native/commit/798517a) by [@rigdern](https://github.com/rigdern))
+- Fix issue with **ImagePickerIOS**'s inconsistent image when using the front-facing camera ([4aeea4d](https://github.com/facebook/react-native/commit/4aeea4d))
+- Fix race condition and crash around shutdown of the JSC for iOS 11 and earlier ([bf2500e](https://github.com/facebook/react-native/commit/bf2500e) by [@mhorowitz](https://github.com/mhorowitz))
+- Fix crash in **NetInfo**'s _firstTimeReachability ([eebc8e2](https://github.com/facebook/react-native/commit/eebc8e2) by [@mmmulani](https://github.com/mmmulani))
+- Fix case where inline view is visible even though it should have been truncated ([70826db](https://github.com/facebook/react-native/commit/70826db) by [@rigdern](https://github.com/rigdern))
+- Fix crash with **ScrollView** related to content offsets ([f6566c7](https://github.com/facebook/react-native/commit/f6566c7) by [@shergin](https://github.com/shergin))
+
 ## [0.57.8]
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.3"`.
@@ -50,7 +138,7 @@ Thanks everyone who contributed code or participated in the [discussion](https:/
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
 
-This patch release fixes version 0.57.6 about losing focus in `TextInput` because of  [356ac5d](https://github.com/facebook/react-native/commit/356ac5d).
+This patch release fixes version 0.57.6 about losing focus in `TextInput` because of [356ac5d](https://github.com/facebook/react-native/commit/356ac5d).
 
 Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/64) for cherry-picking commits.
 
@@ -114,7 +202,7 @@ This patch release fixes a number of crashes, resolves build issues (both for iO
 
 - Fix crash in **VirtualizedList** during pagination ([483d4e2](https://github.com/facebook/react-native/commit/483d4e2))
 - Fix polyfilling of **regeneratorRuntime** to avoid setting it to undefined in some situations ([53616e6](https://github.com/facebook/react-native/commit/53616e6) by [@rafeca](https://github.com/rafeca))
-- Fix **View** and **Text**'s `displayName` ([311ba9a](https://github.com/facebook/react-native/commit/311ba9a) by [@rajivshah3](https://github.com/rajivshah3))
+- Fix **View**, **Text**, and **ActivityIndicator**'s `displayName` ([311ba9a](https://github.com/facebook/react-native/commit/311ba9a) and [0b32a65](https://github.com/facebook/react-native/commit/0b32a65) by [@rajivshah3](https://github.com/rajivshah3) and others)
 - Fix crash that happens when a component throws an exception that contains a null message ([e8c9f3c](https://github.com/facebook/react-native/commit/e8c9f3c) by [@mdvacca](https://github.com/mdvacca))
 
 #### Android specific
@@ -455,6 +543,10 @@ As mentioned a few times in the past, the core team is reviewing the repository 
 - Whitelist `react-native-dom` in haste/cli config defaults ([c4bcca6](https://github.com/facebook/react-native/commit/c4bcca6) by [@vincentriemer](https://github.com/vincentriemer))
 - In the CLI, don't override `metro.config.js` settings ([3afe711](https://github.com/facebook/react-native/commit/3afe711) by [@rozele](https://github.com/rozele))
 
+#### Breaking Changes
+
+- Public methods of Image (`blur`, `focus`, `measure`, `measureInWindow`, `measureLayout`, `setNativeProps`) are no longer bound to the image component instance. Therefore, it is unsafe to pass these methods by reference (i.e: as callbacks) to functions. So, things like `setTimeout(this._imgRef.focus, 1000)` will no longer work. Please instead do: `setTimout(() => this._imgRef.focus(), 1000)`.
+
 #### Android specific changes
 
 - `Image` source without a uri now returns null ([28c7ccf](https://github.com/facebook/react-native/commit/28c7ccf) by [@himabindugadupudi](https://github.com/himabindugadupudi))
@@ -557,9 +649,9 @@ Starting August 2018, new apps submitted to the Play Store will need to target A
 
 Geolocation is disabled by default.
 
-#### Consistently Throw for <Text><View /></Text>
+#### Consistently Throw for `<Text><View /></Text>`
 
-Removes a pitfall that people may run into when releasing an app for Android if the bulk of the testing has been performed on iOS only. Nesting a <View> within a <Text> component (e.g. <Text><View /></Text>) is unsupported on Android, but using this pattern on iOS has not thrown errors in the past. With this release, nesting a <View> inside a <Text> will now throw an error on iOS in order to reduce the parity gap between the platforms.
+Removes a pitfall that people may run into when releasing an app for Android if the bulk of the testing has been performed on iOS only. Nesting a `<View>` within a `<Text>` component (e.g. `<Text><View /></Text>`) is unsupported on Android, but using this pattern on iOS has not thrown errors in the past. With this release, nesting a `<View>` inside a `<Text>` will now throw an error on iOS in order to reduce the parity gap between the platforms.
 
 #### Flow improvements, migrating away from PropTypes
 
@@ -680,6 +772,10 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 - Rename `Style` to `DangerouslyImpreciseStyle` ([4895c64](https://github.com/facebook/react-native/commit/4895c645ea17ff939811f3d5ec6218cd4e31c5fb))
 - *[BREAKING]* `requireNativeComponent`'s signature has been simplified to only take extraOptions ([820673e](https://github.com/facebook/react-native/commit/820673e), [b549e36](https://github.com/facebook/react-native/commit/b549e36), [28d3778](https://github.com/facebook/react-native/commit/28d3778), [1c90a2b](https://github.com/facebook/react-native/commit/1c90a2b), and [1ab7d49](https://github.com/facebook/react-native/commit/1ab7d49) by [@yungsters](https://github.com/yungsters))
 
+#### Breaking Changes
+
+- Public methods of Text (`blur`, `focus`, `measure`, `measureInWindow`, `measureLayout`, `setNativeProps`) are no longer bound to the text component instance. It is therefore unsafe to pass these methods by reference (i.e: as callbacks) to functions. So, things like `setTimeout(this._txtRef.focus, 1000)` will no longer work. Please instead do: `setTimout(() => this._txtRef.focus(), 1000)`.
+
 ### iOS specific changes
 
 - *[BREAKING]* WebViews now can only use https; do not use it for `file://` ([634e7e1](https://github.com/facebook/react-native/commit/634e7e1) by [@mmmulani](https://github.com/mmmulani))
@@ -796,7 +892,7 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 
 #### iOS specific removals
 
-- Disallow nesting of <View> within <Text> (e.g. <Text><View /></Text>) ([6a1b416](https://github.com/facebook/react-native/commit/6a1b41643a5f5035c61a96263220d11d3462e8f2)
+- Disallow nesting of `<View>` within `<Text>` (e.g. `<Text><View /></Text>`) ([6a1b416](https://github.com/facebook/react-native/commit/6a1b41643a5f5035c61a96263220d11d3462e8f2)
 - Removed deprecated `UIActionSheetDelegate` methods ([5863b56](https://github.com/facebook/react-native/commit/5863b564f84b9fe97b256f8cde0f7f2e1db9b641))
 
 ---
