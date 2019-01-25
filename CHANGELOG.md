@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.58.1]
+
+There were some regressions with developer tools that prevented `react-native run-ios` from working properly in 0.58.0; this patch fix addresses that.
+
 ## [0.58.0]
 
 Welcome to the January 2019 release of React Native. There are a number of significant changes in this version, and we'd like to especially call your attention to:
@@ -9,8 +13,9 @@ Welcome to the January 2019 release of React Native. There are a number of signi
 - Support for mutual TLS in WebKit
 - Asset serving from directories besides `/assets`
 - Numerous crash fixes and resolutions for unexpected behavior
+- TODO: add note about Android support library vs android SDK (default)
 
-Thanks to those who gave feedback on our release candidates. If you're interested in helping evaluate our next release, check you our tracking issue [here](data:,TODO%3A%20change%20this%20once%20the%20actual%20issue%20has%20been%20created).
+Thanks to those who gave feedback on our release candidates. If you're interested in helping evaluate our next release, check you our tracking issue [here](https://github.com/react-native-community/react-native-releases/issues/79).
 
 ### Added
 
