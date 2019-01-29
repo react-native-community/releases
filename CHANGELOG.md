@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.58.3]
+
+This release resolves [these issues](https://github.com/facebook/react-native/compare/v0.58.2...v0.58.3) regarding flowtypes.
+
+## [0.58.2]
+
+This release resolves [these issues](https://github.com/facebook/react-native/compare/v0.58.1...v0.58.2) regarding missed commits from a previous merge.
+
 ## [0.58.1]
 
 There were some regressions with developer tools that prevented `react-native run-ios` from working properly in 0.58.0; this patch fix addresses that.
@@ -13,7 +21,10 @@ Welcome to the January 2019 release of React Native. There are a number of signi
 - Support for mutual TLS in WebKit
 - Asset serving from directories besides `/assets`
 - Numerous crash fixes and resolutions for unexpected behavior
-- TODO: add note about Android support library vs android SDK (default)
+
+Please note that upgrading iOS users, you'll need to manually link `JavaScriptCore.framework`; this is done [here](https://camo.githubusercontent.com/c09cd42747364b498efa7c82fcb73978ba076eae/687474703a2f2f646f63732e6f6e656d6f62696c6573646b2e616f6c2e636f6d2f696f732d61642d73646b2f616464696e672d6672616d65776f726b732e706e67) in XCode.
+
+Additionally for upgrading Android users, please note that Android's target SDK 27 is supported. Work is still underway to land target SDK 28 support, and it will come soon.
 
 Thanks to those who gave feedback on our release candidates. If you're interested in helping evaluate our next release, check you our tracking issue [here](https://github.com/react-native-community/react-native-releases/issues/79).
 
@@ -24,8 +35,8 @@ Thanks to those who gave feedback on our release candidates. If you're intereste
 #### Android specific
 
 - Bundler server host can now be set using Android System Properties, making for easier debugging across multiple apps or app installs `adb shell setprop metro.host` ([e02a154](https://github.com/facebook/react-native/commit/e02a154) by [@stepanhruda](https://github.com/stepanhruda))
-- Native Modules can now reject a promise with an additional `WritableMap` arg for extra properties (`userInfo`). See the interface defined in [`Promise.java`](https://github.com/facebook/react-native/blob/60b3942389be508935589df41c2a7203922cc5a7/ReactAndroid/src/main/java/com/facebook/react/bridge/Promise.java) for available methods. This is accessible in JavaScript as `Error.userInfo`. This is to match iOS's existing `Error.userInfo` behaviour. See PR for examples. (#20940 by @Salakar)	
-- Native Modules now expose a `nativeStackAndroid` property to promises rejected with an Exception/Throwable - making native error stacks available inside Javascript: `Error.nativeStackAndroid`. This is to match iOS's existing `Error.nativeStackIOS` support. See PR for examples. (#20940 by @Salakar)	
+- Native Modules can now reject a promise with an additional `WritableMap` arg for extra properties (`userInfo`). See the interface defined in [`Promise.java`](https://github.com/facebook/react-native/blob/60b3942389be508935589df41c2a7203922cc5a7/ReactAndroid/src/main/java/com/facebook/react/bridge/Promise.java) for available methods. This is accessible in JavaScript as `Error.userInfo`. This is to match iOS's existing `Error.userInfo` behaviour. See PR for examples. (#20940 by @Salakar)
+- Native Modules now expose a `nativeStackAndroid` property to promises rejected with an Exception/Throwable - making native error stacks available inside Javascript: `Error.nativeStackAndroid`. This is to match iOS's existing `Error.nativeStackIOS` support. See PR for examples. (#20940 by @Salakar)
 
 #### iOS specific
 
