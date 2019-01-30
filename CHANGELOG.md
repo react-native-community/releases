@@ -1,6 +1,18 @@
 # Changelog
 
-## [0.58.0]
+## [0.58.3]
+
+This release resolves a regression in **StatusBar** using [these fixes](https://github.com/facebook/react-native/compare/v0.58.2...v0.58.3).
+
+## [0.58.2]
+
+This release fixes issues caused by a short period of missed changes earlier in the release cycle. Those issues have been added to the 0.58 changelog below, as many are inter-twined with the original work.
+
+## [0.58.1]
+
+There were some regressions with developer tools that prevented `react-native run-ios` from working properly in 0.58.0; this patch fix addresses that.
+
+## [0.58]
 
 Welcome to the January 2019 release of React Native. There are a number of significant changes in this version, and we'd like to especially call your attention to:
 
@@ -10,22 +22,27 @@ Welcome to the January 2019 release of React Native. There are a number of signi
 - Asset serving from directories besides `/assets`
 - Numerous crash fixes and resolutions for unexpected behavior
 
-Thanks to those who gave feedback on our release candidates. If you're interested in helping evaluate our next release, check you our tracking issue [here](data:,TODO%3A%20change%20this%20once%20the%20actual%20issue%20has%20been%20created).
+Please note that upgrading iOS users, you'll need to manually link `JavaScriptCore.framework`; this is done [here](https://camo.githubusercontent.com/c09cd42747364b498efa7c82fcb73978ba076eae/687474703a2f2f646f63732e6f6e656d6f62696c6573646b2e616f6c2e636f6d2f696f732d61642d73646b2f616464696e672d6672616d65776f726b732e706e67) in XCode.
+
+Additionally for upgrading Android users, please note that Android's target SDK 27 is supported. Work is still underway to land target SDK 28 support, and it will come soon.
+
+Thanks to those who gave feedback on our release candidates. If you're interested in helping evaluate our next release, check you our tracking issue [here](https://github.com/react-native-community/react-native-releases/issues/79).
 
 ### Added
 
 - Add support for `publicPath` to enable serving static assets from different locations ([0b31496](https://github.com/facebook/react-native/commit/0b31496) by [@gdborton](https://github.com/gdborton))
+- Add **TouchableBounce** now has a simple `bounce()` function that can be used to trigger a bounce without callbacks ([383ea99](https://github.com/facebook/react-native/commit/383ea99))
 
 #### Android specific
 
 - Bundler server host can now be set using Android System Properties, making for easier debugging across multiple apps or app installs `adb shell setprop metro.host` ([e02a154](https://github.com/facebook/react-native/commit/e02a154) by [@stepanhruda](https://github.com/stepanhruda))
-- Native Modules can now reject a promise with an additional `WritableMap` arg for extra properties (`userInfo`). See the interface defined in [`Promise.java`](https://github.com/facebook/react-native/blob/60b3942389be508935589df41c2a7203922cc5a7/ReactAndroid/src/main/java/com/facebook/react/bridge/Promise.java) for available methods. This is accessible in JavaScript as `Error.userInfo`. This is to match iOS's existing `Error.userInfo` behaviour. See PR for examples. (#20940 by @Salakar)	
-- Native Modules now expose a `nativeStackAndroid` property to promises rejected with an Exception/Throwable - making native error stacks available inside Javascript: `Error.nativeStackAndroid`. This is to match iOS's existing `Error.nativeStackIOS` support. See PR for examples. (#20940 by @Salakar)	
+- Native Modules can now reject a promise with an additional `WritableMap` arg for extra properties (`userInfo`). See the interface defined in [`Promise.java`](https://github.com/facebook/react-native/blob/60b3942389be508935589df41c2a7203922cc5a7/ReactAndroid/src/main/java/com/facebook/react/bridge/Promise.java) for available methods. This is accessible in JavaScript as `Error.userInfo`. This is to match iOS's existing `Error.userInfo` behaviour. See PR for examples. (#20940 by @Salakar)
+- Native Modules now expose a `nativeStackAndroid` property to promises rejected with an Exception/Throwable - making native error stacks available inside Javascript: `Error.nativeStackAndroid`. This is to match iOS's existing `Error.nativeStackIOS` support. See PR for examples. (#20940 by @Salakar)
 
 #### iOS specific
 
 - Add `moduleForName: lazilyLoadIfNecessary` to **RCTBridge.h** to lookup modules by name and force load them, plus various improvements to LazyLoading ([d7a0c44](https://github.com/facebook/react-native/commit/d7a0c44), [6534718](https://github.com/facebook/react-native/commit/6534718), [d7865eb](https://github.com/facebook/react-native/commit/d7865eb), [04ea976](https://github.com/facebook/react-native/commit/04ea976), [1f394fa](https://github.com/facebook/react-native/commit/1f394fa), [80f92ad](https://github.com/facebook/react-native/commit/80f92ad), and [81b74ec](https://github.com/facebook/react-native/commit/81b74ec) by [@dshahidehpour](https://github.com/dshahidehpour), [@fkgozali](https://github.com/fkgozali), and [@mmmulani](https://github.com/mmmulani))
-- Add ability for **WebView** to `setClientAuthenticationCredential` when `useWebKit={true}` for mutual TLS authentication ([8911353](https://github.com/facebook/react-native/commit/8911353) by [@mjhu](https://github.com/mjhu))
+- Add ability for **WebView** to `setClientAuthenticationCredential` when `useWebKit={true}` for mutual TLS authentication ([8911353](https://github.com/facebook/react-native/commit/8911353) and [8911353](https://github.com/facebook/react-native/commit/8911353) by [@mjhu](https://github.com/mjhu))
 
 ### Changed
 
@@ -66,6 +83,8 @@ Thanks to those who gave feedback on our release candidates. If you're intereste
 - Fix accidental showing of **Modal** when `visible` prop is undefined or null ([cc13a73](https://github.com/facebook/react-native/commit/cc13a73) by [@MateusAndrade](https://github.com/MateusAndrade))
 - Fix crash during **VirtualizedList** pagination ([5803772](https://github.com/facebook/react-native/commit/5803772))
 - Fix scenario where removing a module with remote debugging and Delta bundles may cause incorrect stack traces ([bea57d8](https://github.com/facebook/react-native/commit/bea57d8) by [@alexkirsz](https://github.com/alexkirsz))
+- Fix regression in **StyleSheet** `setStyleAttributePreprocessor` ([0408533](https://github.com/facebook/react-native/commit/0408533) by [@brentvatne](https://github.com/brentvatne))
+- Fix React Native AsyncMode and DevTools ([aacb06c](https://github.com/facebook/react-native/commit/aacb06c) by [@bvaughn](https://github.com/bvaughn))
 
 #### Android specific
 
@@ -78,6 +97,13 @@ Thanks to those who gave feedback on our release candidates. If you're intereste
 - Fix compatibility issue for Android 16 device ([5939d07](https://github.com/facebook/react-native/commit/5939d07), [f22473e](https://github.com/facebook/react-native/commit/f22473e), and [d4d457b](https://github.com/facebook/react-native/commit/d4d457b) by [@gengjiawen](https://github.com/gengjiawen))
 - Fix issue where `Image.resizeMode` isn't respected while source is loading, resulting in unexpected padding ([673ef39](https://github.com/facebook/react-native/commit/673ef39) by [@dulmandakh](https://github.com/dulmandakh))
 - Fix Android 28's inverted **ScrollView** so that momentum is in the proper direction ([b971c5b](https://github.com/facebook/react-native/commit/b971c5b) by [@mandrigin](https://github.com/mandrigin))
+- Fix HTTP connection timeout callback to be appropriately called ([a508134](https://github.com/facebook/react-native/commit/a508134))
+- Fix compatibility issue with Android 16 device ([5939d07](https://github.com/facebook/react-native/commit/5939d07) by [@gengjiawen](https://github.com/gengjiawen))
+- Fix crash when releasing RN views and removing root nodes([83405ff](https://github.com/facebook/react-native/commit/83405ff) and [b649fa9](https://github.com/facebook/react-native/commit/b649fa9) by [@ayc1](https://github.com/ayc1))
+- Close websocket properly when remote server initiates close ([2e465bc](https://github.com/facebook/react-native/commit/2e465bc) by [@syaau](https://github.com/syaau))
+- Workaround a wrong fling direction for inverted ScrollViews on Android P ([b971c5b](https://github.com/facebook/react-native/commit/b971c5b) by [@mandrigin](https://github.com/mandrigin))
+- Fix **Image** to respect `resizeMode` for `defaultSource` images rather than showing padding while loading ([673ef39](https://github.com/facebook/react-native/commit/673ef39) by [@dulmandakh](https://github.com/dulmandakh))
+
 
 #### iOS specific
 
@@ -87,6 +113,8 @@ Thanks to those who gave feedback on our release candidates. If you're intereste
 - Fix crash in **NetInfo**'s _firstTimeReachability ([eebc8e2](https://github.com/facebook/react-native/commit/eebc8e2) by [@mmmulani](https://github.com/mmmulani))
 - Fix case where inline view is visible even though it should have been truncated ([70826db](https://github.com/facebook/react-native/commit/70826db) by [@rigdern](https://github.com/rigdern))
 - Fix crash with **ScrollView** related to content offsets ([f6566c7](https://github.com/facebook/react-native/commit/f6566c7) by [@shergin](https://github.com/shergin))
+- Fix an issue where **CameraRoll** wasn't showing the front-facing camera consistently during capture and preview ([4aeea4d](https://github.com/facebook/react-native/commit/4aeea4d))
+- Fix case where inline view is visible even though it should have been truncated ([70826db](https://github.com/facebook/react-native/commit/70826db) by [@rigdern](https://github.com/rigdern))
 
 ## [0.57.8]
 
