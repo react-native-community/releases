@@ -24,7 +24,7 @@ Welcome to the January 2019 release of React Native. There are a number of signi
 
 Please note that upgrading iOS users, you'll need to manually link `JavaScriptCore.framework`; this is done [here](https://camo.githubusercontent.com/c09cd42747364b498efa7c82fcb73978ba076eae/687474703a2f2f646f63732e6f6e656d6f62696c6573646b2e616f6c2e636f6d2f696f732d61642d73646b2f616464696e672d6672616d65776f726b732e706e67) in XCode.
 
-Additionally for upgrading Android users, please note that Android's target SDK 27 is supported. Work is still underway to land target SDK 28 support, and it will come soon.
+Additionally for upgrading Android users, please note that Android's target SDK 27 is supported. Work is still underway to land target SDK 28 support, and it will come soon. It is possible you face an AAPT error regarding missing resources, in that case you should try to update the build tools versions to `buildToolsVersion = "28.0.2"` in your android/build.gradle file. If you maintain a react-native library which uses native code you should avoid using hardcoded versions of the build tools and use the packaged version numbers, here is an example you can [follow](https://github.com/react-native-community/react-native-linear-gradient/blob/master/android/build.gradle)
 
 Thanks to those who gave feedback on our release candidates. If you're interested in helping evaluate our next release, check you our tracking issue [here](https://github.com/react-native-community/react-native-releases/issues/79).
 
