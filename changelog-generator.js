@@ -257,7 +257,7 @@ ${data.unknown.general.join('\n')}
 
 ${data.unknown.android.join('\n')}
 
-#### iOS Unkown
+#### iOS Unknown
 
 ${data.unknown.ios.join('\n')}
 `;
