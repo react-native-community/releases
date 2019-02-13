@@ -12,7 +12,7 @@ Progress towards release is tracked in issues, based on labels:
 - _stable_: here you can read the status for the current stable release
 - _backport requests_: here you can request cherry-picks for the current stable release, that will be included in the next patch version
 
-Note that these issues are made to keep conversation focused strictly on the status of each one - please refrain from going OT.
+Note that these issues are made to keep the conversation focused strictly on the status of each one - please refrain from going off-topic.
 
 ## Changelog
 
