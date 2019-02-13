@@ -64,7 +64,7 @@ There are a number of significant changes in this version, and we'd like to espe
 
 Aside from those:
 
-- if you are an iOS developer, you'll need to manually link `JavaScriptCore.framework` when upgrading; this can be done via XCode, and following the steps showed [here](https://camo.githubusercontent.com/c09cd42747364b498efa7c82fcb73978ba076eae/687474703a2f2f646f63732e6f6e656d6f62696c6573646b2e616f6c2e636f6d2f696f732d61642d73646b2f616464696e672d6672616d65776f726b732e706e67).
+- if you are an iOS developer, you'll need to manually link `JavaScriptCore.framework` when upgrading; this can be done via XCode, and following the steps shown [here](https://camo.githubusercontent.com/c09cd42747364b498efa7c82fcb73978ba076eae/687474703a2f2f646f63732e6f6e656d6f62696c6573646b2e616f6c2e636f6d2f696f732d61642d73646b2f616464696e672d6672616d65776f726b732e706e67).
 
 - Android developers, please note that Android's target SDK 27 is supported. Work is still underway to land target SDK 28 support, and it will come soon.
 
