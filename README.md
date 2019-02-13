@@ -16,7 +16,7 @@ Note that these issues are made to keep conversation focused strictly on the sta
 
 ## Changelog
 
-The changelog in this repository is a community-provided effort to provide a helpful and informative summary of React Native's rapidly changing codebase along with the full list of commits.
+The changelog in this repository is a community-driven effort to provide a helpful and informative summary of React Native's rapidly changing codebase along with a full list of commits.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/), and generated via the script described in the next section.
 
