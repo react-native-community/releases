@@ -1,5 +1,42 @@
 # Changelog
 
+## [0.58.4]
+
+This release resolves includes a few improvements, listed below.
+
+Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/81) for cherry-picking commits - you can participate to the decision process for the next patch release [here](https://github.com/react-native-community/react-native-releases/issues/86).
+
+### Added
+
+#### Android specific
+
+- Android: Add error description to Image onError callback (#22737) ([2781ef0](https://github.com/facebook/react-native/commit/2781ef0) by [@Jyrno42](https://github.com/Jyrno42))
+
+### Changed
+
+#### Android specific
+
+- bump soloader to 0.6.0 (#23239) ([e1694ee](https://github.com/facebook/react-native/commit/e1694ee) by [@dulmandakh](https://github.com/dulmandakh))
+
+### Removed
+
+- Remove jest and jest-junit from runtime dependencies (#23276) ([6943b2e](https://github.com/facebook/react-native/commit/6943b2e) by [@vovkasm](https://github.com/vovkasm))
+
+### Fixed
+
+- Backport fix from the [new CLI repo](https://github.com/react-native-community/react-native-cli/pull/138) ([8bddcb6](https://github.com/facebook/react-native/commit/8bddcb6) by [@cpojer](https://github.com/cpojer))
+
+#### Android specific
+
+- Fix Native Rotation Android (#18872) ([c3bd341](https://github.com/facebook/react-native/commit/c3bd341) by [@scisci](https://github.com/scisci))
+- Invalidade Gradle cache ([4a57276](https://github.com/facebook/react-native/commit/4a57276) by [@grabbou](https://github.com/grabbou))
+
+#### iOS specific
+
+- handles simulator where prefix is included ([9a8c959](https://github.com/facebook/react-native/commit/9a8c959) by [@osunnarvik](https://github.com/osunnarvik))
+- fix incorrect type which makes animated gifs not loop forever on device (#22987) ([5e87547](https://github.com/facebook/react-native/commit/5e87547) by [@chrisnojima](https://github.com/chrisnojima))
+- Fix for Parse simulator list ([98bcfe0](https://github.com/facebook/react-native/commit/98bcfe0) by [@cpojer](https://github.com/cpojer))
+
 ## [0.58.3]
 
 This release resolves a regression in **StatusBar** using [these fixes](https://github.com/facebook/react-native/compare/v0.58.2...v0.58.3).
