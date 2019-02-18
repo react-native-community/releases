@@ -102,6 +102,26 @@ Thanks to those who gave feedback on during the [release candidate phase](https:
 #### Breaking Changes 💥
 
 - Public methods of components converted to ES6 classes are no longer bound to their component instance. For `ScrollView`, the affected methods are `setNativeProps`, `getScrollResponder`, `getScrollableNode`, `getInnerViewNode`, `scrollTo`, `scrollToEnd`, `scrollWithoutAnimationTo`, and `flashScrollIndicators`. For `CameraRollView`, the affected methods are: `rendererChanged`. For `SwipeableRow`, the affected methods are: `close`. Therefore, it is no longer safe to pass these method by reference as callbacks to functions. Auto-binding methods to component instances was a behaviour of `createReactClass` that we decided to not preserve when switching over to ES6 classes. (you can refer to [this example](https://github.com/react-native-community/react-native-releases/issues/81#issuecomment-459252692))
+- Native Modules in Android now require `@ReactModule` annotations to access `.getNativeModule` method on the `ReactContext`. This is how your updated Native Module should look like:
+
+  ```diff
+  // CustomModule.java
+
+  // ...
+  +  import com.facebook.react.module.annotations.ReactModule;
+
+  +  @ReactModule(name="CustomBridge")
+  public class CustomModule extends ReactContextBaseJavaModule {
+    // ...
+
+    @Override
+    public String getName() {
+        return "CustomBridge";
+    }
+
+    // ...
+  }
+  ```
 
 #### Android specific
 
