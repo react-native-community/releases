@@ -1,5 +1,33 @@
 # Changelog
 
+## [v0.58.5]
+
+This release resolves a few bugs and includes a few improvements, listed below.
+
+Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/86) for cherry-picking commits - you can participate in the decision process for the next patch release [here](https://github.com/react-native-community/react-native-releases/issues/95).
+
+### Removed
+
+- Remove fallback cache ([9d60c20](https://github.com/facebook/react-native/commit/9d60c20) by [@grabbou](https://github.com/grabbou))
+
+### Fixed
+
+- Fixes capitalized I's when emojiis are present after the text being edited. (#21951) ([a4f8820](https://github.com/facebook/react-native/commit/a4f8820) by [@dchersey](https://github.com/dchersey))
+- Fix broken jsiexecutor search path. (#23274) ([519ad8c](https://github.com/facebook/react-native/commit/519ad8c) by [@amccarri](https://github.com/amccarri))
+- Fix duplicate symbols linker error in xcodeproj (#23284) ([805e4fe](https://github.com/facebook/react-native/commit/805e4fe) by [@tyrone-sudeium](https://github.com/tyrone-sudeium))
+- apply Network Security Config file (fixes #22375) (part 2 of #23105) (#23135) ([b5270e8](https://github.com/facebook/react-native/commit/b5270e8) by [@Salakar](https://github.com/Salakar))
+- Fix crash for web socket in some race conditions (#22439) ([0fc2392](https://github.com/facebook/react-native/commit/0fc2392) by [@zhongwuzw](https://github.com/zhongwuzw))
+
+#### iOS specific
+
+- Don't attempt to load RCTDevLoadingView lazily ([0af31ce](https://github.com/facebook/react-native/commit/0af31ce) by [@fkgozali](https://github.com/fkgozali))
+
+### Security
+
+#### Android specific
+
+- improve Android Network Security config (#23429) ([fbd31c5](https://github.com/facebook/react-native/commit/fbd31c5) by [@dulmandakh](https://github.com/dulmandakh))
+
 ## [0.58.4]
 
 This release resolves a few bugs and includes a few improvements, listed below.
