@@ -92,7 +92,7 @@ There are a number of significant changes in this version, and we'd like to espe
 
 Aside from those:
 
-- if you are an iOS developer, you'll need to manually link `JavaScriptCore.framework` when upgrading; this can be done via XCode, and following the steps shown [here](https://camo.githubusercontent.com/c09cd42747364b498efa7c82fcb73978ba076eae/687474703a2f2f646f63732e6f6e656d6f62696c6573646b2e616f6c2e636f6d2f696f732d61642d73646b2f616464696e672d6672616d65776f726b732e706e67).
+- if you are an iOS developer, you'll need to manually link `JavaScriptCore.framework` when upgrading; this can be done via Xcode, and following the steps shown [here](https://camo.githubusercontent.com/c09cd42747364b498efa7c82fcb73978ba076eae/687474703a2f2f646f63732e6f6e656d6f62696c6573646b2e616f6c2e636f6d2f696f732d61642d73646b2f616464696e672d6672616d65776f726b732e706e67).
 
 - Android developers, please note that Android's target SDK 27 is supported. Work is still underway to land target SDK 28 support, and it will come soon.
 
@@ -1806,7 +1806,7 @@ year!
 
 #### iOS exclusive fixes
 
-- Don't have XCode warnings for _YGDefaultLog_ in newly created projects
+- Don't have Xcode warnings for _YGDefaultLog_ in newly created projects
   ([72e762d](https://github.com/facebook/react-native/commit/72e762d) by
   [@woehrl01](https://github.com/woehrl01))
 - iOS _RCTEventEmitter_ uses a `double` for count, not _NSInteger_
@@ -1826,7 +1826,7 @@ year!
   ([15179f1](https://github.com/facebook/react-native/commit/15179f1) by
   [@Nikita2k](https://github.com/Nikita2k))
 - Implement `requiresMainQueueSetup` in _RCTTVNavigationEventEmitter_ to satisfy
-  XCode warning
+  Xcode warning
   ([ee3532b](https://github.com/facebook/react-native/commit/ee3532b) by
   [@charpeni](https://github.com/charpeni))
 - Support the iPhone X in the sample project's header
