@@ -1,5 +1,22 @@
 # Changelog
 
+## [v0.58.6]
+
+This release is fairly small, as we approach stable status for [0.59](https://github.com/react-native-community/react-native-releases/issues/79).
+
+Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/95) for cherry-picking commits - you can participate in the decision process for the next patch release [here](https://github.com/react-native-community/react-native-releases/issues/97).
+
+### Fixed
+
+#### Android specific
+
+- Fix Inverted Horizontal ScrollView on Android (#23233) ([2aa2420](https://github.com/facebook/react-native/commit/2aa2420) by [@dmainas](https://github.com/dmainas))
+
+#### iOS specific
+
+- Map TextInput textContentType strings to Objective-C constants (#22611) ([2d56e06](https://github.com/facebook/react-native/commit/2d56e06) by [@levibuzolic](https://github.com/levibuzolic))
+- Don't reconnect inspector if connection refused (#22625) ([82c84c5](https://github.com/facebook/react-native/commit/82c84c5) by [@msand](https://github.com/msand))
+
 ## [v0.58.5]
 
 This release resolves a few bugs and includes a few improvements, listed below.
