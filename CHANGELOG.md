@@ -53,20 +53,20 @@
 
 ### Deprecated
 
-- [General] [Deprecated] - Deprecated [MaskedViewIOS](https://facebook.github.io/react-native/docs/maskedviewios) as it has now been moved to [react-native-community/masked-view](https://github.com/react-native-community/react-native-masked-view) ([4ac65f5](https://github.com/facebook/react-native/commit/4ac65f5) by [@FonDorn](https://github.com/FonDorn))
-- [General] [Deprecated] - Deprecated [ViewPagerAndroid](https://facebook.github.io/react-native/docs/viewpagerandroid) as it has now been moved to [react-native-community/viewpager](https://github.com/react-native-community/react-native-viewpager) ([77300ca](https://github.com/facebook/react-native/commit/77300ca) by [@ferrannp](https://github.com/ferrannp))
-- [General][Deprecated] - A deprecation notice with info about third-party solutions for getting a base64-encoded string. ([62599fa](https://github.com/facebook/react-native/commit/62599fa) by [@EvanBacon](https://github.com/EvanBacon))
-- [General] [Deprecated] - Async Storage [was moved to community repo](https://github.com/react-native-community/react-native-async-storage) ([ffe3748](https://github.com/facebook/react-native/commit/ffe3748) by [@Krizzu](https://github.com/Krizzu))
-- [General] [Deprecated] - Deprecated Slider as it has now been moved to `react-native-community/slider` ([bf888a7](https://github.com/facebook/react-native/commit/bf888a7) by [@michalchudziak](https://github.com/michalchudziak))
-- [General] [Deprecated] - Deprecated NetInfo as it has now been moved to react-native-community/netinfo ([d9c0dfe](https://github.com/facebook/react-native/commit/d9c0dfe) by [@matt-oakes](https://github.com/matt-oakes))
+- Deprecated [MaskedViewIOS](https://facebook.github.io/react-native/docs/maskedviewios) as it has now been moved to [react-native-community/masked-view](https://github.com/react-native-community/react-native-masked-view) ([4ac65f5](https://github.com/facebook/react-native/commit/4ac65f5) by [@FonDorn](https://github.com/FonDorn))
+- Deprecated [ViewPagerAndroid](https://facebook.github.io/react-native/docs/viewpagerandroid) as it has now been moved to [react-native-community/viewpager](https://github.com/react-native-community/react-native-viewpager) ([77300ca](https://github.com/facebook/react-native/commit/77300ca) by [@ferrannp](https://github.com/ferrannp))
+- Deprecated [AsyncStorage](https://facebook.github.io/react-native/docs/asyncstorage) as it has now been moved to [react-native-community/asyncstorage](https://github.com/react-native-community/react-native-async-storage) ([ffe3748](https://github.com/facebook/react-native/commit/ffe3748) by [@Krizzu](https://github.com/Krizzu))
+- Deprecated [Slider](https://facebook.github.io/react-native/docs/slider) as it has now been moved to [react-native-community/slider](https://github.com/react-native-community/react-native-slider) ([bf888a7](https://github.com/facebook/react-native/commit/bf888a7) by [@michalchudziak](https://github.com/michalchudziak))
+- Deprecated [NetInfo](https://facebook.github.io/react-native/docs/netinfo) as it has now been moved to [react-native-community/netinfo](https://github.com/react-native-community/react-native-netinfo) ([d9c0dfe](https://github.com/facebook/react-native/commit/d9c0dfe) by [@matt-oakes](https://github.com/matt-oakes))
+- Deprecated [ImageStore](https://facebook.github.io/react-native/docs/imagestore) and directed users to `expo-file-system` and `react-native-fs` ([62599fa](https://github.com/facebook/react-native/commit/62599fa) by [@EvanBacon](https://github.com/EvanBacon))
 
 #### Android specific
 
-- [Android] [Deprecated] - fix warinings obsolete to update to gradle 4.10.1 or high ([5be50d4](https://github.com/facebook/react-native/commit/5be50d4) by [@misaku](https://github.com/misaku))
+- Fix warinings obsolete to update to gradle 4.10.1 or high ([5be50d4](https://github.com/facebook/react-native/commit/5be50d4) by [@misaku](https://github.com/misaku))
 
 #### iOS specific
 
-- Replace deprecated `stringByReplacingPercentEscapesUsingEncoding:` with `stringByAddingPercentEncodingWithAllowedCharacters:` (#19792) ([61ca119](https://github.com/facebook/react-native/commit/61ca119) by [@pvinis](https://github.com/pvinis))
+- Replace deprecated `stringByReplacingPercentEscapesUsingEncoding:` with `stringByAddingPercentEncodingWithAllowedCharacters:` ([61ca119](https://github.com/facebook/react-native/commit/61ca119) by [@pvinis](https://github.com/pvinis))
 
 ### Removed
 
