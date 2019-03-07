@@ -2,11 +2,11 @@
 
 ## [0.59]
 
-Welcome to release 0.59 of React Native! For highlights of this release, please view the dedicated [blog post](#todo). Thanks to those who gave feedback during the [release candidate phase]([https://github.com/react-native-community/react-native-releases/issues/41](https://github.com/react-native-community/react-native-releases/issues/79)). If you're interested in helping evaluate our next release (0.60), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/#todo).
+Welcome to release 0.59 of React Native! For highlights of this release, please view the dedicated [blog post](http://facebook.github.io/react-native/blog/2019/03/07/releasing-react-native-059). Thanks to those who gave feedback during the [release candidate phase]([https://github.com/react-native-community/react-native-releases/issues/41](https://github.com/react-native-community/react-native-releases/issues/79)). If you're interested in helping evaluate our next release (0.60), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/99).
 
 ### Added
 
-- Add a Metro configuration to the template with inline require/import options; read more about it [in the blog post](#todo) ([ae11993](https://github.com/facebook/react-native/commit/ae11993) by [@cpojer](https://github.com/cpojer))
+- Add a Metro configuration to the template with inline require/import options; read more about it [in the blog post](http://facebook.github.io/react-native/blog/2019/03/07/releasing-react-native-059) ([ae11993](https://github.com/facebook/react-native/commit/ae11993) by [@cpojer](https://github.com/cpojer))
 
 #### Android specific
 
@@ -56,7 +56,7 @@ Welcome to release 0.59 of React Native! For highlights of this release, please 
 
 ### Deprecated
 
-The following deprecations are part of our Lean Core initiative; read more about it [in the blog post](#todo).
+The following deprecations are part of our Lean Core initiative; read more about it [in the blog post](http://facebook.github.io/react-native/blog/2019/03/07/releasing-react-native-059).
 
 - Deprecated [MaskedViewIOS](https://facebook.github.io/react-native/docs/maskedviewios) as it has now been moved to [react-native-community/masked-view](https://github.com/react-native-community/react-native-masked-view) ([4ac65f5](https://github.com/facebook/react-native/commit/4ac65f5) by [@FonDorn](https://github.com/FonDorn))
 - Deprecated [ViewPagerAndroid](https://facebook.github.io/react-native/docs/viewpagerandroid) as it has now been moved to [react-native-community/viewpager](https://github.com/react-native-community/react-native-viewpager) ([77300ca](https://github.com/facebook/react-native/commit/77300ca) by [@ferrannp](https://github.com/ferrannp))
