@@ -42,9 +42,11 @@ Welcome to release 0.59 of React Native! For highlights of this release, please 
 - Add back `buildToolsVersion` to build.gradle ([cf52ab5](https://github.com/facebook/react-native/commit/cf52ab5) by [@dulmandakh](https://github.com/dulmandakh))
 - Add nullable annotations to `ReadableMap`, `WritableMap`, `ReadableArray`, `Writable`, `ReactPackage`, and native module interfaces ([b640b6f](https://github.com/facebook/react-native/commit/b640b6f), [c93cbdf](https://github.com/facebook/react-native/commit/c93cbdf), [7b33d6b](https://github.com/facebook/react-native/commit/7b33d6b), and [e6d8ac8](https://github.com/facebook/react-native/commit/e6d8ac8) by [@dulmandakh](https://github.com/dulmandakh))
 - **TimePickerAndroid** has better Flow types definitions ([2ed1bb2](https://github.com/facebook/react-native/commit/2ed1bb2) by [@yushimatenjin](https://github.com/yushimatenjin))
-- `ReactActivity`, `ReactSlider`, and `ReactPicker` extends `AppCompatActivity`; updates to `TimePickerDialogModule` and `DatePickerDialogModule` as well ([dda2b82](https://github.com/facebook/react-native/commit/dda2b82), [3b9604f](https://github.com/facebook/react-native/commit/3b9604f), [833429d](https://github.com/facebook/react-native/commit/833429d), [adc1410](https://github.com/facebook/react-native/commit/adc1410), [c6c5a17](https://github.com/facebook/react-native/commit/c6c5a17), and [be361d0](https://github.com/facebook/react-native/commit/be361d0) by [@dulmandakh](https://github.com/dulmandakh))
+- `ReactActivity`, `ReactSlider`, `ReactTextView`, and `ReactPicker` extends `AppCompatActivity`; updates to `TimePickerDialogModule` and `DatePickerDialogModule` as well ([dda2b82](https://github.com/facebook/react-native/commit/dda2b82), [3b9604f](https://github.com/facebook/react-native/commit/3b9604f), [52e5136](https://github.com/facebook/react-native/commit/52e5136), [833429d](https://github.com/facebook/react-native/commit/833429d), [adc1410](https://github.com/facebook/react-native/commit/adc1410), [c6c5a17](https://github.com/facebook/react-native/commit/c6c5a17), and [be361d0](https://github.com/facebook/react-native/commit/be361d0) by [@dulmandakh](https://github.com/dulmandakh))
 - Fix lint error/warnings that cause older Android crashes ([d2fc19f](https://github.com/facebook/react-native/commit/d2fc19f) by [@dulmandakh](https://github.com/dulmandakh))
 - The error message on getting Android drawable folder suffix now gives more information ([a159a33](https://github.com/facebook/react-native/commit/a159a33) by [@BrunoVillanova](https://github.com/BrunoVillanova))
+- `SYSTEM_ALERT_WINDOW` permissions available only in debug builds ([56fc630](https://github.com/facebook/react-native/commit/56fc630) by [@dulmandakh](https://github.com/dulmandakh))
+- Add talkback navigation support for links and header ([8e5eb63](https://github.com/facebook/react-native/commit/8e5eb63) by [@yangweigbh](https://github.com/yangweigbh))
 
 #### iOS specific
 
@@ -103,6 +105,8 @@ The following deprecations are part of our Lean Core initiative; read more about
 - Fix dev settings menu not appearing for certain codebases due to namespace conflicts ([9968d0c](https://github.com/facebook/react-native/commit/9968d0c) by [@khaled-cliqz](https://github.com/khaled-cliqz))
 - Fix exception occurring while fading a **TextView** ([f83281e](https://github.com/facebook/react-native/commit/f83281e) by [@mdvacca](https://github.com/mdvacca))
 - Fix **StatusBar** overwriting previously set `SystemUiVisibility` flags ([8afa037](https://github.com/facebook/react-native/commit/8afa037) by [@rogerkerse](https://github.com/rogerkerse))
+- Prevent `fetch()` POST requests from appending `charset=utf-8` to `Content-Type` header ([4cad737](https://github.com/facebook/react-native/commit/4cad737) and [d7c4c37](https://github.com/facebook/react-native/commit/d7c4c37) by [@nhunzaker](https://github.com/nhunzaker))
+- Fix issue with **Location** that led to exceptions in two cases ([2b7346f](https://github.com/facebook/react-native/commit/2b7346f) by [@mikelambert](https://github.com/mikelambert))
 
 #### iOS specific
 
@@ -120,6 +124,8 @@ The following deprecations are part of our Lean Core initiative; read more about
 - Fix iOS build issue related to missing `DoubleConversion` and `glog` to `cxxreact`, `jsi` and `jsiexecutor` subspecs in `React.podspec` file ([11c12d5](https://github.com/facebook/react-native/commit/11c12d5) by [@alexruperez](https://github.com/alexruperez))
 - Fix "'folly/folly-config.h' file not found" build error when using React via CocoaPods ([415cc25](https://github.com/facebook/react-native/commit/415cc25) by [@Salakar](https://github.com/Salakar))
 - Fix image cache to follow [MDN strategy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#Freshness) ([e98d5a2](https://github.com/facebook/react-native/commit/e98d5a2) and [fb8ba3f](https://github.com/facebook/react-native/commit/fb8ba3f) by [@zhongwuzw](https://github.com/zhongwuzw))
+- Fix crash due to IllegalArgumentException when creating CookieManage ([fee5031](https://github.com/facebook/react-native/commit/fee5031) by [@mdvacca](https://github.com/mdvacca))
+- Fix cursor placement after toggling `secureTextEntry` cursor spacing ([c1392c2](https://github.com/facebook/react-native/commit/c1392c2) by [@ericlewis](https://github.com/facebook/react-native/commits?author=ericlewis))
 
 ## [v0.58.6]
 
@@ -318,7 +324,7 @@ Thanks to those who gave feedback during the [release candidate phase](https://g
 
 - Fix crash when removing root nodes ([b649fa9](https://github.com/facebook/react-native/commit/b649fa9) by [@ayc1](https://github.com/ayc1))
 - Fix various **ReactInstanceManager** deadlocks and race conditions ([df7e8c6](https://github.com/facebook/react-native/commit/df7e8c6), [309f85a](https://github.com/facebook/react-native/commit/309f85a), and [be282b5](https://github.com/facebook/react-native/commit/be282b5) by [@ayc1](https://github.com/ayc1))
-- Fix IllegalArgumentException when dismissing ReactModalHostView and DialogManager ([e57ad4e](https://github.com/facebook/react-native/commit/e57ad4e) and [38e01a2](https://github.com/facebook/react-native/commit/38e01a2)by [@mdvacca](https://github.com/mdvacca))
+- Fix IllegalArgumentException when dismissing ReactModalHostView and DialogManager ([e57ad4e](https://github.com/facebook/react-native/commit/e57ad4e) and [38e01a2](https://github.com/facebook/react-native/commit/38e01a2) by [@mdvacca](https://github.com/mdvacca))
 - Fix incorrect merged asset path with flavor for Android Gradle Plugin 3.2 ([e90319e](https://github.com/facebook/react-native/commit/e90319e) by [@yatatsu](https://github.com/yatatsu))
 - Fix HTTP connection ontimeout callback ([a508134](https://github.com/facebook/react-native/commit/a508134))
 - Fix websocket properly closing when remote server initiates close ([2e465bc](https://github.com/facebook/react-native/commit/2e465bc) by [@syaau](https://github.com/syaau))
