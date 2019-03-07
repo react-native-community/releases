@@ -2,23 +2,21 @@
 
 ## [0.59]
 
-Welcome to release 0.59 of React Native! For highlights of this release, please view the dedicated [blog post](#todo). Thanks to those who gave feedback on during the [release candidate phase]([https://github.com/react-native-community/react-native-releases/issues/41](https://github.com/react-native-community/react-native-releases/issues/79)). If you're interested in helping evaluate our next release (0.60), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/#todo).
+Welcome to release 0.59 of React Native! For highlights of this release, please view the dedicated [blog post](#todo). Thanks to those who gave feedback during the [release candidate phase]([https://github.com/react-native-community/react-native-releases/issues/41](https://github.com/react-native-community/react-native-releases/issues/79)). If you're interested in helping evaluate our next release (0.60), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/#todo).
 
 ### Added
 
-- Add a Metro configuration to the template with inline require/import options ([ae11993](https://github.com/facebook/react-native/commit/ae11993) by [@cpojer](https://github.com/cpojer))
-- Add Platform module for "web" target; this is now a valid third option for `Platform.OS` ([daa79b0](https://github.com/facebook/react-native/commit/daa79b0) by [@EvanBacon](https://github.com/EvanBacon))
-- Enhance Flow types definitions for **ViewPropTypes** ([7ff9456](https://github.com/facebook/react-native/commit/7ff9456) by [@danibonilha](https://github.com/danibonilha))
+- Add a Metro configuration to the template with inline require/import options; read more about it [in the blog post](#todo) ([ae11993](https://github.com/facebook/react-native/commit/ae11993) by [@cpojer](https://github.com/cpojer))
 
 #### Android specific
 
 - **Text** and **TextInput** now has prop [maxFontSizeMultiplier](https://facebook.github.io/react-native/docs/text#maxfontsizemultiplier) ([4936d28](https://github.com/facebook/react-native/commit/4936d28) by [@rigdern](https://github.com/rigdern))
-- **CameraRoll**'s `getPhotos` now supports `assetType: "All"` to let users pick from video and photos simultaneously ([54534e7](https://github.com/facebook/react-native/commit/54534e7) by [@kesha-antonov](https://github.com/kesha-antonov))
 - **TextInput** now has prop [autoComplete](https://facebook.github.io/react-native/docs/textinput#autocomplete) prop ([179d490](https://github.com/facebook/react-native/commit/179d490))
+- **CameraRoll**'s `getPhotos` now supports `assetType: "All"` to let users pick from video and photos simultaneously ([54534e7](https://github.com/facebook/react-native/commit/54534e7) by [@kesha-antonov](https://github.com/kesha-antonov))
 
 #### iOS specific
 
-- **TextInput** now has prop `rejectResponderTermination` to enables TextInputs inside Swipeables to function properly ([11df0ea](https://github.com/facebook/react-native/commit/11df0ea) by [@cmcewen](https://github.com/cmcewen))
+- **TextInput** now has prop `rejectResponderTermination` to enable TextInputs inside Swipeables to function properly ([11df0ea](https://github.com/facebook/react-native/commit/11df0ea) by [@cmcewen](https://github.com/cmcewen))
 - **ActionSheetIOS** has a new prop `destructiveButtonIndexes` for an `Array<number>` of destructive indexes ([67e7f16](https://github.com/facebook/react-native/commit/67e7f16) by [@sdg9](https://github.com/sdg9))
 - Add `isEventFromThisApp` to `KeyboardEvent` notifications to disambiguate keyboard events when apps are running side-by-side ([05f35c2](https://github.com/facebook/react-native/commit/05f35c2) by [@nossbigg](https://github.com/nossbigg))
 - Allow changing the project path in `react-native-xcode.sh` using env var `PROJECT_ROOT` ([9ccde37](https://github.com/facebook/react-native/commit/9ccde37) by [@janicduplessis](https://github.com/janicduplessis))
@@ -28,6 +26,7 @@ Welcome to release 0.59 of React Native! For highlights of this release, please 
 - `React` is now at `v16.8.3` ([ccefc70](https://github.com/facebook/react-native/commit/ccefc70) and ([2af13b4](https://github.com/facebook/react-native/commit/2af13b4) by [@cpojer](https://github.com/cpojer) and [@hramos](https://github.com/hramos))
 - `Flow` dependency is now at `v0.92.0` ([5ee7386](https://github.com/facebook/react-native/commit/5ee7386) by [@pakoito](https://github.com/pakoito))
 - `@react-native-community/cli` dependency is at `v1.2.1` ([a252aee](https://github.com/facebook/react-native/commit/a252aee) and [5e1504b](https://github.com/facebook/react-native/commit/5e1504b) by [@grabbou](https://github.com/grabbou))
+- Enhance Flow types definitions for **ViewPropTypes** ([7ff9456](https://github.com/facebook/react-native/commit/7ff9456) by [@danibonilha](https://github.com/danibonilha))
 
 #### Android specific
 
@@ -55,6 +54,8 @@ Welcome to release 0.59 of React Native! For highlights of this release, please 
 
 ### Deprecated
 
+The following deprecations are part of our Lean Core initiative; read more about it [in the blog post](#todo).
+
 - Deprecated [MaskedViewIOS](https://facebook.github.io/react-native/docs/maskedviewios) as it has now been moved to [react-native-community/masked-view](https://github.com/react-native-community/react-native-masked-view) ([4ac65f5](https://github.com/facebook/react-native/commit/4ac65f5) by [@FonDorn](https://github.com/FonDorn))
 - Deprecated [ViewPagerAndroid](https://facebook.github.io/react-native/docs/viewpagerandroid) as it has now been moved to [react-native-community/viewpager](https://github.com/react-native-community/react-native-viewpager) ([77300ca](https://github.com/facebook/react-native/commit/77300ca) by [@ferrannp](https://github.com/ferrannp))
 - Deprecated [AsyncStorage](https://facebook.github.io/react-native/docs/asyncstorage) as it has now been moved to [react-native-community/asyncstorage](https://github.com/react-native-community/react-native-async-storage) ([ffe3748](https://github.com/facebook/react-native/commit/ffe3748) by [@Krizzu](https://github.com/Krizzu))
@@ -68,11 +69,11 @@ Welcome to release 0.59 of React Native! For highlights of this release, please 
 
 ### Removed
 
-- `react-native-git-upgrade` is now officially dead; use [rn-diff-purge](https://github.com/pvinis/rn-diff-purge) instead ([a6bdacb](https://github.com/facebook/react-native/commit/a6bdacb) by [@cpojer](https://github.com/cpojer))
+- `react-native-git-upgrade` is now officially dead; use `react-native upgrade` instead (which uses [rn-diff-purge](https://github.com/react-native-community/rn-diff-purge) under the covers) ([a6bdacb](https://github.com/facebook/react-native/commit/a6bdacb) by [@cpojer](https://github.com/cpojer))
 
 #### iOS specific
 
-- Remove the previously depreciated **TabBarIOS** ([0269729](https://github.com/facebook/react-native/commit/0269729) by [@axe-fb](https://github.com/axe-fb))
+- Remove the previously deprecated **TabBarIOS** ([0269729](https://github.com/facebook/react-native/commit/0269729) by [@axe-fb](https://github.com/axe-fb))
 - **AlertIOS** is now replaced with **Alert** ([e2bd7db](https://github.com/facebook/react-native/commit/e2bd7db) by [@wellmonge](https://github.com/wellmonge))
 
 ### Fixed
@@ -233,7 +234,7 @@ Aside from those:
 
 - Android developers, please note that Android's target SDK 27 is supported. Work is still underway to land target SDK 28 support, and it will come soon.
 
-Thanks to those who gave feedback on during the [release candidate phase](https://github.com/react-native-community/react-native-releases/issues/41). If you're interested in helping evaluate our next release (0.59), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/79).
+Thanks to those who gave feedback during the [release candidate phase](https://github.com/react-native-community/react-native-releases/issues/41). If you're interested in helping evaluate our next release (0.59), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/79).
 
 ### Added
 
