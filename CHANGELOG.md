@@ -2,11 +2,11 @@
 
 ## [0.59]
 
-Welcome to release 0.59 of React Native! For highlights of this release, please view the dedicated [blog post](http://facebook.github.io/react-native/blog/2019/03/07/releasing-react-native-059). Thanks to those who gave feedback during the [release candidate phase]([https://github.com/react-native-community/react-native-releases/issues/41](https://github.com/react-native-community/react-native-releases/issues/79)). If you're interested in helping evaluate our next release (0.60), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/99).
+Welcome to release 0.59 of React Native! For highlights of this release, please view the dedicated [blog post](http://facebook.github.io/react-native/blog/2019/03/11/releasing-react-native-059). Thanks to those who gave feedback during the [release candidate phase]([https://github.com/react-native-community/react-native-releases/issues/41](https://github.com/react-native-community/react-native-releases/issues/79)). If you're interested in helping evaluate our next release (0.60), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/99).
 
 ### Added
 
-- Add a Metro configuration to the template with inline require/import options; read more about it [in the blog post](http://facebook.github.io/react-native/blog/2019/03/07/releasing-react-native-059) ([ae11993](https://github.com/facebook/react-native/commit/ae11993) by [@cpojer](https://github.com/cpojer))
+- Add a Metro configuration to the template with inline require/import options; read more about it [in the blog post](http://facebook.github.io/react-native/blog/2019/03/11/releasing-react-native-059) ([ae11993](https://github.com/facebook/react-native/commit/ae11993) by [@cpojer](https://github.com/cpojer))
 
 #### Android specific
 
@@ -31,8 +31,9 @@ Welcome to release 0.59 of React Native! For highlights of this release, please 
 #### Android specific
 
 - Clarify error message to direct people to `react-native start` rather than `react-native bundle` ([46aaa02](https://github.com/facebook/react-native/commit/46aaa02) by [@sunnylqm](https://github.com/sunnylqm))
-- **BREAKING** - removed `OkHttpClientProvider.replaceOkHttpClient` method; please use `OkHttpClientProvider.setOkHttpClientFactory` from 0.54 ([7cbdd7b](https://github.com/facebook/react-native/commit/7cbdd7b) by [@cdlewis](https://github.com/cdlewis))
-- **BREAKING** - remove `ViewHelper`, use `ViewCompat` instead ([c493cfe](https://github.com/facebook/react-native/commit/c493cfe) by [@dulmandakh](https://github.com/dulmandakh))
+- **BREAKING** - removed `OkHttpClientProvider.replaceOkHttpClient` method; please use `OkHttpClientProvider.setOkHttpClientFactory` from 0.54+ ([7cbdd7b](https://github.com/facebook/react-native/commit/7cbdd7b) by [@cdlewis](https://github.com/cdlewis))
+- **BREAKING** - remove `ViewHelper`, use `ViewCompat` instead; this may also require changing the `android:theme` to be from `Theme.AppCompat`; read more about it [in the blog post](http://facebook.github.io/react-native/blog/2019/03/11/releasing-react-native-059) ([c493cfe](https://github.com/facebook/react-native/commit/c493cfe) by [@dulmandakh](https://github.com/dulmandakh))
+- Add nullable annotations to `ReadableMap`, `WritableMap`, `ReadableArray`, `Writable`, `ReactPackage`, and native module interfaces; this may impact Kotlin usage ([b640b6f](https://github.com/facebook/react-native/commit/b640b6f), [c93cbdf](https://github.com/facebook/react-native/commit/c93cbdf), [7b33d6b](https://github.com/facebook/react-native/commit/7b33d6b), and [e6d8ac8](https://github.com/facebook/react-native/commit/e6d8ac8) by [@dulmandakh](https://github.com/dulmandakh))
 - `Soloader` is now at `v0.6.0` ([07d1075](https://github.com/facebook/react-native/commit/07d1075) by [@dulmandakh](https://github.com/dulmandakh))
 - Android Support Library is now at `v28.0.0` ([5bbed43](https://github.com/facebook/react-native/commit/5bbed43) by [@dulmandakh](https://github.com/dulmandakh))
 - `targetSdkVersion` is now at `v28` ([818f6bb](https://github.com/facebook/react-native/commit/818f6bb) by [@dulmandakh](https://github.com/dulmandakh))
@@ -40,7 +41,6 @@ Welcome to release 0.59 of React Native! For highlights of this release, please 
 - Enable Java 8 support ([38eb2a7](https://github.com/facebook/react-native/commit/38eb2a7) by [@dulmandakh](https://github.com/dulmandakh))
 - Suppress misleading missing permission warnings ([d53dbb0](https://github.com/facebook/react-native/commit/d53dbb0) by [@dulmandakh](https://github.com/dulmandakh))
 - Add back `buildToolsVersion` to build.gradle ([cf52ab5](https://github.com/facebook/react-native/commit/cf52ab5) by [@dulmandakh](https://github.com/dulmandakh))
-- Add nullable annotations to `ReadableMap`, `WritableMap`, `ReadableArray`, `Writable`, `ReactPackage`, and native module interfaces ([b640b6f](https://github.com/facebook/react-native/commit/b640b6f), [c93cbdf](https://github.com/facebook/react-native/commit/c93cbdf), [7b33d6b](https://github.com/facebook/react-native/commit/7b33d6b), and [e6d8ac8](https://github.com/facebook/react-native/commit/e6d8ac8) by [@dulmandakh](https://github.com/dulmandakh))
 - **TimePickerAndroid** has better Flow types definitions ([2ed1bb2](https://github.com/facebook/react-native/commit/2ed1bb2) by [@yushimatenjin](https://github.com/yushimatenjin))
 - `ReactActivity`, `ReactSlider`, `ReactTextView`, and `ReactPicker` extends `AppCompatActivity`; updates to `TimePickerDialogModule` and `DatePickerDialogModule` as well ([dda2b82](https://github.com/facebook/react-native/commit/dda2b82), [3b9604f](https://github.com/facebook/react-native/commit/3b9604f), [52e5136](https://github.com/facebook/react-native/commit/52e5136), [833429d](https://github.com/facebook/react-native/commit/833429d), [adc1410](https://github.com/facebook/react-native/commit/adc1410), [c6c5a17](https://github.com/facebook/react-native/commit/c6c5a17), and [be361d0](https://github.com/facebook/react-native/commit/be361d0) by [@dulmandakh](https://github.com/dulmandakh))
 - Fix lint error/warnings that cause older Android crashes ([d2fc19f](https://github.com/facebook/react-native/commit/d2fc19f) by [@dulmandakh](https://github.com/dulmandakh))
@@ -56,7 +56,7 @@ Welcome to release 0.59 of React Native! For highlights of this release, please 
 
 ### Deprecated
 
-The following deprecations are part of our Lean Core initiative; read more about it [in the blog post](http://facebook.github.io/react-native/blog/2019/03/07/releasing-react-native-059).
+The following deprecations are part of our Lean Core initiative; read more about it [in the blog post](http://facebook.github.io/react-native/blog/2019/03/11/releasing-react-native-059).
 
 - Deprecated [MaskedViewIOS](https://facebook.github.io/react-native/docs/maskedviewios) as it has now been moved to [react-native-community/masked-view](https://github.com/react-native-community/react-native-masked-view) ([4ac65f5](https://github.com/facebook/react-native/commit/4ac65f5) by [@FonDorn](https://github.com/FonDorn))
 - Deprecated [ViewPagerAndroid](https://facebook.github.io/react-native/docs/viewpagerandroid) as it has now been moved to [react-native-community/viewpager](https://github.com/react-native-community/react-native-viewpager) ([77300ca](https://github.com/facebook/react-native/commit/77300ca) by [@ferrannp](https://github.com/ferrannp))
