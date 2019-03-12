@@ -228,7 +228,7 @@ Thanks everyone who contributed code or participated in the [discussion](https:/
 Welcome to first stable release of React Native of 2019!
 There are a number of significant changes in this version, and we'd like to especially draw your attention to them:
 
-- [Modernizing](https://github.com/facebook/react-native/issues/21581) and [stengthening flow types](https://github.com/facebook/react-native/issues/22100) for core components
+- [Modernizing](https://github.com/facebook/react-native/issues/21581) and [strengthening flow types](https://github.com/facebook/react-native/issues/22100) for core components
 - Breaking changes to `ScrollView`, `CameraRollView`, and `SwipeableRow` that make it no longer bound to the component instance in certain methods
 - Support for mutual TLS in WebKit
 - Asset serving from directories besides `/assets`
