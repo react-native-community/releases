@@ -2,6 +2,8 @@
 
 'use strict';
 
+const levenshtein = require('fast-levenshtein');
+
 const argv = require('yargs')
     .usage('$0 [args]', 'Generate a React Native changelog from the commits and PRs')
     .options({
@@ -58,6 +60,32 @@ function filterCICommits(commits) {
     return !(text.includes('travis') || text.includes('circleci') || text.includes('circle ci') || text.includes('bump version numbers'));
   });
 }
+function filterRevertCommits(commits) {
+  let revertCommits = [];
+  const revertCommitIndicators = ['revert "', 'back out "'];
+  const filteredCommits = commits.filter(item => {
+    let text = item.commit.message.split('\n')[0].toLowerCase();
+    if(revertCommitIndicators.some(indicator => text.includes(indicator))) {
+      revertCommitIndicators.forEach(indicator => {
+        text = text.replace(indicator, "");
+      });
+      revertCommits.push(text);
+      return false;
+    }
+    return true;
+  }).filter(item => {
+    let text = item.commit.message.split('\n')[0].toLowerCase();
+    revertCommits.forEach(revertCommit => {
+      if(levenshtein.get(text, revertCommit) < 0.5 * revertCommit.length) {
+        revertCommits = revertCommits.filter(function(e) { return e !== revertCommit });
+        return false;
+      }
+    });
+    return true;
+  });
+  if(revertCommits.length > 0) console.warn("Was unable to find the mate for the following revert commits: " + revertCommits + "; you will need to manually remove this from below.");
+  return filteredCommits;
+}
 
 function isAndroidCommit(change) {
   return /\b(android|java)\b/i.test(change) || /android/i.test(change);
@@ -68,7 +96,7 @@ function isIOSCommit(change) {
 }
 
 function isAdded(change) {
-  return /\b(add|adds|added)\b/i.test(change);
+  return /\b(add|adds|added|enhancement)\b/i.test(change);
 }
 
 function isChanged(change) {
@@ -92,7 +120,10 @@ function isSecurity(change) {
   }
 
 function getChangeMessage(item) {
-  return `- ${item.commit.message.split('\n')[0]} ([${item.sha.slice(0, 7)}](https://github.com/facebook/react-native/commit/${item.sha.slice(0, 7)})${item.author ? ' by [@' + item.author.login + '](https://github.com/' + item.author.login + ')' : ''})`;
+  const commitMessage = item.commit.message.split('\n');
+  const entry = commitMessage.find(a => /\[ios\]|\[android\]|\[general\]/i.test(a)) || commitMessage[0];
+  const authorSection = `([${item.sha.slice(0, 7)}](https://github.com/facebook/react-native/commit/${item.sha.slice(0, 7)})${item.author ? ' by [@' + item.author.login + '](https://github.com/' + item.author.login + ')' : ''})`;
+  return `- ${entry} ${authorSection}`;
 }
 
 function getChangelogDesc(commits) {
@@ -107,7 +138,7 @@ function getChangelogDesc(commits) {
   };
 
   commits.forEach(item => {
-    const change = item.commit.message.split('\n')[0];
+    const change = item.commit.message;
     const message = getChangeMessage(item);
 
     if (isAdded(change)) {
@@ -266,6 +297,7 @@ ${data.unknown.ios.join('\n')}
 fetchJSON('api.github.com', '/repos/facebook/react-native/compare/' + base + '...' + compare)
   .then(data => data.commits)
   .then(filterCICommits)
+  .then(filterRevertCommits)
   .then(getChangelogDesc)
   .then(buildMarkDown)
   .then(data => console.log(data))
