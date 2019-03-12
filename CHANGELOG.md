@@ -96,7 +96,7 @@ The following deprecations are part of our Lean Core initiative; read more about
 #### Android specific
 
 - Fix textTransform when used with other text styles on Android (#22670) ([3a33e75](https://github.com/facebook/react-native/commit/3a33e75) by [@janicduplessis](https://github.com/janicduplessis))
-- Fix warinings related to updating to gradle 4.10.1 or higher ([5be50d4](https://github.com/facebook/react-native/commit/5be50d4) by [@misaku](https://github.com/misaku))
+- Fix warnings related to updating to gradle 4.10.1 or higher ([5be50d4](https://github.com/facebook/react-native/commit/5be50d4) by [@misaku](https://github.com/misaku))
 - Fix issue with use of Android API 28 by adding security config for metro access ([724d83a](https://github.com/facebook/react-native/commit/724d83a), [01d5a3b](https://github.com/facebook/react-native/commit/01d5a3b), [3b0b7ce](https://github.com/facebook/react-native/commit/3b0b7ce), and [84572c4](https://github.com/facebook/react-native/commit/84572c4) by [@Salakar](https://github.com/Salakar) and [@dulmandakh](https://github.com/dulmandakh))
 - Fix Inverted Horizontal **ScrollView** ([32cb9ec](https://github.com/facebook/react-native/commit/32cb9ec) by [@dmainas](https://github.com/dmainas))
 - Fix crash on **CheckBox** on older Android versions ([58437cd](https://github.com/facebook/react-native/commit/58437cd) by [@vonovak](https://github.com/vonovak))
