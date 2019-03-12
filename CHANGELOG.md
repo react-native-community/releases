@@ -2,7 +2,7 @@
 
 ## [0.59]
 
-Welcome to release 0.59 of React Native! For highlights of this release, please view the dedicated [blog post](http://facebook.github.io/react-native/blog/2019/03/12/releasing-react-native-059). Thanks to those who gave feedback during the [release candidate phase]([https://github.com/react-native-community/react-native-releases/issues/41](https://github.com/react-native-community/react-native-releases/issues/79)). If you're interested in helping evaluate our next release (0.60), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/99).
+Welcome to release 0.59 of React Native! For highlights of this release, please view the dedicated [blog post](http://facebook.github.io/react-native/blog/2019/03/12/releasing-react-native-059). Thanks to those who gave feedback during the [release candidate phase](https://github.com/react-native-community/react-native-releases/issues/79). If you're interested in helping evaluate our next release (0.60), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/99).
 
 ### Added
 
