@@ -13,6 +13,7 @@ Welcome to release 0.59 of React Native! For highlights of this release, please 
 - **Text** and **TextInput** now has prop [maxFontSizeMultiplier](https://facebook.github.io/react-native/docs/text#maxfontsizemultiplier) ([4936d28](https://github.com/facebook/react-native/commit/4936d28) by [@rigdern](https://github.com/rigdern))
 - **TextInput** now has prop [autoComplete](https://facebook.github.io/react-native/docs/textinput#autocomplete) prop ([179d490](https://github.com/facebook/react-native/commit/179d490))
 - **CameraRoll**'s `getPhotos` now supports `assetType: "All"` to let users pick from video and photos simultaneously ([54534e7](https://github.com/facebook/react-native/commit/54534e7) by [@kesha-antonov](https://github.com/kesha-antonov))
+- **Text** and **TextInput** now support `textAlign:justify` for android O+ (api level >=26) ([d2153fc](https://github.com/facebook/react-native/commit/d2153fc) by [sunnylqm](https://github.com/sunnylqm))
 
 #### iOS specific
 
