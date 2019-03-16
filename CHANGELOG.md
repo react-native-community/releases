@@ -54,6 +54,7 @@ Welcome to release 0.59 of React Native! For highlights of this release, please 
 - Moved iOS build cache directory from `~/.rncache` to `~/Library/Caches/com.facebook.ReactNativeBuild` ([1024dc2](https://github.com/facebook/react-native/commit/1024dc2) by [@sryze](https://github.com/sryze))
 - Keyboard API Event flow types have been improved ([7ee13cc](https://github.com/facebook/react-native/commit/7ee13cc) by [@nossbigg](https://github.com/nossbigg))
 - Expose **AsyncLocalStorage** get/set methods to native code ([7b8235a](https://github.com/facebook/react-native/commit/7b8235a) by [@ejmartin504](https://github.com/ejmartin504))
+- Clear RCTBridge **launchOptions** when bridge is reloaded ([19d04a3](https://github.com/facebook/react-native/commit/19d04a312bf4221cd26beff6d0da6dd296a28cd0) by [@venik](https://github.com/venik))
 
 ### Deprecated
 
