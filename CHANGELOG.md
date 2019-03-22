@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.59.2]
+
+This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/100) for cherry-picking commits.
+
+### Fixed
+
+#### Android specific
+
+- Crash on pre-26 Android devices when setting **TextInput** content type ([7263a77](https://github.com/facebook/react-native/commit/7263a77) by [@hramos](https://github.com/hramos))
+- Crash when scroll to index 0 in a **SectionList** ([699fad7](https://github.com/facebook/react-native/commit/699fad7) by [@danilobuerger](https://github.com/danilobuerger))
+- **Switch**'s `trackColor` being reset when toggled ([4260907](https://github.com/facebook/react-native/commit/4260907) and [becc154](https://github.com/facebook/react-native/commit/becc154) by [@dulmandakh](https://github.com/dulmandakh) and [@ejanzer](https://github.com/ejanzer))
+
+#### iOS specific
+
+- **ScrollView** offset out of content size ([f6516d2](https://github.com/facebook/react-native/commit/f6516d2) by [@zhongwuzw](https://github.com/zhongwuzw))
+- **RefreshControl** state's race condition ([6aca514](https://github.com/facebook/react-native/commit/6aca514b3a6e94a771708188c056743d84f0654c) by [@rostislav-simonik](https://github.com/rostislav-simonik))
+- Start Metro packager from project root ([392b084](https://github.com/facebook/react-native/commit/392b084) by [@MatthieuLemoine](https://github.com/MatthieuLemoine))
+- **TextInput**s that are single-line reverting to default text ([a38dc73](https://github.com/facebook/react-native/commit/a38dc73) by [@PeteTheHeat](https://github.com/PeteTheHeat))
+
+### Changed
+
+#### Android specific
+
+- Add TLS 1.3 support to all Android versions using Conscrypt; to use this, you must add `implementation('org.conscrypt:conscrypt-android:2.0.0')` to `build.gradle` ([fab86ee](https://github.com/facebook/react-native/commit/fab86ee) by [@dulmandakh](https://github.com/dulmandakh))
+- Turn off Metro JS Deltas by default for Android ([3f1d2b0](https://github.com/facebook/react-native/commit/3f1d2b0) by [@PeteTheHeat](https://github.com/PeteTheHeat))
+
 ## [0.59]
 
 Welcome to release 0.59 of React Native! For highlights of this release, please view the dedicated [blog post](http://facebook.github.io/react-native/blog/2019/03/12/releasing-react-native-059). Thanks to those who gave feedback during the [release candidate phase](https://github.com/react-native-community/react-native-releases/issues/79). If you're interested in helping evaluate our next release (0.60), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/99).
