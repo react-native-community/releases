@@ -26,6 +26,20 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 - Add TLS 1.3 support to all Android versions using Conscrypt; to use this, you must add `implementation('org.conscrypt:conscrypt-android:2.0.0')` to `build.gradle` ([fab86ee](https://github.com/facebook/react-native/commit/fab86ee) by [@dulmandakh](https://github.com/dulmandakh))
 - Turn off Metro JS Deltas by default for Android ([3f1d2b0](https://github.com/facebook/react-native/commit/3f1d2b0) by [@PeteTheHeat](https://github.com/PeteTheHeat))
 
+## [0.59.1]
+
+This is a small patch release that addresses two critical issues from the 0.59.0 release.
+
+### Fixed
+
+#### Android specific
+
+- Template build gradle error on x86_64 ([4b996da](https://github.com/facebook/react-native/commit/4b996da) by [@grabbou](https://github.com/grabbou))
+
+#### iOS specific
+
+- Build error warning of **Text** module ([000119d](https://github.com/facebook/react-native/commit/000119d) by [@zhongwuzw](https://github.com/zhongwuzw))
+
 ## [0.59]
 
 Welcome to release 0.59 of React Native! For highlights of this release, please view the dedicated [blog post](http://facebook.github.io/react-native/blog/2019/03/12/releasing-react-native-059). Thanks to those who gave feedback during the [release candidate phase](https://github.com/react-native-community/react-native-releases/issues/79). If you're interested in helping evaluate our next release (0.60), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/99).
@@ -766,7 +780,12 @@ As mentioned a few times in the past, the core team is reviewing the repository 
    ```
 
 3. Ensure that you have all the babel dependencies to version `^7.0.0` (you may also need to add `"babel-core": "7.0.0-bridge.0"` as a yarn resolution to ensure retro-compatibility).  The Babel team has released a tool, [babel-upgrade](https://github.com/babel/babel-upgrade), that should help you in this migration.
-4. If you have a custom packager configuration via `rn-cli.config.js`, you probably need to update it to work with the updated Metro configuration structure (for full detail refer to Metro's [documentation](https://facebook.github.io/metro/docs/en/configuration)); here are some commonly encountered changes to `rn-cli.config.js`:
+4. Upgrading android gradle version to 4.4
+	1. In your project's `android/gradle/wrapper/gradle-wrapper.properties` file, change the `distributionUrl` to `https\://services.gradle.org/distributions/gradle-4.4-all.zip`
+	2. In `android/build.gradle` file add `google()` right above `jcenter()` in both `buildscript` and `allprojects` repositories. Then change Android build tools to version 3.1.4 `classpath 'com.android.tools.build:gradle:3.1.4'`
+	3. In `android/app/build.gradle` file update all your `compile` statements to be `implementation`, e.g. `implementation 'com.facebook.fresco:animated-gif:1.10.0'`
+	4. Do note that when running your app from within Android Studio, you may encounter `Missing Byte Code` errors. This is due to [a known issue](https://issuetracker.google.com/issues/72811718) with version 3.1.x of the android tools plugin. You'll need to disable Instant Run to get past this error.
+5. If you have a custom packager configuration via `rn-cli.config.js`, you probably need to update it to work with the updated Metro configuration structure (for full detail refer to Metro's [documentation](https://facebook.github.io/metro/docs/en/configuration)); here are some commonly encountered changes to `rn-cli.config.js`:
 
    ```diff
    -const blacklist = require('metro/src/blacklist')
@@ -794,7 +813,7 @@ As mentioned a few times in the past, the core team is reviewing the repository 
    }
    ```
 
-5. Run `yarn` to ensure that all the new dependencies have been installed
+6. Run `yarn` to ensure that all the new dependencies have been installed
 
 ### Added: new features
 
