@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.59.1]
+
+This is a small patch release that addresses two critical issues from the 0.59.0 release.
+
+### Fixed
+
+#### Android specific
+
+- Template build gradle error on x86_64 ([4b996da](https://github.com/facebook/react-native/commit/4b996da) by [@grabbou](https://github.com/grabbou))
+
+#### iOS specific
+
+- Build error warning of **Text** module ([000119d](https://github.com/facebook/react-native/commit/000119d) by [@zhongwuzw](https://github.com/zhongwuzw))
+
 ## [0.59]
 
 Welcome to release 0.59 of React Native! For highlights of this release, please view the dedicated [blog post](http://facebook.github.io/react-native/blog/2019/03/12/releasing-react-native-059). Thanks to those who gave feedback during the [release candidate phase](https://github.com/react-native-community/react-native-releases/issues/79). If you're interested in helping evaluate our next release (0.60), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/99).
