@@ -88,6 +88,7 @@ Welcome to release 0.59 of React Native! For highlights of this release, please 
 - The error message on getting Android drawable folder suffix now gives more information ([a159a33](https://github.com/facebook/react-native/commit/a159a33) by [@BrunoVillanova](https://github.com/BrunoVillanova))
 - `SYSTEM_ALERT_WINDOW` permissions available only in debug builds ([56fc630](https://github.com/facebook/react-native/commit/56fc630) by [@dulmandakh](https://github.com/dulmandakh))
 - Add talkback navigation support for links and header ([8e5eb63](https://github.com/facebook/react-native/commit/8e5eb63) by [@yangweigbh](https://github.com/yangweigbh))
+- **FlatList** has `removeClippedSubviews` default to `true` on Android ([1a499f4](https://github.com/facebook/react-native/commit/1a499f4) by [@fred2028](https://github.com/fred2028))
 
 #### iOS specific
 
