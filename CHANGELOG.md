@@ -1,5 +1,37 @@
 # Changelog
 
+## [v0.59.3]
+
+This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/100) for cherry-picking commits.
+
+### Changed
+
+- Fixed VirtualizedList, SectionList and FlatList behavior on rendering list headers with inverted prop and zero items ([e94d344](https://github.com/facebook/react-native/commit/e94d344) by [@michalchudziak](https://github.com/michalchudziak))
+
+#### Android specific
+
+- Improve RTL support ([871290f](https://github.com/facebook/react-native/commit/871290f) by [@dulmandakh](https://github.com/dulmandakh))
+
+#### iOS specific
+
+- Fix runtime crash in xcode 10.2 when using RCT_EXTERN_MODULE for swift classes. ([df7ea67](https://github.com/facebook/react-native/commit/df7ea67))
+
+### Fixed
+
+- Fix #24053 prevent division by zero error in VirtualizedList debug overlay (#24058) ([d7e7b3e](https://github.com/facebook/react-native/commit/d7e7b3e))
+- Update packagers to the latest CLI ([581dc3e](https://github.com/facebook/react-native/commit/581dc3e) by [@aliazizi](https://github.com/aliazizi))
+- projectRoot in launchPackager.bat ([775553b](https://github.com/facebook/react-native/commit/775553b) by [@nazreinkaram](https://github.com/nazreinkaram))
+
+#### Android specific
+
+- Networking: Passing invalid URL not crashes the app instead onerror callback of HttpClient is called. Invalid symbols are stripped from the headers to allow HTTP query to fail with 401 error code in case of the broken token. ([e4f9ee9](https://github.com/facebook/react-native/commit/e4f9ee9) by [@dryganets](https://github.com/dryganets))
+- Fix IllegalStateException when tapping next on Android Keyboard ([13cb5a9](https://github.com/facebook/react-native/commit/13cb5a9) by [@mdvacca](https://github.com/mdvacca))
+
+#### iOS specific
+
+- Show Perf Monitor, after reloading JS ([bdf809e](https://github.com/facebook/react-native/commit/bdf809e) by [@usrbowe](https://github.com/usrbowe))
+- Fix TextInput maxLength when insert characters at begin ([1a35bc5](https://github.com/facebook/react-native/commit/1a35bc5) by [@zhongwuzw](https://github.com/zhongwuzw))
+
 ## [0.59.2]
 
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/100) for cherry-picking commits.
