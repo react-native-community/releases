@@ -1,5 +1,32 @@
 # Changelog
 
+## [v0.59.3]
+
+This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/100) for cherry-picking commits.
+
+### Changed
+
+#### Android specific
+
+- Improve RTL support ([871290f](https://github.com/facebook/react-native/commit/871290f) by [@dulmandakh](https://github.com/dulmandakh))
+
+### Fixed
+
+- Fix **VirtualizedList**, **SectionList** and **FlatList** behavior on rendering list headers with inverted prop and zero items ([e94d344](https://github.com/facebook/react-native/commit/e94d344) by [@michalchudziak](https://github.com/michalchudziak))
+- Fix **VirtualizedList** debug mode crash ([d7e7b3e](https://github.com/facebook/react-native/commit/d7e7b3e))
+- Fix running Metro on Windows ([581dc3e](https://github.com/facebook/react-native/commit/581dc3e) and [775553b](https://github.com/facebook/react-native/commit/775553b) by [@aliazizi](https://github.com/aliazizi) and [@nazreinkaram](https://github.com/nazreinkaram))
+
+#### Android specific
+
+- Fix IllegalStateException when invalid URL or headers are passed ([e4f9ee9](https://github.com/facebook/react-native/commit/e4f9ee9) by [@dryganets](https://github.com/dryganets))
+- Fix IllegalStateException when tapping next on Android Keyboard ([13cb5a9](https://github.com/facebook/react-native/commit/13cb5a9) by [@mdvacca](https://github.com/mdvacca))
+
+#### iOS specific
+
+- Show Perf Monitor after reloading JS ([bdf809e](https://github.com/facebook/react-native/commit/bdf809e) by [@usrbowe](https://github.com/usrbowe))
+- Fix **TextInput**'s `maxLength` when inserting characters at begin ([1a35bc5](https://github.com/facebook/react-native/commit/1a35bc5) by [@zhongwuzw](https://github.com/zhongwuzw))
+- Fix runtime crash in Xcode 10.2 when using `RCT_EXTERN_MODULE` for swift classes ([df7ea67](https://github.com/facebook/react-native/commit/df7ea67))
+
 ## [0.59.2]
 
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/100) for cherry-picking commits.
