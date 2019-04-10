@@ -10,7 +10,7 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 
 #### iOS specific
 
-- Add scrollToOverflowEnabled prop to ScrollView - https://github.com/facebook/react-native/commit/e3ac3293d93c0c5899f9dafb0cc7cdea13aa53e7
+- Add `scrollToOverflowEnabled` prop to **ScrollView** ([e3ac329](https://github.com/facebook/react-native/commit/e3ac329) by [@mysport12](https://github.com/mysport12))
 
 ### Fixed
 
