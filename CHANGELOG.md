@@ -6,7 +6,7 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 
 ### Changed
 
-- Make Jest transform @react-native-community packages by default - https://github.com/facebook/react-native/commit/17292c9db21fad4b4ca2582596efb3734ef65a63
+- Make Jest transform @react-native-community packages by default ([17292c9](https://github.com/facebook/react-native/commit/17292c9) by [@thymikee](https://github.com/thymikee))
 
 #### iOS specific
 
