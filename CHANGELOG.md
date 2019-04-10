@@ -18,7 +18,7 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 
 #### Android specific
 
-- Prevent a crash when setting `underlineColorAndroid` - https://github.com/facebook/react-native/commit/d6bca9723e6226688ec1bb3301d7ce39a17f79e3
+- Fix a crash when setting `underlineColorAndroid` in **TextInput** ([d6bca97](https://github.com/facebook/react-native/commit/d6bca97) by [@sunnylqm](https://github.com/sunnylqm))
 
 #### iOS specific
  
