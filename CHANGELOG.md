@@ -14,7 +14,7 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 
 ### Fixed
 
-- Fixed touchable long-press - https://github.com/facebook/react-native/commit/05723ed08aa23650913c5c2fa6e7eaa7518cf3f9
+- Fix **Touchable** long-press ([05723ed](https://github.com/facebook/react-native/commit/05723ed) by [@Kida007](https://github.com/Kida007))
 
 #### Android specific
 
