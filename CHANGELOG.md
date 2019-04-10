@@ -1,5 +1,30 @@
 # Changelog
 
+## [v0.59.4]
+
+This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/100) for cherry-picking commits.
+
+### Changed
+
+- Make Jest transform @react-native-community packages by default ([17292c9](https://github.com/facebook/react-native/commit/17292c9) by [@thymikee](https://github.com/thymikee))
+
+#### iOS specific
+
+- Add `scrollToOverflowEnabled` prop to **ScrollView** ([e3ac329](https://github.com/facebook/react-native/commit/e3ac329) by [@mysport12](https://github.com/mysport12))
+
+### Fixed
+
+- Fix **Touchable** long-press ([05723ed](https://github.com/facebook/react-native/commit/05723ed) by [@Kida007](https://github.com/Kida007))
+
+#### Android specific
+
+- Fix a crash when setting `underlineColorAndroid` in **TextInput** ([d6bca97](https://github.com/facebook/react-native/commit/d6bca97) by [@sunnylqm](https://github.com/sunnylqm))
+
+#### iOS specific
+ 
+- Fix universal links not working in iOS 12 / Xcode 10 ([836a8e0](https://github.com/facebook/react-native/commit/836a8e0) by [@IljaDaderko](https://github.com/IljaDaderko))
+- Fix triangle views ([0167cf2](https://github.com/facebook/react-native/commit/0167cf2) by [@zhongwuzw](https://github.com/zhongwuzw))
+
 ## [v0.59.3]
 
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/100) for cherry-picking commits.
