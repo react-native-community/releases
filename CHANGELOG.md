@@ -23,7 +23,7 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 #### iOS specific
  
 - Fix universal links not working in iOS 12 / Xcode 10 - https://github.com/facebook/react-native/commit/836a8e0e4d04f5844f560c0a5feb43518bbdb748
-- Fix triangle views - https://github.com/facebook/react-native/commit/0167cf2813184583c524e04c00718ba59c0c2588
+- Fix triangle views ([0167cf2](https://github.com/facebook/react-native/commit/0167cf2) by [@zhongwuzw](https://github.com/zhongwuzw))
 
 ## [v0.59.3]
 
