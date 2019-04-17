@@ -1,5 +1,24 @@
 # Changelog
 
+## [v0.59.5]
+	
+This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/113) for cherry-picking commits.
+
+### Fixed
+
+- Remove wrapper around **ListEmptyComponent** ([54af5b](https://github.com/facebook/react-native/commit/54af5b151efbfb82127374b6653b89fcc6eaa61b](https://github.com/AntoineDoubovetzky))
+
+#### Android specific
+
+- Enforced thread safety on UIImplementation methods that mutate the shadowNodeRegistry ([f5a318](https://github.com/facebook/react-native/commit/f5a31801a03b61df3d7bc2fc86df7bad272082e2) by [@SudoPlz](https://github.com/sunnylqm))
+- Fixed a `NoSuchKeyException` when parsing JS stack frames without line numbers ([d7bd6c](https://github.com/facebook/react-native/commit/d7bd6cce38d42dbced48fc8abed96472126e5d69) by [@Salakar](https://github.com/Salakar))
+- Fixed `mostRecentEventCount` is not updated ([b8aac0](https://github.com/facebook/react-native/commit/b8aac029f15b812bdfc80b00347a4d4140119831) by [@jainkuniya](https://github.com/jainkuniya)
+
+#### iOS specific
+
+- Pass back correct dimensions for application window in Dimensions module ([72b4cc](https://github.com/facebook/react-native/commit/72b4cc091d8451b80855c47e248fb693c78dc4a9) by [@rdonnelly](https://github.com/rdonnelly))
+- Fixed warning: "RCTImagePickerManager requires main queue setup" ([effb02](https://github.com/facebook/react-native/commit/effb028ad5010e7ce6dc01f7758de2fa507d719a) by [@scarlac](https://github.com/scarlac))
+	
 ## [v0.59.4]
 
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/100) for cherry-picking commits.
