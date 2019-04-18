@@ -6,13 +6,13 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 
 ### Fixed
 
-- Remove wrapper around **ListEmptyComponent** ([54af5b](https://github.com/facebook/react-native/commit/54af5b151efbfb82127374b6653b89fcc6eaa61b](https://github.com/AntoineDoubovetzky))
+- Remove wrapper around **ListEmptyComponent** ([54af5b](https://github.com/facebook/react-native/commit/54af5b151efbfb82127374b6653b89fcc6eaa61b) by [@AntoineDoubovetzky](https://github.com/AntoineDoubovetzky))
 
 #### Android specific
 
 - Enforced thread safety on UIImplementation methods that mutate the shadowNodeRegistry ([f5a318](https://github.com/facebook/react-native/commit/f5a31801a03b61df3d7bc2fc86df7bad272082e2) by [@SudoPlz](https://github.com/sunnylqm))
 - Fixed a `NoSuchKeyException` when parsing JS stack frames without line numbers ([d7bd6c](https://github.com/facebook/react-native/commit/d7bd6cce38d42dbced48fc8abed96472126e5d69) by [@Salakar](https://github.com/Salakar))
-- Fixed `mostRecentEventCount` is not updated ([b8aac0](https://github.com/facebook/react-native/commit/b8aac029f15b812bdfc80b00347a4d4140119831) by [@jainkuniya](https://github.com/jainkuniya)
+- Fixed `mostRecentEventCount` is not updated ([b8aac0](https://github.com/facebook/react-native/commit/b8aac029f15b812bdfc80b00347a4d4140119831) by [@jainkuniya](https://github.com/jainkuniya))
 
 #### iOS specific
 
