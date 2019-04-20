@@ -1,7 +1,7 @@
 # Changelog
 
 ## [v0.59.5]
-	
+
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/113) for cherry-picking commits.
 
 ### Fixed
@@ -18,7 +18,7 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 
 - Pass back correct dimensions for application window in Dimensions module ([72b4cc](https://github.com/facebook/react-native/commit/72b4cc091d8451b80855c47e248fb693c78dc4a9) by [@rdonnelly](https://github.com/rdonnelly))
 - Fixed warning: "RCTImagePickerManager requires main queue setup" ([effb02](https://github.com/facebook/react-native/commit/effb028ad5010e7ce6dc01f7758de2fa507d719a) by [@scarlac](https://github.com/scarlac))
-	
+
 ## [v0.59.4]
 
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/100) for cherry-picking commits.
@@ -40,7 +40,7 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 - Fix a crash when setting `underlineColorAndroid` in **TextInput** ([d6bca97](https://github.com/facebook/react-native/commit/d6bca97) by [@sunnylqm](https://github.com/sunnylqm))
 
 #### iOS specific
- 
+
 - Fix universal links not working in iOS 12 / Xcode 10 ([836a8e0](https://github.com/facebook/react-native/commit/836a8e0) by [@IljaDaderko](https://github.com/IljaDaderko))
 - Fix triangle views ([0167cf2](https://github.com/facebook/react-native/commit/0167cf2) by [@zhongwuzw](https://github.com/zhongwuzw))
 
@@ -378,7 +378,7 @@ Thanks to those who gave feedback during the [release candidate phase](https://g
 - Many public components were converted to ES6 classes ([ScrollView](https://github.com/facebook/react-native/commit/221e2fe4095bc9ae15878725bdac4071d53e61f5) by [@thymikee](https://github.com/thymikee), [CameraRollView](https://github.com/facebook/react-native/pull/21619), [SwipeableRow](https://github.com/facebook/react-native/pull/21876/files) and [ProgressBarAndroid](https://github.com/facebook/react-native/pull/21874) by [@exceed](https://github.com/exceed), [ProgressViewIOS](https://github.com/facebook/react-native/pull/21588) by [@empyrical](https://github.com/empyrical), [SegmentedControlIOS](https://github.com/facebook/react-native/pull/21888/files), [ToolbarAndroid](https://github.com/facebook/react-native/pull/21893/files) by [@nd-02110114](https://github.com/nd-02110114)
 - Flow dependency is now at `v0.85.0` ([adc8a33f](https://github.com/facebook/react-native/commit/adc8a33f) by [@samwgoldman](https://github.com/samwgoldman))
 - metro dependency is now at `v0.49.1` ([f867db3](https://github.com/facebook/react-native/commit/f867db3), [8888295](https://github.com/facebook/react-native/commit/8888295), [31bb551](https://github.com/facebook/react-native/commit/31bb551), [de60e86](https://github.com/facebook/react-native/commit/de60e86), and [a525941](https://github.com/facebook/react-native/commit/a525941) by [@alexkirsz](https://github.com/alexkirsz) and [@rafeca](https://github.com/rafeca))
-- jest dependency is now at `v24.0.0-alpha.6` ([1b4fd64](https://github.com/facebook/react-native/commit/1b4fd64), [66aba09](https://github.com/facebook/react-native/commit/66aba09), and [06c13b3](https://github.com/facebook/react-native/commit/06c13b3) by [@rafeca](https://github.com/rafeca) and  [@rubennorte](https://github.com/rubennorte))
+- jest dependency is now at `v24.0.0-alpha.6` ([1b4fd64](https://github.com/facebook/react-native/commit/1b4fd64), [66aba09](https://github.com/facebook/react-native/commit/66aba09), and [06c13b3](https://github.com/facebook/react-native/commit/06c13b3) by [@rafeca](https://github.com/rafeca) and [@rubennorte](https://github.com/rubennorte))
 - fbjs-scripts dependency is now at `v1.0.0` (#21880) ([cdbf719](https://github.com/facebook/react-native/commit/cdbf719) by [@jmheik](https://github.com/jmheik))
 - folly dependency is now at `v2018.10.22.00` ([a316dc6](https://github.com/facebook/react-native/commit/a316dc6), [19a7ecc](https://github.com/facebook/react-native/commit/19a7ecc), and [a70625a](https://github.com/facebook/react-native/commit/a70625a) by [@Kudo](https://github.com/Kudo) and [@radko93](https://github.com/radko93))
 - React is set to `16.6.3` now via sync for revisions 4773fdf...6bf5e85 ([0cb59b5](https://github.com/facebook/react-native/commit/0cb59b5) and [e54d1e2](https://github.com/facebook/react-native/commit/e54d1e2) by [@yungsters](https://github.com/yungsters))
@@ -457,7 +457,7 @@ Thanks to those who gave feedback during the [release candidate phase](https://g
 - Fix case where content of inline views didn't get relaid out ([798517a](https://github.com/facebook/react-native/commit/798517a) by [@rigdern](https://github.com/rigdern))
 - Fix issue with **ImagePickerIOS**'s inconsistent image when using the front-facing camera ([4aeea4d](https://github.com/facebook/react-native/commit/4aeea4d))
 - Fix race condition and crash around shutdown of the JSC for iOS 11 and earlier ([bf2500e](https://github.com/facebook/react-native/commit/bf2500e) by [@mhorowitz](https://github.com/mhorowitz))
-- Fix crash in **NetInfo**'s _firstTimeReachability ([eebc8e2](https://github.com/facebook/react-native/commit/eebc8e2) by [@mmmulani](https://github.com/mmmulani))
+- Fix crash in **NetInfo**'s \_firstTimeReachability ([eebc8e2](https://github.com/facebook/react-native/commit/eebc8e2) by [@mmmulani](https://github.com/mmmulani))
 - Fix case where inline view is visible even though it should have been truncated ([70826db](https://github.com/facebook/react-native/commit/70826db) by [@rigdern](https://github.com/rigdern))
 - Fix crash with **ScrollView** related to content offsets ([f6566c7](https://github.com/facebook/react-native/commit/f6566c7) by [@shergin](https://github.com/shergin))
 - Fix an issue where **CameraRoll** wasn't showing the front-facing camera consistently during capture and preview ([4aeea4d](https://github.com/facebook/react-native/commit/4aeea4d))
@@ -558,7 +558,7 @@ This patch release fixes a number of crashes, resolves build issues (both for iO
 #### iOS specific
 
 - iOS: Support inline view truncation (#21456) ([ac5aaec](https://github.com/facebook/react-native/commit/ac5aaec) by [@rigdern](https://github.com/rigdern))
-- NetInfo: try to solve crash with releasing _firstTimeReachability ([35c1c27](https://github.com/facebook/react-native/commit/35c1c27) by [@mmmulani](https://github.com/mmmulani))
+- NetInfo: try to solve crash with releasing \_firstTimeReachability ([35c1c27](https://github.com/facebook/react-native/commit/35c1c27) by [@mmmulani](https://github.com/mmmulani))
 - Generate ip.txt before SKIP_BUNDLING check (#20554) ([26b5a6e](https://github.com/facebook/react-native/commit/26b5a6e) by [@keatongreve](https://github.com/keatongreve))
 - Revert [Performance improvement for loading cached images on iOS ] ([7eeb305](https://github.com/facebook/react-native/commit/7eeb305) by [@kelset](https://github.com/kelset))
 - Fix inability to remove 'Disabled' state from AccessibilityStates ([79b3311](https://github.com/facebook/react-native/commit/79b3311))
@@ -587,7 +587,7 @@ This patch release fixes a number of crashes, resolves build issues (both for iO
 #### Android specific
 
 - Fix incorrect merged asset path with flavor for Android Gradle Plugin 3.2 ([09184a7](https://github.com/facebook/react-native/commit/09184a7) by [@yatatsu](https://github.com/yatatsu))
-- Fix crash in **ReadableNativeArray.getType** when size of ReadableNativeArray's length > 512  ([8206122](https://github.com/facebook/react-native/commit/8206122) by [@dryganets](https://github.com/dryganets))
+- Fix crash in **ReadableNativeArray.getType** when size of ReadableNativeArray's length > 512 ([8206122](https://github.com/facebook/react-native/commit/8206122) by [@dryganets](https://github.com/dryganets))
 
 #### iOS specific
 
@@ -664,7 +664,7 @@ There are a few issues that don't have a finalized solution (as it happens for 0
 
 ## [0.57.3]
 
-**NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.0-alpha.8af6728"`. Also, please check the *Known issues* section below, especially if you are using Xcode 10.
+**NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.0-alpha.8af6728"`. Also, please check the _Known issues_ section below, especially if you are using Xcode 10.
 
 Thanks to everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/46) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
 
@@ -833,7 +833,7 @@ This release includes [599 commits by 73 different contributors](https://github.
 
 #### The Slimmening is happening
 
-As mentioned a few times in the past, the core team is reviewing the repository to trim it to the base React Native features in order to make the whole ecosystem more maintainable (by using a *divide-et-impera* approach, the community will move faster and enable pull requests to be reviewed and merged quicker). This change requires extracting some components into their own separate repos and removing old, unused code ([details here](https://github.com/react-native-community/discussions-and-proposals/issues/6)).
+As mentioned a few times in the past, the core team is reviewing the repository to trim it to the base React Native features in order to make the whole ecosystem more maintainable (by using a _divide-et-impera_ approach, the community will move faster and enable pull requests to be reviewed and merged quicker). This change requires extracting some components into their own separate repos and removing old, unused code ([details here](https://github.com/react-native-community/discussions-and-proposals/issues/6)).
 
 0.57 is **not** directly affected by any changes, but we want you to know that:
 
@@ -851,12 +851,12 @@ As mentioned a few times in the past, the core team is reviewing the repository 
      }
    ```
 
-3. Ensure that you have all the babel dependencies to version `^7.0.0` (you may also need to add `"babel-core": "7.0.0-bridge.0"` as a yarn resolution to ensure retro-compatibility).  The Babel team has released a tool, [babel-upgrade](https://github.com/babel/babel-upgrade), that should help you in this migration.
+3. Ensure that you have all the babel dependencies to version `^7.0.0` (you may also need to add `"babel-core": "7.0.0-bridge.0"` as a yarn resolution to ensure retro-compatibility). The Babel team has released a tool, [babel-upgrade](https://github.com/babel/babel-upgrade), that should help you in this migration.
 4. Upgrading android gradle version to 4.4
-	1. In your project's `android/gradle/wrapper/gradle-wrapper.properties` file, change the `distributionUrl` to `https\://services.gradle.org/distributions/gradle-4.4-all.zip`
-	2. In `android/build.gradle` file add `google()` right above `jcenter()` in both `buildscript` and `allprojects` repositories. Then change Android build tools to version 3.1.4 `classpath 'com.android.tools.build:gradle:3.1.4'`
-	3. In `android/app/build.gradle` file update all your `compile` statements to be `implementation`, e.g. `implementation 'com.facebook.fresco:animated-gif:1.10.0'`
-	4. Do note that when running your app from within Android Studio, you may encounter `Missing Byte Code` errors. This is due to [a known issue](https://issuetracker.google.com/issues/72811718) with version 3.1.x of the android tools plugin. You'll need to disable Instant Run to get past this error.
+   1. In your project's `android/gradle/wrapper/gradle-wrapper.properties` file, change the `distributionUrl` to `https\://services.gradle.org/distributions/gradle-4.4-all.zip`
+   2. In `android/build.gradle` file add `google()` right above `jcenter()` in both `buildscript` and `allprojects` repositories. Then change Android build tools to version 3.1.4 `classpath 'com.android.tools.build:gradle:3.1.4'`
+   3. In `android/app/build.gradle` file update all your `compile` statements to be `implementation`, e.g. `implementation 'com.facebook.fresco:animated-gif:1.10.0'`
+   4. Do note that when running your app from within Android Studio, you may encounter `Missing Byte Code` errors. This is due to [a known issue](https://issuetracker.google.com/issues/72811718) with version 3.1.x of the android tools plugin. You'll need to disable Instant Run to get past this error.
 5. If you have a custom packager configuration via `rn-cli.config.js`, you probably need to update it to work with the updated Metro configuration structure (for full detail refer to Metro's [documentation](https://facebook.github.io/metro/docs/en/configuration)); here are some commonly encountered changes to `rn-cli.config.js`:
 
    ```diff
@@ -911,7 +911,7 @@ As mentioned a few times in the past, the core team is reviewing the repository 
 
 ### Changes: existing functionality that is now different
 
-- *[BREAKING]* In the CLI, `unbundle` is now `ram-bundle` ([ebf5aea](https://github.com/facebook/react-native/commit/ebf5aea) by [@jeanlauliac](https://github.com/jeanlauliac))
+- _[BREAKING]_ In the CLI, `unbundle` is now `ram-bundle` ([ebf5aea](https://github.com/facebook/react-native/commit/ebf5aea) by [@jeanlauliac](https://github.com/jeanlauliac))
 - Bump minimum Node version to 8.3 (#20236) ([e64e13f](https://github.com/facebook/react-native/commit/e64e13f) by [@hramos](https://github.com/hramos))
 - Updated React ([70913a4](https://github.com/facebook/react-native/commit/70913a4), [b7bb25f](https://github.com/facebook/react-native/commit/b7bb25f), and [0b30129](https://github.com/facebook/react-native/commit/0b30129) by [@acdlite](https://github.com/acdlite), [@hramos](https://github.com/hramos), and [@yungsters](https://github.com/yungsters))
 - Upgrade Flow to v0.76.0 ([eac34e3](https://github.com/facebook/react-native/commit/eac34e3) by [@gabelevi](https://github.com/gabelevi))
@@ -986,7 +986,7 @@ As mentioned a few times in the past, the core team is reviewing the repository 
 
 ### Removed: features that have been removed; these are breaking
 
-- *[BREAKING]* Removed `ScrollView.propTypes`; use flow or typescript for verifying correct prop usage instead ([5b6ff01](https://github.com/facebook/react-native/commit/5b6ff01) by [@sahrens](https://github.com/sahrens))
+- _[BREAKING]_ Removed `ScrollView.propTypes`; use flow or typescript for verifying correct prop usage instead ([5b6ff01](https://github.com/facebook/react-native/commit/5b6ff01) by [@sahrens](https://github.com/sahrens))
 
 #### Android specific removals
 
@@ -1003,7 +1003,7 @@ As you'll see in a second, this new version has some important **breaking change
 
 #### React Native now uses **Babel 7**
 
-When upgrading to 0.56, make sure to bump your `babel-preset-react-native` `package.json` dependency to `5.0.2` or newer (but still as *fixed* value).
+When upgrading to 0.56, make sure to bump your `babel-preset-react-native` `package.json` dependency to `5.0.2` or newer (but still as _fixed_ value).
 
 React Native library authors will need to update their libraries to make use of the updated Babel preset as Babel 7 is **not** backwards compatible.
 
@@ -1154,7 +1154,7 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 - Make values optional in `ViewPropTypes` ([f1316ca](https://github.com/facebook/react-native/commit/f1316cab6c351852ef1da9939d4c8f0244fb8a6f))
 - propTypes are optional for native components ([dbdf43b](https://github.com/facebook/react-native/commit/dbdf43b428da19a9eba012753904bcf33339ea9a))
 - Rename `Style` to `DangerouslyImpreciseStyle` ([4895c64](https://github.com/facebook/react-native/commit/4895c645ea17ff939811f3d5ec6218cd4e31c5fb))
-- *[BREAKING]* `requireNativeComponent`'s signature has been simplified to only take extraOptions ([820673e](https://github.com/facebook/react-native/commit/820673e), [b549e36](https://github.com/facebook/react-native/commit/b549e36), [28d3778](https://github.com/facebook/react-native/commit/28d3778), [1c90a2b](https://github.com/facebook/react-native/commit/1c90a2b), and [1ab7d49](https://github.com/facebook/react-native/commit/1ab7d49) by [@yungsters](https://github.com/yungsters))
+- _[BREAKING]_ `requireNativeComponent`'s signature has been simplified to only take extraOptions ([820673e](https://github.com/facebook/react-native/commit/820673e), [b549e36](https://github.com/facebook/react-native/commit/b549e36), [28d3778](https://github.com/facebook/react-native/commit/28d3778), [1c90a2b](https://github.com/facebook/react-native/commit/1c90a2b), and [1ab7d49](https://github.com/facebook/react-native/commit/1ab7d49) by [@yungsters](https://github.com/yungsters))
 
 #### Breaking Changes
 
@@ -1162,7 +1162,7 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 
 ### iOS specific changes
 
-- *[BREAKING]* WebViews now can only use https; do not use it for `file://` ([634e7e1](https://github.com/facebook/react-native/commit/634e7e1) by [@mmmulani](https://github.com/mmmulani))
+- _[BREAKING]_ WebViews now can only use https; do not use it for `file://` ([634e7e1](https://github.com/facebook/react-native/commit/634e7e1) by [@mmmulani](https://github.com/mmmulani))
 - iOS 9 is now the minimum required version ([f50df4f](https://github.com/facebook/react-native/commit/f50df4f5eca4b4324ff18a49dcf8be3694482b51))
 - Update podspecs to target iOS 9 ([092103e](https://github.com/facebook/react-native/commit/092103e7525e58e04346e0a1a16a67ca4f31c2e9))
 - Xcode 9.4 is now used to run tests ([c55bcd6](https://github.com/facebook/react-native/commit/c55bcd6ea729cdf57fc14a5478b7c2e3f6b2a94d))
@@ -1187,7 +1187,7 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 - Update Fresco to v1.9.0, okhttp3 to v3.10.0 ([6b07602](https://github.com/facebook/react-native/commit/6b07602915157f54c39adbf0f9746ac056ad2d13))
 - Add tint color to inline icons ([e8e2a6e](https://github.com/facebook/react-native/commit/e8e2a6e4102c1ba0ee3d068769e47fa61c160524))
 - Fix antialiasing rounded background ([7500b3e](https://github.com/facebook/react-native/commit/7500b3ec839ada6d8e1f7a88d30743dfb0ad7e70))
-- `react-native link` will now replace '/' by '_' when linking projects. If you previously linked scoped packages, they will get linked again. ([dbd4759](https://github.com/facebook/react-native/commit/dbd47592a18ed09ee6e94c79bed16d63be625af6))
+- `react-native link` will now replace '/' by '\_' when linking projects. If you previously linked scoped packages, they will get linked again. ([dbd4759](https://github.com/facebook/react-native/commit/dbd47592a18ed09ee6e94c79bed16d63be625af6))
 - New project template now uses project-wide properties ([5ae80f9](https://github.com/facebook/react-native/commit/5ae80f91fb54f8b6947dc60b2d98ee73ccd04da0))
 
 ---
@@ -1267,7 +1267,7 @@ Heads-up: the Facebook internal team is [currently working on a rewrite of some 
 ### Removed: features that have been removed; these are breaking
 
 - Deprecate `focusTextInput` and `blurTextInput` ([ce3b7b8](https://github.com/facebook/react-native/commit/ce3b7b8204dad0fd62a76a0ce66472eca4b25bc8))
-- *[BREAKING]* `ImageResizeMode` on `Image` is no longer exposed; check your usage of `resizeMode`; the same resize modes exist, but pass them as strings instead ([870775e](https://github.com/facebook/react-native/commit/870775e) by [@TheSavior](https://github.com/TheSavior))
+- _[BREAKING]_ `ImageResizeMode` on `Image` is no longer exposed; check your usage of `resizeMode`; the same resize modes exist, but pass them as strings instead ([870775e](https://github.com/facebook/react-native/commit/870775e) by [@TheSavior](https://github.com/TheSavior))
 
 #### Android specific removals
 
