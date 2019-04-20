@@ -96,23 +96,23 @@ function isIOSCommit(change) {
 }
 
 function isAdded(change) {
-  return /\b(add|adds|added|enhancement)\b/i.test(change);
+  return /\b(added)\b/i.test(change);
 }
 
 function isChanged(change) {
-  return /\b(changes|changed)\b/i.test(change);
+  return /\b(changed)\b/i.test(change);
 }
 
 function isDeprecated(change) {
-    return /\b(deprecated|deprecate)\b/i.test(change);
+    return /\b(deprecated)\b/i.test(change);
 }
 
 function isRemoved(change) {
-    return /\b(remove|removed)\b/i.test(change);
+    return /\b(removed)\b/i.test(change);
 }
 
 function isFixed(change) {
-    return /\b(fix|fixes|fixed)\b/i.test(change);
+    return /\b(fixed)\b/i.test(change);
 }
   
 function isSecurity(change) {
@@ -157,13 +157,13 @@ function getChangelogDesc(commits) {
         } else {
           acc.changed.general.push(message);
         }
-      } else if (isDeprecated(change)) {
+      } else if (isFixed(change)) {
         if (isAndroidCommit(change)) {
-          acc.deprecated.android.push(message);
+          acc.fixed.android.push(message);
         } else if (isIOSCommit(change)) {
-          acc.deprecated.ios.push(message);
+          acc.fixed.ios.push(message);
         } else {
-          acc.deprecated.general.push(message);
+          acc.fixed.general.push(message);
         }
       } else if (isRemoved(change)) {
         if (isAndroidCommit(change)) {
@@ -173,13 +173,13 @@ function getChangelogDesc(commits) {
         } else {
           acc.removed.general.push(message);
         }
-      } else if (isFixed(change)) {
+      } else if (isDeprecated(change)) {
         if (isAndroidCommit(change)) {
-          acc.fixed.android.push(message);
+          acc.deprecated.android.push(message);
         } else if (isIOSCommit(change)) {
-          acc.fixed.ios.push(message);
+          acc.deprecated.ios.push(message);
         } else {
-          acc.fixed.general.push(message);
+          acc.deprecated.general.push(message);
         }
       } else if (isSecurity(change)) {
         if (isAndroidCommit(change)) {
