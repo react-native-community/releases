@@ -20,7 +20,6 @@
 - Add support for **custom fonts** ([f01c4e2](https://github.com/facebook/react-native/commit/f01c4e2) by [@dulmandakh](https://github.com/dulmandakh))
 - Add ram bundle to android template ([4478e50](https://github.com/facebook/react-native/commit/4478e50) by [@gengjiawen](https://github.com/gengjiawen))
 - Add public method `setCustomClientBuilder` to the native `com.facebook.react.modules.network.NetworkingModule`, that allows customizing the OkHttpClient per-request for greater control over HTTP requests ([81fcaa1](https://github.com/facebook/react-native/commit/81fcaa1))
-- Add public method `setCustomClientCertRequestHandler` to the native `com.facebook.react.views.webview.ReactWebViewManager`, that allows using a custom response for client certificate challenges ([9ddef77](https://github.com/facebook/react-native/commit/9ddef77))
 - Expose `collapsable` as React Prop in **LayoutShadowNode** ([58c16e6](https://github.com/facebook/react-native/commit/58c16e6) by [@mdvacca](https://github.com/mdvacca))
 - Implement data detection for android **Text** elements (#19216) ([b1251d0](https://github.com/facebook/react-native/commit/b1251d0) by [@kpink224](https://github.com/kpink224))
 
@@ -36,7 +35,6 @@
 ### Changed
 
 - Update **flow** to `0.96` ([380ed55](https://github.com/facebook/react-native/commit/380ed55) by [@avikchaudhuri](https://github.com/avikchaudhuri))
-- Change WebView to be required from 'WebView' module directly ([938c3bd](https://github.com/facebook/react-native/commit/938c3bd) by [@cpojer](https://github.com/cpojer))
 - Change `MockNativeMethods` for core components to `jest.fn()` instead of function that warns about calling native methods ([a2b699d](https://github.com/facebook/react-native/commit/a2b699d) by [@bcarroll22](https://github.com/bcarroll22))
 - `CompactValue` overrides of `YGResolveValue`/`YGValueEqual` ([82b2783](https://github.com/facebook/react-native/commit/82b2783) by [@davidaurelio](https://github.com/davidaurelio))
 - Move callback-related logic to `AnimatedNode` class in order to make it possible to add the listener for other animated nodes than `AnimatedValue` ([68a5cee](https://github.com/facebook/react-native/commit/68a5cee) by [@osdnk](https://github.com/osdnk))
@@ -72,27 +70,19 @@
 
 ### Removed
 
-- Move WebView Android files to FB internal ([1ca9a95](https://github.com/facebook/react-native/commit/1ca9a95) by [@cpojer](https://github.com/cpojer))
-- Remove navigator.geolocation, use Geolocation ([45bd2b5](https://github.com/facebook/react-native/commit/45bd2b5) by [@cpojer](https://github.com/cpojer))
-- Move Geolocation JS code to FB internal ([9834c58](https://github.com/facebook/react-native/commit/9834c58) by [@cpojer](https://github.com/cpojer))
+- Remove **WebView**, use [react-native-community/react-native-webview](https://github.com/react-native-community/react-native-webview) instead ([1ca9a95](https://github.com/facebook/react-native/commit/1ca9a95) by [@cpojer](https://github.com/cpojer), [5fa8258](https://github.com/facebook/react-native/commit/5fa8258) by [@cpojer](https://github.com/cpojer), [6345fcf](https://github.com/facebook/react-native/commit/6345fcf) by [@cpojer](https://github.com/cpojer), [938c3bd](https://github.com/facebook/react-native/commit/938c3bd) by [@cpojer](https://github.com/cpojer))
+- Remove **Geolocation**, use [react-native-community/react-native-geolocation](https://github.com/react-native-community/react-native-geolocation) instead (https://github.com/react-native-community/react-native-geolocation)([0b62ff0](https://github.com/facebook/react-native/commit/0b62ff0) by [@axe-fb](https://github.com/axe-fb), [17dbf98](https://github.com/facebook/react-native/commit/17dbf98) by [@mmmulani](https://github.com/mmmulani), [9834c58](https://github.com/facebook/react-native/commit/9834c58) by [@cpojer](https://github.com/cpojer), [45bd2b5](https://github.com/facebook/react-native/commit/45bd2b5) by [@cpojer](https://github.com/cpojer))
 - Remove `accessibilityComponentType` and `accessibilityTraits` props ([f70e58f](https://github.com/facebook/react-native/commit/f70e58f) by [@elucaswork](https://github.com/elucaswork))
-- Move WebView JS files to FB internal ([5fa8258](https://github.com/facebook/react-native/commit/5fa8258) by [@cpojer](https://github.com/cpojer))
 - Remove legacy **AnimationManagerModule** ([a333c2b](https://github.com/facebook/react-native/commit/a333c2b) by [@javache](https://github.com/javache))
-- Remove SwipeableFlatList from RN ([9ca7989](https://github.com/facebook/react-native/commit/9ca7989) by [@cpojer](https://github.com/cpojer))
+- Remove **SwipeableFlatList** ([9ca7989](https://github.com/facebook/react-native/commit/9ca7989) by [@cpojer](https://github.com/cpojer))
 - Remove deprecated **RCTEvent** method, `sendInputEventWithName:body:` ([41343f6](https://github.com/facebook/react-native/commit/41343f6) by [@janicduplessis](https://github.com/janicduplessis))
 - Remove copyToClipBoardMiddleware ([d338a60](https://github.com/facebook/react-native/commit/d338a60) by [@sebmck](https://github.com/sebmck))
-- Remove Polyfills from RN Open Source ([06cf7fa](https://github.com/facebook/react-native/commit/06cf7fa) by [@cpojer](https://github.com/cpojer))
-- Remove WebView from public RN interface ([6345fcf](https://github.com/facebook/react-native/commit/6345fcf) by [@cpojer](https://github.com/cpojer))
+- Remove Polyfills - they are no longer needed ([06cf7fa](https://github.com/facebook/react-native/commit/06cf7fa) by [@cpojer](https://github.com/cpojer))
 
 #### Android specific
 
 - Remove experimental gating for LayoutAnimation on Android ([9895d01](https://github.com/facebook/react-native/commit/9895d01) by [@javache](https://github.com/javache))
-- Move Android code for Geolocation out ([0b62ff0](https://github.com/facebook/react-native/commit/0b62ff0) by [@axe-fb](https://github.com/axe-fb))
 
-
-#### iOS specific
-
-- Move iOS **Geolocation** code out from the repo ([17dbf98](https://github.com/facebook/react-native/commit/17dbf98) by [@mmmulani](https://github.com/mmmulani))
 
 ### Fixed
 
@@ -131,7 +121,7 @@
 - Enhance search of directories when load local asset image ([1da1e8c](https://github.com/facebook/react-native/commit/1da1e8c) by [@zhongwuzw](https://github.com/zhongwuzw))
 - Ensure runtime established before created contextContainer ([b312543](https://github.com/facebook/react-native/commit/b312543) by [@zhongwuzw](https://github.com/zhongwuzw))
 - Fix invalid CGContext when invalidate layer ([b88cc7b](https://github.com/facebook/react-native/commit/b88cc7b) by [@zhongwuzw](https://github.com/zhongwuzw))
-- Fix runtime crash in xcode 10.2 when using RCT_EXTERN_MODULE for swift classes ([ff66600](https://github.com/facebook/react-native/commit/ff66600))
+- Fix runtime crash in Xcode 10.2 when using RCT_EXTERN_MODULE for Swift classes ([ff66600](https://github.com/facebook/react-native/commit/ff66600))
 - Fix setting the contnetOffset when refreshing ends ([fe9d21f](https://github.com/facebook/react-native/commit/fe9d21f) by [@wns3645](https://github.com/wns3645))
 - Fix crash when **TextInput**'s default value exceeds `maxLength` ([bbd98d5](https://github.com/facebook/react-native/commit/bbd98d5) by [@zhongwuzw](https://github.com/zhongwuzw))
 - Fix native animated crash because of thread-safe issue ([de18977](https://github.com/facebook/react-native/commit/de18977) by [@zhongwuzw](https://github.com/zhongwuzw))
