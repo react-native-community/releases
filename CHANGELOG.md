@@ -6,8 +6,8 @@
 
 - Fix regexp on `hasteImpl` ([bcd1e2](https://github.com/facebook/react-native/commit/bcd1e23) by [@CaptainNic](https://github.com/CaptainNic))
 - Fix sparse array handling in `EventEmitter#listeners()` ([f68dc8](https://github.com/facebook/react-native/commit/f68dc8) by [@ide](https://github.com/ide))
-- Fix **VirtualizedList** to call `_updateViewableItems` immediately([08141e](https://github.com/facebook/react-native/commit/08141ef1559) by [@sahrens](https://github.com/sahrens))
-- Fix metro websocket reconnect logic([c28676](https://github.com/facebook/react-native/commit/c286769d28c) by [@rickhanlonii](https://github.com/rickhanlonii))
+- Fix **VirtualizedList** to call `_updateViewableItems` immediately ([08141e](https://github.com/facebook/react-native/commit/08141ef1559) by [@sahrens](https://github.com/sahrens))
+- Fix metro websocket reconnect logic ([c28676](https://github.com/facebook/react-native/commit/c286769d28c) by [@rickhanlonii](https://github.com/rickhanlonii))
 - Fix prop overrides of **TouchableWithoutFeedback** ([0c4206](https://github.com/facebook/react-native/commit/0c420644d9e) by [@aleclarson](https://github.com/aleclarson))
 - Fix resolve relative size rendering error in inspector ([4884ab](https://github.com/facebook/react-native/commit/4884ab6799b) by [@gandreadis](https://github.com/gandreadis))
 - Fix **VirtualizedSectionList** by making sure to check array bounds ([54f91d](https://github.com/facebook/react-native/commit/54f91d3ca9b) by [@vonovak](https://github.com/vonovak))
@@ -17,7 +17,7 @@
 #### iOS specific
 
 - Fix incorrect opacity behaviour for **Text** component on iOS ([f71357](https://github.com/facebook/react-native/commit/f71357aa816) by [@shergin](https://github.com/shergin))
-- Fix **Text** shadow displays on iOS when `textShadowOffset` is `{0,0}`([17a81b](https://github.com/facebook/react-native/commit/17a81be40d0) by [@Woodpav](https://github.com/Woodpav))
+- Fix **Text** shadow displays on iOS when `textShadowOffset` is `{0,0}` ([17a81b](https://github.com/facebook/react-native/commit/17a81be40d0) by [@Woodpav](https://github.com/Woodpav))
 - Add convert compatible of **NSString** for bridge message data ([c37e9c](https://github.com/facebook/react-native/commit/c37e9c89058) by [@zhongwuzw](https://github.com/zhongwuzw))
 - Fix nullability warnings in **RCTExceptionsManager** ([2b7d79](https://github.com/facebook/react-native/commit/2b7d7999e13) by [@jtreanor](https://github.com/jtreanor))
 
@@ -25,9 +25,9 @@
 
 - Fix JS errors during bundle load were reported as `UnknownCppException` ([84e263](https://github.com/facebook/react-native/commit/84e26360042))
 - Fix accessibility event properties for **TextInput** ([0a3bbc](https://github.com/facebook/react-native/commit/0a3bbcd1b2c) by [@elucaswork](https://github.com/elucaswork))
-- Fix throttle below 16ms on **ScrollView**([39776a](https://github.com/facebook/react-native/commit/39776a82f0c) by [@sahrens](https://github.com/sahrens))
+- Fix throttle below 16ms on **ScrollView** ([39776a](https://github.com/facebook/react-native/commit/39776a82f0c) by [@sahrens](https://github.com/sahrens))
 - Add logic to catch `MissingWebViewPackageException` ([379874](https://github.com/facebook/react-native/commit/379874dc499) by [@thorbenprimke](https://github.com/thorbenprimke))
-- Revert "improve RTL (#24069)"([f3801d](https://github.com/facebook/react-native/commit/f3801d90fad) by [@thorbenprimke](https://github.com/thorbenprimke))
+- Revert "improve RTL (#24069)" ([f3801d](https://github.com/facebook/react-native/commit/f3801d90fad) by [@thorbenprimke](https://github.com/thorbenprimke))
 
 ### Added
 
