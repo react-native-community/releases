@@ -1,7 +1,51 @@
 # Changelog
 
+## [v0.59.7]
+
+This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points (in particular, check the `KeyboardAvoidingView` change). Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/118) for cherry-picking commits.
+
+### Fixed
+
+- Fix regexp on `hasteImpl` ([bcd1e2](https://github.com/facebook/react-native/commit/bcd1e23) by [@CaptainNic](https://github.com/CaptainNic))
+- Fix sparse array handling in `EventEmitter#listeners()` ([f68dc8](https://github.com/facebook/react-native/commit/f68dc8) by [@ide](https://github.com/ide))
+- Fix **VirtualizedList** to call `_updateViewableItems` immediately ([08141e](https://github.com/facebook/react-native/commit/08141ef1559) by [@sahrens](https://github.com/sahrens))
+- Fix prop overrides of **TouchableWithoutFeedback** ([0c4206](https://github.com/facebook/react-native/commit/0c420644d9e) by [@aleclarson](https://github.com/aleclarson))
+- Fix resolve relative size rendering error in inspector ([4884ab](https://github.com/facebook/react-native/commit/4884ab6799b) by [@gandreadis](https://github.com/gandreadis))
+- Fix **VirtualizedSectionList** by making sure to check array bounds ([54f91d](https://github.com/facebook/react-native/commit/54f91d3ca9b) by [@vonovak](https://github.com/vonovak))
+- Update `_scrollAnimatedValue` offset of **ScrollView** ([e0d1b3](https://github.com/facebook/react-native/commit/e0d1b3ab84c) by [@miyabi](https://github.com/miyabi))
+- Fix infinite `setState` in **VirtualizedList** ([c40a93](https://github.com/facebook/react-native/commit/c40a938ead3) by [@sahrens](https://github.com/sahrens))
+
+#### iOS specific
+
+- Fix incorrect opacity behaviour for **Text** component ([f71357](https://github.com/facebook/react-native/commit/f71357aa816) by [@shergin](https://github.com/shergin))
+- Fix **Text** shadow displays when `textShadowOffset` is `{0,0}` ([17a81b](https://github.com/facebook/react-native/commit/17a81be40d0) by [@Woodpav](https://github.com/Woodpav))
+- Add convert compatible of **NSString** for bridge message data ([c37e9c](https://github.com/facebook/react-native/commit/c37e9c89058) by [@zhongwuzw](https://github.com/zhongwuzw))
+- Fix nullability warnings in **RCTExceptionsManager** ([2b7d79](https://github.com/facebook/react-native/commit/2b7d7999e13) by [@jtreanor](https://github.com/jtreanor))
+- Fix app to reconnect with metro after the bundler is closed and reopened ([c28676](https://github.com/facebook/react-native/commit/c286769d28c) by [@rickhanlonii](https://github.com/rickhanlonii))
+
+#### Android specific
+
+- Fix JS errors during bundle load were reported as `UnknownCppException` ([84e263](https://github.com/facebook/react-native/commit/84e26360042))
+- Fix accessibility event properties for **TextInput** ([0a3bbc](https://github.com/facebook/react-native/commit/0a3bbcd1b2c) by [@elucaswork](https://github.com/elucaswork))
+- Fix throttle below 16ms on **ScrollView** ([39776a](https://github.com/facebook/react-native/commit/39776a82f0c) by [@sahrens](https://github.com/sahrens))
+- Add logic to catch `MissingWebViewPackageException` ([379874](https://github.com/facebook/react-native/commit/379874dc499) by [@thorbenprimke](https://github.com/thorbenprimke))
+- Revert "[improve RTL](https://github.com/facebook/react-native/commit/871290f)" ([f3801d](https://github.com/facebook/react-native/commit/f3801d90fad) by [@thorbenprimke](https://github.com/thorbenprimke))
+
+### Added
+
+- Add listener for non-value animated node ([4a82dc](https://github.com/facebook/react-native/commit/4a82dca3b17) by [@osdnk](https://github.com/osdnk))
+
+### Changed
+
+- Make **KeyboardAvoidingView** with `behavior="height"` resize on keyboard close ([7140a7](https://github.com/facebook/react-native/commit/7140a7f7d15) by [@WaldoJeffers](https://github.com/WaldoJeffers))
+- Update network inspector to have smarter scroll stickiness ([57dc37](https://github.com/facebook/react-native/commit/57dc37ec5b3) by [@AlanFoster](https://github.com/AlanFoster))
+
+## [v0.59.6]
+
+This patch release was reverted.
+
 ## [v0.59.5]
-	
+
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/113) for cherry-picking commits.
 
 ### Fixed
@@ -18,7 +62,7 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 
 - Pass back correct dimensions for application window in Dimensions module ([72b4cc](https://github.com/facebook/react-native/commit/72b4cc091d8451b80855c47e248fb693c78dc4a9) by [@rdonnelly](https://github.com/rdonnelly))
 - Fixed warning: "RCTImagePickerManager requires main queue setup" ([effb02](https://github.com/facebook/react-native/commit/effb028ad5010e7ce6dc01f7758de2fa507d719a) by [@scarlac](https://github.com/scarlac))
-	
+
 ## [v0.59.4]
 
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/100) for cherry-picking commits.
@@ -40,7 +84,7 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 - Fix a crash when setting `underlineColorAndroid` in **TextInput** ([d6bca97](https://github.com/facebook/react-native/commit/d6bca97) by [@sunnylqm](https://github.com/sunnylqm))
 
 #### iOS specific
- 
+
 - Fix universal links not working in iOS 12 / Xcode 10 ([836a8e0](https://github.com/facebook/react-native/commit/836a8e0) by [@IljaDaderko](https://github.com/IljaDaderko))
 - Fix triangle views ([0167cf2](https://github.com/facebook/react-native/commit/0167cf2) by [@zhongwuzw](https://github.com/zhongwuzw))
 
