@@ -1,6 +1,6 @@
 # Changelog
 
-## [v0.59.6]
+## [v0.59.7]
 
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points (in particular, check the `KeyboardAvoidingView` change). Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/118) for cherry-picking commits.
 
@@ -39,6 +39,10 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 
 - Make **KeyboardAvoidingView** with `behavior="height"` resize on keyboard close ([7140a7](https://github.com/facebook/react-native/commit/7140a7f7d15) by [@WaldoJeffers](https://github.com/WaldoJeffers))
 - Update network inspector to have smarter scroll stickiness ([57dc37](https://github.com/facebook/react-native/commit/57dc37ec5b3) by [@AlanFoster](https://github.com/AlanFoster))
+
+## [v0.59.6]
+
+This patch release was reverted.
 
 ## [v0.59.5]
 
