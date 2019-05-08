@@ -1,6 +1,6 @@
 # Changelog
 
-## [v0.59.7]
+## [v0.59.8]
 
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points (in particular, check the `KeyboardAvoidingView` change). Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/118) for cherry-picking commits.
 
@@ -22,27 +22,31 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 - Add convert compatible of **NSString** for bridge message data ([c37e9c](https://github.com/facebook/react-native/commit/c37e9c89058) by [@zhongwuzw](https://github.com/zhongwuzw))
 - Fix nullability warnings in **RCTExceptionsManager** ([2b7d79](https://github.com/facebook/react-native/commit/2b7d7999e13) by [@jtreanor](https://github.com/jtreanor))
 - Fix app to reconnect with metro after the bundler is closed and reopened ([c28676](https://github.com/facebook/react-native/commit/c286769d28c) by [@rickhanlonii](https://github.com/rickhanlonii))
+- Fix throttle below 16ms on **ScrollView** ([39776a](https://github.com/facebook/react-native/commit/39776a82f0c) by [@sahrens](https://github.com/sahrens))
 
 #### Android specific
 
 - Fix JS errors during bundle load were reported as `UnknownCppException` ([84e263](https://github.com/facebook/react-native/commit/84e26360042))
-- Fix accessibility event properties for **TextInput** ([0a3bbc](https://github.com/facebook/react-native/commit/0a3bbcd1b2c) by [@elucaswork](https://github.com/elucaswork))
-- Fix throttle below 16ms on **ScrollView** ([39776a](https://github.com/facebook/react-native/commit/39776a82f0c) by [@sahrens](https://github.com/sahrens))
 - Add logic to catch `MissingWebViewPackageException` ([379874](https://github.com/facebook/react-native/commit/379874dc499) by [@thorbenprimke](https://github.com/thorbenprimke))
 - Revert "[improve RTL](https://github.com/facebook/react-native/commit/871290f)" ([f3801d](https://github.com/facebook/react-native/commit/f3801d90fad) by [@thorbenprimke](https://github.com/thorbenprimke))
 
 ### Added
 
 - Add listener for non-value animated node ([4a82dc](https://github.com/facebook/react-native/commit/4a82dca3b17) by [@osdnk](https://github.com/osdnk))
+- Set **ScrollView** throttle by default ([74d740](https://github.com/facebook/react-native/commit/74d740c97bc5e65c38e3090d6a87b2d6066b96f8) by [@sahrens](https://github.com/sahrens))
 
 ### Changed
 
 - Make **KeyboardAvoidingView** with `behavior="height"` resize on keyboard close ([7140a7](https://github.com/facebook/react-native/commit/7140a7f7d15) by [@WaldoJeffers](https://github.com/WaldoJeffers))
 - Update network inspector to have smarter scroll stickiness ([57dc37](https://github.com/facebook/react-native/commit/57dc37ec5b3) by [@AlanFoster](https://github.com/AlanFoster))
 
+## [v0.59.7]
+
+This patch release was unpublished.
+
 ## [v0.59.6]
 
-This patch release was reverted.
+This patch release was unpublished.
 
 ## [v0.59.5]
 
