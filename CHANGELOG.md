@@ -27,7 +27,6 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 #### Android specific
 
 - Fix JS errors during bundle load were reported as `UnknownCppException` ([84e263](https://github.com/facebook/react-native/commit/84e26360042))
-- Fix accessibility event properties for **TextInput** ([0a3bbc](https://github.com/facebook/react-native/commit/0a3bbcd1b2c) by [@elucaswork](https://github.com/elucaswork))
 - Add logic to catch `MissingWebViewPackageException` ([379874](https://github.com/facebook/react-native/commit/379874dc499) by [@thorbenprimke](https://github.com/thorbenprimke))
 - Revert "[improve RTL](https://github.com/facebook/react-native/commit/871290f)" ([f3801d](https://github.com/facebook/react-native/commit/f3801d90fad) by [@thorbenprimke](https://github.com/thorbenprimke))
 
