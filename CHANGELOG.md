@@ -2,6 +2,8 @@
 
 ## [v0.59.6]
 
+This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points (in particular, check the `KeyboardAvoidingView` change). Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/118) for cherry-picking commits.
+
 ### Fixed
 
 - Fix regexp on `hasteImpl` ([bcd1e2](https://github.com/facebook/react-native/commit/bcd1e23) by [@CaptainNic](https://github.com/CaptainNic))
