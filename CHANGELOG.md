@@ -4,34 +4,20 @@
 
 ### Added
 
-- Reorder operations of native view hierarchy ([5f027ec](https://github.com/facebook/react-native/commit/5f027ec) by [@lunaleaps](https://github.com/lunaleaps))
-- Consistent reporting native module name on crash on native side ([d6c33f9](https://github.com/facebook/react-native/commit/d6c33f9) by [@DimitryDushkin](https://github.com/DimitryDushkin))
-- Consistent reporting native module name on crash on native side ([b79d7db](https://github.com/facebook/react-native/commit/b79d7db) by [@DimitryDushkin](https://github.com/DimitryDushkin))
-- RNTester example for AccessibilityInfo.announceForAccessibility ([09f17a4](https://github.com/facebook/react-native/commit/09f17a4) by [@adkenyon](https://github.com/adkenyon))
-- New Intro screen, Icons ([6b393b2](https://github.com/facebook/react-native/commit/6b393b2) by [@cpojer](https://github.com/cpojer))
-- Added link to reactnative Twitter handle to Learn More section ([0245fd7](https://github.com/facebook/react-native/commit/0245fd7) by [@eliperkins](https://github.com/eliperkins))
-- Add link to ECOSYSTEM doc. ([952e232](https://github.com/facebook/react-native/commit/952e232) by [@hramos](https://github.com/hramos))
-- added listener in flipper plugin for yoga ([a2707ac](https://github.com/facebook/react-native/commit/a2707ac) by [@SidharthGuglani](https://github.com/SidharthGuglani))
-- TM Spec for Linking ([99899d0](https://github.com/facebook/react-native/commit/99899d0) by [@ericlewis](https://github.com/ericlewis))
-- Add TM spec for AppState ([d993089](https://github.com/facebook/react-native/commit/d993089) by [@ericlewis](https://github.com/ericlewis))
-- Add default scrollEventThrottle to Animated{FlatList, SectionList} ([933e65e](https://github.com/facebook/react-native/commit/933e65e) by [@janicduplessis](https://github.com/janicduplessis))
+- New Intro screen ([6b393b2](https://github.com/facebook/react-native/commit/6b393b2) and [0245fd7](https://github.com/facebook/react-native/commit/0245fd7) by [@cpojer](https://github.com/cpojer) and [@eliperkins](https://github.com/eliperkins))
 - Enhanced accessibility actions support ([14b4668](https://github.com/facebook/react-native/commit/14b4668) by [@xuelgong](https://github.com/xuelgong))
-- Normalize directEventType names ([a5105d5](https://github.com/facebook/react-native/commit/a5105d5) by [@rickhanlonii](https://github.com/rickhanlonii))
 
 #### Android specific
 
-- Added a touchSoundDisabled prop to Touchable. If true, doesn't system sound on touch. ([45e77c8](https://github.com/facebook/react-native/commit/45e77c8) by [@yurykorzun](https://github.com/yurykorzun))
-- Add Internal and JavaScript categories ([b4b9c0f](https://github.com/facebook/react-native/commit/b4b9c0f) by [@hramos](https://github.com/hramos))
-- Add inline view examples to RNTester ([a2a03bc](https://github.com/facebook/react-native/commit/a2a03bc) by [@rigdern](https://github.com/rigdern))
+- Add a `touchSoundDisabled` prop to **Button**, **Touchable**, and **TouchableWithoutFeedback** ([45e77c8](https://github.com/facebook/react-native/commit/45e77c8) by [@yurykorzun](https://github.com/yurykorzun))
 
 #### iOS specific
 
-- Add new envvar to support internal iOS tests at Facebook ([e94b116](https://github.com/facebook/react-native/commit/e94b116) by [@hramos](https://github.com/hramos))
 - Ability to force network requests to use WiFi using the allowsCellularAccess property. This can ensure that network requests are sent over WiFi if communicating with a local hardware device and is accomplished by setting a flag. Default behavior of allowing network connections over cellular networks when available is unchanged. ([01c70f2](https://github.com/facebook/react-native/commit/01c70f2) by [@bondparkerbond](https://github.com/bondparkerbond))
-- Gain insights on the the turbo module setup times by observing `RCTDidSetupModuleNotification`. The userInfo dictionary will contain the module name and setup time in milliseconds. These values can be extracted via `RCTDidSetupModuleNotificationModuleNameKey` and `RCTDidSetupModuleNotificationSetupTimeKey`. ([cd2f8c5](https://github.com/facebook/react-native/commit/cd2f8c5) by [@RCiesielczuk](https://github.com/RCiesielczuk))
 
 ### Changed
 
+- Add default `scrollEventThrottle` to **Animated.FlatList** and **Animated.SectionList**; this now behaves consistently with **Animated.ScrollView** ([933e65e](https://github.com/facebook/react-native/commit/933e65e) by [@janicduplessis](https://github.com/janicduplessis))
 - Bumped react-native-community/eslint-config version ([2ef56c0](https://github.com/facebook/react-native/commit/2ef56c0) by [@matt-oakes](https://github.com/matt-oakes))
 - Cleanup RedBox message and stack output ([49d26eb](https://github.com/facebook/react-native/commit/49d26eb) by [@thymikee](https://github.com/thymikee))
 - React sync for revisions 8e25ed2...ec6691a ([ee681b7](https://github.com/facebook/react-native/commit/ee681b7) by [@mdvacca](https://github.com/mdvacca))
@@ -88,6 +74,8 @@
 
 ### Fixed
 
+- Consistent reporting native module name on crash on native side ([d6c33f9](https://github.com/facebook/react-native/commit/d6c33f9) and [b79d7db](https://github.com/facebook/react-native/commit/b79d7db) by [@DimitryDushkin](https://github.com/DimitryDushkin))
+- Reorder operations of native view hierarchy ([5f027ec](https://github.com/facebook/react-native/commit/5f027ec) by [@lunaleaps](https://github.com/lunaleaps))
 - Fixed JavaScript e2e tests. ([b92f30d](https://github.com/facebook/react-native/commit/b92f30d) by [@hramos](https://github.com/hramos))
 - Fix HasteImpl platform name regex ([28e0de0](https://github.com/facebook/react-native/commit/28e0de0) by [@CaptainNic](https://github.com/CaptainNic))
 - [Blob] Release underlying resources when JS instance in GC'ed ([c5c79e5](https://github.com/facebook/react-native/commit/c5c79e5) by [@janicduplessis](https://github.com/janicduplessis))
