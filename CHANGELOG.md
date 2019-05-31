@@ -29,7 +29,7 @@
 - Fire timers in the background via **NSTimer** (#23674) ([97c414e](https://github.com/facebook/react-native/commit/97c414e) by [@cojo](https://github.com/cojo))
 - Add CocoaPods Podfile to the project template ([cd8064b](https://github.com/facebook/react-native/commit/cd8064b) by [@fson](https://github.com/fson))
 - Add `scrollToOverflowEnabled` prop to **ScrollView** ([6f4239b](https://github.com/facebook/react-native/commit/6f4239b) by [@mysport12](https://github.com/mysport12))
-- Gain insights on the module setup times by observing `RCTDidSetupModuleNotification`. The `userInfo` dictionary will contain the module name and setup time in milliseconds. These values can be extracted via `RCTDidSetupModuleNotificationModuleNameKey ` and `RCTDidSetupModuleNotificationSetupTimeKey`. ([e2bf843](https://github.com/facebook/react-native/commit/e2bf843) by [@RCiesielczuk](https://github.com/RCiesielczuk))
+- Gain insights on the module setup times by observing `RCTDidSetupModuleNotification`. The `userInfo` dictionary will contain the module name and setup time in milliseconds. These values can be extracted via `RCTDidSetupModuleNotificationModuleNameKey` and `RCTDidSetupModuleNotificationSetupTimeKey`. ([e2bf843](https://github.com/facebook/react-native/commit/e2bf843) by [@RCiesielczuk](https://github.com/RCiesielczuk))
 - Add border properties to **RCTImageView** ([66a2940](https://github.com/facebook/react-native/commit/66a2940))
 
 ### Changed
@@ -82,7 +82,6 @@
 #### Android specific
 
 - Remove experimental gating for LayoutAnimation on Android ([9895d01](https://github.com/facebook/react-native/commit/9895d01) by [@javache](https://github.com/javache))
-
 
 ### Fixed
 
