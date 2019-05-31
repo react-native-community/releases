@@ -149,6 +149,10 @@ function isTurboModules(change) {
   return /\b(tm)\b/i.test(change);
 }
 
+function isInternal(change) {
+  return /^\[internal\]/i.test(change);
+}
+
 function getChangeMessage(item) {
   const commitMessage = item.commit.message.split("\n");
   let entry =
@@ -189,6 +193,7 @@ function getChangelogDesc(commits) {
 
     if(isFabric(change.split('\n')[0])) return;
     if(isTurboModules(change.split('\n')[0])) return;
+    if(isInternal(change.split('\n')[0])) return;
 
     if (isAdded(change)) {
       if (isAndroidCommit(change)) {
