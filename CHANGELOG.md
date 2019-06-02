@@ -27,6 +27,9 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 - `react` is now at v16.8.1 ([ee681b7](https://github.com/facebook/react-native/commit/ee681b7) by [@mdvacca](https://github.com/mdvacca))
 - `eslint-plugin-react-native` is now at v3.7.0 ([2becfab](https://github.com/facebook/react-native/commit/2becfab) by [@monotv](https://github.com/monotv))
 - `react-native-community/cli` is now at v2.0.0-alpha.20 ([0815f81](https://github.com/facebook/react-native/commit/0815f81) by [@thymikee](https://github.com/thymikee))
+- `flow` is now at v0.98 ([0e1dfd4](https://github.com/facebook/react-native/commit/0e1dfd4) by [@nmote](https://github.com/nmote))
+- `prettier` is now at v1.17.0 ([ff9f8f3](https://github.com/facebook/react-native/commit/ff9f8f3))
+- `metro` packages are now at v0.54.1 ([7ff3874](https://github.com/facebook/react-native/commit/7ff3874), [343f0a1](https://github.com/facebook/react-native/commit/343f0a1) by [@motiz88](https://github.com/motiz88))
 
 #### Android specific
 
@@ -36,6 +39,7 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 
 - **SectionList**'s `scrollToLocation` on iOS now counts `itemIndex` like Android; both platforms are now consistent ([248a108](https://github.com/facebook/react-native/commit/248a108) by [@vonovak](https://github.com/vonovak))
 - add nonnull/nullable for swift ([3163479](https://github.com/facebook/react-native/commit/3163479))
+- Switch **Slider** `onSlidingComplete` event to a non-bubbling event on iOS to match Android ([7927437](https://github.com/facebook/react-native/commit/7927437) by [@rickhanlonii](https://github.com/rickhanlonii))
 
 ### Deprecated
 
@@ -73,6 +77,9 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 - In `Linking.getInitialURL` method, use the `InteractionManager` to wait for the current activity to finish initializing ([c802d0b](https://github.com/facebook/react-native/commit/c802d0b) by [@mu29](https://github.com/mu29))
 - Disable delta bundles on the first app run ([e4aff42](https://github.com/facebook/react-native/commit/e4aff42) by [@wojteg1337](https://github.com/wojteg1337))
 - In **DatePickerAndroid**, work around Android Nougat bug displaying the wrong the spinner mode ([bb060d6](https://github.com/facebook/react-native/commit/bb060d6) by [@luancurti](https://github.com/luancurti))
+- Fix crash in Animated Interpolation when inputMin === inputMax ([7abfd23](https://github.com/facebook/react-native/commit/7abfd23) by [@olegbl](https://github.com/olegbl))
+- Fix symbolication for **RedBox** and **YellowBox** when using delta bundling ([a05e9f8](https://github.com/facebook/react-native/commit/a05e9f8) by [@motiz88](https://github.com/motiz88))
+- Fix **CameraRoll** crash on mime type guessing ([ebeb893](https://github.com/facebook/react-native/commit/ebeb893) by [@Sroka](https://github.com/Sroka))
 
 #### iOS specific
 
@@ -99,7 +106,7 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 
 - Ensure proper Synchronization on ReactChoreographer ([81d0f9a](https://github.com/facebook/react-native/commit/81d0f9a) by [@mdvacca](https://github.com/mdvacca))
 - Add component schema for Modal ([8e6031c](https://github.com/facebook/react-native/commit/8e6031c) by [@mdvacca](https://github.com/mdvacca))
-- - Fix mounting of views when a re-order happen caused by changes in viewflattening ([f98880b](https://github.com/facebook/react-native/commit/f98880b) by [@mdvacca](https://github.com/mdvacca))
+- Fix mounting of views when a re-order happen caused by changes in viewflattening ([f98880b](https://github.com/facebook/react-native/commit/f98880b) by [@mdvacca](https://github.com/mdvacca))
 - Display wrong view hierarchy in Test exceptions ([61d2f1e](https://github.com/facebook/react-native/commit/61d2f1e) by [@mdvacca](https://github.com/mdvacca))
 - Add debug information in Mounting Manager ([b3a0768](https://github.com/facebook/react-native/commit/b3a0768) by [@mdvacca](https://github.com/mdvacca))
 - Migrate VirtualizedList to use ref.measureLayout ([5eac8ca](https://github.com/facebook/react-native/commit/5eac8ca) by [@mdvacca](https://github.com/mdvacca))
@@ -118,7 +125,6 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 - Refactor Virtualized List to not use findNodeHandle when calling measureLayout ([4b98ac9](https://github.com/facebook/react-native/commit/4b98ac9) by [@mdvacca](https://github.com/mdvacca))
 - Fix `YGConfig` constructors ([7df10d3](https://github.com/facebook/react-native/commit/7df10d3) by [@davidaurelio](https://github.com/davidaurelio))
 - Remove API to constrain measure cache size ([2fd381c](https://github.com/facebook/react-native/commit/2fd381c) by [@davidaurelio](https://github.com/davidaurelio))
-- Upgrade to Flow v0.98 ([0e1dfd4](https://github.com/facebook/react-native/commit/0e1dfd4) by [@nmote](https://github.com/nmote))
 - Refactor getConstants implementation ([c9006ce](https://github.com/facebook/react-native/commit/c9006ce) by [@RSNara](https://github.com/RSNara))
 - Replace throwIfJNIReportsPendingException ([7a8de7d](https://github.com/facebook/react-native/commit/7a8de7d) by [@RSNara](https://github.com/RSNara))
 - workaround T43930203 where originalConsole.assert doesn't properly check the condition and always fires ([a87af19](https://github.com/facebook/react-native/commit/a87af19) by [@sahrens](https://github.com/sahrens))
@@ -127,8 +133,6 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 - Allow creating ThemedReactContext without CatalystInstance ([6cf784f](https://github.com/facebook/react-native/commit/6cf784f) by [@ejanzer](https://github.com/ejanzer))
 - Support hyphen symbols in enums ([43357df](https://github.com/facebook/react-native/commit/43357df) by [@rickhanlonii](https://github.com/rickhanlonii))
 - Add modal kebab-case enum props ([d06983f](https://github.com/facebook/react-native/commit/d06983f) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Upgrade prettier to 1.17.0 ([ff9f8f3](https://github.com/facebook/react-native/commit/ff9f8f3))
-- Upgrade Metro packages to 0.54.0 ([343f0a1](https://github.com/facebook/react-native/commit/343f0a1) by [@motiz88](https://github.com/motiz88))
 - Reduce measure cache size to 8 ([71c3c23](https://github.com/facebook/react-native/commit/71c3c23) by [@davidaurelio](https://github.com/davidaurelio))
 - **breaking:** remove `YGNodeGetInstanceCount` ([7d44113](https://github.com/facebook/react-native/commit/7d44113) by [@davidaurelio](https://github.com/davidaurelio))
 - Publish event when visiting nodes during layout ([6ccdf85](https://github.com/facebook/react-native/commit/6ccdf85) by [@davidaurelio](https://github.com/davidaurelio))
@@ -149,36 +153,7 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 - Move native version check to DEV only ([5bb2277](https://github.com/facebook/react-native/commit/5bb2277) by [@mmmulani](https://github.com/mmmulani))
 - use vector for subscribers in event system ([44659d2](https://github.com/facebook/react-native/commit/44659d2) by [@SidharthGuglani](https://github.com/SidharthGuglani))
 - use shared_ptr for subscribers vector in event system ([37c8771](https://github.com/facebook/react-native/commit/37c8771) by [@SidharthGuglani](https://github.com/SidharthGuglani))
-- Upgrade Metro packages to 0.54.1 ([7ff3874](https://github.com/facebook/react-native/commit/7ff3874) by [@motiz88](https://github.com/motiz88))
-- Add js1 build viewconfigs ([c9d9f8c](https://github.com/facebook/react-native/commit/c9d9f8c) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Update generated differs ([3e1e661](https://github.com/facebook/react-native/commit/3e1e661) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Update view configs handle view props/events ([1aca745](https://github.com/facebook/react-native/commit/1aca745) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Add viewconfig verification ([382846a](https://github.com/facebook/react-native/commit/382846a) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Only generate supported schemas ([fb41a83](https://github.com/facebook/react-native/commit/fb41a83) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Fix style property bits ([ec82e05](https://github.com/facebook/react-native/commit/ec82e05) by [@davidaurelio](https://github.com/davidaurelio))
-- `YGNode`: one byte of private storage ([c3c3c3c](https://github.com/facebook/react-native/commit/c3c3c3c) by [@davidaurelio](https://github.com/davidaurelio))
 - Codemod $Enum<...> to $Keys<...> in xplat/fbcode ([f050f99](https://github.com/facebook/react-native/commit/f050f99) by [@gkz](https://github.com/gkz))
-- Fallback to empty object when native module constants are not defined ([edb07c1](https://github.com/facebook/react-native/commit/edb07c1) by [@rubennorte](https://github.com/rubennorte))
-- ReadableNativeMap: `importKeys` shouldn't choke on null `map_` ([b0d1f9a](https://github.com/facebook/react-native/commit/b0d1f9a) by [@JoshuaGross](https://github.com/JoshuaGross))
-- mutex lock while accessing event subscribers vector for thread safety ([fb8a7c3](https://github.com/facebook/react-native/commit/fb8a7c3) by [@SidharthGuglani](https://github.com/SidharthGuglani))
-- Fix flow and formatting ([531f11f](https://github.com/facebook/react-native/commit/531f11f) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Fix config for 0.60 release ([41742b3](https://github.com/facebook/react-native/commit/41742b3) by [@hramos](https://github.com/hramos))
-
-#### Android Unknown
-
-- Fix multiple invocations of getConstants ([a965070](https://github.com/facebook/react-native/commit/a965070) by [@RSNara](https://github.com/RSNara))
-- Make async calls work ([ef4955f](https://github.com/facebook/react-native/commit/ef4955f) by [@RSNara](https://github.com/RSNara))
-- Introduce TurboModuleManagerDelegate ([cba205b](https://github.com/facebook/react-native/commit/cba205b) by [@RSNara](https://github.com/RSNara))
-- Java objects should own C++ State ([ff1de68](https://github.com/facebook/react-native/commit/ff1de68) by [@JoshuaGross](https://github.com/JoshuaGross))
-- Core React/Litho support and Java codegen ([d7447fa](https://github.com/facebook/react-native/commit/d7447fa) by [@JoshuaGross](https://github.com/JoshuaGross))
-- Add test utilities for C++ and Java ([03bf178](https://github.com/facebook/react-native/commit/03bf178) by [@davidaurelio](https://github.com/davidaurelio))
-- Fix Android Camera Roll crash on mime type guessing ([ebeb893](https://github.com/facebook/react-native/commit/ebeb893) by [@Sroka](https://github.com/Sroka))
-- Android: Sort modules by ID when serializing delta bundle ([a05e9f8](https://github.com/facebook/react-native/commit/a05e9f8) by [@motiz88](https://github.com/motiz88))
-- Send ReactNative C++ State to Android `measure` API ([04782ff](https://github.com/facebook/react-native/commit/04782ff) by [@JoshuaGross](https://github.com/JoshuaGross))
-- Switch Slider onSlidingComplete event to a non-bubbling event on iOS to match Android ([7927437](https://github.com/facebook/react-native/commit/7927437) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Add android specific view config props ([5a905a5](https://github.com/facebook/react-native/commit/5a905a5) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Use array map from android support library ([1ece46b](https://github.com/facebook/react-native/commit/1ece46b) by [@alexeylang](https://github.com/alexeylang))
-- Fix error in Animated Interpolation when inputMin === inputMax ([7abfd23](https://github.com/facebook/react-native/commit/7abfd23) by [@olegbl](https://github.com/olegbl))
 
 ## [v0.59.10]
 
