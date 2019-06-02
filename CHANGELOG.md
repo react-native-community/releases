@@ -6,8 +6,9 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 
 ### Added
 
-- New Intro screen ([6b393b2](https://github.com/facebook/react-native/commit/6b393b2), [233fddb](https://github.com/facebook/react-native/commit/233fddb), [fe88e9e](https://github.com/facebook/react-native/commit/fe88e9e), [aa926e3](https://github.com/facebook/react-native/commit/aa926e3), [a9e8a71](https://github.com/facebook/react-native/commit/a9e8a71), and [0245fd7](https://github.com/facebook/react-native/commit/0245fd7) by [@cpojer](https://github.com/cpojer), [@eliperkins](https://github.com/eliperkins), and [@lucasbento](https://github.com/lucasbento))
+- New Intro screen ([6b393b2](https://github.com/facebook/react-native/commit/6b393b2), [233fddb](https://github.com/facebook/react-native/commit/233fddb), [fe88e9e](https://github.com/facebook/react-native/commit/fe88e9e), [aa926e3](https://github.com/facebook/react-native/commit/aa926e3), [a9e8a71](https://github.com/facebook/react-native/commit/a9e8a71), [ad4a5d9](https://github.com/facebook/react-native/commit/ad4a5d9), and [0245fd7](https://github.com/facebook/react-native/commit/0245fd7) by [@cpojer](https://github.com/cpojer), [@eliperkins](https://github.com/eliperkins), [@lucasbento](https://github.com/lucasbento), and [@orta](https://github.com/orta))
 - Enhanced accessibility actions support ([14b4668](https://github.com/facebook/react-native/commit/14b4668) by [@xuelgong](https://github.com/xuelgong))
+- Autolinking ([5954880](https://github.com/facebook/react-native/commit/5954880), [da7d3df](https://github.com/facebook/react-native/commit/da7d3df) by [@zhongwuzw](https://github.com/zhongwuzw) and [@hramos](https://github.com/hramos))
 
 #### Android specific
 
@@ -23,6 +24,8 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 - Add default `scrollEventThrottle` value to **Animated.FlatList** and **Animated.SectionList**; this now behaves consistently with **Animated.ScrollView** ([933e65e](https://github.com/facebook/react-native/commit/933e65e) by [@janicduplessis](https://github.com/janicduplessis))
 - `react-native-community/eslint-config` is now at v0.0.5 ([2ef56c0](https://github.com/facebook/react-native/commit/2ef56c0) by [@matt-oakes](https://github.com/matt-oakes))
 - `react` is now at v16.8.1 ([ee681b7](https://github.com/facebook/react-native/commit/ee681b7) by [@mdvacca](https://github.com/mdvacca))
+- `eslint-plugin-react-native` is now at v3.7.0 ([2becfab](https://github.com/facebook/react-native/commit/2becfab) by [@monotv](https://github.com/monotv))
+- `react-native-community/cli` is now at v2.0.0-alpha.20 ([0815f81](https://github.com/facebook/react-native/commit/0815f81) by [@thymikee](https://github.com/thymikee))
 
 #### Android specific
 
@@ -49,50 +52,37 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 
 - Fix `Animated.Value` value after animation if component was re-mounted ([b3f7d53](https://github.com/facebook/react-native/commit/b3f7d53) by [@michalchudziak](https://github.com/michalchudziak))
 - Consistent reporting native module name on crash on native side ([d6c33f9](https://github.com/facebook/react-native/commit/d6c33f9) and [b79d7db](https://github.com/facebook/react-native/commit/b79d7db) by [@DimitryDushkin](https://github.com/DimitryDushkin))
-- Reorder operations of native view hierarchy ([5f027ec](https://github.com/facebook/react-native/commit/5f027ec) by [@lunaleaps](https://github.com/lunaleaps))
-- Fixed JavaScript e2e tests. ([b92f30d](https://github.com/facebook/react-native/commit/b92f30d) by [@hramos](https://github.com/hramos))
 - Fix HasteImpl platform name regex ([28e0de0](https://github.com/facebook/react-native/commit/28e0de0) by [@CaptainNic](https://github.com/CaptainNic))
-- [Blob] Release underlying resources when JS instance in GC'ed ([c5c79e5](https://github.com/facebook/react-native/commit/c5c79e5) by [@janicduplessis](https://github.com/janicduplessis))
-- Fix an issue with `no-raw-text` rule for TypeScript by updating the eslint-plugin-react-native dependency to 3.7.0 ([2becfab](https://github.com/facebook/react-native/commit/2becfab) by [@monotv](https://github.com/monotv))
-- Adjust scrollToLocation when using sticky section headers ([d376a44](https://github.com/facebook/react-native/commit/d376a44) by [@danilobuerger](https://github.com/danilobuerger))
+- Fix a JS memory leak in Blob handling; this resolves multiple leaks around `fetch` ([c5c79e5](https://github.com/facebook/react-native/commit/c5c79e5) and [9ef5107](https://github.com/facebook/react-native/commit/9ef5107) by [@janicduplessis](https://github.com/janicduplessis))
+- **SectionList**'s `scrollToLocation` now scrolls to the top of the sticky header as expected ([d376a44](https://github.com/facebook/react-native/commit/d376a44) by [@danilobuerger](https://github.com/danilobuerger))
 - Move accessibility props to UIView+React ([9261035](https://github.com/facebook/react-native/commit/9261035) by [@janicduplessis](https://github.com/janicduplessis))
-- [Blob] Release underlying resources when JS instance in GC'ed ([9ef5107](https://github.com/facebook/react-native/commit/9ef5107) by [@janicduplessis](https://github.com/janicduplessis))
-- update CLI to alpha.20 to fix Android tests ([0815f81](https://github.com/facebook/react-native/commit/0815f81) by [@thymikee](https://github.com/thymikee))
-- Improves the copy for the new app screen ([ad4a5d9](https://github.com/facebook/react-native/commit/ad4a5d9) by [@orta](https://github.com/orta))
 
 #### Android specific
 
+- Fix duplicate resource error in Android build ([962437f](https://github.com/facebook/react-native/commit/962437f) and [eb534bc](https://github.com/facebook/react-native/commit/eb534bc) by [@mikehardy](https://github.com/mikehardy) and [@Dbroqua](https://github.com/Dbroqua))
+- Reorder operations of native view hierarchy ([5f027ec](https://github.com/facebook/react-native/commit/5f027ec) by [@lunaleaps](https://github.com/lunaleaps))
 - Fix performance regression from new custom fonts implementation ([fd6386a](https://github.com/facebook/react-native/commit/fd6386a) by [@dulmandakh](https://github.com/dulmandakh))
 - Fix internal test case around disabled state of buttons ([70e2ab2](https://github.com/facebook/react-native/commit/70e2ab2))
-- `OnValueChange` will be called only when the `selectedValue` changes. ([82148da](https://github.com/facebook/react-native/commit/82148da) by [@a-c-sreedhar-reddy](https://github.com/a-c-sreedhar-reddy))
+- Fix extra call of **PickerAndroid**'s `onValueChange` on initialization; now it is only called when `selectedValue` changes ([82148da](https://github.com/facebook/react-native/commit/82148da) by [@a-c-sreedhar-reddy](https://github.com/a-c-sreedhar-reddy))
+- Fix **PickerAndroid** will reset selected value during items update ([310cc38](https://github.com/facebook/react-native/commit/310cc38) by [@Kudo](https://github.com/Kudo))
 - Fix unexpected PARTIAL_WAKE_LOCK when no headless tasks registered. ([bdb1d43](https://github.com/facebook/react-native/commit/bdb1d43) by [@timwangdev](https://github.com/timwangdev))
-- [Android][fixed] onKeyPress method is calling, when user type emoji ([a5c57b4](https://github.com/facebook/react-native/commit/a5c57b4))
-- Remove unreliable packagingOptions.pickFirst for libc++\_shared.so and libjsc.so ([509a07b](https://github.com/facebook/react-native/commit/509a07b) by [@Kudo](https://github.com/Kudo))
-- Fix crash in XMLHttpRequest example on Android ([16e4971](https://github.com/facebook/react-native/commit/16e4971) by [@janicduplessis](https://github.com/janicduplessis))
-- In `Linking.getInitialURL` method, use the `InteractionManager` to wait for the current activity to finish initializing. ([c802d0b](https://github.com/facebook/react-native/commit/c802d0b) by [@mu29](https://github.com/mu29))
-- Fix duplicate resource error in Android build ([962437f](https://github.com/facebook/react-native/commit/962437f) by [@mikehardy](https://github.com/mikehardy))
-- Fix duplicate resource error for raw folder in Android build ([eb534bc](https://github.com/facebook/react-native/commit/eb534bc) by [@Dbroqua](https://github.com/Dbroqua))
-- Fix #13351 PickerAndroid will reset selected value during items update. ([310cc38](https://github.com/facebook/react-native/commit/310cc38) by [@Kudo](https://github.com/Kudo))
+- Fix calling **TextInput**'s `onKeyPress` method when the user types an emoji ([a5c57b4](https://github.com/facebook/react-native/commit/a5c57b4))
+- Fix value of **TextInput**'s `onSelectionChange` start and end arguments by normalizing them ([2ad3bb2](https://github.com/facebook/react-native/commit/2ad3bb2) by [@uqmessias](https://github.com/uqmessias))
+- In `Linking.getInitialURL` method, use the `InteractionManager` to wait for the current activity to finish initializing ([c802d0b](https://github.com/facebook/react-native/commit/c802d0b) by [@mu29](https://github.com/mu29))
 - Disable delta bundles on the first app run ([e4aff42](https://github.com/facebook/react-native/commit/e4aff42) by [@wojteg1337](https://github.com/wojteg1337))
-- [Android][fixed] Fix date picker with mode spinner on Android Nougat (7.0) ([bb060d6](https://github.com/facebook/react-native/commit/bb060d6) by [@luancurti](https://github.com/luancurti))
-- fix(android): Normalize start and end args ([2ad3bb2](https://github.com/facebook/react-native/commit/2ad3bb2) by [@uqmessias](https://github.com/uqmessias))
-- Typo in NativeModuleRegistryBuilder error handler ([2231263](https://github.com/facebook/react-native/commit/2231263) by [@ericlewis](https://github.com/ericlewis))
+- In **DatePickerAndroid**, work around Android Nougat bug displaying the wrong the spinner mode ([bb060d6](https://github.com/facebook/react-native/commit/bb060d6) by [@luancurti](https://github.com/luancurti))
 
 #### iOS specific
 
 - Call designated initializer for SurfaceHostingProxyRootView ([3c125e8](https://github.com/facebook/react-native/commit/3c125e8) by [@zhongwuzw](https://github.com/zhongwuzw))
-- Fix redbox JS symbolication when adding JS engine tag to the message ([920632c](https://github.com/facebook/react-native/commit/920632c) by [@motiz88](https://github.com/motiz88))
-- Fixes selection of single line text input ([fc8008e](https://github.com/facebook/react-native/commit/fc8008e) by [@zhongwuzw](https://github.com/zhongwuzw))
-- Fixed broken RNTester ([5832855](https://github.com/facebook/react-native/commit/5832855) by [@cpojer](https://github.com/cpojer))
-- Fixed broken RNTester ([e7ebb17](https://github.com/facebook/react-native/commit/e7ebb17) by [@cpojer](https://github.com/cpojer))
-- Fix event ordering when combining coalescable and non-coalescable events ([4e215b2](https://github.com/facebook/react-native/commit/4e215b2) by [@janicduplessis](https://github.com/janicduplessis))
-- Fixed accesibility problem with <TextInput>'s Clear Button ([4e37d37](https://github.com/facebook/react-native/commit/4e37d37) by [@shergin](https://github.com/shergin))
-- Fixes renderingMode not applied to GIF images ([75380aa](https://github.com/facebook/react-native/commit/75380aa) by [@zhongwuzw](https://github.com/zhongwuzw))
-- Fixes ScrollView centerContent not work in some cases ([2cdf969](https://github.com/facebook/react-native/commit/2cdf969) by [@zhongwuzw](https://github.com/zhongwuzw))
-- Fixes syntax of autolink script ([5954880](https://github.com/facebook/react-native/commit/5954880), [da7d3df](https://github.com/facebook/react-native/commit/da7d3df) by [@zhongwuzw](https://github.com/zhongwuzw) and [@hramos](https://github.com/hramos))
-- fix crash on performance logger ([5d3d398](https://github.com/facebook/react-native/commit/5d3d398) by [@zhigang1992](https://github.com/zhigang1992))
+- Fix **RedBox** JS symbolication when adding JS engine tag to the message ([920632c](https://github.com/facebook/react-native/commit/920632c) by [@motiz88](https://github.com/motiz88))
+- Fix **TextInput**'s `onSelectionChange` behavior in single line text inputs ([fc8008e](https://github.com/facebook/react-native/commit/fc8008e) by [@zhongwuzw](https://github.com/zhongwuzw))
+- Fix accesibility problem with **TextInput** Clear Button ([4e37d37](https://github.com/facebook/react-native/commit/4e37d37) by [@shergin](https://github.com/shergin))
+- Fix `renderingMode` not applied to GIF **Image**s ([75380aa](https://github.com/facebook/react-native/commit/75380aa) by [@zhongwuzw](https://github.com/zhongwuzw))
+- Fix **ScrollView** `centerContent` not work in some cases ([2cdf969](https://github.com/facebook/react-native/commit/2cdf969) by [@zhongwuzw](https://github.com/zhongwuzw))
+- Fix crash on performance logger ([5d3d398](https://github.com/facebook/react-native/commit/5d3d398) by [@zhigang1992](https://github.com/zhigang1992))
 - Do not run packager in Release mode ([4ea6204](https://github.com/facebook/react-native/commit/4ea6204) by [@lucasbento](https://github.com/lucasbento))
-- Fixed `code` and `reason` arguments ignored on iOS when calling `WebSocket.close` ([0ac2171](https://github.com/facebook/react-native/commit/0ac2171) by [@jeanregisser](https://github.com/jeanregisser))
+- Fix `code` and `reason` arguments being ignored when calling `WebSocket.close` ([0ac2171](https://github.com/facebook/react-native/commit/0ac2171) by [@jeanregisser](https://github.com/jeanregisser))
 - Fix return value of `Linking.openURL()` ([4a5d0bd](https://github.com/facebook/react-native/commit/4a5d0bd) by [@thib92](https://github.com/thib92))
 
 ### Security
