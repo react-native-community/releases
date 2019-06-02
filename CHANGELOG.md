@@ -17,6 +17,7 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 #### iOS specific
 
 - Ability to force network requests to use WiFi using the `allowsCellularAccess` property. This can ensure that network requests are sent over WiFi if communicating with a local hardware device and is accomplished by setting a flag. Default behavior of allowing network connections over cellular networks when available is unchanged. ([01c70f2](https://github.com/facebook/react-native/commit/01c70f2) and [916186a](https://github.com/facebook/react-native/commit/916186a) by [@bondparkerbond](https://github.com/bondparkerbond)and [@zhongwuzw](https://github.com/zhongwuzw))
+- `$RN_CACHE_DIR` can now be used to manually specify the iOS build cache directory ([845eee4](https://github.com/facebook/react-native/commit/845eee4) by [@hramos](https://github.com/hramos))
 
 ### Changed
 
@@ -42,6 +43,7 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 
 ### Removed
 
+- **NetInfo** has been removed; its replacement is now available via the [react-native-community/netinfo](https://github.com/react-native-community/react-native-netinfo) package ([5a30c2a](https://github.com/facebook/react-native/commit/5a30c2a) by [@cpojer](https://github.com/cpojer))
 - **AsyncStorage** no longer attempts to use RocksDB ([f854ce4](https://github.com/facebook/react-native/commit/f854ce4) by [@mmmulani](https://github.com/mmmulani))
 
 #### Android specific
@@ -84,6 +86,8 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 - Do not run packager in Release mode ([4ea6204](https://github.com/facebook/react-native/commit/4ea6204) by [@lucasbento](https://github.com/lucasbento))
 - Fix `code` and `reason` arguments being ignored when calling `WebSocket.close` ([0ac2171](https://github.com/facebook/react-native/commit/0ac2171) by [@jeanregisser](https://github.com/jeanregisser))
 - Fix return value of `Linking.openURL()` ([4a5d0bd](https://github.com/facebook/react-native/commit/4a5d0bd) by [@thib92](https://github.com/thib92))
+- When an accessibilityLabel can't be discerned, return `nil` instead of `@""` ([d4ff5ed](https://github.com/facebook/react-native/commit/d4ff5ed) by [@sammy-SC](https://github.com/sammy-SC))
+- Fix Xcode build when the project's path contains whitespace ([f0770b6](https://github.com/facebook/react-native/commit/f0770b6))
 
 ### Security
 
@@ -162,13 +166,9 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 
 #### Android Unknown
 
-- Add support for Modal in Android ([532afbd](https://github.com/facebook/react-native/commit/532afbd) by [@mdvacca](https://github.com/mdvacca))
-- Refactor mapping of ComponentNames in FabricUIManager ([abbeac9](https://github.com/facebook/react-native/commit/abbeac9) by [@mdvacca](https://github.com/mdvacca))
 - Fix multiple invocations of getConstants ([a965070](https://github.com/facebook/react-native/commit/a965070) by [@RSNara](https://github.com/RSNara))
-- Convert FabricUIManager.measure params to floats ([4a1d532](https://github.com/facebook/react-native/commit/4a1d532) by [@JoshuaGross](https://github.com/JoshuaGross))
 - Make async calls work ([ef4955f](https://github.com/facebook/react-native/commit/ef4955f) by [@RSNara](https://github.com/RSNara))
 - Introduce TurboModuleManagerDelegate ([cba205b](https://github.com/facebook/react-native/commit/cba205b) by [@RSNara](https://github.com/RSNara))
-- Fix OSS build ([d77adca](https://github.com/facebook/react-native/commit/d77adca) by [@RSNara](https://github.com/RSNara))
 - Java objects should own C++ State ([ff1de68](https://github.com/facebook/react-native/commit/ff1de68) by [@JoshuaGross](https://github.com/JoshuaGross))
 - Core React/Litho support and Java codegen ([d7447fa](https://github.com/facebook/react-native/commit/d7447fa) by [@JoshuaGross](https://github.com/JoshuaGross))
 - Add test utilities for C++ and Java ([03bf178](https://github.com/facebook/react-native/commit/03bf178) by [@davidaurelio](https://github.com/davidaurelio))
@@ -179,16 +179,6 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 - Add android specific view config props ([5a905a5](https://github.com/facebook/react-native/commit/5a905a5) by [@rickhanlonii](https://github.com/rickhanlonii))
 - Use array map from android support library ([1ece46b](https://github.com/facebook/react-native/commit/1ece46b) by [@alexeylang](https://github.com/alexeylang))
 - Fix error in Animated Interpolation when inputMin === inputMax ([7abfd23](https://github.com/facebook/react-native/commit/7abfd23) by [@olegbl](https://github.com/olegbl))
-- Move NetInfo JS module to FB internal ([5a30c2a](https://github.com/facebook/react-native/commit/5a30c2a) by [@cpojer](https://github.com/cpojer))
-- Remove duplicate Android SDK steps already present in container ([53e32a4](https://github.com/facebook/react-native/commit/53e32a4) by [@hramos](https://github.com/hramos))
-
-#### iOS Unknown
-
-- Allow arbitrary location for third-party iOS dependency cache ([845eee4](https://github.com/facebook/react-native/commit/845eee4) by [@hramos](https://github.com/hramos))
-- Fix OSS build ([913ff9f](https://github.com/facebook/react-native/commit/913ff9f) by [@RSNara](https://github.com/RSNara))
-- fixes Xcode path issues containing whitespace when building Release ([f0770b6](https://github.com/facebook/react-native/commit/f0770b6))
-- Handle component name ([ed61a3b](https://github.com/facebook/react-native/commit/ed61a3b) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Don't return empty string for `accessibilityLabel` for RCTView ([d4ff5ed](https://github.com/facebook/react-native/commit/d4ff5ed) by [@sammy-SC](https://github.com/sammy-SC))
 
 ## [v0.59.10]
 
