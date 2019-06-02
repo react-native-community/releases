@@ -2,9 +2,11 @@
 
 ## [0.60]
 
+PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/react-native/commit/a6f905f) by [@hramos](https://github.com/hramos))
+
 ### Added
 
-- New Intro screen ([6b393b2](https://github.com/facebook/react-native/commit/6b393b2) and [0245fd7](https://github.com/facebook/react-native/commit/0245fd7) by [@cpojer](https://github.com/cpojer) and [@eliperkins](https://github.com/eliperkins))
+- New Intro screen ([6b393b2](https://github.com/facebook/react-native/commit/6b393b2), [233fddb](https://github.com/facebook/react-native/commit/233fddb), [fe88e9e](https://github.com/facebook/react-native/commit/fe88e9e), [aa926e3](https://github.com/facebook/react-native/commit/aa926e3), [a9e8a71](https://github.com/facebook/react-native/commit/a9e8a71), and [0245fd7](https://github.com/facebook/react-native/commit/0245fd7) by [@cpojer](https://github.com/cpojer), [@eliperkins](https://github.com/eliperkins), and [@lucasbento](https://github.com/lucasbento))
 - Enhanced accessibility actions support ([14b4668](https://github.com/facebook/react-native/commit/14b4668) by [@xuelgong](https://github.com/xuelgong))
 
 #### Android specific
@@ -13,67 +15,39 @@
 
 #### iOS specific
 
-- Ability to force network requests to use WiFi using the allowsCellularAccess property. This can ensure that network requests are sent over WiFi if communicating with a local hardware device and is accomplished by setting a flag. Default behavior of allowing network connections over cellular networks when available is unchanged. ([01c70f2](https://github.com/facebook/react-native/commit/01c70f2) by [@bondparkerbond](https://github.com/bondparkerbond))
+- Ability to force network requests to use WiFi using the `allowsCellularAccess` property. This can ensure that network requests are sent over WiFi if communicating with a local hardware device and is accomplished by setting a flag. Default behavior of allowing network connections over cellular networks when available is unchanged. ([01c70f2](https://github.com/facebook/react-native/commit/01c70f2) and [916186a](https://github.com/facebook/react-native/commit/916186a) by [@bondparkerbond](https://github.com/bondparkerbond)and [@zhongwuzw](https://github.com/zhongwuzw))
 
 ### Changed
 
-- Add default `scrollEventThrottle` to **Animated.FlatList** and **Animated.SectionList**; this now behaves consistently with **Animated.ScrollView** ([933e65e](https://github.com/facebook/react-native/commit/933e65e) by [@janicduplessis](https://github.com/janicduplessis))
-- Bumped react-native-community/eslint-config version ([2ef56c0](https://github.com/facebook/react-native/commit/2ef56c0) by [@matt-oakes](https://github.com/matt-oakes))
-- Cleanup RedBox message and stack output ([49d26eb](https://github.com/facebook/react-native/commit/49d26eb) by [@thymikee](https://github.com/thymikee))
-- React sync for revisions 8e25ed2...ec6691a ([ee681b7](https://github.com/facebook/react-native/commit/ee681b7) by [@mdvacca](https://github.com/mdvacca))
-- Collect e2e tests under test_end_to_end job ([9bd276c](https://github.com/facebook/react-native/commit/9bd276c) by [@hramos](https://github.com/hramos))
-- New issues use the Bug label ([a7326d3](https://github.com/facebook/react-native/commit/a7326d3) by [@hramos](https://github.com/hramos))
-- Fixed Animated.Value value after animation if component was re-mounted ([b3f7d53](https://github.com/facebook/react-native/commit/b3f7d53) by [@michalchudziak](https://github.com/michalchudziak))
-- Migrate TurboModule example in RNTester to use path-based requires ([58608d5](https://github.com/facebook/react-native/commit/58608d5) by [@ide](https://github.com/ide))
-- Migrate IntegrationTests from Haste to path-based requires ([0f30ed4](https://github.com/facebook/react-native/commit/0f30ed4) by [@ide](https://github.com/ide))
-- Migrate Jest setup scripts from Haste to path-based requires ([59749f5](https://github.com/facebook/react-native/commit/59749f5) by [@ide](https://github.com/ide))
-- Migrate "Libraries" from Haste to standard path-based requires ([0ee5f68](https://github.com/facebook/react-native/commit/0ee5f68) by [@ide](https://github.com/ide))
-- Consolidate issue templates ([25ee3e0](https://github.com/facebook/react-native/commit/25ee3e0) by [@hramos](https://github.com/hramos))
-- Publish events for node allocation and deallocation ([d1411cc](https://github.com/facebook/react-native/commit/d1411cc) by [@davidaurelio](https://github.com/davidaurelio))
-- Polished up new app screen component styling ([233fddb](https://github.com/facebook/react-native/commit/233fddb) by [@eliperkins](https://github.com/eliperkins))
-- Updated new app greeting screen title 💗 ([e7085cd](https://github.com/facebook/react-native/commit/e7085cd) by [@eliperkins](https://github.com/eliperkins))
-- Contribution Guide Revamp ([a6f905f](https://github.com/facebook/react-native/commit/a6f905f) by [@hramos](https://github.com/hramos))
-- Migrate vendored code from Haste to path-based imports ([346417c](https://github.com/facebook/react-native/commit/346417c) by [@ide](https://github.com/ide))
-- Migrate "androidTest" JS from Haste to path-based requires ([cd9adda](https://github.com/facebook/react-native/commit/cd9adda) by [@ide](https://github.com/ide))
-- Updated new app template design 💖 ([fe88e9e](https://github.com/facebook/react-native/commit/fe88e9e) by [@eliperkins](https://github.com/eliperkins))
-- Open links from new app in computer's browser. ([aa926e3](https://github.com/facebook/react-native/commit/aa926e3) by [@lucasbento](https://github.com/lucasbento))
-- Undeprecate StatusBar for now. ([a203ebe](https://github.com/facebook/react-native/commit/a203ebe) by [@cpojer](https://github.com/cpojer))
-- Fix content being shown behind `StatusBar` in the new app template. ([a9e8a71](https://github.com/facebook/react-native/commit/a9e8a71) by [@lucasbento](https://github.com/lucasbento))
-- Update PR template changelog link ([06bb76a](https://github.com/facebook/react-native/commit/06bb76a) by [@ericlewis](https://github.com/ericlewis))
-- Add test for js1 build viewconfigs ([3ccfbd6](https://github.com/facebook/react-native/commit/3ccfbd6) by [@rickhanlonii](https://github.com/rickhanlonii))
+- Cleanup **RedBox** message and stack output; it's now far easier to understand ([49d26eb](https://github.com/facebook/react-native/commit/49d26eb) by [@thymikee](https://github.com/thymikee))
+- Add default `scrollEventThrottle` value to **Animated.FlatList** and **Animated.SectionList**; this now behaves consistently with **Animated.ScrollView** ([933e65e](https://github.com/facebook/react-native/commit/933e65e) by [@janicduplessis](https://github.com/janicduplessis))
+- `react-native-community/eslint-config` is now at v0.0.5 ([2ef56c0](https://github.com/facebook/react-native/commit/2ef56c0) by [@matt-oakes](https://github.com/matt-oakes))
+- `react` is now at v16.8.1 ([ee681b7](https://github.com/facebook/react-native/commit/ee681b7) by [@mdvacca](https://github.com/mdvacca))
 
 #### Android specific
 
-- Use class canonical name for PARTIAL_WAKE_LOCK tag ([88dbb45](https://github.com/facebook/react-native/commit/88dbb45) by [@timwangdev](https://github.com/timwangdev))
-- Fix internal test case around disabled state of buttons ([70e2ab2](https://github.com/facebook/react-native/commit/70e2ab2))
-- Require custom fonts to list in **fonts** array. Fixes performance regression. ([fd6386a](https://github.com/facebook/react-native/commit/fd6386a) by [@dulmandakh](https://github.com/dulmandakh))
-- fix scrollToLocation not consistent between platforms ([248a108](https://github.com/facebook/react-native/commit/248a108) by [@vonovak](https://github.com/vonovak))
+- Use class canonical name for `PARTIAL_WAKE_LOCK` tag ([88dbb45](https://github.com/facebook/react-native/commit/88dbb45) by [@timwangdev](https://github.com/timwangdev))
 
 #### iOS specific
 
+- **SectionList**'s `scrollToLocation` on iOS now counts `itemIndex` like Android; both platforms are now consistent ([248a108](https://github.com/facebook/react-native/commit/248a108) by [@vonovak](https://github.com/vonovak))
 - add nonnull/nullable for swift ([3163479](https://github.com/facebook/react-native/commit/3163479))
-- Change ReactNetworkForceWifiOnly from String to Boolean ([916186a](https://github.com/facebook/react-native/commit/916186a) by [@zhongwuzw](https://github.com/zhongwuzw))
 
 ### Deprecated
 
-#### Android specific
-
-#### iOS specific
+- **StatusBar** is no longer deprecated; thank you for the feedback ([a203ebe](https://github.com/facebook/react-native/commit/a203ebe) by [@cpojer](https://github.com/cpojer))
 
 ### Removed
 
-- Add log to view that is being dropped ([0d7a0dc](https://github.com/facebook/react-native/commit/0d7a0dc) by [@lunaleaps](https://github.com/lunaleaps))
-- Changelog: [General] Removed RocksDB from AsyncStorage.js ([f854ce4](https://github.com/facebook/react-native/commit/f854ce4) by [@mmmulani](https://github.com/mmmulani))
-- Remove hacks from RNTester ([cf9babf](https://github.com/facebook/react-native/commit/cf9babf) by [@ericlewis](https://github.com/ericlewis))
+- **AsyncStorage** no longer attempts to use RocksDB ([f854ce4](https://github.com/facebook/react-native/commit/f854ce4) by [@mmmulani](https://github.com/mmmulani))
 
 #### Android specific
 
 #### iOS specific
 
-- Revert auto-linking related changes to the iOS template Podfile ([da7d3df](https://github.com/facebook/react-native/commit/da7d3df) by [@hramos](https://github.com/hramos))
-
 ### Fixed
 
+- Fix `Animated.Value` value after animation if component was re-mounted ([b3f7d53](https://github.com/facebook/react-native/commit/b3f7d53) by [@michalchudziak](https://github.com/michalchudziak))
 - Consistent reporting native module name on crash on native side ([d6c33f9](https://github.com/facebook/react-native/commit/d6c33f9) and [b79d7db](https://github.com/facebook/react-native/commit/b79d7db) by [@DimitryDushkin](https://github.com/DimitryDushkin))
 - Reorder operations of native view hierarchy ([5f027ec](https://github.com/facebook/react-native/commit/5f027ec) by [@lunaleaps](https://github.com/lunaleaps))
 - Fixed JavaScript e2e tests. ([b92f30d](https://github.com/facebook/react-native/commit/b92f30d) by [@hramos](https://github.com/hramos))
@@ -88,6 +62,8 @@
 
 #### Android specific
 
+- Fix performance regression from new custom fonts implementation ([fd6386a](https://github.com/facebook/react-native/commit/fd6386a) by [@dulmandakh](https://github.com/dulmandakh))
+- Fix internal test case around disabled state of buttons ([70e2ab2](https://github.com/facebook/react-native/commit/70e2ab2))
 - `OnValueChange` will be called only when the `selectedValue` changes. ([82148da](https://github.com/facebook/react-native/commit/82148da) by [@a-c-sreedhar-reddy](https://github.com/a-c-sreedhar-reddy))
 - Fix unexpected PARTIAL_WAKE_LOCK when no headless tasks registered. ([bdb1d43](https://github.com/facebook/react-native/commit/bdb1d43) by [@timwangdev](https://github.com/timwangdev))
 - [Android][fixed] onKeyPress method is calling, when user type emoji ([a5c57b4](https://github.com/facebook/react-native/commit/a5c57b4))
@@ -113,7 +89,7 @@
 - Fixed accesibility problem with <TextInput>'s Clear Button ([4e37d37](https://github.com/facebook/react-native/commit/4e37d37) by [@shergin](https://github.com/shergin))
 - Fixes renderingMode not applied to GIF images ([75380aa](https://github.com/facebook/react-native/commit/75380aa) by [@zhongwuzw](https://github.com/zhongwuzw))
 - Fixes ScrollView centerContent not work in some cases ([2cdf969](https://github.com/facebook/react-native/commit/2cdf969) by [@zhongwuzw](https://github.com/zhongwuzw))
-- Fixes syntax of autolink script ([5954880](https://github.com/facebook/react-native/commit/5954880) by [@zhongwuzw](https://github.com/zhongwuzw))
+- Fixes syntax of autolink script ([5954880](https://github.com/facebook/react-native/commit/5954880), [da7d3df](https://github.com/facebook/react-native/commit/da7d3df) by [@zhongwuzw](https://github.com/zhongwuzw) and [@hramos](https://github.com/hramos))
 - fix crash on performance logger ([5d3d398](https://github.com/facebook/react-native/commit/5d3d398) by [@zhigang1992](https://github.com/zhigang1992))
 - Do not run packager in Release mode ([4ea6204](https://github.com/facebook/react-native/commit/4ea6204) by [@lucasbento](https://github.com/lucasbento))
 - Fixed `code` and `reason` arguments ignored on iOS when calling `WebSocket.close` ([0ac2171](https://github.com/facebook/react-native/commit/0ac2171) by [@jeanregisser](https://github.com/jeanregisser))
