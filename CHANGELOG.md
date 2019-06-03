@@ -23,8 +23,11 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 
 - Cleanup **RedBox** message and stack output; it's now far easier to understand ([49d26eb](https://github.com/facebook/react-native/commit/49d26eb) by [@thymikee](https://github.com/thymikee))
 - Add default `scrollEventThrottle` value to **Animated.FlatList** and **Animated.SectionList**; this now behaves consistently with **Animated.ScrollView** ([933e65e](https://github.com/facebook/react-native/commit/933e65e) by [@janicduplessis](https://github.com/janicduplessis))
+- Remove invariant on nested sibling **VirtualizedLists** without unique listKey props; they now trigger a **RedBox** ([af5633b](https://github.com/facebook/react-native/commit/af5633b))
+- **FlatList** and **VirtualizedList**'s default `keyExtractor` now checks `item.id` and `item.key` ([de0d7cf](https://github.com/facebook/react-native/commit/de0d7cf) by [@sahrens](https://github.com/sahrens))
+- Slightly speedup core initialization by moving native version check to DEV only ([5bb2277](https://github.com/facebook/react-native/commit/5bb2277) by [@mmmulani](https://github.com/mmmulani))
 - `react-native-community/eslint-config` is now at v0.0.5 ([2ef56c0](https://github.com/facebook/react-native/commit/2ef56c0) by [@matt-oakes](https://github.com/matt-oakes))
-- `react` is now at v16.8.1 ([ee681b7](https://github.com/facebook/react-native/commit/ee681b7) by [@mdvacca](https://github.com/mdvacca))
+- `react` is now at v16.8.1 ([ee681b7](https://github.com/facebook/react-native/commit/ee681b7) and [6001acb](https://github.com/facebook/react-native/commit/6001acb) by [@mdvacca](https://github.com/mdvacca) and [@gaearon](https://github.com/gaearon))
 - `eslint-plugin-react-native` is now at v3.7.0 ([2becfab](https://github.com/facebook/react-native/commit/2becfab) by [@monotv](https://github.com/monotv))
 - `react-native-community/cli` is now at v2.0.0-alpha.20 ([0815f81](https://github.com/facebook/react-native/commit/0815f81) by [@thymikee](https://github.com/thymikee))
 - `flow` is now at v0.98 ([0e1dfd4](https://github.com/facebook/react-native/commit/0e1dfd4) by [@nmote](https://github.com/nmote))
@@ -33,12 +36,12 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 
 #### Android specific
 
+- Move message queue initialization in ReactContext into its own method ([db40c28](https://github.com/facebook/react-native/commit/db40c28) by [@ejanzer](https://github.com/ejanzer))
 - Use class canonical name for `PARTIAL_WAKE_LOCK` tag ([88dbb45](https://github.com/facebook/react-native/commit/88dbb45) by [@timwangdev](https://github.com/timwangdev))
 
 #### iOS specific
 
 - **SectionList**'s `scrollToLocation` on iOS now counts `itemIndex` like Android; both platforms are now consistent ([248a108](https://github.com/facebook/react-native/commit/248a108) by [@vonovak](https://github.com/vonovak))
-- add nonnull/nullable for swift ([3163479](https://github.com/facebook/react-native/commit/3163479))
 - Switch **Slider** `onSlidingComplete` event to a non-bubbling event on iOS to match Android ([7927437](https://github.com/facebook/react-native/commit/7927437) by [@rickhanlonii](https://github.com/rickhanlonii))
 
 ### Deprecated
@@ -50,18 +53,14 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 - **NetInfo** has been removed; its replacement is now available via the [react-native-community/netinfo](https://github.com/react-native-community/react-native-netinfo) package ([5a30c2a](https://github.com/facebook/react-native/commit/5a30c2a) by [@cpojer](https://github.com/cpojer))
 - **AsyncStorage** no longer attempts to use RocksDB ([f854ce4](https://github.com/facebook/react-native/commit/f854ce4) by [@mmmulani](https://github.com/mmmulani))
 
-#### Android specific
-
-#### iOS specific
-
 ### Fixed
 
 - Fix `Animated.Value` value after animation if component was re-mounted ([b3f7d53](https://github.com/facebook/react-native/commit/b3f7d53) by [@michalchudziak](https://github.com/michalchudziak))
 - Consistent reporting native module name on crash on native side ([d6c33f9](https://github.com/facebook/react-native/commit/d6c33f9) and [b79d7db](https://github.com/facebook/react-native/commit/b79d7db) by [@DimitryDushkin](https://github.com/DimitryDushkin))
+- Handle null filenames in symbolicated stack trace gracefully in **ExceptionsManager** ([2e8d39b](https://github.com/facebook/react-native/commit/2e8d39b) by [@motiz88](https://github.com/motiz88))
 - Fix HasteImpl platform name regex ([28e0de0](https://github.com/facebook/react-native/commit/28e0de0) by [@CaptainNic](https://github.com/CaptainNic))
 - Fix a JS memory leak in Blob handling; this resolves multiple leaks around `fetch` ([c5c79e5](https://github.com/facebook/react-native/commit/c5c79e5) and [9ef5107](https://github.com/facebook/react-native/commit/9ef5107) by [@janicduplessis](https://github.com/janicduplessis))
 - **SectionList**'s `scrollToLocation` now scrolls to the top of the sticky header as expected ([d376a44](https://github.com/facebook/react-native/commit/d376a44) by [@danilobuerger](https://github.com/danilobuerger))
-- Move accessibility props to UIView+React ([9261035](https://github.com/facebook/react-native/commit/9261035) by [@janicduplessis](https://github.com/janicduplessis))
 
 #### Android specific
 
@@ -95,65 +94,7 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 - Fix return value of `Linking.openURL()` ([4a5d0bd](https://github.com/facebook/react-native/commit/4a5d0bd) by [@thib92](https://github.com/thib92))
 - When an accessibilityLabel can't be discerned, return `nil` instead of `@""` ([d4ff5ed](https://github.com/facebook/react-native/commit/d4ff5ed) by [@sammy-SC](https://github.com/sammy-SC))
 - Fix Xcode build when the project's path contains whitespace ([f0770b6](https://github.com/facebook/react-native/commit/f0770b6))
-
-### Security
-
-#### Android specific
-
-#### iOS specific
-
-### Unknown
-
-- Ensure proper Synchronization on ReactChoreographer ([81d0f9a](https://github.com/facebook/react-native/commit/81d0f9a) by [@mdvacca](https://github.com/mdvacca))
-- Add component schema for Modal ([8e6031c](https://github.com/facebook/react-native/commit/8e6031c) by [@mdvacca](https://github.com/mdvacca))
-- Fix mounting of views when a re-order happen caused by changes in viewflattening ([f98880b](https://github.com/facebook/react-native/commit/f98880b) by [@mdvacca](https://github.com/mdvacca))
-- Display wrong view hierarchy in Test exceptions ([61d2f1e](https://github.com/facebook/react-native/commit/61d2f1e) by [@mdvacca](https://github.com/mdvacca))
-- Add debug information in Mounting Manager ([b3a0768](https://github.com/facebook/react-native/commit/b3a0768) by [@mdvacca](https://github.com/mdvacca))
-- Migrate VirtualizedList to use ref.measureLayout ([5eac8ca](https://github.com/facebook/react-native/commit/5eac8ca) by [@mdvacca](https://github.com/mdvacca))
-- Expose measureLayout in UIManagerBinding.cpp ([5b73b67](https://github.com/facebook/react-native/commit/5b73b67) by [@mdvacca](https://github.com/mdvacca))
-- Changes in float-family conversion infra ([1d65244](https://github.com/facebook/react-native/commit/1d65244) by [@shergin](https://github.com/shergin))
-- `YGStyle`: mutable accessors return `Ref` instances ([1069b7b](https://github.com/facebook/react-native/commit/1069b7b) by [@davidaurelio](https://github.com/davidaurelio))
-- Deduplicate `updateStyle` overloads ([a7e4ce0](https://github.com/facebook/react-native/commit/a7e4ce0) by [@davidaurelio](https://github.com/davidaurelio))
-- Track which style properties have been set on `YGStyle` ([0e17af9](https://github.com/facebook/react-native/commit/0e17af9) by [@davidaurelio](https://github.com/davidaurelio))
-- `YGStyle`: Make getters/setters template args of `BitfieldRef` ([0c7376c](https://github.com/facebook/react-native/commit/0c7376c) by [@davidaurelio](https://github.com/davidaurelio))
-- Making UITemplateProcessorTest not instrumentation ([b273516](https://github.com/facebook/react-native/commit/b273516) by [@shergin](https://github.com/shergin))
-- Remove invariant on nested sibling VirtualizedLists without unique listKey props ([af5633b](https://github.com/facebook/react-native/commit/af5633b))
-- Add foundations for event system ([29d77ec](https://github.com/facebook/react-native/commit/29d77ec) by [@davidaurelio](https://github.com/davidaurelio))
-- make prepareGlog idempotent ([7486c77](https://github.com/facebook/react-native/commit/7486c77) by [@mhorowitz](https://github.com/mhorowitz))
-- add to inputs in buildReactNdkLib so gradle will rebuild on more changes ([709baab](https://github.com/facebook/react-native/commit/709baab) by [@mhorowitz](https://github.com/mhorowitz))
-- Add libfolly_futures target ([4900077](https://github.com/facebook/react-native/commit/4900077) by [@mhorowitz](https://github.com/mhorowitz))
-- Refactor Virtualized List to not use findNodeHandle when calling measureLayout ([4b98ac9](https://github.com/facebook/react-native/commit/4b98ac9) by [@mdvacca](https://github.com/mdvacca))
-- Fix `YGConfig` constructors ([7df10d3](https://github.com/facebook/react-native/commit/7df10d3) by [@davidaurelio](https://github.com/davidaurelio))
-- Remove API to constrain measure cache size ([2fd381c](https://github.com/facebook/react-native/commit/2fd381c) by [@davidaurelio](https://github.com/davidaurelio))
-- Refactor getConstants implementation ([c9006ce](https://github.com/facebook/react-native/commit/c9006ce) by [@RSNara](https://github.com/RSNara))
-- Replace throwIfJNIReportsPendingException ([7a8de7d](https://github.com/facebook/react-native/commit/7a8de7d) by [@RSNara](https://github.com/RSNara))
-- workaround T43930203 where originalConsole.assert doesn't properly check the condition and always fires ([a87af19](https://github.com/facebook/react-native/commit/a87af19) by [@sahrens](https://github.com/sahrens))
-- Generate cpp tests for props ([38483d4](https://github.com/facebook/react-native/commit/38483d4) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Move message queue initialization in ReactContext into its own method ([c6b4eb7](https://github.com/facebook/react-native/commit/c6b4eb7) by [@ejanzer](https://github.com/ejanzer))
-- Allow creating ThemedReactContext without CatalystInstance ([6cf784f](https://github.com/facebook/react-native/commit/6cf784f) by [@ejanzer](https://github.com/ejanzer))
-- Support hyphen symbols in enums ([43357df](https://github.com/facebook/react-native/commit/43357df) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Add modal kebab-case enum props ([d06983f](https://github.com/facebook/react-native/commit/d06983f) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Reduce measure cache size to 8 ([71c3c23](https://github.com/facebook/react-native/commit/71c3c23) by [@davidaurelio](https://github.com/davidaurelio))
-- **breaking:** remove `YGNodeGetInstanceCount` ([7d44113](https://github.com/facebook/react-native/commit/7d44113) by [@davidaurelio](https://github.com/davidaurelio))
-- Publish event when visiting nodes during layout ([6ccdf85](https://github.com/facebook/react-native/commit/6ccdf85) by [@davidaurelio](https://github.com/davidaurelio))
-- move event files to yoga/events folder ([12fb97d](https://github.com/facebook/react-native/commit/12fb97d) by [@SidharthGuglani](https://github.com/SidharthGuglani))
-- Require passing in JSCallInvokerHolder to TurboModuleManager ([078f14c](https://github.com/facebook/react-native/commit/078f14c) by [@ejanzer](https://github.com/ejanzer))
-- Move message queue initialization in ReactContext into its own method ([db40c28](https://github.com/facebook/react-native/commit/db40c28) by [@ejanzer](https://github.com/ejanzer))
-- Replace abort() with assert() when a prop-value is not found during parsing ([5f9bb72](https://github.com/facebook/react-native/commit/5f9bb72) by [@mdvacca](https://github.com/mdvacca))
-- Allow creating ThemedReactContext without a CatalystInstance ([d5b27fc](https://github.com/facebook/react-native/commit/d5b27fc) by [@ejanzer](https://github.com/ejanzer))
-- Declare a dependency on scheduler ([6001acb](https://github.com/facebook/react-native/commit/6001acb) by [@gaearon](https://github.com/gaearon))
-- Fix object initialization ([55db1d0](https://github.com/facebook/react-native/commit/55db1d0))
-- Include pointScaleFactor into the equality method of LayoutMetrics ([ac9195a](https://github.com/facebook/react-native/commit/ac9195a) by [@mdvacca](https://github.com/mdvacca))
-- Ensures constraintSurfaceLayout is executed before 'JS run application' starts ([1b46781](https://github.com/facebook/react-native/commit/1b46781) by [@mdvacca](https://github.com/mdvacca))
-- Publish events for layout pass ([bd95970](https://github.com/facebook/react-native/commit/bd95970) by [@davidaurelio](https://github.com/davidaurelio))
-- Change JSCallInvoker to be an abstract class ([c75f062](https://github.com/facebook/react-native/commit/c75f062) by [@ejanzer](https://github.com/ejanzer))
-- Add default support for `item.id` as key in FlatList/VList `keyExtractor` ([de0d7cf](https://github.com/facebook/react-native/commit/de0d7cf) by [@sahrens](https://github.com/sahrens))
-- ExceptionsManager: Handle null filenames in symbolicated stack trace gracefully ([2e8d39b](https://github.com/facebook/react-native/commit/2e8d39b) by [@motiz88](https://github.com/motiz88))
-- Add `override` to BridgeJSCallInvoker ([c35d1af](https://github.com/facebook/react-native/commit/c35d1af) by [@ejanzer](https://github.com/ejanzer))
-- Move native version check to DEV only ([5bb2277](https://github.com/facebook/react-native/commit/5bb2277) by [@mmmulani](https://github.com/mmmulani))
-- use vector for subscribers in event system ([44659d2](https://github.com/facebook/react-native/commit/44659d2) by [@SidharthGuglani](https://github.com/SidharthGuglani))
-- use shared_ptr for subscribers vector in event system ([37c8771](https://github.com/facebook/react-native/commit/37c8771) by [@SidharthGuglani](https://github.com/SidharthGuglani))
-- Codemod $Enum<...> to $Keys<...> in xplat/fbcode ([f050f99](https://github.com/facebook/react-native/commit/f050f99) by [@gkz](https://github.com/gkz))
+- Move accessibility props to UIView+React ([9261035](https://github.com/facebook/react-native/commit/9261035) by [@janicduplessis](https://github.com/janicduplessis))
 
 ## [v0.59.10]
 
