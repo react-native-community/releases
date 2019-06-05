@@ -1,5 +1,33 @@
 # Changelog
 
+## [v0.59.9]
+
+This is a patch fix release addressing a couple ScrollView regressions, and "future-proof" RN 59 from crashes caused by upgrading Gradle (now can support up to 5.4.1 & 3.4.0 for the plugin) and XCode 11. You can upgrade to this version without upgrading your tooling.
+
+Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/124) for cherry-picking commits.  You can participate to the conversation for the next patch release in the dedicated [issue](https://github.com/react-native-community/react-native-releases/issues/127).
+
+### Changed
+
+- If `isInteraction` is not specified in the config, it would always default to `true` which would block interactions like VirtualizedList updates. This is generally not what you want with useNativeDriver since the animation won't be interrupted by JS. If something does end up interfering with an animation and causes frame drops, `isInteraction` can be set manually. ([ded7119](https://github.com/facebook/react-native/commit/ded7119) by [@sahrens](https://github.com/sahrens))
+
+- Update detox to match master ([c6a5c09](https://github.com/facebook/react-native/commit/c6a5c09) by [@kelset](https://github.com/kelset))
+
+#### Android specific
+
+- Bump Gradle to 5.4.1 & Android Gradle plugin to 3.4.0 ([2282c15](https://github.com/facebook/react-native/commit/2282c15), [4652392](https://github.com/facebook/react-native/commit/4652392), [184108f](https://github.com/facebook/react-native/commit/184108f), [deb41eb](https://github.com/facebook/react-native/commit/deb41eb) by [@dulmandakh](https://github.com/dulmandakh))
+
+### Fixed
+
+- Fixes wrong time unit of scroll event throttle ([ebe2827](https://github.com/facebook/react-native/commit/ebe2827) by [@zhongwuzw](https://github.com/zhongwuzw))
+
+#### Android specific
+
+- Fix indexed RAM bundle ([2b0e11c](https://github.com/facebook/react-native/commit/2b0e11c) by [@dratwas](https://github.com/dratwas))
+
+#### iOS specific
+
+- Fix Xcode 11 Beta 1 builds ([52cda84](https://github.com/facebook/react-native/commit/52cda84) by [@ericlewis](https://github.com/ericlewis))
+
 ## [v0.59.8]
 
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points (in particular, check the `KeyboardAvoidingView` change). Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/118) for cherry-picking commits.
