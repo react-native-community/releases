@@ -14,10 +14,7 @@ Thanks everyone who contributed code or participated in the [discussion](https:/
 
 #### Android specific
 
-- Bump Gradle to 5.0 ([2282c15](https://github.com/facebook/react-native/commit/2282c15) by [@dulmandakh](https://github.com/dulmandakh))
-- Bump Gradle to 5.2.1 ([4652392](https://github.com/facebook/react-native/commit/4652392) by [@dulmandakh](https://github.com/dulmandakh))
-- Bump Android Gradle plugin to 3.4.0 ([184108f](https://github.com/facebook/react-native/commit/184108f) by [@dulmandakh](https://github.com/dulmandakh))
-- Bump Gradle to 5.4.1 ([deb41eb](https://github.com/facebook/react-native/commit/deb41eb) by [@dulmandakh](https://github.com/dulmandakh))
+- Bump Gradle to 5.4.1 & Android Gradle plugin to 3.4.0 ([2282c15](https://github.com/facebook/react-native/commit/2282c15), [4652392](https://github.com/facebook/react-native/commit/4652392), [184108f](https://github.com/facebook/react-native/commit/184108f), [deb41eb](https://github.com/facebook/react-native/commit/deb41eb) by [@dulmandakh](https://github.com/dulmandakh))
 
 ### Fixed
 
