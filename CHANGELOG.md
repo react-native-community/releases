@@ -41,6 +41,7 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 
 #### iOS specific
 
+- *BREAKING*: Split React.podspec into separate podspecs for each Xcode project; your libraries will need to update for this change as well to avoid CocoaPods build errors ([2321b3f](https://github.com/facebook/react-native/commit/2321b3f) by [@fson](https://github.com/fson))
 - **SectionList**'s `scrollToLocation` on iOS now counts `itemIndex` like Android; both platforms are now consistent ([248a108](https://github.com/facebook/react-native/commit/248a108) by [@vonovak](https://github.com/vonovak))
 - Switch **Slider** `onSlidingComplete` event to a non-bubbling event on iOS to match Android ([7927437](https://github.com/facebook/react-native/commit/7927437) by [@rickhanlonii](https://github.com/rickhanlonii))
 
