@@ -6,9 +6,9 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 
 ### Added
 
+- CLI autolinking support ([5954880](https://github.com/facebook/react-native/commit/5954880), [da7d3df](https://github.com/facebook/react-native/commit/da7d3df) by [@zhongwuzw](https://github.com/zhongwuzw) and [@hramos](https://github.com/hramos))
 - New Intro screen ([6b393b2](https://github.com/facebook/react-native/commit/6b393b2), [233fddb](https://github.com/facebook/react-native/commit/233fddb), [fe88e9e](https://github.com/facebook/react-native/commit/fe88e9e), [aa926e3](https://github.com/facebook/react-native/commit/aa926e3), [a9e8a71](https://github.com/facebook/react-native/commit/a9e8a71), [ad4a5d9](https://github.com/facebook/react-native/commit/ad4a5d9), and [0245fd7](https://github.com/facebook/react-native/commit/0245fd7) by [@cpojer](https://github.com/cpojer), [@eliperkins](https://github.com/eliperkins), [@lucasbento](https://github.com/lucasbento), and [@orta](https://github.com/orta))
 - Enhanced accessibility actions support ([14b4668](https://github.com/facebook/react-native/commit/14b4668) by [@xuelgong](https://github.com/xuelgong))
-- Autolinking ([5954880](https://github.com/facebook/react-native/commit/5954880), [da7d3df](https://github.com/facebook/react-native/commit/da7d3df) by [@zhongwuzw](https://github.com/zhongwuzw) and [@hramos](https://github.com/hramos))
 
 #### Android specific
 
@@ -21,22 +21,20 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 
 ### Changed
 
+- *BREAKING* Migrated to AndroidX; please see [this thread](https://github.com/react-native-community/discussions-and-proposals/issues/129#issuecomment-503829184) for more details on this change
 - Cleanup **RedBox** message and stack output; it's now far easier to understand ([49d26eb](https://github.com/facebook/react-native/commit/49d26eb) by [@thymikee](https://github.com/thymikee))
 - Add default `scrollEventThrottle` value to **Animated.FlatList** and **Animated.SectionList**; this now behaves consistently with **Animated.ScrollView** ([933e65e](https://github.com/facebook/react-native/commit/933e65e) by [@janicduplessis](https://github.com/janicduplessis))
 - Remove invariant on nested sibling **VirtualizedLists** without unique listKey props; they now trigger a **RedBox** ([af5633b](https://github.com/facebook/react-native/commit/af5633b))
 - **FlatList** and **VirtualizedList**'s default `keyExtractor` now checks `item.id` and `item.key` ([de0d7cf](https://github.com/facebook/react-native/commit/de0d7cf) by [@sahrens](https://github.com/sahrens))
 - Slightly speedup core initialization by moving native version check to DEV only ([5bb2277](https://github.com/facebook/react-native/commit/5bb2277) by [@mmmulani](https://github.com/mmmulani))
-- `react-native-community/eslint-config` is now at v0.0.5 ([2ef56c0](https://github.com/facebook/react-native/commit/2ef56c0) by [@matt-oakes](https://github.com/matt-oakes))
-- `react` is now at v16.8.1 ([ee681b7](https://github.com/facebook/react-native/commit/ee681b7) and [6001acb](https://github.com/facebook/react-native/commit/6001acb) by [@mdvacca](https://github.com/mdvacca) and [@gaearon](https://github.com/gaearon))
-- `eslint-plugin-react-native` is now at v3.7.0 ([2becfab](https://github.com/facebook/react-native/commit/2becfab) by [@monotv](https://github.com/monotv))
-- `react-native-community/cli` is now at v2.0.0-alpha.20 ([0815f81](https://github.com/facebook/react-native/commit/0815f81) by [@thymikee](https://github.com/thymikee))
+- `react` is now at v16.8.6 ([53cec2d](https://github.com/facebook/react-native/commit/53cec2d), [ee681b7](https://github.com/facebook/react-native/commit/ee681b7), and [6001acb](https://github.com/facebook/react-native/commit/6001acb) by [@kelset](https://github.com/kelset), [@mdvacca](https://github.com/mdvacca), [@gaearon](https://github.com/gaearon))
+- `react-native-community/cli` is now at v2.0.0 (by [@thymikee](https://github.com/thymikee))
 - `flow` is now at v0.98 ([0e1dfd4](https://github.com/facebook/react-native/commit/0e1dfd4) by [@nmote](https://github.com/nmote))
 - `prettier` is now at v1.17.0 ([ff9f8f3](https://github.com/facebook/react-native/commit/ff9f8f3))
 - `metro` packages are now at v0.54.1 ([7ff3874](https://github.com/facebook/react-native/commit/7ff3874), [343f0a1](https://github.com/facebook/react-native/commit/343f0a1) by [@motiz88](https://github.com/motiz88))
 
 #### Android specific
 
-- Move message queue initialization in ReactContext into its own method ([db40c28](https://github.com/facebook/react-native/commit/db40c28) by [@ejanzer](https://github.com/ejanzer))
 - Use class canonical name for `PARTIAL_WAKE_LOCK` tag ([88dbb45](https://github.com/facebook/react-native/commit/88dbb45) by [@timwangdev](https://github.com/timwangdev))
 
 #### iOS specific
@@ -52,7 +50,8 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 ### Removed
 
 - **NetInfo** has been removed; its replacement is now available via the [react-native-community/netinfo](https://github.com/react-native-community/react-native-netinfo) package ([5a30c2a](https://github.com/facebook/react-native/commit/5a30c2a) by [@cpojer](https://github.com/cpojer))
-- **AsyncStorage** no longer attempts to use RocksDB ([f854ce4](https://github.com/facebook/react-native/commit/f854ce4) by [@mmmulani](https://github.com/mmmulani))
+- **WebView** has been removed; its replacement is now available via the [react-native-community/webview](https://github.com/react-native-community/react-native-webview) package ([](https://github.com/facebook/react-native/commit/6ca438a), [1ca9a95](https://github.com/facebook/react-native/commit/1ca9a95), and [954f715](https://github.com/facebook/react-native/commit/954f715) by [@cpojer](https://github.com/cpojer) and [@thorbenprimke](https://github.com/thorbenprimke))
+- **Geolocation** has been removed; its replacement is now available via the [react-native-community/geolocation](https://github.com/react-native-community/react-native-geolocation) package ([17dbf98](https://github.com/facebook/react-native/commit/17dbf98) and [9834c58](https://github.com/facebook/react-native/commit/9834c58) by [@cpojer](https://github.com/cpojer) and [@mmmulani](https://github.com/mmmulani))
 
 ### Fixed
 
