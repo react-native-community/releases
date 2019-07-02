@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.59.10]
+
+This is likely the last patch release for version 59 of React Native for the foreseeable future: it contains an important Android side update for the JavaScript Core, to prevent a great number of crashes mostly related to Samsung devices - thanks to [@Kudo](https://github.com/Kudo) for his work on fixing this via [557989a](https://github.com/facebook/react-native/commit/557989a86f8730113393ed229927d607a478e524)!
+
+Thanks everyone who participated in the [discussion](https://github.com/react-native-community/releases/issues/127).
+
 ## [v0.59.9]
 
 This is a patch fix release addressing a couple ScrollView regressions, and "future-proof" RN 59 from crashes caused by upgrading Gradle (now can support up to 5.4.1 & 3.4.0 for the plugin) and Xcode 11 Beta 1. You can upgrade to this version without upgrading your tooling.
