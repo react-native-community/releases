@@ -13,7 +13,7 @@ Have you ever considered contributing to React Native itself? Be sure to check o
 - Add enhanced accessibility actions support ([14b4668](https://github.com/facebook/react-native/commit/14b4668) by [@xuelgong](https://github.com/xuelgong))
 - Add additional accessibility roles and states ([1aeac1c](https://github.com/facebook/react-native/commit/1aeac1c))
 - Add `isReduceMotionEnabled()` plus `reduceMotionChanged` to `AccessibilityInfo` ([0090ab3](https://github.com/facebook/react-native/commit/0090ab3) by [@estevaolucas](https://github.com/estevaolucas)])
-- Add support for cancelling fetch requests with abort controller ([h5e36b0c](https://github.com/facebook/react-native/commit/5e36b0c) by [@janicduplessis](https://github.com/
+- Add support for cancelling fetch requests with `AbortController` ([h5e36b0c](https://github.com/facebook/react-native/commit/5e36b0c) by [@janicduplessis](https://github.com/
 ))
 
 #### Android specific
