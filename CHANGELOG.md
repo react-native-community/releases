@@ -41,7 +41,7 @@ Have you ever considered contributing to React Native itself? Be sure to check o
 - `flow` is now at v0.98 ([0e1dfd4](https://github.com/facebook/react-native/commit/0e1dfd4) by [@nmote](https://github.com/nmote))
 - `prettier` is now at v1.17.0 ([ff9f8f3](https://github.com/facebook/react-native/commit/ff9f8f3))
 - `metro` packages are now at v0.54.1 ([7ff3874](https://github.com/facebook/react-native/commit/7ff3874), [343f0a1](https://github.com/facebook/react-native/commit/343f0a1) by [@motiz88](https://github.com/motiz88))
-- Update to `whatwg-fetch@3.0`, removing the vendored fetch polyfill,  ([5447196](https://github.com/facebook/react-native/commit/5447196) by [@janicduplessis](https://github.com/janicduplessis))
+- Remove vendored fetch polyfill, update to whatwg-fetch@3.0 ([5447196](https://github.com/facebook/react-native/commit/5447196) by [@janicduplessis](https://github.com/janicduplessis))
 
 #### Android specific
 
