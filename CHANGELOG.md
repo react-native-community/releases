@@ -2,20 +2,26 @@
 
 ## [0.60]
 
-PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/react-native/commit/a6f905f) by [@hramos](https://github.com/hramos))
+This feature release of React Native includes many milestone changes for the platform. Please refer to the [blog post](https://facebook.github.io/react-native/blog/2019/07/03/version-060) for selected details. For upgrading users, some of the progress comes with breaking changes; manual intervention may be required for your app. We're also aware that existing CocaoPod integrations using `use_frameworks` are not out-of-the-box compatible with this version, but please consider [various workarounds](https://github.com/facebook/react-native/issues/25349) while we prepare a long-term solution for a future release. If you're interested in helping evaluate our next release (0.61), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/130).
+
+Have you ever considered contributing to React Native itself? Be sure to check out [Contributing to React Native](https://github.com/facebook/react-native/blob/master/CONTRIBUTING.md).
 
 ### Added
 
 - CLI autolinking support ([5954880](https://github.com/facebook/react-native/commit/5954880), [da7d3df](https://github.com/facebook/react-native/commit/da7d3df) by [@zhongwuzw](https://github.com/zhongwuzw) and [@hramos](https://github.com/hramos))
 - New Intro screen ([6b393b2](https://github.com/facebook/react-native/commit/6b393b2), [233fddb](https://github.com/facebook/react-native/commit/233fddb), [fe88e9e](https://github.com/facebook/react-native/commit/fe88e9e), [aa926e3](https://github.com/facebook/react-native/commit/aa926e3), [a9e8a71](https://github.com/facebook/react-native/commit/a9e8a71), [ad4a5d9](https://github.com/facebook/react-native/commit/ad4a5d9), and [0245fd7](https://github.com/facebook/react-native/commit/0245fd7) by [@cpojer](https://github.com/cpojer), [@eliperkins](https://github.com/eliperkins), [@lucasbento](https://github.com/lucasbento), and [@orta](https://github.com/orta))
-- Enhanced accessibility actions support ([14b4668](https://github.com/facebook/react-native/commit/14b4668) by [@xuelgong](https://github.com/xuelgong))
+- Add enhanced accessibility actions support ([14b4668](https://github.com/facebook/react-native/commit/14b4668) by [@xuelgong](https://github.com/xuelgong))
+- Add additional accessibility roles and states ([1aeac1c](https://github.com/facebook/react-native/commit/1aeac1c))
+- Add `isReduceMotionEnabled()` plus `reduceMotionChanged` to `AccessibilityInfo` ([0090ab3](https://github.com/facebook/react-native/commit/0090ab3) by [@estevaolucas](https://github.com/estevaolucas)])
 
 #### Android specific
 
+- Enable views to be nested within **Text**; this brings feature parity to Android, but be aware that it [has some limitations](https://github.com/facebook/react-native/commit/a2a03bc68ba062a96a6971d3791d291f49794dfd) ([a2285b1](https://github.com/facebook/react-native/commit/a2285b1) by [@rigdern](https://github.com/rigdern))
 - Add a `touchSoundDisabled` prop to **Button**, **Touchable**, and **TouchableWithoutFeedback** ([45e77c8](https://github.com/facebook/react-native/commit/45e77c8) by [@yurykorzun](https://github.com/yurykorzun))
 
 #### iOS specific
 
+- Add `announceForAccessibility` and `announcementFinished` APIs for making screen reader announcemenets ([cfe0032](https://github.com/facebook/react-native/commit/cfe0032) by [@rigdern](https://github.com/rigdern))
 - Ability to force network requests to use WiFi using the `allowsCellularAccess` property. This can ensure that network requests are sent over WiFi if communicating with a local hardware device and is accomplished by setting a flag. Default behavior of allowing network connections over cellular networks when available is unchanged. ([01c70f2](https://github.com/facebook/react-native/commit/01c70f2) and [916186a](https://github.com/facebook/react-native/commit/916186a) by [@bondparkerbond](https://github.com/bondparkerbond)and [@zhongwuzw](https://github.com/zhongwuzw))
 - `$RN_CACHE_DIR` can now be used to manually specify the iOS build cache directory ([845eee4](https://github.com/facebook/react-native/commit/845eee4) by [@hramos](https://github.com/hramos))
 
@@ -26,6 +32,7 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 - Add default `scrollEventThrottle` value to **Animated.FlatList** and **Animated.SectionList**; this now behaves consistently with **Animated.ScrollView** ([933e65e](https://github.com/facebook/react-native/commit/933e65e) by [@janicduplessis](https://github.com/janicduplessis))
 - Remove invariant on nested sibling **VirtualizedLists** without unique listKey props; they now trigger a **RedBox** ([af5633b](https://github.com/facebook/react-native/commit/af5633b))
 - **FlatList** and **VirtualizedList**'s default `keyExtractor` now checks `item.id` and `item.key` ([de0d7cf](https://github.com/facebook/react-native/commit/de0d7cf) by [@sahrens](https://github.com/sahrens))
+- **SectionList**'s `scrollToLocation` on iOS now counts `itemIndex` like Android; both platforms are now consistent, and the `itemIndex` value 0 now represents scrolling to t he first heading ([248a108](https://github.com/facebook/react-native/commit/248a108) by [@vonovak](https://github.com/vonovak))
 - Slightly speedup core initialization by moving native version check to DEV only ([5bb2277](https://github.com/facebook/react-native/commit/5bb2277) by [@mmmulani](https://github.com/mmmulani))
 - `react` is now at v16.8.6 ([53cec2d](https://github.com/facebook/react-native/commit/53cec2d), [ee681b7](https://github.com/facebook/react-native/commit/ee681b7), and [6001acb](https://github.com/facebook/react-native/commit/6001acb) by [@kelset](https://github.com/kelset), [@mdvacca](https://github.com/mdvacca), [@gaearon](https://github.com/gaearon))
 - `react-native-community/cli` is now at v2.0.0 (by [@thymikee](https://github.com/thymikee))
@@ -40,7 +47,6 @@ PS: contributing guide has been updated! ([a6f905f](https://github.com/facebook/
 #### iOS specific
 
 - *BREAKING*: Split React.podspec into separate podspecs for each Xcode project; your libraries will need to update for this change as well to avoid CocoaPods build errors ([2321b3f](https://github.com/facebook/react-native/commit/2321b3f) by [@fson](https://github.com/fson))
-- **SectionList**'s `scrollToLocation` on iOS now counts `itemIndex` like Android; both platforms are now consistent ([248a108](https://github.com/facebook/react-native/commit/248a108) by [@vonovak](https://github.com/vonovak))
 - Switch **Slider** `onSlidingComplete` event to a non-bubbling event on iOS to match Android ([7927437](https://github.com/facebook/react-native/commit/7927437) by [@rickhanlonii](https://github.com/rickhanlonii))
 
 ### Deprecated
