@@ -13,6 +13,7 @@ Have you ever considered contributing to React Native itself? Be sure to check o
 - Add enhanced accessibility actions support ([14b4668](https://github.com/facebook/react-native/commit/14b4668) by [@xuelgong](https://github.com/xuelgong))
 - Add additional accessibility roles and states ([1aeac1c](https://github.com/facebook/react-native/commit/1aeac1c))
 - Add `isReduceMotionEnabled()` plus `reduceMotionChanged` to `AccessibilityInfo` ([0090ab3](https://github.com/facebook/react-native/commit/0090ab3) by [@estevaolucas](https://github.com/estevaolucas)])
+- Add support for cancelling fetch requests with `AbortController` ([h5e36b0c](https://github.com/facebook/react-native/commit/5e36b0c) by [@janicduplessis](https://github.com/janicduplessis))
 
 #### Android specific
 
@@ -39,6 +40,7 @@ Have you ever considered contributing to React Native itself? Be sure to check o
 - `flow` is now at v0.98 ([0e1dfd4](https://github.com/facebook/react-native/commit/0e1dfd4) by [@nmote](https://github.com/nmote))
 - `prettier` is now at v1.17.0 ([ff9f8f3](https://github.com/facebook/react-native/commit/ff9f8f3))
 - `metro` packages are now at v0.54.1 ([7ff3874](https://github.com/facebook/react-native/commit/7ff3874), [343f0a1](https://github.com/facebook/react-native/commit/343f0a1) by [@motiz88](https://github.com/motiz88))
+- Replace patched fetch polyfill with `whatwg-fetch@3.0` ([5447196](https://github.com/facebook/react-native/commit/5447196) by [@janicduplessis](https://github.com/janicduplessis))
 
 #### Android specific
 
