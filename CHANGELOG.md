@@ -47,6 +47,7 @@ Have you ever considered contributing to React Native itself? Be sure to check o
 #### iOS specific
 
 - *BREAKING*: Split React.podspec into separate podspecs for each Xcode project; your libraries will need to update for this change as well to avoid CocoaPods build errors ([2321b3f](https://github.com/facebook/react-native/commit/2321b3f) by [@fson](https://github.com/fson))
+- Improve handling of native module exceptions; they are now propagated to crash reporting tools with the context and callstack ([629708b](https://github.com/facebook/react-native/commit/629708b) by [@pvinis](https://github.com/pvinis))
 - Switch **Slider** `onSlidingComplete` event to a non-bubbling event on iOS to match Android ([7927437](https://github.com/facebook/react-native/commit/7927437) by [@rickhanlonii](https://github.com/rickhanlonii))
 
 ### Deprecated
