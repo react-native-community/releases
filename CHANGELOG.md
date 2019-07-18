@@ -9,7 +9,7 @@ This is a patch release that contains two more Hermes related fixes, thanks to t
 #### Android specific
 
 - Generate correct source map if hermes not enabled ([b1f81be](https://github.com/facebook/react-native/commit/b1f81be) by [@HazAT](https://github.com/HazAT))
-- [Android] Generate source maps outside of assets/ ([60e75dc](https://github.com/facebook/react-native/commit/60e75dc) by [@motiz88](https://github.com/motiz88))
+- Generate source maps outside of assets/ ([60e75dc](https://github.com/facebook/react-native/commit/60e75dc) by [@motiz88](https://github.com/motiz88))
 
 You can participate to the conversation for the next patch release in the dedicated [issue](https://github.com/react-native-community/react-native-releases/issues/130).
 
