@@ -1,5 +1,38 @@
 # Changelog
 
+## [v0.60.4]
+
+This is a patch release that contains two more Hermes related fixes, thanks to the contributors for helping improving the support!
+
+### Fixed
+
+#### Android specific
+
+- Generate correct source map if hermes not enabled ([b1f81be](https://github.com/facebook/react-native/commit/b1f81be) by [@HazAT](https://github.com/HazAT))
+- Generate source maps outside of assets/ ([60e75dc](https://github.com/facebook/react-native/commit/60e75dc) by [@motiz88](https://github.com/motiz88))
+
+You can participate to the conversation for the next patch release in the dedicated [issue](https://github.com/react-native-community/react-native-releases/issues/130).
+
+## [v0.60.3]
+
+This is a patch release that fixes the binary path to Hermes package, thanks to [@zoontek](https://github.com/zoontek)) for creating the PR!
+
+You can participate to the conversation for the next patch release in the dedicated [issue](https://github.com/react-native-community/react-native-releases/issues/130).
+
+## [v0.60.2]
+
+This is a patch release that fixes the path to Hermes package.
+
+You can participate to the conversation for the next patch release in the dedicated [issue](https://github.com/react-native-community/react-native-releases/issues/130).
+
+## [v0.60.1]
+
+This is a patch release that includes the Hermes JavaScript Engine announced at Chain React Conf 2019.
+
+Check out the documentation to opt-in and give [Hermes a try](facebook.github.io/react-native/docs/hermes).
+
+You can participate to the conversation for the next patch release in the dedicated [issue](https://github.com/react-native-community/react-native-releases/issues/130).
+
 ## [0.60]
 
 This feature release of React Native includes many milestone changes for the platform. Please refer to the [blog post](https://facebook.github.io/react-native/blog/2019/07/03/version-60) for selected details. For upgrading users, some of the progress comes with breaking changes; manual intervention may be required for your app. We're also aware that existing CocoaPods integrations using `use_frameworks` are not out-of-the-box compatible with this version, but please consider [various workarounds](https://github.com/facebook/react-native/issues/25349) while we prepare a long-term solution for a future release. If you're interested in helping evaluate our next release (0.61), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/130).
