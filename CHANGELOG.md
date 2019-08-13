@@ -1,5 +1,39 @@
 # Changelog
 
+## [v0.60.5]
+
+This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/130) to improve the quality of the 0.60 release. Thanks to everyone who contributed!
+
+### Added
+
+- Added a default Prettier config for new projects ([f4d5e8c](https://github.com/facebook/react-native/commit/f4d5e8c) by [@jpdriver](https://github.com/jpdriver))
+
+#### Android specific
+
+- Add showSoftInputOnFocus to TextInput ([b476ca0](https://github.com/facebook/react-native/commit/b476ca0))
+
+### Changed
+
+- Bump CLI to ^2.6.0 ([72473c7](https://github.com/facebook/react-native/commit/72473c7) by [@thymikee](https://github.com/thymikee))
+
+### Fixed
+
+- Ensure right version of Metro bundler is used ([1bb197a](https://github.com/facebook/react-native/commit/1bb197a) by [@kelset](https://github.com/kelset))
+
+#### Android specific
+
+- Fix `ClassNotFound` exception in Android during Release builds ([ffdf3f2](https://github.com/facebook/react-native/commit/ffdf3f2) by [@thecodrr](https://github.com/thecodrr))
+- Remove unnecessary flag when running JS server ([5a4fac7](https://github.com/facebook/react-native/commit/5a4fac7) by [@thecodrr](https://github.com/thecodrr))
+- Correctly set the border radius on android ([feb931f](https://github.com/facebook/react-native/commit/feb931f) by [@cabelitos](https://github.com/cabelitos))
+- Fix addition of comma at the end of accessibility labels on Android. ([812abfd](https://github.com/facebook/react-native/commit/812abfd) by [@marcmulcahy](https://github.com/marcmulcahy))
+
+#### iOS specific
+
+- Don't call sharedApplication in App Extension ([683908d](https://github.com/facebook/react-native/commit/683908d) by [@zhongwuzw](https://github.com/zhongwuzw))
+- Delete fishhook ([95c747e](https://github.com/facebook/react-native/commit/95c747e) by [@mmmulani](https://github.com/mmmulani))
+
+You can participate to the conversation for the next patch release in the dedicated [issue](https://github.com/react-native-community/react-native-releases/issues/130).
+
 ## [v0.60.4]
 
 This is a patch release that contains two more Hermes related fixes, thanks to the contributors for helping improving the support!
