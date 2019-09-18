@@ -2,7 +2,7 @@
 
 ## 0.61.0
 
-[TODO: Description]
+This is a major release that includes the new reloading experiance Fast Refresh. It also removes the React `.xcodeproj`, fixes `use_frameworks!` for CocoaPods support, adds a `useWindowDimensions` hook, and upgrades to React 16.9. 
 
 ### Added
 
