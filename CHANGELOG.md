@@ -8,8 +8,6 @@
 
 * Add Fast Refresh by default ([17f8e58](https://github.com/facebook/react-native/commit/17f8e58) by [@gaearon](https://github.com/gaearon))
 * Add `useWindowDimensions` hook to replace most `Dimensions` usage ([5ec382d](https://github.com/facebook/react-native/commit/5ec382d) by [@sahrens](https://github.com/sahrens))
-* Add Flipper support ([3a66fc7](https://github.com/facebook/react-native/commit/3a66fc7) by [@axe-fb](https://github.com/axe-fb))
-* Add explicit `useNativeDriver: false` to callsites ([0a68763](https://github.com/facebook/react-native/commit/0a68763) by [@TheSavior](https://github.com/TheSavior))
 
 #### Android specific
 
@@ -55,16 +53,10 @@
 
 * Deprecate method UIManagerModule.playTouchSound() ([e3ec8db](https://github.com/facebook/react-native/commit/e3ec8db) by [@mdvacca](https://github.com/mdvacca))
 * Deprecate UIManager.measureLayoutRelativeToParent ([e42009b](https://github.com/facebook/react-native/commit/e42009b) by [@mdvacca](https://github.com/mdvacca))
-* Move `TextInput`'s proptypes to `DeprecatedTextInputPropTypes` ([427b54e](https://github.com/facebook/react-native/commit/427b54e) by [@empyrical](https://github.com/empyrical))
-* Move `Text` component's proptypes to `DeprecatedPropTypes` ([0057cc9](https://github.com/facebook/react-native/commit/0057cc9) by [@empyrical](https://github.com/empyrical))
 
 #### Android specific
 
 * DrawerLayoutAndroid drawerPosition now expects a string, number is deprecated ([305b0a2](https://github.com/facebook/react-native/commit/305b0a2) by [@TheSavior](https://github.com/TheSavior))
-
-#### iOS specific
-
-* Deprecate RCTExport ([b771e20](https://github.com/facebook/react-native/commit/b771e20) by [@RSNara](https://github.com/RSNara))
 
 ### Removed
 
@@ -85,7 +77,6 @@
 * URL: Do not prepend baseUrl if the URL is not a relative URL ([e104204](https://github.com/facebook/react-native/commit/e104204) by [@jeswinsimon](https://github.com/jeswinsimon))
 * Memory Leak due to JSStringRelease not called ([ba5222f](https://github.com/facebook/react-native/commit/ba5222f) by [@sachinservicemax](https://github.com/sachinservicemax))
 * Fixed rotateZ native animation ([f4f08d3](https://github.com/facebook/react-native/commit/f4f08d3) by [@Titozzz](https://github.com/Titozzz))
-* Fix forceUpdate method on useWindowDimensions ([742a544](https://github.com/facebook/react-native/commit/742a544) by [@brunolemos](https://github.com/brunolemos))
 * Fix indentation in Gradle files ([9b0adb5](https://github.com/facebook/react-native/commit/9b0adb5) by [@sonicdoe](https://github.com/sonicdoe))
 * Fix handling of failed image downloads ([5cde7d2](https://github.com/facebook/react-native/commit/5cde7d2) by [@sammy-SC](https://github.com/sammy-SC))
 * Fix SectionList scrollToLocation and prevent regressions ([8a82503](https://github.com/facebook/react-native/commit/8a82503) by [@vonovak](https://github.com/vonovak))
@@ -96,7 +87,7 @@
 #### Android specific
 
 * Add missing Hermes include ([1db96a3](https://github.com/facebook/react-native/commit/1db96a3) by [@janicduplessis](https://github.com/janicduplessis))
-* Fix UIManager.measure() ([28d5018](https://github.com/facebook/react-native/commit/28d5018) by [@floriancargoet](https://github.com/floriancargoet))
+* Fix UIManager.measure to consider scale and rotation transforms ([28d5018](https://github.com/facebook/react-native/commit/28d5018) by [@floriancargoet](https://github.com/floriancargoet))
 
 #### iOS specific
 
