@@ -13,7 +13,7 @@ This is a major release that includes the new reloading experience Fast Refresh.
 
 * Add exception in .gitignore for `debug.keystore` to the android template. ([d550256](https://github.com/facebook/react-native/commit/d550256) by [@bondehagen](https://github.com/bondehagen))
 * Add jitpack repository to template ([1a92cf9](https://github.com/facebook/react-native/commit/1a92cf9) by [@iyegoroff](https://github.com/iyegoroff))
-* Add documentation to TextInput's Flow types ([d00f088](https://github.com/facebook/react-native/commit/d00f088) by [@empyrical](https://github.com/empyrical))
+
 
 #### iOS specific
 
@@ -39,7 +39,7 @@ This is a major release that includes the new reloading experience Fast Refresh.
 
 #### Android specific
 
-* Bump Hermes to v0.1.1 ([c21e36d](https://github.com/facebook/react-native/commit/c21e36d) by [@sunnylqm](https://github.com/sunnylqm))
+* Bump Hermes to v0.2.1 ([811401b](https://github.com/facebook/react-native/commit/811401b) by [@sunnylqm](https://github.com/sunnylqm))
 * Use centralized package for DoNotStrip annotation ([35fc0ad](https://github.com/facebook/react-native/commit/35fc0ad) by [@passy](https://github.com/passy))
 
 #### iOS specific
@@ -59,9 +59,6 @@ This is a major release that includes the new reloading experience Fast Refresh.
 * DrawerLayoutAndroid drawerPosition now expects a string, number is deprecated ([305b0a2](https://github.com/facebook/react-native/commit/305b0a2) by [@TheSavior](https://github.com/TheSavior))
 
 ### Removed
-
-* Remove ensureComponentIsNative.js ([9a31fa5](https://github.com/facebook/react-native/commit/9a31fa5) by [@TheSavior](https://github.com/TheSavior))
-* Remove style property bitmask ([f33a623](https://github.com/facebook/react-native/commit/f33a623) by [@davidaurelio](https://github.com/davidaurelio))
 
 #### Android specific
 
@@ -83,6 +80,7 @@ This is a major release that includes the new reloading experience Fast Refresh.
 * [General] [Internal] Fix incorrect `module.name_mapper` in template .flowconfig ([cf5ca26](https://github.com/facebook/react-native/commit/cf5ca26) by [@MoOx](https://github.com/MoOx))
 * Fall back to `JSON.stringify` in `console.log` if Symbol is unavailable ([1798897](https://github.com/facebook/react-native/commit/1798897) by [@cpojer](https://github.com/cpojer))
 * Pop frames correctly in console.error handler ([3eaf245](https://github.com/facebook/react-native/commit/3eaf245) by [@motiz88](https://github.com/motiz88))
+* Add documentation to TextInput's Flow types ([d00f088](https://github.com/facebook/react-native/commit/d00f088) by [@empyrical](https://github.com/empyrical))
 
 #### Android specific
 
@@ -91,7 +89,7 @@ This is a major release that includes the new reloading experience Fast Refresh.
 
 #### iOS specific
 
-* Fixes iOS packager connection not work ([4ab9da1](https://github.com/facebook/react-native/commit/4ab9da1) by [@zhongwuzw](https://github.com/zhongwuzw))
+* Fixed iOS packager connection ([4ab9da1](https://github.com/facebook/react-native/commit/4ab9da1) by [@zhongwuzw](https://github.com/zhongwuzw))
 * Fixed compatibility with CocoaPods frameworks. ([8131b7b](https://github.com/facebook/react-native/commit/8131b7b) by [@jtreanor](https://github.com/jtreanor))
 * Don't call sharedApplication in App Extension ([c5ea18f](https://github.com/facebook/react-native/commit/c5ea18f) by [@zhongwuzw](https://github.com/zhongwuzw))
 
