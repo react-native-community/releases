@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.60.6]
+
+This is a small patch release with a commit to fix the build break in MSVC to help the users of react-native-windows. ([b6f6c50](https://github.com/facebook/react-native/commit/b6f6c50) by [@acoates-ms](https://github.com/acoates-ms))
+
 ## [v0.60.5]
 
 This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/130) to improve the quality of the 0.60 release. Thanks to everyone who contributed!
