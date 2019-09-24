@@ -93,7 +93,9 @@ This is a major release that includes the new reloading experience Fast Refresh.
 * Fixed compatibility with CocoaPods frameworks. ([8131b7b](https://github.com/facebook/react-native/commit/8131b7b) by [@jtreanor](https://github.com/jtreanor))
 * Don't call sharedApplication in App Extension ([c5ea18f](https://github.com/facebook/react-native/commit/c5ea18f) by [@zhongwuzw](https://github.com/zhongwuzw))
 
+## [v0.60.6]
 
+This is a small patch release with a commit to fix the build break in MSVC to help the users of react-native-windows. ([b6f6c50](https://github.com/facebook/react-native/commit/b6f6c50) by [@acoates-ms](https://github.com/acoates-ms))
 
 ## [v0.60.5]
 
