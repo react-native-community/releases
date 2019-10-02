@@ -1,5 +1,42 @@
 # Changelog
 
+## 0.61.2
+
+This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/146) to improve the quality of the 0.60 release. Thanks to everyone who contributed!
+
+### Fixed
+
+#### Android specific
+
+- Fix elevation issues on Android ([8fd9ab2](https://github.com/facebook/react-native/pull/26682) by [@grabbou](https://github.com/grabbou))
+
+### Added
+
+- Use `warnOnce` for excessive number of callbacks error ([5cf3d96](https://github.com/facebook/react-native/commit/5cf3d96) by [@janicduplessis](https://github.com/anicduplessis))
+- Include transform in OUTER_PROPS ([b94438](https://github.com/facebook/react-native/commit/b94438) by [@migbot](https://github.com/migbot))
+
+#### iOS specific
+
+- Better iOS13 support in `StatusBar` API ([7fd8bac](https://github.com/facebook/react-native/commit/7fd8bac) by [@gaodeng](https://github.com/gaodeng))
+
+#### Android specific
+
+- Improve error message in NativeModuleRegistryBuilder ([0b734f6](https://github.com/facebook/react-native/commit/0b734f6) by [@vonovak](https://github.com/vonovak))
+
+## 0.61.1
+
+This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/144) to improve the quality of the 0.60 release. Thanks to everyone who contributed!
+
+### Fixed
+
+#### iOS specific
+
+- Fix ShareSheet crash on iOS 13 ([4b1206c](https://github.com/facebook/react-native/commit/4b1206c) by [@tomtargosz](https://github.com/tomtargosz)
+
+#### Android specific
+
+- Allow again for injecting custom root view via ReactActivityDelegate ([42ad0bb](https://github.com/facebook/react-native/commit/42ad0bb) by [@kmagiera](https://github.com/kmagiera))
+
 ## 0.61.0
 
 This is a major release that includes the new reloading experience Fast Refresh. It also removes the React `.xcodeproj`, fixes `use_frameworks!` for CocoaPods support, adds a `useWindowDimensions` hook, and upgrades to React 16.9. 
@@ -321,7 +358,8 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 #### iOS specific
 
 - Fix incorrect opacity behaviour for **Text** component ([f71357](https://github.com/facebook/react-native/commit/f71357aa816) by [@shergin](https://github.com/shergin))
-- Fix **Text** shadow displays when `textShadowOffset` is `{0,0}` ([17a81b](https://github.com/facebook/react-native/commit/17a81be40d0) by [@Woodpav](https://github.com/Woodpav))
+- Fix **Text** shadow displays when `text
+Offset` is `{0,0}` ([17a81b](https://github.com/facebook/react-native/commit/17a81be40d0) by [@Woodpav](https://github.com/Woodpav))
 - Add convert compatible of **NSString** for bridge message data ([c37e9c](https://github.com/facebook/react-native/commit/c37e9c89058) by [@zhongwuzw](https://github.com/zhongwuzw))
 - Fix nullability warnings in **RCTExceptionsManager** ([2b7d79](https://github.com/facebook/react-native/commit/2b7d7999e13) by [@jtreanor](https://github.com/jtreanor))
 - Fix app to reconnect with metro after the bundler is closed and reopened ([c28676](https://github.com/facebook/react-native/commit/c286769d28c) by [@rickhanlonii](https://github.com/rickhanlonii))
