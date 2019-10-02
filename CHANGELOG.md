@@ -31,7 +31,7 @@ This is a patch release that consist of a few commits requested in the [dedicate
 
 #### iOS specific
 
-- Fix ShareSheet crash on iOS 13 ([4b1206c](https://github.com/facebook/react-native/commit/4b1206c) by [@tomtargosz](https://github.com/tomtargosz)
+- Fix ShareSheet crash on iOS 13 ([4b1206c](https://github.com/facebook/react-native/commit/4b1206c) by [@tomtargosz](https://github.com/tomtargosz))
 
 #### Android specific
 
@@ -50,7 +50,6 @@ This is a major release that includes the new reloading experience Fast Refresh.
 
 * Add exception in .gitignore for `debug.keystore` to the android template. ([d550256](https://github.com/facebook/react-native/commit/d550256) by [@bondehagen](https://github.com/bondehagen))
 * Add jitpack repository to template ([1a92cf9](https://github.com/facebook/react-native/commit/1a92cf9) by [@iyegoroff](https://github.com/iyegoroff))
-
 
 #### iOS specific
 
