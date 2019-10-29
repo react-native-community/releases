@@ -1,8 +1,26 @@
 # Changelog
 
+## 0.61.3
+
+This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/150) to improve the quality of the 0.61 release. Thanks to everyone who contributed!
+
+### Fixed
+
+- Fix bug where ScrollView contentInset top set to undefined wouldn't default to 0 ([2ddb76a](https://github.com/facebook/react-native/commit/2ddb76a927dea4af459817c94cde17d509ed394f) by [TheSavior](https://github.com/TheSavior))
+- Fix TimingAnimation rounding error issue ([2027a61](https://github.com/facebook/react-native/commit/2027a6133907d16d2256a2139f5fd09de00f3447) by [MartinSherburn](https://github.com/MartinSherburn))
+
+#### iOS specific
+
+-  Fix selecting videos from library in iOS 13 ([5051bf2](https://github.com/facebook/react-native/commit/5051bf21a7c1eb0b3a75273e7c4ae86afe5aecc4) by [fatalsun](https://github.com/fatalsun))
+- Fix bug in iOS13 nested text rendering ([32c90eb](https://github.com/facebook/react-native/commit/32c90eb8da647809e6c1bf002f4f7d6259cabb05) by [PeteTheHeat](https://github.com/PeteTheHeat))
+
+#### Android specific
+
+- Release underlying resources when JS instance is GC'ed on Android try ([766f470](https://github.com/facebook/react-native/commit/766f47075def3c4d52bc3a88ac2a6c7f70ae7a1c) by [janicduplessis](https://github.com/janicduplessis))
+
 ## 0.61.2
 
-This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/146) to improve the quality of the 0.60 release. Thanks to everyone who contributed!
+This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/146) to improve the quality of the 0.61 release. Thanks to everyone who contributed!
 
 ### Fixed
 
