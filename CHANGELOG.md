@@ -1,8 +1,21 @@
 # Changelog
 
-## 0.61.3
+## 0.61.4
 
 This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/150) to improve the quality of the 0.61 release. Thanks to everyone who contributed!
+
+### Fixed
+
+- Fix build with Hermes on Windows ([bd12ca1](https://github.com/facebook/react-native/commit/bd12ca12d729d783dfc157ea933d983c89455505) by [@B27](https://github.com/B27))
+- Fix Chrome debugger showing console.logs at incorrect locations ([5e702a1](https://github.com/facebook/react-native/commit/5e702a1da3330620624bc86d3741341cdfce29d8) by [@rickhanlonii](https://github.com/rickhanlonii))
+
+#### iOS specific
+
+-  Fix bug in iOS 13 when application would be terminated immediately when in background ([d7c9173](https://github.com/facebook/react-native/commit/d7c9173b07171164bcadf73855454e90e07b31be) by [@radko93](https://github.com/radko93))
+
+## 0.61.3
+
+This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/148) to improve the quality of the 0.61 release. Thanks to everyone who contributed!
 
 ### Fixed
 
