@@ -150,7 +150,7 @@ function isTurboModules(change) {
 }
 
 function isInternal(change) {
-  return /^\[internal\]/i.test(change);
+  return /\[internal\]/i.test(change);
 }
 
 function getChangeMessage(item) {
@@ -193,7 +193,7 @@ function getChangelogDesc(commits) {
 
     if(isFabric(change.split('\n')[0])) return;
     if(isTurboModules(change.split('\n')[0])) return;
-    if(isInternal(change.split('\n')[0])) return;
+    if(isInternal(change)) return;
 
     if (isAdded(change)) {
       if (isAndroidCommit(change)) {
