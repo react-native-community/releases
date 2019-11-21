@@ -117,6 +117,10 @@ function isIOSCommit(change) {
   );
 }
 
+function isBreaking(change) {
+  return /\b(breaking)\b/i.test(change);
+}
+
 function isAdded(change) {
   return /\b(added)\b/i.test(change);
 }
@@ -178,6 +182,7 @@ function getChangeMessage(item) {
 
 function getChangelogDesc(commits) {
   const acc = {
+    breaking: { android: [], ios: [], general: [] },
     added: { android: [], ios: [], general: [] },
     changed: { android: [], ios: [], general: [] },
     deprecated: { android: [], ios: [], general: [] },
@@ -195,7 +200,15 @@ function getChangelogDesc(commits) {
     if(isTurboModules(change.split('\n')[0])) return;
     if(isInternal(change)) return;
 
-    if (isAdded(change)) {
+    if (isBreaking(change)) {
+      if (isAndroidCommit(change)) {
+        acc.breaking.android.push(message);
+      } else if (isIOSCommit(change)) {
+        acc.breaking.ios.push(message);
+      } else {
+        acc.breaking.general.push(message);
+      }
+    } else if (isAdded(change)) {
       if (isAndroidCommit(change)) {
         acc.added.android.push(message);
       } else if (isIOSCommit(change)) {
@@ -261,6 +274,18 @@ function buildMarkDown(data) {
   return `
 
 ## [${argv.compare}.0]
+
+### Breaking
+
+${data.breaking.general.join("\n")}
+
+#### Android specific
+
+${data.breaking.android.join("\n")}
+
+#### iOS specific
+
+${data.breaking.ios.join("\n")}
 
 ### Added
 
