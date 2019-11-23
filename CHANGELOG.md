@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.61.5
+
+This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/151) to improve the quality of the 0.61 release. Thanks to everyone who contributed!
+
+#### Android specific
+
+- Fix bundling assets in monorepo ([51f74e7](https://github.com/facebook/react-native/commit/51f74e706c49bce50aa395f0133e7120337b60b2) by [@Esemesek](https://github.com/Esemesek))
+- Fix multiple `set-cookie` not aggregated correctly in response headers ([1a33607](https://github.com/facebook/react-native/commit/1a3360753b16f5908f62d1a01e8c8396fc314268) by **Vincent Cheung**)
+
 ## 0.61.4
 
 This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/150) to improve the quality of the 0.61 release. Thanks to everyone who contributed!
