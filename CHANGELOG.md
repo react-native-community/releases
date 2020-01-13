@@ -14,7 +14,6 @@
 - Add missing accessibility props on Touchables ([8c0c860](https://github.com/facebook/react-native/commit/8c0c860) by [@xuelgong](https://github.com/xuelgong))
 - Add getNativeScrollRef method to FlatList component ([bde1d63](https://github.com/facebook/react-native/commit/bde1d63))
 - Clean up unused functions on ReactContext ([3963c7a](https://github.com/facebook/react-native/commit/3963c7a) by [@ejanzer](https://github.com/ejanzer))
-- Add test for the `processColorArray` to make sure it maps correctly ([3c4b1d6](https://github.com/facebook/react-native/commit/3c4b1d6) by [@talhaazhar](https://github.com/talhaazhar))
 - Added LogBox ([c194ed2](https://github.com/facebook/react-native/commit/c194ed2) by [@rickhanlonii](https://github.com/rickhanlonii))
 
 #### Android specific
@@ -54,7 +53,6 @@
 #### iOS specific
 
 - New internal image attribution support, but files importing RCTImageLoader.h must be converted to ObjC++ ([fdcdca4](https://github.com/facebook/react-native/commit/fdcdca4) by [@fkgozali](https://github.com/fkgozali))
-- Changed doc. ([70ec7e2](https://github.com/facebook/react-native/commit/70ec7e2) by [@jeswinsimon](https://github.com/jeswinsimon))
 - Added another build flag for DevLoadingView ([3ceb959](https://github.com/facebook/react-native/commit/3ceb959) by [@mmmulani](https://github.com/mmmulani))
 
 ### Removed
@@ -79,35 +77,16 @@
 #### Android specific
 
 - Using width for calculating margin top percent ([0599af2](https://github.com/facebook/react-native/commit/0599af2) by [@SidharthGuglani](https://github.com/SidharthGuglani))
-- Make ReactFeatureFlags.useTurboModules volatile ([7f63713](https://github.com/facebook/react-native/commit/7f63713) by [@RSNara](https://github.com/RSNara))
-- Make TurboModuleRegistry in CatalystInstanceImpl.java volatile ([29b9972](https://github.com/facebook/react-native/commit/29b9972) by [@RSNara](https://github.com/RSNara))
-- Refactor TurboModule filtering in NativeModuleRegistryBuilder ([d9deee2](https://github.com/facebook/react-native/commit/d9deee2) by [@RSNara](https://github.com/RSNara))
-- Support nullable returns NativeModule methods returning Boxed Primitives ([f57b0ca](https://github.com/facebook/react-native/commit/f57b0ca) by [@RSNara](https://github.com/RSNara))
 
 #### iOS specific
 
 - Remove \_\_unused annotation from ConcreteSystraceSection ctor args. ([8ac9b32](https://github.com/facebook/react-native/commit/8ac9b32) by [@RSNara](https://github.com/RSNara))
 - Slider is now disabled properly on iOS if the disabled prop is set. ([fa9ff07](https://github.com/facebook/react-native/commit/fa9ff07))
-- Fix iOS tests by using 12.4 iOS Simulator ([97dd8ce](https://github.com/facebook/react-native/commit/97dd8ce) by [@hramos](https://github.com/hramos))
 - Reconnect to debugger websocket after metro is restarted. ([13992f9](https://github.com/facebook/react-native/commit/13992f9) by [@rickhanlonii](https://github.com/rickhanlonii))
 - Fix spinner visibility on beginRefreshingProgrammatically ([e341489](https://github.com/facebook/react-native/commit/e341489) by [@nnabinh](https://github.com/nnabinh))
 - `Dimensions` module now updates on initial split screen ([e7c289b](https://github.com/facebook/react-native/commit/e7c289b) by [@sahrens](https://github.com/sahrens))
 
-### Unknown
-
-- Use vanilla jni instead of fbjni for all the jni communication ([f0f83eb](https://github.com/facebook/react-native/commit/f0f83eb) by [@SidharthGuglani](https://github.com/SidharthGuglani))
-- Introducing ReactCallerContextFactory interface ([9713b63](https://github.com/facebook/react-native/commit/9713b63) by [@mdvacca](https://github.com/mdvacca))
-- Integrate ReactContextContainerFactory as part of ReactImageViewManager ([882e4a3](https://github.com/facebook/react-native/commit/882e4a3) by [@mdvacca](https://github.com/mdvacca))
-- Deprecate CallerContext from ReactImageManager ([8accd77](https://github.com/facebook/react-native/commit/8accd77) by [@mdvacca](https://github.com/mdvacca))
-- Create ReactFeatureFlag to enable / disable custom implementation of getChildVisibleRect ([9c61693](https://github.com/facebook/react-native/commit/9c61693) by [@mdvacca](https://github.com/mdvacca))
-- Convert NetworkingModule to TurboModule ([476a336](https://github.com/facebook/react-native/commit/476a336) by [@ejanzer](https://github.com/ejanzer))
 - Avoid throwing exceptions when the host activity is not FragmentActivity ([7cfabf4](https://github.com/facebook/react-native/commit/7cfabf4))
-
-#### Android Unknown
-
-- Add extra logging in the Bridge exception handling ([4ad852c](https://github.com/facebook/react-native/commit/4ad852c) by [@mdvacca](https://github.com/mdvacca))
-- Add extra logging information in RN Android animation system ([5ddbd5c](https://github.com/facebook/react-native/commit/5ddbd5c) by [@mdvacca](https://github.com/mdvacca))
-
 ## 0.61.5
 
 This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/151) to improve the quality of the 0.61 release. Thanks to everyone who contributed!
