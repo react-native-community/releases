@@ -49,6 +49,7 @@
 - MainActivity launchMode is singleTask ([7a42596](https://github.com/facebook/react-native/commit/7a42596) by [@dulmandakh](https://github.com/dulmandakh))
 - Fix build failure due to duplicate libc++\_shared.so ([2fd5088](https://github.com/facebook/react-native/commit/2fd5088) by [@dulmandakh](https://github.com/dulmandakh))
 - Make DeviceInfo extend ReactContextBaseJavaModule ([5c64512](https://github.com/facebook/react-native/commit/5c64512) by [@RSNara](https://github.com/RSNara))
+- Avoid throwing exceptions when the host activity is not FragmentActivity ([7cfabf4](https://github.com/facebook/react-native/commit/7cfabf4))
 
 #### iOS specific
 
@@ -86,7 +87,6 @@
 - Fix spinner visibility on beginRefreshingProgrammatically ([e341489](https://github.com/facebook/react-native/commit/e341489) by [@nnabinh](https://github.com/nnabinh))
 - `Dimensions` module now updates on initial split screen ([e7c289b](https://github.com/facebook/react-native/commit/e7c289b) by [@sahrens](https://github.com/sahrens))
 
-- Avoid throwing exceptions when the host activity is not FragmentActivity ([7cfabf4](https://github.com/facebook/react-native/commit/7cfabf4))
 ## 0.61.5
 
 This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/151) to improve the quality of the 0.61 release. Thanks to everyone who contributed!
