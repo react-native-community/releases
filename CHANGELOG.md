@@ -31,8 +31,6 @@
 
 - TextInput now uses `forwardRef`, allowing it to be used directly by new APIs requiring a host component ([bbc5c35](https://github.com/facebook/react-native/commit/bbc5c35) by [@TheSavior](https://github.com/TheSavior))
 - Upgraded React to v16.11.0 ([1edce56](https://github.com/facebook/react-native/commit/1edce56) and [dff490d](https://github.com/facebook/react-native/commit/dff490d) by [@gaearon](https://github.com/gaearon) and [@TheSavior](https://github.com/TheSavior))
-- Don't crash when pretty-format is not available ([25a21b8](https://github.com/facebook/react-native/commit/25a21b8))
-- TextInput now properly sends native the end selection location on change ([dff490d](https://github.com/facebook/react-native/commit/dff490d) by [@TheSavior](https://github.com/TheSavior))
 - <TextInput> now uses React hooks internally ([dff490d](https://github.com/facebook/react-native/commit/dff490d) by [@TheSavior](https://github.com/TheSavior))
 - TouchableWithoutFeedback, TouchableOpacity, TouchableNativeFeedback, and TouchableHighlight are now classes without propTypes ([ebf7d75](https://github.com/facebook/react-native/commit/ebf7d75), [88ae24f](https://github.com/facebook/react-native/commit/88ae24f), [2185dd2](https://github.com/facebook/react-native/commit/2185dd2), and [7c01172](https://github.com/facebook/react-native/commit/7c01172) by [@yungsters](https://github.com/yungsters))
 
@@ -69,6 +67,8 @@
 - Fix an issue where margin and padding were resolved incorrectly for leaf nodes (nodes with measure function set) if margin and padding are used in percentages ([1d683fa](https://github.com/facebook/react-native/commit/1d683fa) by [@SidharthGuglani](https://github.com/SidharthGuglani))
 - Reduce overhead of setting up timers in DEV ([75a154b](https://github.com/facebook/react-native/commit/75a154b) by [@motiz88](https://github.com/motiz88))
 - Fix stack traces showing the wrong function name in some cases ([60b4ba1](https://github.com/facebook/react-native/commit/60b4ba1) by [@motiz88](https://github.com/motiz88))
+- Don't crash when pretty-format is not available ([25a21b8](https://github.com/facebook/react-native/commit/25a21b8))
+- TextInput now properly sends native the end selection location on change ([dff490d](https://github.com/facebook/react-native/commit/dff490d) by [@TheSavior](https://github.com/TheSavior))
 
 #### Android specific
 
@@ -1990,7 +1990,7 @@ The changelog is arranged by the customary added, removed, changed, and fixed pl
 
 - Don't crash when using decimal `Animated.modulo` values with `useNativeDriver: true` ([6c38972](https://github.com/facebook/react-native/commit/6c38972) by [@motiz88](https://github.com/motiz88))
 - Don't crash when receiving unknown websocket IDs ([1a790f8](https://github.com/facebook/react-native/commit/1a790f8) by [@sunweiyang](https://github.com/sunweiyang))
-- Dont crash when `NativeModules.UIManager.showPopupMenu` method calls error callback ([0c18ec5](https://github.com/facebook/react-native/commit/0c18ec5) by [@dryganets](https://github.com/dryganets))
+- Don't crash when `NativeModules.UIManager.showPopupMenu` method calls error callback ([0c18ec5](https://github.com/facebook/react-native/commit/0c18ec5) by [@dryganets](https://github.com/dryganets))
 - Maintain cursor position when **TextInput**'s `secureTextEntry` changes ([09b43e4](https://github.com/facebook/react-native/commit/09b43e4) by [@jainkuniya](https://github.com/jainkuniya))
 - Race condition fix in Dialogs module ([d5e3f08](https://github.com/facebook/react-native/commit/d5e3f08) by [@dryganets](https://github.com/dryganets))
 - Fix NPE in Android Switch during measure ([7b1915e](https://github.com/facebook/react-native/commit/7b1915e) by [@4ndroidev](https://github.com/4ndroidev))
