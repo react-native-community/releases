@@ -49,7 +49,7 @@
 #### iOS specific
 
 - New internal image attribution support, but files importing RCTImageLoader.h must be converted to ObjC++ ([fdcdca4](https://github.com/facebook/react-native/commit/fdcdca4) by [@fkgozali](https://github.com/fkgozali))
-- Added another build flag for DevLoadingView ([3ceb959](https://github.com/facebook/react-native/commit/3ceb959) by [@mmmulani](https://github.com/mmmulani))
+- Add another build flag for DevLoadingView ([3ceb959](https://github.com/facebook/react-native/commit/3ceb959) by [@mmmulani](https://github.com/mmmulani))
 
 ### Removed
 
