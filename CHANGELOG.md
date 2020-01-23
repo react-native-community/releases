@@ -38,7 +38,7 @@
 
 #### Android specific
 
-- Changing method signatures for ImageLoaderModule to accept double for requestId ([641e965](https://github.com/facebook/react-native/commit/641e965) by [@ejanzer](https://github.com/ejanzer))
+- Change method signatures for ImageLoaderModule to accept double for requestId ([641e965](https://github.com/facebook/react-native/commit/641e965) by [@ejanzer](https://github.com/ejanzer))
 - Bump Gradle to 6.0.1 ([701e66b](https://github.com/facebook/react-native/commit/701e66b) by [@dulmandakh](https://github.com/dulmandakh))
 - Fix R8 warning ([bbb4e44](https://github.com/facebook/react-native/commit/bbb4e44) by [@dulmandakh](https://github.com/dulmandakh))
 - MainActivity launchMode is singleTask ([7a42596](https://github.com/facebook/react-native/commit/7a42596) by [@dulmandakh](https://github.com/dulmandakh))
