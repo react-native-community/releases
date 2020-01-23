@@ -34,7 +34,7 @@
 - Don't crash when pretty-format is not available ([25a21b8](https://github.com/facebook/react-native/commit/25a21b8))
 - TextInput now properly sends native the end selection location on change ([dff490d](https://github.com/facebook/react-native/commit/dff490d) by [@TheSavior](https://github.com/TheSavior))
 - <TextInput> now uses React hooks internally ([dff490d](https://github.com/facebook/react-native/commit/dff490d) by [@TheSavior](https://github.com/TheSavior))
-- TouchableWithoutFeedback overhauled as a class without propTypes. ([ebf7d75](https://github.com/facebook/react-native/commit/ebf7d75) by [@yungsters](https://github.com/yungsters))
+- TouchableWithoutFeedback, TouchableOpacity, TouchableNativeFeedback, and TouchableHighlight are now classes without propTypes ([ebf7d75](https://github.com/facebook/react-native/commit/ebf7d75), [88ae24f](https://github.com/facebook/react-native/commit/88ae24f), [2185dd2](https://github.com/facebook/react-native/commit/2185dd2), and [7c01172](https://github.com/facebook/react-native/commit/7c01172) by [@yungsters](https://github.com/yungsters))
 - TouchableOpacity overhauled as a class without propTypes. ([88ae24f](https://github.com/facebook/react-native/commit/88ae24f) by [@yungsters](https://github.com/yungsters))
 - TouchableNativeFeedback overhauled as a class without propTypes. Also, replaced iOS error renderer. ([2185dd2](https://github.com/facebook/react-native/commit/2185dd2) by [@yungsters](https://github.com/yungsters))
 - TouchableHighlight overhauled as a class without propTypes. ([7c01172](https://github.com/facebook/react-native/commit/7c01172) by [@yungsters](https://github.com/yungsters))
