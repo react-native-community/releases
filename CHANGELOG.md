@@ -4,7 +4,7 @@
 
 ### Breaking
 
-- Removing <TextInput>'s `onTextInput` event ([3f7e0a2](https://github.com/facebook/react-native/commit/3f7e0a2) by [@shergin](https://github.com/shergin))
+- Remove <TextInput>'s `onTextInput` event ([3f7e0a2](https://github.com/facebook/react-native/commit/3f7e0a2) by [@shergin](https://github.com/shergin))
 - Restore behavior for `underlayColor={null}` in `TouchableHighlight`. ([37d8440](https://github.com/facebook/react-native/commit/37d8440) by [@yungsters](https://github.com/yungsters))
 
 ### Added
