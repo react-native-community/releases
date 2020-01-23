@@ -76,7 +76,7 @@
 
 #### Android specific
 
-- Using width for calculating margin top percent ([0599af2](https://github.com/facebook/react-native/commit/0599af2) by [@SidharthGuglani](https://github.com/SidharthGuglani))
+- Fix wrong top margin calculation when using percentages ([0599af2](https://github.com/facebook/react-native/commit/0599af2) by [@SidharthGuglani](https://github.com/SidharthGuglani))
 
 #### iOS specific
 
