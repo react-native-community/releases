@@ -25,7 +25,7 @@
 
 - Make RCTDevLoadingView TurboModule-compatible ([294e31b](https://github.com/facebook/react-native/commit/294e31b) by [@RSNara](https://github.com/RSNara))
 - Fix Flipper integration on and update Flipper to 0.30.0 ([898b1db](https://github.com/facebook/react-native/commit/898b1db) by [@charpeni](https://github.com/charpeni))
-- Added RCTUtilsUIOverride as a way to shortcut obtaining presentedViewController from sharedApplication to a supplied view controller for extensions. ([2968450](https://github.com/facebook/react-native/commit/2968450))
+- Add RCTUtilsUIOverride as a way to shortcut obtaining presentedViewController from sharedApplication to a supplied view controller for extensions ([2968450](https://github.com/facebook/react-native/commit/2968450))
 
 ### Changed
 
