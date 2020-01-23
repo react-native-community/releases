@@ -1,6 +1,6 @@
 # Changelog
 
-## [v0.62.0-rc.0.0]
+## [v0.62.0-rc.0.1]
 
 ### Breaking
 
@@ -73,6 +73,7 @@
 #### Android specific
 
 - Fix wrong top margin calculation when using percentages ([0599af2](https://github.com/facebook/react-native/commit/0599af2) by [@SidharthGuglani](https://github.com/SidharthGuglani))
+- Fix android modal not disappear when reload ([39e5a83](https://github.com/facebook/react-native/commit/39e5a83) by [@sunnylqm](https://github.com/sunnylqm))
 
 #### iOS specific
 
