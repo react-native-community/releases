@@ -70,7 +70,7 @@
 
 ### Fixed
 
-- Fixed an issue where margin and padding were resolved incorrectly for leaf nodes (nodes with measure function set) if margin and padding are used in percentages. ([1d683fa](https://github.com/facebook/react-native/commit/1d683fa) by [@SidharthGuglani](https://github.com/SidharthGuglani))
+- Fix an issue where margin and padding were resolved incorrectly for leaf nodes (nodes with measure function set) if margin and padding are used in percentages ([1d683fa](https://github.com/facebook/react-native/commit/1d683fa) by [@SidharthGuglani](https://github.com/SidharthGuglani))
 - Reduce overhead of setting up timers in DEV ([75a154b](https://github.com/facebook/react-native/commit/75a154b) by [@motiz88](https://github.com/motiz88))
 - Fix stack traces showing the wrong function name in some cases ([60b4ba1](https://github.com/facebook/react-native/commit/60b4ba1) by [@motiz88](https://github.com/motiz88))
 
