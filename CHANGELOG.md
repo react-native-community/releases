@@ -17,7 +17,7 @@
 
 #### Android specific
 
-- Give ReactContextBaseJavaModule a 0 arg ctor ([e69be0a](https://github.com/facebook/react-native/commit/e69be0a) by [@RSNara](https://github.com/RSNara))
+- Give ReactContextBaseJavaModule a 0 argument constructor ([e69be0a](https://github.com/facebook/react-native/commit/e69be0a) by [@RSNara](https://github.com/RSNara))
 - Bump gradle-download-task to 4.0.2 ([088be26](https://github.com/facebook/react-native/commit/088be26) by [@dulmandakh](https://github.com/dulmandakh))
 - Implement TurboModule eager initialization support ([b7f49a8](https://github.com/facebook/react-native/commit/b7f49a8) by [@RSNara](https://github.com/RSNara))
 
