@@ -14,7 +14,7 @@
 - Add missing accessibility props on Touchables ([8c0c860](https://github.com/facebook/react-native/commit/8c0c860) by [@xuelgong](https://github.com/xuelgong))
 - Add getNativeScrollRef method to FlatList component ([bde1d63](https://github.com/facebook/react-native/commit/bde1d63))
 - Clean up unused functions on ReactContext ([3963c7a](https://github.com/facebook/react-native/commit/3963c7a) by [@ejanzer](https://github.com/ejanzer))
-- Added LogBox ([c194ed2](https://github.com/facebook/react-native/commit/c194ed2) by [@rickhanlonii](https://github.com/rickhanlonii))
+- Add LogBox ([c194ed2](https://github.com/facebook/react-native/commit/c194ed2) by [@rickhanlonii](https://github.com/rickhanlonii))
 
 #### Android specific
 
