@@ -82,7 +82,7 @@
 
 - Remove \_\_unused annotation from ConcreteSystraceSection constructor arguments ([8ac9b32](https://github.com/facebook/react-native/commit/8ac9b32) by [@RSNara](https://github.com/RSNara))
 - Slider is now disabled properly on iOS if the disabled prop is set ([fa9ff07](https://github.com/facebook/react-native/commit/fa9ff07))
-- Reconnect to debugger websocket after metro is restarted. ([13992f9](https://github.com/facebook/react-native/commit/13992f9) by [@rickhanlonii](https://github.com/rickhanlonii))
+- Reconnect to debugger websocket after metro is restarted ([13992f9](https://github.com/facebook/react-native/commit/13992f9) by [@rickhanlonii](https://github.com/rickhanlonii))
 - Fix spinner visibility on beginRefreshingProgrammatically ([e341489](https://github.com/facebook/react-native/commit/e341489) by [@nnabinh](https://github.com/nnabinh))
 - `Dimensions` module now updates on initial split screen ([e7c289b](https://github.com/facebook/react-native/commit/e7c289b) by [@sahrens](https://github.com/sahrens))
 
