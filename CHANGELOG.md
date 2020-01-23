@@ -12,7 +12,7 @@
 - Remove requestAnimationFrame when focusing input on mount ([5798cf2](https://github.com/facebook/react-native/commit/5798cf2) by [@janicduplessis](https://github.com/janicduplessis))
 - Add missing `console` polyfills in release builds ([b7ab922](https://github.com/facebook/react-native/commit/b7ab922) by [@yungsters](https://github.com/yungsters))
 - Add missing accessibility props on Touchables ([8c0c860](https://github.com/facebook/react-native/commit/8c0c860) by [@xuelgong](https://github.com/xuelgong))
-- Add getNativeScrollRef method to FlatList component ([bde1d63](https://github.com/facebook/react-native/commit/bde1d63))
+- Add `getNativeScrollRef` method to <FlatList> ([bde1d63](https://github.com/facebook/react-native/commit/bde1d63))
 - Add LogBox ([c194ed2](https://github.com/facebook/react-native/commit/c194ed2) by [@rickhanlonii](https://github.com/rickhanlonii))
 
 #### Android specific
