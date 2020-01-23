@@ -29,7 +29,7 @@
 
 ### Changed
 
-- TextInput now uses `forwardRef` allowing it to be used directly by new APIs requiring a host component. ([bbc5c35](https://github.com/facebook/react-native/commit/bbc5c35) by [@TheSavior](https://github.com/TheSavior))
+- TextInput now uses `forwardRef`, allowing it to be used directly by new APIs requiring a host component ([bbc5c35](https://github.com/facebook/react-native/commit/bbc5c35) by [@TheSavior](https://github.com/TheSavior))
 - React sync for revisions 0b61e2698...6cff70a74 (Includes React 16.11.0) ([1edce56](https://github.com/facebook/react-native/commit/1edce56) by [@gaearon](https://github.com/gaearon))
 - Don't crash when pretty-format is not available ([25a21b8](https://github.com/facebook/react-native/commit/25a21b8))
 - Partial React Sync from 6cff70a74...bb1853f73 ([222a089](https://github.com/facebook/react-native/commit/222a089) by [@TheSavior](https://github.com/TheSavior))
