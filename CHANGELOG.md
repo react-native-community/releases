@@ -53,7 +53,7 @@
 
 ### Removed
 
-- TouchableWithoutFeedback no longer exports Props. Use React.ElementConfig, instead. ([7bcae81](https://github.com/facebook/react-native/commit/7bcae81) by [@yungsters](https://github.com/yungsters))
+- TouchableWithoutFeedback no longer exports Props; use React.ElementConfig instead ([7bcae81](https://github.com/facebook/react-native/commit/7bcae81) by [@yungsters](https://github.com/yungsters))
 - Removing experimental IncrementalPresenter component ([0ef0d31](https://github.com/facebook/react-native/commit/0ef0d31) by [@TheSavior](https://github.com/TheSavior))
 
 #### Android specific
