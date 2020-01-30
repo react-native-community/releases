@@ -21,6 +21,12 @@ const argv = require("yargs")
       describe:
         "the new version branch or commit (most often, this is the release candidate)",
       demandOption: true
+    },
+    verbose: {
+      alias: "v",
+      describe:
+        "verbose listing, includes internal changes as well as public-facing changes",
+      demandOption: false
     }
   })
   .version(false)
@@ -196,9 +202,11 @@ function getChangelogDesc(commits) {
     const change = item.commit.message;
     const message = getChangeMessage(item);
 
-    if(isFabric(change.split('\n')[0])) return;
-    if(isTurboModules(change.split('\n')[0])) return;
-    if(isInternal(change)) return;
+    if (!argv.verbose) {
+      if(isFabric(change.split('\n')[0])) return;
+      if(isTurboModules(change.split('\n')[0])) return;
+      if(isInternal(change)) return;
+   }
 
     if (isBreaking(change)) {
       if (isAndroidCommit(change)) {
