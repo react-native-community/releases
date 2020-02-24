@@ -4,37 +4,6 @@
 
 const levenshtein = require("fast-levenshtein");
 
-const argv = require("yargs")
-  .usage(
-    "$0 [args]",
-    "Generate a React Native changelog from the commits and PRs"
-  )
-  .options({
-    base: {
-      alias: "b",
-      describe:
-        "the base version branch or commit to compare against (most often, this is the current stable)",
-      demandOption: true
-    },
-    compare: {
-      alias: "c",
-      describe:
-        "the new version branch or commit (most often, this is the release candidate)",
-      demandOption: true
-    },
-    verbose: {
-      alias: "v",
-      describe:
-        "verbose listing, includes internal changes as well as public-facing changes",
-      demandOption: false
-    }
-  })
-  .version(false)
-  .help("help").argv;
-
-const base = argv.base;
-const compare = argv.compare;
-
 function fetchJSON(host, path) {
   return new Promise((resolve, reject) => {
     let data = "";
@@ -163,6 +132,10 @@ function isInternal(change) {
   return /\[internal\]/i.test(change);
 }
 
+/**
+ * 
+ * @param {{ sha: string, commit: { message: string }, author?: { login: string } }} item 
+ */
 function getChangeMessage(item) {
   const commitMessage = item.commit.message.split("\n");
   let entry =
@@ -186,7 +159,7 @@ function getChangeMessage(item) {
   return `- ${entry} ${authorSection}`;
 }
 
-function getChangelogDesc(commits) {
+function getChangelogDesc(commits, verbose) {
   const acc = {
     breaking: { android: [], ios: [], general: [] },
     added: { android: [], ios: [], general: [] },
@@ -202,7 +175,7 @@ function getChangelogDesc(commits) {
     const change = item.commit.message;
     const message = getChangeMessage(item);
 
-    if (!argv.verbose) {
+    if (!verbose) {
       if(isFabric(change.split('\n')[0])) return;
       if(isTurboModules(change.split('\n')[0])) return;
       if(isInternal(change)) return;
@@ -278,10 +251,10 @@ function getChangelogDesc(commits) {
   return acc;
 }
 
-function buildMarkDown(data) {
+function buildMarkDown(currentVersion, data) {
   return `
 
-## [${argv.compare}.0]
+## [${currentVersion}.0]
 
 ### Breaking
 
@@ -381,14 +354,55 @@ ${data.unknown.ios.join("\n")}
 `;
 }
 
-fetchJSON(
-  "api.github.com",
-  "/repos/facebook/react-native/compare/" + base + "..." + compare
-)
-  .then(data => data.commits)
-  .then(filterCICommits)
-  .then(filterRevertCommits)
-  .then(getChangelogDesc)
-  .then(buildMarkDown)
-  .then(data => console.log(data))
-  .catch(e => console.error(e));
+function generateChangelog(base, compare, verbose = false) {
+  return fetchJSON(
+    "api.github.com",
+    "/repos/facebook/react-native/compare/" + base + "..." + compare
+  )
+    .then(data => data.commits)
+    .then(filterCICommits)
+    .then(filterRevertCommits)
+    .then(commits => getChangelogDesc(commits, verbose))
+    .then(changes => buildMarkDown(compare, changes));
+}
+
+module.exports = { generateChangelog, getChangeMessage };
+
+if (!module.parent) {
+  const argv = require("yargs")
+    .usage(
+      "$0 [args]",
+      "Generate a React Native changelog from the commits and PRs"
+    )
+    .options({
+      base: {
+        alias: "b",
+        describe:
+          "the base version branch or commit to compare against (most often, this is the current stable)",
+        demandOption: true
+      },
+      compare: {
+        alias: "c",
+        describe:
+          "the new version branch or commit (most often, this is the release candidate)",
+        demandOption: true
+      },
+      verbose: {
+        alias: "v",
+        describe:
+          "verbose listing, includes internal changes as well as public-facing changes",
+        demandOption: false,
+        default: false,
+      }
+    })
+    .version(false)
+    .help("help").argv;
+
+  const base = argv.base;
+  const compare = argv.compare;
+  const verbose = argv.verbose;
+
+  generateChangelog(base, compare, verbose)
+    .then(data => console.log(data))
+    .catch(e => console.error(e));
+}

@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generateChangelog works 1`] = `
+"
+
+## [v0.60.5.0]
+
+### Breaking
+
+
+
+#### Android specific
+
+
+
+#### iOS specific
+
+
+
+### Added
+
+- Added a default Prettier config for new projects ([f4d5e8c](https://github.com/facebook/react-native/commit/f4d5e8c) by [@jpdriver](https://github.com/jpdriver))
+
+#### Android specific
+
+- Add showSoftInputOnFocus to TextInput ([b476ca0](https://github.com/facebook/react-native/commit/b476ca0))
+
+#### iOS specific
+
+
+
+### Changed
+
+
+
+#### Android specific
+
+
+
+#### iOS specific
+
+
+
+### Deprecated
+
+
+
+#### Android specific
+
+
+
+#### iOS specific
+
+
+
+### Removed
+
+
+
+#### Android specific
+
+
+
+#### iOS specific
+
+
+
+### Fixed
+
+
+
+#### Android specific
+
+- Correctly set the border radius on android ([feb931f](https://github.com/facebook/react-native/commit/feb931f) by [@cabelitos](https://github.com/cabelitos))
+
+#### iOS specific
+
+- Don't call sharedApplication in App Extension ([683908d](https://github.com/facebook/react-native/commit/683908d) by [@zhongwuzw](https://github.com/zhongwuzw))
+
+### Security
+
+
+
+#### Android specific
+
+
+
+#### iOS specific
+
+
+
+### Unknown
+
+- [LOCAL] ensure right version of Metro bundler is used ([1bb197a](https://github.com/facebook/react-native/commit/1bb197a) by [@kelset](https://github.com/kelset))
+
+#### Android Unknown
+
+- Fix \`ClassNotFound\` exception in Android during Release builds ([ffdf3f2](https://github.com/facebook/react-native/commit/ffdf3f2) by [@thecodrr](https://github.com/thecodrr))
+- Fix addition of comma at the end of accessibility labels on Android. ([812abfd](https://github.com/facebook/react-native/commit/812abfd) by [@marcmulcahy](https://github.com/marcmulcahy))
+
+#### iOS Unknown
+
+- Delete fishhook ([95c747e](https://github.com/facebook/react-native/commit/95c747e) by [@mmmulani](https://github.com/mmmulani))
+"
+`;
