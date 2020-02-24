@@ -95,7 +95,6 @@ exports[`generateChangelog works 1`] = `
 
 #### Android Unknown
 
-- Fix \`ClassNotFound\` exception in Android during Release builds ([ffdf3f2](https://github.com/facebook/react-native/commit/ffdf3f2) by [@thecodrr](https://github.com/thecodrr))
 - Fix addition of comma at the end of accessibility labels on Android. ([812abfd](https://github.com/facebook/react-native/commit/812abfd) by [@marcmulcahy](https://github.com/marcmulcahy))
 
 #### iOS Unknown

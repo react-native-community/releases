@@ -77,6 +77,8 @@ describe(generateChangelog, () => {
 
     const result = generateChangelog({
       gitDir: RN_REPO,
+      existingChangelogData:
+        "- Bla bla bla ([ffdf3f2](https://github.com/facebook/react-native/commit/ffdf3f2)",
       base: "v0.60.4",
       compare: "v0.60.5"
     });

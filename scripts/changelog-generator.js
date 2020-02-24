@@ -94,6 +94,15 @@ function filterRevertCommits(commits) {
 }
 
 /**
+ * @param {string} existingChangelogData
+ * @param {Commit[]} commits 
+ */
+function filterPreviouslyPickedCommits(existingChangelogData, commits) {
+  // TODO: Perhaps it's more performant to first parse all commit SHAs out of the existing changelog data.
+  return commits.filter(({ sha }) => !existingChangelogData.includes(sha.slice(0, 7)));
+}
+
+/**
  * @param {string} gitDir
  * @param {Commit} item
  * @returns {Promise<Commit>}
@@ -400,6 +409,7 @@ ${data.unknown.ios.join("\n")}
  * @param {string} options.base
  * @param {string} options.compare
  * @param {string} options.gitDir
+ * @param {string} options.existingChangelogData
  * @param {boolean=} options.verbose
  */
 function generateChangelog(options) {
@@ -411,6 +421,7 @@ function generateChangelog(options) {
     .then(filterCICommits)
     .then(filterRevertCommits)
     .then(commits => getOriginalCommits(options.gitDir, commits))
+    .then(commits => filterPreviouslyPickedCommits(options.existingChangelogData, commits))
     .then(commits => getChangelogDesc(commits, options.verbose))
     .then(changes => buildMarkDown(options.compare, changes));
 }
@@ -444,6 +455,12 @@ if (!module["parent"]) {
         describe: "the path to an up-to-date clone of the react-native repo",
         demandOption: true
       },
+      changelog: {
+        alias: "f",
+        string: true,
+        describe: "the path to the existing CHANGELOG.md file",
+        demandOption: true,
+      },
       verbose: {
         alias: "v",
         describe:
@@ -456,8 +473,9 @@ if (!module["parent"]) {
     .help("help").argv;
 
   const gitDir = path.join(argv.repo, ".git");
+  const existingChangelogData = fs.readFileSync(argv.changelog, "utf-8");
 
-  generateChangelog({ ...argv, gitDir })
+  generateChangelog({ ...argv, gitDir, existingChangelogData })
     .then(data => console.log(data))
     .catch(e => console.error(e));
 }
