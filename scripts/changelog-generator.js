@@ -1,8 +1,20 @@
 #!/usr/bin/env node
+// @ts-check
 
 "use strict";
 
+/**
+ * @typedef {object} Commit
+ * @property {string} sha
+ * @property {{ message: string }} commit
+ * @property {{ login: string }=} author
+ */
+
 const levenshtein = require("fast-levenshtein");
+const util = require('util');
+const execFile = util.promisify(require('child_process').execFile);
+const path = require("path");
+const fs = require("fs");
 
 function fetchJSON(host, path) {
   return new Promise((resolve, reject) => {
@@ -49,6 +61,7 @@ function filterCICommits(commits) {
     );
   });
 }
+
 function filterRevertCommits(commits) {
   let revertCommits = [];
   const pattern = /\b(revert d\d{8}: |revert\b|back out ".*")/i
@@ -78,6 +91,35 @@ function filterRevertCommits(commits) {
         "\n\nYou will need to manually remove this from below."
     );
   return filteredCommits;
+}
+
+/**
+ * @param {string} gitDir
+ * @param {Commit} item
+ * @returns {Promise<Commit>}
+ */
+function getOriginalCommit(gitDir, item) {
+  const match = item.commit.message.match(/Differential Revision: (D\d+)/m);
+  if (match) {
+    return execFile("git", [`--git-dir=${gitDir}`, "log", "master", "--pretty=format:%H", `--grep=${match[1]}`])
+      .then(out => {
+        if (out.stderr) {
+          throw new Error(out.stderr);
+        }
+        return { ...item, sha: out.stdout };
+      })
+  } else {
+    console.warn(`[!] Unable to find a differential revision for commit ${item.sha}. If this is a commit made on the release branch, be sure to update the CHANGELOG entry to point to the commit on the master branch after back-porting.\n`);
+    return Promise.resolve(item);
+  }
+}
+
+/**
+ * @param {string} gitDir
+ * @param {Commit[]} commits 
+ */
+function getOriginalCommits(gitDir, commits) {
+  return Promise.all(commits.map(c => getOriginalCommit(gitDir, c)));
 }
 
 function isAndroidCommit(change) {
@@ -133,8 +175,7 @@ function isInternal(change) {
 }
 
 /**
- * 
- * @param {{ sha: string, commit: { message: string }, author?: { login: string } }} item 
+ * @param {Commit} item 
  */
 function getChangeMessage(item) {
   const commitMessage = item.commit.message.split("\n");
@@ -354,21 +395,29 @@ ${data.unknown.ios.join("\n")}
 `;
 }
 
-function generateChangelog(base, compare, verbose = false) {
+/**
+ * @param {Object} options
+ * @param {string} options.base
+ * @param {string} options.compare
+ * @param {string} options.gitDir
+ * @param {boolean=} options.verbose
+ */
+function generateChangelog(options) {
   return fetchJSON(
     "api.github.com",
-    "/repos/facebook/react-native/compare/" + base + "..." + compare
+    "/repos/facebook/react-native/compare/" + options.base + "..." + options.compare
   )
     .then(data => data.commits)
     .then(filterCICommits)
     .then(filterRevertCommits)
-    .then(commits => getChangelogDesc(commits, verbose))
-    .then(changes => buildMarkDown(compare, changes));
+    .then(commits => getOriginalCommits(options.gitDir, commits))
+    .then(commits => getChangelogDesc(commits, options.verbose))
+    .then(changes => buildMarkDown(options.compare, changes));
 }
 
-module.exports = { generateChangelog, getChangeMessage };
+module.exports = { generateChangelog, getChangeMessage, getOriginalCommit };
 
-if (!module.parent) {
+if (!module["parent"]) {
   const argv = require("yargs")
     .usage(
       "$0 [args]",
@@ -377,14 +426,22 @@ if (!module.parent) {
     .options({
       base: {
         alias: "b",
+        string: true,
         describe:
           "the base version branch or commit to compare against (most often, this is the current stable)",
         demandOption: true
       },
       compare: {
         alias: "c",
+        string: true,
         describe:
           "the new version branch or commit (most often, this is the release candidate)",
+        demandOption: true
+      },
+      repo: {
+        alias: "r",
+        string: true,
+        describe: "the path to an up-to-date clone of the react-native repo",
         demandOption: true
       },
       verbose: {
@@ -398,11 +455,9 @@ if (!module.parent) {
     .version(false)
     .help("help").argv;
 
-  const base = argv.base;
-  const compare = argv.compare;
-  const verbose = argv.verbose;
+  const gitDir = path.join(argv.repo, ".git");
 
-  generateChangelog(base, compare, verbose)
+  generateChangelog({ ...argv, gitDir })
     .then(data => console.log(data))
     .catch(e => console.error(e));
 }

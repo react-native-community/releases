@@ -19,11 +19,11 @@ exports[`generateChangelog works 1`] = `
 
 ### Added
 
-- Added a default Prettier config for new projects ([f4d5e8c](https://github.com/facebook/react-native/commit/f4d5e8c) by [@jpdriver](https://github.com/jpdriver))
+- Added a default Prettier config for new projects ([7254bab](https://github.com/facebook/react-native/commit/7254bab) by [@jpdriver](https://github.com/jpdriver))
 
 #### Android specific
 
-- Add showSoftInputOnFocus to TextInput ([b476ca0](https://github.com/facebook/react-native/commit/b476ca0))
+- Add showSoftInputOnFocus to TextInput ([d88e470](https://github.com/facebook/react-native/commit/d88e470))
 
 #### iOS specific
 
@@ -71,11 +71,11 @@ exports[`generateChangelog works 1`] = `
 
 #### Android specific
 
-- Correctly set the border radius on android ([feb931f](https://github.com/facebook/react-native/commit/feb931f) by [@cabelitos](https://github.com/cabelitos))
+- Correctly set the border radius on android ([b432b8f](https://github.com/facebook/react-native/commit/b432b8f) by [@cabelitos](https://github.com/cabelitos))
 
 #### iOS specific
 
-- Don't call sharedApplication in App Extension ([683908d](https://github.com/facebook/react-native/commit/683908d) by [@zhongwuzw](https://github.com/zhongwuzw))
+- Don't call sharedApplication in App Extension ([c5ea18f](https://github.com/facebook/react-native/commit/c5ea18f) by [@zhongwuzw](https://github.com/zhongwuzw))
 
 ### Security
 
@@ -100,6 +100,6 @@ exports[`generateChangelog works 1`] = `
 
 #### iOS Unknown
 
-- Delete fishhook ([95c747e](https://github.com/facebook/react-native/commit/95c747e) by [@mmmulani](https://github.com/mmmulani))
+- Delete fishhook ([46bdb41](https://github.com/facebook/react-native/commit/46bdb41) by [@mmmulani](https://github.com/mmmulani))
 "
 `;
