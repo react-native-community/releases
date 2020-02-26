@@ -236,7 +236,7 @@ You can participate to the conversation for the next patch release in the dedica
 
 This is a patch release that includes the Hermes JavaScript Engine announced at Chain React Conf 2019.
 
-Check out the documentation to opt-in and give [Hermes a try]https://reactnative.dev/docs/hermes).
+Check out the documentation to opt-in and give [Hermes a try](https://reactnative.dev/docs/hermes).
 
 You can participate to the conversation for the next patch release in the dedicated [issue](https://github.com/react-native-community/react-native-releases/issues/130).
 
