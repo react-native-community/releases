@@ -11,12 +11,21 @@
  */
 
 const levenshtein = require("fast-levenshtein");
-const util = require('util');
-const execFile = util.promisify(require('child_process').execFile);
+const util = require("util");
+const execFile = util.promisify(require("child_process").execFile);
 const path = require("path");
 const fs = require("fs");
 
-function fetchJSON(host, path) {
+//#region NETWORK
+//*****************************************************************************
+
+/**
+ * @param {string} token
+ * @param {string} path
+ */
+function fetchJSON(token, path) {
+  const host = "api.github.com";
+  console.log(`[GET] https://${host}${path}`);
   return new Promise((resolve, reject) => {
     let data = "";
 
@@ -25,18 +34,24 @@ function fetchJSON(host, path) {
         host,
         path,
         headers: {
+          Authorization: `token ${token}`,
           "User-Agent": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)"
         }
       })
       .on("response", response => {
+        if (response.statusCode !== 200) {
+          return reject(
+            new Error(`[!] Got HTTP status: ${response.statusCode}`)
+          );
+        }
+
         response.on("data", chunk => {
           data += chunk;
         });
 
         response.on("end", () => {
           try {
-            const json = JSON.parse(data);
-            resolve(json);
+            resolve({ json: JSON.parse(data), headers: response.headers });
           } catch (e) {
             reject(e);
           }
@@ -49,6 +64,54 @@ function fetchJSON(host, path) {
   });
 }
 
+/**
+ * @param {string} token
+ * @param {string} base
+ * @param {string} compare
+ * @returns {Promise<Commit[]>}
+ */
+function fetchCommits(token, base, compare) {
+  const commits = [];
+  let page = 1;
+  return new Promise((resolve, reject) => {
+    const fetchPage = () => {
+      fetchJSON(
+        token,
+        `/repos/facebook/react-native/commits?sha=${compare}&page=${page++}`
+      )
+        .then(({ json, headers }) => {
+          /**
+           * @type {Commit[]}
+           */
+          const pageCommits = json;
+          for (const commit of pageCommits) {
+            commits.push(commit);
+            if (commit.sha === base) {
+              return resolve(commits);
+            }
+          }
+          if (!headers.link.includes("next")) {
+            throw new Error(
+              "Did not find commit after paging through all commits"
+            );
+          }
+          setImmediate(fetchPage);
+        })
+        .catch(reject);
+    };
+    fetchPage();
+  });
+}
+
+//*****************************************************************************
+//#endregion
+
+//#region FILTER COMMITS
+//*****************************************************************************
+
+/**
+ * @param {Commit[]} commits
+ */
 function filterCICommits(commits) {
   return commits.filter(item => {
     const text = item.commit.message.toLowerCase();
@@ -62,14 +125,18 @@ function filterCICommits(commits) {
   });
 }
 
+/**
+ * @param {Commit[]} commits
+ */
 function filterRevertCommits(commits) {
   let revertCommits = [];
-  const pattern = /\b(revert d\d{8}: |revert\b|back out ".*")/i
+  const pattern = /\b(revert d\d{8}: |revert\b|back out ".*")/i;
   const filteredCommits = commits
     .filter(item => {
       const text = item.commit.message.split("\n")[0].toLowerCase();
-      const shouldRemove = pattern.test(text) && revertCommits.push(text.replace(pattern, ""));
-      if(shouldRemove) console.warn("Removing revert commit: \n" + text);
+      const shouldRemove =
+        pattern.test(text) && revertCommits.push(text.replace(pattern, ""));
+      if (shouldRemove) console.warn("Removing revert commit: \n" + text);
       return !shouldRemove;
     })
     .filter(item => {
@@ -95,14 +162,44 @@ function filterRevertCommits(commits) {
 
 /**
  * @param {string} existingChangelogData
- * @param {Commit[]} commits 
+ * @param {Commit[]} commits
  */
 function filterPreviouslyPickedCommits(existingChangelogData, commits) {
   // TODO: Perhaps it's more performant to first parse all commit SHAs out of the existing changelog data.
-  return commits.filter(({ sha }) => !existingChangelogData.includes(sha.slice(0, 7)));
+  return commits.filter(({ sha }) => {
+    if (existingChangelogData.includes(sha.slice(0, 7))) {
+      console.warn(`Ignoring previously picked commit: ${sha}`);
+      return false;
+    }
+    return true;
+  });
+}
+
+//*****************************************************************************
+//#endregion
+
+//#region GIT INTERACTIONS
+//*****************************************************************************
+
+/**
+ * @param {string} gitDir
+ * @param {...string} args
+ */
+function git(gitDir, ...args) {
+  return execFile("git", [`--git-dir=${gitDir}`, ...args]).then(out => {
+    if (out.stderr) {
+      throw new Error(out.stderr);
+    }
+    return out.stdout;
+  });
 }
 
 /**
+ * Finds a commit on the `master` branch, based on the ‘differential revision’
+ * that FB's infrastructure adds to each commit that lands in the `master`
+ * branch. This ensures that we always use the canonical commit ref as it
+ * exists in the `master` branch, rather than a new cherry-picked commit ref.
+ *
  * @param {string} gitDir
  * @param {Commit} item
  * @returns {Promise<Commit>}
@@ -110,36 +207,95 @@ function filterPreviouslyPickedCommits(existingChangelogData, commits) {
 function getOriginalCommit(gitDir, item) {
   const match = item.commit.message.match(/Differential Revision: (D\d+)/m);
   if (match) {
-    return execFile("git", [`--git-dir=${gitDir}`, "log", "master", "--pretty=format:%H", `--grep=${match[1]}`])
-      .then(out => {
-        if (out.stderr) {
-          throw new Error(out.stderr);
-        }
-        return { ...item, sha: out.stdout };
-      })
+    return git(
+      gitDir,
+      "log",
+      "master",
+      "--pretty=format:%H",
+      `--grep=${match[1]}`
+    ).then(sha => ({ ...item, sha }));
   } else {
-    console.warn(`[!] Unable to find a differential revision for commit ${item.sha}. If this is a commit made on the release branch, be sure to update the CHANGELOG entry to point to the commit on the master branch after back-porting.\n`);
+    console.warn(
+      `[!] Unable to find a differential revision for commit ${
+        item.sha
+      }. If this is a commit made on the release branch, be sure to update the CHANGELOG entry to point to the commit on the master branch after back-porting.\n`
+    );
     return Promise.resolve(item);
   }
 }
 
 /**
+ * Maps all commits to their canonical commit refs.
+ *
+ * @see {getOriginalCommit}
+ *
  * @param {string} gitDir
- * @param {Commit[]} commits 
+ * @param {Commit[]} commits
  */
 function getOriginalCommits(gitDir, commits) {
   return Promise.all(commits.map(c => getOriginalCommit(gitDir, c)));
 }
 
+/**
+ * Resolves the ref to the first commit after the tree was forked from the
+ * `master` branch.
+ *
+ * @param {string} gitDir
+ * @param {string} ref
+ */
+function getFirstCommitAfterForkingFromMaster(gitDir, ref) {
+  return git(gitDir, "rev-list", `^${ref}`, "--first-parent", "master").then(
+    out => {
+      const components = out.trimRight().split("\n");
+      return components[components.length - 1];
+    }
+  );
+}
+
+/**
+ * Resolves both `base` and `compare` to the first commit after forking from
+ * the `master` branch. In case the result is the same for both, then the delta
+ * between the two is in the PATCH version range and we should *not* use the
+ * offset, as the changes we need to consider are all in the `compare` tree.
+ *
+ * @param {string} gitDir
+ * @param {string} base
+ * @param {string} compare
+ */
+function getOffsetBaseCommit(gitDir, base, compare) {
+  return Promise.all([
+    getFirstCommitAfterForkingFromMaster(gitDir, base),
+    getFirstCommitAfterForkingFromMaster(gitDir, compare)
+  ]).then(([offsetBase, offsetCompare]) => {
+    if (offsetBase === offsetCompare) {
+      return git(gitDir, "rev-list", "-n", "1", base).then(sha =>
+        sha.trimRight()
+      );
+    } else {
+      return offsetBase;
+    }
+  });
+}
+
+//*****************************************************************************
+//#endregion
+
+//#region UTILITIES
+//*****************************************************************************
+
 function isAndroidCommit(change) {
-  return !/(\[ios\]|\[general\])/i.test(change) && (/\b(android|java)\b/i.test(change) || /android/i.test(change));
+  return (
+    !/(\[ios\]|\[general\])/i.test(change) &&
+    (/\b(android|java)\b/i.test(change) || /android/i.test(change))
+  );
 }
 
 function isIOSCommit(change) {
-  return !/(\[android\]|\[general\])/i.test(change) && (
-    /\b(ios|xcode|swift|objective-c|iphone|ipad)\b/i.test(change) ||
-    /ios\b/i.test(change) ||
-    /\brct/i.test(change)
+  return (
+    !/(\[android\]|\[general\])/i.test(change) &&
+    (/\b(ios|xcode|swift|objective-c|iphone|ipad)\b/i.test(change) ||
+      /ios\b/i.test(change) ||
+      /\brct/i.test(change))
   );
 }
 
@@ -183,13 +339,21 @@ function isInternal(change) {
   return /\[internal\]/i.test(change);
 }
 
+//*****************************************************************************
+//#endregion
+
+//#region FORMATTING
+//*****************************************************************************
+
 /**
- * @param {Commit} item 
+ * @param {Commit} item
  */
 function getChangeMessage(item) {
   const commitMessage = item.commit.message.split("\n");
   let entry =
-    commitMessage.reverse().find(a => /\[ios\]|\[android\]|\[general\]/i.test(a)) ||
+    commitMessage
+      .reverse()
+      .find(a => /\[ios\]|\[android\]|\[general\]/i.test(a)) ||
     commitMessage.reverse()[0];
   entry = entry.replace(/^((\[\w*\] ?)+ - )/i, ""); //Remove the [General] [whatever]
   entry = entry.replace(/ \(\#\d*\)$/i, ""); //Remove the PR number if it's on the end
@@ -209,6 +373,10 @@ function getChangeMessage(item) {
   return `- ${entry} ${authorSection}`;
 }
 
+/**
+ * @param {Commit[]} commits
+ * @param {boolean} verbose
+ */
 function getChangelogDesc(commits, verbose) {
   const acc = {
     breaking: { android: [], ios: [], general: [] },
@@ -226,10 +394,10 @@ function getChangelogDesc(commits, verbose) {
     const message = getChangeMessage(item);
 
     if (!verbose) {
-      if(isFabric(change.split('\n')[0])) return;
-      if(isTurboModules(change.split('\n')[0])) return;
-      if(isInternal(change)) return;
-   }
+      if (isFabric(change.split("\n")[0])) return;
+      if (isTurboModules(change.split("\n")[0])) return;
+      if (isInternal(change)) return;
+    }
 
     if (isBreaking(change)) {
       if (isAndroidCommit(change)) {
@@ -404,8 +572,15 @@ ${data.unknown.ios.join("\n")}
 `;
 }
 
+//*****************************************************************************
+//#endregion
+
+//#region MAIN
+//*****************************************************************************
+
 /**
  * @param {Object} options
+ * @param {string} options.token
  * @param {string} options.base
  * @param {string} options.compare
  * @param {string} options.gitDir
@@ -413,20 +588,25 @@ ${data.unknown.ios.join("\n")}
  * @param {boolean=} options.verbose
  */
 function generateChangelog(options) {
-  return fetchJSON(
-    "api.github.com",
-    "/repos/facebook/react-native/compare/" + options.base + "..." + options.compare
-  )
-    .then(data => data.commits)
+  return fetchCommits(options.token, options.base, options.compare)
     .then(filterCICommits)
     .then(filterRevertCommits)
     .then(commits => getOriginalCommits(options.gitDir, commits))
-    .then(commits => filterPreviouslyPickedCommits(options.existingChangelogData, commits))
+    .then(commits =>
+      filterPreviouslyPickedCommits(options.existingChangelogData, commits)
+    )
     .then(commits => getChangelogDesc(commits, options.verbose))
     .then(changes => buildMarkDown(options.compare, changes));
 }
 
-module.exports = { generateChangelog, getChangeMessage, getOriginalCommit };
+module.exports = {
+  fetchCommits,
+  generateChangelog,
+  getChangeMessage,
+  getOffsetBaseCommit,
+  getOriginalCommit,
+  getFirstCommitAfterForkingFromMaster
+};
 
 if (!module["parent"]) {
   const argv = require("yargs")
@@ -439,14 +619,14 @@ if (!module["parent"]) {
         alias: "b",
         string: true,
         describe:
-          "the base version branch or commit to compare against (most often, this is the current stable)",
+          "the base branch/tag/commit to compare against (most likely the previous stable version)",
         demandOption: true
       },
       compare: {
         alias: "c",
         string: true,
         describe:
-          "the new version branch or commit (most often, this is the release candidate)",
+          "the new version branch/tag/commit (most likely the latest release candidate)",
         demandOption: true
       },
       repo: {
@@ -459,23 +639,45 @@ if (!module["parent"]) {
         alias: "f",
         string: true,
         describe: "the path to the existing CHANGELOG.md file",
-        demandOption: true,
+        demandOption: true
+      },
+      token: {
+        alias: "t",
+        string: true,
+        describe: "A GitHub token",
+        demandOption: true
       },
       verbose: {
         alias: "v",
         describe:
           "verbose listing, includes internal changes as well as public-facing changes",
         demandOption: false,
-        default: false,
+        default: false
       }
     })
     .version(false)
     .help("help").argv;
 
   const gitDir = path.join(argv.repo, ".git");
-  const existingChangelogData = fs.readFileSync(argv.changelog, "utf-8");
-
-  generateChangelog({ ...argv, gitDir, existingChangelogData })
-    .then(data => console.log(data))
-    .catch(e => console.error(e));
+  git(gitDir, "rev-parse")
+    .catch(() => {
+      throw new Error(
+        "Specified path to react-native repo is not a valid git repo."
+      );
+    })
+    .then(() => {
+      const existingChangelogData = fs.readFileSync(argv.changelog, "utf-8");
+      return getOffsetBaseCommit(gitDir, argv.base, argv.compare)
+        .then(base =>
+          generateChangelog({ ...argv, base, gitDir, existingChangelogData })
+        )
+        .then(data => console.log(data));
+    })
+    .catch(e => {
+      console.error(e);
+      process.exit(1);
+    });
 }
+
+//*****************************************************************************
+//#endregion

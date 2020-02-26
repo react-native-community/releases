@@ -3,8 +3,8 @@
   "description": "Changelog for the React Native project",
   "license": "MIT",
   "scripts": {
-    "format": "prettier *.md scripts/**/*.js --write",
-    "format:check": "prettier *.md scripts/**/*.js --list-different",
+    "format": "prettier *.md scripts{,/**}/*.js --write",
+    "format:check": "prettier *.md scripts{,/**}/*.js --list-different",
     "generate": "./scripts/changelog-generator.js"
   },
   "husky": {

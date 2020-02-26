@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`generateChangelog works 1`] = `
+exports[`functions that hit GitHub's commits API generateChangelog fetches commits, filters them, and generates markdown 1`] = `
 "
 
-## [v0.60.5.0]
+## [35300147ca66677f42e8544264be72ac0e9d1b45.0]
 
 ### Breaking
 
@@ -20,26 +20,31 @@ exports[`generateChangelog works 1`] = `
 ### Added
 
 - Added a default Prettier config for new projects ([7254bab](https://github.com/facebook/react-native/commit/7254bab) by [@jpdriver](https://github.com/jpdriver))
+- Remove vendored fetch polyfill, update to whatwg-fetch@3.0 ([bccc92d](https://github.com/facebook/react-native/commit/bccc92d) by [@janicduplessis](https://github.com/janicduplessis))
 
 #### Android specific
 
 - Add showSoftInputOnFocus to TextInput ([d88e470](https://github.com/facebook/react-native/commit/d88e470))
+- [Android] [Fixed] fix indexed RAM bundle ([d8fa120](https://github.com/facebook/react-native/commit/d8fa120) by [@dratwas](https://github.com/dratwas))
 
 #### iOS specific
 
-
+- Use CALayers to draw text, fixes rendering for long text ([690e85d](https://github.com/facebook/react-native/commit/690e85d) by [@janicduplessis](https://github.com/janicduplessis))
 
 ### Changed
 
-
+- Bump CLI to 2.0.0-rc.2 ([6c0eccd](https://github.com/facebook/react-native/commit/6c0eccd) by [@thymikee](https://github.com/thymikee))
+- Bump CLI to 2.0.0-rc.0 ([ea090a1](https://github.com/facebook/react-native/commit/ea090a1) by [@thymikee](https://github.com/thymikee))
 
 #### Android specific
 
-
+- Bump Fresco to 2.0.0, supports AndroidX ([0af25a8](https://github.com/facebook/react-native/commit/0af25a8) by [@dulmandakh](https://github.com/dulmandakh))
+- add custom font weight support to Text component on Android, only on P(API 28) and above versions. ([3915c0f](https://github.com/facebook/react-native/commit/3915c0f) by [@dulmandakh](https://github.com/dulmandakh))
+- bump android gradle plugin to 3.4.1 ([fbc6d8c](https://github.com/facebook/react-native/commit/fbc6d8c) by [@dulmandakh](https://github.com/dulmandakh))
 
 #### iOS specific
 
-
+- Xcode 11 beta build ([46c7ada](https://github.com/facebook/react-native/commit/46c7ada) by [@ericlewis](https://github.com/ericlewis))
 
 ### Deprecated
 
@@ -67,15 +72,24 @@ exports[`generateChangelog works 1`] = `
 
 ### Fixed
 
-
+- fix of Android's bug that doesn't let override ScrollView's Style with custom RefreshControl. ([d9a8ac5](https://github.com/facebook/react-native/commit/d9a8ac5) by [@Nizarius](https://github.com/Nizarius))
+- Fix accessibilityActions accessors ([afc142b](https://github.com/facebook/react-native/commit/afc142b) by [@xuelgong](https://github.com/xuelgong))
 
 #### Android specific
 
 - Correctly set the border radius on android ([b432b8f](https://github.com/facebook/react-native/commit/b432b8f) by [@cabelitos](https://github.com/cabelitos))
+- Check if mCurrentActivity is set according to LifecycleState ([fb550e9](https://github.com/facebook/react-native/commit/fb550e9) by [@RoJoHub](https://github.com/RoJoHub))
+- Fix some languages wrapped texts are cut off. ([76c50c1](https://github.com/facebook/react-native/commit/76c50c1) by [@soh335](https://github.com/soh335))
+- \`react-native run-android --port <x>\` correctly connects to dev server and related error messages display the correct port ([995b4d3](https://github.com/facebook/react-native/commit/995b4d3) by [@nhunzaker](https://github.com/nhunzaker))
+- Fix missing whitespace in debug instructions ([b45d3b8](https://github.com/facebook/react-native/commit/b45d3b8) by [@mjmasn](https://github.com/mjmasn))
+- Show proper error message instead of throwing a NullReferenceException if Gradle cannot find the NDK ([2aca234](https://github.com/facebook/react-native/commit/2aca234) by [@petterh](https://github.com/petterh))
+- This branch checks also for \`ACTION_NDEF_DISCOVERED\` intent matches to set the initialURL ([54abe1f](https://github.com/facebook/react-native/commit/54abe1f) by [@cimitan](https://github.com/cimitan))
+- Changelog: [Android] [FIXED] - Fix backgroundColor top level prop of TextInput ([fb6cf25](https://github.com/facebook/react-native/commit/fb6cf25) by [@makovkastar](https://github.com/makovkastar))
 
 #### iOS specific
 
 - Don't call sharedApplication in App Extension ([c5ea18f](https://github.com/facebook/react-native/commit/c5ea18f) by [@zhongwuzw](https://github.com/zhongwuzw))
+- Removed autoresizing mask for modal host container view ([2dd7dd8](https://github.com/facebook/react-native/commit/2dd7dd8) by [@zhongwuzw](https://github.com/zhongwuzw))
 
 ### Security
 
@@ -92,10 +106,24 @@ exports[`generateChangelog works 1`] = `
 ### Unknown
 
 - [LOCAL] ensure right version of Metro bundler is used ([1bb197a](https://github.com/facebook/react-native/commit/1bb197a) by [@kelset](https://github.com/kelset))
+- Generate correct source map if hermes not enabled ([b1f81be](https://github.com/facebook/react-native/commit/b1f81be) by [@HazAT](https://github.com/HazAT))
+- Fix Hermes binary path ([348b8f0](https://github.com/facebook/react-native/commit/348b8f0) by [@zoontek](https://github.com/zoontek))
+- Fix path to Hermes package. ([0738fe5](https://github.com/facebook/react-native/commit/0738fe5) by [@cpojer](https://github.com/cpojer))
+- Add Hermes support to React Native 0.60 ([e857d70](https://github.com/facebook/react-native/commit/e857d70) by [@cpojer](https://github.com/cpojer))
+- [LOCAL] bump CLI ([35aeb8c](https://github.com/facebook/react-native/commit/35aeb8c) by [@kelset](https://github.com/kelset))
+- bump jsc dep ([db1d60f](https://github.com/facebook/react-native/commit/db1d60f) by [@kelset](https://github.com/kelset))
+- bump CLI rc ([93c8318](https://github.com/facebook/react-native/commit/93c8318) by [@kelset](https://github.com/kelset))
+- [LOCAL] bump version in template to match repo ([53cec2d](https://github.com/facebook/react-native/commit/53cec2d) by [@kelset](https://github.com/kelset))
+- Move scheduler to dependencies ([503df2c](https://github.com/facebook/react-native/commit/503df2c) by [@rickhanlonii](https://github.com/rickhanlonii))
+- bump versions to match the requirements ([5ecc87b](https://github.com/facebook/react-native/commit/5ecc87b) by [@kelset](https://github.com/kelset))
+- re-add the hasteImpl ([7082c3e](https://github.com/facebook/react-native/commit/7082c3e) by [@kelset](https://github.com/kelset))
 
 #### Android Unknown
 
 - Fix addition of comma at the end of accessibility labels on Android. ([812abfd](https://github.com/facebook/react-native/commit/812abfd) by [@marcmulcahy](https://github.com/marcmulcahy))
+- [Android] Generate source maps outside of assets/ ([60e75dc](https://github.com/facebook/react-native/commit/60e75dc) by [@motiz88](https://github.com/motiz88))
+- Implement changes to enable native modules auto linking ([261197d](https://github.com/facebook/react-native/commit/261197d) by [@Salakar](https://github.com/Salakar))
+- Remove duplicate Android SDK steps already present in container ([53e32a4](https://github.com/facebook/react-native/commit/53e32a4) by [@hramos](https://github.com/hramos))
 
 #### iOS Unknown
 
