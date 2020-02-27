@@ -16,6 +16,7 @@ const execFile = util.promisify(require("child_process").execFile);
 const path = require("path");
 const fs = require("fs");
 const chalk = require("chalk");
+const PromisePool = require("@supercharge/promise-pool");
 
 //#region NETWORK
 //*****************************************************************************
@@ -272,8 +273,8 @@ function getOriginalCommits(gitDir, commits) {
   console.warn(chalk.green("Resolve original commits"));
   console.group();
   const unresolved = [];
-  return Promise.all(
-    commits.map(original => {
+  return new PromisePool({ concurrency: 10, items: commits })
+    .process(original => {
       return getOriginalCommit(gitDir, original).then(resolved => {
         if (resolved.sha === original.sha) {
           unresolved.push(original.sha);
@@ -281,8 +282,10 @@ function getOriginalCommits(gitDir, commits) {
         return resolved;
       });
     })
-  )
-    .then(commits => {
+    .then(({ results, errors }) => {
+      if (errors.length > 0) {
+        throw new Error(JSON.stringify(errors));
+      }
       if (unresolved.length > 0) {
         console.error(
           chalk.redBright(
@@ -296,7 +299,7 @@ function getOriginalCommits(gitDir, commits) {
         console.groupEnd();
       }
       console.groupEnd();
-      return commits;
+      return results;
     })
     .catch(e => {
       console.groupEnd();

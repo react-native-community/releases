@@ -332,6 +332,11 @@
   dependencies:
     type-detect "4.0.8"
 
+"@supercharge/promise-pool@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@supercharge/promise-pool/-/promise-pool-1.2.0.tgz#4618a58dab15ec4c7431bf1d3f1b5b2e65e412c2"
+  integrity sha512-k6Se9Tv8ouVQXGzt1eJptK3sBSqA1vWs7ilFqfOdfeHBzMAuSTyW8E0KWs3yw0JPy1JLkOhwQ75c0kddetoroA==
+
 "@types/babel__core@^7.1.0":
   version "7.1.5"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.5.tgz#e4d84704b4df868b3ad538365a13da2fa6dbc023"

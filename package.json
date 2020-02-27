@@ -28,6 +28,7 @@
     "prettier": "1.17.0"
   },
   "dependencies": {
+    "@supercharge/promise-pool": "^1.2.0",
     "chalk": "^3.0.0",
     "fast-levenshtein": "^2.0.6",
     "yargs": "13.2.2"
