@@ -24,6 +24,9 @@ if (!process.env.RN_REPO) {
 }
 const RN_REPO = path.join(process.env.RN_REPO, ".git");
 
+console.warn = () => {};
+console.error = () => {};
+
 /**
  * @param {string} fixture
  */
