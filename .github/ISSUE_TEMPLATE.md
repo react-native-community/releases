@@ -5,7 +5,7 @@ GitHub Issues in this repository are used exclusively for tracking releases or d
 For questions or help, please see:
 
 - The React Native [issue section](https://github.com/facebook/react-native/issues)
-- The React Native [help page](http://facebook.github.io/react-native/help)
+- The React Native [help page](https://reactnative.dev/help)
 - The React Native channel in [Reactiflux](https://discord.gg/0ZcbPKXt5bZjGY5n)
 - The react-native tag on [Stack Overflow](http://stackoverflow.com/questions/tagged/react-native)
 - For feature request, please use [Canny instead](https://react-native.canny.io/feature-requests).
