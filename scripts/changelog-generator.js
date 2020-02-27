@@ -15,6 +15,7 @@ const util = require("util");
 const execFile = util.promisify(require("child_process").execFile);
 const path = require("path");
 const fs = require("fs");
+const chalk = require("chalk");
 
 //#region NETWORK
 //*****************************************************************************
@@ -25,7 +26,7 @@ const fs = require("fs");
  */
 function fetchJSON(token, path) {
   const host = "api.github.com";
-  console.log(`[GET] https://${host}${path}`);
+  console.warn(chalk.yellow(`https://${host}${path}`));
   return new Promise((resolve, reject) => {
     let data = "";
 
@@ -71,6 +72,8 @@ function fetchJSON(token, path) {
  * @returns {Promise<Commit[]>}
  */
 function fetchCommits(token, base, compare) {
+  console.warn(chalk.green("Fetch commit data"));
+  console.group();
   const commits = [];
   let page = 1;
   return new Promise((resolve, reject) => {
@@ -87,6 +90,7 @@ function fetchCommits(token, base, compare) {
           for (const commit of pageCommits) {
             commits.push(commit);
             if (commit.sha === base) {
+              console.groupEnd();
               return resolve(commits);
             }
           }
@@ -97,7 +101,10 @@ function fetchCommits(token, base, compare) {
           }
           setImmediate(fetchPage);
         })
-        .catch(reject);
+        .catch(e => {
+          console.groupEnd();
+          reject(e);
+        });
     };
     fetchPage();
   });
@@ -113,31 +120,44 @@ function fetchCommits(token, base, compare) {
  * @param {Commit[]} commits
  */
 function filterCICommits(commits) {
-  return commits.filter(item => {
+  console.warn(chalk.green("Filter CI commits"));
+  console.group();
+  const result = commits.filter(item => {
     const text = item.commit.message.toLowerCase();
-    return !(
+    if (
       text.includes("travis") ||
       text.includes("circleci") ||
       text.includes("circle ci") ||
       text.includes("bump version numbers") ||
       text.includes("docker")
-    );
+    ) {
+      console.warn(chalk.yellow(formatCommitLink(item.sha)));
+      return false;
+    } else {
+      return true;
+    }
   });
+  console.groupEnd();
+  return result;
 }
 
 /**
  * @param {Commit[]} commits
  */
 function filterRevertCommits(commits) {
+  console.warn(chalk.green("Filter revert commits"));
+  console.group();
   let revertCommits = [];
   const pattern = /\b(revert d\d{8}: |revert\b|back out ".*")/i;
   const filteredCommits = commits
     .filter(item => {
       const text = item.commit.message.split("\n")[0].toLowerCase();
-      const shouldRemove =
-        pattern.test(text) && revertCommits.push(text.replace(pattern, ""));
-      if (shouldRemove) console.warn("Removing revert commit: \n" + text);
-      return !shouldRemove;
+      if (pattern.test(text)) {
+        revertCommits.push(text.replace(pattern, ""));
+        console.warn(chalk.yellow(formatCommitLink(item.sha)));
+        return false;
+      }
+      return true;
     })
     .filter(item => {
       let text = item.commit.message.split("\n")[0].toLowerCase();
@@ -151,28 +171,41 @@ function filterRevertCommits(commits) {
       });
       return true;
     });
-  if (revertCommits.length > 0)
-    console.warn(
-      "Was unable to find the mate for the following revert commits: \n\n" +
-        revertCommits.join("\n") +
-        "\n\nYou will need to manually remove this from below."
+  if (revertCommits.length > 0) {
+    console.error(
+      chalk.redBright(
+        "Unable to find the following commits that were reverted, remove them manually or document their reversal."
+      )
     );
+    console.group();
+    revertCommits.forEach(commit =>
+      console.warn(chalk.red(formatCommitLink(commit)))
+    );
+    console.groupEnd();
+  }
+  console.groupEnd();
   return filteredCommits;
 }
 
 /**
+ * @todo Perhaps it's more performant to first parse all commit SHAs out of the
+ *       existing changelog data.
+ *
  * @param {string} existingChangelogData
  * @param {Commit[]} commits
  */
 function filterPreviouslyPickedCommits(existingChangelogData, commits) {
-  // TODO: Perhaps it's more performant to first parse all commit SHAs out of the existing changelog data.
-  return commits.filter(({ sha }) => {
+  console.warn(chalk.green("Filter previously picked commits"));
+  console.group();
+  const result = commits.filter(({ sha }) => {
     if (existingChangelogData.includes(sha.slice(0, 7))) {
-      console.warn(`Ignoring previously picked commit: ${sha}`);
+      console.warn(chalk.yellow(formatCommitLink(sha)));
       return false;
     }
     return true;
   });
+  console.groupEnd();
+  return result;
 }
 
 //*****************************************************************************
@@ -207,19 +240,22 @@ function git(gitDir, ...args) {
 function getOriginalCommit(gitDir, item) {
   const match = item.commit.message.match(/Differential Revision: (D\d+)/m);
   if (match) {
+    const drev = match[1];
     return git(
       gitDir,
       "log",
       "master",
       "--pretty=format:%H",
-      `--grep=${match[1]}`
-    ).then(sha => ({ ...item, sha }));
+      `--grep=${drev}`
+    ).then(sha => {
+      console.warn(
+        chalk.yellow(
+          `${formatCommitLink(item.sha)} -> ${formatCommitLink(sha)}`
+        )
+      );
+      return { ...item, sha };
+    });
   } else {
-    console.warn(
-      `[!] Unable to find a differential revision for commit ${
-        item.sha
-      }. If this is a commit made on the release branch, be sure to update the CHANGELOG entry to point to the commit on the master branch after back-porting.\n`
-    );
     return Promise.resolve(item);
   }
 }
@@ -233,7 +269,39 @@ function getOriginalCommit(gitDir, item) {
  * @param {Commit[]} commits
  */
 function getOriginalCommits(gitDir, commits) {
-  return Promise.all(commits.map(c => getOriginalCommit(gitDir, c)));
+  console.warn(chalk.green("Resolve original commits"));
+  console.group();
+  const unresolved = [];
+  return Promise.all(
+    commits.map(original => {
+      return getOriginalCommit(gitDir, original).then(resolved => {
+        if (resolved.sha === original.sha) {
+          unresolved.push(original.sha);
+        }
+        return resolved;
+      });
+    })
+  )
+    .then(commits => {
+      if (unresolved.length > 0) {
+        console.error(
+          chalk.redBright(
+            "Unable to find differential revisions for the following commits. If these were made on the release branch only, be sure to update the CHANGELOG entries to point to the commit on the master branch after back-porting."
+          )
+        );
+        console.group();
+        unresolved.forEach(sha =>
+          console.warn(chalk.red(formatCommitLink(sha)))
+        );
+        console.groupEnd();
+      }
+      console.groupEnd();
+      return commits;
+    })
+    .catch(e => {
+      console.groupEnd();
+      throw e;
+    });
 }
 
 /**
@@ -263,18 +331,30 @@ function getFirstCommitAfterForkingFromMaster(gitDir, ref) {
  * @param {string} compare
  */
 function getOffsetBaseCommit(gitDir, base, compare) {
+  console.warn(chalk.green("Resolve base commit"));
+  console.group();
   return Promise.all([
     getFirstCommitAfterForkingFromMaster(gitDir, base),
     getFirstCommitAfterForkingFromMaster(gitDir, compare)
-  ]).then(([offsetBase, offsetCompare]) => {
-    if (offsetBase === offsetCompare) {
-      return git(gitDir, "rev-list", "-n", "1", base).then(sha =>
-        sha.trimRight()
-      );
-    } else {
-      return offsetBase;
-    }
-  });
+  ])
+    .then(([offsetBase, offsetCompare]) => {
+      if (offsetBase === offsetCompare) {
+        return git(gitDir, "rev-list", "-n", "1", base).then(sha =>
+          sha.trimRight()
+        );
+      } else {
+        return offsetBase;
+      }
+    })
+    .then(sha => {
+      console.warn(chalk.yellow(formatCommitLink(sha)));
+      console.groupEnd();
+      return sha;
+    })
+    .catch(e => {
+      console.groupEnd();
+      throw e;
+    });
 }
 
 //*****************************************************************************
@@ -346,6 +426,13 @@ function isInternal(change) {
 //*****************************************************************************
 
 /**
+ * @param {string} sha
+ */
+function formatCommitLink(sha) {
+  return `https://github.com/facebook/react-native/commit/${sha.slice(0, 7)}`;
+}
+
+/**
  * @param {Commit} item
  */
 function getChangeMessage(item) {
@@ -358,10 +445,9 @@ function getChangeMessage(item) {
   entry = entry.replace(/^((\[\w*\] ?)+ - )/i, ""); //Remove the [General] [whatever]
   entry = entry.replace(/ \(\#\d*\)$/i, ""); //Remove the PR number if it's on the end
 
-  const authorSection = `([${item.sha.slice(
-    0,
-    7
-  )}](https://github.com/facebook/react-native/commit/${item.sha.slice(0, 7)})${
+  const authorSection = `([${item.sha.slice(0, 7)}](${formatCommitLink(
+    item.sha
+  )})${
     item.author
       ? " by [@" +
         item.author.login +
@@ -472,7 +558,7 @@ function getChangelogDesc(commits, verbose) {
 function buildMarkDown(currentVersion, data) {
   return `
 
-## [${currentVersion}.0]
+## [${currentVersion}]
 
 ### Breaking
 
