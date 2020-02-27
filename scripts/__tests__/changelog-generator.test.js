@@ -153,6 +153,7 @@ describe("functions that hit GitHub's commits API", () => {
         compare,
         token: "authn-token",
         gitDir: RN_REPO,
+        maxWorkers: 10,
         existingChangelogData:
           "- Bla bla bla ([ffdf3f2](https://github.com/facebook/react-native/commit/ffdf3f2)"
       }).then(changelog => {

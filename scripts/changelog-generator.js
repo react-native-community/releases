@@ -18,8 +18,6 @@ const fs = require("fs");
 const chalk = require("chalk");
 const pLimit = require("p-limit").default;
 
-const CONCURRENT_PROCESSES = 10;
-
 //#region NETWORK
 //*****************************************************************************
 
@@ -270,12 +268,13 @@ function getOriginalCommit(gitDir, item) {
  *
  * @param {string} gitDir
  * @param {Commit[]} commits
+ * @param {number} concurrent_processes
  */
-function getOriginalCommits(gitDir, commits) {
+function getOriginalCommits(gitDir, commits, concurrent_processes) {
   console.warn(chalk.green("Resolve original commits"));
   console.group();
   const unresolved = [];
-  const limit = pLimit(CONCURRENT_PROCESSES);
+  const limit = pLimit(concurrent_processes);
   return Promise.all(
     commits.map(original => {
       return limit(() =>
@@ -676,6 +675,7 @@ ${data.unknown.ios.join("\n")}
  * @param {string} options.base
  * @param {string} options.compare
  * @param {string} options.gitDir
+ * @param {number} options.maxWorkers
  * @param {string} options.existingChangelogData
  * @param {boolean=} options.verbose
  */
@@ -683,7 +683,9 @@ function generateChangelog(options) {
   return fetchCommits(options.token, options.base, options.compare)
     .then(filterCICommits)
     .then(filterRevertCommits)
-    .then(commits => getOriginalCommits(options.gitDir, commits))
+    .then(commits =>
+      getOriginalCommits(options.gitDir, commits, options.maxWorkers)
+    )
     .then(commits =>
       filterPreviouslyPickedCommits(options.existingChangelogData, commits)
     )
@@ -738,6 +740,13 @@ if (!module["parent"]) {
         string: true,
         describe: "A GitHub token",
         demandOption: true
+      },
+      maxWorkers: {
+        alias: "w",
+        number: true,
+        describe:
+          "Specifies the maximum number of concurrent sub-processes that will be spawned",
+        default: 10
       },
       verbose: {
         alias: "v",
