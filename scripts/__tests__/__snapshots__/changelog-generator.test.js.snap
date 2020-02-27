@@ -3,7 +3,7 @@
 exports[`functions that hit GitHub's commits API generateChangelog fetches commits, filters them, and generates markdown 1`] = `
 "
 
-## [35300147ca66677f42e8544264be72ac0e9d1b45.0]
+## [35300147ca66677f42e8544264be72ac0e9d1b45]
 
 ### Breaking
 

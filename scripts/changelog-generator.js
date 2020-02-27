@@ -16,7 +16,9 @@ const execFile = util.promisify(require("child_process").execFile);
 const path = require("path");
 const fs = require("fs");
 const chalk = require("chalk");
-const PromisePool = require("@supercharge/promise-pool");
+const pLimit = require("p-limit").default;
+
+const CONCURRENT_PROCESSES = 10;
 
 //#region NETWORK
 //*****************************************************************************
@@ -236,7 +238,7 @@ function git(gitDir, ...args) {
  *
  * @param {string} gitDir
  * @param {Commit} item
- * @returns {Promise<Commit>}
+ * @returns {Promise<Commit | null>}
  */
 function getOriginalCommit(gitDir, item) {
   const match = item.commit.message.match(/Differential Revision: (D\d+)/m);
@@ -257,7 +259,7 @@ function getOriginalCommit(gitDir, item) {
       return { ...item, sha };
     });
   } else {
-    return Promise.resolve(item);
+    return Promise.resolve(null);
   }
 }
 
@@ -273,19 +275,20 @@ function getOriginalCommits(gitDir, commits) {
   console.warn(chalk.green("Resolve original commits"));
   console.group();
   const unresolved = [];
-  return new PromisePool({ concurrency: 10, items: commits })
-    .process(original => {
-      return getOriginalCommit(gitDir, original).then(resolved => {
-        if (resolved.sha === original.sha) {
-          unresolved.push(original.sha);
-        }
-        return resolved;
-      });
+  const limit = pLimit(CONCURRENT_PROCESSES);
+  return Promise.all(
+    commits.map(original => {
+      return limit(() =>
+        getOriginalCommit(gitDir, original).then(resolved => {
+          if (resolved === null) {
+            unresolved.push(original.sha);
+          }
+          return resolved || original;
+        })
+      );
     })
-    .then(({ results, errors }) => {
-      if (errors.length > 0) {
-        throw new Error(JSON.stringify(errors));
-      }
+  )
+    .then(results => {
       if (unresolved.length > 0) {
         console.error(
           chalk.redBright(
