@@ -713,32 +713,33 @@ if (!module["parent"]) {
         alias: "b",
         string: true,
         describe:
-          "the base branch/tag/commit to compare against (most likely the previous stable version)",
+          "The base branch/tag/commit to compare against (most likely the previous stable version)",
         demandOption: true
       },
       compare: {
         alias: "c",
         string: true,
         describe:
-          "the new version branch/tag/commit (most likely the latest release candidate)",
+          "The new version branch/tag/commit (most likely the latest release candidate)",
         demandOption: true
       },
       repo: {
         alias: "r",
         string: true,
-        describe: "the path to an up-to-date clone of the react-native repo",
+        describe: "The path to an up-to-date clone of the react-native repo",
         demandOption: true
       },
       changelog: {
         alias: "f",
         string: true,
-        describe: "the path to the existing CHANGELOG.md file",
+        describe: "The path to the existing CHANGELOG.md file",
         demandOption: true
       },
       token: {
         alias: "t",
         string: true,
-        describe: "A GitHub token",
+        describe:
+          "A GitHub token that has `public_repo` access (generate at https://github.com/settings/tokens)",
         demandOption: true
       },
       maxWorkers: {
@@ -751,7 +752,7 @@ if (!module["parent"]) {
       verbose: {
         alias: "v",
         describe:
-          "verbose listing, includes internal changes as well as public-facing changes",
+          "Verbose listing, includes internal changes as well as public-facing changes",
         demandOption: false,
         default: false
       }
