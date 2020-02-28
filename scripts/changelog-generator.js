@@ -200,7 +200,7 @@ function filterPreviouslyPickedCommits(existingChangelogData, commits) {
   console.warn(chalk.green("Filter previously picked commits"));
   console.group();
   const result = commits.filter(({ sha }) => {
-    if (existingChangelogData.includes(formatSHA(sha))) {
+    if (existingChangelogData.includes(sha)) {
       console.warn(chalk.yellow(formatCommitLink(sha)));
       return false;
     }
@@ -432,15 +432,8 @@ function isInternal(change) {
 /**
  * @param {string} sha
  */
-function formatSHA(sha) {
-  return sha.slice(0, 7);
-}
-
-/**
- * @param {string} sha
- */
 function formatCommitLink(sha) {
-  return `https://github.com/facebook/react-native/commit/${formatSHA(sha)}`;
+  return `https://github.com/facebook/react-native/commit/${sha}`;
 }
 
 /**
@@ -456,7 +449,7 @@ function getChangeMessage(item) {
   entry = entry.replace(/^((\[\w*\] ?)+ - )/i, ""); //Remove the [General] [whatever]
   entry = entry.replace(/ \(\#\d*\)$/i, ""); //Remove the PR number if it's on the end
 
-  const authorSection = `([${formatSHA(item.sha)}](${formatCommitLink(
+  const authorSection = `([${item.sha.slice(0, 10)}](${formatCommitLink(
     item.sha
   )})${
     item.author
