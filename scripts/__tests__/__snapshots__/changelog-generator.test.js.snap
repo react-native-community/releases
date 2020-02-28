@@ -20,21 +20,20 @@ exports[`functions that hit GitHub's commits API generateChangelog fetches commi
 ### Added
 
 - Added a default Prettier config for new projects ([7254bab0b3](https://github.com/facebook/react-native/commit/7254bab0b3fa129cd238783ab993fbae1102d60a) by [@jpdriver](https://github.com/jpdriver))
-- Remove vendored fetch polyfill, update to whatwg-fetch@3.0 ([bccc92dfdd](https://github.com/facebook/react-native/commit/bccc92dfdd2d85933f2a9cb5c8d1773affb7acba) by [@janicduplessis](https://github.com/janicduplessis))
 
 #### Android specific
 
 - Add showSoftInputOnFocus to TextInput ([d88e4701fc](https://github.com/facebook/react-native/commit/d88e4701fc46b028861ddcfa3e6ffb141b3ede3d))
-- Fix indexed RAM bundle ([d8fa1206c3](https://github.com/facebook/react-native/commit/d8fa1206c3fecd494b0f6abb63c66488e6ced5e0) by [@dratwas](https://github.com/dratwas))
 
 #### iOS specific
 
-- Use CALayers to draw text, fixes rendering for long text ([690e85db04](https://github.com/facebook/react-native/commit/690e85db0487c10ec3880c503632548aca65ff1c) by [@janicduplessis](https://github.com/janicduplessis))
+
 
 ### Changed
 
 - Bump CLI to 2.0.0-rc.2 ([6c0eccd46d](https://github.com/facebook/react-native/commit/6c0eccd46d157804fde767263ec8856ff8c99cfb) by [@thymikee](https://github.com/thymikee))
 - Bump CLI to 2.0.0-rc.0 ([ea090a10e6](https://github.com/facebook/react-native/commit/ea090a10e63bb75ab9446ed2bd84647bf3d28bd7) by [@thymikee](https://github.com/thymikee))
+- Remove vendored fetch polyfill, update to whatwg-fetch@3.0 ([bccc92dfdd](https://github.com/facebook/react-native/commit/bccc92dfdd2d85933f2a9cb5c8d1773affb7acba) by [@janicduplessis](https://github.com/janicduplessis))
 
 #### Android specific
 
@@ -44,7 +43,7 @@ exports[`functions that hit GitHub's commits API generateChangelog fetches commi
 
 #### iOS specific
 
-- Xcode 11 beta build ([46c7ada535](https://github.com/facebook/react-native/commit/46c7ada535f8d87f325ccbd96c24993dd522165d) by [@ericlewis](https://github.com/ericlewis))
+
 
 ### Deprecated
 
@@ -77,10 +76,10 @@ exports[`functions that hit GitHub's commits API generateChangelog fetches commi
 
 #### Android specific
 
-- Correctly set the border radius on android ([b432b8f13b](https://github.com/facebook/react-native/commit/b432b8f13b4871dcafd690e57d37298662712b50) by [@cabelitos](https://github.com/cabelitos))
 - Check if mCurrentActivity is set according to LifecycleState ([fb550e9e84](https://github.com/facebook/react-native/commit/fb550e9e8405870167dea9bd3bc3f50fbbae5ae5) by [@RoJoHub](https://github.com/RoJoHub))
 - Fix some languages wrapped texts are cut off. ([76c50c1db1](https://github.com/facebook/react-native/commit/76c50c1db15a1040b185770072d960652e7974a3) by [@soh335](https://github.com/soh335))
 - \`react-native run-android --port <x>\` correctly connects to dev server and related error messages display the correct port ([995b4d3049](https://github.com/facebook/react-native/commit/995b4d30491d2336fed4a975e965668d9c8d5b7c) by [@nhunzaker](https://github.com/nhunzaker))
+- Fix indexed RAM bundle ([d8fa1206c3](https://github.com/facebook/react-native/commit/d8fa1206c3fecd494b0f6abb63c66488e6ced5e0) by [@dratwas](https://github.com/dratwas))
 - Fix missing whitespace in debug instructions ([b45d3b8697](https://github.com/facebook/react-native/commit/b45d3b8697c6ed2ce5c6e4eac7bfd14553c79ed8) by [@mjmasn](https://github.com/mjmasn))
 - Show proper error message instead of throwing a NullReferenceException if Gradle cannot find the NDK ([2aca234dee](https://github.com/facebook/react-native/commit/2aca234dee6a4c1e710b93dce341528279797c34) by [@petterh](https://github.com/petterh))
 - This branch checks also for \`ACTION_NDEF_DISCOVERED\` intent matches to set the initialURL ([54abe1f599](https://github.com/facebook/react-native/commit/54abe1f5990b8f5f57da3231d1bb1fd83966f064) by [@cimitan](https://github.com/cimitan))
@@ -89,7 +88,9 @@ exports[`functions that hit GitHub's commits API generateChangelog fetches commi
 #### iOS specific
 
 - Don't call sharedApplication in App Extension ([c5ea18f738](https://github.com/facebook/react-native/commit/c5ea18f7389fe821e7a9882e4b1b30b0a1b266f4) by [@zhongwuzw](https://github.com/zhongwuzw))
+- Use CALayers to draw text, fixes rendering for long text ([690e85db04](https://github.com/facebook/react-native/commit/690e85db0487c10ec3880c503632548aca65ff1c) by [@janicduplessis](https://github.com/janicduplessis))
 - Removed autoresizing mask for modal host container view ([2dd7dd8e45](https://github.com/facebook/react-native/commit/2dd7dd8e45f9d4a1086f84d5b70ea66406d98439) by [@zhongwuzw](https://github.com/zhongwuzw))
+- Xcode 11 beta build ([46c7ada535](https://github.com/facebook/react-native/commit/46c7ada535f8d87f325ccbd96c24993dd522165d) by [@ericlewis](https://github.com/ericlewis))
 
 ### Security
 
@@ -120,6 +121,7 @@ exports[`functions that hit GitHub's commits API generateChangelog fetches commi
 
 #### Android Unknown
 
+- Correctly set the border radius on android ([b432b8f13b](https://github.com/facebook/react-native/commit/b432b8f13b4871dcafd690e57d37298662712b50) by [@cabelitos](https://github.com/cabelitos))
 - Fix addition of comma at the end of accessibility labels on Android. ([812abfdbba](https://github.com/facebook/react-native/commit/812abfdbba7c27978a5c2b7041fc4a900f3203ae) by [@marcmulcahy](https://github.com/marcmulcahy))
 - Fix \`ClassNotFound\` exception in Android during Release builds ([ffdf3f22c6](https://github.com/facebook/react-native/commit/ffdf3f22c68583fe77517f78dd97bd2e97ff1b9e) by [@thecodrr](https://github.com/thecodrr))
 - Generate source maps outside of assets/ ([60e75dc1ab](https://github.com/facebook/react-native/commit/60e75dc1ab73b2893ec2e25c0320f32b3cf12b80) by [@motiz88](https://github.com/motiz88))

@@ -177,12 +177,32 @@ function getCommitMessage(sha) {
   return git(RN_REPO, "log", "--format=%B", "-n", "1", sha);
 }
 
+/**
+ * @typedef {object} PartialPlatformChanges
+ * @property {string[]=} android
+ * @property {string[]=} ios
+ * @property {string[]=} general
+ */
+
+/**
+ * @typedef {object} PartialChanges
+ * @property {PartialPlatformChanges=} breaking
+ * @property {PartialPlatformChanges=} added
+ * @property {PartialPlatformChanges=} changed
+ * @property {PartialPlatformChanges=} deprecated
+ * @property {PartialPlatformChanges=} removed
+ * @property {PartialPlatformChanges=} fixed
+ * @property {PartialPlatformChanges=} security
+ * @property {PartialPlatformChanges=} unknown
+ */
+
 describe("formatting and attribution regression tests", () => {
-  test.each([
+  /** @type {Array<[string, PartialChanges]>} */
+  const cases = [
     [
       "d8fa1206c3fecd494b0f6abb63c66488e6ced5e0",
       {
-        added: {
+        fixed: {
           android: ["Fix indexed RAM bundle"]
         }
       }
@@ -197,7 +217,8 @@ describe("formatting and attribution regression tests", () => {
         }
       }
     ]
-  ])("%s", (sha, expected) => {
+  ];
+  test.each(cases)("%s", (sha, expected) => {
     return getCommitMessage(sha).then(message => {
       const commits = [{ sha, commit: { message } }];
       const result = getChangelogDesc(commits, true, true);

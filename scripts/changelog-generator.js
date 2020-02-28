@@ -493,24 +493,35 @@ function getChangeMessage(item, onlyMessage = false) {
   return `- ${entry} ${authorSection}`;
 }
 
+const CHANGE_TYPE = [
+  "breaking",
+  "added",
+  "changed",
+  "deprecated",
+  "removed",
+  "fixed",
+  "security",
+  "unknown"
+];
+
+const CHANGE_CATEGORY = ["android", "ios", "general"];
+
 const CHANGES_TEMPLATE = /** @type {Changes} */ (Object.freeze(
-  [
-    "breaking",
-    "added",
-    "changed",
-    "deprecated",
-    "removed",
-    "fixed",
-    "security",
-    "unknown"
-  ].reduce(
+  CHANGE_TYPE.reduce(
     (acc, key) => ({
       ...acc,
-      [key]: Object.freeze({ android: [], ios: [], general: [] })
+      [key]: Object.freeze(
+        CHANGE_CATEGORY.reduce((a, c) => ({ ...a, [c]: [] }), {})
+      )
     }),
     {}
   )
 ));
+
+const CHANGELOG_LINE_REGEXP = new RegExp(
+  `(\\[(${[...CHANGE_TYPE, ...CHANGE_CATEGORY].join("|")})\\]\s*)+`,
+  "i"
+);
 
 /**
  * @param {Commit[]} commits
@@ -521,7 +532,11 @@ function getChangelogDesc(commits, verbose, onlyMessage = false) {
   const acc = deepmerge(CHANGES_TEMPLATE, {});
 
   commits.forEach(item => {
-    const change = item.commit.message;
+    const change =
+      item.commit.message.split("\n").find(line => {
+        return CHANGELOG_LINE_REGEXP.test(line);
+      }) || item.commit.message;
+
     const message = getChangeMessage(item, onlyMessage);
 
     if (!verbose) {
