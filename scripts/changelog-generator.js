@@ -504,7 +504,7 @@ const CHANGE_TYPE = [
   "unknown"
 ];
 
-const CHANGE_CATEGORY = ["android", "ios", "general"];
+const CHANGE_CATEGORY = ["android", "ios", "general", "internal"];
 
 const CHANGES_TEMPLATE = /** @type {Changes} */ (Object.freeze(
   CHANGE_TYPE.reduce(
@@ -530,12 +530,16 @@ const CHANGELOG_LINE_REGEXP = new RegExp(
  */
 function getChangelogDesc(commits, verbose, onlyMessage = false) {
   const acc = deepmerge(CHANGES_TEMPLATE, {});
+  const commitsWithoutExactChangelogTemplate = [];
 
   commits.forEach(item => {
-    const change =
-      item.commit.message.split("\n").find(line => {
-        return CHANGELOG_LINE_REGEXP.test(line);
-      }) || item.commit.message;
+    let change = item.commit.message.split("\n").find(line => {
+      return CHANGELOG_LINE_REGEXP.test(line);
+    });
+    if (!change) {
+      commitsWithoutExactChangelogTemplate.push(item.sha);
+      change = item.commit.message;
+    }
 
     const message = getChangeMessage(item, onlyMessage);
 
@@ -611,6 +615,19 @@ function getChangelogDesc(commits, verbose, onlyMessage = false) {
       }
     }
   });
+
+  if (commitsWithoutExactChangelogTemplate.length > 0) {
+    console.warn(
+      chalk.redBright(
+        "Commits that have messages without following the exact changelog template"
+      )
+    );
+    console.group();
+    commitsWithoutExactChangelogTemplate.forEach(sha => {
+      console.warn(chalk.red(formatCommitLink(sha)));
+    });
+    console.groupEnd();
+  }
 
   return acc;
 }
