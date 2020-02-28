@@ -10,6 +10,25 @@
  * @property {{ login: string }=} author
  */
 
+/**
+ * @typedef {object} PlatformChanges
+ * @property {string[]} android
+ * @property {string[]} ios
+ * @property {string[]} general
+ */
+
+/**
+ * @typedef {object} Changes
+ * @property {PlatformChanges} breaking
+ * @property {PlatformChanges} added
+ * @property {PlatformChanges} changed
+ * @property {PlatformChanges} deprecated
+ * @property {PlatformChanges} removed
+ * @property {PlatformChanges} fixed
+ * @property {PlatformChanges} security
+ * @property {PlatformChanges} unknown
+ */
+
 const levenshtein = require("fast-levenshtein");
 const util = require("util");
 const execFile = util.promisify(require("child_process").execFile);
@@ -17,6 +36,7 @@ const path = require("path");
 const fs = require("fs");
 const chalk = require("chalk");
 const pLimit = require("p-limit").default;
+const deepmerge = require("deepmerge");
 
 //#region NETWORK
 //*****************************************************************************
@@ -37,7 +57,8 @@ function fetchJSON(token, path) {
         path,
         headers: {
           Authorization: `token ${token}`,
-          "User-Agent": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)"
+          "User-Agent":
+            "https://github.com/react-native-community/releases/blob/master/scripts/changelog-generator.js"
         }
       })
       .on("response", response => {
@@ -199,7 +220,7 @@ function filterPreviouslyPickedCommits(existingChangelogData, commits) {
   console.warn(chalk.green("Filter previously picked commits"));
   console.group();
   const result = commits.filter(({ sha }) => {
-    if (existingChangelogData.includes(sha.slice(0, 7))) {
+    if (existingChangelogData.includes(sha)) {
       console.warn(chalk.yellow(formatCommitLink(sha)));
       return false;
     }
@@ -224,7 +245,7 @@ function git(gitDir, ...args) {
     if (out.stderr) {
       throw new Error(out.stderr);
     }
-    return out.stdout;
+    return out.stdout.trimRight();
   });
 }
 
@@ -268,13 +289,13 @@ function getOriginalCommit(gitDir, item) {
  *
  * @param {string} gitDir
  * @param {Commit[]} commits
- * @param {number} concurrent_processes
+ * @param {number} concurrentProcesses
  */
-function getOriginalCommits(gitDir, commits, concurrent_processes) {
+function getOriginalCommits(gitDir, commits, concurrentProcesses) {
   console.warn(chalk.green("Resolve original commits"));
   console.group();
   const unresolved = [];
-  const limit = pLimit(concurrent_processes);
+  const limit = pLimit(concurrentProcesses);
   return Promise.all(
     commits.map(original => {
       return limit(() =>
@@ -319,7 +340,7 @@ function getOriginalCommits(gitDir, commits, concurrent_processes) {
 function getFirstCommitAfterForkingFromMaster(gitDir, ref) {
   return git(gitDir, "rev-list", `^${ref}`, "--first-parent", "master").then(
     out => {
-      const components = out.trimRight().split("\n");
+      const components = out.split("\n");
       return components[components.length - 1];
     }
   );
@@ -344,9 +365,7 @@ function getOffsetBaseCommit(gitDir, base, compare) {
   ])
     .then(([offsetBase, offsetCompare]) => {
       if (offsetBase === offsetCompare) {
-        return git(gitDir, "rev-list", "-n", "1", base).then(sha =>
-          sha.trimRight()
-        );
+        return git(gitDir, "rev-list", "-n", "1", base);
       } else {
         return offsetBase;
       }
@@ -434,23 +453,33 @@ function isInternal(change) {
  * @param {string} sha
  */
 function formatCommitLink(sha) {
-  return `https://github.com/facebook/react-native/commit/${sha.slice(0, 7)}`;
+  return `https://github.com/facebook/react-native/commit/${sha}`;
 }
 
 /**
  * @param {Commit} item
+ * @param {boolean=} onlyMessage
  */
-function getChangeMessage(item) {
+function getChangeMessage(item, onlyMessage = false) {
   const commitMessage = item.commit.message.split("\n");
   let entry =
     commitMessage
       .reverse()
       .find(a => /\[ios\]|\[android\]|\[general\]/i.test(a)) ||
     commitMessage.reverse()[0];
-  entry = entry.replace(/^((\[\w*\] ?)+ - )/i, ""); //Remove the [General] [whatever]
+  entry = entry.replace(/^((changelog:\s*)?(\[\w+\]\s?)+[\s-]*)/i, ""); //Remove the [General] [whatever]
   entry = entry.replace(/ \(\#\d*\)$/i, ""); //Remove the PR number if it's on the end
 
-  const authorSection = `([${item.sha.slice(0, 7)}](${formatCommitLink(
+  // Capitalize
+  if (/^[a-z]/.test(entry)) {
+    entry = entry.slice(0, 1).toUpperCase() + entry.slice(1);
+  }
+
+  if (onlyMessage) {
+    return entry;
+  }
+
+  const authorSection = `([${item.sha.slice(0, 10)}](${formatCommitLink(
     item.sha
   )})${
     item.author
@@ -464,25 +493,55 @@ function getChangeMessage(item) {
   return `- ${entry} ${authorSection}`;
 }
 
+const CHANGE_TYPE = [
+  "breaking",
+  "added",
+  "changed",
+  "deprecated",
+  "removed",
+  "fixed",
+  "security",
+  "unknown"
+];
+
+const CHANGE_CATEGORY = ["android", "ios", "general", "internal"];
+
+const CHANGES_TEMPLATE = /** @type {Changes} */ (Object.freeze(
+  CHANGE_TYPE.reduce(
+    (acc, key) => ({
+      ...acc,
+      [key]: Object.freeze(
+        CHANGE_CATEGORY.reduce((a, c) => ({ ...a, [c]: [] }), {})
+      )
+    }),
+    {}
+  )
+));
+
+const CHANGELOG_LINE_REGEXP = new RegExp(
+  `(\\[(${[...CHANGE_TYPE, ...CHANGE_CATEGORY].join("|")})\\]\s*)+`,
+  "i"
+);
+
 /**
  * @param {Commit[]} commits
  * @param {boolean} verbose
+ * @param {boolean=} onlyMessage
  */
-function getChangelogDesc(commits, verbose) {
-  const acc = {
-    breaking: { android: [], ios: [], general: [] },
-    added: { android: [], ios: [], general: [] },
-    changed: { android: [], ios: [], general: [] },
-    deprecated: { android: [], ios: [], general: [] },
-    removed: { android: [], ios: [], general: [] },
-    fixed: { android: [], ios: [], general: [] },
-    security: { android: [], ios: [], general: [] },
-    unknown: { android: [], ios: [], general: [] }
-  };
+function getChangelogDesc(commits, verbose, onlyMessage = false) {
+  const acc = deepmerge(CHANGES_TEMPLATE, {});
+  const commitsWithoutExactChangelogTemplate = [];
 
   commits.forEach(item => {
-    const change = item.commit.message;
-    const message = getChangeMessage(item);
+    let change = item.commit.message.split("\n").find(line => {
+      return CHANGELOG_LINE_REGEXP.test(line);
+    });
+    if (!change) {
+      commitsWithoutExactChangelogTemplate.push(item.sha);
+      change = item.commit.message;
+    }
+
+    const message = getChangeMessage(item, onlyMessage);
 
     if (!verbose) {
       if (isFabric(change.split("\n")[0])) return;
@@ -556,6 +615,19 @@ function getChangelogDesc(commits, verbose) {
       }
     }
   });
+
+  if (commitsWithoutExactChangelogTemplate.length > 0) {
+    console.warn(
+      chalk.redBright(
+        "Commits that have messages without following the exact changelog template"
+      )
+    );
+    console.group();
+    commitsWithoutExactChangelogTemplate.forEach(sha => {
+      console.warn(chalk.red(formatCommitLink(sha)));
+    });
+    console.groupEnd();
+  }
 
   return acc;
 }
@@ -693,15 +765,6 @@ function generateChangelog(options) {
     .then(changes => buildMarkDown(options.compare, changes));
 }
 
-module.exports = {
-  fetchCommits,
-  generateChangelog,
-  getChangeMessage,
-  getOffsetBaseCommit,
-  getOriginalCommit,
-  getFirstCommitAfterForkingFromMaster
-};
-
 if (!module["parent"]) {
   const argv = require("yargs")
     .usage(
@@ -783,3 +846,15 @@ if (!module["parent"]) {
 
 //*****************************************************************************
 //#endregion
+
+module.exports = {
+  CHANGES_TEMPLATE,
+  git,
+  fetchCommits,
+  generateChangelog,
+  getChangelogDesc,
+  getChangeMessage,
+  getOffsetBaseCommit,
+  getOriginalCommit,
+  getFirstCommitAfterForkingFromMaster
+};

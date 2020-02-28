@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "chalk": "^3.0.0",
+    "deepmerge": "^4.2.2",
     "fast-levenshtein": "^2.0.6",
     "p-limit": "^2.2.2",
     "yargs": "13.2.2"

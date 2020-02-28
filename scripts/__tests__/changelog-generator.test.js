@@ -5,13 +5,17 @@ const { EventEmitter } = require("events");
 const fs = require("fs");
 const path = require("path");
 const util = require("util");
+const deepmerge = require("deepmerge");
 
 const readFile = util.promisify(fs.readFile);
 
 const {
+  CHANGES_TEMPLATE,
+  git,
   fetchCommits,
   generateChangelog,
   getChangeMessage,
+  getChangelogDesc,
   getOffsetBaseCommit,
   getOriginalCommit,
   getFirstCommitAfterForkingFromMaster
@@ -68,23 +72,6 @@ describe(getOriginalCommit, () => {
   });
 });
 
-describe(getChangeMessage, () => {
-  it("formats a changelog entry", () => {
-    expect(
-      getChangeMessage({
-        sha: "abcd1234",
-        commit: {
-          message:
-            "Some ignored commit message\n\n[iOS] [Fixed] - Some great fixes! (#42)"
-        },
-        author: { login: "alloy" }
-      })
-    ).toEqual(
-      "- Some great fixes! ([abcd123](https://github.com/facebook/react-native/commit/abcd123) by [@alloy](https://github.com/alloy))"
-    );
-  });
-});
-
 describe(getFirstCommitAfterForkingFromMaster, () => {
   it("returns the SHA of the first commit where its first parent is on the master branch", () => {
     return getFirstCommitAfterForkingFromMaster(RN_REPO, "v0.61.5").then(
@@ -106,6 +93,23 @@ describe(getOffsetBaseCommit, () => {
     return getOffsetBaseCommit(RN_REPO, "v0.60.5", "v0.60.6").then(sha => {
       expect(sha).toEqual("35300147ca66677f42e8544264be72ac0e9d1b45");
     });
+  });
+});
+
+describe(getChangeMessage, () => {
+  it("formats a changelog entry", () => {
+    expect(
+      getChangeMessage({
+        sha: "abcde123456789",
+        commit: {
+          message:
+            "Some ignored commit message\n\n[iOS] [Fixed] - Some great fixes! (#42)"
+        },
+        author: { login: "alloy" }
+      })
+    ).toEqual(
+      "- Some great fixes! ([abcde12345](https://github.com/facebook/react-native/commit/abcde123456789) by [@alloy](https://github.com/alloy))"
+    );
   });
 });
 
@@ -162,6 +166,63 @@ describe("functions that hit GitHub's commits API", () => {
       }).then(changelog => {
         expect(changelog).toMatchSnapshot();
       });
+    });
+  });
+});
+
+/**
+ * @param {string} sha
+ */
+function getCommitMessage(sha) {
+  return git(RN_REPO, "log", "--format=%B", "-n", "1", sha);
+}
+
+/**
+ * @typedef {object} PartialPlatformChanges
+ * @property {string[]=} android
+ * @property {string[]=} ios
+ * @property {string[]=} general
+ */
+
+/**
+ * @typedef {object} PartialChanges
+ * @property {PartialPlatformChanges=} breaking
+ * @property {PartialPlatformChanges=} added
+ * @property {PartialPlatformChanges=} changed
+ * @property {PartialPlatformChanges=} deprecated
+ * @property {PartialPlatformChanges=} removed
+ * @property {PartialPlatformChanges=} fixed
+ * @property {PartialPlatformChanges=} security
+ * @property {PartialPlatformChanges=} unknown
+ */
+
+describe("formatting and attribution regression tests", () => {
+  /** @type {Array<[string, PartialChanges]>} */
+  const cases = [
+    [
+      "d8fa1206c3fecd494b0f6abb63c66488e6ced5e0",
+      {
+        fixed: {
+          android: ["Fix indexed RAM bundle"]
+        }
+      }
+    ],
+    [
+      "d37baa78f11f36aa5fb84307cc29ebe2bf444a33",
+      {
+        changed: {
+          general: [
+            "Split NativeImageLoader into NativeImageLoaderAndroid and NativeImageLoaderIOS"
+          ]
+        }
+      }
+    ]
+  ];
+  test.each(cases)("%s", (sha, expected) => {
+    return getCommitMessage(sha).then(message => {
+      const commits = [{ sha, commit: { message } }];
+      const result = getChangelogDesc(commits, true, true);
+      expect(result).toEqual(deepmerge(CHANGES_TEMPLATE, expected));
     });
   });
 });
