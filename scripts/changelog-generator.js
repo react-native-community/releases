@@ -37,7 +37,8 @@ function fetchJSON(token, path) {
         path,
         headers: {
           Authorization: `token ${token}`,
-          "User-Agent": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)"
+          "User-Agent":
+            "https://github.com/react-native-community/releases/blob/master/scripts/changelog-generator.js"
         }
       })
       .on("response", response => {
