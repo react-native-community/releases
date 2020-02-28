@@ -5,13 +5,17 @@ const { EventEmitter } = require("events");
 const fs = require("fs");
 const path = require("path");
 const util = require("util");
+const deepmerge = require("deepmerge");
 
 const readFile = util.promisify(fs.readFile);
 
 const {
+  CHANGES_TEMPLATE,
+  git,
   fetchCommits,
   generateChangelog,
   getChangeMessage,
+  getChangelogDesc,
   getOffsetBaseCommit,
   getOriginalCommit,
   getFirstCommitAfterForkingFromMaster
@@ -162,6 +166,34 @@ describe("functions that hit GitHub's commits API", () => {
       }).then(changelog => {
         expect(changelog).toMatchSnapshot();
       });
+    });
+  });
+});
+
+/**
+ * @param {string} sha
+ */
+function getCommitMessage(sha) {
+  return git(RN_REPO, "log", "--format=%B", "-n", "1", sha);
+}
+
+describe("formatting and attribution regression tests", () => {
+  test.each([
+    [
+      "d37baa78f11f36aa5fb84307cc29ebe2bf444a33",
+      {
+        changed: {
+          general: [
+            "Split NativeImageLoader into NativeImageLoaderAndroid and NativeImageLoaderIOS"
+          ]
+        }
+      }
+    ]
+  ])("%s", (sha, expected) => {
+    return getCommitMessage(sha).then(message => {
+      const commits = [{ sha, commit: { message } }];
+      const result = getChangelogDesc(commits, true, true);
+      expect(result).toEqual(deepmerge(CHANGES_TEMPLATE, expected));
     });
   });
 });
