@@ -180,6 +180,14 @@ function getCommitMessage(sha) {
 describe("formatting and attribution regression tests", () => {
   test.each([
     [
+      "d8fa1206c3fecd494b0f6abb63c66488e6ced5e0",
+      {
+        added: {
+          android: ["Fix indexed RAM bundle"]
+        }
+      }
+    ],
+    [
       "d37baa78f11f36aa5fb84307cc29ebe2bf444a33",
       {
         changed: {

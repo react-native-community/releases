@@ -470,6 +470,11 @@ function getChangeMessage(item, onlyMessage = false) {
   entry = entry.replace(/^((changelog:\s*)?(\[\w+\]\s?)+[\s-]*)/i, ""); //Remove the [General] [whatever]
   entry = entry.replace(/ \(\#\d*\)$/i, ""); //Remove the PR number if it's on the end
 
+  // Capitalize
+  if (/^[a-z]/.test(entry)) {
+    entry = entry.slice(0, 1).toUpperCase() + entry.slice(1);
+  }
+
   if (onlyMessage) {
     return entry;
   }
