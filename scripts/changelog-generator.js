@@ -199,7 +199,7 @@ function filterPreviouslyPickedCommits(existingChangelogData, commits) {
   console.warn(chalk.green("Filter previously picked commits"));
   console.group();
   const result = commits.filter(({ sha }) => {
-    if (existingChangelogData.includes(sha.slice(0, 7))) {
+    if (existingChangelogData.includes(formatSHA(sha))) {
       console.warn(chalk.yellow(formatCommitLink(sha)));
       return false;
     }
@@ -224,7 +224,7 @@ function git(gitDir, ...args) {
     if (out.stderr) {
       throw new Error(out.stderr);
     }
-    return out.stdout;
+    return out.stdout.trimRight();
   });
 }
 
@@ -319,7 +319,7 @@ function getOriginalCommits(gitDir, commits, concurrent_processes) {
 function getFirstCommitAfterForkingFromMaster(gitDir, ref) {
   return git(gitDir, "rev-list", `^${ref}`, "--first-parent", "master").then(
     out => {
-      const components = out.trimRight().split("\n");
+      const components = out.split("\n");
       return components[components.length - 1];
     }
   );
@@ -344,9 +344,7 @@ function getOffsetBaseCommit(gitDir, base, compare) {
   ])
     .then(([offsetBase, offsetCompare]) => {
       if (offsetBase === offsetCompare) {
-        return git(gitDir, "rev-list", "-n", "1", base).then(sha =>
-          sha.trimRight()
-        );
+        return git(gitDir, "rev-list", "-n", "1", base);
       } else {
         return offsetBase;
       }
@@ -433,8 +431,15 @@ function isInternal(change) {
 /**
  * @param {string} sha
  */
+function formatSHA(sha) {
+  return sha.slice(0, 7);
+}
+
+/**
+ * @param {string} sha
+ */
 function formatCommitLink(sha) {
-  return `https://github.com/facebook/react-native/commit/${sha.slice(0, 7)}`;
+  return `https://github.com/facebook/react-native/commit/${formatSHA(sha)}`;
 }
 
 /**
@@ -450,7 +455,7 @@ function getChangeMessage(item) {
   entry = entry.replace(/^((\[\w*\] ?)+ - )/i, ""); //Remove the [General] [whatever]
   entry = entry.replace(/ \(\#\d*\)$/i, ""); //Remove the PR number if it's on the end
 
-  const authorSection = `([${item.sha.slice(0, 7)}](${formatCommitLink(
+  const authorSection = `([${formatSHA(item.sha)}](${formatCommitLink(
     item.sha
   )})${
     item.author
