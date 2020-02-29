@@ -1,15 +1,13 @@
-// @ts-check
-
-const https = require("https");
-const { EventEmitter } = require("events");
-const fs = require("fs");
-const path = require("path");
-const util = require("util");
-const deepmerge = require("deepmerge");
+import https from "https";
+import { EventEmitter } from "events";
+import fs from "fs";
+import path from "path";
+import util from "util";
+import deepmerge from "deepmerge";
 
 const readFile = util.promisify(fs.readFile);
 
-const {
+import {
   CHANGES_TEMPLATE,
   git,
   fetchCommits,
@@ -18,8 +16,10 @@ const {
   getChangelogDesc,
   getOffsetBaseCommit,
   getOriginalCommit,
-  getFirstCommitAfterForkingFromMaster
-} = require("../changelog-generator");
+  getFirstCommitAfterForkingFromMaster,
+  Changes,
+  PlatformChanges
+} from "../changelog-generator";
 
 if (!process.env.RN_REPO) {
   throw new Error(
@@ -31,14 +31,11 @@ const RN_REPO = path.join(process.env.RN_REPO, ".git");
 console.warn = () => {};
 console.error = () => {};
 
-/**
- * @param {string} fixture
- */
-function requestWithFixtureResponse(fixture) {
+function requestWithFixtureResponse(fixture: string) {
   const requestEmitter = new EventEmitter();
   const responseEmitter = new EventEmitter();
-  responseEmitter["statusCode"] = 200;
-  responseEmitter["headers"] = { link: 'rel="next"' };
+  (responseEmitter as any).statusCode = 200;
+  (responseEmitter as any).headers = { link: 'rel="next"' };
   setImmediate(() => {
     requestEmitter.emit("response", responseEmitter);
     readFile(path.join(__dirname, "__fixtures__", fixture), "utf-8").then(
@@ -170,35 +167,16 @@ describe("functions that hit GitHub's commits API", () => {
   });
 });
 
-/**
- * @param {string} sha
- */
-function getCommitMessage(sha) {
+function getCommitMessage(sha: string) {
   return git(RN_REPO, "log", "--format=%B", "-n", "1", sha);
 }
 
-/**
- * @typedef {object} PartialPlatformChanges
- * @property {string[]=} android
- * @property {string[]=} ios
- * @property {string[]=} general
- */
-
-/**
- * @typedef {object} PartialChanges
- * @property {PartialPlatformChanges=} breaking
- * @property {PartialPlatformChanges=} added
- * @property {PartialPlatformChanges=} changed
- * @property {PartialPlatformChanges=} deprecated
- * @property {PartialPlatformChanges=} removed
- * @property {PartialPlatformChanges=} fixed
- * @property {PartialPlatformChanges=} security
- * @property {PartialPlatformChanges=} unknown
- */
+type PartialChanges = {
+  [K in keyof Changes]?: Partial<PlatformChanges>
+}
 
 describe("formatting and attribution regression tests", () => {
-  /** @type {Array<[string, PartialChanges]>} */
-  const cases = [
+  const cases: Array<[string, PartialChanges]> = [
     [
       "d8fa1206c3fecd494b0f6abb63c66488e6ced5e0",
       {
