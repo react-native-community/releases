@@ -10,14 +10,14 @@ version, however this is most likely a too fast moving target for most–aside
 from turn around to get a fix in being longer.
 
 To reconcile these two different use-cases, React Native’s release process is a
-different one from the one many users are familiar with in the JavaScript
+different one from the one many users are familiar within the JavaScript
 ecosystem.
 
 ## The process at a high-level
 
 1. A new version branch is branched off of the `master` branch–hereafter
    referred to as “the stable branch”.
-1. A [release candidate][RC] is released from the stable branch, allowing users
+1. A [release candidate][RC] is released from the stable branch, allowing the community
    to try it out and provide feedback–hereafter referred to as “the RC”.
 1. Additional changes that have landed in the `master` branch since the stable
    branch was originally created and are deemed required for the version to be
@@ -26,7 +26,7 @@ ecosystem.
    changes otherwise deemed an improvement for the version to be finalized, such
    as [UX]/[DX] improvements.
 1. Steps 2 through 3 are repeated until consensus is reached that the version is
-   good enough to release as a stable version.
+   good enough to be released as a stable version.
 1. A stable version is released and communications are sent out to the community
    informing them of the availability of a new stable version and what changes
    it includes.
