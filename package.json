@@ -5,7 +5,8 @@
   "scripts": {
     "format": "prettier *.md scripts{,/**}/*.js --write",
     "format:check": "prettier *.md scripts{,/**}/*.js --list-different",
-    "generate": "ts-node --transpile-only ./scripts/changelog-generator.ts",
+    "generate": "env TS_NODE_TRANSPILE_ONLY=true node $_NODE_OPTS -r ts-node/register ./scripts/changelog-generator.ts",
+    "generate:debug": "env _NODE_OPTS=--inspect-brk yarn -s generate",
     "type-check": "tsc --noEmit --pretty"
   },
   "husky": {

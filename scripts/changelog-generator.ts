@@ -672,16 +672,14 @@ ${data.unknown.ios.join("\n")}
 //#region MAIN
 //*****************************************************************************
 
-export function generateChangelog(options: {
-  token: string
-  base: string
-  compare: string
+export function getAllChangelogDescriptions(commits: Commit[], options: {
   gitDir: string
   maxWorkers: number
   existingChangelogData: string
   verbose?: boolean
+  renderOnlyMessage?: boolean
 }) {
-  return fetchCommits(options.token, options.base, options.compare)
+  return Promise.resolve(commits)
     .then(filterCICommits)
     .then(filterRevertCommits)
     .then(commits =>
@@ -690,7 +688,18 @@ export function generateChangelog(options: {
     .then(commits =>
       filterPreviouslyPickedCommits(options.existingChangelogData, commits)
     )
-    .then(commits => getChangelogDesc(commits, !!options.verbose))
+    .then(commits => getChangelogDesc(commits, !!options.verbose, !!options.renderOnlyMessage));
+}
+
+export function run(options: Parameters<typeof getAllChangelogDescriptions>[1] & {
+  token: string
+  base: string
+  compare: string
+}) {
+  return fetchCommits(options.token, options.base, options.compare)
+    .then(commits =>
+      getAllChangelogDescriptions(commits, options)
+    )
     .then(changes => buildMarkDown(options.compare, changes));
 }
 
@@ -763,7 +772,7 @@ if (!module["parent"]) {
       const existingChangelogData = fs.readFileSync(argv.changelog, "utf-8");
       return getOffsetBaseCommit(gitDir, argv.base, argv.compare)
         .then(base =>
-          generateChangelog({ ...argv, base, gitDir, existingChangelogData })
+          run({ ...argv, base, gitDir, existingChangelogData })
         )
         .then(data => console.log(data));
     })
