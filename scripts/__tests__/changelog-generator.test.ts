@@ -172,9 +172,7 @@ function getCommitMessage(sha: string) {
   return git(RN_REPO, "log", "--format=%B", "-n", "1", sha);
 }
 
-type PartialChanges = {
-  [K in keyof Changes]?: Partial<PlatformChanges>
-}
+type PartialChanges = { [K in keyof Changes]?: Partial<PlatformChanges> };
 
 describe("commit resolving,formatting and attribution regression tests", () => {
   const cases: Array<[string, PartialChanges, boolean?]> = [
@@ -201,7 +199,7 @@ describe("commit resolving,formatting and attribution regression tests", () => {
       {
         fixed: {
           android: [
-            "- View.getGlobalVisibleRect() clips result rect properly when overflow is 'hidden' ([df9abf7983](https://github.com/facebook/react-native/commit/df9abf798351c43253c449fe2c83c2cca0479d80))",
+            "- View.getGlobalVisibleRect() clips result rect properly when overflow is 'hidden' ([df9abf7983](https://github.com/facebook/react-native/commit/df9abf798351c43253c449fe2c83c2cca0479d80))"
           ]
         }
       },
@@ -211,7 +209,13 @@ describe("commit resolving,formatting and attribution regression tests", () => {
   test.each(cases)("%s", (sha, expected, renderFullEntry = false) => {
     return getCommitMessage(sha).then(message => {
       const commits = [{ sha, commit: { message } }];
-      return getAllChangelogDescriptions(commits, { gitDir: RN_REPO, existingChangelogData: "", maxWorkers: 1, verbose: true, renderOnlyMessage: !renderFullEntry }).then(result => {
+      return getAllChangelogDescriptions(commits, {
+        gitDir: RN_REPO,
+        existingChangelogData: "",
+        maxWorkers: 1,
+        verbose: true,
+        renderOnlyMessage: !renderFullEntry
+      }).then(result => {
         expect(result).toEqual(deepmerge(CHANGES_TEMPLATE, expected));
       });
     });
