@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/react-native-community/releases#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.8.6",
     "@babel/preset-typescript": "^7.8.3",
     "@types/chalk": "^2.2.0",
     "@types/fast-levenshtein": "^0.0.1",
