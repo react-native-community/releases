@@ -264,6 +264,13 @@ export function getOriginalCommit(
       "--pretty=format:%H",
       `--grep=${match[0]}`
     ).then(sha => {
+      if (sha.includes("\n")) {
+        throw new Error(
+          `Expected a single commit to match ${match[1]}, but got: ${sha
+            .split("\n")
+            .join(", ")}`
+        );
+      }
       console.warn(
         chalk.yellow(
           `${formatCommitLink(item.sha)} -> ${match[1]} -> ${formatCommitLink(
