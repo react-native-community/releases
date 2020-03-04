@@ -195,7 +195,18 @@ describe("commit resolving,formatting and attribution regression tests", () => {
           ]
         }
       }
+    ],
+    [
+      "df9abf798351c43253c449fe2c83c2cca0479d80",
+      {
+        fixed: {
+          android: [
+            "- View.getGlobalVisibleRect() clips result rect properly when overflow is 'hidden' ([df9abf7983](https://github.com/facebook/react-native/commit/df9abf798351c43253c449fe2c83c2cca0479d80))",
           ]
+        }
+      },
+      true
+    ]
   ];
   test.each(cases)("%s", (sha, expected, renderFullEntry = false) => {
     return getCommitMessage(sha).then(message => {

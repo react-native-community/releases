@@ -246,17 +246,16 @@ export function git(gitDir: string, ...args: string[]) {
 export function getOriginalCommit(gitDir: string, item: Commit): Promise<Commit | null> {
   const match = item.commit.message.match(/Differential Revision: (D\d+)/m);
   if (match) {
-    const drev = match[1];
     return git(
       gitDir,
       "log",
       "master",
       "--pretty=format:%H",
-      `--grep=${drev}`
+      `--grep=${match[0]}`
     ).then(sha => {
       console.warn(
         chalk.yellow(
-          `${formatCommitLink(item.sha)} -> ${formatCommitLink(sha)}`
+          `${formatCommitLink(item.sha)} -> ${match[1]} -> ${formatCommitLink(sha)}`
         )
       );
       return { ...item, sha } as Commit;
