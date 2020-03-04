@@ -10,8 +10,9 @@ const readFile = util.promisify(fs.readFile);
 import {
   CHANGES_TEMPLATE,
   git,
+  run,
   fetchCommits,
-  generateChangelog,
+  getAllChangelogDescriptions,
   getChangeMessage,
   getChangelogDesc,
   getOffsetBaseCommit,
@@ -150,9 +151,9 @@ describe("functions that hit GitHub's commits API", () => {
     });
   });
 
-  describe(generateChangelog, () => {
+  describe(run, () => {
     it("fetches commits, filters them, and generates markdown", () => {
-      return generateChangelog({
+      return run({
         base,
         compare,
         token: "authn-token",
@@ -171,12 +172,10 @@ function getCommitMessage(sha: string) {
   return git(RN_REPO, "log", "--format=%B", "-n", "1", sha);
 }
 
-type PartialChanges = {
-  [K in keyof Changes]?: Partial<PlatformChanges>
-}
+type PartialChanges = { [K in keyof Changes]?: Partial<PlatformChanges> };
 
-describe("formatting and attribution regression tests", () => {
-  const cases: Array<[string, PartialChanges]> = [
+describe("commit resolving,formatting and attribution regression tests", () => {
+  const cases: Array<[string, PartialChanges, boolean?]> = [
     [
       "d8fa1206c3fecd494b0f6abb63c66488e6ced5e0",
       {
@@ -194,13 +193,31 @@ describe("formatting and attribution regression tests", () => {
           ]
         }
       }
+    ],
+    [
+      "df9abf798351c43253c449fe2c83c2cca0479d80",
+      {
+        fixed: {
+          android: [
+            "- View.getGlobalVisibleRect() clips result rect properly when overflow is 'hidden' ([df9abf7983](https://github.com/facebook/react-native/commit/df9abf798351c43253c449fe2c83c2cca0479d80))"
+          ]
+        }
+      },
+      true
     ]
   ];
-  test.each(cases)("%s", (sha, expected) => {
+  test.each(cases)("%s", (sha, expected, renderFullEntry = false) => {
     return getCommitMessage(sha).then(message => {
       const commits = [{ sha, commit: { message } }];
-      const result = getChangelogDesc(commits, true, true);
-      expect(result).toEqual(deepmerge(CHANGES_TEMPLATE, expected));
+      return getAllChangelogDescriptions(commits, {
+        gitDir: RN_REPO,
+        existingChangelogData: "",
+        maxWorkers: 1,
+        verbose: true,
+        renderOnlyMessage: !renderFullEntry
+      }).then(result => {
+        expect(result).toEqual(deepmerge(CHANGES_TEMPLATE, expected));
+      });
     });
   });
 });

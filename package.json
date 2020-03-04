@@ -3,9 +3,10 @@
   "description": "Changelog for the React Native project",
   "license": "MIT",
   "scripts": {
-    "format": "prettier *.md scripts{,/**}/*.js --write",
-    "format:check": "prettier *.md scripts{,/**}/*.js --list-different",
-    "generate": "ts-node --transpile-only ./scripts/changelog-generator.ts",
+    "format": "prettier *.md scripts{,/**}/*.ts --write",
+    "format:check": "prettier *.md scripts{,/**}/*.ts --list-different",
+    "generate": "env TS_NODE_TRANSPILE_ONLY=true node $_NODE_OPTS -r ts-node/register ./scripts/changelog-generator.ts",
+    "generate:debug": "env _NODE_OPTS=--inspect-brk yarn -s generate",
     "type-check": "tsc --noEmit --pretty"
   },
   "husky": {
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/react-native-community/releases#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.8.6",
     "@babel/preset-typescript": "^7.8.3",
     "@types/chalk": "^2.2.0",
     "@types/fast-levenshtein": "^0.0.1",
