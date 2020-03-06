@@ -11,6 +11,7 @@
 
 #### Android specific
 
+- Fix setting keyboardType from breaking autoCapitalize ([233fdfc014](https://github.com/facebook/react-native/commit/233fdfc014bb4b919c7624c90e5dac614479076f) by [@safaiyeh](https://github.com/safaiyeh))
 - BREAKING: rm YogaNode parameter from YogaLogger#log ([94e8ccf9c0](https://github.com/facebook/react-native/commit/94e8ccf9c02318eb407d3ce58e5e14a273967375) by [@usikder](https://github.com/usikder))
 
 #### iOS specific
@@ -124,6 +125,7 @@
 
 #### Android specific
 
+- Improve exception message when JSC loading fails ([65d3167a80](https://github.com/facebook/react-native/commit/65d3167a802b2ca04d4f05ff972c2d51765f1e0d) by [@mhorowitz](https://github.com/mhorowitz))
 - Upgraded to Hermes 0.4.0 ([ab3c184555](https://github.com/facebook/react-native/commit/ab3c184555e382b8693cbfcdfe01ba89583ee726) by [@willholen](https://github.com/willholen))
 - Expose addCookies method ([cc845ccfb4](https://github.com/facebook/react-native/commit/cc845ccfb4c0f841b876bca55c5f70efd72be538) by [@safaiyeh](https://github.com/safaiyeh))
 - Upgrade Flipper version in default template ([939df8a01d](https://github.com/facebook/react-native/commit/939df8a01da09fd18baa4e66e2babd438db0ea8d) by [@passy](https://github.com/passy))
@@ -155,6 +157,7 @@
 
 #### iOS specific
 
+- Add `xcscheme` files for iOS template back in. ([a715decd2d](https://github.com/facebook/react-native/commit/a715decd2d3bcdab9537f3246c8398ad9869e94e) by [@pvinis](https://github.com/pvinis))
 - Remove the xcshareddata from .gitignore ([7980615d37](https://github.com/facebook/react-native/commit/7980615d371a7bf607a3787bca91cfde229c41dc) by [@pvinis](https://github.com/pvinis))
 - Updated Flipper iOS integration to be included by default in the `Debug` configuration ([619d5d60df](https://github.com/facebook/react-native/commit/619d5d60dfa94966e7104febec08166c1b5eca49) by [@alloy](https://github.com/alloy))
 - Changed doc. ([70ec7e2add](https://github.com/facebook/react-native/commit/70ec7e2add2b28ffcc68791b46a4848c482556c1) by [@jeswinsimon](https://github.com/jeswinsimon))
@@ -286,6 +289,7 @@
 
 #### iOS specific
 
+- Upgraded FlipperKit to 0.32.2 to ensure compatibility with latest `react-native-flipper` ([fbb94a30bc](https://github.com/facebook/react-native/commit/fbb94a30bc4ef667c9baadf55ca05d91a0be46fc) by [@mweststrate](https://github.com/mweststrate))
 - Resolve localization warnings ([0e4bcaa296](https://github.com/facebook/react-native/commit/0e4bcaa2960a2b1aa42dbe716fc6a35652aa7207) by [@safaiyeh](https://github.com/safaiyeh))
 - Resolve React-RCTText Xcode warning ([04fed6508b](https://github.com/facebook/react-native/commit/04fed6508b74b23c954183af3f6121fb344d2138) by [@safaiyeh](https://github.com/safaiyeh))
 - Add native support for TextInput autoFocus on iOS ([6adba409e6](https://github.com/facebook/react-native/commit/6adba409e6256fd2dcc27a4272edcedae89927af) by [@janicduplessis](https://github.com/janicduplessis))
@@ -565,6 +569,7 @@
 
 #### Android Unknown
 
+- Fix Hermes debugger being disabled by default ([b8621f5d30](https://github.com/facebook/react-native/commit/b8621f5d303442ab78dc5d745cfc86a941d4737c) by [@willholen](https://github.com/willholen))
 - Bump CLI to ^4.1.x to fix run-android ([26e7d6a062](https://github.com/facebook/react-native/commit/26e7d6a06211412a079af746750c5dd9edbfecbb) by [@alloy](https://github.com/alloy))
 - Add extra logging information in RN Android animation system ([5ddbd5c54f](https://github.com/facebook/react-native/commit/5ddbd5c54fc89f4e7fac360f6c184c08801d6fc9) by [@mdvacca](https://github.com/mdvacca))
 - Add extra logging in the Bridge exception handling ([4ad852c137](https://github.com/facebook/react-native/commit/4ad852c1376e268456cd6dcd0d240dd75d780df4) by [@mdvacca](https://github.com/mdvacca))
