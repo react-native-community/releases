@@ -31,6 +31,7 @@ _NOTE: In these examples the minor version being used is ‘0.42.x’_
 ## Iterate on the release-candidate
 
 1. Take note of all changes that were suggested on the RC-issue and hide those that are not in scope or bring attention to a new problem. Types of changes to include are:
+
    - Bug-fixes for issues introduced in earlier versions or the new version.
    - Improvements to the overall [UX]/[DX].
 
@@ -50,9 +51,8 @@ _NOTE: In these examples the minor version being used is ‘0.42.x’_
 
 1. Repeat the process from [Publish the release-candidate](TODO) onward until consensus is reached that the version is good enough to be released as a stable version.
 
-
 [releases-repo]: https://github.com/react-native-community/releases
 [gh-release]: https://github.com/facebook/react-native/releases/new
-[UX]: https://www.nngroup.com/articles/definition-user-experience/
-[DX]: https://medium.com/@albertcavalcante/what-is-dx-developer-experience-401a0e44a9d9
+[ux]: https://www.nngroup.com/articles/definition-user-experience/
+[dx]: https://medium.com/@albertcavalcante/what-is-dx-developer-experience-401a0e44a9d9
 [cherry-picking]: https://wiki.c2.com/?CherryPicking
