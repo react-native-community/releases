@@ -13,7 +13,7 @@ To reconcile these two different use-cases, React Native’s release process is 
 1. Additional changes that have landed in the `master` branch since the stable branch was originally created and are deemed required for the version to be finalized are [cherry-picked][cherry-picking] onto the stable branch. These can be bug-fixes for previously released versions, including the RC, or changes otherwise deemed an improvement for the version to be finalized, such as [UX]/[DX] improvements.
 1. Steps 2 through 3 are repeated until consensus is reached that the version is good enough to be released as a stable version.
 1. A stable version is released and communications are sent out to the community informing them of the availability of a new stable version and what changes it includes.
-1. Steps 2 through 5 are repeated on the stable branch for bug-fixes _only_ and will result in a [patch release].
+1. Steps 3 through 5 are repeated on the stable branch for bug-fixes _only_ and will result in a [patch release]. I.e. no release-candidates are published for patch versions.
 1. The entire process is repeated from step 1 for the next [minor version], which will include all the changes that were made on the `master` branch previously but were not yet cherry-picked.
 
 ```
@@ -64,36 +64,29 @@ To reconcile these two different use-cases, React Native’s release process is 
 │                  │                                       ▼                 │
                    │                 │  │  ┌──────────────────────────────┐
 │                  │                       │                              │  │
-                   │                 │  │  │         0.42.1-rc.0          │
+                   │                 │  │  │            0.42.1            │
 │                  │                       │                              │  │
                    │                 │  │  └──────────────────────────────┘
-│                  │                                       │                 │
-                   │                 │  │                  ▼
-│                  │                       ┌──────────────────────────────┐  │
-                   │                 │  │  │                              │
-│                  │                       │            0.42.1            │  │
-                   │                 │  │  │                              │
-│                  │                       └──────────────────────────────┘  │
-                   │                 │  │
-│                  │                     ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘
-                   │                 │
-│                  │                    ┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
-                   │                 │               0.43-stable             │
-│                  ▼                    │
-   ┌──────────────────────────────┐  │     ┌──────────────────────────────┐  │
-│  │                              │     │  │                              │
-   │    make feature B better     │──┼────▶│         0.43.0-rc.0          │  │
-│  │                              │     │  │                              │
-   └──────────────────────────────┘  │     └──────────────────────────────┘  │
-│                  │                    │                  │
-                   ▼                 │                     ▼                 │
-│  ┌──────────────────────────────┐     │  ┌──────────────────────────────┐
-   │                              │  │     │                              │  │
-│  │      [history repeats]       │     │  │      [history repeats]       │
-   │                              │  │     │                              │  │
-│  └──────────────────────────────┘     │  └──────────────────────────────┘
-                                     │                                       │
-└ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─   └ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+│                  │                                                         │
+                   │                 │  └ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+│                  │
+                   │                 │  ┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
+│                  │                                 0.43-stable             │
+                   ▼                 │  │
+│  ┌──────────────────────────────┐        ┌──────────────────────────────┐  │
+   │                              │  │  │  │                              │
+│  │    make feature B better     │───────▶│         0.43.0-rc.0          │  │
+   │                              │  │  │  │                              │
+│  └──────────────────────────────┘        └──────────────────────────────┘  │
+                   │                 │  │                  │
+│                  ▼                                       ▼                 │
+   ┌──────────────────────────────┐  │  │  ┌──────────────────────────────┐
+│  │                              │        │                              │  │
+   │      [history repeats]       │  │  │  │      [history repeats]       │
+│  │                              │        │                              │  │
+   └──────────────────────────────┘  │  │  └──────────────────────────────┘
+│                                                                            │
+ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘  └ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
 ```
 
 [rc]: https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate
