@@ -8,9 +8,9 @@ To reconcile these two different use-cases, React Native’s release process is 
 
 ## The process at a high-level
 
-1. A new version branch is branched off of the `master` branch–hereafter referred to as “the stable branch”.
-1. A [release candidate][rc] is released from the stable branch, allowing the community to try it out and provide feedback–hereafter referred to as “the RC”.
-1. Additional changes that have landed in the `master` branch since the stable branch was originally created and are deemed required for the version to be finalized are [cherry-picked][cherry-picking] onto the stable branch. These can be bug-fixes for previously released versions, including the RC, or changes otherwise deemed an improvement for the version to be finalized, such as [UX]/[DX] improvements.
+1. A new version branch is branched off of the `master` branch–hereafter referred to as “the stable branch”. [⇒](./docs/release-process.md#initialize-the-process-for-a-new-version)
+1. A [release candidate][rc] is released from the stable branch, allowing the community to try it out and provide feedback–hereafter referred to as “the RC”. [⇒](./docs/release-process.md#publish-the-release-candidate)
+1. Additional changes that have landed in the `master` branch since the stable branch was originally created and are deemed required for the version to be finalized are [cherry-picked][cherry-picking] onto the stable branch. These can be bug-fixes for previously released versions, including the RC, or changes otherwise deemed an improvement for the version to be finalized, such as [UX]/[DX] improvements. [⇒](./docs/release-process.md#iterate-on-the-release-candidate)
 1. Steps 2 through 3 are repeated until consensus is reached that the version is good enough to be released as a stable version.
 1. A stable version is released and communications are sent out to the community informing them of the availability of a new stable version and what changes it includes.
 1. Steps 3 through 5 are repeated on the stable branch for bug-fixes _only_ and will result in a [patch release]. I.e. no release-candidates are published for patch versions.
