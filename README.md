@@ -8,7 +8,7 @@ Stay up-to-date with the release activities of [React Native](https://github.com
 
 At Facebook React Native is not consumed via released versions, instead they always consume the latest version of the `master` branch. This means that they are able to iterate fast for _their_ needs; if something is broken the fix is a single commit away.
 
-External users are of course similarly able to consume the latest `master` version, however this is most likely a too fast moving target for most–aside from turn around to get a fix in being longer.
+External users are of course similarly able to consume the latest `master` version, however this is most likely a too fast moving target for most.
 
 To reconcile these two different use-cases, React Native’s release process is a different one from the one many users are familiar within the JavaScript ecosystem.
 

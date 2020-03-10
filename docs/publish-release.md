@@ -2,6 +2,8 @@
 
 _Point people: [@alloy](https://github.com/alloy), [@grabbou](https://github.com/grabbou), [@kelset](https://github.com/kelset)_
 
+ℹ️ _Note that some of these steps rely on Xcode and thus the usage of a Mac._
+
 1. First cleanup your environment:
 
    - Remove the `RNTester` and `RNTestProject` apps from both the iOS simulator and Android emulator.
