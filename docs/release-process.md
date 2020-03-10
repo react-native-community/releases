@@ -30,6 +30,8 @@ _NOTE: In these examples the minor version being used is ‘0.42.x’_
 
 ## Iterate on the release-candidate
 
+1. First make note of the current CI status, so it can be compared after picking commits.
+
 1. Take note of all changes that were suggested on the RC-issue and hide those that are not in scope or bring attention to a new problem. Types of changes to include are:
 
    - Bug-fixes for issues introduced in earlier versions or the new version.
@@ -49,7 +51,7 @@ _NOTE: In these examples the minor version being used is ‘0.42.x’_
 
 1. Leave a comment stating what commits were **not** picked and for what reason.
 
-1. Repeat the process from [Publish the release-candidate](TODO) onward until consensus is reached that the version is good enough to be released as a stable version.
+1. Repeat the process from [publishing](#publish-the-release-candidate) onward until consensus is reached that the version is good enough to be released as a stable version.
 
 ## Release stable version
 
