@@ -1,3 +1,3 @@
-# Upgrade helper
+# Upgrade-helper
 
-Point people: [@pvinis](https://github.com/pvinis)
+Point people: [@lucasbento](https://github.com/lucasbento), [@pvinis](https://github.com/pvinis)
