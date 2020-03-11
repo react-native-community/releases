@@ -10,6 +10,7 @@ import deepmerge from "deepmerge";
 import https from "https";
 import child_process from "child_process";
 import { IncomingHttpHeaders } from "http";
+import yargs from "yargs";
 
 const execFile = util.promisify(child_process.execFile);
 
@@ -743,7 +744,7 @@ export function run(
 }
 
 if (!module["parent"]) {
-  const argv = require("yargs")
+  const argv = yargs
     .usage(
       "$0 [args]",
       "Generate a React Native changelog from the commits and PRs"
@@ -773,7 +774,8 @@ if (!module["parent"]) {
         alias: "f",
         string: true,
         describe: "The path to the existing CHANGELOG.md file",
-        demandOption: true
+        demandOption: true,
+        default: path.resolve(__dirname, "../CHANGELOG.md")
       },
       token: {
         alias: "t",
