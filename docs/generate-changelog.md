@@ -1,3 +1,3 @@
 # Generate changelog
 
-Point people: [@alloy](https://github.com/alloy), [@turnrye](https://github.com/turnrye)
+Point people: [@alloy](https://github.com/alloy), [@kelset](https://github.com/kelset), [@turnrye](https://github.com/turnrye)
