@@ -44,7 +44,7 @@ yarn install
 Finally, create a GitHub ‘personal access token’ that can be used by the script to fetch commit metadata from the GitHub API.
 
 1. Visit the [token settings page](https://github.com/settings/tokens).
-1. Generate a new token and _only_ give it the `public_repo` scope.
+1. Generate a new token and **only** give it the `public_repo` scope.
 1. Store this token somewhere secure for future usage.
 
 ## Usage
