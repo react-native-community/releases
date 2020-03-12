@@ -4,7 +4,15 @@ _Point people: [@alloy](https://github.com/alloy), [@grabbou](https://github.com
 
 ℹ️ _Note that some of these steps rely on Xcode and thus the usage of a Mac._
 
-1. First cleanup your environment:
+1. All of these steps assume your working directory is an up-to-date checkout of the stable branch of the react-native repo:
+
+   ```bash
+   cd /path/to/clone/of/react-native
+   git checkout 0.42-stable
+   git pull
+   ```
+
+1. Now, assuming you have built react-native previously, cleanup your environment:
 
    - Remove the `RNTester` and `RNTestProject` apps from both the iOS simulator and Android emulator.
    - Then remove any build-artifacts:
@@ -22,6 +30,7 @@ _Point people: [@alloy](https://github.com/alloy), [@grabbou](https://github.com
 
 1. Ensure you have everything installed that’s required to cut a release:
 
+   - You have push access to the stable branch on the react-native repo.
    - The Android toolchain, as per the “Android development environment” section of [the react-native setup guide](https://reactnative.dev/docs/getting-started).
    - Download [Android NDK 21](https://developer.android.com/ndk/downloads) and place it at `~/Library/Android/android-ndk-r21`, then add the following environment setup:
      ```bash
@@ -37,6 +46,8 @@ _Point people: [@alloy](https://github.com/alloy), [@grabbou](https://github.com
      pod install --repo-update
      popd
      ```
+
+1. Launch the Android emulator, which you can do from the ‘AVD Manager’ of Android Studio.
 
 1. Run the script that will guide you through manually testing whether `RNTester` and new applications work on both iOS and Android:
 
@@ -85,4 +96,4 @@ _Point people: [@alloy](https://github.com/alloy), [@grabbou](https://github.com
    npx react-native init TestRelease --version [VERSION]
    ```
 
-1. Communicate the release as per the instructions in the release-process doc. [⇒](./release-process.md)
+1. Communicate the release as per the instructions in the release-process doc. [Read more ⇒](./release-process.md)
