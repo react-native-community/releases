@@ -2,7 +2,7 @@
 
 Point people: [@alloy](https://github.com/alloy), [@kelset](https://github.com/kelset), [@turnrye](https://github.com/turnrye)
 
-This repo contains a script that will generate a markdown formatted list of changes between two given git references (e.g. tags).
+This repo contains [a script][changelog-generator] that will generate a markdown formatted list of changes between two given [git references] (e.g. tags).
 
 The script is a little more complex than one might expect for the following reasons:
 
@@ -57,10 +57,24 @@ Consider the case where version `0.62.0` has just been published and now we need
 yarn generate --base v0.61.5 --compare v0.62.0 --repo ../react-native --token [GITHUB TOKEN]
 ```
 
-_The `base` tag could have been `v0.61.0` as well, but it would take a lot more time to complete._
-
 The script will log, to `stderr`, informative details on its progress, as well as details on changes that might require follow-up work. The generated changelog entry will be printed to `stdout` and thus could be redirected to a file, if you so wish:
 
 ```bash
 yarn -s generate […] > NEW_CHANGES.md
 ```
+
+## Post generation
+
+If you’ve generated a changelog entry to accompany a new react-native release, the next steps are to:
+
+1. Add the resulting markdown to the [`CHANGELOG.md`](../CHANGELOG.md) file.
+
+1. Remove empty sections from the generated markdown.
+
+1. Create a PR to update the `CHANGELOG.md` file in the repo and ask people to look for unexpected entries, ways to simplify the update, or ways to otherwise improve the update.
+
+1. Possibly improve [the script][changelog-generator] by adding [regression tests] for entries that failed to generate as expected.
+
+[changelog-generator]: ../scripts/changelog-generator.ts
+[regression tests]: https://github.com/react-native-community/releases/blob/88f1b15351989a715bf1d654d5c4c26171f71048/scripts/__tests__/changelog-generator.test.ts#L177
+[git references]: https://git-scm.com/book/en/v2/Git-Internals-Git-References
