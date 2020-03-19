@@ -38,7 +38,6 @@
 
 - Implement `adjustsFontSizeToFit` on Android ([2c1913f0b3](https://github.com/facebook/react-native/commit/2c1913f0b3d12147654501f7ee43af1d313655d8) by [@janicduplessis](https://github.com/janicduplessis))
 - Allow overriding `EditText` construction in `ReactTextInputShadowNode` ([a5b5d1a805](https://github.com/facebook/react-native/commit/a5b5d1a805a9c54d325763b432be1cf2c8811dc9) by [@mchowning](https://github.com/mchowning))
-- Implement TurboModule eager initialization support ([b7f49a84d5](https://github.com/facebook/react-native/commit/b7f49a84d5dc17ce4d5591cd0b02c35479a99f7f) by [@RSNara](https://github.com/RSNara))
 - Give ReactContextBaseJavaModule a 0 arg ctor ([e69be0ae55](https://github.com/facebook/react-native/commit/e69be0ae555dad2bdec0ea7e4fc62a4ee349cc2d) by [@RSNara](https://github.com/RSNara))
 - Use generated Java delegate for setting properties on ReactViewPagerManager ([bca8fa5a16](https://github.com/facebook/react-native/commit/bca8fa5a16b1c0441145b1d10462b234b787c131) by [@makovkastar](https://github.com/makovkastar))
 - Add setNativeSelectedPosition command to ReactPickerManager ([a62a685b14](https://github.com/facebook/react-native/commit/a62a685b1412d1c0eda036262af2ee97338aac40) by [@makovkastar](https://github.com/makovkastar))
