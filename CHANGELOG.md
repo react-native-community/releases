@@ -50,7 +50,6 @@
 - Add support for onRequestClose prop to Modal on iOS 13+ ([8e5fac89bb](https://github.com/facebook/react-native/commit/8e5fac89bbdcc3028bb5d81a358969a235abf991) by [@koke](https://github.com/koke))
 - Added web socket support for macOS (Catalyst), enabling debug builds and live reload ([f21fa4ecb7](https://github.com/facebook/react-native/commit/f21fa4ecb73551bdc4c3d70db9fc13e93b19b3a6) by [@andymatuschak](https://github.com/andymatuschak))
 - Added Flipper to template app ([52cd9cd6fe](https://github.com/facebook/react-native/commit/52cd9cd6fec0866177aa02f7129a8b3d8b2bdbea) by [@safaiyeh](https://github.com/safaiyeh))
-- Make RCTDevLoadingView TurboModule-compatible ([294e31b7c2](https://github.com/facebook/react-native/commit/294e31b7c258be636f3b5bc816228cd4339e1d0f) by [@RSNara](https://github.com/RSNara))
 - Summary: Changelog: [iOS][changed] - Added another build flag for DevLoadingView ([3ceb95954a](https://github.com/facebook/react-native/commit/3ceb95954a5992f5af66e84a77906e0e41d82f46) by [@mmmulani](https://github.com/mmmulani))
 - RCTRedBox ability to add extra buttons ([fc80a51457](https://github.com/facebook/react-native/commit/fc80a5145719ccecbefc25bfedbad6224b54efab) by [@mmmulani](https://github.com/mmmulani))
 - Add definition for `queryCache` in ImageLoader ([ea1e8bbd34](https://github.com/facebook/react-native/commit/ea1e8bbd34b655a062ef13b6c2c76660ed43d31a) by [@lunaleaps](https://github.com/lunaleaps))
