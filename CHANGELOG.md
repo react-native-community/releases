@@ -38,7 +38,6 @@
 - Implement `adjustsFontSizeToFit` on Android ([2c1913f0b3](https://github.com/facebook/react-native/commit/2c1913f0b3d12147654501f7ee43af1d313655d8) by [@janicduplessis](https://github.com/janicduplessis))
 - Allow overriding `EditText` construction in `ReactTextInputShadowNode` ([a5b5d1a805](https://github.com/facebook/react-native/commit/a5b5d1a805a9c54d325763b432be1cf2c8811dc9) by [@mchowning](https://github.com/mchowning))
 - Give ReactContextBaseJavaModule a 0 arg ctor ([e69be0ae55](https://github.com/facebook/react-native/commit/e69be0ae555dad2bdec0ea7e4fc62a4ee349cc2d) by [@RSNara](https://github.com/RSNara))
-- Assert TurboModuleRegistry isn't null before using it in CatalystInstanceImpl ([56ad1bd38a](https://github.com/facebook/react-native/commit/56ad1bd38ac772f2a2335de5ac798eb8c3526f1e) by [@RSNara](https://github.com/RSNara))
 - Add Android support for fontVariant prop ([c2c4b43dfe](https://github.com/facebook/react-native/commit/c2c4b43dfe098342a6958a20f6a1d841f7526e48) by [@mcuelenaere](https://github.com/mcuelenaere))
 - Check in TurboModules codegen ([d3ac9fa0c3](https://github.com/facebook/react-native/commit/d3ac9fa0c3780b43b73de97831b75cf0a7efe9c4) by [@RSNara](https://github.com/RSNara))
 - Custom entry file on android using `ENTRY_FILE` environment variable ([a0d8740878](https://github.com/facebook/react-native/commit/a0d87408782fcf191988612198493d9130736c72))
