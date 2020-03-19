@@ -13,6 +13,7 @@
 
 - Fix setting keyboardType from breaking autoCapitalize ([233fdfc014](https://github.com/facebook/react-native/commit/233fdfc014bb4b919c7624c90e5dac614479076f) by [@safaiyeh](https://github.com/safaiyeh))
 - BREAKING: rm YogaNode parameter from YogaLogger#log ([94e8ccf9c0](https://github.com/facebook/react-native/commit/94e8ccf9c02318eb407d3ce58e5e14a273967375) by [@usikder](https://github.com/usikder))
+- Limit size of video uploaded from camera roll in android (< 100 MB) ([d21f695edf](https://github.com/facebook/react-native/commit/d21f695edf367166a03af4c6e9376cd498b38665))
 
 #### iOS specific
 
@@ -41,7 +42,6 @@
 - Add Android support for fontVariant prop ([c2c4b43dfe](https://github.com/facebook/react-native/commit/c2c4b43dfe098342a6958a20f6a1d841f7526e48) by [@mcuelenaere](https://github.com/mcuelenaere))
 - Custom entry file on android using `ENTRY_FILE` environment variable ([a0d8740878](https://github.com/facebook/react-native/commit/a0d87408782fcf191988612198493d9130736c72))
 - Added statusBarTranslucent prop to Modal component, to indicate if StatusBar should appear translucent. ([c35a419e5d](https://github.com/facebook/react-native/commit/c35a419e5d2eca4fe9cd0939df085088fa88423b) by [@pfulop](https://github.com/pfulop))
-- Limit size of video uploaded from camera roll in android ([d21f695edf](https://github.com/facebook/react-native/commit/d21f695edf367166a03af4c6e9376cd498b38665))
 - New Appearance module exposes the user's current Night theme preference ([17862a78db](https://github.com/facebook/react-native/commit/17862a78db59d60fe316961f9111efc330ba2abd) by [@hramos](https://github.com/hramos))
 - Fading edges props to the FlatList and ScrollView components ([51aacd5241](https://github.com/facebook/react-native/commit/51aacd5241c4b4c0b9b1e1b8f9dabac45e5b5291))
 
