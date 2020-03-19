@@ -33,7 +33,6 @@
 - Expose RCTNetworking as a public 'Networking' API ([42ee5ec934](https://github.com/facebook/react-native/commit/42ee5ec93425c95dee6125a6ff6864ec647636aa) by [@adamchel](https://github.com/adamchel))
 - Reset sMatrixDecompositionContext before applying transformations ([bf01dfbc97](https://github.com/facebook/react-native/commit/bf01dfbc97ea8be9d88214ab31809f2f42d6c064) by [@makovkastar](https://github.com/makovkastar))
 - UseColorScheme hook ([51681e80ab](https://github.com/facebook/react-native/commit/51681e80ab0d1efdaba684b626994b694d53d2a5) by [@hramos](https://github.com/hramos))
-- Add recursive imports for Array types ([685a25ca2e](https://github.com/facebook/react-native/commit/685a25ca2ea5bfeeaef9802fd031e8a972561811) by [@TheSavior](https://github.com/TheSavior))
 - Delete UIManagerStatTracker ([84f148ba44](https://github.com/facebook/react-native/commit/84f148ba440d6bfea56b77a10b4be4730a626d66) by [@TheSavior](https://github.com/TheSavior))
 
 #### Android specific
