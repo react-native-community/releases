@@ -62,8 +62,6 @@
 - Summary: Changelog: [iOS][changed] - Added another build flag for DevLoadingView ([3ceb95954a](https://github.com/facebook/react-native/commit/3ceb95954a5992f5af66e84a77906e0e41d82f46) by [@mmmulani](https://github.com/mmmulani))
 - Added RCTConvertOptionalVecToArray with default converter ([c29ec64d94](https://github.com/facebook/react-native/commit/c29ec64d94a0dc908e630fbe751cd5ed3d1699d9) by [@RSNara](https://github.com/RSNara))
 - RCTRedBox ability to add extra buttons ([fc80a51457](https://github.com/facebook/react-native/commit/fc80a5145719ccecbefc25bfedbad6224b54efab) by [@mmmulani](https://github.com/mmmulani))
-- Make RCTAsyncLocalStorage TurboModule-compatible ([2b62bd7695](https://github.com/facebook/react-native/commit/2b62bd7695e568ff97797f161ef9f75a063eece2) by [@RSNara](https://github.com/RSNara))
-- Make RCTAlertManager TurboModule-compatible ([da6274ba76](https://github.com/facebook/react-native/commit/da6274ba76afaa271d6a74e4143479c93fa9bb14) by [@RSNara](https://github.com/RSNara))
 - Add definition for `queryCache` in ImageLoader ([ea1e8bbd34](https://github.com/facebook/react-native/commit/ea1e8bbd34b655a062ef13b6c2c76660ed43d31a) by [@lunaleaps](https://github.com/lunaleaps))
 - Add `prefetchImage` to ImageLoader native module. ([40667a8147](https://github.com/facebook/react-native/commit/40667a814701cadae5493f599393ef94608c300f) by [@lunaleaps](https://github.com/lunaleaps))
 - Add and use reloadWithReason to iOS ([2ccc8fbc28](https://github.com/facebook/react-native/commit/2ccc8fbc28ffcf05fdf058e2b330a15df0c8286f) by [@rickhanlonii](https://github.com/rickhanlonii))
