@@ -25,7 +25,6 @@
 - Added missing `console` polyfills in release builds. ([b7ab922bb3](https://github.com/facebook/react-native/commit/b7ab922bb3fd4f9f103e583bed9e9295a9521578) by [@yungsters](https://github.com/yungsters))
 - Added RCTUtilsUIOverride as a way to shortcut obtaining presentedViewController from sharedApplication to a supplied view controller for extensions. ([2968450195](https://github.com/facebook/react-native/commit/29684501952c9c1b7577009fc7caf1449c96f434))
 - Platform.select now supports native as an option. ([a6fc0898de](https://github.com/facebook/react-native/commit/a6fc0898de990959d201b9665501deda215e41a4) by [@koke](https://github.com/koke))
-- Update README.md ([5a4d68feb5](https://github.com/facebook/react-native/commit/5a4d68feb5be71173755a3f0b5e0a54ed5c8a581) by [@Priyanshu2001](https://github.com/Priyanshu2001))
 - Add ProgressView to LegacyViewManagerInterop white list ([53f003f233](https://github.com/facebook/react-native/commit/53f003f233e323f3c75ecbd833da0e5ea3a4111e) by [@sammy-SC](https://github.com/sammy-SC))
 - Add accessibilityValue prop on Touchables ([3042407f43](https://github.com/facebook/react-native/commit/3042407f43b69994abc00350681f1f0a79683bfd) by [@xuelgong](https://github.com/xuelgong))
 - Partial React Sync ([90a9d59679](https://github.com/facebook/react-native/commit/90a9d59679bb955cc509938d5ef95f29346debbc) by [@rickhanlonii](https://github.com/rickhanlonii))
