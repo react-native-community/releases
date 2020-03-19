@@ -145,8 +145,6 @@
 - Add deprecation warning to AccessibilityInfo.fetch ([523ab83338](https://github.com/facebook/react-native/commit/523ab8333800afbfb169c6fd70ab6611fe07cc2a) by [@TheSavior](https://github.com/TheSavior))
 - Remove scrollWithoutAnimationTo from ScrollView ([c7e89909da](https://github.com/facebook/react-native/commit/c7e89909da70ac5290f9971080eb897567db3e43) by [@TheSavior](https://github.com/TheSavior))
 
-#### Android specific
-
 #### iOS specific
 
 - Deprecate [bridge reload] API - prefer RCTReloadCommand ([ffe2306164](https://github.com/facebook/react-native/commit/ffe2306164ed7edfe5ab9d75b5122791037a852a) by [@PeteTheHeat](https://github.com/PeteTheHeat))
