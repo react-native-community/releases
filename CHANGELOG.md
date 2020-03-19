@@ -28,7 +28,6 @@
 - Add ProgressView to LegacyViewManagerInterop white list ([53f003f233](https://github.com/facebook/react-native/commit/53f003f233e323f3c75ecbd833da0e5ea3a4111e) by [@sammy-SC](https://github.com/sammy-SC))
 - Add accessibilityValue prop on Touchables ([3042407f43](https://github.com/facebook/react-native/commit/3042407f43b69994abc00350681f1f0a79683bfd) by [@xuelgong](https://github.com/xuelgong))
 - Partial React Sync ([90a9d59679](https://github.com/facebook/react-native/commit/90a9d59679bb955cc509938d5ef95f29346debbc) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Use volatile for sDidInit in ReactBridge ([c3a07b6dcc](https://github.com/facebook/react-native/commit/c3a07b6dcc56260b288dc11ed168fd723c7c4256) by [@ejanzer](https://github.com/ejanzer))
 - Export props type for TextInput component ([9a2bc71064](https://github.com/facebook/react-native/commit/9a2bc7106415e09f23c9667dd8ec3dffec4e76a7) by [@vasilich6107](https://github.com/vasilich6107))
 - Export the DevSettings module, add `addMenuItem` method ([cc068b0551](https://github.com/facebook/react-native/commit/cc068b055185e6fb7341bf945f69a74ed3ef4814) by [@janicduplessis](https://github.com/janicduplessis))
 - Expose RCTNetworking as a public 'Networking' API ([42ee5ec934](https://github.com/facebook/react-native/commit/42ee5ec93425c95dee6125a6ff6864ec647636aa) by [@adamchel](https://github.com/adamchel))
