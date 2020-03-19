@@ -4,7 +4,7 @@
 
 This feature release of React Native includes many changes for the platform: it has been a lot of work, so please refer to the [blog post](ADD) for overlook of the main changes - like Flipper support and the new LogBox.
 
-We also know that these past few weeks have been incredibly challenging for all of us, all over the world. The impact of COVID-19 is still reshaping our lives as we write these lines, and we hope that you will not feel pressured into upgrading to this latest. We went through more testing than ever to make sure that this new 62 will be a pleasant experience for everyone, but we are not perfect; so if you see a bug please remember that we are all in this together, and that it takes time for it to be addressed is because we all have higher priorities at this moment.
+As always, we’ve done our best to test this release at length, especially with this being such a large release. However, note that due to challenges caused by COVID-19 to people everywhere, we [the maintainers] may not have the bandwidth we’d like to have for quick follow-up on bugs and/or a patch release. When you run into an issue, please do try to provide a fix or a detailed ticket, but be prepared to revert to the version you were previously on to unblock yourself.
 
 For upgrading users, some of the progress comes with breaking changes; manual intervention may be required for your app - so remember to rely on the [upgrade-helper](https://react-native-community.github.io/upgrade-helper/) for a detailed breakdown of the needed changed.
 
