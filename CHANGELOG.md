@@ -60,7 +60,6 @@
 - Added Flipper to template app ([52cd9cd6fe](https://github.com/facebook/react-native/commit/52cd9cd6fec0866177aa02f7129a8b3d8b2bdbea) by [@safaiyeh](https://github.com/safaiyeh))
 - Make RCTDevLoadingView TurboModule-compatible ([294e31b7c2](https://github.com/facebook/react-native/commit/294e31b7c258be636f3b5bc816228cd4339e1d0f) by [@RSNara](https://github.com/RSNara))
 - Summary: Changelog: [iOS][changed] - Added another build flag for DevLoadingView ([3ceb95954a](https://github.com/facebook/react-native/commit/3ceb95954a5992f5af66e84a77906e0e41d82f46) by [@mmmulani](https://github.com/mmmulani))
-- Added RCTConvertOptionalVecToArray with default converter ([c29ec64d94](https://github.com/facebook/react-native/commit/c29ec64d94a0dc908e630fbe751cd5ed3d1699d9) by [@RSNara](https://github.com/RSNara))
 - RCTRedBox ability to add extra buttons ([fc80a51457](https://github.com/facebook/react-native/commit/fc80a5145719ccecbefc25bfedbad6224b54efab) by [@mmmulani](https://github.com/mmmulani))
 - Add definition for `queryCache` in ImageLoader ([ea1e8bbd34](https://github.com/facebook/react-native/commit/ea1e8bbd34b655a062ef13b6c2c76660ed43d31a) by [@lunaleaps](https://github.com/lunaleaps))
 - Add `prefetchImage` to ImageLoader native module. ([40667a8147](https://github.com/facebook/react-native/commit/40667a814701cadae5493f599393ef94608c300f) by [@lunaleaps](https://github.com/lunaleaps))
