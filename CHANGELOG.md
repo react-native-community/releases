@@ -1,6 +1,6 @@
 # Changelog
 
-## [v0.62.0]
+## v0.62.0
 
 ### Breaking
 
@@ -12,7 +12,7 @@
 #### Android specific
 
 - Fix setting keyboardType from breaking autoCapitalize ([233fdfc014](https://github.com/facebook/react-native/commit/233fdfc014bb4b919c7624c90e5dac614479076f) by [@safaiyeh](https://github.com/safaiyeh))
-- BREAKING: rm YogaNode parameter from YogaLogger#log ([94e8ccf9c0](https://github.com/facebook/react-native/commit/94e8ccf9c02318eb407d3ce58e5e14a273967375) by [@usikder](https://github.com/usikder))
+- Remove YogaNode parameter from YogaLogger#log ([94e8ccf9c0](https://github.com/facebook/react-native/commit/94e8ccf9c02318eb407d3ce58e5e14a273967375) by [@usikder](https://github.com/usikder))
 - Limit size of video uploaded from camera roll in android (< 100 MB) ([d21f695edf](https://github.com/facebook/react-native/commit/d21f695edf367166a03af4c6e9376cd498b38665))
 
 #### iOS specific
