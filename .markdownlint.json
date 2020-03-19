@@ -2,5 +2,6 @@
   "default": true,
   "line-length": false,
   "no-duplicate-header": false,
-  "MD029": { "style": "ordered" }
+  "MD029": { "style": "ordered" },
+  "MD033": false
 }

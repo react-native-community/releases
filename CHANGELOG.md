@@ -670,7 +670,7 @@
 
 This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/151) to improve the quality of the 0.61 release. Thanks to everyone who contributed!
 
-#### Android specific
+### Android specific
 
 - Fix bundling assets in monorepo ([a3b0804867](https://github.com/facebook/react-native/commit/a3b08048674e324dbe1f0ca816f35607e9e06a2f) by [@Esemesek](https://github.com/Esemesek))
 - Fix multiple `set-cookie` not aggregated correctly in response headers ([1df8bd4932](https://github.com/facebook/react-native/commit/1df8bd4932f42958c01dccf44cee92b75a6988ed) by **Vincent Cheung**)
