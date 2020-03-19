@@ -44,7 +44,6 @@
 - Limit size of video uploaded from camera roll in android ([d21f695edf](https://github.com/facebook/react-native/commit/d21f695edf367166a03af4c6e9376cd498b38665))
 - New Appearance module exposes the user's current Night theme preference ([17862a78db](https://github.com/facebook/react-native/commit/17862a78db59d60fe316961f9111efc330ba2abd) by [@hramos](https://github.com/hramos))
 - Fading edges props to the FlatList and ScrollView components ([51aacd5241](https://github.com/facebook/react-native/commit/51aacd5241c4b4c0b9b1e1b8f9dabac45e5b5291))
-- Fading edges props to the FlatList and ScrollView components ([f8a64f9d61](https://github.com/facebook/react-native/commit/f8a64f9d61054046bffc286df3e9abf805aac0d4))
 
 #### iOS specific
 
