@@ -2,6 +2,19 @@
 
 ## v0.62.0
 
+This feature release of React Native includes many changes for the platform: it has been a lot of work, so please refer to the [blog post](ADD) for overlook of the main changes - like Flipper support and the new LogBox.
+
+We also know that these past few weeks have been incredibly challenging for all of us, all over the world. The impact of COVID-19 is still reshaping our lives as we write these lines, and we hope that you will not feel pressured into upgrading to this latest. We went through more testing than ever to make sure that this new 62 will be a pleasant experience for everyone, but we are not perfect; so if you see a bug please remember that we are all in this together, and that it takes time for it to be addressed is because we all have higher priorities at this moment.
+
+For upgrading users, some of the progress comes with breaking changes; manual intervention may be required for your app - so remember to rely on the [upgrade-helper](https://react-native-community.github.io/upgrade-helper/) for a detailed breakdown of the needed changed.
+
+We are, in particular, aware that you may hit some issues on the Android side - for both, at the issue linked here, there's a workaround in place already:
+
+- [Release version instacrash on Android](https://github.com/facebook/react-native/issues/28163)
+- [APK size increases after Gradle version bump](https://github.com/facebook/react-native/issues/28330)
+
+You can participate in the conversation around this release in [this issue](ADD) - where you can post links to your bug reports and cherry-pick suggestions for coming patch releases.
+
 ### Breaking
 
 - Removing <TextInput>'s `onTextInput` event ([3f7e0a2c96](https://github.com/facebook/react-native/commit/3f7e0a2c9601fc186f25bfd794cd0008ac3983ab) by [@shergin](https://github.com/shergin))
