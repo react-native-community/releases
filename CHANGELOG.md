@@ -20,8 +20,6 @@
 
 ### Added
 
-- Add test for the `processColorArray` to make sure it maps correctly ([3c4b1d6c4f](https://github.com/facebook/react-native/commit/3c4b1d6c4faad30110a0cc7a5025715a5da44ec7) by [@talhaazhar](https://github.com/talhaazhar))
-- Clean up unused functions on ReactContext ([3963c7aa56](https://github.com/facebook/react-native/commit/3963c7aa56ee54614aff77dd7f7250b227159192) by [@ejanzer](https://github.com/ejanzer))
 - Add getNativeScrollRef method to FlatList component ([bde1d63c85](https://github.com/facebook/react-native/commit/bde1d63c853630609b22c87121c125775dd1f5cb) by [@kacieb](https://github.com/kacieb))
 - Add missing accessibility props on Touchables ([8c0c860e38](https://github.com/facebook/react-native/commit/8c0c860e38f57e18296f689e47dfb4a54088c260) by [@xuelgong](https://github.com/xuelgong))
 - Added missing `console` polyfills in release builds. ([b7ab922bb3](https://github.com/facebook/react-native/commit/b7ab922bb3fd4f9f103e583bed9e9295a9521578) by [@yungsters](https://github.com/yungsters))
