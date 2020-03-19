@@ -39,7 +39,6 @@
 - Allow overriding `EditText` construction in `ReactTextInputShadowNode` ([a5b5d1a805](https://github.com/facebook/react-native/commit/a5b5d1a805a9c54d325763b432be1cf2c8811dc9) by [@mchowning](https://github.com/mchowning))
 - Give ReactContextBaseJavaModule a 0 arg ctor ([e69be0ae55](https://github.com/facebook/react-native/commit/e69be0ae555dad2bdec0ea7e4fc62a4ee349cc2d) by [@RSNara](https://github.com/RSNara))
 - Add Android support for fontVariant prop ([c2c4b43dfe](https://github.com/facebook/react-native/commit/c2c4b43dfe098342a6958a20f6a1d841f7526e48) by [@mcuelenaere](https://github.com/mcuelenaere))
-- Check in TurboModules codegen ([d3ac9fa0c3](https://github.com/facebook/react-native/commit/d3ac9fa0c3780b43b73de97831b75cf0a7efe9c4) by [@RSNara](https://github.com/RSNara))
 - Custom entry file on android using `ENTRY_FILE` environment variable ([a0d8740878](https://github.com/facebook/react-native/commit/a0d87408782fcf191988612198493d9130736c72))
 - Added statusBarTranslucent prop to Modal component, to indicate if StatusBar should appear translucent. ([c35a419e5d](https://github.com/facebook/react-native/commit/c35a419e5d2eca4fe9cd0939df085088fa88423b) by [@pfulop](https://github.com/pfulop))
 - Limit size of video uploaded from camera roll in android ([d21f695edf](https://github.com/facebook/react-native/commit/d21f695edf367166a03af4c6e9376cd498b38665))
