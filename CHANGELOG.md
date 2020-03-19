@@ -31,7 +31,6 @@
 - Export props type for TextInput component ([9a2bc71064](https://github.com/facebook/react-native/commit/9a2bc7106415e09f23c9667dd8ec3dffec4e76a7) by [@vasilich6107](https://github.com/vasilich6107))
 - Export the DevSettings module, add `addMenuItem` method ([cc068b0551](https://github.com/facebook/react-native/commit/cc068b055185e6fb7341bf945f69a74ed3ef4814) by [@janicduplessis](https://github.com/janicduplessis))
 - Expose RCTNetworking as a public 'Networking' API ([42ee5ec934](https://github.com/facebook/react-native/commit/42ee5ec93425c95dee6125a6ff6864ec647636aa) by [@adamchel](https://github.com/adamchel))
-- Reset sMatrixDecompositionContext before applying transformations ([bf01dfbc97](https://github.com/facebook/react-native/commit/bf01dfbc97ea8be9d88214ab31809f2f42d6c064) by [@makovkastar](https://github.com/makovkastar))
 - UseColorScheme hook ([51681e80ab](https://github.com/facebook/react-native/commit/51681e80ab0d1efdaba684b626994b694d53d2a5) by [@hramos](https://github.com/hramos))
 
 #### Android specific
@@ -227,6 +226,7 @@
 
 #### Android specific
 
+- Reset sMatrixDecompositionContext before applying transformations ([bf01dfbc97](https://github.com/facebook/react-native/commit/bf01dfbc97ea8be9d88214ab31809f2f42d6c064) by [@makovkastar](https://github.com/makovkastar))
 - Fix animations in OSS debug builds by modifying `Platform.isTesting()` behavior ([1fbc6a7c17](https://github.com/facebook/react-native/commit/1fbc6a7c178d13421b0b84d6ea01f9174105325f) by [@PeteTheHeat](https://github.com/PeteTheHeat))
 - Template instacrash from missing androidx dependency ([99ef72cad7](https://github.com/facebook/react-native/commit/99ef72cad73da25d76bf8177272724cfe6cece61) by [@alloy](https://github.com/alloy))
 - Use modern Flipper SDK version for RNTester ([8259a9d369](https://github.com/facebook/react-native/commit/8259a9d369c310f4c31e50e2ad5157f5c5a8dc30) by [@passy](https://github.com/passy))
