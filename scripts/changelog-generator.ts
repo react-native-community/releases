@@ -22,7 +22,8 @@ const CHANGE_TYPE = [
   "removed",
   "fixed",
   "security",
-  "unknown"
+  "unknown",
+  "failed"
 ] as const;
 
 const CHANGE_CATEGORY = ["android", "ios", "general", "internal"] as const;
@@ -571,6 +572,8 @@ export function getChangelogDesc(
       } else {
         acc.security.general.push(message);
       }
+    } else if (item.commit.message.match(/changelog/i)) {
+      acc.failed.general.push(message);
     } else {
       if (isAndroidCommit(change)) {
         acc.unknown.android.push(message);
@@ -698,6 +701,10 @@ ${data.unknown.android.join("\n")}
 #### iOS Unknown
 
 ${data.unknown.ios.join("\n")}
+
+#### Failed to parse
+
+${data.failed.general.join("\n")}
 `;
 }
 
