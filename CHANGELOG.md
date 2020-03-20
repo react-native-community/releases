@@ -17,13 +17,17 @@ You can participate in the conversation around this release in [this issue](ADD)
 
 ### Breaking
 
+- React DevTools v4 integration ([92a3c9da0a](https://github.com/facebook/react-native/commit/92a3c9da0a38870a8bad7c91bdc3ddb494f6e5f2) by [@bvaughn](https://github.com/bvaughn))
 - Removing <TextInput>'s `onTextInput` event ([3f7e0a2c96](https://github.com/facebook/react-native/commit/3f7e0a2c9601fc186f25bfd794cd0008ac3983ab) by [@shergin](https://github.com/shergin))
 - Remove TextInput's `inputView` prop ([1804e7cbea](https://github.com/facebook/react-native/commit/1804e7cbea707a35046118090966a54031edfae8) by [@TheSavior](https://github.com/TheSavior))
 - Animated: Remove `defaultProps` Parameter ([a70987cee2](https://github.com/facebook/react-native/commit/a70987cee24bcd027b9c4a5aa85dfd6a1aab74b3) by [@yungsters](https://github.com/yungsters))
 - RN: Delete `TextInput.selectionState` Prop ([2becdfd404](https://github.com/facebook/react-native/commit/2becdfd4041f7f28138ba3a61c03e17c06dc2e50) by [@yungsters](https://github.com/yungsters))
-- Remove accessibilityStates property. ([7b35f427fd](https://github.com/facebook/react-native/commit/7b35f427fd66cb0f36921b992095fe5b3c14d8b9))
 - Remove framesToPop from bridge ([a483f802fd](https://github.com/facebook/react-native/commit/a483f802fddfd927f2baa0d95e2b4094d452cddd) by [@motiz88](https://github.com/motiz88))
 - Remove TimePickerAndroid from React Native ([dbf070c51e](https://github.com/facebook/react-native/commit/dbf070c51ecd14127a8317faa75cb661697b5a6b) by [@cpojer](https://github.com/cpojer))
+- Remove scrollWithoutAnimationTo from ScrollView ([c7e89909da](https://github.com/facebook/react-native/commit/c7e89909da70ac5290f9971080eb897567db3e43) by [@TheSavior](https://github.com/TheSavior))
+- Bump CLI to ^4.2.x ([be5088401f](https://github.com/facebook/react-native/commit/be5088401fd8e19d57adda42d275cab437448064) by [@alloy](https://github.com/alloy)) - for details on what v4 of the CLI improves on (like monorepo support), please refer to the [dedicated blog post](https://callstack.com/blog/react-native-cli-3-1-0-and-4-0-0-whats-new/) and the [release notes](https://github.com/react-native-community/cli/releases)
+- Remove accessibilityStates property. ([7b35f427fd](https://github.com/facebook/react-native/commit/7b35f427fd66cb0f36921b992095fe5b3c14d8b9) by [@marcmulcahy](https://github.com/marcmulcahy))
+
 
 #### Android specific
 
@@ -33,8 +37,6 @@ You can participate in the conversation around this release in [this issue](ADD)
 - Remove "Reload on JS change" from RN Android ([478df155e7](https://github.com/facebook/react-native/commit/478df155e70a4ce30219adcac6f0801c4e4d10ec) by [@cpojer](https://github.com/cpojer))
 
 #### iOS specific
-
-- React DevTools v4 integration ([92a3c9da0a](https://github.com/facebook/react-native/commit/92a3c9da0a38870a8bad7c91bdc3ddb494f6e5f2) by [@bvaughn](https://github.com/bvaughn))
 
 ### Added
 
@@ -52,12 +54,12 @@ You can participate in the conversation around this release in [this issue](ADD)
 - UseColorScheme hook ([51681e80ab](https://github.com/facebook/react-native/commit/51681e80ab0d1efdaba684b626994b694d53d2a5) by [@hramos](https://github.com/hramos))
 - Add unstable_enableLogBox ([dd8e5f468a](https://github.com/facebook/react-native/commit/dd8e5f468a29e299647ffbd0887f53afd24936e3) by [@rickhanlonii](https://github.com/rickhanlonii))
 - Add onSlidingComplete callbacks when sliders adjusted via a11y. ([c7aa6dc827](https://github.com/facebook/react-native/commit/c7aa6dc8270c0eabc913fe6c617c8131e3f4b3c5))
-- Add accessibilityValuedescription property. ([7df3eea1a7](https://github.com/facebook/react-native/commit/7df3eea1a79f12c2dfff1976d0cef605a83232ec))
 - Expose Hermes Sampling Profiler in default react native templates ([15ecb60d6d](https://github.com/facebook/react-native/commit/15ecb60d6deb96fcb7b0ef70faccd10594ededa3) by [@axe-fb](https://github.com/axe-fb))
 - Add error-subclass-name lint rule ([6611c4b8f4](https://github.com/facebook/react-native/commit/6611c4b8f42520add983cc48fe4e14f7a02cc7cf) by [@motiz88](https://github.com/motiz88))
 - Add getSize method to ImageLoader ([06d3031281](https://github.com/facebook/react-native/commit/06d3031281f87ae552abe57cc11868314ee1320e) by [@lunaleaps](https://github.com/lunaleaps))
 - Add HostComponent to the public API of React Native ([a446a38aaa](https://github.com/facebook/react-native/commit/a446a38aaab5bea2e279f1958cfd90090bfd7e09) by [@TheSavior](https://github.com/TheSavior))
 - Add RCTExceptionsManager.reportException ([9a57145f52](https://github.com/facebook/react-native/commit/9a57145f52a03678da02d5d00cbe11eed3f5a0fc) by [@motiz88](https://github.com/motiz88))
+- Add accessibilityValue property ([7df3eea1a7](https://github.com/facebook/react-native/commit/7df3eea1a79f12c2dfff1976d0cef605a83232ec) by [@marcmulcahy](https://github.com/marcmulcahy))
 
 #### Android specific
 
@@ -69,6 +71,7 @@ You can participate in the conversation around this release in [this issue](ADD)
 - Added statusBarTranslucent prop to Modal component, to indicate if StatusBar should appear translucent. ([c35a419e5d](https://github.com/facebook/react-native/commit/c35a419e5d2eca4fe9cd0939df085088fa88423b) by [@pfulop](https://github.com/pfulop))
 - New Appearance module exposes the user's current Night theme preference ([17862a78db](https://github.com/facebook/react-native/commit/17862a78db59d60fe316961f9111efc330ba2abd) by [@hramos](https://github.com/hramos))
 - Fading edges props to the FlatList and ScrollView components ([51aacd5241](https://github.com/facebook/react-native/commit/51aacd5241c4b4c0b9b1e1b8f9dabac45e5b5291))
+- Support removeClippedSubviews for horizontal ScrollViews ([42152a3fa3](https://github.com/facebook/react-native/commit/42152a3fa3f949f5112461753eb44a436355dfb1))
 
 #### iOS specific
 
@@ -96,7 +99,6 @@ You can participate in the conversation around this release in [this issue](ADD)
 - TouchableWithoutFeedback overhauled as a class without propTypes. ([ebf7d75816](https://github.com/facebook/react-native/commit/ebf7d758164873169937321a4dccc3782359a0d3) by [@yungsters](https://github.com/yungsters))
 - TextInput now properly sends native the end selection location on change ([dff490d140](https://github.com/facebook/react-native/commit/dff490d140010913d3209a2f3e987914b9c4eee4) by [@TheSavior](https://github.com/TheSavior))
 - Partial React Sync from 6cff70a74...bb1853f73 ([222a0895d9](https://github.com/facebook/react-native/commit/222a0895d9941635938738507fb4fa3b4231adbc) by [@TheSavior](https://github.com/TheSavior))
-- Don't crash when pretty-format is not available ([25a21b8e49](https://github.com/facebook/react-native/commit/25a21b8e4984c27a28f3c3400479934014227163))
 - React sync for revisions 0b61e2698...6cff70a74 (Includes React 16.11.0) ([1edce56a9d](https://github.com/facebook/react-native/commit/1edce56a9d6c0c6aa2ebc42200394e8f9ad88663) by [@gaearon](https://github.com/gaearon))
 - TextInput now uses `forwardRef` allowing it to be used directly by new APIs requiring a host component. ([bbc5c35a61](https://github.com/facebook/react-native/commit/bbc5c35a61cd3af47ccb2dc62430e4b6a4d4e08f) by [@TheSavior](https://github.com/TheSavior))
 - Split NativeImageLoader into NativeImageLoaderAndroid and NativeImageLoaderIOS ([d37baa78f1](https://github.com/facebook/react-native/commit/d37baa78f11f36aa5fb84307cc29ebe2bf444a33) by [@ejanzer](https://github.com/ejanzer))
@@ -107,7 +109,6 @@ You can participate in the conversation around this release in [this issue](ADD)
 - TextInput no longer does an extra round trip to native on focus/blur ([e9b4928311](https://github.com/facebook/react-native/commit/e9b4928311513d3cbbd9d875827694eab6cfa932) by [@TheSavior](https://github.com/TheSavior))
 - React partial sync for 15ed22757...2cfa5ea92 ([0799910705](https://github.com/facebook/react-native/commit/0799910705be868981b7cc9ddf03a2e82297031c) by [@TheSavior](https://github.com/TheSavior))
 - Flow types for Animated components now validates prop names and yields the new component instance. ([e22946c25a](https://github.com/facebook/react-native/commit/e22946c25a91c8dcd15876495ded024b360163db) by [@yungsters](https://github.com/yungsters))
-- Refs on an Animated component are now the internal component. The `getNode` call has been deprecated. ([66e72bb4e0](https://github.com/facebook/react-native/commit/66e72bb4e00aafbcb9f450ed5db261d98f99f82a) by [@yungsters](https://github.com/yungsters))
 - RN: View Type Refinement for Events ([654d9d07c3](https://github.com/facebook/react-native/commit/654d9d07c3d5b556825f560be107f7d425ee5c0e) by [@yungsters](https://github.com/yungsters))
 - Partial React Sync for revisions 4eeee358e12c...2b18a13d2bf ([bb29cd92cc](https://github.com/facebook/react-native/commit/bb29cd92cc96ee288c59e51689e6495c0c5ac895) by [@TheSavior](https://github.com/TheSavior))
 - Render collapsed JavaScript frames in RedBox ([468d1a2d2e](https://github.com/facebook/react-native/commit/468d1a2d2e6c72d7c6d435ecaad8499997584de6) by [@motiz88](https://github.com/motiz88))
@@ -176,6 +177,7 @@ You can participate in the conversation around this release in [this issue](ADD)
 - Add deprecation warning to AccessibilityInfo.fetch ([523ab83338](https://github.com/facebook/react-native/commit/523ab8333800afbfb169c6fd70ab6611fe07cc2a) by [@TheSavior](https://github.com/TheSavior))
 - Remove scrollWithoutAnimationTo from ScrollView ([c7e89909da](https://github.com/facebook/react-native/commit/c7e89909da70ac5290f9971080eb897567db3e43) by [@TheSavior](https://github.com/TheSavior))
 - Make setting useNativeDriver required. Add runtime warning if not specified ([5876052615](https://github.com/facebook/react-native/commit/5876052615f4858ed5fc32fa3da9b64695974238) by [@TheSavior](https://github.com/TheSavior))
+- Refs on an Animated component are now the internal component. The `getNode` call has been deprecated. ([66e72bb4e0](https://github.com/facebook/react-native/commit/66e72bb4e00aafbcb9f450ed5db261d98f99f82a) by [@yungsters](https://github.com/yungsters))
 
 #### iOS specific
 
@@ -223,6 +225,7 @@ You can participate in the conversation around this release in [this issue](ADD)
 - NativeAnimated - Don't restore default values when components unmount ([686ab49107](https://github.com/facebook/react-native/commit/686ab49107df8ed20d4e810f1366715cd70b4a31) by [@janicduplessis](https://github.com/janicduplessis))
 - Fix eslint-config peer dependency warnings ([1353da5a53](https://github.com/facebook/react-native/commit/1353da5a538d4a6f76fc9530711394cf981034a0) by [@friederbluemle](https://github.com/friederbluemle))
 - Add WebSocket to eslint globals ([af8ea06bb4](https://github.com/facebook/react-native/commit/af8ea06bb44e84ce51d4ca4e76f0d66bf34323bd) by [@dr2009](https://github.com/dr2009))
+- Add Intl to eslint globals. ([f6a62f9ae2](https://github.com/facebook/react-native/commit/f6a62f9ae2278c0f3a1e5c1a6ec3b7cca3421a41) by [@StasD](https://github.com/StasD))
 - Fix link to SUPPORT in README.md ([b1455e84fa](https://github.com/facebook/react-native/commit/b1455e84fa55b1eb856dd48cf8979a510aa6245e) by [@AndreyAkinshin](https://github.com/AndreyAkinshin))
 - Remove style rules from eslint config for prettier options ([e4b62bb139](https://github.com/facebook/react-native/commit/e4b62bb139c258b65a9ebf2a8ee692ea52c3afab) by [@iRoachie](https://github.com/iRoachie))
 - Fix an internal thread safety issue in Yoga ([6c177d8332](https://github.com/facebook/react-native/commit/6c177d8332639dd9827d188d32ee7d6afc889472) by [@swolchok](https://github.com/swolchok))
@@ -256,6 +259,8 @@ You can participate in the conversation around this release in [this issue](ADD)
 - Fix throttling in scroll view ([4159e20146](https://github.com/facebook/react-native/commit/4159e201462c346c456de1fa869d88a9cce7b6d4) by [@sammy-SC](https://github.com/sammy-SC))
 - Fix TimingAnimation rounding error issue ([77b6e26538](https://github.com/facebook/react-native/commit/77b6e2653835af61b186903eae45d67f35351ade) by [@MartinSherburn](https://github.com/MartinSherburn))
 - Fix recycling of Switch ([a261e6dfb2](https://github.com/facebook/react-native/commit/a261e6dfb2680a955943db53c4b0a7bb887bfe22) by [@sammy-SC](https://github.com/sammy-SC))
+- Don't crash when pretty-format is not available ([25a21b8e49](https://github.com/facebook/react-native/commit/25a21b8e4984c27a28f3c3400479934014227163))
+- Add onSlidingComplete callbacks when sliders adjusted via a11y. ([c7aa6dc827](https://github.com/facebook/react-native/commit/c7aa6dc8270c0eabc913fe6c617c8131e3f4b3c5) by [@marcmulcahy](https://github.com/marcmulcahy))
 
 #### Android specific
 
@@ -293,6 +298,7 @@ You can participate in the conversation around this release in [this issue](ADD)
 - Summary: [Android][fixed] - Make sure the default accessibility hint is read for buttons on Android. ([f8dff0bcb3](https://github.com/facebook/react-native/commit/f8dff0bcb3147b7a1aa8ac7159952d848e198e29))
 - Bring back JS bundle loading progress bar on Android ([7b9d6d19e2](https://github.com/facebook/react-native/commit/7b9d6d19e2c0854aa53587ef68ce715fb7803e2a) by [@makovkastar](https://github.com/makovkastar))
 - Android Q related NaN error fix - don't try to do math with NaN values ([db5994980d](https://github.com/facebook/react-native/commit/db5994980df136c5cce6cd90348b4bf18180562f))
+- Avoid throwing exceptions when the host activity is not FragmentActivity ([7cfabf42b8](https://github.com/facebook/react-native/commit/7cfabf42b816de758d8e52896bbab0c50e3a802a) by [@mganandraj](https://github.com/mganandraj))
 
 #### iOS specific
 
