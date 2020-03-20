@@ -72,6 +72,8 @@ You can participate in the conversation around this release in [this issue](ADD)
 - New Appearance module exposes the user's current Night theme preference ([17862a78db](https://github.com/facebook/react-native/commit/17862a78db59d60fe316961f9111efc330ba2abd) by [@hramos](https://github.com/hramos))
 - Fading edges props to the FlatList and ScrollView components ([51aacd5241](https://github.com/facebook/react-native/commit/51aacd5241c4b4c0b9b1e1b8f9dabac45e5b5291))
 - Support removeClippedSubviews for horizontal ScrollViews ([42152a3fa3](https://github.com/facebook/react-native/commit/42152a3fa3f949f5112461753eb44a436355dfb1))
+- Integrate ReactContextContainerFactory as part of ReactImageViewManager ([882e4a3f17](https://github.com/facebook/react-native/commit/882e4a3f17bdb893dd02eb6ac903673eb35a34b1) by [@mdvacca](https://github.com/mdvacca))
+- Introducing ReactCallerContextFactory interface ([9713b63d9a](https://github.com/facebook/react-native/commit/9713b63d9ac1e1ae85accd86b78b351ac6295d01) by [@mdvacca](https://github.com/mdvacca))
 
 #### iOS specific
 
@@ -182,6 +184,9 @@ You can participate in the conversation around this release in [this issue](ADD)
 #### iOS specific
 
 - Deprecate [bridge reload] API - prefer RCTReloadCommand ([ffe2306164](https://github.com/facebook/react-native/commit/ffe2306164ed7edfe5ab9d75b5122791037a852a) by [@PeteTheHeat](https://github.com/PeteTheHeat))
+
+#### Android specific
+- Deprecate CallerContext from ReactImageManager ([8accd77c45](https://github.com/facebook/react-native/commit/8accd77c45a4b051bf02904c3485d6a0dcd27631) by [@mdvacca](https://github.com/mdvacca))
 
 ### Removed
 
@@ -299,6 +304,7 @@ You can participate in the conversation around this release in [this issue](ADD)
 - Bring back JS bundle loading progress bar on Android ([7b9d6d19e2](https://github.com/facebook/react-native/commit/7b9d6d19e2c0854aa53587ef68ce715fb7803e2a) by [@makovkastar](https://github.com/makovkastar))
 - Android Q related NaN error fix - don't try to do math with NaN values ([db5994980d](https://github.com/facebook/react-native/commit/db5994980df136c5cce6cd90348b4bf18180562f))
 - Avoid throwing exceptions when the host activity is not FragmentActivity ([7cfabf42b8](https://github.com/facebook/react-native/commit/7cfabf42b816de758d8e52896bbab0c50e3a802a) by [@mganandraj](https://github.com/mganandraj))
+- Fix crash when using TextInput.FontVariant prop in Android API level < 26 ([e885ddedb9](https://github.com/facebook/react-native/commit/e885ddedb9b0a025cb8031414dcc4bd22744a0eb) by [@mdvacca](https://github.com/mdvacca))
 
 #### iOS specific
 
