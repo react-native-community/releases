@@ -2,18 +2,11 @@
 
 ## v0.62.0
 
-This feature release of React Native includes many changes for the platform: it has been a lot of work, so please refer to the [blog post](ADD) for overlook of the main changes - like Flipper support and the new LogBox.
+This major release includes Flipper support by default, improved dark mode support, moving AppleTV to react-native-tvos, and more. See the [blog](https://reactnative.dev/blog/2020/03/24/version-0.62) for all of the highlights.
 
-As always, we’ve done our best to test this release at length, especially with this being such a large release. However, note that due to challenges caused by COVID-19 to people everywhere, we [the maintainers] may not have the bandwidth we’d like to have for quick follow-up on bugs and/or a patch release. When you run into an issue, please do try to provide a fix or a detailed ticket, but be prepared to revert to the version you were previously on to unblock yourself.
+We’re releasing this version to respect the work of hundreds of contributors who made this release possible and to prevent the release from falling too far behind master. Please be mindful of the reduced capacity of contributors to help with issues and prepare to delay upgrading if necessary.
 
-For upgrading users, some of the progress comes with breaking changes; manual intervention may be required for your app - so remember to rely on the [upgrade-helper](https://react-native-community.github.io/upgrade-helper/) for a detailed breakdown of the needed changed.
-
-We are, in particular, aware that you may hit some issues on the Android side - for both, at the issue linked here, there's a workaround in place already:
-
-- [Release version instacrash on Android](https://github.com/facebook/react-native/issues/28163)
-- [APK size increases after Gradle version bump](https://github.com/facebook/react-native/issues/28330)
-
-You can participate in the conversation around this release in [this issue](ADD) - where you can post links to your bug reports and cherry-pick suggestions for coming patch releases.
+If you're upgrading, manual intervention may be required for your app. Please see the [upgrade-helper](https://react-native-community.github.io/upgrade-helper/) for a detailed breakdown of the changes required and see [this issue](ADD) for help upgrading.
 
 ### Breaking
 
@@ -49,7 +42,6 @@ You can participate in the conversation around this release in [this issue](ADD)
 - Add `unstable_enableLogBox` ([dd8e5f468a](https://github.com/facebook/react-native/commit/dd8e5f468a29e299647ffbd0887f53afd24936e3) by [@rickhanlonii](https://github.com/rickhanlonii))
 - Expose Hermes Sampling Profiler ([15ecb60d6d](https://github.com/facebook/react-native/commit/15ecb60d6deb96fcb7b0ef70faccd10594ededa3) by [@axe-fb](https://github.com/axe-fb))
 - Add `error-subclass-name` lint rule ([6611c4b8f4](https://github.com/facebook/react-native/commit/6611c4b8f42520add983cc48fe4e14f7a02cc7cf) by [@motiz88](https://github.com/motiz88))
-- Add `getSize` method to ImageLoader ([06d3031281](https://github.com/facebook/react-native/commit/06d3031281f87ae552abe57cc11868314ee1320e) by [@lunaleaps](https://github.com/lunaleaps))
 - Add `HostComponent` to the public API of React Native ([a446a38aaa](https://github.com/facebook/react-native/commit/a446a38aaab5bea2e279f1958cfd90090bfd7e09) by [@TheSavior](https://github.com/TheSavior))
 - Add `RCTExceptionsManager.reportException` ([9a57145f52](https://github.com/facebook/react-native/commit/9a57145f52a03678da02d5d00cbe11eed3f5a0fc) by [@motiz88](https://github.com/motiz88))
 - Add `accessibilityValue` property ([7df3eea1a7](https://github.com/facebook/react-native/commit/7df3eea1a79f12c2dfff1976d0cef605a83232ec) by [@marcmulcahy](https://github.com/marcmulcahy))
@@ -70,9 +62,6 @@ You can participate in the conversation around this release in [this issue](ADD)
 #### iOS specific
 
 - Added web socket support for macOS ([f21fa4ecb7](https://github.com/facebook/react-native/commit/f21fa4ecb73551bdc4c3d70db9fc13e93b19b3a6) by [@andymatuschak](https://github.com/andymatuschak))
-- Add `queryCache` to ImageLoader ([ea1e8bbd34](https://github.com/facebook/react-native/commit/ea1e8bbd34b655a062ef13b6c2c76660ed43d31a) by [@lunaleaps](https://github.com/lunaleaps))
-- Add `prefetchImage` to ImageLoader ([40667a8147](https://github.com/facebook/react-native/commit/40667a814701cadae5493f599393ef94608c300f) by [@lunaleaps](https://github.com/lunaleaps))
-- Add `getSizeWithHeaders` to ImageLoader ([db20260b03](https://github.com/facebook/react-native/commit/db20260b03187b507eacb231fbda0648ed85c0e4) by [@lunaleaps](https://github.com/lunaleaps))
 - Added Warning message Linking API with Phones in iOS Simulator ([e1d89fbd9d](https://github.com/facebook/react-native/commit/e1d89fbd9df91679ec36e955a3d0f699c2d5e777) by [@espipj](https://github.com/espipj))
 - Added missing deps for React-CoreModules ([15b2353382](https://github.com/facebook/react-native/commit/15b2353382c46dc5f0130ff44b9deb6a2361e3e5) by [@fkgozali](https://github.com/fkgozali))
 - Expose the `isPackagerRunning` methods on RCTBundleURLProvider ([fe9cba74fa](https://github.com/facebook/react-native/commit/fe9cba74fa6241b4c38a3df9481d3634ebd51bf9) by [@afoxman](https://github.com/afoxman))
