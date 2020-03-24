@@ -18,10 +18,10 @@ You can participate in the conversation around this release in [this issue](ADD)
 ### Breaking
 
 - React DevTools v4 integration ([92a3c9da0a](https://github.com/facebook/react-native/commit/92a3c9da0a38870a8bad7c91bdc3ddb494f6e5f2) by [@bvaughn](https://github.com/bvaughn))
-- Removing <TextInput>'s `onTextInput` event ([3f7e0a2c96](https://github.com/facebook/react-native/commit/3f7e0a2c9601fc186f25bfd794cd0008ac3983ab) by [@shergin](https://github.com/shergin))
-- Remove TextInput's `inputView` prop ([1804e7cbea](https://github.com/facebook/react-native/commit/1804e7cbea707a35046118090966a54031edfae8) by [@TheSavior](https://github.com/TheSavior))
+- Remove `TextInput`'s `onTextInput` prop ([3f7e0a2c96](https://github.com/facebook/react-native/commit/3f7e0a2c9601fc186f25bfd794cd0008ac3983ab) by [@shergin](https://github.com/shergin))
+- Remove `TextInput`'s `inputView` prop ([1804e7cbea](https://github.com/facebook/react-native/commit/1804e7cbea707a35046118090966a54031edfae8) by [@TheSavior](https://github.com/TheSavior))
 - Animated: Remove `defaultProps` Parameter ([a70987cee2](https://github.com/facebook/react-native/commit/a70987cee24bcd027b9c4a5aa85dfd6a1aab74b3) by [@yungsters](https://github.com/yungsters))
-- RN: Delete `TextInput.selectionState` Prop ([2becdfd404](https://github.com/facebook/react-native/commit/2becdfd4041f7f28138ba3a61c03e17c06dc2e50) by [@yungsters](https://github.com/yungsters))
+- Remove `TextInput`'s `selectionState` prop ([2becdfd404](https://github.com/facebook/react-native/commit/2becdfd4041f7f28138ba3a61c03e17c06dc2e50) by [@yungsters](https://github.com/yungsters))
 - Remove support for `framesToPop` ([8bc02fdd52](https://github.com/facebook/react-native/commit/8bc02fdd52124d0a24d96e4a61d7688328ef1660) [cf4d45ec2b](https://github.com/facebook/react-native/commit/cf4d45ec2bcd301be7793d5840de21ec7d02275b) [a483f802fd](https://github.com/facebook/react-native/commit/a483f802fddfd927f2baa0d95e2b4094d452cddd) by [@motiz88](https://github.com/motiz88))
 - Remove `TimePickerAndroid` ([dbf070c51e](https://github.com/facebook/react-native/commit/dbf070c51ecd14127a8317faa75cb661697b5a6b) by [@cpojer](https://github.com/cpojer))
 - Remove `scrollWithoutAnimationTo` from ScrollView ([c7e89909da](https://github.com/facebook/react-native/commit/c7e89909da70ac5290f9971080eb897567db3e43) by [@TheSavior](https://github.com/TheSavior))
@@ -47,7 +47,6 @@ You can participate in the conversation around this release in [this issue](ADD)
 - Expose RCTNetworking as a public 'Networking' API ([42ee5ec934](https://github.com/facebook/react-native/commit/42ee5ec93425c95dee6125a6ff6864ec647636aa) by [@adamchel](https://github.com/adamchel))
 - Add `useColorScheme` hook ([51681e80ab](https://github.com/facebook/react-native/commit/51681e80ab0d1efdaba684b626994b694d53d2a5) by [@hramos](https://github.com/hramos))
 - Add `unstable_enableLogBox` ([dd8e5f468a](https://github.com/facebook/react-native/commit/dd8e5f468a29e299647ffbd0887f53afd24936e3) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Add `onSlidingComplete` callbacks when sliders adjusted via a11y. ([c7aa6dc827](https://github.com/facebook/react-native/commit/c7aa6dc8270c0eabc913fe6c617c8131e3f4b3c5))
 - Expose Hermes Sampling Profiler ([15ecb60d6d](https://github.com/facebook/react-native/commit/15ecb60d6deb96fcb7b0ef70faccd10594ededa3) by [@axe-fb](https://github.com/axe-fb))
 - Add `error-subclass-name` lint rule ([6611c4b8f4](https://github.com/facebook/react-native/commit/6611c4b8f42520add983cc48fe4e14f7a02cc7cf) by [@motiz88](https://github.com/motiz88))
 - Add `getSize` method to ImageLoader ([06d3031281](https://github.com/facebook/react-native/commit/06d3031281f87ae552abe57cc11868314ee1320e) by [@lunaleaps](https://github.com/lunaleaps))
@@ -82,7 +81,6 @@ You can participate in the conversation around this release in [this issue](ADD)
 ### Changed
 
 - Upgrade metro version to 0.56.3 ([4b487ba500](https://github.com/facebook/react-native/commit/4b487ba50025becb6a83c805b99d45651db6b8c1) by [@EssamEmad](https://github.com/EssamEmad))
-- Bump CLI to ^4.2.x ([be5088401f](https://github.com/facebook/react-native/commit/be5088401fd8e19d57adda42d275cab437448064) by [@alloy](https://github.com/alloy))
 - Upgrade `eslint-plugin-relay` to 1.3.12 ([f0bcfbe9be](https://github.com/facebook/react-native/commit/f0bcfbe9be0eb6a06d096a682717a23e43c39d52) by [@jstejada](https://github.com/jstejada))
 - Upgrade to Flow v0.108.0 ([d34bc5fa64](https://github.com/facebook/react-native/commit/d34bc5fa64a54dfc2e780461ee2997a4b17f8c65) by [@mvitousek](https://github.com/mvitousek))
 - Upgrade metro babel preset ([cef001713f](https://github.com/facebook/react-native/commit/cef001713fc6384353bbcb4d45645ceee44ed1a9) by [@alloy](https://github.com/alloy))
@@ -91,7 +89,6 @@ You can participate in the conversation around this release in [this issue](ADD)
 - TextInput no longer does an extra round trip to native on focus/blur ([e9b4928311](https://github.com/facebook/react-native/commit/e9b4928311513d3cbbd9d875827694eab6cfa932) by [@TheSavior](https://github.com/TheSavior))
 - Render collapsed JavaScript frames in RedBox ([468d1a2d2e](https://github.com/facebook/react-native/commit/468d1a2d2e6c72d7c6d435ecaad8499997584de6) by [@motiz88](https://github.com/motiz88))
 - Enable `no-useless-escape` lint rule ([90977b0e00](https://github.com/facebook/react-native/commit/90977b0e00acc6b3263502017c27094392e89478) by [@motiz88](https://github.com/motiz88))
-- Support `removeClippedSubviews` for horizontal ScrollViews ([42152a3fa3](https://github.com/facebook/react-native/commit/42152a3fa3f949f5112461753eb44a436355dfb1))
 - Update `DevSettings.reload` to accept a reason ([549cac63cb](https://github.com/facebook/react-native/commit/549cac63cb252037f73453c5d4e7ae5f15586607) by [@rickhanlonii](https://github.com/rickhanlonii))
 - Move `react-native-implementation.js` to `index.js` ([e54ecf907e](https://github.com/facebook/react-native/commit/e54ecf907e9f0660d05dc807ec0e67127143ebed) by [@cpojer](https://github.com/cpojer))
 - Delete Long Press Error in Touchable ([9a3d722ccb](https://github.com/facebook/react-native/commit/9a3d722ccb523f227ffd7770a809996e6cfe75d9) by [@yungsters](https://github.com/yungsters))
@@ -132,7 +129,7 @@ You can participate in the conversation around this release in [this issue](ADD)
 
 #### Android specific
 
-- Deprecate `CallerContex`t from `ReactImageManager` ([8accd77c45](https://github.com/facebook/react-native/commit/8accd77c45a4b051bf02904c3485d6a0dcd27631) by [@mdvacca](https://github.com/mdvacca))
+- Deprecate `CallerContext` from `ReactImageManager` ([8accd77c45](https://github.com/facebook/react-native/commit/8accd77c45a4b051bf02904c3485d6a0dcd27631) by [@mdvacca](https://github.com/mdvacca))
 
 ### Removed
 
@@ -146,7 +143,6 @@ You can participate in the conversation around this release in [this issue](ADD)
 - Remove `propTypes` from TouchableWithoutFeedback. ([ebf7d75816](https://github.com/facebook/react-native/commit/ebf7d758164873169937321a4dccc3782359a0d3) by [@yungsters](https://github.com/yungsters))
 - Remove `__skipSetNativeProps_FOR_TESTS_ONLY` from Animated components. ([dcd63078bd](https://github.com/facebook/react-native/commit/dcd63078bdab864830168005b940f638f1e08b23) by [@yungsters](https://github.com/yungsters))
 - Remove Apple TV Props ([548aad4ff1](https://github.com/facebook/react-native/commit/548aad4ff1dfef0d71bdd39aa83ad71e522a2546) by [@yungsters](https://github.com/yungsters))
-- Remove `scrollWithoutAnimationTo` from ScrollView ([c7e89909da](https://github.com/facebook/react-native/commit/c7e89909da70ac5290f9971080eb897567db3e43) by [@TheSavior](https://github.com/TheSavior))
 
 #### Android specific
 
