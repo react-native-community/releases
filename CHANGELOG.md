@@ -4,9 +4,9 @@
 
 This major release includes Flipper support by default, improved dark mode support, moving AppleTV to react-native-tvos, and more. See the [blog](https://reactnative.dev/blog/2020/03/24/version-0.62) for all of the highlights.
 
-We’re releasing this version to respect the work of hundreds of contributors who made this release possible and to prevent the release from falling too far behind master. Please be mindful of the reduced capacity of contributors to help with issues and prepare to delay upgrading if necessary.
+This release comes in the midst of a global pandemic. We’re releasing this version today to respect the work of hundreds of contributors who made this release possible and to prevent the release from falling too far behind master. Please be mindful of the reduced capacity of contributors to help with issues and prepare to delay upgrading if necessary.
 
-If you're upgrading, manual intervention may be required for your app. Please see the [upgrade-helper](https://react-native-community.github.io/upgrade-helper/) for a detailed breakdown of the changes required and see [this issue](ADD) for help upgrading.
+If you're upgrading, manual intervention may be required for your app. Please see the [upgrade-helper](https://react-native-community.github.io/upgrade-helper/) for a detailed breakdown of the changes required and see [this issue](https://github.com/react-native-community/releases/issues/179) for help upgrading.
 
 ### Breaking
 
