@@ -6,7 +6,11 @@ This major release includes Flipper support by default, improved dark mode suppo
 
 This release comes in the midst of a global pandemic. We’re releasing this version today to respect the work of hundreds of contributors who made this release possible and to prevent the release from falling too far behind master. Please be mindful of the reduced capacity of contributors to help with issues and prepare to delay upgrading if necessary.
 
-If you're upgrading, manual intervention may be required for your app. Please see the [upgrade-helper](https://react-native-community.github.io/upgrade-helper/) for a detailed breakdown of the changes required and see [this issue](https://github.com/react-native-community/releases/issues/179) for help upgrading.
+If you're upgrading, manual intervention may be required for your app. Please see the [upgrade-helper](https://react-native-community.github.io/upgrade-helper/) for a detailed breakdown of the changes required and see [this issue](https://github.com/react-native-community/releases/issues/179) for known issues.
+
+Note two known issues with their corresponding workarounds:	
+- [Release version instacrash on Android](https://github.com/facebook/react-native/issues/28163)	
+- [APK size increases after Gradle version bump](https://github.com/facebook/react-native/issues/28330)
 
 ### Breaking
 
