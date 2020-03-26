@@ -210,7 +210,7 @@ One known issue with workaround is regarding Android builds and [APK size increa
 - Fix animated gifs incorrectly looping ([6f2e6f170e](https://github.com/facebook/react-native/commit/6f2e6f170e3ee785d1ba844971447ea24f91185e) by [@zhongwuzw](https://github.com/zhongwuzw))
 - Fix `tintColor` in SegmentedControlIOS component ([be89e4d928](https://github.com/facebook/react-native/commit/be89e4d928a504de304f5afb19bd3cc15ae3eb7d) by [@sammy-SC](https://github.com/sammy-SC))
 
-## 0.61.5
+## v0.61.5
 
 This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/151) to improve the quality of the 0.61 release. Thanks to everyone who contributed!
 
@@ -221,7 +221,7 @@ This is a patch release that consist of a few commits requested in the [dedicate
 - Fix bundling assets in monorepo ([a3b0804867](https://github.com/facebook/react-native/commit/a3b08048674e324dbe1f0ca816f35607e9e06a2f) by [@Esemesek](https://github.com/Esemesek))
 - Fix multiple `set-cookie` not aggregated correctly in response headers ([1df8bd4932](https://github.com/facebook/react-native/commit/1df8bd4932f42958c01dccf44cee92b75a6988ed) by **Vincent Cheung**)
 
-## 0.61.4
+## v0.61.4
 
 This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/150) to improve the quality of the 0.61 release. Thanks to everyone who contributed!
 
@@ -234,7 +234,7 @@ This is a patch release that consist of a few commits requested in the [dedicate
 
 - Fix bug in iOS 13 when application would be terminated immediately when in background ([d7c9173b07](https://github.com/facebook/react-native/commit/d7c9173b07171164bcadf73855454e90e07b31be) by [@radko93](https://github.com/radko93))
 
-## 0.61.3
+## v0.61.3
 
 This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/148) to improve the quality of the 0.61 release. Thanks to everyone who contributed!
 
@@ -252,7 +252,7 @@ This is a patch release that consist of a few commits requested in the [dedicate
 
 - Release underlying resources when JS instance is GC'ed on Android try ([9b2374b542](https://github.com/facebook/react-native/commit/9b2374b542f87b7baefcfb4a3eb4f57029069b57) by [janicduplessis](https://github.com/janicduplessis))
 
-## 0.61.2
+## v0.61.2
 
 This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/146) to improve the quality of the 0.61 release. Thanks to everyone who contributed!
 
@@ -275,7 +275,7 @@ This is a patch release that consist of a few commits requested in the [dedicate
 
 - Improve error message in NativeModuleRegistryBuilder ([113c4e229c](https://github.com/facebook/react-native/commit/113c4e229c374232c46a89afd74df7117a3447c1) by [@vonovak](https://github.com/vonovak))
 
-## 0.61.1
+## v0.61.1
 
 This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/144) to improve the quality of the 0.60 release. Thanks to everyone who contributed!
 
@@ -289,7 +289,7 @@ This is a patch release that consist of a few commits requested in the [dedicate
 
 - Allow again for injecting custom root view via ReactActivityDelegate ([9f0dede1c9](https://github.com/facebook/react-native/commit/9f0dede1c913612e1241432f4cbccdc74d23a1e4) by [@kmagiera](https://github.com/kmagiera))
 
-## 0.61.0
+## v0.61.0
 
 This is a major release that includes the new reloading experience Fast Refresh. It also removes the React `.xcodeproj`, fixes `use_frameworks!` for CocoaPods support, adds a `useWindowDimensions` hook, and upgrades to React 16.9.
 
@@ -381,11 +381,11 @@ This is a major release that includes the new reloading experience Fast Refresh.
 - Fixed compatibility with CocoaPods frameworks. ([8131b7bb7b](https://github.com/facebook/react-native/commit/8131b7bb7b4794e0e7003a6e3d34e1ebe4b8b9bc) by [@jtreanor](https://github.com/jtreanor))
 - Don't call sharedApplication in App Extension ([c5ea18f738](https://github.com/facebook/react-native/commit/c5ea18f7389fe821e7a9882e4b1b30b0a1b266f4) by [@zhongwuzw](https://github.com/zhongwuzw))
 
-## [v0.60.6]
+## v0.60.6
 
 This is a small patch release with a commit to fix the build break in MSVC to help the users of react-native-windows. ([9833ee7bc1](https://github.com/facebook/react-native/commit/9833ee7bc19982acd6ccaf6ac222bc24a97667a8) by [@acoates-ms](https://github.com/acoates-ms))
 
-## [v0.60.5]
+## v0.60.5
 
 This is a patch release that consist of a few commits requested in the [dedicated conversation](https://github.com/react-native-community/releases/issues/130) to improve the quality of the 0.60 release. Thanks to everyone who contributed!
 
@@ -419,7 +419,7 @@ This is a patch release that consist of a few commits requested in the [dedicate
 
 You can participate to the conversation for the next patch release in the dedicated [issue](https://github.com/react-native-community/react-native-releases/issues/130).
 
-## [v0.60.4]
+## v0.60.4
 
 This is a patch release that contains two more Hermes related fixes, thanks to the contributors for helping improving the support!
 
@@ -432,19 +432,19 @@ This is a patch release that contains two more Hermes related fixes, thanks to t
 
 You can participate to the conversation for the next patch release in the dedicated [issue](https://github.com/react-native-community/react-native-releases/issues/130).
 
-## [v0.60.3]
+## v0.60.3
 
 This is a patch release that fixes the binary path to Hermes package, thanks to [@zoontek](https://github.com/zoontek)) for creating the PR!
 
 You can participate to the conversation for the next patch release in the dedicated [issue](https://github.com/react-native-community/react-native-releases/issues/130).
 
-## [v0.60.2]
+## v0.60.2
 
 This is a patch release that fixes the path to Hermes package.
 
 You can participate to the conversation for the next patch release in the dedicated [issue](https://github.com/react-native-community/react-native-releases/issues/130).
 
-## [v0.60.1]
+## v0.60.1
 
 This is a patch release that includes the Hermes JavaScript Engine announced at Chain React Conf 2019.
 
@@ -452,7 +452,7 @@ Check out the documentation to opt-in and give [Hermes a try](https://reactnativ
 
 You can participate to the conversation for the next patch release in the dedicated [issue](https://github.com/react-native-community/react-native-releases/issues/130).
 
-## [0.60]
+## v0.60.0
 
 This feature release of React Native includes many milestone changes for the platform. Please refer to the [blog post](https://reactnative.dev/blog/2019/07/03/version-60) for selected details. For upgrading users, some of the progress comes with breaking changes; manual intervention may be required for your app. We're also aware that existing CocoaPods integrations using `use_frameworks` are not out-of-the-box compatible with this version, but please consider [various workarounds](https://github.com/facebook/react-native/issues/25349) while we prepare a long-term solution for a future release. If you're interested in helping evaluate our next release (0.61), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/130).
 
@@ -557,13 +557,13 @@ Have you ever considered contributing to React Native itself? Be sure to check o
 - Fix Xcode build when the project's path contains whitespace ([f0770b6b37](https://github.com/facebook/react-native/commit/f0770b6b370f483fdd729bdba04069cc783353dc))
 - Move accessibility props to UIView+React ([9261035c2b](https://github.com/facebook/react-native/commit/9261035c2bf2fe9522806fb1c535a1835e7acfa2) by [@janicduplessis](https://github.com/janicduplessis))
 
-## [v0.59.10]
+## v0.59.10
 
 This is likely the last patch release for version 59 of React Native for the foreseeable future: it contains an important Android side update for the JavaScript Core, to prevent a great number of crashes mostly related to Samsung devices - thanks to [@Kudo](https://github.com/Kudo) for his work on fixing this via [557989a86f](https://github.com/facebook/react-native/commit/557989a86f8730113393ed229927d607a478e524)!
 
 Thanks everyone who participated in the [discussion](https://github.com/react-native-community/releases/issues/127).
 
-## [v0.59.9]
+## v0.59.9
 
 This is a patch fix release addressing a couple ScrollView regressions, and "future-proof" RN 59 from crashes caused by upgrading Gradle (now can support up to 5.4.1 & 3.4.0 for the plugin) and Xcode 11 Beta 1. You can upgrade to this version without upgrading your tooling.
 
@@ -591,7 +591,7 @@ Thanks everyone who contributed code or participated in the [discussion](https:/
 
 - Fix Xcode 11 Beta 1 builds ([46c7ada535](https://github.com/facebook/react-native/commit/46c7ada535f8d87f325ccbd96c24993dd522165d) by [@ericlewis](https://github.com/ericlewis))
 
-## [v0.59.8]
+## v0.59.8
 
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points (in particular, check the `KeyboardAvoidingView` change). Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/118) for cherry-picking commits.
 
@@ -631,15 +631,15 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 - Make **KeyboardAvoidingView** with `behavior="height"` resize on keyboard close ([7140a7](https://github.com/facebook/react-native/commit/3711ea69375ea420800bac97914aa0d24fc9b1a6) by [@WaldoJeffers](https://github.com/WaldoJeffers))
 - Update network inspector to have smarter scroll stickiness ([57dc37](https://github.com/facebook/react-native/commit/c06473ab464e07edbb4715f58cd13674273bb29b) by [@AlanFoster](https://github.com/AlanFoster))
 
-## [v0.59.7]
+## v0.59.7
 
 This patch release was unpublished.
 
-## [v0.59.6]
+## v0.59.6
 
 This patch release was unpublished.
 
-## [v0.59.5]
+## v0.59.5
 
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/113) for cherry-picking commits.
 
@@ -658,7 +658,7 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 - Pass back correct dimensions for application window in Dimensions module ([72b4cc](https://github.com/facebook/react-native/commit/33b55ccccad56e0b97af294749d728b67b03e658) by [@rdonnelly](https://github.com/rdonnelly))
 - Fixed warning: "RCTImagePickerManager requires main queue setup" ([effb02](https://github.com/facebook/react-native/commit/6508b88cfdccdb2da6bfde05faac4647436ce4e7) by [@scarlac](https://github.com/scarlac))
 
-## [v0.59.4]
+## v0.59.4
 
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/100) for cherry-picking commits.
 
@@ -683,7 +683,7 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 - Fix universal links not working in iOS 12 / Xcode 10 ([56679ed359](https://github.com/facebook/react-native/commit/56679ed359834c2177c8837d744cc7bf2ceb6b0a) by [@IljaDaderko](https://github.com/IljaDaderko))
 - Fix triangle views ([7a6fe0cda0](https://github.com/facebook/react-native/commit/7a6fe0cda0a1089c1c82fdd5f7f2db940f70feae) by [@zhongwuzw](https://github.com/zhongwuzw))
 
-## [v0.59.3]
+## v0.59.3
 
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/100) for cherry-picking commits.
 
@@ -710,7 +710,7 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 - Fix **TextInput**'s `maxLength` when inserting characters at begin ([17415938c7](https://github.com/facebook/react-native/commit/17415938c7180a95811db949122b8ad24a442866) by [@zhongwuzw](https://github.com/zhongwuzw))
 - Fix runtime crash in Xcode 10.2 when using `RCT_EXTERN_MODULE` for swift classes ([ff66600224](https://github.com/facebook/react-native/commit/ff66600224e78fec5d0e902f8a035b78ed31a961))
 
-## [0.59.2]
+## v0.59.2
 
 This is a patch fix release addressing regressions, crashes, and a few developer-experience pain points. Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/100) for cherry-picking commits.
 
@@ -736,7 +736,7 @@ This is a patch fix release addressing regressions, crashes, and a few developer
 - Add TLS 1.3 support to all Android versions using Conscrypt; to use this, you must add `implementation('org.conscrypt:conscrypt-android:2.0.0')` to `build.gradle` ([75af15ede4](https://github.com/facebook/react-native/commit/75af15ede44135110e40de75a649d5b15430c590) by [@dulmandakh](https://github.com/dulmandakh))
 - Turn off Metro JS Deltas by default for Android ([845189c17d](https://github.com/facebook/react-native/commit/845189c17de621cc5aa373503220c1c12f649c3c) by [@PeteTheHeat](https://github.com/PeteTheHeat))
 
-## [0.59.1]
+## v0.59.1
 
 This is a small patch release that addresses two critical issues from the 0.59.0 release.
 
@@ -750,7 +750,7 @@ This is a small patch release that addresses two critical issues from the 0.59.0
 
 - Build error warning of **Text** module ([d834197746](https://github.com/facebook/react-native/commit/d834197746371b203bd7d7aaabdc2bc581acc867) by [@zhongwuzw](https://github.com/zhongwuzw))
 
-## [0.59]
+## v0.59.0
 
 Welcome to release 0.59 of React Native! For highlights of this release, please view the dedicated [blog post](https://reactnative.dev/blog/2019/03/12/releasing-react-native-059). Thanks to those who gave feedback during the [release candidate phase](https://github.com/react-native-community/react-native-releases/issues/79). If you're interested in helping evaluate our next release (0.60), subscribe to the dedicated issue [here](https://github.com/react-native-community/react-native-releases/issues/99).
 
@@ -880,7 +880,7 @@ The following deprecations are part of our Lean Core initiative; read more about
 - Fix crash due to IllegalArgumentException when creating CookieManage ([cda8171af3](https://github.com/facebook/react-native/commit/cda8171af30815edfa331e07d1bbf605f0926303) by [@mdvacca](https://github.com/mdvacca))
 - Fix cursor placement after toggling `secureTextEntry` cursor spacing ([8ce3c1b43e](https://github.com/facebook/react-native/commit/8ce3c1b43edd47191c8e5ee8432c58f6e93dfca7) by [@ericlewis](https://github.com/facebook/react-native/commits?author=ericlewis))
 
-## [v0.58.6]
+## v0.58.6
 
 This release is fairly small, as we approach stable status for [0.59](https://github.com/react-native-community/react-native-releases/issues/79).
 
@@ -897,7 +897,7 @@ Thanks everyone who contributed code or participated in the [discussion](https:/
 - Map TextInput textContentType strings to Objective-C constants (#22611) ([a89fe4165c](https://github.com/facebook/react-native/commit/a89fe4165c2a331a9d88636d89a5a48151ab8660) by [@levibuzolic](https://github.com/levibuzolic))
 - Don't reconnect inspector if connection refused (#22625) ([d9489c4e9c](https://github.com/facebook/react-native/commit/d9489c4e9c646b79025f07635b840e9974be8cd5) by [@msand](https://github.com/msand))
 
-## [v0.58.5]
+## v0.58.5
 
 This release resolves a few bugs and includes a few improvements, listed below.
 
@@ -925,7 +925,7 @@ Thanks everyone who contributed code or participated in the [discussion](https:/
 
 - improve Android Network Security config (#23429) ([5747094532](https://github.com/facebook/react-native/commit/5747094532bace3fe6b1ebdf55235e53189baa71) by [@dulmandakh](https://github.com/dulmandakh))
 
-## [0.58.4]
+## v0.58.4
 
 This release resolves a few bugs and includes a few improvements, listed below.
 
@@ -958,25 +958,25 @@ Thanks everyone who contributed code or participated in the [discussion](https:/
 - fix incorrect type which makes animated gifs not loop forever on device (#22987) ([728a35fcf2](https://github.com/facebook/react-native/commit/728a35fcf2a2b0d695a4d7083b266eda486b1392) by [@chrisnojima](https://github.com/chrisnojima))
 - Fixes for running the simulator ([9a8c9596eb](https://github.com/facebook/react-native/commit/9a8c9596ebe41e27d37ba18d6bf09f1c931c1ff2) by [@osunnarvik](https://github.com/osunnarvik)), ([98bcfe00fb](https://github.com/facebook/react-native/commit/98bcfe00fbca066d6914a2680c3647b678caccc5) by [@cpojer](https://github.com/cpojer)) and ([8bddcb6cb0](https://github.com/facebook/react-native/commit/8bddcb6cb0914373a0aeb927f12a6d48ffc5bb84) by [@cpojer](https://github.com/cpojer))
 
-## [0.58.3]
+## v0.58.3
 
 This release resolves a regression in **StatusBar** using [these fixes](https://github.com/facebook/react-native/compare/v0.58.2...v0.58.3).
 
 Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/81) for cherry-picking commits - you can participate in the decision process for the next patch release [here](https://github.com/react-native-community/react-native-releases/issues/81).
 
-## [0.58.2]
+## v0.58.2
 
 This release fixes an issue caused by a wrongly reverted merge commit, that caused a short timeframe of commits to not actually be in the original 0.58.0. Those commits have been added to the 0.58 changelog below, as many are intertwined with the original work.
 
 Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/81) for cherry-picking commits - you can participate in the decision process for the next patch release [here](https://github.com/react-native-community/react-native-releases/issues/81).
 
-## [0.58.1]
+## v0.58.1
 
 There were some regressions with developer tools that prevented `react-native run-ios` from working properly in 0.58.0; this patch fix addresses that.
 
 Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/81) for cherry-picking commits - you can participate to the decision process for the next patch release [here](https://github.com/react-native-community/react-native-releases/issues/81).
 
-## [0.58]
+## v0.58.0
 
 Welcome to first stable release of React Native of 2019!
 There are a number of significant changes in this version, and we'd like to especially draw your attention to them:
@@ -1106,7 +1106,7 @@ Thanks to those who gave feedback during the [release candidate phase](https://g
 
 It is possible that you'll face an AAPT error regarding missing resources, [here](https://github.com/infinitered/ignite-andross/issues/244) is an example of this error, in this case, you should try to update the build tools versions to `buildToolsVersion = "28.0.2"` in your android/build.gradle file. If you maintain a react-native library which uses native code you should avoid using hardcoded versions of the build tools and use the packaged version numbers, here is an example you can [follow](https://github.com/react-native-community/react-native-linear-gradient/blob/master/android/build.gradle)
 
-## [0.57.8]
+## v0.57.8
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.3"`.
 
@@ -1152,7 +1152,7 @@ Thanks everyone who contributed code or participated in the [discussion](https:/
 
 - Bump ws package to 1.1.5 due to vulnerability issues (#21769) ([96ce6f9538](https://github.com/facebook/react-native/commit/96ce6f9538ed3559ffea6040a47b1d6a30546ab9) by [@prog1dev](https://github.com/prog1dev))
 
-## [0.57.7]
+## v0.57.7
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
 
@@ -1160,7 +1160,7 @@ This patch release fixes version 0.57.6 about losing focus in `TextInput` becaus
 
 Thanks everyone who contributed code or participated in the [discussion](https://github.com/react-native-community/react-native-releases/issues/64) for cherry-picking commits.
 
-## [v0.57.6]
+## v0.57.6
 
 **INFO NOTE**: It's highly recommended that you skip this version and upgrade to 0.57.7.
 
@@ -1202,7 +1202,7 @@ This patch release fixes a number of crashes, resolves build issues (both for iO
 - Revert [Performance improvement for loading cached images on iOS ] ([7eeb305933](https://github.com/facebook/react-native/commit/7eeb305933fca695c5a15d675bb10569c3385109) by [@kelset](https://github.com/kelset))
 - Fix inability to remove 'Disabled' state from AccessibilityStates ([5eaa2d29c0](https://github.com/facebook/react-native/commit/5eaa2d29c0c4c633a40f7241408737c754edea84))
 
-## [0.57.5]
+## v0.57.5
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.1"`.
 
@@ -1236,7 +1236,7 @@ This patch release fixes a number of crashes, resolves build issues (both for iO
 - Fix case where content of inline views didn't get relaid out ([798517a267](https://github.com/facebook/react-native/commit/798517a267841675956cb52a1c0ae493a913962a) by [@rigdern](https://github.com/rigdern))
 - Fix **InputAccessoryView**'s safe area when not attached to a **TextInput** ([2191eecf54](https://github.com/facebook/react-native/commit/2191eecf54b5c4bf278dfaf23fec46d44ac9a1f0) by [@janicduplessis](https://github.com/janicduplessis))
 
-## [0.57.4]
+## v0.57.4
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.0-alpha.8af6728"` (next version, 0.57.5, will update to `16.6.0`, and it will come soon). Also, please check the _Known issues_ section below, especially if you are using Xcode 10.
 
@@ -1301,7 +1301,7 @@ There are a few issues that don't have a finalized solution (as it happens for 0
 
 - React `16.6.0` works for the most part, aside from the Context API (check [this issue](https://github.com/facebook/react-native/issues/21975)) - and if you are eager to test the new React Hooks you will have to be patient, as they are not production ready and `16.7.alpha` is **not** yet [supported](https://github.com/facebook/react-native/issues/21967) by React Native.
 
-## [0.57.3]
+## v0.57.3
 
 **NOTE WELL**: when you upgrade to this version you **NEED** to upgrade `react` and `react-test-renderer` to version `"16.6.0-alpha.8af6728"`. Also, please check the _Known issues_ section below, especially if you are using Xcode 10.
 
@@ -1361,7 +1361,7 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 
 There are a few issues that don't have a finalized solution. In particular, when using Xcode 10 and `react-native init`, your build may fail due to third-party build steps ([#20774](https://github.com/facebook/react-native/issues/20774)). There is an open pull request which we are testing and hope to land soon ([#21458](https://github.com/facebook/react-native/pull/21458)). In the meantime, you can find a workaround here: [https://github.com/facebook/react-native/issues/20774](https://github.com/facebook/react-native/issues/20774).
 
-## [0.57.2]
+## v0.57.2
 
 Thanks to everyone that contributed to the [discussion](https://github.com/react-native-community/react-native-releases/issues/45) for cherry-picking the commits that landed in this release, and the developers who submitted those commits!
 
@@ -1407,7 +1407,7 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 - Remove overflow hidden killswitch ([59aada873e](https://github.com/facebook/react-native/commit/59aada873e13bf0b1f5e3a10cfe9a5a45c28f9fb) by [@ayc1](https://github.com/ayc1))
 - Remove absolute path parameter from transformers ([2e0d5c87e9](https://github.com/facebook/react-native/commit/2e0d5c87e93bb970ef1c8864ca44b47b36d6ae2e) by [@rafeca](https://github.com/rafeca))
 
-## [0.57.1]
+## v0.57.1
 
 We are trying, for 0.57, to approach it as a version with a longer "support", while waiting for some features to land that will allow for [0.58 to be cut](https://github.com/react-native-community/react-native-releases/issues/41).
 
@@ -1449,7 +1449,7 @@ Thanks to everyone that contributed to the [discussion](https://github.com/react
 
 - Removing development team from Xcode project ([8103c431c8](https://github.com/facebook/react-native/commit/8103c431c897c02d47cfad1e71bb2e6ddaabbdc0) by [@hramos](https://github.com/hramos))
 
-## [0.57]
+## v0.57.0
 
 Welcome to the 0.57 release of React Native! This release addresses a number of issues and has some exciting improvements. We again skipped a monthly release, focused on quality by extending the release candidate phase, and let some upstream packages reach stable for inclusion.
 
@@ -1631,7 +1631,7 @@ As mentioned a few times in the past, the core team is reviewing the repository 
 
 - `ReactInstancePackage` is now deprecated; use `@link ReactPackage` or `@link LazyReactPackage` ([b938cd524a](https://github.com/facebook/react-native/commit/b938cd524a20c239a5d67e4a1150cd19e00e45ba) by [@axe-fb](https://github.com/axe-fb))
 
-## [0.56]
+## v0.56.0
 
 Welcome to the June 2018 release of React Native!
 Over 60 contributors made [821 commits](https://github.com/facebook/react-native/compare/0.55-stable...0.56-stable) since March - and we are extremely grateful to every single one of you.
@@ -1926,7 +1926,7 @@ During the RC testing of this version, a few issues that have been opened don't 
 
 If you are using Windows to develop React Native apps, we suggest you keep an eye on [this issue in particular](https://github.com/facebook/react-native/issues/19953) since there have been many reports of issues related to Win 10 and RN 0.56.
 
-## [0.55]
+## v0.55.0
 
 Welcome to the March 2018 release of React Native ! Over 81 contributors made 247 commits since February. Thanks for another exciting release.
 
@@ -2038,7 +2038,7 @@ Here are a few highlights:
 
 - Remove callFunctionSync experimental APIs ([19a4a7d3cb](https://github.com/facebook/react-native/commit/19a4a7d3cb6d00780ccbbbd7b0062896f64ab24d) by [@danzimm](https://github.com/danzimm))
 
-## [0.54]
+## v0.54.0
 
 Welcome to the February 2018 release of React Native! This release includes work done by the React Native team and the community in January, and there are some big changes here after the holidays. Thanks for 270 commits from 87 contributors, you all are great! Here are a few highlights from the release:
 
@@ -2213,7 +2213,7 @@ The changelog is arranged by the customary added, removed, changed, and fixed pl
 
 - ... and now we're at 0.54 🎉 ([67e67ec83c](https://github.com/facebook/react-native/commit/67e67ec83ce83d4a1a38bc29dd52bf5c28723752), [21dd3dd296](https://github.com/facebook/react-native/commit/21dd3dd296989f4de2d4e9b1ba0df88ea2d32413), [49e35bd939](https://github.com/facebook/react-native/commit/49e35bd9399716a2734e824bab14faf1683cdfdd), [829f675b8b](https://github.com/facebook/react-native/commit/829f675b8b4abae696151e404552af515a2da1ce), and [294d95a236](https://github.com/facebook/react-native/commit/294d95a23687b2e3155fe4ae1bc5e4a649e6b014) by [@grabbou](https://github.com/grabbou) and [@hramos](https://github.com/hramos))
 
-## [0.53]
+## v0.53.0
 
 Welcome to the January 2018 release of React Native. The CLI now supports `--port` for both platforms, a few components were made to support consistent props across both platforms, and various fixes were made. There was a lot of under-the-cover work done with more test improvements and dependency updates. 118 commits were made by 43 contributors 🎉.
 
@@ -2316,7 +2316,7 @@ Below is a list of the remaining, low-level changes that made it into this relea
 - Make YGNode as c++ struct with properties exposed through accessors ([f1055bcac8](https://github.com/facebook/react-native/commit/f1055bcac8b580c40f9646687e7a950fb6864c74) by [@priteshrnandgaonkar](https://github.com/priteshrnandgaonkar))
 - 🔖 ...and now we're at 0.53.0-rc.0 🎁 ([0b996577e3](https://github.com/facebook/react-native/commit/0b996577e321d439aa6ede4c7400ea76efb7816a) by [@grabbou](https://github.com/grabbou))
 
-## [0.52.0] - 2018-01-07
+## v0.52.0
 
 > This changelog has been prepared by Ryan Turner (@turnrye) - thank you for
 > your time and making such a detailed changelog 🔥🔥
