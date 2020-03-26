@@ -188,7 +188,7 @@ Note two known issues with their corresponding workarounds:
 - Fix ReactInstanceManagerBuilder.build crashing if SoLoader has not been explicitly initialized ([60e00d9d96](https://github.com/facebook/react-native/commit/60e00d9d96d7b186c1d4c1542caddc1b74eeb3da) by [@petterh](https://github.com/petterh))
 - Fix default accessibility hint not being read. ([f8dff0bcb3](https://github.com/facebook/react-native/commit/f8dff0bcb3147b7a1aa8ac7159952d848e198e29))
 - Fix JS bundle loading progress bar ([7b9d6d19e2](https://github.com/facebook/react-native/commit/7b9d6d19e2c0854aa53587ef68ce715fb7803e2a) by [@makovkastar](https://github.com/makovkastar))
-- AFix ndroid Q related NaN error - don't try to do math with NaN values ([db5994980d](https://github.com/facebook/react-native/commit/db5994980df136c5cce6cd90348b4bf18180562f))
+- Fix Android Q related NaN error - don't try to do math with NaN values ([db5994980d](https://github.com/facebook/react-native/commit/db5994980df136c5cce6cd90348b4bf18180562f))
 - Fix throwing exceptions when the host activity is not FragmentActivity ([7cfabf42b8](https://github.com/facebook/react-native/commit/7cfabf42b816de758d8e52896bbab0c50e3a802a) by [@mganandraj](https://github.com/mganandraj))
 - Fix crash when using `TextInput.FontVariant` prop in Android API level < 26 ([e885ddedb9](https://github.com/facebook/react-native/commit/e885ddedb9b0a025cb8031414dcc4bd22744a0eb) by [@mdvacca](https://github.com/mdvacca))
 
