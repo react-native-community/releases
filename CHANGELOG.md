@@ -22,14 +22,13 @@ One known issue with workaround is regarding Android builds and [APK size increa
 - Remove `scrollWithoutAnimationTo` from ScrollView ([c7e89909da](https://github.com/facebook/react-native/commit/c7e89909da70ac5290f9971080eb897567db3e43) by [@TheSavior](https://github.com/TheSavior))
 - Bump CLI to ^4.2.x ([be5088401f](https://github.com/facebook/react-native/commit/be5088401fd8e19d57adda42d275cab437448064) by [@alloy](https://github.com/alloy)) - for details on what v4 of the CLI improves on (like monorepo support), please refer to the [dedicated blog post](https://callstack.com/blog/react-native-cli-3-1-0-and-4-0-0-whats-new/) and the [release notes](https://github.com/react-native-community/cli/releases)
 - Remove `accessibilityStates` property ([7b35f427fd](https://github.com/facebook/react-native/commit/7b35f427fd66cb0f36921b992095fe5b3c14d8b9) by [@marcmulcahy](https://github.com/marcmulcahy))
+- Upgraded to Hermes 0.4.0. If you're using ProGuard you will need to add the following rule to `proguard-rules.pro`: `-keep class com.facebook.jni.** { *; }` ([ab3c184555](https://github.com/facebook/react-native/commit/ab3c184555e382b8693cbfcdfe01ba89583ee726) by [@willholen](https://github.com/willholen))
 
 #### Android specific
 
 - Fix setting keyboardType from breaking autoCapitalize ([233fdfc014](https://github.com/facebook/react-native/commit/233fdfc014bb4b919c7624c90e5dac614479076f) by [@safaiyeh](https://github.com/safaiyeh))
 - Limit size of video uploaded from camera roll in android (< 100 MB) ([d21f695edf](https://github.com/facebook/react-native/commit/d21f695edf367166a03af4c6e9376cd498b38665))
 - Remove "Reload on JS change" from RN Android ([478df155e7](https://github.com/facebook/react-native/commit/478df155e70a4ce30219adcac6f0801c4e4d10ec) by [@cpojer](https://github.com/cpojer))
-
-#### iOS specific
 
 ### Added
 
@@ -89,7 +88,6 @@ One known issue with workaround is regarding Android builds and [APK size increa
 
 #### Android specific
 
-- Upgraded to Hermes 0.4.0 ([ab3c184555](https://github.com/facebook/react-native/commit/ab3c184555e382b8693cbfcdfe01ba89583ee726) by [@willholen](https://github.com/willholen))
 - Bump gradle-download-task to 4.0.2 ([088be260b6](https://github.com/facebook/react-native/commit/088be260b6727ba82167fe58cb1ee4410a6920b2) by [@dulmandakh](https://github.com/dulmandakh))
 - Bump Gradle to 6.0.1 ([701e66bde4](https://github.com/facebook/react-native/commit/701e66bde4ea0e404626c7805e2bcdfa0c129c05) by [@dulmandakh](https://github.com/dulmandakh))
 - Bump Gradle wrapper 5.6.4 ([928f4434b9](https://github.com/facebook/react-native/commit/928f4434b9829c90098b1626b03938d932a9c1f6) by [@friederbluemle](https://github.com/friederbluemle))
