@@ -1,5 +1,27 @@
 # Changelog
 
+## [v0.62.1]
+
+### Fixed
+
+- Bump CLI to 4.5.1 to improve DX ([eac56b9749](https://github.com/facebook/react-native/commit/eac56b9749ed624275d4190b5e48b775583acb3f) by [@alloy](https://github.com/alloy))
+- Fix YellowBox in 0.62 ([227aa96bb2](https://github.com/facebook/react-native/commit/227aa96bb23b6ff20eebbd8a9335fd172ed6005b) by [@rickhanlonii](https://github.com/rickhanlonii))
+
+#### Android specific
+
+- Add new DoNotStrip class to proguard config ([cfcf5eba43](https://github.com/facebook/react-native/commit/cfcf5eba4317f80ef8902463b7c0b2e1e7b534a7) by [@janicduplessis](https://github.com/janicduplessis))
+
+#### iOS specific
+
+- Fix Performance Monitor in dark appearance ([576ddfb3a8](https://github.com/facebook/react-native/commit/576ddfb3a84a5461679959f0d3f229a000dcea8d) by [@gorhom](https://github.com/gorhom))
+- Inverted ScrollViews scroll to their bottom when the status bar is pressed ([7a4753d76a](https://github.com/facebook/react-native/commit/7a4753d76aab1c52a09f26ec6f7fd43a68da8a97) by [@emilioicai](https://github.com/emilioicai))
+- Revert [previous incomplete fix](https://github.com/facebook/react-native/commit/bd2b7d6c0366b5f19de56b71cb706a0af4b0be43) for [an issue](https://github.com/facebook/react-native/issues/26473) with `Modal`’s `onDismiss` prop. ([27a3248a3b](https://github.com/facebook/react-native/commit/27a3248a3b37410b5ee6dda421ae00fa485b525c) by [@grabbou](https://github.com/grabbou))
+- Fix double call to onEndReached in VirtualizedList ([d3658bc2b6](https://github.com/facebook/react-native/commit/d3658bc2b6437e858d3b3f5688277dedbca779b8) by [@MartinSherburn](https://github.com/MartinSherburn))
+
+### Changed
+
+- Update warning message of deprecated imports ([405200e9a9](https://github.com/facebook/react-native/commit/405200e9a930cded47954f374f2a779ec769cd4c) by [@Naturalclar](https://github.com/Naturalclar))
+
 ## v0.62.0
 
 This major release includes Flipper support by default, improved dark mode support, moving Apple TV to [react-native-tvos](https://github.com/react-native-community/react-native-tvos), and more. See the [blog post](https://reactnative.dev/blog/2020/03/26/version-0.62) for all of the highlights.

@@ -266,6 +266,13 @@ export function getOriginalCommit(
       "--pretty=format:%H",
       `--grep=${match[0]}`
     ).then(sha => {
+      if (sha === "") {
+        throw new Error(
+          `Expected a commit to match ${
+            match[1]
+          }, is your \`master\` branch out of date?`
+        );
+      }
       if (sha.includes("\n")) {
         throw new Error(
           `Expected a single commit to match ${match[1]}, but got: ${sha
