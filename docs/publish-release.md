@@ -18,9 +18,9 @@ _Point people: [@alloy](https://github.com/alloy), [@grabbou](https://github.com
    - Then remove any build-artifacts:
      ```bash
      rm react-native-*.tgz
-     rm -rf node_modules
      ./gradlew clean
      ./gradlew cleanBuildCache
+     rm -rf node_modules
      rm -rf /tmp/RNTestProject
      pushd RNTester
      rm -rf Pods
@@ -64,25 +64,6 @@ _Point people: [@alloy](https://github.com/alloy), [@grabbou](https://github.com
    ```
 
 1. Pushing the changed version numbers will eventually kickoff the `publish_npm_package` workflow on CI, keep an eye on it.
-
-   ⚠️ Currently publishing fails due to SSH not being setup to accept github.com automatically. To workaround this:
-
-   - Re-run the failed build with SSH enabled.
-   - Look for the `Enable SSH` step and expand it to reveal details on how to connect to the VM through SSH.
-   - Connect through SSH as per the given instructions.
-   - Wait for the CI workflow to reach the `node ./scripts/publish-npm.js` step, then kill the process from your SSH session:
-     ```bash
-     ps -ax | grep 'node ./scripts/publish-npm.js'
-     kill [PID]
-     ```
-   - Restart the publish script interactively and type “yes” when asked to accept the fingerprint of github.com:
-     ```bash
-     node ./scripts/publish-npm.js
-     ```
-   - Once finished, quit the SSH session:
-     ```bash
-     exit
-     ```
 
 1. Test that npmjs.com returns the correct results:
 
