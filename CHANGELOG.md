@@ -5,7 +5,7 @@
 ### Fixed
 
 - Bump CLI to 4.5.1 to improve DX ([eac56b9749](https://github.com/facebook/react-native/commit/eac56b9749ed624275d4190b5e48b775583acb3f) by [@alloy](https://github.com/alloy))
-- Fix YellowBox in 0.62 ([227aa96bb2](https://github.com/facebook/react-native/commit/227aa96bb23b6ff20eebbd8a9335fd172ed6005b) by [@rickhanlonii](https://github.com/rickhanlonii))
+- Fix a YellowBox regression in v0.62.0 where the Flipper network inspector causes YellowBox to crash the app due to using base64 images. ([227aa96bb2](https://github.com/facebook/react-native/commit/227aa96bb23b6ff20eebbd8a9335fd172ed6005b) by [@rickhanlonii](https://github.com/rickhanlonii))
 
 #### Android specific
 
