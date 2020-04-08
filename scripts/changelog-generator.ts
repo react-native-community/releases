@@ -611,7 +611,7 @@ export function getChangelogDesc(
 function buildMarkDown(currentVersion: string, data: Changes) {
   return `
 
-## [${currentVersion}]
+## ${currentVersion}
 
 ### Breaking
 

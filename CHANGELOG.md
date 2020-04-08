@@ -1,6 +1,20 @@
 # Changelog
 
-## [v0.62.1]
+## v0.62.2
+
+### Fixed
+
+- Fix Appearance module when using Chrome Debugger ([f7b90336be](https://github.com/facebook/react-native/commit/f7b90336be25b78935549aa140131d4d6d133f7b) by [@TheSavior](https://github.com/TheSavior))
+- Fix mock for TextInput ([5a3c6faee9](https://github.com/facebook/react-native/commit/5a3c6faee9c44a2d99b13d113c91dbf98990f8af) by [@SergioEstevao](https://github.com/SergioEstevao))
+- Flow errors from YellowBox and BubblingEventHandler ([a049130f34](https://github.com/facebook/react-native/commit/a049130f34be951c9c67d2a472c7eb7f3d08f070) by [@thymikee](https://github.com/thymikee))
+
+#### iOS specific
+
+- Make Vibration library compatible with TurboModules. ([3904228704](https://github.com/facebook/react-native/commit/390422870466beba571dda04f669380e14055056) by [@brunobar79](https://github.com/brunobar79))
+- Exclude Flipper from iOS Release builds ([e5497ca8f6](https://github.com/facebook/react-native/commit/e5497ca8f6e3b240948fdbeef0ac2a710f25bb56) by [@javiercr](https://github.com/javiercr))
+- Fix crash when enabling Performance Monitor on iOS 13.4 ([e2c417f7cf](https://github.com/facebook/react-native/commit/e2c417f7cf5ae7efa5ea1f9644a51c4c706a983f) by [@IjzerenHein](https://github.com/IjzerenHein))
+
+## v0.62.1
 
 ### Fixed
 
