@@ -3,7 +3,7 @@
 exports[`functions that hit GitHub's commits API run fetches commits, filters them, and generates markdown 1`] = `
 "
 
-## [35300147ca66677f42e8544264be72ac0e9d1b45]
+## 35300147ca66677f42e8544264be72ac0e9d1b45
 
 ### Breaking
 
@@ -131,5 +131,9 @@ exports[`functions that hit GitHub's commits API run fetches commits, filters th
 #### iOS Unknown
 
 - Delete fishhook ([46bdb4161c](https://github.com/facebook/react-native/commit/46bdb4161c84b33f1d0612e9c7cdd824462a31fd) by [@mmmulani](https://github.com/mmmulani))
+
+#### Failed to parse
+
+
 "
 `;

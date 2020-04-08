@@ -1,6 +1,6 @@
 # Changelog
 
-## [v0.62.2]
+## v0.62.2
 
 ### Fixed
 
@@ -14,7 +14,7 @@
 - Exclude Flipper from iOS Release builds ([e5497ca8f6](https://github.com/facebook/react-native/commit/e5497ca8f6e3b240948fdbeef0ac2a710f25bb56) by [@javiercr](https://github.com/javiercr))
 - Fix crash when enabling Performance Monitor on iOS 13.4 ([e2c417f7cf](https://github.com/facebook/react-native/commit/e2c417f7cf5ae7efa5ea1f9644a51c4c706a983f) by [@IjzerenHein](https://github.com/IjzerenHein))
 
-## [v0.62.1]
+## v0.62.1
 
 ### Fixed
 
