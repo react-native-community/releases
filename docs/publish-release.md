@@ -32,9 +32,9 @@ _Point people: [@alloy](https://github.com/alloy), [@grabbou](https://github.com
 
    - You have push access to the stable branch on the react-native repo.
    - The Android toolchain, as per the “Android development environment” section of [the react-native setup guide](https://reactnative.dev/docs/getting-started).
-   - Download [Android NDK 21](https://developer.android.com/ndk/downloads) and place it at `~/Library/Android/android-ndk-r21`, then add the following environment setup:
+   - Download [Android NDK 19](https://developer.android.com/ndk/downloads/older_releases#ndk-19c-downloads) and place it at `~/Library/Android/android-ndk-r19`, then add the following environment setup:
      ```bash
-     export ANDROID_NDK_HOME=$HOME/Library/Android/android-ndk-r21
+     export ANDROID_NDK_HOME=$HOME/Library/Android/android-ndk-r19
      ```
    - Latest iOS
    - Latest yarn
