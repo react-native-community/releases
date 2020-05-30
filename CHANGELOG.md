@@ -14,7 +14,6 @@
 ### Added
 
 - Implement `nativePerformanceNow` and `performance.now()` ([232517a574](https://github.com/facebook/react-native/commit/232517a5740f5b82cfe8779b3832e9a7a47a8d3d) by [@emilisb](https://github.com/emilisb))
-- Deleting marker cancel 2/N. [DO NOT LAND] ([c38318d084](https://github.com/facebook/react-native/commit/c38318d08469ad30535d970328704dc9ae6bb785) by [@mkareta](https://github.com/mkareta))
 - Support PerformanceLogger stopTimespan updates ([08c338eebf](https://github.com/facebook/react-native/commit/08c338eebf67ef6c8c8fb7e3a91bbf89bbc2bb4c) by [@sahrens](https://github.com/sahrens))
 - Added PlatformColor implementations for iOS and Android ([f4de45800f](https://github.com/facebook/react-native/commit/f4de45800f25930a1c70f757d12269d859066d3d) by [@tom-un](https://github.com/tom-un))
 - Stamp React Native Version Into C++ Code ([427ba359e0](https://github.com/facebook/react-native/commit/427ba359e0c9411438286dd137bbca67f9829fde) by [@NickGerleman](https://github.com/NickGerleman))
@@ -29,7 +28,6 @@
 
 #### Android specific
 
-- Add analyticsTag prop into ImageView component ([72150f57ce](https://github.com/facebook/react-native/commit/72150f57ced3c626bb1c3a48a8609585c9a5a9d7), [0128e4602e](https://github.com/facebook/react-native/commit/0128e4602ecbe5ff771c1d1951e622b9c414180f) by [@mdvacca](https://github.com/mdvacca))
 - Support item background color in Dialog Picker ([22eb711c84](https://github.com/facebook/react-native/commit/22eb711c84587ac92da97e486fecaa79424fa925))
 - Add OverrideColorScheme interface and setOverrideColorScheme method to AppearanceModule([45d7df6cf7](https://github.com/facebook/react-native/commit/45d7df6cf7482b9790c97db613055ff5d3e59a87))
 - Allow setting custom ripple radius on TouchableNativeFeedback ([7f2a79f40b](https://github.com/facebook/react-native/commit/7f2a79f40b4a4c41344ca90cefe318af607675e0) by [@vonovak](https://github.com/vonovak))
@@ -46,7 +44,7 @@
 - Resolve and reject promise for PushNotificationIOS.requestPermissions ([edfdafc7a1](https://github.com/facebook/react-native/commit/edfdafc7a14e88a2660b95cb220c62f29b1b28c0) by [@p-sun](https://github.com/p-sun))
 - Use autolink script in template on iOS ([a35efb9400](https://github.com/facebook/react-native/commit/a35efb94006bfa3f541bf3fc3ab5262740f00525) by [@janicduplessis](https://github.com/janicduplessis))
 - Added Flipper to template app ([52cd9cd6fe](https://github.com/facebook/react-native/commit/52cd9cd6fec0866177aa02f7129a8b3d8b2bdbea) by [@safaiyeh](https://github.com/safaiyeh))
-- Add textColor and backgroundColor props for iOS >=13 ([e8f577e541](https://github.com/facebook/react-native/commit/e8f577e541815bfd8adebdf14f70c9e4205f8e4e) by [@Naturalclar](https://github.com/Naturalclar))
+- Add textColor and backgroundColor props to SegmentedControl for iOS >=13 ([e8f577e541](https://github.com/facebook/react-native/commit/e8f577e541815bfd8adebdf14f70c9e4205f8e4e) by [@Naturalclar](https://github.com/Naturalclar))
 - Adds RCTOverrideAppearancePreference to the iOS Appearance module ([fa65b156d4](https://github.com/facebook/react-native/commit/fa65b156d4109e6a3121484b601358b11cf0d541))
 
 ### Changed
