@@ -4,11 +4,11 @@
 
 ### Breaking
 
-- Multiple deprecations and breaking changes to TextInputState. Use native component refs instead of react tags ([6286270e4c](https://github.com/facebook/react-native/commit/6286270e4cb10b40cfd7c8193e31d965f6815150) by [@TheSavior](https://github.com/TheSavior))
 - The `target` field of events is now a native component, not a react tag ([3b813cade1](https://github.com/facebook/react-native/commit/3b813cade1f5d6f248a39f6bbd983f68c5794fe6) by [@TheSavior](https://github.com/TheSavior))
 - Modal: Remove support for `animated` prop (deprecated in 0.26) ([1e9db7bd6d](https://github.com/facebook/react-native/commit/1e9db7bd6df3055b9b81d23f15a54bb250621a41) by [@TheSavior](https://github.com/TheSavior))
 - Alert: Remove deprecated support for passing callback as fourth argument to Alert.prompt (deprecated in 0.59) ([a26d622d04](https://github.com/facebook/react-native/commit/a26d622d04451d6872eed2491e5d3f7d4689824d) by [@TheSavior](https://github.com/TheSavior))
 - Switch: Remove support for thumbTintColor, tintColor, onTintColor props (deprecated in 0.57) ([26912bd979](https://github.com/facebook/react-native/commit/26912bd9798aeb38931466b8ddcd3a48973b0528) by [@TheSavior](https://github.com/TheSavior))
+- Multiple deprecations and breaking changes to TextInputState. Use native component refs instead of react tags ([6286270e4c](https://github.com/facebook/react-native/commit/6286270e4cb10b40cfd7c8193e31d965f6815150) by [@TheSavior](https://github.com/TheSavior))
 - Bump supported Node engines to >= 10 ([f0c7178a3a](https://github.com/facebook/react-native/commit/f0c7178a3a24e7694b765946f0d884104c8cfa4c) by [@safaiyeh](https://github.com/safaiyeh))
 
 ### Added
@@ -17,7 +17,6 @@
 - Support PerformanceLogger stopTimespan updates ([08c338eebf](https://github.com/facebook/react-native/commit/08c338eebf67ef6c8c8fb7e3a91bbf89bbc2bb4c) by [@sahrens](https://github.com/sahrens))
 - Added PlatformColor implementations for iOS and Android ([f4de45800f](https://github.com/facebook/react-native/commit/f4de45800f25930a1c70f757d12269d859066d3d) by [@tom-un](https://github.com/tom-un))
 - Stamp React Native Version Into C++ Code ([427ba359e0](https://github.com/facebook/react-native/commit/427ba359e0c9411438286dd137bbca67f9829fde) by [@NickGerleman](https://github.com/NickGerleman))
-- Add nightly CI build ([7d2daa0a6d](https://github.com/facebook/react-native/commit/7d2daa0a6d4b687678f8671de76c4a2a3cf2318a) by [@sweggersen](https://github.com/sweggersen))
 - New <Pressable> Component to make it easier to create touchable elements ([3212f7dfe8](https://github.com/facebook/react-native/commit/3212f7dfe82d187e27f1410c8c3cb1d9fb9f5094) by [@TheSavior](https://github.com/TheSavior), [bd3868643d](https://github.com/facebook/react-native/commit/bd3868643d29e93610e19312571a9736df2cbdf8) by [@vonovak](https://github.com/vonovak))
 - Export LogBox module ([799bf56f6f](https://github.com/facebook/react-native/commit/799bf56f6f6a46b6bd42ac5a824f44bd1412f3b6) by [@rickhanlonii](https://github.com/rickhanlonii))
 - Export LayoutAnimationConfig flow type ([f0dafd34fe](https://github.com/facebook/react-native/commit/f0dafd34fedb0d63eb2499b978a52da9e6b71ea1) by [@sahrens](https://github.com/sahrens))
@@ -89,14 +88,13 @@
 
 #### iOS specific
 
-- Allow iOS PlatformColor strings to be ObjC or Swift UIColor selectors ([25793eab56](https://github.com/facebook/react-native/commit/25793eab56217a9961620761ea65ec2fcb97dcb0) by [@tom-un](https://github.com/tom-un))
 - Disambiguate autolinking-ios.rb script from CLI’s “autolinking” feature and bring RNTester & template in line. ([4118d79826](https://github.com/facebook/react-native/commit/4118d798265341061105f3a53550db83c66a71cb) by [@alloy](https://github.com/alloy))
 - Updated Flipper iOS integration to be included by default in the `Debug` configuration ([619d5d60df](https://github.com/facebook/react-native/commit/619d5d60dfa94966e7104febec08166c1b5eca49) by [@alloy](https://github.com/alloy))
 - Use Apple unified logging API (os_log) ([f501ed682a](https://github.com/facebook/react-native/commit/f501ed682ae68136d966aee2b0d3cc0f1e8b90cd) by [@LeoNatan](https://github.com/LeoNatan))
 - Upgrade Folly to v2020.01.13.00 ([a27e31c059](https://github.com/facebook/react-native/commit/a27e31c059971b1d554ad6c7c81706f08eafac87) by [@Kudo](https://github.com/Kudo))
 - Remove the xcshareddata from .gitignore ([7980615d37](https://github.com/facebook/react-native/commit/7980615d371a7bf607a3787bca91cfde229c41dc) by [@pvinis](https://github.com/pvinis))
 - Add "complete_nullability = True" to compatible libraries ([796a4ea7e3](https://github.com/facebook/react-native/commit/796a4ea7e31ae05b76e59e02ab05f9c955f7c149))
-- Remove the post install step ([44beb2a685](https://github.com/facebook/react-native/commit/44beb2a685b7ceb0311bde7d0d33cb70bb891d30) by [@priteshrnandgaonkar](https://github.com/priteshrnandgaonkar))
+- Remove the Flipper pod post install step ([44beb2a685](https://github.com/facebook/react-native/commit/44beb2a685b7ceb0311bde7d0d33cb70bb891d30) by [@priteshrnandgaonkar](https://github.com/priteshrnandgaonkar))
 - Enable Flipper with CocoaPods `:configuration` ([7bb1c4e1b8](https://github.com/facebook/react-native/commit/7bb1c4e1b8715a5c9cb6f9e4e77a6df783481d3d) by [@alloy](https://github.com/alloy))
 
 ### Deprecated
@@ -113,7 +111,6 @@
 
 ### Removed
 
-- Remove unused fields from error dialog ([e3b7520174](https://github.com/facebook/react-native/commit/e3b7520174fbf7e22c07c1c5107a8dd60f2b23d1) by [@sebmarkbage](https://github.com/sebmarkbage))
 - Remove Unused ImageProp ([fbd09b1797](https://github.com/facebook/react-native/commit/fbd09b179759cd90f2be5c24caa11bdb483ad8cd) by [@Naturalclar](https://github.com/Naturalclar))
 - Remove leftover `Incremental` component ([e99800267b](https://github.com/facebook/react-native/commit/e99800267b78aa581aff956d47b8be91858628b9) by [@venits](https://github.com/venits))
 - Replace console.disableYellowBox with LogBox.ignoreAllLogs. ([87f1e22434](https://github.com/facebook/react-native/commit/87f1e22434210ad22f526422bbda0413f59786ce) by [@rickhanlonii](https://github.com/rickhanlonii))
@@ -134,6 +131,8 @@
 
 ### Fixed
 
+- Add support to render <View> with no fixed size nested within a <Text> ([dbb7eacb42](https://github.com/facebook/react-native/commit/dbb7eacb429adb4160e740017c212bfd6df0f03a) by [@mdvacca](https://github.com/mdvacca))
+- Fixes bug where <Text><View><Image> would crash. ([66601e755f](https://github.com/facebook/react-native/commit/66601e755fcad10698e61d20878d52194ad0e90c) by [@TheSavior](https://github.com/TheSavior))
 - Use new setTextCursorDrawable API for Android 10 ([e7a14b803f](https://github.com/facebook/react-native/commit/e7a14b803fdc8840bbcde51d4bfa9cf9a85a8472) by [@sturmen](https://github.com/sturmen))
 - Fix Animated Value initialized with undefined in ScrollView ([cf02bd9b76](https://github.com/facebook/react-native/commit/cf02bd9b765e29ed8aa2bbf62661e89c84bb80e5) by [@janicduplessis](https://github.com/janicduplessis))
 - Do not explicitly include ".js" in Library imports ([161b910494](https://github.com/facebook/react-native/commit/161b9104941663dcc0b08a73789c0ff3410fc661) by [@NickGerleman](https://github.com/NickGerleman))
@@ -150,9 +149,7 @@
 - Fix resolving assets outside of the project root ([7deeec7396](https://github.com/facebook/react-native/commit/7deeec73966d84140492c2a767819977318c4d2d) by [@janicduplessis](https://github.com/janicduplessis))
 - Transform empty responses into empty Blobs ([9a8c06b502](https://github.com/facebook/react-native/commit/9a8c06b502c774f7a0bff1bdc064fbfe16ca75be) by [@RSNara](https://github.com/RSNara))
 - Fix validation of event mappings for AnimatedEvent ([19362f6116](https://github.com/facebook/react-native/commit/19362f6116bad441c5e23f2bab420af78664b3d3) by [@javache](https://github.com/javache))
-- Add support to render <View> with no fixed size nested within a <Text> ([dbb7eacb42](https://github.com/facebook/react-native/commit/dbb7eacb429adb4160e740017c212bfd6df0f03a) by [@mdvacca](https://github.com/mdvacca))
 - Fix NativeJSCHeapCapture ([7e3a43c23d](https://github.com/facebook/react-native/commit/7e3a43c23d028a4481bc455dd28c391a81ff1a94) by [@RSNara](https://github.com/RSNara))
-- Fixes bug where <Text><View><Image> would crash. ([66601e755f](https://github.com/facebook/react-native/commit/66601e755fcad10698e61d20878d52194ad0e90c) by [@TheSavior](https://github.com/TheSavior))
 - Add AnimationInterpolation as possible type for toValue ([26e8870fbf](https://github.com/facebook/react-native/commit/26e8870fbf310f0fb438a86cb2fe260f0bc419b9) by [@nabati](https://github.com/nabati))
 - Fix return type of StyleSheet.create ([4e71a30969](https://github.com/facebook/react-native/commit/4e71a30969d74073309d0350be55cadb84ae43ff) by [@jbrown215](https://github.com/jbrown215))
 - Adjust HelloWorld-tvOSTests/Info.plist `CFBundleIdentifier` to use PRODUCT_BUNDLE_IDENTIFIER ([98ebc1ea25](https://github.com/facebook/react-native/commit/98ebc1ea25102049ec53288a458ff16ed5b4ada0) by [@MoOx](https://github.com/MoOx))
