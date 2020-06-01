@@ -51,21 +51,19 @@
 
 - Update react-native-community/eslint-config to 1.1.0, adding the new color rule ([780f06cd47](https://github.com/facebook/react-native/commit/780f06cd477f34da48646a949bd25dd3f883a9a2) by [@TheSavior](https://github.com/TheSavior))
 - Update community eslint plugin in the eslint config ([b2d10bc602](https://github.com/facebook/react-native/commit/b2d10bc60272fc2318835ff38655a9eb4a2bbed0) by [@Naturalclar](https://github.com/Naturalclar))
-- Make PR template easier to use with changelog URL. ([74ee32c77e](https://github.com/facebook/react-native/commit/74ee32c77e07f4ce3e44094766edb334411ccc5a) by [@pvinis](https://github.com/pvinis))
 - Upgrade eslint-config and metro-preset in project template ([ad86a18305](https://github.com/facebook/react-native/commit/ad86a183052e8b25d599eb395aef55412c02ff7b) by [@Naturalclar](https://github.com/Naturalclar))
 - Add ES Lint rules for `DynamicColorIOS()`and `ColorAndroid()` ([602070f44b](https://github.com/facebook/react-native/commit/602070f44b02220aeb036a7b3c26dad5c611b636) by [@tom-un](https://github.com/tom-un))
 - Make ScrollView use forwardRef ([d2f314af75](https://github.com/facebook/react-native/commit/d2f314af75b63443db23e131aaf93c2d064e4f44) by [@kacieb](https://github.com/kacieb))
 - Upgrade embedded React DevTools backend from v4.0.6 to v4.6.0. ([93ee5b2cc8](https://github.com/facebook/react-native/commit/93ee5b2cc8391bc5cb12ca7cf08ed0e44c74d29a) by [@bvaughn](https://github.com/bvaughn))
 - Updated the React Hooks ESLint Plugin ([6ce3f0a4f7](https://github.com/facebook/react-native/commit/6ce3f0a4f7495adb82e655d037dc4e5af462f955) by [@gaearon](https://github.com/gaearon))
 - Update to React 16.13.1 ([9637d6214a](https://github.com/facebook/react-native/commit/9637d6214a47e58d7fa8252a3de8c057e5cfb101) by [@gaearon](https://github.com/gaearon))
-- Change nightly build from hourly to nightly ([f2ffa03139](https://github.com/facebook/react-native/commit/f2ffa0313980f05b9d417e957c3539e4e6495b9f) by [@sweggersen](https://github.com/sweggersen))
 - Relax RefreshControl's onRefresh flow typing ([884c86ae02](https://github.com/facebook/react-native/commit/884c86ae02b0be7ea1e4b258dab39f4c5aee0b9d) by [@vonovak](https://github.com/vonovak))
 - Improved flowtype support for Animated ([bdafc55f50](https://github.com/facebook/react-native/commit/bdafc55f50c7d580ee2e643a02cb95d0196f721c) by [@javache](https://github.com/javache))
 - Upgrade eslint-plugin-relay to 1.6.0 ([0483404d82](https://github.com/facebook/react-native/commit/0483404d827416b7270e8a42b84e424035127892) by [@kassens](https://github.com/kassens))
 - Upgrade to latest dependencies in package.json template ([82e8239337](https://github.com/facebook/react-native/commit/82e82393377ddcedba01c401a5d79d5bbcdc4dc9) by [@codler](https://github.com/codler))
 - Make JSStringToSTLString 23x faster ([733532e5e9](https://github.com/facebook/react-native/commit/733532e5e95c85b8295b6c66009ca9efd2a77622) by [@radex](https://github.com/radex))
 - Changed property `disableIntervalMomentum` to work with both horizontal and vertical ScrollViews ([6237cfb325](https://github.com/facebook/react-native/commit/6237cfb325e39571ede0054a67d60f2c978d6d58) by [@Shaninnik](https://github.com/Shaninnik))
-- Summary: Changelog: [General][changed] Upgraded to Flow v0.114.0 ([aa78457343](https://github.com/facebook/react-native/commit/aa7845734352eab2bd32f7d6e683d6674fd6680d) by [@mroch](https://github.com/mroch))
+- Upgraded to Flow v0.114.0 ([aa78457343](https://github.com/facebook/react-native/commit/aa7845734352eab2bd32f7d6e683d6674fd6680d) by [@mroch](https://github.com/mroch))
 - Updated CLI to the latest version ([ddc33007ad](https://github.com/facebook/react-native/commit/ddc33007ad0b4a0a24966b833e797227b9c56cca) by [@grabbou](https://github.com/grabbou))
 - Upgrade Prettier from 1.17 to 2.0.2. ([cf44650b3f](https://github.com/facebook/react-native/commit/cf44650b3f4f13df8208ceded60ec5c48bd6baf3) by [@bolinfest](https://github.com/bolinfest))
 - Only set dimensions if the window attributes change ([35c6bb9ac0](https://github.com/facebook/react-native/commit/35c6bb9ac0fc452428e85fee72affb4fc29f500c) by [@cpojer](https://github.com/cpojer))
@@ -79,10 +77,8 @@
 #### Android specific
 
 - Upgraded to Hermes 0.5.0 ([4305a291a9](https://github.com/facebook/react-native/commit/4305a291a9408ca65847994bbec42f1fbc97071d) by [@willholen](https://github.com/willholen))
-- Upgrade Flipper dependency to 0.33.1 ([db12255645](https://github.com/facebook/react-native/commit/db12255645204541b102300feaf3e640411a4596) by [@passy](https://github.com/passy))
 - Internal storage now will be preferred for caching images from ImageEditor. ([79efa43428](https://github.com/facebook/react-native/commit/79efa4342852a3e9271a56e3a0fb7c15be664e9a) by [@kitttn](https://github.com/kitttn))
 - Update Gradle Wrapper to 6.2 ([d4d8887b50](https://github.com/facebook/react-native/commit/d4d8887b5018782eeb3f26efa85125e6bbff73e4) by [@friederbluemle](https://github.com/friederbluemle))
-- Upgrade Flipper version in default template ([939df8a01d](https://github.com/facebook/react-native/commit/939df8a01da09fd18baa4e66e2babd438db0ea8d) by [@passy](https://github.com/passy))
 - Upgrade Folly to v2020.01.13.00 ([6e2131b8fa](https://github.com/facebook/react-native/commit/6e2131b8fa85da8b3fb0391803e7fbecba890ffb) by [@Kudo](https://github.com/Kudo))
 - Only update dimensions in ReactRootView if they've changed ([cc3e27d484](https://github.com/facebook/react-native/commit/cc3e27d484d3a412f632454b7f1c637b2c271af2) by [@ejanzer](https://github.com/ejanzer))
 - ReactEditText extends AppCompatEditText ([aaa2765a92](https://github.com/facebook/react-native/commit/aaa2765a920de8234f0def4cae05ca5d6c8c8ac8) by [@dulmandakh](https://github.com/dulmandakh))
@@ -105,7 +101,7 @@
 
 ### Deprecated
 
-- Add deprecation warnings for Clipboard, SegmentedControlIOS, ProgressViewIOS, ProgressBarAndroid. ([f295d7f608](https://github.com/facebook/react-native/commit/f295d7f60843a45bb09fc366e497f512c2bc0046) by [@Naturalclar](https://github.com/Naturalclar))
+- Add deprecation warnings for Clipboard, SegmentedControlIOS, ProgressViewIOS, ProgressBarAndroid. These modules have been moved to [react-native-community](https://github.com/react-native-community) libraries. ([f295d7f608](https://github.com/facebook/react-native/commit/f295d7f60843a45bb09fc366e497f512c2bc0046) by [@Naturalclar](https://github.com/Naturalclar))
 
 #### Android specific
 
@@ -113,7 +109,7 @@
 
 #### iOS specific
 
-- Deprecate iOS/tvOS 9.x support ([58a6a40eac](https://github.com/facebook/react-native/commit/58a6a40eac9afb5c4de78a63418cc48ea97da1a4), [829a2237d2](https://github.com/facebook/react-native/commit/829a2237d270c03c80467eb6c2b5b18c87135a45), [674b591809](https://github.com/facebook/react-native/commit/674b591809cd1275b5f1c4d203c2f0ec52303396) by [@fkgozali](https://github.com/fkgozali), [d1265077d6](https://github.com/facebook/react-native/commit/d1265077d6638bb9219180628caf6ff83f8d6019) by [@sunnylqm](https://github.com/sunnylqm))
+- Deprecate iOS 9.x support ([58a6a40eac](https://github.com/facebook/react-native/commit/58a6a40eac9afb5c4de78a63418cc48ea97da1a4), [829a2237d2](https://github.com/facebook/react-native/commit/829a2237d270c03c80467eb6c2b5b18c87135a45), [674b591809](https://github.com/facebook/react-native/commit/674b591809cd1275b5f1c4d203c2f0ec52303396) by [@fkgozali](https://github.com/fkgozali), [d1265077d6](https://github.com/facebook/react-native/commit/d1265077d6638bb9219180628caf6ff83f8d6019) by [@sunnylqm](https://github.com/sunnylqm))
 
 ### Removed
 
@@ -122,9 +118,7 @@
 - Remove leftover `Incremental` component ([e99800267b](https://github.com/facebook/react-native/commit/e99800267b78aa581aff956d47b8be91858628b9) by [@venits](https://github.com/venits))
 - Replace console.disableYellowBox with LogBox.ignoreAllLogs. ([87f1e22434](https://github.com/facebook/react-native/commit/87f1e22434210ad22f526422bbda0413f59786ce) by [@rickhanlonii](https://github.com/rickhanlonii))
 - Add warning message for trying to use ToolbarAndroid which has been removed from the core. ([6249d14a61](https://github.com/facebook/react-native/commit/6249d14a61723b22deb1336457b4295978471885) by [@Naturalclar](https://github.com/Naturalclar))
-- Removed create-react-class from dependencies ([1947e1684f](https://github.com/facebook/react-native/commit/1947e1684f5f0bcdab7c39bbf89caf768723be05) by [@acoates-ms](https://github.com/acoates-ms))
 - Remove "Debug with Nuclide" option ([011eb4cea5](https://github.com/facebook/react-native/commit/011eb4cea5d482cef54d7659e7436a04e539ff19) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Remove ReactTypes from fbsource and React sync ([8bbb2ca44b](https://github.com/facebook/react-native/commit/8bbb2ca44b60d1eca97b07d502c5f235b77c0319) by [@sebmarkbage](https://github.com/sebmarkbage))
 
 #### Android specific
 
@@ -225,19 +219,6 @@
 - `RCTRedBox` doesn't appear in apps implementing `UISceneDelegate` ([d0a32c2011](https://github.com/facebook/react-native/commit/d0a32c2011ca00991be45ac3fa320f4fc663b2e8) by [@tido64](https://github.com/tido64))
 - Fixes the `InputAccessoryView.backgroundColor` prop’s typing to use `ColorValue`. ([a43fd60e18](https://github.com/facebook/react-native/commit/a43fd60e18aff9ee6bcaf8ec576adb8678d5bcf4) by [@alloy](https://github.com/alloy))
 - Fix Animated image crash when CADisplayLink target in RCTWeakProxy is nil ([e5a6655e71](https://github.com/facebook/react-native/commit/e5a6655e71d41a58ce0e51d37aa9fb8792e37dd5) by [@p-sun](https://github.com/p-sun))
-
-### Unknown
-
-<!-- TODO: I'm not sure if any of these syncs can be given useful labels -->
-
-- Fbshipit-source-id: da15f69185e724eaf7d4bc78dbc61fcdcb3074d5 ([07def55396](https://github.com/facebook/react-native/commit/07def553968f88f65a2a07c3aea8e757e49530dd) by [@hramos](https://github.com/hramos))
-- Re-sync with internal repository ([d2045411f5](https://github.com/facebook/react-native/commit/d2045411f5771a8c7275c1388179fef3892e9f53) by [@hramos](https://github.com/hramos))
-- Partial React Sync from 241c4467e...00d8e5b80 ([9fdb96eec7](https://github.com/facebook/react-native/commit/9fdb96eec780358ebb2d16b4d0454ff9953f9eff) by [@TheSavior](https://github.com/TheSavior))
-- Partial React Sync from 241c4467...ad84625f8 ([862c71908c](https://github.com/facebook/react-native/commit/862c71908c8bdbbddefed16ad03fa85c26eedfd1) by [@TheSavior](https://github.com/TheSavior))
-- React Native sync for revisions 241c4467...349ff315b ([6e3389c82b](https://github.com/facebook/react-native/commit/6e3389c82b6899ee3a9162571f7c6f8eab830207) by [@TheSavior](https://github.com/TheSavior))
-- React Native sync for revisions 19f6fe1...241c446 ([aa41fd5e37](https://github.com/facebook/react-native/commit/aa41fd5e372c4f6ca2c35ad75bb66abbc56d9620) by [@gaearon](https://github.com/gaearon))
-- React Native sync for revisions 241c446...b5c6dd2 ([bac9e69593](https://github.com/facebook/react-native/commit/bac9e6959367ca3420f2318c1970758f5618d960) by [@lunaruan](https://github.com/lunaruan))
-- React sync for revisions 6cff70a...19f6fe1 ([159624d901](https://github.com/facebook/react-native/commit/159624d901c8143999e1ce59b852080019b528f3) by [@gaearon](https://github.com/gaearon))
 
 ## v0.62.2
 
