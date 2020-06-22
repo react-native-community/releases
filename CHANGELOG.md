@@ -72,6 +72,7 @@
 - Update SoLoader to 0.8.2 ([0a6f058b6b](https://github.com/facebook/react-native/commit/0a6f058b6bd0493f7eece972b1f73be3606ca8d5) by [@passy](https://github.com/passy))
 - `console.error` calls, and uncaught exceptions are now displayed in the Metro logs as well ([ffb82cb2f0](https://github.com/facebook/react-native/commit/ffb82cb2f052f276a94a004d5acea0ab44f8098c) by [@mweststrate](https://github.com/mweststrate))
 - Upgrade Flipper to 0.37.0 ([17f025bc26](https://github.com/facebook/react-native/commit/17f025bc26da13da795845a3f7daee65563420c0) by [@sunnylqm](https://github.com/sunnylqm))
+- Add warning message for trying to use ToolbarAndroid which has been removed from the core since 0.61. ([6249d14a61](https://github.com/facebook/react-native/commit/6249d14a61723b22deb1336457b4295978471885) by [@Naturalclar](https://github.com/Naturalclar))
 
 #### Android specific
 
@@ -100,6 +101,7 @@
 ### Deprecated
 
 - Add deprecation warnings for Clipboard, SegmentedControlIOS, ProgressViewIOS, ProgressBarAndroid. These modules have been moved to [react-native-community](https://github.com/react-native-community) libraries. ([f295d7f608](https://github.com/facebook/react-native/commit/f295d7f60843a45bb09fc366e497f512c2bc0046) by [@Naturalclar](https://github.com/Naturalclar))
+- Deprecated console.disableYellowBox in favor of LogBox.ignoreAllLogs. ([87f1e22434](https://github.com/facebook/react-native/commit/87f1e22434210ad22f526422bbda0413f59786ce) by [@rickhanlonii](https://github.com/rickhanlonii))
 
 #### Android specific
 
@@ -113,8 +115,6 @@
 
 - Remove Unused ImageProp ([fbd09b1797](https://github.com/facebook/react-native/commit/fbd09b179759cd90f2be5c24caa11bdb483ad8cd) by [@Naturalclar](https://github.com/Naturalclar))
 - Remove leftover `Incremental` component ([e99800267b](https://github.com/facebook/react-native/commit/e99800267b78aa581aff956d47b8be91858628b9) by [@venits](https://github.com/venits))
-- Replace console.disableYellowBox with LogBox.ignoreAllLogs. ([87f1e22434](https://github.com/facebook/react-native/commit/87f1e22434210ad22f526422bbda0413f59786ce) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Add warning message for trying to use ToolbarAndroid which has been removed from the core. ([6249d14a61](https://github.com/facebook/react-native/commit/6249d14a61723b22deb1336457b4295978471885) by [@Naturalclar](https://github.com/Naturalclar))
 - Remove "Debug with Nuclide" option ([011eb4cea5](https://github.com/facebook/react-native/commit/011eb4cea5d482cef54d7659e7436a04e539ff19) by [@rickhanlonii](https://github.com/rickhanlonii))
 
 #### Android specific
@@ -186,7 +186,6 @@
 
 #### iOS specific
 
-- Fixed `KeyboardAvoidingView` inset in embedded views (i.e modal view controllers on iOS 13) ([fb2900e185](https://github.com/facebook/react-native/commit/fb2900e1851e9b12fbcfaf0c047302fb1ca6ae54) by [@danielgindi](https://github.com/danielgindi))
 - Fixed connection of metro reload command to iOS device ([f9df93385e](https://github.com/facebook/react-native/commit/f9df93385eee0e1cd1144a65e05410dfb48b119c) by [@reyalpsirc](https://github.com/reyalpsirc))
 - Remove RCTDevLoadingView jank ([faff19a7c6](https://github.com/facebook/react-native/commit/faff19a7c651c740d8d649b86727b63b63562b20) by [@RSNara](https://github.com/RSNara))
 - Fix crash when passing null value in object parameter of bridged method ([15434c7c43](https://github.com/facebook/react-native/commit/15434c7c435928a40b9cd66fe9f5d1bcdea8d954))
