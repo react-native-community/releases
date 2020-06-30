@@ -72,7 +72,6 @@
 - Update SoLoader to 0.8.2 ([0a6f058b6b](https://github.com/facebook/react-native/commit/0a6f058b6bd0493f7eece972b1f73be3606ca8d5) by [@passy](https://github.com/passy))
 - `console.error` calls, and uncaught exceptions are now displayed in the Metro logs as well ([ffb82cb2f0](https://github.com/facebook/react-native/commit/ffb82cb2f052f276a94a004d5acea0ab44f8098c) by [@mweststrate](https://github.com/mweststrate))
 - Upgrade Flipper to 0.37.0 ([17f025bc26](https://github.com/facebook/react-native/commit/17f025bc26da13da795845a3f7daee65563420c0) by [@sunnylqm](https://github.com/sunnylqm))
-- Add warning message for trying to use ToolbarAndroid which has been removed from the core since 0.61. ([6249d14a61](https://github.com/facebook/react-native/commit/6249d14a61723b22deb1336457b4295978471885) by [@Naturalclar](https://github.com/Naturalclar))
 
 #### Android specific
 
@@ -106,6 +105,7 @@
 #### Android specific
 
 - We are deprecating the method UIManagerModule.resolveRootTagFromReactTag, this will not be supported in the next version of RN ([acbf9e18ea](https://github.com/facebook/react-native/commit/acbf9e18ea666b07c1224a324602a41d0a66985e) by [@mdvacca](https://github.com/mdvacca))
+- Add warning message for trying to use ToolbarAndroid which has been removed from the core since 0.61. ([6249d14a61](https://github.com/facebook/react-native/commit/6249d14a61723b22deb1336457b4295978471885) by [@Naturalclar](https://github.com/Naturalclar))
 
 #### iOS specific
 
