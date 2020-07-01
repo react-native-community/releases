@@ -59,6 +59,7 @@
 - Added `Flipper` to template app ([52cd9cd6fe](https://github.com/facebook/react-native/commit/52cd9cd6fec0866177aa02f7129a8b3d8b2bdbea) by [@safaiyeh](https://github.com/safaiyeh))
 - Add `textColor` and `backgroundColor` props to `SegmentedControl` for iOS >=13 ([e8f577e541](https://github.com/facebook/react-native/commit/e8f577e541815bfd8adebdf14f70c9e4205f8e4e) by [@Naturalclar](https://github.com/Naturalclar))
 - Adds `RCTOverrideAppearancePreference` to the iOS `Appearance` module ([fa65b156d4](https://github.com/facebook/react-native/commit/fa65b156d4109e6a3121484b601358b11cf0d541))
+- Changed iOS LaunchScreen from `xib` to `storyboard` ([33b3a1a145](https://github.com/facebook/react-native/commit/33b3a1a1453ca51690e59b758eeb61a4fa8f35bc) by [@jeswinsimon](https://github.com/jeswinsimon))
 
 ### Changed
 
