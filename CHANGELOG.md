@@ -1,5 +1,31 @@
 # Changelog
 
+## v0.63.1
+
+### Added
+
+- Added `minPressDuration` to `Pressable`. ([4aaf629982](https://github.com/facebook/react-native/commit/4aaf62998247bcfd8ebf369d73290096fde08012) by [@yungsters](https://github.com/yungsters))
+- Support for array buffers in the JavaScriptCore implementation of JSI ([9c32140068](https://github.com/facebook/react-native/commit/9c32140068463739b91874689f741ea9630d8c3b) by [@ryantrem](https://github.com/ryantrem))
+
+#### Android specific
+
+- ProGuard rule for hermes ([449dc37720](https://github.com/facebook/react-native/commit/449dc37720b24d9d88661314424c9f982e70ec3a) by [@radko93](https://github.com/radko93))
+
+### Fixed
+
+- LogBox.ignoreAllLogs() should ignore logs ([f28c7505fa](https://github.com/facebook/react-native/commit/f28c7505fa5b4a7ddf1e9311d38dfcd15e8953a2) by [@rickhanlonii](https://github.com/rickhanlonii))
+
+#### Android specific
+
+- Fix font variant crash on Android < 4.4 ([f23feced42](https://github.com/facebook/react-native/commit/f23feced42abd1d18a12e413bf79a51bead61379) by [@Almouro](https://github.com/Almouro))
+- Fix border-drawing when changing border-radius back to 0` ([7757ad0576](https://github.com/facebook/react-native/commit/7757ad05762284c059807d7d75fd03559e86f2b2) by [@IjzerenHein](https://github.com/IjzerenHein))
+- Fix rounded border-drawing when border-radius is smaller than border-width` ([28dce3665d](https://github.com/facebook/react-native/commit/28dce3665d8a63e902c165c060400486fe6234f4) by [@IjzerenHein](https://github.com/IjzerenHein))
+
+#### iOS specific
+
+- TextInput color has the same default (#000) on iOS whether in light or dark mode ([a2f8b9c36e](https://github.com/facebook/react-native/commit/a2f8b9c36e5eba6bc354a2f53bf8d3ca11297d00) by [@JonnyBurger](https://github.com/JonnyBurger))
+- Fixes TextInput shaking when typing Chinese ([9cdc19a936](https://github.com/facebook/react-native/commit/9cdc19a93669b37c0518bd32263e156ffc9193c7) by [@zhongwuzw](https://github.com/zhongwuzw))
+
 ## v0.63.0
 
 ### Breaking
