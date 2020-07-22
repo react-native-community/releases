@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.63.2
+
+### Fixed
+
+- Restore Previous Behavior for StyleSheet Validation of Null/Undefined Styles ([e75557b48f](https://github.com/facebook/react-native/commit/e75557b48fbee1d136b8b7d1a78ea8f9b9467479) by [@NickGerleman](https://github.com/NickGerleman))
+
+#### Android specific
+
+- Set LogBox windowTranslucentNavigation to false ([23036b38bc](https://github.com/facebook/react-native/commit/23036b38bc4443c8db4865e5c2b21aca7ab4f92f) by [@Ashoat](https://github.com/Ashoat))
+- Fix unable to run in debug mode on Android API < 21 ([7694b32a88](https://github.com/facebook/react-native/commit/7694b32a88078278457dd8721eb61da9c4ac0f5a) by [@Shywim](https://github.com/Shywim))
+
+#### iOS specific
+
+- Fix image cannot show in iOS 14 ([123423c2a9](https://github.com/facebook/react-native/commit/123423c2a9258c9af25ca9bffe1f10c42a176bf3))
+
 ## v0.63.1
 
 ### Added
