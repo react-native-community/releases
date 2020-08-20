@@ -807,6 +807,7 @@ if (!module["parent"]) {
       },
       verbose: {
         alias: "v",
+        boolean: true,
         describe:
           "Verbose listing, includes internal changes as well as public-facing changes",
         demandOption: false,
