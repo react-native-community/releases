@@ -13,15 +13,12 @@
 - Update Flipper to 0.54 ([d8b70b19b3](https://github.com/facebook/react-native/commit/d8b70b19b39ead4dd41895d666d116a43c56474e) by [@mweststrate](https://github.com/mweststrate))
 - Removed default 130ms delay from Pressability and Pressable. ([86ffb9c41e](https://github.com/facebook/react-native/commit/86ffb9c41e033f59599e01b7ad016706b5f62fc8) by [@yungsters](https://github.com/yungsters))
 
-#### Android specific
-
-- Fix Xiaomi TextInput crash in native ([07a597ad18](https://github.com/facebook/react-native/commit/07a597ad185c8c31ac38bdd4d022b0b880d02859))
-
 ### Fixed
 
 #### Android specific
 
 - `KeyboardDidHide` wrong `screenY` coordinates with `windowTranslucentStatus=true` ([45954ac5dc](https://github.com/facebook/react-native/commit/45954ac5dccdfe05de7553a0f08c4f0e66e3d62e) by [@fabriziobertoglio1987](https://github.com/fabriziobertoglio1987))
+- Fix Xiaomi TextInput crash in native ([07a597ad18](https://github.com/facebook/react-native/commit/07a597ad185c8c31ac38bdd4d022b0b880d02859))
 
 #### iOS specific
 
