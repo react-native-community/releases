@@ -21,7 +21,7 @@
 
 #### Android specific
 
-- KeyboardDidHide wrong screenY coordinates with windowTranslucentStatus=true ([45954ac5dc](https://github.com/facebook/react-native/commit/45954ac5dccdfe05de7553a0f08c4f0e66e3d62e) by [@fabriziobertoglio1987](https://github.com/fabriziobertoglio1987))
+- `KeyboardDidHide` wrong `screenY` coordinates with `windowTranslucentStatus=true` ([45954ac5dc](https://github.com/facebook/react-native/commit/45954ac5dccdfe05de7553a0f08c4f0e66e3d62e) by [@fabriziobertoglio1987](https://github.com/fabriziobertoglio1987))
 
 #### iOS specific
 
