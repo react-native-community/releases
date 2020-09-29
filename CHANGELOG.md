@@ -33,7 +33,7 @@
 
 ### Security
 
-- Fix security issues with rnc cli by bumping version ([001eb7cbd6](https://github.com/facebook/react-native/commit/001eb7cbd66c7dc1a302ee2a638c1cfc164538f4) by [@alexbrazier](https://github.com/alexbrazier))
+- Fix security issues with `@react-native-community/cli` by bumping version ([001eb7cbd6](https://github.com/facebook/react-native/commit/001eb7cbd66c7dc1a302ee2a638c1cfc164538f4) by [@alexbrazier](https://github.com/alexbrazier))
 
 ## v0.63.2
 
