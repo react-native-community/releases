@@ -1,5 +1,37 @@
 # Changelog
 
+## v0.63.3
+
+### Added
+
+#### iOS specific
+
+- Ability to set which configuration to enable flipper for when using use_flipper! ([dc2df75426](https://github.com/facebook/react-native/commit/dc2df754267df3909631d81c22b9fcab58dfa241) by [@nicoburns](https://github.com/nicoburns))
+
+### Changed
+
+- Update Flipper to 0.54 ([d8b70b19b3](https://github.com/facebook/react-native/commit/d8b70b19b39ead4dd41895d666d116a43c56474e) by [@mweststrate](https://github.com/mweststrate))
+- Removed default 130ms delay from Pressability and Pressable. ([86ffb9c41e](https://github.com/facebook/react-native/commit/86ffb9c41e033f59599e01b7ad016706b5f62fc8) by [@yungsters](https://github.com/yungsters))
+
+### Fixed
+
+#### Android specific
+
+- `KeyboardDidHide` wrong `screenY` coordinates with `windowTranslucentStatus=true` ([45954ac5dc](https://github.com/facebook/react-native/commit/45954ac5dccdfe05de7553a0f08c4f0e66e3d62e) by [@fabriziobertoglio1987](https://github.com/fabriziobertoglio1987))
+- Fix Xiaomi TextInput crash in native ([07a597ad18](https://github.com/facebook/react-native/commit/07a597ad185c8c31ac38bdd4d022b0b880d02859))
+
+#### iOS specific
+
+- Prefetch images using a lower download priority ([058eeb43b4](https://github.com/facebook/react-native/commit/058eeb43b489f52183f081fb7232be683002a242) by [@p-sun](https://github.com/p-sun))
+- Fix `RCTImageLoader` not using decoders provided. ([663b5a878b](https://github.com/facebook/react-native/commit/663b5a878be9faafd13b41c222a1bc2ac7bb3a65) by [@sjchmiela](https://github.com/sjchmiela))
+- Support Swift based libraries using Xcode 12’s build system. ([6e08f84719](https://github.com/facebook/react-native/commit/6e08f84719c47985e80123c72686d7a1c89b72ed) by [@alloy](https://github.com/alloy))
+- Fix "main.jsbundle does not exist" issue ([83777cb4fb](https://github.com/facebook/react-native/commit/83777cb4fb5dda89c430b7eff9cd1f28d2577831))
+- Fixed headers in `Image.getSizeWithHeaders`. ([0bcc686c1c](https://github.com/facebook/react-native/commit/0bcc686c1cc90fd44de7a28e2f56ea20fe2f5123) by [@PaitoAnderson](https://github.com/PaitoAnderson))
+
+### Security
+
+- Fix security issues with `@react-native-community/cli` by bumping version ([001eb7cbd6](https://github.com/facebook/react-native/commit/001eb7cbd66c7dc1a302ee2a638c1cfc164538f4) by [@alexbrazier](https://github.com/alexbrazier))
+
 ## v0.63.2
 
 ### Fixed
