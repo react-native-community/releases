@@ -22,7 +22,7 @@ _Point people: [@alloy](https://github.com/alloy), [@grabbou](https://github.com
      ./gradlew cleanBuildCache
      rm -rf node_modules
      rm -rf /tmp/RNTestProject
-     pushd RNTester
+     pushd packages/rn-tester
      rm -rf Pods
      xcodebuild -workspace RNTesterPods.xcworkspace -scheme RNTester clean
      popd
@@ -42,7 +42,7 @@ _Point people: [@alloy](https://github.com/alloy), [@grabbou](https://github.com
    - Install dependencies:
      ```bash
      yarn install
-     pushd RNTester
+     pushd packages/rn-tester
      pod install --repo-update
      popd
      ```
