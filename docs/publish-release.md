@@ -32,9 +32,9 @@ _Point people: [@alloy](https://github.com/alloy), [@grabbou](https://github.com
 
    - You have push access to the stable branch on the react-native repo.
    - The Android toolchain, as per the “Android development environment” section of [the react-native setup guide](https://reactnative.dev/docs/environment-setup).
-   - Download [Android NDK 19](https://developer.android.com/ndk/downloads/older_releases#ndk-19c-downloads) and place it at `~/Library/Android/android-ndk-r19`, then add the following environment setup:
+   - Download the needed version of NDK. You can find out which version to use by looking in the [CI Android image dockerfile](https://github.com/react-native-community/docker-android/blob/ca21319a3fc73bb01facc99eb8e9a9e6ec415fa2/Dockerfile#L12). Currently, it's NDK 20, which can be downloaded from [here](https://developer.android.com/ndk/downloads/older_releases). After downloading, place it at `~/Library/Android/android-ndk-r20b`, then add the following environment setup:
      ```bash
-     export ANDROID_NDK=$HOME/Library/Android/android-ndk-r19
+     export ANDROID_NDK=$HOME/Library/Android/android-ndk-r20b
      ```
    - Latest iOS
    - Latest yarn
