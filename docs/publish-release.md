@@ -36,6 +36,7 @@ _Point people: [@alloy](https://github.com/alloy), [@grabbou](https://github.com
      ```bash
      export ANDROID_NDK=$HOME/Library/Android/android-ndk-r20b
      ```
+       - In case you are on macos Catalina (or higher), to will also need to run `sudo xattr -r -d com.apple.quarantine /path/to/ndk` to avoid the e2e script to fail
    - Latest iOS
    - Latest yarn
    - Latest CocoaPods
