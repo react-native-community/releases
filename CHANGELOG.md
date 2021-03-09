@@ -66,6 +66,7 @@
 
 ### Changed
 
+- Update flipper ([3399896ae7](https://github.com/facebook/react-native/commit/3399896ae756719b238e837001077a46508849be) by [@janicduplessis](https://github.com/janicduplessis))
 - Refined Flow type for `Text` component. ([a911efaecd](https://github.com/facebook/react-native/commit/a911efaecd005237816ddb480218eb5388460d16) by [@yungsters](https://github.com/yungsters))
   TODO combine RNTester/rn-tester items into fewer bullet points. good to recognize the contributions, but not really relevant to end users - Add testID to items in RNTester test list, helps test automation tools find the items ([b5de89755d](https://github.com/facebook/react-native/commit/b5de89755d15bb9b2d5e8b350cd3c25f302ab71e) by [@kmelmon](https://github.com/kmelmon))
   TODO see RNTester note above - Changed use cases for button component in rn-tester ([43abf23bff](https://github.com/facebook/react-native/commit/43abf23bffeda51aace62741f0a197a823a482ac) by [@chirag-singhal](https://github.com/chirag-singhal))
@@ -218,14 +219,11 @@ TODO see note about RNTester above - Refactor RNTester ([6581c77d0a](https://git
 - Migrate frameInterval to preferredFramesPerSecond, fixing Xcode warnings ([335f3aabe2](https://github.com/facebook/react-native/commit/335f3aabe28ec8f9b96fd695edabf0d5ab0b402a) by [@safaiyeh](https://github.com/safaiyeh))
 - IOS: Animated image should animate at the same speed regardless of framerate ([b0d0e51a77](https://github.com/facebook/react-native/commit/b0d0e51a7724dcefe3ce1c2dfb334a731b2a385c) by [@p-sun](https://github.com/p-sun))
 
-### Security
-
-#### Android specific
-
-#### iOS specific
-
 ### Unknown
 
+- Chore: fix conflict in Podfile.lock ([48a97d766d](https://github.com/facebook/react-native/commit/48a97d766d8e5629bbf64a73a290cf6c5988eed9) by [@grabbou](https://github.com/grabbou))
+- Fix: React Native CodeGen integration for 0.64-stable ([14db556963](https://github.com/facebook/react-native/commit/14db556963a63f0e7fbd74d2956fe56d7c941778) by [@grabbou](https://github.com/grabbou))
+- Generalize node search logic ([4b68734e56](https://github.com/facebook/react-native/commit/4b68734e562b7d68561b8ca6a08f1dd710ed2b8f) by [@grabbou](https://github.com/grabbou))
 - Chore: ignore broken Hermes job ([2313d45da9](https://github.com/facebook/react-native/commit/2313d45da9c11e3d0b9dd14fb5bffb3d96ae90fa) by [@grabbou](https://github.com/grabbou))
 - Daily `arc lint --take CLANGFORMAT` ([00456211e5](https://github.com/facebook/react-native/commit/00456211e591930f28a08356141fc8bec52fe3e5))
 - Daily `arc lint --take GOOGLEJAVAFORMAT` ([1903f6680d](https://github.com/facebook/react-native/commit/1903f6680d9750e244d97c3cd4a9f755a9a47c61))
