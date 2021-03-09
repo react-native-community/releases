@@ -48,14 +48,15 @@
 
 #### iOS specific
 
-- PlatformColors: add missing `clearColor` ([b7167c23fc](https://github.com/facebook/react-native/commit/b7167c23fc052f8d9f8c27a7f4ad9c5cdf51281e) by [@Simek](https://github.com/Simek))
+- `PlatformColor`: add missing `clearColor` ([b7167c23fc](https://github.com/facebook/react-native/commit/b7167c23fc052f8d9f8c27a7f4ad9c5cdf51281e) by [@Simek](https://github.com/Simek))
 - Update template to Xcode 12 ([6685aba462](https://github.com/facebook/react-native/commit/6685aba462699c696cb6ac95626b9592deb292fc) by [@janicduplessis](https://github.com/janicduplessis))
 - Add `importantForAccessibility` to `AccessibilityProps` ([fd660fd0c5](https://github.com/facebook/react-native/commit/fd660fd0c50a0acca730bd1ecd427e574bbe81c7) by [@ZHUANGPP](https://github.com/ZHUANGPP))
 - Allow hotkeys to be used without command key ([f2b9ec7981](https://github.com/facebook/react-native/commit/f2b9ec798172db76dfb55f390e1fcea90dd341da) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Add `disableButtonsIndices` option to ActionSheetIOS component ([a7c1c5aff2](https://github.com/facebook/react-native/commit/a7c1c5aff24671bba609caeb82092a8de3d3b232) by [@lukewalczak](https://github.com/lukewalczak))
-- Add `showSoftInputOnFocus` to TextInput on iOS ([d54113d8c4](https://github.com/facebook/react-native/commit/d54113d8c4bcd0e0c7a09acca60819724eb69926) by [@gurs1kh](https://github.com/gurs1kh))
+- Add `disableButtonsIndices` option to `ActionSheetIOS` component ([a7c1c5aff2](https://github.com/facebook/react-native/commit/a7c1c5aff24671bba609caeb82092a8de3d3b232) by [@lukewalczak](https://github.com/lukewalczak))
+- Add `showSoftInputOnFocus` to `TextInput` ([d54113d8c4](https://github.com/facebook/react-native/commit/d54113d8c4bcd0e0c7a09acca60819724eb69926) by [@gurs1kh](https://github.com/gurs1kh))
 - Added hostname to loading banner. ([96999339b6](https://github.com/facebook/react-native/commit/96999339b6a7aeabd0cd706ef7736fd91d9ecf80) by [@rickhanlonii](https://github.com/rickhanlonii))
 - Allow iOS `PlatformColor` strings to be ObjC or Swift UIColor selectors ([25793eab56](https://github.com/facebook/react-native/commit/25793eab56217a9961620761ea65ec2fcb97dcb0) by [@tom-un](https://github.com/tom-un))
+- Add Dark Mode support to loading banner ([94c45af136](https://github.com/facebook/react-native/commit/94c45af136f44245b5f2e56bded60c8ebd9b1235) by [@rickhanlonii](https://github.com/rickhanlonii))
 
 ### Changed
 
@@ -105,6 +106,10 @@
 
 - Deprecated method `UIManagerModule.getUIImplementation`. This method will not be part of the new architecture of React Native. ([fe79abb32c](https://github.com/facebook/react-native/commit/fe79abb32ca3425ff689b7641d9200461ea8166d) by [@mdvacca](https://github.com/mdvacca))
 
+#### iOS specific
+
+- Deprecate `calculateChildFrames` from `RCTScrollView` ([62aa84a325](https://github.com/facebook/react-native/commit/62aa84a3257bd3c513df3fcb4b4eaa350ecf77bb) by [@PeteTheHeat](https://github.com/PeteTheHeat))
+
 ### Removed
 
 - `Text.viewConfig` is no longer exported. ([06ce643565](https://github.com/facebook/react-native/commit/06ce64356594a921cd9ae4f71c15dd56dd0e53a3) by [@yungsters](https://github.com/yungsters))
@@ -135,6 +140,7 @@
 - Fix Flow type of Touchable{Opacity,Bounce,Highlight} being exported as `any` ([de7f69a58e](https://github.com/facebook/react-native/commit/de7f69a58ed4e18887f4b9d4d853293fb136afb7) by [@draperunner](https://github.com/draperunner))
 - Clarified the boundaries in error message of `scrollToIndex` ([78d2b3c813](https://github.com/facebook/react-native/commit/78d2b3c8138f54c2433958b0ad6b9f52ca59115a) by [@sasurau4](https://github.com/sasurau4))
 - Fix jsi cmake include dirs ([f5d00e5a29](https://github.com/facebook/react-native/commit/f5d00e5a2922d35a0b44935592da5700518c422b) by [@ryantrem](https://github.com/ryantrem))
+- Fix race condition in `KeyboardAvoidingView` ([b08fff6f86](https://github.com/facebook/react-native/commit/b08fff6f869e00c20c0dcdf7aca71284c2f276f0) by [@sammy-SC](https://github.com/sammy-SC))
 
 #### Android specific
 
@@ -225,18 +231,14 @@
 - Remove port from JSLocation when returning packager host ([12543d557f](https://github.com/facebook/react-native/commit/12543d557f00545a719b4dfd76cc0d0adfa37a01) by [@jimmy623](https://github.com/jimmy623))
 - Fix "Cannot read property 'getNativeScrollRef' of undefined" in createAnimatedComponent ([629e10e91b](https://github.com/facebook/react-native/commit/629e10e91b728c4251f1ed78a50df62820ce0dc4) by [@sammy-SC](https://github.com/sammy-SC))
 - Remove requestToken being nil check from [RCTNetworkTask validateRequestToken] ([ffc90c7f92](https://github.com/facebook/react-native/commit/ffc90c7f92e63e1a53ed107833e3deed492ab435) by [@sammy-SC](https://github.com/sammy-SC))
-- Fix race condition in KeyboardAvoidingView ([b08fff6f86](https://github.com/facebook/react-native/commit/b08fff6f869e00c20c0dcdf7aca71284c2f276f0) by [@sammy-SC](https://github.com/sammy-SC))
 - Remove unnecessary packager running check when saved JSLocation is empty ([bbb7bef539](https://github.com/facebook/react-native/commit/bbb7bef539f418bdb452e40987d399c9369df5a2) by [@jimmy623](https://github.com/jimmy623))
 - Fix alert screen crash in android in RNTester app ([f898bb65fa](https://github.com/facebook/react-native/commit/f898bb65fac3f26944cbe1c47b87c63b2cd10e03) by [@anku255](https://github.com/anku255))
 - Check whether packager is running in RCTBundleURLProvider for saved JSLocation ([3d882495d5](https://github.com/facebook/react-native/commit/3d882495d5e4415c2ebb8f4280e18e16025e0736) by [@jimmy623](https://github.com/jimmy623))
 - Fix crash while measuring ReactSlider in Android API < 21 ([75e6f7961f](https://github.com/facebook/react-native/commit/75e6f7961fb3f6de6afbe79d49c42ad55fba1673) by [@mdvacca](https://github.com/mdvacca))
-- Deprecate calculateChildFrames from RCTScrollView ([62aa84a325](https://github.com/facebook/react-native/commit/62aa84a3257bd3c513df3fcb4b4eaa350ecf77bb) by [@PeteTheHeat](https://github.com/PeteTheHeat))
 - Move Collapsable into shared props ([851d01b0aa](https://github.com/facebook/react-native/commit/851d01b0aa45285bd6a52c89ab9c1b64a637258e) by [@sammy-SC](https://github.com/sammy-SC))
 - Use React.Children.count for counting children ([92160f3144](https://github.com/facebook/react-native/commit/92160f3144dcfa510ff14b5f2eb231643f107af9) by [@vonovak](https://github.com/vonovak))
 - Set `NSAllowsArbitraryLoads` to `false` by default in template ([7b61a968fd](https://github.com/facebook/react-native/commit/7b61a968fd774a6ca2196a731b6cec4282ab25cc) by [@wddwycc](https://github.com/wddwycc))
 - Enabling [-Werror,-Wunused-property-ivar] ([c2c0581afb](https://github.com/facebook/react-native/commit/c2c0581afbb4f80c9e4c1bfe30be014e118ba6c8) by [@aditya7fb](https://github.com/aditya7fb))
-- Update documentation of UIManagerModule methods ([0199a0392c](https://github.com/facebook/react-native/commit/0199a0392c65fa72d9599262ba1b4f8e14c0fc04) by [@mdvacca](https://github.com/mdvacca))
-- Add dark mode support to loading banner ([94c45af136](https://github.com/facebook/react-native/commit/94c45af136f44245b5f2e56bded60c8ebd9b1235) by [@rickhanlonii](https://github.com/rickhanlonii))
 - Forward URL parameters from main bundle to hot reloaded bundles ([b4785e5144](https://github.com/facebook/react-native/commit/b4785e514430dc3ba45ed6d136ec63574be88e26) by [@motiz88](https://github.com/motiz88))
 - Add package name / bundle ID to bundle URL in development ([9b5359133b](https://github.com/facebook/react-native/commit/9b5359133b46b16be200e37dba0b03d82b73b4a0) by [@motiz88](https://github.com/motiz88))
 - Fix measureLayout function for VirtualTexts ([5c48c94f8c](https://github.com/facebook/react-native/commit/5c48c94f8c0441bc78a007f0ea0c5b2763ff6875) by [@mdvacca](https://github.com/mdvacca))
