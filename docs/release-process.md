@@ -67,7 +67,7 @@ _NOTE: In these examples the minor version being used is ‘0.42.x’_
 
 1. Merge the blogpost PR to the [website-repo] in order to publish it.
 
-1. Create a [GitHub ‘Release’][gh-release] for the stable version and include the highlights of this release, along with links to the changelog, the blogpost and the patch-release-issue (described in the previous points). 
+1. Create a [GitHub ‘Release’][gh-release] for the stable version and include the highlights of this release, along with links to the changelog, the blogpost and the patch-release-issue (described in the previous points).
 
 1. Bump `defaultVersionShown` in [the website’s config][website-config] so it
    will show show the new version as the currently available version.

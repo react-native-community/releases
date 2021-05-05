@@ -549,6 +549,20 @@
 - Fixes the `InputAccessoryView.backgroundColor` prop’s typing to use `ColorValue`. ([a43fd60e18](https://github.com/facebook/react-native/commit/a43fd60e18aff9ee6bcaf8ec576adb8678d5bcf4) by [@alloy](https://github.com/alloy))
 - Fix `Animated` image crash when `CADisplayLink` target in `RCTWeakProxy` is `nil` ([e5a6655e71](https://github.com/facebook/react-native/commit/e5a6655e71d41a58ce0e51d37aa9fb8792e37dd5) by [@p-sun](https://github.com/p-sun))
 
+## v0.62.3
+
+### Security
+
+- Update validateBaseUrl to use latest regex ([33ef82ce6d](https://github.com/facebook/react-native/commit/33ef82ce6dfd31e1f990d438c925a0e52723e16b) by [@FBNeal](https://github.com/FBNeal))
+
+### Fixed
+
+#### iOS specific
+
+- Change autolink to match requirements for FlipperFolly working with Xcode 12.5 ([c6f4611dcb](https://github.com/facebook/react-native/commit/c6f4611dcbfbb64d5b54e242570e2a1acffcabef) by [@kelset](https://github.com/kelset))
+- Change podfile to rely on the autolink-ios rb file ([c4ea556d64](https://github.com/facebook/react-native/commit/c4ea556d64c7fc146d1412548788c48bbcc0f6bb) by [@kelset](https://github.com/kelset))
+- Update detox to work on Xcode 12 ([158b558e50](https://github.com/facebook/react-native/commit/158b558e500576f434dec09417bb02cc0bc53f7a) by [@kelset](https://github.com/kelset))
+
 ## v0.62.2
 
 ### Fixed
