@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.64.1
+
+### Fixed
+
+#### iOS specific
+
+- Fixes to ensure Xcode 12.5 builds ([cf8a364767](https://github.com/facebook/react-native/commit/cf8a364767df830d7255339741350bb53ab1a68a), [1c4ac48a55](https://github.com/facebook/react-native/commit/1c4ac48a55cf0703f0c8a32cbb07474a2d126f3e) and [76f45d35e7](https://github.com/facebook/react-native/commit/76f45d35e710f84a1cc44c90bc128494bc4280ce) by [@kelset](https://github.com/kelset))
+
+### Security
+
+- Update validateBaseUrl to use latest regex ([33ef82ce6d](https://github.com/facebook/react-native/commit/33ef82ce6dfd31e1f990d438c925a0e52723e16b) by [@FBNeal](https://github.com/FBNeal))
+
 ## v0.64.0
 
 ### Breaking
