@@ -20,12 +20,10 @@ octokit.issues.get({
     process.exit(1);
   }
 
-  process.chdir(reactNativeRepo);
-
   const commitPattern = /facebook\/react-native\/commit\/([0-9a-f]+)/g;
   const datePattern = /Date:\s+([ +-:\w]+)/;
 
-  const git = require("simple-git")();
+  const git = require("simple-git")({ baseDir: reactNativeRepo });
 
   const commits = [];
 
