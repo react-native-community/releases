@@ -22,6 +22,7 @@
     }
   },
   "devDependencies": {
+    "eslint-plugin-prettier": "3.4.0",
     "lage": "^0.29.3",
     "@rnw-scripts/jest-unittest-config": "1.2.1"
   },

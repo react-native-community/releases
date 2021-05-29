@@ -38,7 +38,7 @@ function requestWithFixtureResponse(fixture: string) {
   (responseEmitter as any).headers = { link: 'rel="next"' };
   setImmediate(() => {
     requestEmitter.emit("response", responseEmitter);
-    readFile(path.join(__dirname, "__fixtures__", fixture), "utf-8").then(
+    void readFile(path.join(__dirname, "__fixtures__", fixture), "utf-8").then(
       data => {
         responseEmitter.emit("data", data);
         responseEmitter.emit("end");
