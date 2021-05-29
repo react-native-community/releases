@@ -14,7 +14,6 @@ import {
   fetchCommits,
   getAllChangelogDescriptions,
   getChangeMessage,
-  getChangelogDesc,
   getOffsetBaseCommit,
   getOriginalCommit,
   getFirstCommitAfterForkingFromMaster,

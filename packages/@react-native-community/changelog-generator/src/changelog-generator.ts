@@ -190,10 +190,8 @@ function filterRevertCommits(commits: Commit[]) {
           revertCommits = revertCommits.filter(function(e) {
             return e !== revertCommit;
           });
-          return false;
         }
       });
-      return true;
     });
   if (revertCommits.length > 0) {
     console.error(
