@@ -22,9 +22,10 @@
     }
   },
   "devDependencies": {
+    "@rnw-scripts/jest-unittest-config": "1.2.1",
     "eslint-plugin-prettier": "3.4.0",
-    "lage": "^0.29.3",
-    "@rnw-scripts/jest-unittest-config": "1.2.1"
+    "husky": "^6.0.0",
+    "lage": "^0.29.3"
   },
   "resolutions": {
     "@rnw-scripts/babel-node-config": "0.0.2"
