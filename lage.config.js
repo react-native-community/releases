@@ -4,8 +4,6 @@ module.exports = {
     lint: ["build"],
     'lint:fix': [],
     test: ["build"],
-    format: [],
-    'format:verify': [],
     clean: [],
   },
   cacheOptions: {

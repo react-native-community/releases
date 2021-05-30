@@ -1,4 +1,4 @@
-const { series, task } = require("just-scripts");
+const { parallel, task } = require("just-scripts");
 
 require("@rnw-scripts/just-task");
-task("lint", series("eslint", "ts"));
+task("lint", parallel("eslint", "ts"));

@@ -760,7 +760,7 @@ export function run(
     .then(changes => buildMarkDown(options.compare, changes));
 }
 
-if (!module.parent) {
+if (process.env.JEST_WORKER_ID === undefined) {
   const argv = yargs
     .usage(
       "$0 [args]",
