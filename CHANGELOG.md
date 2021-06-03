@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.64.2
+
+### Changed
+
+- Find-node.sh supports Homebrew on M1 ([502b819049](https://github.com/facebook/react-native/commit/502b81904998b800f2d960bb4a8e244988c72958) by [@dulmandakh](https://github.com/dulmandakh))
+- Refactor UIManagerHelper.getUIManager to return null when there's no UIManager registered ([b0e8c1eac0](https://github.com/facebook/react-native/commit/b0e8c1eac0a9edda12ecfa264209a8b3222afe27) by [@mdvacca](https://github.com/mdvacca))
+
+### Fixed
+
+- Fix ScrollViewStickyHeader to push up header above it ([d754bdefc6](https://github.com/facebook/react-native/commit/d754bdefc68ff757ac2b5a2ffa38d5aad234d484) by [@kacieb](https://github.com/kacieb))
+
+#### Android specific
+
+- Font family is not apply when secureTextEntry is true ([cda77c77dd83cba07e6c2e56e938c3e4f7faf8fc](https://github.com/facebook/react-native/commit/cda77c77dd83cba07e6c2e56e938c3e4f7faf8fc) by [@hank121314](https://github.com/hank121314))
+- Dimension update events are now properly sent following orientation change ([a6a4d3365f17332e367c34357a07a73f97d6ec83](https://github.com/facebook/react-native/commit/a6a4d3365f17332e367c34357a07a73f97d6ec83) by [@ajpaulingalls](https://github.com/ajpaulingalls))
+
 ## v0.64.1
 
 ### Fixed
