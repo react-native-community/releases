@@ -41,7 +41,7 @@
 - Implement sendAccessibilityEvent in the React(Fabric/non-Fabric) renderer ([99b7052248](https://github.com/facebook/react-native/commit/99b7052248202cee172e0b80e7ee3dfb41316746) by [@JoshuaGross](https://github.com/JoshuaGross))
 - Added an example in ShareExample.js ([835117aba3](https://github.com/facebook/react-native/commit/835117aba39019ba8fff1dc87fa43d890b6bb17f) by [@kshitij86](https://github.com/kshitij86))
 - Add keyboard avoiding view examples ([a724c8d95e](https://github.com/facebook/react-native/commit/a724c8d95ede7f0bdf5b91901beed701f0fc9c9f) by [@suminkimm](https://github.com/suminkimm))
-- Added example to ToucableHighlight ([b64ffd70cd](https://github.com/facebook/react-native/commit/b64ffd70cd1022d10c30d2df9e6cfdff72f79798))
+- Added example to TouchableHighlight ([b64ffd70cd](https://github.com/facebook/react-native/commit/b64ffd70cd1022d10c30d2df9e6cfdff72f79798))
 - Added examples for Modal component in RNTester ([8dddaa85f0](https://github.com/facebook/react-native/commit/8dddaa85f04316c7b0419e6abcd11f8e11678956) by [@suminkimm](https://github.com/suminkimm))
 - Add new examples to the Accessibility API page ([84dde677d9](https://github.com/facebook/react-native/commit/84dde677d90bb3cfdf53329f7d257b870cb38eca) by [@suminkimm](https://github.com/suminkimm))
 - Add missing examples to ScrollView for RNTester. ([158abfe8bf](https://github.com/facebook/react-native/commit/158abfe8bfd20d05cd67c6e861d5db02b4420916) by [@suminkimm](https://github.com/suminkimm))
