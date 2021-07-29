@@ -72,6 +72,7 @@
 - Add an example showing the prop contentInset in SectionList ([28fb41a0ab](https://github.com/facebook/react-native/commit/28fb41a0ab48cc01d606b64744c84e2ac3805f3f) by [@kacieb](https://github.com/kacieb))
 - Use react-native-codegen in iOS app template ([e99b8bbb40](https://github.com/facebook/react-native/commit/e99b8bbb404f8cd1f11b6c7998083be530d7b8a4) by [@hramos](https://github.com/hramos))
 - Added reset method to RCTFabricSurface to help with reloads ([53858ceaa3](https://github.com/facebook/react-native/commit/53858ceaa3beab02726b1bd6e125e506477d445e) by [@PeteTheHeat](https://github.com/PeteTheHeat))
+- High contrast dynamic color options for dark and light mode. ([4b9d9dda27](https://github.com/facebook/react-native/commit/4b9d9dda270acd4e0314f40490c699ffd0f6e30e) by [@birkir](https://github.com/birkir))
 
 ### Changed
 
@@ -125,6 +126,8 @@
 - Don't minify JS bundle by default when using hermes ([1a67dda668](https://github.com/facebook/react-native/commit/1a67dda668c71d961a4bb3b0cdf6aa22c0e5c138) by [@janicduplessis](https://github.com/janicduplessis))
 - Migrate warnings in index.js to point to new lean core repos ([4421a64ac1](https://github.com/facebook/react-native/commit/4421a64ac1ea9df3827fb99194c8576a0750beab) by [@Naturalclar](https://github.com/Naturalclar))
 - React Native sync for revisions 4e5d7fa...454c221 ([69ade5996f](https://github.com/facebook/react-native/commit/69ade5996f7073d16082af6277eb1388110b171c) by [@sebmarkbage](https://github.com/sebmarkbage))
+- Update Flipper to 0.93.0 ([06c33e9abe](https://github.com/facebook/react-native/commit/06c33e9abe6ed51b1c8bba03982ebce2b6da3860) by [@mweststrate](https://github.com/mweststrate))
+- Find node on m1 via homebrew node managers ([4d40b53c12](https://github.com/facebook/react-native/commit/4d40b53c12c8ad52760c63cacde417ee876bdfb1) by [@danilobuerger](https://github.com/danilobuerger))
 
 #### Android specific
 
@@ -160,6 +163,8 @@
 - Bump Fresco to 2.3.0 ([280f524b49](https://github.com/facebook/react-native/commit/280f524b491e7a36bb9f9a26e354bb8e125375ed) by [@dulmandakh](https://github.com/dulmandakh))
 - Update Okhttp to version 3.14.19 ([6bfd89d277](https://github.com/facebook/react-native/commit/6bfd89d27724f2aac602fa2acbf4753950f4152e) by [@LukasFPV](https://github.com/LukasFPV))
 - Remove ReactFragmentActivity class. ([2798e7172b](https://github.com/facebook/react-native/commit/2798e7172b01b9e2dbe2937d0163f98ab29230cf) by [@dulmandakh](https://github.com/dulmandakh))
+- Bumping OkHttp from 4.9.0 to 4.9.1. ([6caec9d91f](https://github.com/facebook/react-native/commit/6caec9d91fe71bcd80d670218d752c4f251bde81) by [@gedeagas](https://github.com/gedeagas))
+- Bump Fresco to 2.5.0 ([8fa8934011](https://github.com/facebook/react-native/commit/8fa8934011e4d9f1f7a49c8519fcc97f30a5c74b) by [@dulmandakh](https://github.com/dulmandakh))
 
 #### iOS specific
 
@@ -246,6 +251,8 @@
 - Make NativeModules immediately initializable ([2bf866e401](https://github.com/facebook/react-native/commit/2bf866e4018ea72c1f1c92c806db85378c801fb7) by [@RSNara](https://github.com/RSNara))
 - Restore `android_hyphenationFrequency` on `Text`. ([1433ed6333](https://github.com/facebook/react-native/commit/1433ed6333162189730d6f92cf80f3077ac69120) by [@yungsters](https://github.com/yungsters))
 - Fixes https://github.com/facebook/react-native/issues/7135, https://github.com/facebook/react-native/issues/9942, and https://github.com/facebook/react-native/issues/16137. Display the `testID` as the `resource-id` for black-box testing frameworks ([381fb395ad](https://github.com/facebook/react-native/commit/381fb395ad9d2d48717a5d082aaedbecdd804554) by [@jdeff](https://github.com/jdeff))
+- Fix support for blobs larger than 64 KB ([f00e348ca7](https://github.com/facebook/react-native/commit/f00e348ca7f031c3577b1335a3163bc3e4eb4b41) by [@tomekzaw](https://github.com/tomekzaw))
+- Fix font weight numeric values ([3827ca6171](https://github.com/facebook/react-native/commit/3827ca61714b699c866e17d58b4697dde86e3d00) by [@fabriziobertoglio1987](https://github.com/fabriziobertoglio1987))
 
 #### iOS specific
 
@@ -265,6 +272,8 @@
 - Move hermes to a separate podspec ([0959ff36d1](https://github.com/facebook/react-native/commit/0959ff36d1f3264e117021eb1999d0bdb71377c3) by [@janicduplessis](https://github.com/janicduplessis))
 - Don't throw an error if the UIManager returns null when fetching a view config ([d435d26d87](https://github.com/facebook/react-native/commit/d435d26d87d69afcaf1d89d8a92f91c84aff2d71))
 - Modal's onDismiss prop will now be called successfully. ([d85d5d2e19](https://github.com/facebook/react-native/commit/d85d5d2e1974b463318e4c86da29a5ccdd60a977) by [@kkoudev](https://github.com/kkoudev))
+- Allow PlatformColor to work with border colors ([c974cbff04](https://github.com/facebook/react-native/commit/c974cbff04a8d90ac0f856dbada3fc5a75c75b49) by [@danilobuerger](https://github.com/danilobuerger))
+- Fix cli bundle platform for Mac Catalyst in `react-native-xcode.sh` ([b496a531e0](https://github.com/facebook/react-native/commit/b496a531e0b4b5d828077b0e7dff43dd28fed5eb) by [@robertying](https://github.com/robertying))
 
 ### Security
 
@@ -313,6 +322,9 @@
 - Log prefetched image's view controller moduleName and GraphQL queryRootName ([017bc91192](https://github.com/facebook/react-native/commit/017bc911928472e20f37dd9512a2113a7d93c81b) by [@p-sun](https://github.com/p-sun))
 - Clean up EventObjectPropertyType ([0e46080847](https://github.com/facebook/react-native/commit/0e46080847595fb7577b18042c932db958bc0959) by [@RSNara](https://github.com/RSNara))
 - Continuous Integration cleanup ([3e77e15526](https://github.com/facebook/react-native/commit/3e77e15526def73e54af50e9991c18751bf9aed3) by [@cpojer](https://github.com/cpojer))
+- Fix(deps): bump metro to 0.66.2 + dedup ([e40f58272d](https://github.com/facebook/react-native/commit/e40f58272d51a40e7b5fa77c14767ddaf9ecc006) by [@Titozzz](https://github.com/Titozzz))
+- Lock files update for 065 branch ([ca5b943031](https://github.com/facebook/react-native/commit/ca5b94303147b8093e2819a966a78521b6103f90) by [@kelset](https://github.com/kelset))
+- Unbreak publish-npm.js ([5aae7fce0e](https://github.com/facebook/react-native/commit/5aae7fce0e17d05a341511a2d0255442fd76f5af) by [@tido64](https://github.com/tido64))
 
 #### Android Unknown
 
