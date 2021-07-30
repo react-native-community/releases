@@ -73,7 +73,7 @@
 - `Appearance.addChangeListener` now returns an `EventSubscription`. ([305b4253c2](https://github.com/facebook/react-native/commit/305b4253c2a9ed4d71be33e02cb12b6d570e2fb1) by [@yungsters](https://github.com/yungsters))
 - `Dimensions.addEventListener` now returns an `EventSubscription`. ([c47a03563d](https://github.com/facebook/react-native/commit/c47a03563db72d1580bf87b7729bd22ce6ca63dd) by [@yungsters](https://github.com/yungsters))
 - Updated react-native-community/cli to v6 (hence updating metro to 0.66) ([0d32aef3aa](https://github.com/facebook/react-native/commit/0d32aef3aa9a75b00d99503b8e4f502c52380dea) by [@Titozzz](https://github.com/Titozzz))
-- Reflect Hermes release version from HermesBadge (c54aeccf1a by @Huxpro)
+- Reflect Hermes release version from HermesBadge ([c54aeccf1a](https://github.com/facebook/react-native/commit/c54aeccf1a8e16240e400d783dda5ec07fcf3808) by [@Huxpro](https://github.com/Huxpro))
 
 #### Android specific
 
@@ -197,28 +197,28 @@
 
 #### iOS specific
 
-- Fix(hermes): fixed hermes build on iOS ([59abb5f378](https://github.com/facebook/react-native/commit/59abb5f378e116288cdea2f619de0c128bb0b0eb) by [@Titozzz](https://github.com/Titozzz))
-- Fix builds on Xcode 12.5 ([36b58a824e](https://github.com/facebook/react-native/commit/36b58a824ea20daa22fe7c528a3bf0ff4e6a4cb5) by [@PeteTheHeat](https://github.com/PeteTheHeat))
-- Fix running React Native project with Xcode 12 in Release on iPhone Simulator ([fdcacd7f76](https://github.com/facebook/react-native/commit/fdcacd7f76ea8ca6dafda32ac431c8adc7bdad00) by [@grabbou](https://github.com/grabbou))
-- Fix crash in RCTCoreModulesClassProvider during quit ([2f62c2892d](https://github.com/facebook/react-native/commit/2f62c2892d9979f80752350d1b949f2770511956) by [@appden](https://github.com/appden))
+- Animated images without loop no longer animate twice ([17aa1e320e](https://github.com/facebook/react-native/commit/17aa1e320e75393d46a54ec0fee8b068eeef142f) by [@comvenger-brandon](https://github.com/comvenger-brandon))
+- Allow PlatformColor to work with border colors ([c974cbff04](https://github.com/facebook/react-native/commit/c974cbff04a8d90ac0f856dbada3fc5a75c75b49) by [@danilobuerger](https://github.com/danilobuerger))
 - RCTSurfaceHostingView default background color is now consistent with RCTRootView ([f31497354b](https://github.com/facebook/react-native/commit/f31497354b72ad51b452a4b8bd3b70de16830025) by [@fkgozali](https://github.com/fkgozali))
 - Invalidate TurboModules with infra-generated method queues on their method queues ([497eb578ab](https://github.com/facebook/react-native/commit/497eb578ab32614744a4ef61d7a6bca0d4251885) by [@RSNara](https://github.com/RSNara))
 - Fix RefreshControl layout when removed from window ([e67811e7a6](https://github.com/facebook/react-native/commit/e67811e7a6df0937ed61d3367ab10fab95b31bfa) by [@janicduplessis](https://github.com/janicduplessis))
-- Fix Codegen silently failing when Yarn is not installed, or when Yarn v2 is active. ([07e4953514](https://github.com/facebook/react-native/commit/07e4953514636aaadc5915944cc64c12028516f2) by [@ivanmoskalev](https://github.com/ivanmoskalev))
-- Make codegen more reliable on iOS ([12fccdeea3](https://github.com/facebook/react-native/commit/12fccdeea33324b8ddaa3ac0e2dbf81a44ca1eb2) by [@janicduplessis](https://github.com/janicduplessis))
-- Animated images without loop no longer animate twice ([17aa1e320e](https://github.com/facebook/react-native/commit/17aa1e320e75393d46a54ec0fee8b068eeef142f) by [@comvenger-brandon](https://github.com/comvenger-brandon))
 - Tab Accessibility Role had incorrect localization string ([80a10953f9](https://github.com/facebook/react-native/commit/80a10953f9de8cc251e9b8c1e59a173af87febb9) by [@adkenyon](https://github.com/adkenyon))
 - Incorrect ScrollView offset on update ([a4526bcc3f](https://github.com/facebook/react-native/commit/a4526bcc3f89f5b9d3f86c814ade8f55c86e819e) by [@rnike](https://github.com/rnike))
+- Modal's `onDismiss` prop will now be called successfully. ([d85d5d2e19](https://github.com/facebook/react-native/commit/d85d5d2e1974b463318e4c86da29a5ccdd60a977) by [@kkoudev](https://github.com/kkoudev))
+- Fix DatePicker sizing issue ([84d55868e8](https://github.com/facebook/react-native/commit/84d55868e8b4e5a555d324c6162b8e38571524d8) by [@sammy-SC](https://github.com/sammy-SC))
 - First press not working after pull to refresh ([c4950610e4](https://github.com/facebook/react-native/commit/c4950610e40f2019c828bc99e29769cd4089c217) by [@rnike](https://github.com/rnike))
+- Fix Codegen silently failing when Yarn is not installed, or when Yarn v2 is active. ([07e4953514](https://github.com/facebook/react-native/commit/07e4953514636aaadc5915944cc64c12028516f2) by [@ivanmoskalev](https://github.com/ivanmoskalev))
+- Make codegen more reliable on iOS ([12fccdeea3](https://github.com/facebook/react-native/commit/12fccdeea33324b8ddaa3ac0e2dbf81a44ca1eb2) by [@janicduplessis](https://github.com/janicduplessis))
+- Fix crash in RCTCoreModulesClassProvider during quit ([2f62c2892d](https://github.com/facebook/react-native/commit/2f62c2892d9979f80752350d1b949f2770511956) by [@appden](https://github.com/appden))
 - Fix an issue calling stopSurface in bridgeless mode before surface is started ([81096901a8](https://github.com/facebook/react-native/commit/81096901a8a6da75744cef7b663ccea2ff9c4c09))
 - Move hermes to a separate podspec ([0959ff36d1](https://github.com/facebook/react-native/commit/0959ff36d1f3264e117021eb1999d0bdb71377c3) by [@janicduplessis](https://github.com/janicduplessis))
-- Modal's `onDismiss` prop will now be called successfully. ([d85d5d2e19](https://github.com/facebook/react-native/commit/d85d5d2e1974b463318e4c86da29a5ccdd60a977) by [@kkoudev](https://github.com/kkoudev))
-- Allow PlatformColor to work with border colors ([c974cbff04](https://github.com/facebook/react-native/commit/c974cbff04a8d90ac0f856dbada3fc5a75c75b49) by [@danilobuerger](https://github.com/danilobuerger))
 - Fix cli bundle platform for Mac Catalyst in `react-native-xcode.sh` ([b496a531e0](https://github.com/facebook/react-native/commit/b496a531e0b4b5d828077b0e7dff43dd28fed5eb) by [@robertying](https://github.com/robertying))
-- Fix DatePicker sizing issue ([84d55868e8](https://github.com/facebook/react-native/commit/84d55868e8b4e5a555d324c6162b8e38571524d8) by [@sammy-SC](https://github.com/sammy-SC))
 - Fix `prefetchImageWithMetadata` redbox([f27e305056](https://github.com/facebook/react-native/commit/f27e305056152ff9ad7aeb9018bf289d51719eb9) by [@p-sun](https://github.com/p-sun))
-- Roll out RCTNetworking extraneous NativeModule call removal ([0e0d2e84f5](https://github.com/facebook/react-native/commit/0e0d2e84f56ea233e72d980ff6bd9797df250553) by [@RSNara](https://github.com/RSNara))
-- Fix Hermes + no Flipper build on Xcode 12.5 (b9243e00e3 by @PeteTheHeat)
+- Roll out RCTNetworking extraneous NativeModule call removal ([0e0d2e84f5](https://github.com/facebook/react-native/commit/0e0d2e84f56ea233e72d980ff6bd9797df250553) by [@RSNara](https://github.com/RSNara)) 
+- Fix Hermes + no Flipper build on Xcode 12.5 ([b9243e00e3](https://github.com/facebook/react-native/commit/b9243e00e30be057a45af6ed1916af4328c458e4) by [@PeteTheHeat](https://github.com/PeteTheHeat))
+- Fix(hermes): fixed hermes build on iOS ([59abb5f378](https://github.com/facebook/react-native/commit/59abb5f378e116288cdea2f619de0c128bb0b0eb) by [@Titozzz](https://github.com/Titozzz))
+- Fix builds on Xcode 12.5 ([36b58a824e](https://github.com/facebook/react-native/commit/36b58a824ea20daa22fe7c528a3bf0ff4e6a4cb5) by [@PeteTheHeat](https://github.com/PeteTheHeat))
+- Fix running React Native project with Xcode 12 in Release on iPhone Simulator ([fdcacd7f76](https://github.com/facebook/react-native/commit/fdcacd7f76ea8ca6dafda32ac431c8adc7bdad00) by [@grabbou](https://github.com/grabbou))
 
 
 ## v0.64.2
