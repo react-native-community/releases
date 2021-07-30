@@ -4,7 +4,7 @@
 
 ### Highlights
 
-- Hermes 0.8.1. Please see the highlighted changes from its w[0.8.0](https://github.com/facebook/hermes/releases/tag/v0.8.0) and [0.8.1](https://github.com/facebook/hermes/releases/tag/v0.8.1) release notes.
+- Hermes 0.8.1. Please see the highlighted changes from its [0.8.0](https://github.com/facebook/hermes/releases/tag/v0.8.0) and [0.8.1](https://github.com/facebook/hermes/releases/tag/v0.8.1) release notes.
 
 #### Android specific
 
