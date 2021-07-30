@@ -248,10 +248,10 @@ export function git(gitDir: string, ...args: string[]) {
 }
 
 /**
- * Finds a commit on the `master` branch, based on the ‘differential revision’
- * that FB's infrastructure adds to each commit that lands in the `master`
+ * Finds a commit on the `main` branch, based on the ‘differential revision’
+ * that FB's infrastructure adds to each commit that lands in the `main`
  * branch. This ensures that we always use the canonical commit ref as it
- * exists in the `master` branch, rather than a new cherry-picked commit ref.
+ * exists in the `main` branch, rather than a new cherry-picked commit ref.
  */
 export function getOriginalCommit(
   gitDir: string,
@@ -262,7 +262,7 @@ export function getOriginalCommit(
     return git(
       gitDir,
       "log",
-      "master",
+      "main",
       "--pretty=format:%H",
       `--grep=${match[0]}`
     ).then(sha => {
@@ -270,7 +270,7 @@ export function getOriginalCommit(
         throw new Error(
           `Expected a commit to match ${
             match[1]
-          }, is your \`master\` branch out of date?`
+          }, is your \`main\` branch out of date?`
         );
       }
       if (sha.includes("\n")) {
@@ -324,7 +324,7 @@ function getOriginalCommits(
       if (unresolved.length > 0) {
         console.error(
           chalk.redBright(
-            "Unable to find differential revisions for the following commits. If these were made on the release branch only, be sure to update the CHANGELOG entries to point to the commit on the master branch after back-porting."
+            "Unable to find differential revisions for the following commits. If these were made on the release branch only, be sure to update the CHANGELOG entries to point to the commit on the main branch after back-porting."
           )
         );
         console.group();
@@ -344,13 +344,13 @@ function getOriginalCommits(
 
 /**
  * Resolves the ref to the first commit after the tree was forked from the
- * `master` branch.
+ * `main` branch.
  */
-export function getFirstCommitAfterForkingFromMaster(
+export function getFirstCommitAfterForkingFromMain(
   gitDir: string,
   ref: string
 ) {
-  return git(gitDir, "rev-list", `^${ref}`, "--first-parent", "master").then(
+  return git(gitDir, "rev-list", `^${ref}`, "--first-parent", "main").then(
     out => {
       const components = out.split("\n");
       return components[components.length - 1];
@@ -360,7 +360,7 @@ export function getFirstCommitAfterForkingFromMaster(
 
 /**
  * Resolves both `base` and `compare` to the first commit after forking from
- * the `master` branch. In case the result is the same for both, then the delta
+ * the `main` branch. In case the result is the same for both, then the delta
  * between the two is in the PATCH version range and we should *not* use the
  * offset, as the changes we need to consider are all in the `compare` tree.
  */
@@ -372,8 +372,8 @@ export function getOffsetBaseCommit(
   console.warn(chalk.green("Resolve base commit"));
   console.group();
   return Promise.all([
-    getFirstCommitAfterForkingFromMaster(gitDir, base),
-    getFirstCommitAfterForkingFromMaster(gitDir, compare)
+    getFirstCommitAfterForkingFromMain(gitDir, base),
+    getFirstCommitAfterForkingFromMain(gitDir, compare)
   ])
     .then(([offsetBase, offsetCompare]) => {
       if (offsetBase === offsetCompare) {
