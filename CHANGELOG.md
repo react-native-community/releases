@@ -6,7 +6,7 @@
 
 - Hermes 0.8.1. Please see the highlighted changes from its [0.8.0](https://github.com/facebook/hermes/releases/tag/v0.8.0) and [0.8.1](https://github.com/facebook/hermes/releases/tag/v0.8.1) release notes.
 
-#### Android specific
+### Breaking Changes
 
 #### iOS specific
 
@@ -129,9 +129,6 @@
 - Deprecate `NativeModule.onCatalystInstanceDestroy()` for `NativeModule.invalidate()` ([18c8417290](https://github.com/facebook/react-native/commit/18c8417290823e67e211bde241ae9dde27b72f17) by [@RSNara](https://github.com/RSNara))
 - Mark `hasActiveCatalystInstance()` as Deprecated ([1b50722a7e](https://github.com/facebook/react-native/commit/1b50722a7e84cd8acffd3f0f84d77057e1e0d955))
 
-#### iOS specific
-
-
 ### Removed
 
 - Stabilize `RootTagContext` ([9b98edcd01](https://github.com/facebook/react-native/commit/9b98edcd0155a4a8a1f71d19e565c485910a6137) by [@nadiia](https://github.com/nadiia))
@@ -181,6 +178,7 @@
 - Fix disabled handling for Text ([33ff4445dc](https://github.com/facebook/react-native/commit/33ff4445dcf858cd5e6ba899163fd2a76774b641) by [@lunaleaps](https://github.com/lunaleaps))
 - Fix disabled prop not disabling onPress for voice assistant ([1c7d9c8046](https://github.com/facebook/react-native/commit/1c7d9c8046099eab8db4a460bedc0b2c07ed06df) by [@kacieb](https://github.com/kacieb))
 - Fix unsafe cast and detect overflow in MapBuffer. ([e69f1c9f50](https://github.com/facebook/react-native/commit/e69f1c9f50c64bfcaeb684d763f02b9ccadec960))
+- Fix(deps): bump metro to 0.66.2 + dedup ([e40f58272d](https://github.com/facebook/react-native/commit/e40f58272d51a40e7b5fa77c14767ddaf9ecc006) by [@Titozzz](https://github.com/Titozzz))
 
 #### Android specific
 
@@ -233,7 +231,7 @@
 ### Fixed
 
 - Fix ScrollViewStickyHeader to push up header above it ([d754bdefc6](https://github.com/facebook/react-native/commit/d754bdefc68ff757ac2b5a2ffa38d5aad234d484) by [@kacieb](https://github.com/kacieb))
-- Fix(deps): bump metro to 0.66.2 + dedup ([e40f58272d](https://github.com/facebook/react-native/commit/e40f58272d51a40e7b5fa77c14767ddaf9ecc006) by [@Titozzz](https://github.com/Titozzz))
+
 
 #### Android specific
 
