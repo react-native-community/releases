@@ -49,12 +49,9 @@
 
 ### Changed
 
-- Make the RootTag an opaque type ([46ffe84453](https://github.com/facebook/react-native/commit/46ffe84453aaf3836da6abfe4c0b078ca0ac4f21) by [@nadiia](https://github.com/nadiia))
 - Show warning when native module without `addListener` or `removeListeners` is passed to `NativeEventEmitter` ([114be1d217](https://github.com/facebook/react-native/commit/114be1d2170bae2d29da749c07b45acf931e51e2) by [@rubennorte](https://github.com/rubennorte))
 - Disable `accessibilityState` when the `TouchableWithoutFeedback` is `disabled`. ([697164077c](https://github.com/facebook/react-native/commit/697164077c362cfa9a384b0f4e246d6bd9c470ba) by [@carloscuesta](https://github.com/carloscuesta))
-- Clean up the initialization of instance variables in `ScrollView` ([1747536007](https://github.com/facebook/react-native/commit/174753600778675c8b0e7d341b6044192af68d00) by [@kacieb](https://github.com/kacieb))
 - Upgraded `react-devtools-core dependency` to 4.12.0 ([5a2693d78f](https://github.com/facebook/react-native/commit/5a2693d78f1a886f0aa5b7f86830d3ddb54a57e9) by [@bvaughn](https://github.com/bvaughn))
-- Clean up imports and update KeyboardAvoidingView to flow strict-local ([328f4ee06b](https://github.com/facebook/react-native/commit/328f4ee06b7901da21babaa5e4575fa1cb62e0f4) by [@kacieb](https://github.com/kacieb))
 - Set disabled `accessibilityState` when `TouchableHighlight` is disabled ([f69e096bb4](https://github.com/facebook/react-native/commit/f69e096bb4df67474351786f674b1bb1e42d3363) by [@Naturalclar](https://github.com/Naturalclar))
 - Add checks and logs to for better error handling ([ea1f9531f0](https://github.com/facebook/react-native/commit/ea1f9531f00b5cd834e03f58cdfa117a93634624))
 - CreateAnimatedComponent: removed deprecated lifecycles usage ([ba61267015](https://github.com/facebook/react-native/commit/ba61267015567bf180dd3272a295dc262b3e2c97) by [@nadiia](https://github.com/nadiia))
