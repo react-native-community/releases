@@ -2,9 +2,9 @@
 
 ## v0.65.0
 
-### Breaking
+### Highlights
 
-- Bump Hermes npm to 0.8.0 ([2b67631210](https://github.com/facebook/react-native/commit/2b67631210070de0c07b21c69fb9d0ccd9e9fcba) by [@Huxpro](https://github.com/Huxpro))
+- Hermes 0.8.1. Please see the highlighted changes from its w[0.8.0](https://github.com/facebook/hermes/releases/tag/v0.8.0) and [0.8.1](https://github.com/facebook/hermes/releases/tag/v0.8.1) release notes.
 
 #### Android specific
 
@@ -49,6 +49,8 @@
 
 ### Changed
 
+- Bump Hermes npm to 0.8.0 ([2b67631210](https://github.com/facebook/react-native/commit/2b67631210070de0c07b21c69fb9d0ccd9e9fcba) by [@Huxpro](https://github.com/Huxpro))
+- Bump Flipper + Bump hermes (#31872 by [@Titozzz](https://github.com/Titozzz))
 - Show warning when native module without `addListener` or `removeListeners` is passed to `NativeEventEmitter` ([114be1d217](https://github.com/facebook/react-native/commit/114be1d2170bae2d29da749c07b45acf931e51e2) by [@rubennorte](https://github.com/rubennorte))
 - Disable `accessibilityState` when the `TouchableWithoutFeedback` is `disabled`. ([697164077c](https://github.com/facebook/react-native/commit/697164077c362cfa9a384b0f4e246d6bd9c470ba) by [@carloscuesta](https://github.com/carloscuesta))
 - Upgraded `react-devtools-core dependency` to 4.12.0 ([5a2693d78f](https://github.com/facebook/react-native/commit/5a2693d78f1a886f0aa5b7f86830d3ddb54a57e9) by [@bvaughn](https://github.com/bvaughn))
