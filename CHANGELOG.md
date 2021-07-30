@@ -16,10 +16,9 @@
 
 - Re-added localeIdentifier to I18nManager constants ([6b91ae73cd](https://github.com/facebook/react-native/commit/6b91ae73cdf096e15a3235ae76276f9d7fb12f7b) by [@acoates-ms](https://github.com/acoates-ms))
 - Add `onPressIn` & `onPressOut` props to Text ([1d924549ca](https://github.com/facebook/react-native/commit/1d924549cad75912191005c8f68dd73e15b07183) by [@adrienharnay](https://github.com/adrienharnay))
-- Stabilize RootTagContext. And temporarily export both `unstable_RootTagContext` and `RootTagContext` ([9d489354ae](https://github.com/facebook/react-native/commit/9d489354ae373614b20cd91f588eb25743686ee0) by [@nadiia](https://github.com/nadiia))
-- Add `displayName` to TouchableHighlight and TouchableOpacity ([c4e40b81c0](https://github.com/facebook/react-native/commit/c4e40b81c01d061c189a7d28a4f56a588c3d1aea) by [@brunohkbx](https://github.com/brunohkbx))
+- Stabilize `RootTagContext`. And temporarily export both `unstable_RootTagContext` and `RootTagContext` ([9d489354ae](https://github.com/facebook/react-native/commit/9d489354ae373614b20cd91f588eb25743686ee0) by [@nadiia](https://github.com/nadiia))
+- Add `displayName` to `TouchableHighlight` and `TouchableOpacity` ([c4e40b81c0](https://github.com/facebook/react-native/commit/c4e40b81c01d061c189a7d28a4f56a588c3d1aea) by [@brunohkbx](https://github.com/brunohkbx))
 - Added context to URL's error messages when the feature is not implemented ([452240bafa](https://github.com/facebook/react-native/commit/452240bafa970578144aedaea0223e17863d2d26) by [@Crash--](https://github.com/Crash--))
-- Add test with Multiple Sticky Headers for ScrollView ([cfb5b5e20a](https://github.com/facebook/react-native/commit/cfb5b5e20a276822bb97d3cace5c9e037295855d) by [@kacieb](https://github.com/kacieb))
 - Add PressabilityPerformanceEventEmitter ([c4c0065b00](https://github.com/facebook/react-native/commit/c4c0065b0009ced0049c5abc4dddd327ac638928) by [@JoshuaGross](https://github.com/JoshuaGross))
 - Add a `stickyHeaderHiddenOnScroll` option to keep the sticky header hidden during scrolling down, and only slide in when scrolling up ([ffba25c648](https://github.com/facebook/react-native/commit/ffba25c648152021dd3fb9e79afd8cade7008d05))
 - Added `debugName` parameter to `renderApplication` to use as the display name for the React root tree ([eeb36f4709](https://github.com/facebook/react-native/commit/eeb36f470929c2fdd8e1ed69898a5ba9144b8715) by [@rubennorte](https://github.com/rubennorte))
@@ -264,7 +263,6 @@
 
 - Make android codegen target generate static library ([d5cfad5519](https://github.com/facebook/react-native/commit/d5cfad551908097c71b9ef42b00419aa44868f8e) by [@RSNara](https://github.com/RSNara))
 - Roll out package info validation ([40115d87d4](https://github.com/facebook/react-native/commit/40115d87d45c85a154f1bedfe5c9b00d7899c903) by [@RSNara](https://github.com/RSNara))
-- Delete redundant dependency in turbomodules/core:coreAndroid ([374808f307](https://github.com/facebook/react-native/commit/374808f307fd0023f0eddfefe95da26664dcfa41) by [@RSNara](https://github.com/RSNara))
 
 #### iOS Unknown
 
@@ -285,7 +283,6 @@
 - Fix unsafe cast and detect overflow in MapBuffer. ([e69f1c9f50](https://github.com/facebook/react-native/commit/e69f1c9f50c64bfcaeb684d763f02b9ccadec960))
 - Clean listeners during destroy of ReactContext ([d79212120b](https://github.com/facebook/react-native/commit/d79212120b7168015d3d0225ef372ed851a230fa) by [@mdvacca](https://github.com/mdvacca))
 - Add logs in the getViewManagerConfig ([3d0e974ed8](https://github.com/facebook/react-native/commit/3d0e974ed86fb66cb2d8cab7f7c95d6a2e530197) by [@mdvacca](https://github.com/mdvacca))
-- Make rn_xplat_cxx_library and rn_apple_library target iOS 11 ([d54b286b97](https://github.com/facebook/react-native/commit/d54b286b9706ecbe5472e693362c1b91cc22b27d) by [@PeteTheHeat](https://github.com/PeteTheHeat))
 - Fix building React Android on Windows. ([5dc15222b2](https://github.com/facebook/react-native/commit/5dc15222b256e32517df553c5fe7f6f5b7d0d31f))
 - Avoid retrieving view configs on Text component ([3dd3123113](https://github.com/facebook/react-native/commit/3dd312311396bd1e0af9e6f137abbb3e2fce73fc) by [@mdvacca](https://github.com/mdvacca))
 - Add AbortController to eslint globals ([2aab894acf](https://github.com/facebook/react-native/commit/2aab894acf83732591de861ee29f3ddbd25546c4) by [@maltoze](https://github.com/maltoze))
