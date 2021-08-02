@@ -18,7 +18,7 @@
 - Stabilize `RootTagContext`. And temporarily export both `unstable_RootTagContext` and `RootTagContext` ([9d489354ae](https://github.com/facebook/react-native/commit/9d489354ae373614b20cd91f588eb25743686ee0) by [@nadiia](https://github.com/nadiia))
 - Implement `sendAccessibilityEvent` in the React(Fabric/non-Fabric) renderer ([99b7052248](https://github.com/facebook/react-native/commit/99b7052248202cee172e0b80e7ee3dfb41316746) by [@JoshuaGross](https://github.com/JoshuaGross))
 - Re-added `localeIdentifier` to `I18nManager` constants ([6b91ae73cd](https://github.com/facebook/react-native/commit/6b91ae73cdf096e15a3235ae76276f9d7fb12f7b) by [@acoates-ms](https://github.com/acoates-ms))
-- - Add PressabilityPerformanceEventEmitter ([c4c0065b00](https://github.com/facebook/react-native/commit/c4c0065b0009ced0049c5abc4dddd327ac638928) by [@JoshuaGross](https://github.com/JoshuaGross))
+- Add PressabilityPerformanceEventEmitter ([c4c0065b00](https://github.com/facebook/react-native/commit/c4c0065b0009ced0049c5abc4dddd327ac638928) by [@JoshuaGross](https://github.com/JoshuaGross))
 - Added `displayName` to some RN contexts to make them more easy to differentiate when debugging. ([68a476103a](https://github.com/facebook/react-native/commit/68a476103a95be77f4fc7c582e52cc94946de1b4) by [@bvaughn](https://github.com/bvaughn))
 - Add `displayName` to `TouchableHighlight` and `TouchableOpacity` ([c4e40b81c0](https://github.com/facebook/react-native/commit/c4e40b81c01d061c189a7d28a4f56a588c3d1aea) by [@brunohkbx](https://github.com/brunohkbx))
 - Added context to URL's error messages when the feature is not implemented ([452240bafa](https://github.com/facebook/react-native/commit/452240bafa970578144aedaea0223e17863d2d26) by [@Crash--](https://github.com/Crash--))
@@ -49,7 +49,6 @@
 
 ### Changed
 
-- Bump Hermes npm to 0.8.0 ([2b67631210](https://github.com/facebook/react-native/commit/2b67631210070de0c07b21c69fb9d0ccd9e9fcba) by [@Huxpro](https://github.com/Huxpro))
 - Bump Flipper + Bump hermes (#31872 by [@Titozzz](https://github.com/Titozzz))
 - Show warning when native module without `addListener` or `removeListeners` is passed to `NativeEventEmitter` ([114be1d217](https://github.com/facebook/react-native/commit/114be1d2170bae2d29da749c07b45acf931e51e2) by [@rubennorte](https://github.com/rubennorte))
 - Disable `accessibilityState` when the `TouchableWithoutFeedback` is `disabled`. ([697164077c](https://github.com/facebook/react-native/commit/697164077c362cfa9a384b0f4e246d6bd9c470ba) by [@carloscuesta](https://github.com/carloscuesta))
