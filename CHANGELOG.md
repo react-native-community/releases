@@ -232,7 +232,6 @@
 
 - Fix ScrollViewStickyHeader to push up header above it ([d754bdefc6](https://github.com/facebook/react-native/commit/d754bdefc68ff757ac2b5a2ffa38d5aad234d484) by [@kacieb](https://github.com/kacieb))
 
-
 #### Android specific
 
 - Font family is not apply when secureTextEntry is true ([cda77c77dd83cba07e6c2e56e938c3e4f7faf8fc](https://github.com/facebook/react-native/commit/cda77c77dd83cba07e6c2e56e938c3e4f7faf8fc) by [@hank121314](https://github.com/hank121314))
