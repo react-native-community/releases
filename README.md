@@ -22,78 +22,7 @@ To reconcile these two different use-cases, React Native’s release process is 
 1. Steps 3 through 5 are repeated on the stable branch for bug-fixes _only_ and will result in a [patch release]. I.e. no release-candidates are published for patch versions.
 1. The entire process is repeated from step 1 for the next [minor version], which will include all the changes that were made on the `main` branch previously but were not yet cherry-picked.
 
-```
-┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
-            main branch            │
-│
-   ┌──────────────────────────────┐  │
-│  │                              │
-   │     pretty good bug-fix      │  │
-│  │                              │
-   └──────────────────────────────┘  │  ┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
-│                  │                                 0.42-stable             │
-                   ▼                 │  │
-│  ┌──────────────────────────────┐        ┌──────────────────────────────┐  │
-   │                              │  │  │  │                              │
-│  │   zomg, amazing feature A!   │───────▶│         0.42.0-rc.0          │  │
-   │                              │  │  │  │                              │
-│  └──────────────────────────────┘        └──────────────────────────────┘  │
-                   │                 │  │                  │
-│                  ▼                                       ▼                 │
-   ┌──────────────────────────────┐  │  │  ┌──────────────────────────────┐
-│  │                              │        │                              │  │
-   │    whoops, fix feature A     │──┼──┼─▶│    whoops, fix feature A     │
-│  │                              │        │                              │  │
-   └──────────────────────────────┘  │  │  └──────────────────────────────┘
-│                  │                                       │                 │
-                   │                 │  │                  ▼
-│                  │                       ┌──────────────────────────────┐  │
-                   │                 │  │  │                              │
-│                  ▼                       │         0.42.0-rc.1          │  │
-   ┌──────────────────────────────┐  │  │  │                              │
-│  │                              │        └──────────────────────────────┘  │
-   │  wow, sweet new feature B!   │  │  │                  │
-│  │                              │                        ▼                 │
-   └──────────────────────────────┘  │  │  ┌──────────────────────────────┐
-│                  │                       │                              │  │
-                   │                 │  │  │            0.42.0            │
-│                  │                       │                              │  │
-                   │                 │  │  └──────────────────────────────┘
-│                  │                                       │                 │
-                   ▼                 │  │                  ▼
-│  ┌──────────────────────────────┐        ┌──────────────────────────────┐  │
-   │                              │  │  │  │                              │
-│  │  yikes, fix feature A more   │───────▶│  yikes, fix feature A more   │  │
-   │                              │  │  │  │                              │
-│  └──────────────────────────────┘        └──────────────────────────────┘  │
-                   │                 │  │                  │
-│                  │                                       ▼                 │
-                   │                 │  │  ┌──────────────────────────────┐
-│                  │                       │                              │  │
-                   │                 │  │  │            0.42.1            │
-│                  │                       │                              │  │
-                   │                 │  │  └──────────────────────────────┘
-│                  │                                                         │
-                   │                 │  └ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
-│                  │
-                   │                 │  ┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
-│                  │                                 0.43-stable             │
-                   ▼                 │  │
-│  ┌──────────────────────────────┐        ┌──────────────────────────────┐  │
-   │                              │  │  │  │                              │
-│  │    make feature B better     │───────▶│         0.43.0-rc.0          │  │
-   │                              │  │  │  │                              │
-│  └──────────────────────────────┘        └──────────────────────────────┘  │
-                   │                 │  │                  │
-│                  ▼                                       ▼                 │
-   ┌──────────────────────────────┐  │  │  ┌──────────────────────────────┐
-│  │                              │        │                              │  │
-   │      [history repeats]       │  │  │  │      [history repeats]       │
-│  │                              │        │                              │  │
-   └──────────────────────────────┘  │  │  └──────────────────────────────┘
-│                                                                            │
- ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘  └ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
-```
+<img alt="Branch Strategy" src="https://github.com/react-native-community/releases/blob/master/design/branch-strategy.svg" />
 
 [rc]: https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate
 [cherry-picking]: https://wiki.c2.com/?CherryPicking
