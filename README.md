@@ -22,7 +22,7 @@ To reconcile these two different use-cases, React Native’s release process is 
 1. Steps 3 through 5 are repeated on the stable branch for bug-fixes _only_ and will result in a [patch release]. I.e. no release-candidates are published for patch versions.
 1. The entire process is repeated from step 1 for the next [minor version], which will include all the changes that were made on the `main` branch previously but were not yet cherry-picked.
 
-### Branch strategy visialization
+### Branch strategy visualization
 
 <p align="center">
   <img alt="Branch strategy" src="https://github.com/react-native-community/releases/blob/master/design/branch-strategy.svg" width="600" />
