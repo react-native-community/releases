@@ -5,6 +5,7 @@
 ### Highlights
 
 - Hermes 0.8.1. Please see the highlighted changes from its [0.8.0](https://github.com/facebook/hermes/releases/tag/v0.8.0) and [0.8.1](https://github.com/facebook/hermes/releases/tag/v0.8.1) release notes.
+- `react-native-codegen` version `0.0.7` is now needed as a `devDependency` in the `package.json`.
 
 ### Breaking Changes
 
