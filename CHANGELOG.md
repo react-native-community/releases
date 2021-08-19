@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.65.1
+
+### Changed
+
+- Set `react-test-renderer` to `17.0.2` in the template ([d272880](https://github.com/facebook/react-native/commit/d27288044e94a248982f596e9885d55d066bc72e) by [@@rickhanlonii](https://github.com/@rickhanlonii))
+
+### Fixed
+
+- Resolve NODE_BINARY after finding the right path to node ([d75683](https://github.com/facebook/react-native/commit/d75683ac943205d64dd4142cca713ab2356094b8) by [@santiagofm](https://github.com/santiagofm))
+
+#### Android specific
+
+- ColorProps with value null should be defaultColor instead of transparent ([842bcb902e](https://github.com/facebook/react-native/commit/842bcb902ed27928255b60cb20524e9318d9bf70) by [@hank121314](https://github.com/hank121314))
+- Android Gradle Plugin 7 compatibility ([06e31c748f](https://github.com/facebook/react-native/commit/06e31c748fe87a866dbaf4d0c2019e76ec00e309) by [@dulmandakh](https://github.com/dulmandakh))
+
 ## v0.65.0
 
 ### Highlights
