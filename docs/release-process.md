@@ -70,10 +70,10 @@ _NOTE: In these examples the minor version being used is ‘0.42.x’_
 1. Create a [GitHub ‘Release’][gh-release] for the stable version and include the highlights of this release, along with links to the changelog, the blogpost and the patch-release-issue (described in the previous points).
 
 1. Make a PR with the new release of the website documentation by following the steps in [their guide][website-guide], then merge it so it
-   will show show the new version as the currently available version. 
+   will show show the new version as the currently available version.
    You can verify that it's defaulting correctly by checking the [website-config][website-config] file.
-   *  *Note*: we can afford doing this at the stable release step because because all PRs for the features or fixes landing after the branch has been cut
-        are in hold with `Wait on future Release` [label][website-label].
+   - _Note_: we can afford doing this at the stable release step because because all PRs for the features or fixes landing after the branch has been cut
+     are in hold with `Wait on future Release` [label][website-label].
 
 ## Release subsequent patch versions
 
@@ -102,4 +102,3 @@ After a stable version has landed, keep an eye on the patch-release-issue create
 [website-guide]: https://github.com/facebook/react-native-website#cutting-a-new-version
 [website-config]: https://github.com/facebook/react-native-website/blob/master/website/docusaurus.config.js
 [website-label]: https://github.com/facebook/react-native-website/pulls?q=is%3Apr+is%3Aopen+label%3A%22Wait+on+future+Release%22
-
