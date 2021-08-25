@@ -14,6 +14,7 @@ _NOTE: In these examples the minor version being used is ‘0.42.x’_
    git checkout master
    git pull
    git checkout -b 0.42-stable
+   git push origin 0.42-stable # your remote alias might be different
    ```
 
 1. Create a new issue on [the ‘releases’ repo][releases-repo] for the new version and invite users to provide feedback on the RC and what commits [that _have_ landed in `master`] to cherry-pick. (Hereafter referred to as the RC-issue.)
