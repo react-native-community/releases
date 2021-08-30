@@ -17,7 +17,7 @@ import {
   getChangelogDesc,
   getOffsetBaseCommit,
   getOriginalCommit,
-  getFirstCommitAfterForkingFromMaster,
+  getFirstCommitAfterForkingFromMain,
   Changes,
   PlatformChanges
 } from "../changelog-generator";
@@ -70,13 +70,11 @@ describe(getOriginalCommit, () => {
   });
 });
 
-describe(getFirstCommitAfterForkingFromMaster, () => {
+describe(getFirstCommitAfterForkingFromMain, () => {
   it("returns the SHA of the first commit where its first parent is on the master branch", () => {
-    return getFirstCommitAfterForkingFromMaster(RN_REPO, "v0.61.5").then(
-      sha => {
-        expect(sha).toEqual("bb625e523867d3b8391a76e5aa7c22c081036835");
-      }
-    );
+    return getFirstCommitAfterForkingFromMain(RN_REPO, "v0.61.5").then(sha => {
+      expect(sha).toEqual("bb625e523867d3b8391a76e5aa7c22c081036835");
+    });
   });
 });
 
