@@ -10,9 +10,9 @@ The script is a little more complex than one might expect for the following reas
 
 - Due to how react-native’s [release process](../README.md#the-process-at-a-high-level) works, we want to be able to exclude previously cherry-picked commits from the changelog entry of a next version.
 
-  However, with `git`, cherry-picked commits will have different commit hashes than their original counterparts–as they exist in the `master` branch. Because of this, the next version’s stable branch will include the same changes, except using their _original_ commit hash. This makes it impossible to exclude these commits without further work.
+  However, with `git`, cherry-picked commits will have different commit hashes than their original counterparts–as they exist in the `main` branch. Because of this, the next version’s stable branch will include the same changes, except using their _original_ commit hash. This makes it impossible to exclude these commits without further work.
 
-  For this reason, the script will parse the ‘referential revision’–which is added to each commit message by Facebook’s infrastructure–and use it to resolve to the original commit in the `master` branch. This resolved commit’s hash is then used in the changelog entry, so the script can find and exclude it from the next version’s entry.
+  For this reason, the script will parse the ‘referential revision’–which is added to each commit message by Facebook’s infrastructure–and use it to resolve to the original commit in the `main` branch. This resolved commit’s hash is then used in the changelog entry, so the script can find and exclude it from the next version’s entry.
 
   This cannot be done via the github API and thus relies on a local clone of the react-native repo.
 
@@ -28,7 +28,7 @@ git clone https://github.com/facebook/react-native.git
 
 ```bash
 pushd react-native
-git checkout master
+git checkout main
 git pull
 popd
 ```
