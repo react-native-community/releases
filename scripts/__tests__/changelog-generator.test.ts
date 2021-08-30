@@ -17,7 +17,7 @@ import {
   getChangelogDesc,
   getOffsetBaseCommit,
   getOriginalCommit,
-  getFirstCommitAfterForkingFromMaster,
+  getFirstCommitAfterForkingFromMain,
   Changes,
   PlatformChanges
 } from "../changelog-generator";
@@ -50,7 +50,7 @@ function requestWithFixtureResponse(fixture: string) {
 }
 
 describe(getOriginalCommit, () => {
-  it("returns a cherry-picked community commit with the `sha` updated to point to the original in the `master` branch", () => {
+  it("returns a cherry-picked community commit with the `sha` updated to point to the original in the `main` branch", () => {
     return getOriginalCommit(RN_REPO, {
       sha: "474861f4e7aa0c5314081444edaee48d2faea1b6",
       commit: {
@@ -70,24 +70,22 @@ describe(getOriginalCommit, () => {
   });
 });
 
-describe(getFirstCommitAfterForkingFromMaster, () => {
-  it("returns the SHA of the first commit where its first parent is on the master branch", () => {
-    return getFirstCommitAfterForkingFromMaster(RN_REPO, "v0.61.5").then(
-      sha => {
-        expect(sha).toEqual("bb625e523867d3b8391a76e5aa7c22c081036835");
-      }
-    );
+describe(getFirstCommitAfterForkingFromMain, () => {
+  it("returns the SHA of the first commit where its first parent is on the main branch", () => {
+    return getFirstCommitAfterForkingFromMain(RN_REPO, "v0.61.5").then(sha => {
+      expect(sha).toEqual("bb625e523867d3b8391a76e5aa7c22c081036835");
+    });
   });
 });
 
 describe(getOffsetBaseCommit, () => {
-  it("returns the first commit after forking from `master` when that is not the same as the one for `compare`", () => {
+  it("returns the first commit after forking from `main` when that is not the same as the one for `compare`", () => {
     return getOffsetBaseCommit(RN_REPO, "v0.60.5", "v0.61.0").then(sha => {
       expect(sha).toEqual("9cd88251a3051dc1f3f9348a4395f0baae56f5b5");
     });
   });
 
-  it("returns the resolved input base commit, if both `base` and `compare` resolve to the same first commit after forking from `master`", () => {
+  it("returns the resolved input base commit, if both `base` and `compare` resolve to the same first commit after forking from `main`", () => {
     return getOffsetBaseCommit(RN_REPO, "v0.60.5", "v0.60.6").then(sha => {
       expect(sha).toEqual("35300147ca66677f42e8544264be72ac0e9d1b45");
     });
