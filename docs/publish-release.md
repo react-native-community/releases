@@ -1,6 +1,6 @@
 # Publish a release
 
-_Point people: [@alloy](https://github.com/alloy), [@grabbou](https://github.com/grabbou), [@kelset](https://github.com/kelset)_
+_Point people: [@grabbou](https://github.com/grabbou), [@kelset](https://github.com/kelset)_
 
 ℹ️ _Note that some of these steps rely on Xcode and thus the usage of a Mac._
 
@@ -32,11 +32,11 @@ _Point people: [@alloy](https://github.com/alloy), [@grabbou](https://github.com
 
    - You have push access to the stable branch on the react-native repo.
    - The Android toolchain, as per the “Android development environment” section of [the react-native setup guide](https://reactnative.dev/docs/environment-setup).
-   - Download the needed version of NDK. You can find out which version to use by looking in the [CI Android image dockerfile](https://github.com/react-native-community/docker-android/blob/ca21319a3fc73bb01facc99eb8e9a9e6ec415fa2/Dockerfile#L12). Currently, it's NDK 20, which can be downloaded from [here](https://developer.android.com/ndk/downloads/older_releases). After downloading, place it at `~/Library/Android/android-ndk-r20b`, then add the following environment setup:
+   - Download the needed version of NDK. You can find out which version to use by looking in the [CI Android image dockerfile](https://github.com/react-native-community/docker-android/blob/master/Dockerfile#L12). Currently, it's NDK 21, which can be downloaded via Android Studio by following [this guide](https://developer.android.com/studio/projects/install-ndk#specific-version). After downloading/installing it, it will be placed at a path similar to `~/Library/Android/sdk/ndk/21.4.7075529`, then add the following environment setup:
      ```bash
-     export ANDROID_NDK=$HOME/Library/Android/android-ndk-r20b
+     export ANDROID_NDK=$HOME/Library/Android/sdk/ndk/21.4.7075529
      ```
-     - In case you are on macos Catalina (or higher), to will also need to run `sudo xattr -r -d com.apple.quarantine /path/to/ndk` to avoid the e2e script to fail
+     - *In case you are on macos Catalina (or higher), you might also need to run `sudo xattr -r -d com.apple.quarantine /path/to/ndk` to avoid the e2e script to fail. That said, this should not happen anymore since from NDK 21 and higher the Android team started signing the NDK.*
    - Latest iOS
    - Latest yarn
    - Latest CocoaPods
