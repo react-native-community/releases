@@ -1,30 +1,30 @@
 name: Release Candidate Blocker 
-description: File an issue against the current release candidate. 
+description: File an issue against the current release candidate.
 labels: [triage]
 body:
   - type: markdown
     attributes:
       value: |
-        Please use this form to file an issue against the current release candidate. See [current release candidate](https://github.com/facebook/react-native/releases).
+        Please use this form to file an issue against the current release candidate. See current releases [here](https://github.com/facebook/react-native/releases).
   - type: input
     id: version
     attributes:
-      label: What version of React Native does this issue appear on? 
-      description: Please refer to [current release candidate](https://github.com/facebook/react-native/releases). 
+      label: Version
+      description: What release candidate version does this appear on? Please refer to [release candidate versions](https://github.com/facebook/react-native/releases). 
       placeholder: ex. 0.66.0-rc.2
     validations:
       required: true
   - type: textarea
     id: environment
     attributes:
-      label: What's your developer environment?
-      description: Please list relevant versions, OS, Xcode, tooling, etc. 
+      label: Developer Environment
+      description: Please list relevant versions of system and tooling. Ex. OS, processor, Xcode, etc.
     validations:
       required: true
   - type: textarea
     id: reproduction
     attributes:
-      label: Issue and reproduction steps
-      description: List out steps to reproduce the issue. 
+      label: Issue and Reproduction Steps
+      description: Please describe the issue and list out steps to reproduce.
     validations:
       required: true
