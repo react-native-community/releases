@@ -1,5 +1,5 @@
 ---
-name: New Release Issue
+name: Track a new release
 about: Issue to track work for stabilizing a new minor release.
 title: Road to v0.X.0
 labels: pre-release, rc
