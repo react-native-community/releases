@@ -1,0 +1,23 @@
+---
+name: New Release Issue
+about: Issue to track work for stabilizing a new minor release.
+title: Road to v0.X.0
+labels: pre-release, rc
+assignees: ''
+
+---
+# Status
+* [Latest Release](https://github.com/facebook/react-native/releases)
+* Have an issue with current release candidate? [File an issue](https://github.com/react-native-community/releases/issues/new?assignees=&labels=triage%2Cpre-release&template=release_blocker_form.yml) and we will triage.
+
+### Highlighted Changes
+* See [Changelog](https://github.com/react-native-community/releases/blob/0.66-changelog/CHANGELOG.md)
+
+### Topics for Retrospective
+- _TBD_
+
+# Release details
+### [Blocking issues for releasing 0.X.0-rc.0](https://github.com/react-native-community/releases/issues?q=is%3Aissue+is%3Aopen+label%3Arelease-blocker)
+* _TBD_
+### Picks for 0.X.0-rc.0
+- [ ] Pick request details: facebook/react-native@hash
