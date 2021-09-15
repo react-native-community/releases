@@ -1,6 +1,7 @@
 # Release Process
 
-<img src="https://user-images.githubusercontent.com/1309636/133347830-022daacf-9de2-4a9e-a7c9-048a789126ee.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/1309636/133486962-b4de1ddf-7988-435b-8587-1e53d5e111de.png" width="600"/>
+
 
 We will be using this process and describing the **actions** (1, 2, ...) and **triggers** (a, b, ...)
 
@@ -13,7 +14,7 @@ We will be using this process and describing the **actions** (1, 2, ...) and **t
 ### 1. Branch cut
 * Create the stable branch in `react-native` repo with the appropriate name. Usually `0.X-stable`
     ```bash
-    git checkout master
+    git checkout main
     git pull
     git checkout -b 0.42-stable
     git push origin 0.42-stable # your remote alias might be different
@@ -69,11 +70,14 @@ We will be using this process and describing the **actions** (1, 2, ...) and **t
 * TODO
 
 ## Triggers
-### a. release-blocking issue from test
+### a. Prior version reached stable
+* We cut the release branch as soon as the previous version becomes stable
+
+### b. release-blocking issue from test
 * TODO - describe how to determine if something is a release-blocking issue
 
-### b. fixed, cherry-pick in
+### c. fixed, cherry-pick in
 * TODO - describe how to cherry-pick in, and to update the tracking release issue
 
-### c, d, e, f, g, h i
+### d, e, f, g, h
 * TODO
