@@ -1,6 +1,6 @@
 # Upgrade-helper
 
-_Point people: [@lucasbento](https://github.com/lucasbento), [@pvinis](https://github.com/pvinis)_, [@kelset](https://github.com/kelset)_
+_Point people: [@lucasbento](https://github.com/lucasbento), [@pvinis](https://github.com/pvinis)_, [@kelset](https://github.com/kelset)\_
 
 From the readme of [its dedicated repo](https://github.com/react-native-community/upgrade-helper#-how-it-works):
 
@@ -11,7 +11,8 @@ From the readme of [its dedicated repo](https://github.com/react-native-communit
 The upgrade helper webapp relies on [rn-diff-purge](https://github.com/react-native-community/rn-diff-purge) having the diff for the versions of RN released.
 
 To generate the diff for a new version, there are essentially just 3 steps needed:
-* git clone the rn-diff-purge repo
-* cd into it, and yarn install
-* run the script ` ./new-release.sh <version_tag>`, so for example ` ./new-release.sh 0.66.0-rc1`
-  * to run this successfully, you need to have write access/be a Code Owner for the repo; else, one of the last steps will fail since main is a protected branch.
+
+- git clone the rn-diff-purge repo
+- cd into it, and yarn install
+- run the script `./new-release.sh <version_tag>`, so for example `./new-release.sh 0.66.0-rc1`
+  - to run this successfully, you need to have write access/be a Code Owner for the repo; else, one of the last steps will fail since main is a protected branch.

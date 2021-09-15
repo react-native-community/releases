@@ -36,7 +36,7 @@ _Point people: [@grabbou](https://github.com/grabbou), [@kelset](https://github.
      ```bash
      export ANDROID_NDK=$HOME/Library/Android/sdk/ndk/21.4.7075529
      ```
-     - *In case you are on macos Catalina (or higher), you might also need to run `sudo xattr -r -d com.apple.quarantine /path/to/ndk` to avoid the e2e script to fail. That said, this should not happen anymore since from NDK 21 and higher the Android team started signing the NDK.*
+     - _In case you are on macos Catalina (or higher), you might also need to run `sudo xattr -r -d com.apple.quarantine /path/to/ndk` to avoid the e2e script to fail. That said, this should not happen anymore since from NDK 21 and higher the Android team started signing the NDK._
    - Latest iOS
    - Latest yarn
    - Latest CocoaPods
