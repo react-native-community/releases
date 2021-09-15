@@ -1,6 +1,7 @@
 # Release Process
 
 <img src="https://user-images.githubusercontent.com/1309636/133347830-022daacf-9de2-4a9e-a7c9-048a789126ee.png" width="600"/>
+
 We will be using this process and describing the **actions** (1, 2, ...) and **triggers** (a, b, ...)
 
 ## Pre-requisites
@@ -35,14 +36,14 @@ We will be using this process and describing the **actions** (1, 2, ...) and **t
 * On your local checkout of the release branch, **make sure you have no local changes** and run `scripts/bump-oss-version` . 
   * This script will update the version, commit, and push those changes to the remote branch.
   * It will also create a tag of the version you supply. 
-    ```
+    ```bash
     react-native$ ./scripts/bump-oss-version.js 0.X.0-rc.Y # ex. 0.66.0-rc.2
     ```
 * Once those changes have been pushed, CircleCI will start a job to publish the release via npm.
   <img width="400" alt="CircleCI showing publish release" src="https://user-images.githubusercontent.com/1309636/133348479-74f4664d-fa3c-4add-be79-e54d66c54fbe.png">
   * Note: Look under “All Branches” to find the publish job. CircleCI does not give a way to search for these jobs.
   * Once complete you should be able to run `npm view react-native` and verify `next` is expected release version
-    ```
+    ```bash
     $ npm view react-native
     ....
     dist-tags:
