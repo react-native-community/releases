@@ -24,7 +24,7 @@ We will be using this process and describing the **actions** (1, 2, ...) and **t
 
 ### 2. Test
 
-* TODO
+* See [instructions for release testing](./release-testing.md)
 
 ### 3. Create release issue
 
@@ -64,3 +64,16 @@ We will be using this process and describing the **actions** (1, 2, ...) and **t
 * Create a Github Release for the stable version and include the highlights of this release, along with links to the changelog, the blogpost and the patch-release-issue (described in the previous points).
 * Make a PR with the new release of the website documentation by following the steps in [their guide](https://github.com/facebook/react-native-website#cutting-a-new-version), then merge it so it will show show the new version as the currently available version.
   * You can verify that it's defaulting correctly by checking the [website-config](https://github.com/facebook/react-native-website/blob/master/website/docusaurus.config.js) file.
+
+### 6, 7, 8
+* TODO
+
+## Triggers
+### a. release-blocking issue from test
+* TODO - describe how to determine if something is a release-blocking issue
+
+### b. fixed, cherry-pick in
+* TODO - describe how to cherry-pick in, and to update the tracking release issue
+
+### c, d, e, f, g, h i
+* TODO
