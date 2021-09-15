@@ -1,5 +1,6 @@
-# Dependencies of the React Native release process
+# Dependencies of the React Native
 
+For this v1, let's clarify how these dependencies interplay with the React Native release process
 
 Dependency | Alert when branch cut? | Needs a release when react-native release? 
 ---------|--------|------------
