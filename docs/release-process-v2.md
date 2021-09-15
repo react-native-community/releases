@@ -1,6 +1,6 @@
 # Release Process
 
-<img src="https://user-images.githubusercontent.com/1309636/133486962-b4de1ddf-7988-435b-8587-1e53d5e111de.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/1309636/133506025-a7207428-af90-41e9-9c35-079fbe3b1d6f.png" width="600"/>
 
 We will be using this process and describing the **actions** (1, 2, ...) and **triggers** (a, b, ...).
 
@@ -10,7 +10,7 @@ We will be using this process and describing the **actions** (1, 2, ...) and **t
 - Write access for `react-native-community/releases` (this repo) to label, update issues.
 - If testing, follow [pre-requisites for testing](./release-testing.md)
 
-## What to do and when
+## Actions and Triggers
 
 #### → a
 
@@ -76,6 +76,7 @@ We will be using this process and describing the **actions** (1, 2, ...) and **t
   - Select the tag you just created
   - Check the `pre-release` checkbox.
   - You can copy the template used for this [release candidate patch](https://github.com/facebook/react-native/releases/tag/v0.66.0-rc.2)
+
     <img width="400" alt="Create a Github Release" src="https://user-images.githubusercontent.com/1309636/133348648-c33f82b8-b8d2-474a-a06e-35a1fb8d18de.png">
 - After creating Github release, [update the upgrade-helper](./upgrade-helper.md)
 - Broadcast that the release candidate is out
