@@ -1,6 +1,6 @@
 name: Release Candidate Blocker 
 description: File an issue against the current release candidate.
-labels: [Needs: Triage :mag:, pre-release]
+labels: ["Needs: Triage :mag:", "pre-release"]
 body:
   - type: markdown
     attributes:
