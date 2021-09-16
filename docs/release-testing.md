@@ -60,7 +60,6 @@
 5. Go through **Test Checklist** for variants supported by `test-manual-e2e` script
 
 ```bash
-react-native$ git checkout -b 0.66-stable
 # This will run you through the different variants in **Test Dimensions** table
 react-native$ ./scripts/test-manual-e2e.sh
 ```
