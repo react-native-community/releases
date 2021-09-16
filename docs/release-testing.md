@@ -4,7 +4,7 @@
 
 - Have clone of `react-native` repo and be on the release candidate branch.
   ```
-  react-native$ git checkout -b 0.66-stable
+  react-native$ git checkout 0.66-stable
   ```
 - Have Android and iOS development environment set-up. Follow instuctions for macOS/iOS and macOS/Android from [React Native docs](https://reactnative.dev/docs/environment-setup)
   - Android
@@ -17,13 +17,6 @@
   - iOS
     - Xcode
     - Cocoapods
-- Install dependencies:
-  ```bash
-  yarn install
-  pushd packages/rn-tester
-  pod install --repo-update
-  popd
-  ```
 
 ## Test Dimensions
 
@@ -44,8 +37,27 @@
 
 ## Steps
 
-1. Start up your Android emulator
-2. Go through **Test Checklist** for variants supported by `test-manual-e2e` script
+1. Delete RNTester and RNTestProject from your Android emulator/ iOS simulator if leftover from previous test
+2. Remove any build artefacts
+   ```bash
+    rm react-native-*.tgz
+    ./gradlew clean
+    ./gradlew cleanBuildCache
+    rm -rf node_modules
+    rm -rf /tmp/RNTestProject
+    pushd packages/rn-tester
+    rm -rf Pods
+    xcodebuild -workspace RNTesterPods.xcworkspace -scheme RNTester clean
+    popd
+   ```
+3. Install dependencies
+   ```bash
+    yarn install
+    pushd packages/rn-tester
+    pod install --repo-update
+    popd
+   ```
+5. Go through **Test Checklist** for variants supported by `test-manual-e2e` script
 
 ```bash
 react-native$ git checkout -b 0.66-stable
