@@ -10,8 +10,8 @@ assignees: ''
 The branch cut has happened.
 ## Notice
 * Current release candidate: [0.X.0-rc.0](https://github.com/facebook/react-native/releases)
-* Have an issue with current release candidate? [File an issue](https://github.com/react-native-community/releases/issues/new?assignees=&labels=triage%2Cpre-release&template=release_blocker_form.yml) and we will triage.
-* Have a pick request for this release? Does it call under our [pick request qualifications](./definitions.md#what-is-a-qualified-pick-request)? If so please comment on this issue with the hash and justification. 
+* Have an issue with current release candidate? [File an issue](https://github.com/facebook/react-native/issues/new?assignees=&labels=Needs%3A+Triage+%3Amag%3A%2Cpre-release&template=release_blocker_form.yml) and we will triage.
+* Have a pick request for this release? Does it fall under our [pick request qualifications](./definitions.md#what-is-a-qualified-pick-request)? If so please comment on this issue with the hash and justification. 
 #### Highlighted Changes in this release
 <!-- Add stand-out changes in this release, and link to changelog PR.  --> 
 - TODO
@@ -32,6 +32,8 @@ The branch cut has happened.
 
 ## Release Status
 ### 0.X.0-rc.0
+#### Upon release
+- [ ] When this patch is released, upgrade [upgrade-helper](https://github.com/react-native-community/releases/blob/master/docs/upgrade-helper.md)
 #### Blocking issues for releasing 0.X.0-rc.0
 - N/A
 #### Picks for 0.X.0-rc.0
