@@ -93,7 +93,6 @@
 - Add missing `jest/create-cache-key-function` dep root package.json ([9a43eac7a3](https://github.com/facebook/react-native/commit/9a43eac7a32a6ba3164a048960101022a92fcd5a) by [@janicduplessis](https://github.com/janicduplessis))
 - Fix Switch ref forwarding ([1538fa4455](https://github.com/facebook/react-native/commit/1538fa4455fa7095879aceba7f74a519c1337a8b) by [@janicduplessis](https://github.com/janicduplessis))
 - Report fatal errors even if its `type` is "warn". ([e4a4c4d6d7](https://github.com/facebook/react-native/commit/e4a4c4d6d71ab1a747d768e4b518e64e100ddfde) by [@yungsters](https://github.com/yungsters))
-- [RNTester] Use `transform` prop in PanResponderExample ([917f83c940](https://github.com/facebook/react-native/commit/917f83c94043d78b1c7dd301abb5716db2b5d563) by [@rozele](https://github.com/rozele))
 - Parse `accessibilityAction` props into object instead of string ([faaeb778df](https://github.com/facebook/react-native/commit/faaeb778dfe25df67fc00b599d023819c10406e8) by [@ShikaSD](https://github.com/ShikaSD))
 - Avoid downgrading `console.error` when passed warning-like objects. ([0dba0aff18](https://github.com/facebook/react-native/commit/0dba0aff185f4fd46e1146362235e68e52c59556) by [@yungsters](https://github.com/yungsters))
 - Fix natively driven animations not getting reset properly ([129180c77b](https://github.com/facebook/react-native/commit/129180c77b0b99a3acedbeb04ce6ec4667f74cac) by [@tienphaw](https://github.com/tienphaw))
