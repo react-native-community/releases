@@ -44,7 +44,7 @@ We will be using this process and describing the **actions** (1, 2, ...) and **t
 
 ### 3. Create release issue
 
-- Ask people to [create release-blocking issues](https://github.com/react-native-community/releases/issues/new?assignees=&labels=triage%2Cpre-release&template=release_blocker_form.yml) when something comes up.
+- Ask people to [create release-blocking issues](https://github.com/facebook/react-native/issues/new?assignees=&labels=Needs%3A+Triage+%3Amag%3A%2Cpre-release&template=release_blocker_form.yml) when something comes up.
 - Add the “Needs: React Native Attention” label if needs FB attention.
 
 #### → c. fixes, cherry-pick in
