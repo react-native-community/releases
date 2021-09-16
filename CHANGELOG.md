@@ -42,7 +42,6 @@
 - Introduce `RCTCallableJSModules` API for NativeModules ([ece373d244](https://github.com/facebook/react-native/commit/ece373d24421d96e62dafa9a064b38acd6b71e46) by [@RSNara](https://github.com/RSNara))
 - Attach `RCTBundleManager` to NativeModules ([329f58ee46](https://github.com/facebook/react-native/commit/329f58ee461e7afade36d8c249d3f4930c485312) by [@RSNara](https://github.com/RSNara))
 - Introduce RCTBundleManager for bundleURL access ([4a1bafe591](https://github.com/facebook/react-native/commit/4a1bafe591917482d78be998d45552e2568e3e23) by [@RSNara](https://github.com/RSNara))
-- [iOS] Update Flipper to 0.93.0 ([848d59947c](https://github.com/facebook/react-native/commit/848d59947c4c31b35fcd66459afc0068e767ecae) by [@mweststrate](https://github.com/mweststrate))
 
 
 ### Changed
