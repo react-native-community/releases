@@ -14,5 +14,5 @@ To generate the diff for a new version, there are essentially just 3 steps neede
 
 - git clone the rn-diff-purge repo
 - cd into it, and yarn install
-- run the script `./new-release.sh <version_tag>`, so for example `./new-release.sh 0.66.0-rc1`
+- run the script `./new-release.sh <version_tag>`, so for example `./new-release.sh 0.66.0-rc.1`
   - to run this successfully, you need to have write access/be a Code Owner for the repo; else, one of the last steps will fail since main is a protected branch.
