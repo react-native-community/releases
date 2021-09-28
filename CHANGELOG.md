@@ -5,7 +5,7 @@
 ### Breaking
 
 - [Hermes 0.9.0](https://github.com/facebook/hermes/issues/586)
-- Remove Picker and PickerIOS component, 
+- Remove Picker and PickerIOS components, 
   [cddb97ad18](https://github.com/facebook/react-native/commit/cddb97ad18cfdb663dcf015af3c9426d5414e396), [77366cd869](https://github.com/facebook/react-native/commit/77366cd8696cb8ada3f84d7fb4d36a27f7007b06), [ad0ccac0d6](https://github.com/facebook/react-native/commit/ad0ccac0d6471fa5428bf137c3aa0646883e8446)
 - Remove StatusBarIOS component ([7ce0f40f5c](https://github.com/facebook/react-native/commit/7ce0f40f5cd8c0928ce720d6d121bcc5963958a2) by [@ecreeth](https://github.com/ecreeth))
 
