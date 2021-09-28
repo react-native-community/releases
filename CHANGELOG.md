@@ -2,9 +2,15 @@
 
 ## v0.66.0
 
-### Breaking
+### Highlights
+- Support for iOS 15 with Xcode 13 and Android 12 (TODO)
+- Hermes 0.9.0
+  - This release is primarily about closing gap between Hermes cut and this React Native release. Among ~400 commits, contains memory and size wins, bugfixes and other progress behind the scenes. See [issue for more details](https://github.com/facebook/hermes/issues/586).
+- Allow taps on views outside the bounds of a parent with `overflow: visible` ([e35a963bfb](https://github.com/facebook/react-native/commit/e35a963bfb93bbbdd92f4dd74d14e2ad6df5e14a) by [@hsource](https://github.com/hsource))
+- Add warnings to deprecate `UIManager.getViewManagerConfig` method ([37750100ac](https://github.com/facebook/react-native/commit/37750100ac8982f5753047c8353cfd4f59e41b47) by [@mdvacca](https://github.com/mdvacca))
+- Fixes for M1 macs (TODO) 
 
-- [Hermes 0.9.0](https://github.com/facebook/hermes/issues/586)
+### Breaking
 - Remove Picker and PickerIOS components, 
   [cddb97ad18](https://github.com/facebook/react-native/commit/cddb97ad18cfdb663dcf015af3c9426d5414e396), [77366cd869](https://github.com/facebook/react-native/commit/77366cd8696cb8ada3f84d7fb4d36a27f7007b06), [ad0ccac0d6](https://github.com/facebook/react-native/commit/ad0ccac0d6471fa5428bf137c3aa0646883e8446)
 - Remove StatusBarIOS component ([7ce0f40f5c](https://github.com/facebook/react-native/commit/7ce0f40f5cd8c0928ce720d6d121bcc5963958a2) by [@ecreeth](https://github.com/ecreeth))
@@ -22,7 +28,7 @@
 
 #### Android specific
 
-- Add INFO, and MENU key event support to Android TV ([bb33c1050b](https://github.com/facebook/react-native/commit/bb33c1050ba6098a68d70055e33186d9438c4374) by [@havlasme](https://github.com/havlasme))
+- Add INFO, and MENU key event support ([bb33c1050b](https://github.com/facebook/react-native/commit/bb33c1050ba6098a68d70055e33186d9438c4374) by [@havlasme](https://github.com/havlasme))
 - Added all autofill types to TextEdit ([d9e0ea77f0](https://github.com/facebook/react-native/commit/d9e0ea77f0111fd8400c65d68e45d54e2f84287b) by [@safaiyeh](https://github.com/safaiyeh))
 - Add support to URI keyboard type in Android ([1465c8f387](https://github.com/facebook/react-native/commit/1465c8f3874cdee8c325ab4a4916fda0b3e43bdb))
 - Add `MEDIA_STOP`, `MEDIA_NEXT`, and `MEDIA_PREVIOUS` event support to Android TV ([3e2bb331fc](https://github.com/facebook/react-native/commit/3e2bb331fc0974bc870b2e7bd3171e585183ed1b) by [@havlasme](https://github.com/havlasme))
@@ -46,8 +52,6 @@
 
 ### Changed
 
-- `ImageURISource` Flow type is now an interface instead of an object. ([123d184944](https://github.com/facebook/react-native/commit/123d184944ae6c8255c5c615e062df3d39bf5a66) by [@yungsters](https://github.com/yungsters))
-- Remove `defaultProps` from FlatList ([7d5895df4e](https://github.com/facebook/react-native/commit/7d5895df4e3c57ebfa1c146cadc989497b006623) by [@joxw1](https://github.com/joxw1))
 - Initialized LogBox earlier and centralized access in LogBox module ([8abe737068](https://github.com/facebook/react-native/commit/8abe737068a54a874571c8b5560b2118b1df31ad) by [@rubennorte](https://github.com/rubennorte))
 - ExceptionsManager will no longer report exceptions with `type === 'warn'`. ([883e0d5752](https://github.com/facebook/react-native/commit/883e0d5752b952c829c8d45504d3532f52bb272f) by [@yungsters](https://github.com/yungsters))
 - Disable TouchableOpacity when `accessibilityState.disabled` is set ([ea609defe8](https://github.com/facebook/react-native/commit/ea609defe8462a6beeac4da3aa7a43397ee9a77f) by [@chakrihacker](https://github.com/chakrihacker))
@@ -57,12 +61,10 @@
 - Bump CLI to ^6.0.0 ([c677e196a9](https://github.com/facebook/react-native/commit/c677e196a9c4d6cfdf84d97e4746922bb4ed4823) by [@thymikee](https://github.com/thymikee))
 - Upgrade ESLint TS parser and plugin ([3b751d396b](https://github.com/facebook/react-native/commit/3b751d396ba0acaa1b4c8e1115c79eb45dab403d) by [@wcandillon](https://github.com/wcandillon))
 - Upgrade folly to 2021.06.28.00 and boost to 1.76.0 ([b77948e33b](https://github.com/facebook/react-native/commit/b77948e33bc5e0df422fffca3b4c9253f611d298) by [@Kudo](https://github.com/Kudo))
-- Fix(cli): bump cli version to fix test e2e script ([cdd0256187](https://github.com/facebook/react-native/commit/cdd0256187cecd6a699443eeef6bef1e1ad92a3a) by [@Titozzz](https://github.com/Titozzz))
 
 #### Android specific
 
 - Add BLUETOOTH_ADVERTISE to `PermissionsAndroid` ([2bcc6fac38](https://github.com/facebook/react-native/commit/2bcc6fac3844f0752bc7067517c92a643679575e) by [@iBotPeaches](https://github.com/iBotPeaches))
-- Call `super.onActivityResult` in ReactActivity's onActivityResult() ([29249e19bd](https://github.com/facebook/react-native/commit/29249e19bd9cb4de8cb5b00edcd17f2c49d0d02c) by [@fatalsun](https://github.com/fatalsun))
 - Native ScrollView listeners list maintains weak references to listeners to avoid memory leaks ([b673e352fb](https://github.com/facebook/react-native/commit/b673e352fb0ea44b545edf5a7e8c1b422180838a) by [@dalves](https://github.com/dalves))
 - Rename the "Toggle Inspector" DevMenu item to "Hide/Show Element Inspector" ([e91fb05db7](https://github.com/facebook/react-native/commit/e91fb05db7f576e07114755b9db1eee91c672f25) by [@RSNara](https://github.com/RSNara))
 - Localize "search", "button", and "togglebutton" accessibility roles by using the platform roles ([399285f91c](https://github.com/facebook/react-native/commit/399285f91c2f675dea16fe61a86049ef7fecf35b) by [@kacieb](https://github.com/kacieb))
@@ -73,7 +75,6 @@
 - Bump NDK to 21.4.7075529 ([aa43aab77c](https://github.com/facebook/react-native/commit/aa43aab77c8571632a2b0913c80fbf822dac01bc) by [@dulmandakh](https://github.com/dulmandakh))
 
 #### iOS specific
-- Remove `defaultProps` from SegmentedControlIOS ([fa0518d3d3](https://github.com/facebook/react-native/commit/fa0518d3d3734b397e60ae64a8ce0af06d56da28) by [@joxw1](https://github.com/joxw1))
 - ScrollView scrollIndicatorInsets to not automatically add safe area on iOS13+ ([bc1e602e0c](https://github.com/facebook/react-native/commit/bc1e602e0c7922da6bf238675b7bf8b4c3faa493) by [@justinwh](https://github.com/justinwh))
 
 ### Deprecated
@@ -83,7 +84,6 @@
 ### Removed
 
 - `StyleSheet.create` will no longer do DEV-time validation. ([2e8c0bd7ea](https://github.com/facebook/react-native/commit/2e8c0bd7ea7db1aac183eb7f656772d3cffcb132) by [@yungsters](https://github.com/yungsters))
-- Removed `Animated.__PropsOnlyForTests`. ([ae4946f983](https://github.com/facebook/react-native/commit/ae4946f98369141caa52fd09d63400d4a28e1d1f) by [@yungsters](https://github.com/yungsters))
 
 ### Fixed
 
