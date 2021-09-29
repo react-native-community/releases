@@ -60,7 +60,7 @@ We will be using this process and describing the **actions** (1, 2, ...) and **t
   - This script will update the version, commit, and push those changes to the remote branch.
   - It will also create a tag of the version you supply.
     ```bash
-    react-native$ ./scripts/bump-oss-version.js 0.X.0-rc.Y # ex. 0.66.0-rc.2
+    react-native$ ./scripts/bump-oss-version.js -v 0.X.0-rc.Y # ex. 0.66.0-rc.2
     ```
 - Once those changes have been pushed, CircleCI will start a job to publish the release via npm.
   <img width="400" alt="CircleCI showing publish release" src="https://user-images.githubusercontent.com/1309636/133348479-74f4664d-fa3c-4add-be79-e54d66c54fbe.png">
