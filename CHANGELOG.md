@@ -21,7 +21,7 @@
 
 - Add `global.queueMicrotask` ([be189cd819](https://github.com/facebook/react-native/commit/be189cd81905a735f08a8519c62a707658c7fb27) by [@Huxpro](https://github.com/Huxpro))
 - Added data field to `markerPoint` to allow callers to add additional arbitrary string data to logged points ([aa98978302](https://github.com/facebook/react-native/commit/aa9897830293955b7cc77fd818a50e8d736e715d))
-- Adds accessiblity actions to Button  ([44717152ca](https://github.com/facebook/react-native/commit/44717152cadb18c7aff74e9465fdb70efdb1bf81) by [@dennisurtubia](https://github.com/dennisurtubia))
+- Adds accessibility actions to Button  ([44717152ca](https://github.com/facebook/react-native/commit/44717152cadb18c7aff74e9465fdb70efdb1bf81) by [@dennisurtubia](https://github.com/dennisurtubia))
 - Add accessibilityState prop to Slider component ([35dd86180b](https://github.com/facebook/react-native/commit/35dd86180ba730425b97592ef6e5c4d449caee06) by [@sladyn98](https://github.com/sladyn98))
 - Add support for "togglebutton" `accessibilityRole` ([da899c0cc4](https://github.com/facebook/react-native/commit/da899c0cc4372830e5ca053a096b74fff2a19cb8) by [@kacieb](https://github.com/kacieb))
 
