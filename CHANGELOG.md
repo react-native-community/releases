@@ -3,12 +3,11 @@
 ## v0.66.0
 
 ### Highlights
-- Support for iOS 15 with Xcode 13 and Android 12 (TODO)
 - Hermes 0.9.0
   - This release is primarily about closing gap between Hermes cut and this React Native release. Among ~400 commits, contains memory and size wins, bugfixes and other progress behind the scenes. See [issue for more details](https://github.com/facebook/hermes/issues/586).
 - Allow taps on views outside the bounds of a parent with `overflow: visible` ([e35a963bfb](https://github.com/facebook/react-native/commit/e35a963bfb93bbbdd92f4dd74d14e2ad6df5e14a) by [@hsource](https://github.com/hsource))
-- Add warnings to deprecate `UIManager.getViewManagerConfig` method ([37750100ac](https://github.com/facebook/react-native/commit/37750100ac8982f5753047c8353cfd4f59e41b47) by [@mdvacca](https://github.com/mdvacca))
-- Fixes for M1 macs (TODO) 
+- Fixes for building on Apple Silicon and Xcode 13 ([ac4ddec542](https://github.com/facebook/react-native/commit/ac4ddec542febda744de218dae3a3d34edc7da84) thanks to [@mikehardy](https://github.com/mikehardy))
+- New bluetooth permissions for Android ([2bcc6fac38](https://github.com/facebook/react-native/commit/2bcc6fac3844f0752bc7067517c92a643679575e), [eeb8e58](https://github.com/facebook/react-native/commit/eeb8e5829e183f6b5cd5fd327cf6da03a7db0541) by [@iBotPeaches](https://github.com/iBotPeaches))
 
 ### Breaking
 - Remove Picker and PickerIOS components, 
@@ -76,10 +75,6 @@
 
 #### iOS specific
 - ScrollView scrollIndicatorInsets to not automatically add safe area on iOS13+ ([bc1e602e0c](https://github.com/facebook/react-native/commit/bc1e602e0c7922da6bf238675b7bf8b4c3faa493) by [@justinwh](https://github.com/justinwh))
-
-### Deprecated
-
-- Add warnings to deprecate `UIManager.getViewManagerConfig` method ([37750100ac](https://github.com/facebook/react-native/commit/37750100ac8982f5753047c8353cfd4f59e41b47) by [@mdvacca](https://github.com/mdvacca))
 
 ### Removed
 
