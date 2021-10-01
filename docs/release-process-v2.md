@@ -45,7 +45,7 @@ We will be using this process and describing the **actions** (1, 2, ...) and **t
 ### 3. Create release issue
 
 - Ask people to [create release-blocking issues](https://github.com/facebook/react-native/issues/new?assignees=&labels=Needs%3A+Triage+%3Amag%3A%2Cpre-release&template=release_blocker_form.yml) when something comes up.
-- Add the “Needs: React Native Attention” label if needs FB attention.
+- Add the [`Needs: React Native Attention`](https://github.com/facebook/react-native/labels/Needs%3A%20React%20Native%20Team%20Attention) label if needs FB attention.
 
 #### → c. fixes, cherry-pick in
 
@@ -98,14 +98,25 @@ We will be using this process and describing the **actions** (1, 2, ...) and **t
 
 ### 5. Publish Release
 
-- Publish the stable branch as a stable version. TODO instructions
-- Create a Github Release for the stable version and include the highlights of this release, along with links to the changelog, the blogpost and the patch-release-issue (described in the previous points).
-- Make a PR with the new release of the website documentation by following the steps in [their guide](https://github.com/facebook/react-native-website#cutting-a-new-version), then merge it so it will show show the new version as the currently available version.
-  - You can verify that it's defaulting correctly by checking the [website-config](https://github.com/facebook/react-native-website/blob/master/website/docusaurus.config.js) file.
+#### Before publishing release make sure:
+- Changelog PR is ready to land
+- Blog post is drafted and looks good
+
+#### Publish
+- Publish the stable branch as a stable version. (Similar to step 4, only version change to stable)
+  ```bash
+    react-native$ ./scripts/bump-oss-version.js -v 0.X.0 # ex. 0.66.0
+   
+    react-native$ npm view react-native # verify
+  ```
+- [Create a patch release issue](https://github.com/react-native-community/releases/issues/new?assignees=&labels=backport-request%2C+rc&template=patch_release_issue.md&title=Potential+v0.XX.Y+Patch+Release) to track issues in the stable release.
+- Create a Github Release (similar to step 4) but no longer a `Pre-release`. [Example Github release](https://github.com/facebook/react-native/releases/tag/v0.65.0)
+- [Upgrade the upgrade helper](./upgrade-helper.md)
 
 ### 5a. Follow-up with dependencies
 
-- Notify `react-native-website` contributors to cut a new version of the docs.
+- Make a PR with the new release of the website documentation by following the steps in [their guide](https://github.com/facebook/react-native-website#cutting-a-new-version), then merge it so it will show show the new version as the currently available version.
+  - You can verify that it's defaulting correctly by checking the [website-config](https://github.com/facebook/react-native-website/blob/master/website/docusaurus.config.js) file.
 
 ### 6 Create a post-release issue
 
