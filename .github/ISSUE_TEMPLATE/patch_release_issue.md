@@ -2,7 +2,7 @@
 name: Patch Release Issue
 about: Issue to track potential patch release.
 title: Potential v0.XX.Y Patch Release
-labels: backport-request, rc
+labels: backport request, rc
 assignees: ''
 
 ---
