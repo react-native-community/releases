@@ -14,7 +14,7 @@ body:
       placeholder: ex. 0.66.1
     validations:
       required: true
-- type: input
+  - type: input
     id: old-version
     attributes:
       label: Old Version
