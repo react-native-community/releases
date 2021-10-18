@@ -57,7 +57,7 @@
     pod install --repo-update
     popd
    ```
-5. Go through **Test Checklist** for variants supported by `test-manual-e2e` script
+4. Go through **Test Checklist** for variants supported by `test-manual-e2e` script
 
 ```bash
 # This will run you through the different variants in **Test Dimensions** table

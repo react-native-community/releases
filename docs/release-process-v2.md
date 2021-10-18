@@ -73,11 +73,13 @@ We will be using this process and describing the **actions** (1, 2, ...) and **t
     latest: 0.65.1            next: 0.66.0-rc.2         nightly: 0.0.0-f617e022c
     ```
 - After publishing, [create a “Github Release”.](https://github.com/facebook/react-native/releases/new)
+
   - Select the tag you just created
   - Check the `pre-release` checkbox.
   - You can copy the template used for this [release candidate patch](https://github.com/facebook/react-native/releases/tag/v0.66.0-rc.2)
 
     <img width="400" alt="Create a Github Release" src="https://user-images.githubusercontent.com/1309636/133348648-c33f82b8-b8d2-474a-a06e-35a1fb8d18de.png">
+
 - After creating Github release, [update the upgrade-helper](./upgrade-helper.md)
 - Broadcast that the release candidate is out
   - On tracking issue
@@ -99,16 +101,20 @@ We will be using this process and describing the **actions** (1, 2, ...) and **t
 ### 5. Publish Release
 
 #### Before publishing release make sure:
+
 - Changelog PR is ready to land
 - Blog post is drafted and looks good
 
 #### Publish
+
 - Publish the stable branch as a stable version. (Similar to step 4, only version change to stable)
+
   ```bash
     react-native$ ./scripts/bump-oss-version.js -v 0.X.0 # ex. 0.66.0
-   
+
     react-native$ npm view react-native # verify
   ```
+
 - [Create a patch release issue](https://github.com/react-native-community/releases/issues/new?assignees=&labels=backport-request%2C+rc&template=patch_release_issue.md&title=Potential+v0.XX.Y+Patch+Release) to track issues in the stable release.
 - Create a Github Release (similar to step 4) but no longer a `Pre-release`. [Example Github release](https://github.com/facebook/react-native/releases/tag/v0.65.0)
 - [Upgrade the upgrade helper](./upgrade-helper.md)

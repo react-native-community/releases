@@ -1,8 +1,23 @@
 # Changelog
 
+## v0.66.1
+
+### Fixed
+
+- For Android, general fixes to Appearance API and also fixes AppCompatDelegate.setDefaultNightMode(). For iOS, now works correctly when setting window.overrideUserInterfaceStyle ([25a2c608f7](https://github.com/facebook/react-native/commit/25a2c608f790f42cbc4bb0a90fc06cc7bbbc9b95) by [@mrbrentkelly](https://github.com/mrbrentkelly))
+
+#### Android specific
+
+- Fix Android border positioning regression ([d1a33cd139](https://github.com/facebook/react-native/commit/d1a33cd139fab4565b1fc691f5751c4af99d5849) by [@oblador](https://github.com/oblador))
+
+#### iOS specific
+
+- Fix for unable to find `find-node.sh` in `react-native-xcode.sh` script ([cc59a7cbde](https://github.com/facebook/react-native/commit/cc59a7cbde1c0fc6d6ef059321d23bf287f08218) by [@garethknowles](https://github.com/garethknowles))
+
 ## v0.66.0
 
 ### Highlights
+
 - Hermes 0.9.0
   - This Hermes release is primarily about closing gap between Hermes cut and this React Native release. Among ~400 commits, contains memory and size wins, bugfixes and other progress behind the scenes. See [issue for more details](https://github.com/facebook/hermes/issues/586).
 - Allow taps on views outside the bounds of a parent with `overflow: visible` ([e35a963bfb](https://github.com/facebook/react-native/commit/e35a963bfb93bbbdd92f4dd74d14e2ad6df5e14a) by [@hsource](https://github.com/hsource))
@@ -10,18 +25,20 @@
 - New bluetooth permissions for Android ([2bcc6fac38](https://github.com/facebook/react-native/commit/2bcc6fac3844f0752bc7067517c92a643679575e), [eeb8e58](https://github.com/facebook/react-native/commit/eeb8e5829e183f6b5cd5fd327cf6da03a7db0541) by [@iBotPeaches](https://github.com/iBotPeaches))
 
 ### Breaking
-- Remove Picker and PickerIOS components 
+
+- Remove Picker and PickerIOS components
   [cddb97ad18](https://github.com/facebook/react-native/commit/cddb97ad18cfdb663dcf015af3c9426d5414e396), [77366cd869](https://github.com/facebook/react-native/commit/77366cd8696cb8ada3f84d7fb4d36a27f7007b06), [ad0ccac0d6](https://github.com/facebook/react-native/commit/ad0ccac0d6471fa5428bf137c3aa0646883e8446)
 - Remove StatusBarIOS component ([7ce0f40f5c](https://github.com/facebook/react-native/commit/7ce0f40f5cd8c0928ce720d6d121bcc5963958a2) by [@ecreeth](https://github.com/ecreeth))
 
 #### Android specific
+
 - Updated `autoCompleteType` prop of `TextInput` to `autoComplete` ([27fec9569e](https://github.com/facebook/react-native/commit/27fec9569e08a04e0dbdbd5de063a599ad0416fa) by [@jeswinsimon](https://github.com/jeswinsimon))
 
 ### Added
 
 - Add `global.queueMicrotask` ([be189cd819](https://github.com/facebook/react-native/commit/be189cd81905a735f08a8519c62a707658c7fb27) by [@Huxpro](https://github.com/Huxpro))
 - Added data field to `markerPoint` to allow callers to add additional arbitrary string data to logged points ([aa98978302](https://github.com/facebook/react-native/commit/aa9897830293955b7cc77fd818a50e8d736e715d))
-- Adds accessibility actions to Button  ([44717152ca](https://github.com/facebook/react-native/commit/44717152cadb18c7aff74e9465fdb70efdb1bf81) by [@dennisurtubia](https://github.com/dennisurtubia))
+- Adds accessibility actions to Button ([44717152ca](https://github.com/facebook/react-native/commit/44717152cadb18c7aff74e9465fdb70efdb1bf81) by [@dennisurtubia](https://github.com/dennisurtubia))
 - Add accessibilityState prop to Slider component ([35dd86180b](https://github.com/facebook/react-native/commit/35dd86180ba730425b97592ef6e5c4d449caee06) by [@sladyn98](https://github.com/sladyn98))
 - Add support for "togglebutton" `accessibilityRole` ([da899c0cc4](https://github.com/facebook/react-native/commit/da899c0cc4372830e5ca053a096b74fff2a19cb8) by [@kacieb](https://github.com/kacieb))
 
@@ -48,7 +65,6 @@
 - Attach `RCTBundleManager` to NativeModules ([329f58ee46](https://github.com/facebook/react-native/commit/329f58ee461e7afade36d8c249d3f4930c485312) by [@RSNara](https://github.com/RSNara))
 - Introduce RCTBundleManager for bundleURL access ([4a1bafe591](https://github.com/facebook/react-native/commit/4a1bafe591917482d78be998d45552e2568e3e23) by [@RSNara](https://github.com/RSNara))
 
-
 ### Changed
 
 - Initialized LogBox earlier and centralized access in LogBox module ([8abe737068](https://github.com/facebook/react-native/commit/8abe737068a54a874571c8b5560b2118b1df31ad) by [@rubennorte](https://github.com/rubennorte))
@@ -74,6 +90,7 @@
 - Bump NDK to 21.4.7075529 ([aa43aab77c](https://github.com/facebook/react-native/commit/aa43aab77c8571632a2b0913c80fbf822dac01bc) by [@dulmandakh](https://github.com/dulmandakh))
 
 #### iOS specific
+
 - ScrollView scrollIndicatorInsets to not automatically add safe area on iOS13+ ([bc1e602e0c](https://github.com/facebook/react-native/commit/bc1e602e0c7922da6bf238675b7bf8b4c3faa493) by [@justinwh](https://github.com/justinwh))
 
 ### Removed
@@ -95,7 +112,7 @@
 - Upgrade dependencies / version of eslint package ([463ec22bb9](https://github.com/facebook/react-native/commit/463ec22bb9f2938164fef6133dfd94d2e428e5b0) by [@mikehardy](https://github.com/mikehardy))
 
 #### Android specific
-  
+
 - Allow taps on views outside the bounds of a parent with `overflow: visible` ([e35a963bfb](https://github.com/facebook/react-native/commit/e35a963bfb93bbbdd92f4dd74d14e2ad6df5e14a) by [@hsource](https://github.com/hsource))
 - Fixed to use correct Android theme color for dark theme ([b3a715f6ea](https://github.com/facebook/react-native/commit/b3a715f6ea3d0faaf6d09e2a49267f2a5fb3fad2) by [@sidverma32](https://github.com/sidverma32))
 - Fixed dynamic behavior of `<Text adjustsFontSizeToFit={true}>` on Android ([59021521e7](https://github.com/facebook/react-native/commit/59021521e7aba0f70b91b5c7778ccdd1b30eaae4))
@@ -117,12 +134,12 @@
 - Fixed Android library builds with react.gradle file ([88f0676ae4](https://github.com/facebook/react-native/commit/88f0676ae49fd629331495101248c8e13423aed2) by [@Legion2](https://github.com/Legion2))
 
 #### iOS specific
-  
+
 - Fix deadlock on `RCTi18nUtil` ([fcead14b0e](https://github.com/facebook/react-native/commit/fcead14b0effe2176a5d08ad50ee71e48528ddbd) by [@Saadnajmi](https://github.com/Saadnajmi))
 - Avoid re-encoding images when uploading local files ([f78526ce3d](https://github.com/facebook/react-native/commit/f78526ce3d4004eb4bf8ca5178ca7e2c1c9abc1a) by [@arthuralee](https://github.com/arthuralee))
 - <TextInput> content is reset when emoji is entered at the max length ([f3b8d4976f](https://github.com/facebook/react-native/commit/f3b8d4976f8608c2cda1f071923f14b6d4538967))
 - Use `actionName` in accessibility event callback ([fed6ad5bad](https://github.com/facebook/react-native/commit/fed6ad5badb4196a1895370fc81c522572cb34b4) by [@ShikaSD](https://github.com/ShikaSD))
-  
+
 ## v0.65.1
 
 ### Changed
