@@ -1,3 +1,9 @@
+# 🚨 DEPRECATED
+
+If you are reading this, it means that you are looking at the old changelog for React Native! Please refer to its new location, in the `react native` core repo, [via this link](https://github.com/facebook/react-native/blob/main/CHANGELOG.md).
+
+---
+
 # Changelog
 
 ## v0.66.1

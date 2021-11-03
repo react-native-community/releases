@@ -1,6 +1,18 @@
 # React Native Releases
 
-[![GitHub Issues](https://img.shields.io/github/issues/react-native-community/releases.svg)](https://github.com/react-native-community/releases/issues) ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
+## 🚨 DEPRECATION ALERT 🚨
+
+We are in the process of deprecating this repository, and migrating back to Facebook repositories for most of the use cases.
+
+- you can find the most up-to-date changelog its new location, in the `react native` core repo, [via this link](https://github.com/facebook/react-native/blob/main/CHANGELOG.md).
+- conversations for new releases are happening [in this discussion repo](https://github.com/reactwg/react-native-releases/discussions).
+- the update documentation for releases is in the [dedicated wiki section](https://github.com/facebook/react-native/wiki/Releases).
+
+---
+
+---
+
+## Releases
 
 Stay up-to-date with the release activities of [React Native](https://github.com/facebook/react-native/) by [watching](https://github.com/react-native-community/releases/subscription) for [status reports](https://github.com/react-native-community/releases/issues?q=is%3Aopen+is%3Aissue+label%3A%22release+status%22). Or you can follow along as the release notes are prepared and help reviewing the overall [changelog](https://github.com/react-native-community/releases/blob/master/CHANGELOG.md).
 
