@@ -99,6 +99,7 @@
 
 #### Android specific
 
+- Fix error handling when loading JSC or Hermes ([d839b24b06](https://github.com/facebook/react-native/commit/d839b24b06d31b4ce91fb459742831b942972f56) by [@iqqmuT](https://github.com/iqqmuT))
 - Fix encoding for gradlew.bat files ([ab2bdee735](https://github.com/facebook/react-native/commit/ab2bdee735cd0d53d3dbfbac5cd31f96eefb7e61) by [@yungsters](https://github.com/yungsters))
 - Fix hermesFlags not working with multiple variants ([91adb761cf](https://github.com/facebook/react-native/commit/91adb761cf1583598d4d63ce879fd7e0f4ae793c) by [@grit96](https://github.com/grit96))
 - Clarified in-code documentation in the template's `android/app/build.gradle`. ([1ad45f5160](https://github.com/facebook/react-native/commit/1ad45f516048b86eb03d6c2352b4b85c21ee3860) by [@kraenhansen](https://github.com/kraenhansen))
@@ -120,6 +121,7 @@
 
 #### iOS specific
 
+- IOS Ruby Updates ([1e6add1a43](https://github.com/facebook/react-native/commit/1e6add1a43355bb88c57400a7420a656966bef97) by [@barbieri](https://github.com/barbieri))
 - Fixed an edge case when scroll to item/index is called without animation, the offset position is not updated. This caused the measurement of the position to be wrong. ([55392f65a6](https://github.com/facebook/react-native/commit/55392f65a6addbdd8214b61d4ae286f26d63a94f) by [@ryancat](https://github.com/ryancat))
 - Fixed the issue when moving cursor in multi-line TextInput. ([22801870f0](https://github.com/facebook/react-native/commit/22801870f0613c2544ade1ebc5363e6e2f015c79) by [@xiankuncheng](https://github.com/xiankuncheng))
 - Warn if Rosetta2 is being used (x86_64 on arm64) ([51bf557948](https://github.com/facebook/react-native/commit/51bf55794899284e1c465d346a3f6ebd8a485da2) by [@barbieri](https://github.com/barbieri))
