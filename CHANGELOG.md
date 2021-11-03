@@ -56,7 +56,6 @@
 #### Android specific
 
 - Bump Gradle version to 7.2 ([9ae3367431](https://github.com/facebook/react-native/commit/9ae3367431428748f5486c782199beb4f9c6b477) by [@svbutko](https://github.com/svbutko))
-- Add some logs ([24ac66984c](https://github.com/facebook/react-native/commit/24ac66984c2d0c55ae09fb2df0f1e88a42339f21))
 - Move mavenCentral repo below local paths ([046b02628d](https://github.com/facebook/react-native/commit/046b02628d32eadd6d44160ab79932f6c26b188d) by [@friederbluemle](https://github.com/friederbluemle))
 - Setting `overflow: scroll` in View component style will clip the children in the View container ([93beb83abe](https://github.com/facebook/react-native/commit/93beb83abef42b92db43ee3bb8b156f486a6c00f) by [@ryancat](https://github.com/ryancat))
 - Removed experimental deprecation from `dispatchModern` ([8491edec28](https://github.com/facebook/react-native/commit/8491edec2883ceb9b335fca90ee380c0ace32703) by [@ShikaSD](https://github.com/ShikaSD))
