@@ -47,7 +47,7 @@
 - ImageBackground now respects `imageStyle` width and height ([dbd5c3d8e5](https://github.com/facebook/react-native/commit/dbd5c3d8e5e35685be89156194a96cead553a330) by [@Naturalclar](https://github.com/Naturalclar))
 - React Native sync for revisions 95d762e...e8feb11 ([88021894f2](https://github.com/facebook/react-native/commit/88021894f2645266d7e1b0a2e61a737b1590d039) by [@kacieb](https://github.com/kacieb))
 - React Native sync for revisions bd5bf55...95d762e ([7f7f8188f2](https://github.com/facebook/react-native/commit/7f7f8188f2ed3cb40b85e7f1ad65fdf31b678ffc) by [@rickhanlonii](https://github.com/rickhanlonii))
-- Remove defaultProps from the DrawerLayoutAndroid Component.�lunaleaps this is the fix for issue https://github.com/facebook/react-native/issues/31606 ([b998e32501](https://github.com/facebook/react-native/commit/b998e32501ab13525a1a7c711d5ad090e3d23d9f) by [@mdaj06](https://github.com/mdaj06))
+- Remove defaultProps from the DrawerLayoutAndroid Component ([b998e32501](https://github.com/facebook/react-native/commit/b998e32501ab13525a1a7c711d5ad090e3d23d9f) by [@mdaj06](https://github.com/mdaj06))
 - Bump Hermes to 0.9.0 ([8e66f0b35b](https://github.com/facebook/react-native/commit/8e66f0b35b5ec1054994f7048ef3e66002544197) by [@Huxpro](https://github.com/Huxpro))
 - Bump Hermes to 0.9.0 ([66bd1e9c2c](https://github.com/facebook/react-native/commit/66bd1e9c2c5c12d8652847b068ea149e790259cf) by [@Huxpro](https://github.com/Huxpro))
 - React-native/normalize-color now supports Node.js ([65e58f26e1](https://github.com/facebook/react-native/commit/65e58f26e1fbd06b1ae32e2ab3a2616c8eef08e0) by [@yungsters](https://github.com/yungsters))
