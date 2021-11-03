@@ -4,15 +4,12 @@
 
 ### Breaking
 
-- Breaking: Removed initialization of React Native polyfills and global variables from React renderers. ([b14b34b232](https://github.com/facebook/react-native/commit/b14b34b232b4873137ea3f3c7a90f86b9013885a) by [@rubennorte](https://github.com/rubennorte))
-
 #### Android specific
 
 #### iOS specific
 
 ### Added
 
-- Make react-native depend on react-native-gradle-plugin ([80e24834ba](https://github.com/facebook/react-native/commit/80e24834ba8c581157fb6c9f5d8b49301677c487) by [@cortinico](https://github.com/cortinico))
 - Added examples to Switch component ([c9c14ef687](https://github.com/facebook/react-native/commit/c9c14ef6872eb90b7305e0bc19cded76ce851186) by [@suminkimm](https://github.com/suminkimm))
 - Added `cancelButtonTintColor` prop for `ActionSheetIOS` to change only the text color of the cancel button ([01856633a1](https://github.com/facebook/react-native/commit/01856633a1d42ed3b26e7cc93a007d7948e1f76e) by [@nomi9995](https://github.com/nomi9995))
 - Added [LSApplicationQueriesSchemes](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14) in info.plist with entries tel, telprompt, http, fb, geo ([b26f277262](https://github.com/facebook/react-native/commit/b26f2772624c863c91fa1ff627b481c92d7562fb) by [@utkarsh-dixit](https://github.com/utkarsh-dixit))
@@ -48,8 +45,6 @@
 - React Native sync for revisions 95d762e...e8feb11 ([88021894f2](https://github.com/facebook/react-native/commit/88021894f2645266d7e1b0a2e61a737b1590d039) by [@kacieb](https://github.com/kacieb))
 - React Native sync for revisions bd5bf55...95d762e ([7f7f8188f2](https://github.com/facebook/react-native/commit/7f7f8188f2ed3cb40b85e7f1ad65fdf31b678ffc) by [@rickhanlonii](https://github.com/rickhanlonii))
 - Remove defaultProps from the DrawerLayoutAndroid Component ([b998e32501](https://github.com/facebook/react-native/commit/b998e32501ab13525a1a7c711d5ad090e3d23d9f) by [@mdaj06](https://github.com/mdaj06))
-- Bump Hermes to 0.9.0 ([8e66f0b35b](https://github.com/facebook/react-native/commit/8e66f0b35b5ec1054994f7048ef3e66002544197) by [@Huxpro](https://github.com/Huxpro))
-- Bump Hermes to 0.9.0 ([66bd1e9c2c](https://github.com/facebook/react-native/commit/66bd1e9c2c5c12d8652847b068ea149e790259cf) by [@Huxpro](https://github.com/Huxpro))
 - React-native/normalize-color now supports Node.js ([65e58f26e1](https://github.com/facebook/react-native/commit/65e58f26e1fbd06b1ae32e2ab3a2616c8eef08e0) by [@yungsters](https://github.com/yungsters))
 - Updated to Contributor Covenant v2.1 ([19f8d2f7da](https://github.com/facebook/react-native/commit/19f8d2f7da13f4524f31acf7aa10cc0aa91b5da4))
 
@@ -104,13 +99,14 @@
 
 #### Android specific
 
+- Fix encoding for gradlew.bat files ([ab2bdee735](https://github.com/facebook/react-native/commit/ab2bdee735cd0d53d3dbfbac5cd31f96eefb7e61) by [@yungsters](https://github.com/yungsters))
 - Fix hermesFlags not working with multiple variants ([91adb761cf](https://github.com/facebook/react-native/commit/91adb761cf1583598d4d63ce879fd7e0f4ae793c) by [@grit96](https://github.com/grit96))
 - Clarified in-code documentation in the template's `android/app/build.gradle`. ([1ad45f5160](https://github.com/facebook/react-native/commit/1ad45f516048b86eb03d6c2352b4b85c21ee3860) by [@kraenhansen](https://github.com/kraenhansen))
 - ScrollTo API in ScrollView will check the actual scroll position before setting the scroll state ([1a9e2d5d55](https://github.com/facebook/react-native/commit/1a9e2d5d5589ce5cee92868ea5bccceb6e161eff) by [@ryancat](https://github.com/ryancat))
 - TextInput Drawable to avoid Null Pointer Exception RuntimeError https://github.com/facebook/react-native/issues/17530 ([254493e1fb](https://github.com/facebook/react-native/commit/254493e1fb0c3a1e279e2c957e83edac6252d041) by [@fabriziobertoglio1987](https://github.com/fabriziobertoglio1987))
 - Nested Text Android onPress does not work with last character ([132d1d00f8](https://github.com/facebook/react-native/commit/132d1d00f885fe5a45d712fd7698db285c22bc4b) by [@fabriziobertoglio1987](https://github.com/fabriziobertoglio1987))
 - Compute Android Notch in keyboardDidShow height calculation API 28+ ([8bef3b1f11](https://github.com/facebook/react-native/commit/8bef3b1f1136ab5c2f2309a3101a7d9626ced1f5) by [@fabriziobertoglio1987](https://github.com/fabriziobertoglio1987))
-- - [Android][fixed] - Exclude unused .so files for reduce android .apk and .aab ([6f126740fa](https://github.com/facebook/react-native/commit/6f126740fa560d7a831979b9f3747baacfb28dba) by [@enniel](https://github.com/enniel))
+- Exclude unused .so files for reduce android .apk and .aab ([6f126740fa](https://github.com/facebook/react-native/commit/6f126740fa560d7a831979b9f3747baacfb28dba) by [@enniel](https://github.com/enniel))
 - Ensure elevated views are behind sticky header in FlatList ([4090195122](https://github.com/facebook/react-native/commit/4090195122ce56c58ddb4c9df447a4cc8d29075f) by [@ShikaSD](https://github.com/ShikaSD))
 - Fix currentActivity being null when launching Redbox ([f4fdf4b55e](https://github.com/facebook/react-native/commit/f4fdf4b55e4489c21f4552b4ac01ef253c038b2d))
 - When sending OS intents, always set "FLAG_ACTIVITY_NEW_TASK" flag (required by OS). ([04fe3ed80d](https://github.com/facebook/react-native/commit/04fe3ed80d9c201a483a2b477aeebd3d4169fd6d) by [@Krizzu](https://github.com/Krizzu))
@@ -120,6 +116,7 @@
 - Set textBreakStrategy default to be 'highQuality' ([3b2d541989](https://github.com/facebook/react-native/commit/3b2d5419899363d84aea4f5cc3a4c75253dd6406))
 - Fixed `alignItems: baseline` for <Text> elements on Android ([1acf334614](https://github.com/facebook/react-native/commit/1acf33461451834097463f43e70d90bae0f67198))
 - OnKeyPress event not fired with numeric keys ([ee3e71f536](https://github.com/facebook/react-native/commit/ee3e71f536127295ba4ea377e618499409a2e9ba) by [@fabriziobertoglio1987](https://github.com/fabriziobertoglio1987))
+- Fix viewconfig for AndroidHorizontalScrollViewNativeComponent by adding snapToAlignment ([7bbf549ae5](https://github.com/facebook/react-native/commit/7bbf549ae5954009146b611e364bb22cc15b8c2a) by [@GijsWeterings](https://github.com/GijsWeterings))
 
 #### iOS specific
 
@@ -148,23 +145,12 @@
 
 ### Unknown
 
-- Daily `arc lint --take GOOGLEJAVAFORMAT` ([ed8e5e5151](https://github.com/facebook/react-native/commit/ed8e5e51516a81158d64dbbf39be3bff9796cc46) by [@undefined](https://github.com/undefined))
-- Daily `arc lint --take KTFMT` ([689bfed9f1](https://github.com/facebook/react-native/commit/689bfed9f12edbb7c964af36578dd7086c78c227) by [@undefined](https://github.com/undefined))
-- Daily `arc lint --take KTFMT` ([2bced60851](https://github.com/facebook/react-native/commit/2bced60851ec668d3bc9c75c99803891aab772e3) by [@undefined](https://github.com/undefined))
-- Daily `arc lint --take CLANGFORMAT` ([2372e7a008](https://github.com/facebook/react-native/commit/2372e7a008539f65f26a5f5163a4cbb20e5a944e) by [@undefined](https://github.com/undefined))
-- Daily `arc lint --take KTFMT` ([3516090174](https://github.com/facebook/react-native/commit/35160901747aa9574541ffc15639cff9d30fba3d) by [@undefined](https://github.com/undefined))
-- Daily `arc lint --take CLANGFORMAT` ([1a1c3a6405](https://github.com/facebook/react-native/commit/1a1c3a6405ea15aec37123c77f1f6b315d63bb76) by [@undefined](https://github.com/undefined))
-- Re-sync with internal repository ([671068f28d](https://github.com/facebook/react-native/commit/671068f28d67763dd3875c07fd75492296f2d2a4) by [@facebook-github-bot](https://github.com/facebook-github-bot))
-- Xplat/ ([18b866da53](https://github.com/facebook/react-native/commit/18b866da53b691763fa70b24ce0dcddfe5954a85) by [@undefined](https://github.com/undefined))
-- Fix encoding for gradlew.bat files ([ab2bdee735](https://github.com/facebook/react-native/commit/ab2bdee735cd0d53d3dbfbac5cd31f96eefb7e61) by [@yungsters](https://github.com/yungsters))
-
 #### Android Unknown
 
 #### iOS Unknown
 
 #### Failed to parse
 
-- Summary: Changelog: [Android][fix] Fix viewconfig for AndroidHorizontalScrollViewNativeComponent by adding snapToAlignment ([7bbf549ae5](https://github.com/facebook/react-native/commit/7bbf549ae5954009146b611e364bb22cc15b8c2a) by [@GijsWeterings](https://github.com/GijsWeterings))
 - Re-introduce AsyncEventBeatV2 experiment ([6d367d70f2](https://github.com/facebook/react-native/commit/6d367d70f2c5b44cbefa875308fd0d1b78a2ba88) by [@sammy-SC](https://github.com/sammy-SC))
 - Move react-native-codegen dependency to react-native root package.json ([b494ae0703](https://github.com/facebook/react-native/commit/b494ae0703c4e29cbab8354f3a73076986167b20) by [@hramos](https://github.com/hramos))
 - Setup a new macro to gate the core packager functionality ([a8cd8f7696](https://github.com/facebook/react-native/commit/a8cd8f769695621e4624a14d1da7f355c4544cbe) by [@jimmy623](https://github.com/jimmy623))
