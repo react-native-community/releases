@@ -52,7 +52,6 @@
 - Bump Hermes to 0.9.0 ([66bd1e9c2c](https://github.com/facebook/react-native/commit/66bd1e9c2c5c12d8652847b068ea149e790259cf) by [@Huxpro](https://github.com/Huxpro))
 - React-native/normalize-color now supports Node.js ([65e58f26e1](https://github.com/facebook/react-native/commit/65e58f26e1fbd06b1ae32e2ab3a2616c8eef08e0) by [@yungsters](https://github.com/yungsters))
 - Updated to Contributor Covenant v2.1 ([19f8d2f7da](https://github.com/facebook/react-native/commit/19f8d2f7da13f4524f31acf7aa10cc0aa91b5da4))
-- Added snapshot test for the new component ([2fb102b601](https://github.com/facebook/react-native/commit/2fb102b601a929be74eb9042745a1bb63ed7bc6a))
 
 #### Android specific
 
