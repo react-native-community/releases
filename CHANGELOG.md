@@ -34,7 +34,7 @@
 #### iOS specific
 
 - Add asdf-vm support in find-node.sh ([3e7c310b1d](https://github.com/facebook/react-native/commit/3e7c310b1dcf5643920535eea70afa451888792a) by [@pastleo](https://github.com/pastleo))
-- - [iOS][fixed] - ScrollView: Respect `contentInset` when animating new items with `autoscrollToTopThreshold`, make `automaticallyAdjustKeyboardInsets` work with `autoscrollToTopThreshold` (includes vertical, vertical-inverted, horizontal and horizontal-inverted ScrollViews) ([6e903b07fa](https://github.com/facebook/react-native/commit/6e903b07fa8e8d9b78cae0e031bb8022f7a63195) by [@mrousavy](https://github.com/mrousavy))
+- ScrollView: Respect `contentInset` when animating new items with `autoscrollToTopThreshold`, make `automaticallyAdjustKeyboardInsets` work with `autoscrollToTopThreshold` (includes vertical, vertical-inverted, horizontal and horizontal-inverted ScrollViews) ([6e903b07fa](https://github.com/facebook/react-native/commit/6e903b07fa8e8d9b78cae0e031bb8022f7a63195) by [@mrousavy](https://github.com/mrousavy))
 - Introduce MockSurfaceHandler ([ec92c85a15](https://github.com/facebook/react-native/commit/ec92c85a15468fd00dc0a23b8f69f5f1624f7b45) by [@philIip](https://github.com/philIip))
 
 ### Changed
